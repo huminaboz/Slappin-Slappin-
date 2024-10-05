@@ -1,0 +1,974 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="876a02c0-11a6-4d26-8762-6bd564ed01cd" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/Slappin/Assets/FlatKit.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/ArtifactDB" beforeDir="false" afterPath="$PROJECT_DIR$/Slappin/Library/ArtifactDB" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/00/001dacc87a9ce1fefe946f2ac901ea8a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/00/002c730c25a06ec6aa264218348fe1e0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/01/015f38d4f47d7f9f367fe8d6de8a4330" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/01/0165df3a62919198dbdd47ee9d92dbda" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/01/018d8398f95be1de91c24609b8c98b23" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/02/022e914212b1bfeda99fe4a7feb79a59" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/02/02810a3db6c0af5fdf72094a5a74df4a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/02/02b614def6b0cb5b842701844012f9aa" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/03/03008111ede35f7cd62e650dd551a9a4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/03/03f8a93114df8e6fcf6186b2f4aabe5d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/03/03fed3f3ba3f92a00236247aa038e863" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/04/04e7530bf4c609e4d9a1db7b652bdc55" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/05/05cc29b8e63c4b3a73ae4100ae6361a6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/05/05de9e892405fe9bae62b6fe10139b3f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/06/0674a7c46696ec99c21ec9a2adafebd7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/06/06eff3926525d8c1cd44967b866aa5d6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/07/072c92aefd46d9bcf37eada8e083e5b3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/07/07c1120313196f78f1a083cf8153cd7c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/07/07f0073d496c5639ff9d973e3eed4742" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/08/0871f01ec11e907884e9daf39fc9a791" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/09/09681e9ea5aa5465483cb76cf2cf0435" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/0a/0a64a004b9dfa40d7924c0db7ee6be24" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/0a/0ae328731fea697acf4441fbc08d74c6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/0b/0b33b4796e3503b1c69ce6839ae2a90d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/0b/0bd025f808dc780a04be52b44125ab71" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/0b/0bd1bc00d56afb764c188358ec17340f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/0b/0be5afd25a296a2ff2d8c482eb3f742a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/0c/0c5bf8c189ae420f1799ad475aeab62f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/0c/0c7052e0bbb11d0ef2a77e95638e89a6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/0c/0cce0009ee05872d6c6ea728f16711d9" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/0d/0d33fe874f1f4cb41bf069edd8d7d972" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/0d/0d98b4588308e38c5e77b5dca827e58b" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/0d/0daa126482c3caf202ce27d7f58224be" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/0d/0dba4ec9459d4e4c9ac7cc7ae7c76ef2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/0d/0df85ff5a6d69c4832450b3c7ed67655" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/0e/0e6e3d5b0b2b5a7d0ad639267cabfbb8" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/0f/0f5de9d364ba68a4db1dd289dd39b200" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/0f/0fd5d06d6124a4f6a613becfbdce07f3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/10/10a6580b9504b068acfb414e4dbc5472" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/10/10ba9883692c405e06b11fabb2ddc11e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/10/10c3d52f1c6f7c70414c1508a438749d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/10/10fe58ff5f431ef62603b3992eed2f33" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/11/117c097648176cbcaeccf315a2f4fc3c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/12/121d11a176002db043f14478720e173e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/12/12b77f2598800f827b5fee6f9f9cfc3d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/13/13213f20d06ab7c820d3d2b8d3f182f2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/13/13b13ac5ffd286f01ac386b5f56f6769" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/13/13c6f050a369f82d360d5768239c249e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/13/13d8b5c8653526feb60c5f9f25d84918" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/14/1446dfd555d6bf687ab8ca63ea7bec77" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/14/145288682d839ddb2658f223d07bf7e6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/14/1458abd588400e89ee0bf2a332cdbeb1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/14/14c484827c44791fb4433b330e8a7832" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/15/157e2b273fb7404ca71b4d06aa373d29" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/15/15955486cb44eb6fe4f58984515a315e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/15/15dd21198fb1a4dc8fe3f6e411d33713" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/15/15ef289a4c12fb44fce5b9036e5f0e9e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/16/160612b989d1d2bb5a62b25ce1f126c8" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/16/16e90a777d24092ad79939c66071d3bc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/17/17c9bd1b98f59211ffbc286b0a29c4c1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/18/18d484abe8a03dbe4f0b69be27b8b14a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/18/18ebb785e524e15d929b0048b145e028" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/18/18fef4b393a63dbe02a8b814258e3f13" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/19/193417c62b221cb4d3fe8bb110d099e5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/19/1942ed1d0f47ba1f94065a3f88fdae4e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/19/19d82f68e2c72dd0fc6873c2fa98a432" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/19/19df0df6e1e32c1ce7272f3059ed62f3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/1a/1a00b4acf7142a8ac91fc46125bea2dd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/1a/1a1947dec4fc4585f44e977607d4c69a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/1a/1a3790578d25d4e06e9ec58de08076dd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/1a/1a6a95a9f1360523845d79a051b9a84f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/1a/1a79fd7bd9ba8ab3cbdaf8681d885738" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/1a/1a8ff9f9aa92be416ee311ef62ee223d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/1a/1af96c418b970c95baf2be9b01cdc52f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/1b/1b0ad3d4843e2e5d43efb75684697c85" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/1b/1ba06cc174bb40b7cf540ac7c7946c3f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/1b/1bd1be214f35f2977d3e671d38fa56dd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/1b/1bd36ff0d92ed89d7a729c35b579cd07" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/1b/1bf194b2bbbd1113fee5ea9acfbd6839" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/1c/1c78e1bc07810cd6e961974ee87ca685" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/1c/1c9f59b70fadd74892caceaab2308f6b" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/1c/1cab2b9fb33ac3bdd1735b4fab73ccb6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/1d/1d7a76be26fcfe621dd749ea2c61892d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/1d/1d93c406b8374edcb649804114a020a3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/1d/1ded29a5e0f0d475515a003b1a00c970" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/1e/1e6be9de739291977a6cd679590b106c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/1e/1e6c3c83b9824ca876c646d84b05e94a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/1e/1e8c20ede1bc33ccb5c25e25213032ff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/1e/1ea54657c4b876df459981ec1e42e6d9" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/1e/1eb4e643932959b888ddf549eca5df2c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/1f/1f9bdb45a2d950cbec7e1c432db0f489" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/1f/1fd7f54543c89b475d91d7949113653f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/20/208c989f9a5208a2f4ec6f6e6ae8fa7c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/20/20a54d074fc020f8d378f11fd3138863" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/21/210ff5a096e1ff760d3b2fa6a0dfcca4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/21/21ec0753641db0a765b878fea318e53e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/21/21f3cf17c88c1d7298b46af0cf968dac" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/22/223069683dfaa53cc762a0c420ccd755" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/22/2286f073a5928e5925a955c9ae4321fc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/22/22a7f5e036523ef430afa86f7a91c784" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/22/22cdb8e969a2f597e994b7b7888e7e9a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/23/23ba17f285eaf92c838f55c9e07495fe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/23/23ccf2c99d76da8554a06ba864439c1f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/24/243e0e0a8d89e1d426e0de6773d7ec20" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/24/244ebfc1bfad71146bdaba904ff13117" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/24/24586c2ef026e9b87374be63dddfc04d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/24/246793a6886d88efb1cd7df7b7f2b445" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/24/24aa2603e4d6b74d89dea093ebfd95c7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/25/25da3b0ad418bf01b1e051e7df1a1726" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/26/262ac2e8192296390181833272a24c23" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/26/264919414337b16c8f23e85cbbb03657" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/26/265323ac90e337d6d3f136446787b94c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/26/26b2cbda8fbeb740ac2d478e6fecd2ec" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/27/27e56ac44c247d4cef30b9961aeb98ac" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/28/28e7460af9766d8dcb60c2062d63eb42" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/29/290e0c7a83d83499f9ae82636eb32e99" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/29/2967f053716ab69e4995df05119ac0e3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/29/29b43211b919e9f1324ab382097bde94" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/29/29c7ee7ac39d73ad00e5723e9dfd75c9" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/29/29ccbc93b6cab21decf8dd63923d4a76" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/2a/2a02c45da9f0a1829e4f3cf4bc73b8ce" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/2a/2a03758daaee0674c775b45ea34924a6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/2a/2a8ccad95a9f12d1c5e2d06799e4633e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/2a/2a930639bff5ee9ff37dcd61bb7e4e1c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/2a/2ac770c8c1b99907cc94734ce3c84c81" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/2b/2b24724b2af60ee0913e02e4fc0fc911" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/2b/2b69e73e58f2a444cdbd6d85a98ad623" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/2b/2b6e6b5365adc6284b3ed3ab3e2524e5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/2b/2b842f1f5eda29be912628a9e7cd2a19" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/2b/2bd11fcd2b10e464e47e9d114fa26635" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/2c/2c2b4ef575e8a52d71b6526b697dd522" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/2c/2c38d9aa32ff9043ba30b0bbee0f5d95" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/2c/2c701c7e9f49ea442d8923c077e65319" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/2c/2c8a366a2a0a29f73e74f1dacb580d79" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/2d/2d2738e9942566eed5a1ecfae1510128" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/2d/2d88bba6fc003a4691b7b41e6a9317ff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/2d/2df6fa9d8f0808169c47caf595dc4e98" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/2e/2e629e68c947c8418ea7ba6131cce427" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/2e/2e7585e8926dcfecca979a346c45e4b9" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/2e/2ea614bd0a7266afa8687ec43739b846" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/2f/2f6e95fdab8877fa65e2567b4bae5083" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/2f/2f7ba23b5641948950fad62e8313d854" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/30/30020da169847afcda896d91b946ae64" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/30/30166881556e8b51dc24241232458df0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/30/303c3ce4f634fddad28181b94eecf3b3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/30/30789705eb741c8441b65748657851c4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/30/30d2b0afe6034635dc24e3309704bbdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/30/30e692011d7c1a5efc1debbe259a969c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/31/31190b43677ca3d5be71799cf944d2dc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/31/313533178907f01d34b37c62df072f22" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/31/3175e9fa4a62783316f9786d03d159f3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/31/31be885b8e3955c98ba6e69244c1076c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/32/32599fd8f219fa45031cd0bcada1ac8d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/33/3328048ebb6509c20f684a88ab7dc1b7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/33/332a7be2f646a165ff3b757fabb9910a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/33/3365e1b76e63b987e59f3e744680a990" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/33/33c987eb15b71732f8f59453d7ac6794" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/33/33dd09f60e05585a43e5bebb7b9bb656" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/33/33fdb7a9a7ec96860fc3c18aec7f29c2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/34/34098b88f42baec7469784c60ea4b4a6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/34/345aab92439f1aa162bc06f1800a7ca2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/34/34f8e16b0c1ae1b6134d773b13d2396f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/35/35ad0ed47252fafd83e3709e04939f39" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/35/35e064f2fc352f0811bebef1f68d83db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/35/35e637010ba09f23c947c50852de4dc8" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/36/361a7e97405c5effe0a367ae592e56f3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/36/3630e1f684891198bd836b15fecbea2a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/36/369f37178f192add2836504cebe2d7f2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/36/36b86b7219506e2252ea93fc4c97a6ad" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/36/36ce685a6705a1ad1c17cf6d41953605" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/37/3777de31b3a4cd7e3182a371f14e6fe7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/38/3847adee628f159a25d2a789f1fcfcd7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/38/38db43b0f6daa9f962ccf4edea469034" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/38/38e8886675c5aa40a2ce77afc8b30199" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/38/38e9f11ba0845100a539203fbf890c53" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/38/38fff7bb633a2c8acc85e001041c9b75" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/39/39f2b25157d533053f0110fd41f2f28b" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/3a/3ac85c0be062a49a71fcf6a92d44f424" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/3b/3b1d58350e0cdc6f44022feac41b30c4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/3b/3b5a2ad82638eb3b0c880b08b071432f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/3b/3b97ade94dd26b98b88039998fa981a9" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/3c/3c7e0b3d14928c4b6139d1c23e12deb5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/3c/3c80a611a7ae17dc0ccce2a1d88a7d64" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/3c/3c8271c8fd1c91bca5a02d3b7bfc52f2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/3c/3c94e357779794bd11a2c1ed650736e8" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/3c/3ceffc2b484c090f83a7f80b9716f53d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/3d/3d47c502bcb3848ed1dcd3952b6c1a44" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/3d/3dec79dc64ada8a292dd87e892cf7fc4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/3e/3e9555fb60e79ffc02934018695d1fef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/3e/3e986092be7cc0b0fcb884d772338720" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/3e/3ec92c34d2bc4a5a98df882c73790d7b" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/3e/3ee080d1cac9f91f94d775f3d4944020" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/3e/3ee305ec4ffcf80e9564104a9a6abfaf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/3e/3ef97cb4f4e232f484ea06d0a2f0747a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/3f/3f3309de9ed85c7743aeaa98765de678" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/40/400157eecd7d0aa12865b7cd88c6c972" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/40/4048faffed96ef064617ccf19072d13b" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/40/4081bf343a92b5c10e256d9940c0b29d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/41/4145c67eccb64779cfb08b6d1bd5c413" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/41/41497a08471bdb35576786b3ec520f9c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/41/4168b6d286895bb31c2057f6f1d335f1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/41/41767ef4482549cf66d0ca5ff06833b2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/41/41ca0b21ec7dd527aa1b70792ccb9815" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/42/428d4ad3e36ec65c10ac21e111094342" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/42/429a40bf131ee8a298a06dfd154ba4f1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/43/43ef590409053003a8c73f099885949a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/44/442526d5b92cef1916dd46523349fb23" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/44/4437c7e76b6b15d8e1a5d9cecdf8be02" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/44/446175ad5214a93c5b2e692138378c46" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/44/44b7320ae6947c0a5f9eaba30d524e36" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/44/44d18a537239ead5bf18be90568fb156" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/45/45426304bef220e03dede0eda3781931" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/45/4558fb4926b8e658832affe837b59864" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/45/45ab29250f326bbf9a02b634da745137" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/45/45c33dcb75a5069739103d3be8789193" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/45/45d3b9535a78f5466f396bbf3508f070" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/45/45d3bb802b767abfac359de5614ec222" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/47/4706601bfdf6982bce911b1993d93f47" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/47/4771d2f585f925e6089391a08a5e9bc0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/47/47a703dcbfb3a26e11438bb80d1bcc91" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/47/47ac1097b9cf66baf953fa094b8620f1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/48/4872257f18b429faa71a36f4b651cdb7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/48/48cfd9c3e54780ab794fca73a31260f8" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/49/496b9d90dd5942f5715edbbec9a2a3cb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/49/49796ead908fff9496dd7fbca8e2f6d0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/49/49ad53f55576ebd6b696f4257ef8b856" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/49/49c35f9b0f022ff41c891600f5a23e1e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/49/49dff337cc0b1b4babff883b1aec7aaf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/49/49f86334040e00d57de661e721e24456" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/49/49f9daa959fa6503380a990069ef5e52" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/4a/4ab6cdbcd87b297822f0fa5cb9981d38" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/4b/4b51f8b0cc1561582a52266e89c1438c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/4b/4b6a8833e5ca93170b3ed9e12c9afa58" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/4b/4b7d5e9f9f24dc576e51f7c3340af561" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/4b/4b9ff8797070b971805dfa9e2eb827b7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/4b/4bd59ab20cf19753460a55309ea54e5c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/4c/4c0332aa4042bbd1742f600c8759b53a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/4c/4c21511f31f61d18b63ae1822ac3a38f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/4c/4c8781fffc0206f2ebeac698b9819c35" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/4c/4cf70a8409039c823e80b6cc2ea3d93c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/4e/4e9a6f44d6807f1e3893d5987929ad64" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/4e/4ea77250d15b4eb4baf9cfc4121a5eaf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/4e/4ec6b16204104460b12b83abbf30a8f8" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/4f/4f2dfe0b7db5cf204ab53835abb3bc3c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/4f/4f74280f75b9151d878e2cadbdca1b40" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/4f/4f83bb9085e8e79f93cb680f362a0cac" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/4f/4f9b6d2f1793df3b55bc15fda2c3d3f0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/4f/4fda331b5ac89e4508cd86fe113893e3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/4f/4ff0f5e312c24353b493d3add410d982" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/4f/4ffcbe84f287f28e0ccbd622bf3212fb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/50/505bc4f9109780a581d63637fd9e5893" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/51/514e4f26220aaf233368b6e1f478eefe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/51/51962195e09f70c7c2d9ac59fbd9f393" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/51/5197237467583bc1efcc4700fccce058" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/51/519b83835788aef334a624fa53519538" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/51/51c21f3707f555ef20e536b2f611fc58" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/51/51ce8dc14177bcb4c987daf6af609a92" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/51/51ef376cf5f1042ca244dfc15d9370fa" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/52/522f57adc16293dca02420961a811215" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/52/52af9cc4573ed311ebae66d39f12c68c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/52/52da9324b5daf00af7a4f961df1bc6d4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/53/5324f65b00df07e40d8650a7a33e784e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/53/5383ae4295ee9daa56f4497588d7bb85" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/54/542c3c3c882413e4581c418673554e6d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/55/55529e6e3705f6f48333657addac5ae2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/56/5619aee9c68f82d2b50573863cadf2bb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/56/56be09bfd29ad373b3f52f3ccc71d077" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/56/56e36199f199b41dfabc204ee5cd20ca" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/56/56ea6c30f4668a834561adce8ddc3ed9" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/56/56edab9876933009d7c3c202a259e5d8" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/57/574807b2d80c26cc9683b8a78a16604d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/57/57553ebfcfa839e997489a0a1b3804f5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/57/57a2e3e5b18135d397665d3d15e1f994" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/57/57f37923d55b02679e855a0dbb7b7d1f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/58/5834b3dabf697074e4551b79b4229297" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/58/583ba78df4ce670f7e0df4dc7c6a0e52" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/58/584bf4617b77f8bd5b6c86ae00bef048" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/58/584d18351cbafa84baf165835a4f3fb2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/58/5857fbf00077a63338981e7595735963" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/58/585b02dcaeecbf803fa35964e6fe7eef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/58/58661be1d4fb3b334753b4837abc5dc5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/59/590b5bf7db4cda4c5d4dd9fba62b7532" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/59/591f351a340c3f8dfd52802be78da864" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/59/596a7d6f334f1fc04870964bd56bcdac" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/59/59b0369e973d2f76288cd202bacb14d8" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/59/59de87f61bf5b5c19c63b959093b6fb1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/5a/5a0d6654814981d9fecc1a3860459e6a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/5a/5a12c236bde1a507b97d3af00b5342e1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/5a/5a8a0dcade77092f89c69d5515cae1cd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/5b/5b31f785e7967c41ec4021906b0d508d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/5c/5c32123037c4738d001ff6303c2777ad" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/5c/5c62500b86b598a85939f88d3f9eacbd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/5c/5c9513f34e22f307aa772806d8c84dd4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/5c/5cd2691cf49ac8285567aa976aad682e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/5c/5cd599a309c492d732a981d9dc3ca527" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/5d/5d75a4ff744fdc01cb7fae77561c1132" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/5d/5d89200c66566148740543fdd7f1cf87" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/5d/5dacf52d10e5368d45bd120a88723045" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/5d/5db0fd8e0e24138c0c08c6a4f333080b" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/5d/5dc1a4b06887d3405d54b87327a37956" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/5d/5dc6b244f4802f670bcc9b51017a0e51" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/5e/5e4bdd87f656d9be5a0382a4aab69ea9" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/5f/5f3ea5f42800de6a7276acb23f4b2dcf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/5f/5f6ae6a708a739e29b7e15bd1440284a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/60/609321dbdcbebcba26b59afd7ca0e808" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/61/61384e073bb5c7de3ce43ef21ac222d4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/61/6150223c24fa9da671e4ccdb31be0a81" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/61/61553e3004f84e09821659f368b6aaa1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/61/61872566def54e9555f219177f94a723" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/61/619157f86c91f79a83a09eeb218bc04a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/61/619b631d987ba7efd02b09582af52773" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/61/61c3f758d6ce213e5efc901f9104dbf3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/62/62f3e5b6b7749f9a822a526010d13a57" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/63/63141b834c74b2b47a8cc1507c418b52" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/63/63fc252d5b5d02690a806bce49194e72" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/64/640815f09f9f2d51d9bed575a894b319" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/64/642ee54cfa7fee95261db1ec711c36f9" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/64/644b6d1586010b59d6de5b00c13b7305" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/64/6461d354897f4070a63272cdffcb64be" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/64/64fa803c13192621370d4fe01eddfc3f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/65/65353329a2da23b8a1c569b055f78db0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/65/65840ec0cc24eacf02324362a820c857" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/65/65ae9e28b769b5c200e7f8bf691f2f07" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/66/6610594712b2bee26d7406a0c159160f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/66/669f064cd9bf501d547d8ef132afa822" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/66/66a7758a39634ba9e23fafc88cdd262e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/67/67cb0616e021a35e43a61bdad0f07b03" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/68/688e5a0a324328a858a119e9f8043592" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/6b/6b174bd815535b8c6039b28c2dc31376" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/6b/6bbd77d4c0b773033682ebeb8ebfe5a0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/6c/6c18b1091e73ccf3a38af211f2518bcf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/6c/6c1ee32fd328df43843a51b537a7873e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/6c/6c39f8c26c05a55106b3901dcf7d138b" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/6c/6c48acbafea1a669593975e853eddc6b" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/6c/6c4ce89f68b0cbff38e05012e3d91d87" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/6c/6c911540d68fce6b069e95711a9c82e8" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/6c/6ca724c7f3269115f74218d580c8825f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/6d/6d62ce0fbe4ce742661d0ab9d765381c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/6d/6dc0540b7c51fc7da6c25dbec761435d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/6d/6dca5c3d7d767b82fb0d1908d5ddd5eb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/6e/6e3e29c35c7b5466e3287982a2382d60" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/6f/6f46deb9336b65c97b492ae5741c5ffa" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/6f/6fba21fbbfac180db97040fc61ac7f79" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/6f/6fdee87bc0711a3c5135bcc738c0636e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/71/714f82335dd56c6c18614982926ec964" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/71/7162d579ec84f4f1453391ecb3386f5d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/71/71d9f597806bdcace09ab7d97a9556d4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/72/729efc4fa593f49939d4e043cad14f51" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/72/72fd6acd1f40b8282ee1cc5398396c5c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/73/73cdf57efeedcb03d9f1f0fc26bb4867" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/74/743053458def419e1b2ffd107b34fa87" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/75/757693662f52b37d72130b13379f8da7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/75/758ebf5ef3f0f9aecfb991090220c894" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/75/75f5fff7f93ce29fa4945c8f31a0dfd2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/76/766c0b5d460bb0ee3f5445279b9dff29" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/76/76807329ec852ef904b41c7c0523c29e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/76/76ebee199120514d93ef375234e7738d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/77/7707d36da18ef489e71994dcd99e43fe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/77/774a8987ed33740a35cb89dab7cee28e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/77/77ed244c662cdc86b8d238320e73f736" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/78/78a6e651abf311b817b815b8fdf37083" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/79/796caa3aaf7e8cf42d35faec4189a05b" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/7a/7a299a695c50b88818c1f1a85407aaea" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/7a/7ac69856bf186aeb0cdf65cc01834568" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/7a/7af7e732bb126841059b30a8d1a574c8" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/7b/7b8ff667cd889eaa4699840fb6bb7141" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/7b/7ba4269e6e41ac4d09097e9a83929c83" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/7b/7becccbee646704eb88c3b660596e555" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/7c/7cb574bf8f7d6951682a14e9691475e4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/7d/7d2e1130e940ef986c7b9872e801899e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/7d/7d76a0797244f2a2fe0d99241a8a04dd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/7d/7d84a913c8bd3f903588507ea14b07db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/7d/7de0b6af46d7f4d3754f955840dc64af" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/7e/7e13107b57be5735a98071b76635f856" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/7e/7e1ce3d222f8b65b2c832ddfe6d18d69" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/7e/7e3da35a83946b228360ef8f82895736" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/7f/7fccbe6a64fd28fa7f041c2514c4b996" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/7f/7fffe48f7b68c00dbde10c86c9a99f8e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/80/8025ed27715ec3eed937c11729c89f97" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/80/802acf9bbf815f66186f80ac1323657b" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/80/80974840de9aba25cbb1853d82d56e29" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/80/809dc5f653b00d37e96c2413c1b36ff3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/80/80f8ca05ec594f6511ab70789856b593" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/80/80fdbb34864ddbf41ef2e5dc9c6ce9c8" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/81/81125ad3a3ed4de60b53d99bc395d273" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/81/81968407ede7f210fd6b742422aa3ed9" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/81/81f6f2f02615245097c295d097cc1b73" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/83/83cf2a106395dbf303544fff8c286fb6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/83/83e4af9b44b37a3019cf29d45611dc32" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/84/8448fefd81008b0c6e249405b44ce0b2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/85/854f4cf3f8b5f2cd88c41b64a8e0c9a0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/85/856b3a0a6498c689f4df0f32bff91b84" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/85/85de5063a7dcd28ee2301e2e49f3a1b3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/86/862cde6b1b9eef8ba76498c6548f6424" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/86/863a8079648fbb2688a8b31d8a319481" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/86/86727e62556928ede2ed93d661f89284" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/86/86d3fc0c69ea63248843546b9991c165" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/86/86d74f45c684e1febe638dd6c4ee2a6d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/87/8720d896e876e3cf99a713db5ecb8c9b" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/87/8726f637d5c5469f7c95f7fc8aa1167e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/87/879c74d59c411ab2e502b4a0ec20da8f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/89/893f031c4be9ea7d406e77425ffcf603" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/89/895fb34d6247147617d0f22725807fa4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/89/8969337748197d665ffadfb616b7467e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/89/898ddc3e729169b59aa46cd10e984347" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/8a/8a210ac02464dd82b46d347b3d1c7628" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/8b/8b296d4261732f32cc1bd418468748d3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/8b/8b7e9225f7601b155032d5ef2b59236d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/8b/8bd9ec1e97292050eb191aed10d1f078" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/8c/8c1c2d4ae4b0b500f6167034f8f912b8" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/8d/8dd68bf31bf141253c248e7d03534624" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/8d/8ddd7ccccbe12e4913fdd58a9970e9c4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/8e/8e3bb52f3e5b69c0be38a6c55ee12fe3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/8f/8f1291cb753fc8c7080b2a28c8fcb6c2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/8f/8f14d9294a9931ef3be3fab89d4fcd5e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/8f/8f4f286318c757f58aabf8bcccbd2e02" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/8f/8f8661c9af5a22a2354fb4e9dbb6295a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/8f/8f93327cc1b467f213153f8e728035ab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/8f/8f9809b5fb32831f54d4ea03d2a74136" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/8f/8f9a57c8c4be66a1355eefe1437d2b29" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/90/903f5dab8b41aea368c9093434d4fd8c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/90/907368adf2e2b033271c052e090e8566" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/90/90829e701a056f0caaab9c67cb94a24c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/90/90902eb5aed46671419d308caa40e494" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/91/914aed174695ab41b4981567faf402ec" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/91/916c13f365642a99c7828463df729e5b" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/91/91f81c3d91e46df7ded502e6f4408011" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/92/9207f59bc487417575f95fb27c7188ab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/92/92b26bf47aaa3afce9a4f65013ef04e0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/92/92c8000e91e261da490f78bd88fa07c5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/92/92e20f41d7cae4b8f530ef2f9c2ee312" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/93/936a03a19d9105239558a5f298730788" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/94/944f3614fcd30c427c7eb10a95ad43f5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/94/947af111ecd21be05521a0229a3ad49e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/94/9494ac3d9ed7f97d006daed055f9b656" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/95/9515d9efb4564e100cd4054c1b0a9193" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/95/953f1676db5466d820cf703fa9aa7c45" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/95/95b9123ec6a417778b52efd883fd8873" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/95/95cd2d994bb881eaba43c97b5568c98e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/96/9609da595dfb55a202ca3464570ba216" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/96/964856a0f2b35b06d8b3ea5eec468233" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/96/9656847b536cccd0f2263900792daecf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/96/9690a77905a07560e06c4af57ff5c00e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/96/969e16c76bceba83fb8fa7aaaa3e02e0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/96/96c3999f47c79f6b6e8476244f233bf9" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/97/9798b1d969c84f892bf173353ec9af33" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/97/97ff42590588303076263743a869778e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/98/98047f2117107e27963904fa6b03067f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/98/984360426f072ec0f4494caadf28ce6b" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/98/988cab15c13254200c534087e21648ee" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/98/98a868d7857d663a14366e0bd8d389dc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/98/98cf80fa230a27f91d556fb15b14b0fc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/98/98e38497e377ac69de1ccfab8a55752b" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/98/98ef73a1a1abf676fd7edd684f0e68f8" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/99/99031d2acfd915c77dcdecf6d13e4430" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/99/9903a85b31d37e24b53bcd2eff030af7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/99/996312bbe5ab4748957fe7733a30d7be" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/99/998c6947ae3bb2ef29348377ad2e3983" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/9a/9a3aaf1a3fc2b5e24fdf647fe2eb4a78" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/9a/9a55298022016f859e063bb0c382fbe1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/9a/9a960c2cb2fbc93b1a1774c43f34a59e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/9b/9b2c48cbb12170389b7ce42787a58166" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/9b/9b6b5fe29f68848242ee801349e03db7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/9b/9bae9896bd150118dbc8d485b14afc6c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/9b/9bbf84dffb1ee39817c386b226ecf17f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/9b/9be67ea3d9dcbbaf5ff5831a7787c59f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/9b/9bf785fced0f48fdbd46f060e84ff5e0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/9c/9c988de966e6e1805107375fca689c71" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/9c/9ca2fa104924a18b83d5b1c086c6f02f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/9d/9d968607330364f670d56bd899862a93" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/9d/9dd3aa7a4db94ed75a82bb8f877985cc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/9e/9e0b6c40e22cd53675ca103310b77608" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/9e/9e85a4e827a0663b061cebdae2d67fcd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/9e/9ecb3d088e7238ca353228d63114b15e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/9f/9f64d9722c6904da8d4099ebaa87f729" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/a0/a02be03a5fc1ce55d4fa2590c3adf5ab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/a0/a0a09b5f10794b9c1d484157d33d9af0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/a0/a0c0dc15ffcad0486ad670a5a94e71c6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/a0/a0fc0257a937c5b52379d54f7aab8a37" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/a1/a1330d52f10f89771b26d7c1e9f43891" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/a1/a1c0ae7c02cf5cbd18a900136032e982" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/a1/a1f13e9f6ed484045743f4c955887b7e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/a2/a241baf54b6efce2920a60486ab9ecea" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/a2/a29ad9e86244963248c0f1f5c211e4bc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/a2/a2d5df6f91fdebc22a0749d2dbfc8683" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/a2/a2e7bd387f9ec89832ae4e027796ae46" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/a3/a335ec115b7415233c9c96f1336957fa" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/a3/a3a7e2fa0ed531f5351898f40a6deff4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/a3/a3ae511db0280fedf2a0997f424ed838" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/a4/a472095a4c0934a148927426f02403bf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/a4/a47e6fe156e32294fe9a5ec93c6e50e5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/a4/a4a49b722f2ea5754c9f7f3b22b9682a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/a4/a4f963c5525ff3be7ba064c65efa0543" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/a5/a58993267f5e409e8bc30e48de68d910" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/a5/a5eb3efeda9f2ffcbb8fb49a6f002351" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/a6/a60b0115c37d056ceea439ff9a1373c2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/a6/a662f6f4eb34403b61e95fde6b80dbb8" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/a6/a67004a9058bd69636d6526ff700fa1b" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/a6/a6973081f492b397638c694394809c62" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/a8/a839279b0f85eeab959454deae9fa2da" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/a8/a87551aa67be28595a249242fa699b9d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/a9/a90cdf42c830dc1c9ade2e376c304572" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/a9/a9ae1ad8db91c53bf8ad2be3fa712aa8" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/a9/a9b09270997dc04d3669e452e890e488" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/a9/a9eac75b422b74d55465d29429c4ff2a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/aa/aa1eb873577769a64e2aab64c3b687e9" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/aa/aab448fcf528970a18ad8ebaae8fe695" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/aa/aabe4d9546f5ea43369ac9677a273486" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/aa/aacd7af7ea2b5576d62326001dd4f8e0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/aa/aae6a3a0a51644db40ff4f095206b739" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/ab/abf109a6b1e47a67f6a640bf5941498e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/ac/ac083b74077473e5482cf3c3c4821ade" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/ac/ac33e2b476415ac69882ac04b7b7d6c8" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/ad/ad5bd3dc4dc446cd45008bcdda5f95ac" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/ad/ad93480e7022cc2f35d001d40b2908a2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/ad/ada4c052c4047da6072fb5c0d53be3ac" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/ad/adc7e32fd2ab9ce4b447c284f50a4236" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/ad/adef0c748ce3dbd9df3b04c55b2a2d0d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/ae/ae3fedd397232bf0d3dcffbc18d25c0a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/ae/ae8759c559ecacd3a483e40d0e40cfbf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/ae/aefb87f67b48dfbf19e5dbe1ba677e93" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/af/af39178269b1e2d685794f4bb884fa9e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/af/af5317ce9ea54ad516fcc99290e4859e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/b0/b05fbf2dc08acd8d00bc577848524196" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/b0/b08b93b072d46598214fc7b6632f3dc8" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/b0/b0adca33bcc949715d9e172891672be3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/b1/b12ffeda5dda9f1c9fd697ac8eb313fb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/b1/b15cf531b61ba761fbbd4444ddbf4446" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/b1/b1d41035a9f11b158732a25c8a53aecc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/b3/b33b9610a004ffeeb6063451302de2b4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/b3/b33fa82fa51f0f5865795b280c370154" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/b4/b4648c78a6356c0f981bced8b891ece1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/b5/b5964b05429b49a261633157de37d951" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/b6/b6e5f0af8c93e566ed06baacb94d5df9" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/b7/b767c2e00439a413aaec9bdf505e0cd3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/b8/b813fb87991ed7978b5f7e732d6e3dfa" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/b8/b89a2c0b305a2ad77f8db72cefcecdcb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/b8/b8a714ddee4719dc32190ef6f3f7c656" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/b8/b8ff27d4264ab37c509d15feff2bf9fd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/b9/b92e7d69b491f88d2d322391a0e665c8" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/b9/b9413fd36393fc1153f8137961a7280c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/b9/b96ebe284ad51d4fe589bfdfbd080d7b" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/b9/b9d41d5bac287cbdc8819e8184a9c6cb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/b9/b9ef2b276857474f3c2456dc866cd670" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/b9/b9f2198f05d08b2acf25a21faf55c7c5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/ba/ba5de04ea01cf40969aa2b4f46703d8b" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/ba/ba75d8b9281b3cc0fba8c93059788d9e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/ba/ba81aff860c8723387a8fecb3d43aef0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/ba/ba8be597f516de1a0438b2f5e79cdd62" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/ba/babf35b3c64d0bd192ce46b3f5f6c13c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/bc/bc40379f7d0e8557b9f2f1eb5bd20b6e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/bc/bc6ac7463c733985acb5d80d20a92d84" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/bc/bcbe09fed4136bd81bd887e019fe035e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/bc/bcd25dff21d085ef74eebcafe90ddcd5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/bc/bcfa6be74c6293cb7289627df597e27a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/bd/bd037b7b71993dce80c016372bdc3ffb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/bd/bd49471e8d8628be1b90bd7021ea694d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/be/be828ce3e833c96d1e7d8cbe07d82320" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/be/bea54cfe64370e2d22e97d55a0246b44" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/bf/bf262facac14a1bf5a541f8fd09b4680" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/bf/bffeb19bbcb5d999422399d852a420f1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/c1/c155d6bb0596835b7e19fb09e9692865" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/c1/c16ca2aad33e770a107b186dead8aac2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/c2/c22cc75cc629a31af882a967eee33023" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/c2/c2769dc2deea7c381ebde10529fdc08b" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/c4/c42bf516974f2fc83e1b21522d4fe9f2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/c4/c4900c3e961502bf5e05a72a8a3a45cd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/c5/c5022021553959c3fdf698769be8d6d5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/c5/c5dcec865a206ec04110202fbfc755da" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/c6/c62aaf2760387d803453b03b0f88b03d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/c7/c71089e8156975a5a026c5bc66c3fb88" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/c7/c7517b7405647af86adac4bc2cba5cdc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/c7/c753fdbece405fb9c930990feaeb5ba8" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/c7/c76807c1a54ff37d580fbe1f37cf5e45" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/c7/c7827826f743325af7c18a933b6e9b31" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/c7/c7c8816580f59142e8598c98f2cbcc8f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/c8/c83599adafe7e2e9299d46c3f952fcfe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/c8/c87e456b970b409a9e56a433332f0a30" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/c8/c88769f7cdfebbcc9cf444c4722b2ae4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/c8/c8fe60bb4f931646d8483ef78cbb61ee" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/c9/c94c91e4c709c2e76044a4594be38ad0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/c9/c95662f2879cbbaea04720e5a8116a0d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/c9/c97023be136605b45b15222fa70c0407" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/c9/c98d9dd2c664bdcaa2dbce4ee3e0f921" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/ca/caab8658acaa8fcb11dc10a1f9723009" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/ca/caf424070be80e41b28e14660f4afa28" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/cb/cb029a60ec275729a24d2640cedaffe1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/cb/cb6413f632157cafb4b57d0e8c563f79" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/cb/cb75f3df45d2b0c46076cd70fcc1cb14" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/cb/cb9487dd1bda9417274a9206e9ae7792" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/cc/cc631e49ce7899fb1b8b73b8e5d7c680" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/cc/ccefee69c76cd074681ee3beb4af0af0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/cd/cd354aff1aca9a0c469df4ae957eb8fc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/cd/cdad10afea66786f4fdc521a795dec70" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/ce/ce39869e143531775073cec78a957723" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/ce/cee0397481a6144cfc2cd8578ebc6b39" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/cf/cf2501e0211ea7e0febef1be59fa4b44" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/cf/cf615b39d89179a2f57dce7bad04ab15" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/d0/d00bc286ae41d0fa24a8a595ab434e2b" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/d0/d037a0ff9513c2c8df66bd91f6acf680" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/d0/d07450dceb4c9e19a2969810c3b51b15" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/d1/d18ecc452f8749cbf126971ea7a0f6dc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/d1/d199915ba1ae418f319e7db607932aa7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/d2/d231292c1f3a56ba3e82d4fb0f00d0b1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/d2/d25dc45d1d21d300a0bcf7558ac07a62" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/d2/d26a82ddee4cc111137ff2e7849e96f0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/d2/d2a09b18b6062dbf13c8f4fcea78a80d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/d2/d2a4f9806734e67bba3201be23b4ab51" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/d2/d2cdaced5ce77414d8c6a6053832fa16" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/d2/d2ce8a56c3fb8b32298ac2ec436e4868" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/d2/d2e15f2cd921c83f91113ae5c6610d24" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/d3/d316d82ac35c619fa3b344d21ab52d8c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/d3/d346709545c0a0d909580c83f1db00f3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/d3/d3a20bed7bb7cf540d4614ac6ff4cb1f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/d4/d40e11113f1c8fd80d52250916e18210" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/d4/d43d6535711c86ec97121703b1bc19b8" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/d4/d4bbc3b877e269a051f041202d9b25c9" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/d5/d524d81a0028de2fc669d37d54452719" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/d5/d538d1fd29c4c73cc00ff4c3b02e2a49" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/d5/d5473a3a510557d7e776cdca8f06be96" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/d5/d5987bc74e6f866e6c943c7be37f5784" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/d6/d666cc4436cb99d6c80192117a75d58e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/d6/d6b3e894630ff35bbb9255ad8cd87f66" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/d6/d6bf747d2df44563994b03aba86dfd67" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/d7/d7f763837f4bc508a23a71a025456e54" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/d8/d889b1087582a730fc85299c15694710" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/d9/d9049517b7f0824b902f543145d22f10" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/d9/d96aba6e70e16cd50e8070ac5448cefa" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/d9/d981871f7f01a47f28f1d6113e384f51" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/d9/d987a1fb30f1501fd51afe46ff53829a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/d9/d99bc03deb1bbe50b8f52bac8a7988b4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/d9/d9b6ecd13e099a9eb3f4d44f833b0c3d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/da/da503b203d73c732bf62f00fbd6fa63a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/da/da55927ea6f26df4c367d3a71c0b6f4d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/da/daeac4d774015fe93f6dc31ec9daf21a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/db/db4f099102f6c0e380e59386223bf24a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/db/db51c0a5bef6c2977d7ab3eb5a225a0c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/db/db935a502dd9293fa844dcb83726a835" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/db/dbc94f6c1c9aab4a23d5a909da7056cd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/db/dbf77cdb0b203e1576b436f89bf1d27c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/dc/dc2198fc1383d8fca2236e6a3a89ca0e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/dc/dc5b6195ddcbab97dc39f56e3a862295" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/dc/dc6e3c03ed097cc37b4aa9472dc11671" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/dc/dc823619ed87acf260a79237be30cea3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/dc/dc8a9c379a17301fba11d622b5464f57" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/dc/dc9882443e01eea925b3d6fad6817373" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/dd/dd27174cc15f069dffa1dae40628d1eb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/dd/dd59ffa795bc8f53729d4b2737906bf4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/dd/dd71452056e94e47f6529b721bd3d385" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/dd/ddea734f379723c2d7c7922096631f56" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/de/de22a1eb61599b9b964c89ca161fc779" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/de/ded03b934622b780e11f8e6765d4f6e0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/de/ded4a886d36667dc4399efa030eb69da" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/df/df5541049243fd21bf6836cb6b466d4c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/df/dfb9966a6841de8d3c621d46f17eab88" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/e0/e01fe3d2eea592079da571389a37d045" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/e0/e06d7b008102d67cdcfa28678f1bc045" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/e0/e0ae60e7536ff352576ffd6d7c6f3b71" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/e0/e0cd1339d45b21a82f99dd92a36b35ad" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/e1/e113dd9ed8f6576fa04fcd5001564970" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/e1/e12e3f7d4a7e4e8680dac008d879cb16" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/e1/e17a5a6ef7f5a5ffaa802482654ec764" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/e2/e22668236a13c880d7374ba36a5b7ebc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/e2/e27b607e8d534ada52208f9e54cb56d4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/e2/e2d8f34b4618a6da7a8b4b78fad6ae88" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/e3/e3650ffc2dfee7661346ed3ec6e7870c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/e3/e3cc589620c84e491dff012ec4c2f31e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/e5/e5f19f883de0914686e637a87c8e9719" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/e5/e5f92c530cf718d69e457a180f3a10bc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/e6/e63631c73a9f2443890866cb0b823f76" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/e6/e675219348beea89b61ef7cb675b938e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/e6/e6fd71689339770e17ab827105c219b9" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/e7/e777bd9f9b9f08f867ff8d45481b35cf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/e7/e783836b00127ea7bf02c647dee1f654" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/e7/e786d6571d4d69e1a7f8ee6cb28b7533" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/e8/e84729545c4b75600dc762a53d5e6057" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/e8/e85fd52539a1eba8d2a69943af3ba855" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/e9/e9554b89607a951555f411c81ca81ef2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/e9/e983f1b473bfaa22f2d7e11a11b73629" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/ea/ea6c89c175428246db44c25b860debca" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/ea/eab7c905cc84ad2672b61cb467ed7f93" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/ea/eae4ecf88572e714d6dc36f2ebde56a9" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/eb/eb34c3a170fcc9dec743a88186e2236b" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/eb/eb7976a8d0b5ee0fe2f649fc5689ee45" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/eb/eb962fa281ae4113c72a3c75ac389293" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/ec/ecba504bbf1b2c4ee1c2d2b56dcdcc97" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/ec/ecfad40b5e7f4ec0706ba206a523c344" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/ee/ee594babf4b4fc7b2b90494a9e435bbd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/ef/ef0ac84783de10f2c1158db411e5632c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/ef/ef6925a78952a9f9436e6277a48a040b" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/ef/efcbb55629d6096697f24c14fcaef2a7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/f0/f043ab0676068e83366a7c07d7bd90d8" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/f0/f057f8764ff597ebfc6da7194d1e42a3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/f0/f09f46bed7951d9226706e742ac5d447" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/f1/f1fa84a1ce5ff3ac1cfa6aa5c39f24d6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/f2/f2680df512af47c38c50d13769984575" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/f2/f27366970347901f348210cccc3135a7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/f2/f2a27d934d8d0c7e20663727d5cb7138" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/f2/f2c18c13af90f8a62f04747a8664dfd3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/f3/f319e2eda5b5a235fab85bf4fe523663" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/f3/f377117c5d11c42e8533d22170c4096c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/f5/f51dd868ccd1ea602dfe197c9afb3b0b" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/f5/f52a92b5e346e85ef598fd5d9d2a5868" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/f6/f6087b997307242853a4c3268dc20f6a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/f6/f678c15112760d4f90d3edc1ab4b9fad" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/f6/f6dcc146f620c0561f027b7b008d91c3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/f7/f792a959b71e8b6b5a77857f453792de" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/f7/f7940bcc9eac052101f4bc95442f396d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/f7/f79e06060164baf07ee81e742dc33e19" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/f7/f7d43bad9103d9224468982f0f95ea93" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/f7/f7e4d643dcaf93902e2e946338dbb6ce" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/f8/f869a15ec74f199f307317aa88692cca" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/f8/f8b2fcf03d62f5a4d0ece38128940b27" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/f9/f9b4d2fa3c5db3254fcf8faad7838f0f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/f9/f9dc2ef9b527915542b89f4e3a6d581b" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/f9/f9f2f7866a30b5786acbd7ff8d1c1d81" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/fa/fa4a7bf3bc8fd3db7799946d765c7b00" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/fa/fa5edec8b6be47ec925d29bfc10c3136" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/fb/fb10ba6b298a67e5f573af40c7ada8bd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/fb/fb40365e3fe8b13e65af7eaf3642ef0b" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/fb/fb5b4ccacc05c25d3ed6e860730c2c62" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/fc/fc1855dca733a442eab0263848e5e7c9" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/fc/fc302edecb8e427503e26fca511c7d14" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/fc/fc73679c222e3f825c710c97f1fc3c41" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/fc/fca8d052983a9788b100670df5d599f2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/fc/fcbabd6886d1c06dc9435637a2e0338d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/fc/fce0d65b65af3df6079af4930466cf86" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/fd/fd594e5472c10086c691c25798cb90d0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/fd/fd9e5a9051251da8289cf1204d5c318e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/fd/fdb85ea2c3559fd3880cd61a009501fe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/fd/fdc09044018f8dc7a5a98cbec9cb2231" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/fd/fddce1d44887ad21302f378de68a0214" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/ff/ff34ece84e7b600aac1c5d60dd44406b" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Artifacts/ff/ff8a4f09f14243e8e18ba522c2e24d62" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Bee/1900b0aEDbg-inputdata.json" beforeDir="false" afterPath="$PROJECT_DIR$/Slappin/Library/Bee/1900b0aEDbg-inputdata.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Bee/1900b0aEDbg.dag" beforeDir="false" afterPath="$PROJECT_DIR$/Slappin/Library/Bee/1900b0aEDbg.dag" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Bee/1900b0aEDbg.dag.json" beforeDir="false" afterPath="$PROJECT_DIR$/Slappin/Library/Bee/1900b0aEDbg.dag.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Bee/1900b0aEDbg.dag.outputdata" beforeDir="false" afterPath="$PROJECT_DIR$/Slappin/Library/Bee/1900b0aEDbg.dag.outputdata" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Bee/1900b0aEDbg.dag.payloads" beforeDir="false" afterPath="$PROJECT_DIR$/Slappin/Library/Bee/1900b0aEDbg.dag.payloads" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Bee/1900b0aEDbg.dag_derived" beforeDir="false" afterPath="$PROJECT_DIR$/Slappin/Library/Bee/1900b0aEDbg.dag_derived" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Bee/1900b0aEDbg.dag_fsmtime" beforeDir="false" afterPath="$PROJECT_DIR$/Slappin/Library/Bee/1900b0aEDbg.dag_fsmtime" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Bee/TundraBuildState.state" beforeDir="false" afterPath="$PROJECT_DIR$/Slappin/Library/Bee/TundraBuildState.state" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Bee/TundraBuildState.state.map" beforeDir="false" afterPath="$PROJECT_DIR$/Slappin/Library/Bee/TundraBuildState.state.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Assembly-CSharp-Editor.UnityAdditionalFile.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Assembly-CSharp-Editor.dll.mvfrm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Assembly-CSharp-Editor.dll.mvfrm.rsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Assembly-CSharp-Editor.rsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Assembly-CSharp-Editor.rsp2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Assembly-CSharp-firstpass.UnityAdditionalFile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Assembly-CSharp-firstpass.UnityAdditionalFile.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Assembly-CSharp-firstpass.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Assembly-CSharp-firstpass.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Assembly-CSharp-firstpass.rsp" beforeDir="false" afterPath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Assembly-CSharp-firstpass.rsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Assembly-CSharp.UnityAdditionalFile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Assembly-CSharp.UnityAdditionalFile.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Assembly-CSharp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Assembly-CSharp.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Assembly-CSharp.ref.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Assembly-CSharp.ref.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Assembly-CSharp.rsp" beforeDir="false" afterPath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Assembly-CSharp.rsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/FlatKit.Utils.Editor.UnityAdditionalFile.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/FlatKit.Utils.Editor.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/FlatKit.Utils.Editor.dll.mvfrm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/FlatKit.Utils.Editor.dll.mvfrm.rsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/FlatKit.Utils.Editor.ref.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/FlatKit.Utils.Editor.rsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/FlatKit.Utils.Editor.rsp2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/QFSW.QC.Demo.UnityAdditionalFile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/QFSW.QC.Demo.UnityAdditionalFile.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/QFSW.QC.Editor.Tools.UnityAdditionalFile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/QFSW.QC.Editor.Tools.UnityAdditionalFile.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/QFSW.QC.Editor.UnityAdditionalFile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/QFSW.QC.Editor.UnityAdditionalFile.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/QFSW.QC.Extras.UnityAdditionalFile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/QFSW.QC.Extras.UnityAdditionalFile.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/QFSW.QC.Grammar.UnityAdditionalFile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/QFSW.QC.Grammar.UnityAdditionalFile.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/QFSW.QC.Parsers.UnityAdditionalFile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/QFSW.QC.Parsers.UnityAdditionalFile.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/QFSW.QC.QGUI.UnityAdditionalFile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/QFSW.QC.QGUI.UnityAdditionalFile.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/QFSW.QC.ScanRules.UnityAdditionalFile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/QFSW.QC.ScanRules.UnityAdditionalFile.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/QFSW.QC.Serializers.UnityAdditionalFile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/QFSW.QC.Serializers.UnityAdditionalFile.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/QFSW.QC.Suggestors.UnityAdditionalFile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/QFSW.QC.Suggestors.UnityAdditionalFile.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/QFSW.QC.UI.UnityAdditionalFile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/QFSW.QC.UI.UnityAdditionalFile.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/QFSW.QC.UnityAdditionalFile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/QFSW.QC.UnityAdditionalFile.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.CollabProxy.Editor.UnityAdditionalFile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.CollabProxy.Editor.UnityAdditionalFile.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.CollabProxy.Editor.rsp2" beforeDir="false" afterPath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.CollabProxy.Editor.rsp2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.EditorCoroutines.Editor.UnityAdditionalFile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.EditorCoroutines.Editor.UnityAdditionalFile.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.EditorCoroutines.Editor.rsp2" beforeDir="false" afterPath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.EditorCoroutines.Editor.rsp2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.Performance.Profile-Analyzer.Editor.UnityAdditionalFile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.Performance.Profile-Analyzer.Editor.UnityAdditionalFile.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.Performance.Profile-Analyzer.Editor.rsp2" beforeDir="false" afterPath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.Performance.Profile-Analyzer.Editor.rsp2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.PlasticSCM.Editor.UnityAdditionalFile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.PlasticSCM.Editor.UnityAdditionalFile.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.PlasticSCM.Editor.rsp2" beforeDir="false" afterPath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.PlasticSCM.Editor.rsp2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.ProBuilder.AddOns.Editor.UnityAdditionalFile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.ProBuilder.AddOns.Editor.UnityAdditionalFile.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.ProBuilder.AddOns.Editor.rsp2" beforeDir="false" afterPath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.ProBuilder.AddOns.Editor.rsp2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.ProBuilder.AssetIdRemapUtility.UnityAdditionalFile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.ProBuilder.AssetIdRemapUtility.UnityAdditionalFile.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.ProBuilder.AssetIdRemapUtility.rsp2" beforeDir="false" afterPath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.ProBuilder.AssetIdRemapUtility.rsp2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.ProBuilder.Csg.UnityAdditionalFile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.ProBuilder.Csg.UnityAdditionalFile.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.ProBuilder.Csg.rsp2" beforeDir="false" afterPath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.ProBuilder.Csg.rsp2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.ProBuilder.Editor.UnityAdditionalFile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.ProBuilder.Editor.UnityAdditionalFile.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.ProBuilder.Editor.rsp2" beforeDir="false" afterPath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.ProBuilder.Editor.rsp2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.ProBuilder.KdTree.UnityAdditionalFile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.ProBuilder.KdTree.UnityAdditionalFile.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.ProBuilder.KdTree.rsp2" beforeDir="false" afterPath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.ProBuilder.KdTree.rsp2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.ProBuilder.Poly2Tri.UnityAdditionalFile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.ProBuilder.Poly2Tri.UnityAdditionalFile.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.ProBuilder.Poly2Tri.rsp2" beforeDir="false" afterPath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.ProBuilder.Poly2Tri.rsp2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.ProBuilder.Stl.UnityAdditionalFile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.ProBuilder.Stl.UnityAdditionalFile.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.ProBuilder.Stl.rsp2" beforeDir="false" afterPath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.ProBuilder.Stl.rsp2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.ProBuilder.UnityAdditionalFile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.ProBuilder.UnityAdditionalFile.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.ProBuilder.rsp2" beforeDir="false" afterPath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.ProBuilder.rsp2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.Rider.Editor.UnityAdditionalFile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.Rider.Editor.UnityAdditionalFile.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.Rider.Editor.rsp2" beforeDir="false" afterPath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.Rider.Editor.rsp2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.Settings.Editor.UnityAdditionalFile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.Settings.Editor.UnityAdditionalFile.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.Settings.Editor.rsp2" beforeDir="false" afterPath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.Settings.Editor.rsp2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.UnityAdditionalFile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.UnityAdditionalFile.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.rsp2" beforeDir="false" afterPath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.rsp2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.UnityAdditionalFile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.UnityAdditionalFile.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.rsp2" beforeDir="false" afterPath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.rsp2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.TestTools.CodeCoverage.Editor.UnityAdditionalFile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.TestTools.CodeCoverage.Editor.UnityAdditionalFile.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.TestTools.CodeCoverage.Editor.rsp2" beforeDir="false" afterPath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.TestTools.CodeCoverage.Editor.rsp2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.TextMeshPro.Editor.UnityAdditionalFile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.TextMeshPro.Editor.UnityAdditionalFile.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.TextMeshPro.Editor.rsp2" beforeDir="false" afterPath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.TextMeshPro.Editor.rsp2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.TextMeshPro.UnityAdditionalFile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.TextMeshPro.UnityAdditionalFile.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.TextMeshPro.rsp2" beforeDir="false" afterPath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.TextMeshPro.rsp2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.Timeline.Editor.UnityAdditionalFile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.Timeline.Editor.UnityAdditionalFile.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.Timeline.Editor.rsp2" beforeDir="false" afterPath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.Timeline.Editor.rsp2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.Timeline.UnityAdditionalFile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.Timeline.UnityAdditionalFile.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.Timeline.rsp2" beforeDir="false" afterPath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.Timeline.rsp2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.VSCode.Editor.UnityAdditionalFile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.VSCode.Editor.UnityAdditionalFile.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.VSCode.Editor.rsp2" beforeDir="false" afterPath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.VSCode.Editor.rsp2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.VisualScripting.Core.Editor.UnityAdditionalFile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.VisualScripting.Core.Editor.UnityAdditionalFile.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.VisualScripting.Core.Editor.rsp2" beforeDir="false" afterPath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.VisualScripting.Core.Editor.rsp2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.VisualScripting.Core.UnityAdditionalFile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.VisualScripting.Core.UnityAdditionalFile.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.VisualScripting.Core.rsp2" beforeDir="false" afterPath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.VisualScripting.Core.rsp2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.VisualScripting.Flow.Editor.UnityAdditionalFile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.VisualScripting.Flow.Editor.UnityAdditionalFile.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.VisualScripting.Flow.Editor.rsp2" beforeDir="false" afterPath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.VisualScripting.Flow.Editor.rsp2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.VisualScripting.Flow.UnityAdditionalFile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.VisualScripting.Flow.UnityAdditionalFile.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.VisualScripting.Flow.rsp2" beforeDir="false" afterPath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.VisualScripting.Flow.rsp2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.VisualScripting.SettingsProvider.Editor.UnityAdditionalFile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.VisualScripting.SettingsProvider.Editor.UnityAdditionalFile.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.VisualScripting.SettingsProvider.Editor.rsp2" beforeDir="false" afterPath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.VisualScripting.SettingsProvider.Editor.rsp2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.VisualScripting.Shared.Editor.UnityAdditionalFile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.VisualScripting.Shared.Editor.UnityAdditionalFile.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.VisualScripting.Shared.Editor.rsp2" beforeDir="false" afterPath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.VisualScripting.Shared.Editor.rsp2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.VisualScripting.State.Editor.UnityAdditionalFile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.VisualScripting.State.Editor.UnityAdditionalFile.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.VisualScripting.State.Editor.rsp2" beforeDir="false" afterPath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.VisualScripting.State.Editor.rsp2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.VisualScripting.State.UnityAdditionalFile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.VisualScripting.State.UnityAdditionalFile.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.VisualScripting.State.rsp2" beforeDir="false" afterPath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.VisualScripting.State.rsp2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.VisualStudio.Editor.UnityAdditionalFile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.VisualStudio.Editor.UnityAdditionalFile.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.VisualStudio.Editor.rsp2" beforeDir="false" afterPath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/Unity.VisualStudio.Editor.rsp2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/UnityEditor.TestRunner.UnityAdditionalFile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/UnityEditor.TestRunner.UnityAdditionalFile.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/UnityEditor.TestRunner.rsp2" beforeDir="false" afterPath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/UnityEditor.TestRunner.rsp2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/UnityEditor.UI.UnityAdditionalFile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/UnityEditor.UI.UnityAdditionalFile.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/UnityEditor.UI.rsp2" beforeDir="false" afterPath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/UnityEditor.UI.rsp2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/UnityEngine.TestRunner.UnityAdditionalFile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/UnityEngine.TestRunner.UnityAdditionalFile.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/UnityEngine.TestRunner.rsp2" beforeDir="false" afterPath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/UnityEngine.TestRunner.rsp2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/UnityEngine.UI.UnityAdditionalFile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/UnityEngine.UI.UnityAdditionalFile.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/UnityEngine.UI.rsp2" beforeDir="false" afterPath="$PROJECT_DIR$/Slappin/Library/Bee/artifacts/1900b0aEDbg.dag/UnityEngine.UI.rsp2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Bee/backend1.traceevents" beforeDir="false" afterPath="$PROJECT_DIR$/Slappin/Library/Bee/backend1.traceevents" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Bee/backend2.traceevents" beforeDir="false" afterPath="$PROJECT_DIR$/Slappin/Library/Bee/backend2.traceevents" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Bee/buildprogram0.traceevents" beforeDir="false" afterPath="$PROJECT_DIR$/Slappin/Library/Bee/buildprogram0.traceevents" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Bee/fullprofile.json" beforeDir="false" afterPath="$PROJECT_DIR$/Slappin/Library/Bee/fullprofile.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Bee/tundra.digestcache" beforeDir="false" afterPath="$PROJECT_DIR$/Slappin/Library/Bee/tundra.digestcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Bee/tundra.log.json" beforeDir="false" afterPath="$PROJECT_DIR$/Slappin/Library/Bee/tundra.log.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/PackageManager/ProjectCache" beforeDir="false" afterPath="$PROJECT_DIR$/Slappin/Library/PackageManager/ProjectCache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/PackageManager/ProjectCache.md5" beforeDir="false" afterPath="$PROJECT_DIR$/Slappin/Library/PackageManager/ProjectCache.md5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/SceneVisibilityState.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Slappin/Library/SceneVisibilityState.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/ScriptAssemblies/Assembly-CSharp-firstpass.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Slappin/Library/ScriptAssemblies/Assembly-CSharp-firstpass.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/ScriptAssemblies/Assembly-CSharp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Slappin/Library/ScriptAssemblies/Assembly-CSharp.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/ScriptAssemblies/FlatKit.Utils.Editor.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/Search/transactions.db" beforeDir="false" afterPath="$PROJECT_DIR$/Slappin/Library/Search/transactions.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/SourceAssetDB" beforeDir="false" afterPath="$PROJECT_DIR$/Slappin/Library/SourceAssetDB" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/StateCache/MainStageHierarchy/4d/4d2a36d9faf65734f0bbefb3ee623532.json" beforeDir="false" afterPath="$PROJECT_DIR$/Slappin/Library/StateCache/MainStageHierarchy/4d/4d2a36d9faf65734f0bbefb3ee623532.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/com.unity.ide.rider/PersistedState.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Slappin/Library/com.unity.ide.rider/PersistedState.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Library/ilpp.pid" beforeDir="false" afterPath="$PROJECT_DIR$/Slappin/Library/ilpp.pid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Logs/AssetImportWorker0-prev.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Logs/AssetImportWorker1-prev.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Logs/AssetImportWorker2-prev.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Logs/AssetImportWorker3-prev.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Logs/AssetImportWorker4-prev.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Logs/shadercompiler-UnityShaderCompiler.exe0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Slappin/Logs/shadercompiler-UnityShaderCompiler.exe0.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Logs/shadercompiler-UnityShaderCompiler.exe1.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slappin/Logs/shadercompiler-UnityShaderCompiler.exe2.log" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="2n23cx8yKK2NmHIyisyviLCpzNO" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.49f1\Editor\Unity.exe" />
+      <option name="PROGRAM_PARAMETERS" value="-projectPath &quot;C:\Users\humin\repos\Slappin' Slappin'&quot; -debugCodeOptimization" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\humin\repos\Slappin' Slappin'" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unit Tests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.49f1\Editor\Unity.exe" />
+      <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath &quot;C:\Users\humin\repos\Slappin' Slappin'&quot; -testResults Logs/results.xml -logFile Logs/Editor.log -testPlatform EditMode -debugCodeOptimization" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\humin\repos\Slappin' Slappin'" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="projectPathOnTarget" />
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="projectPathOnTarget" />
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="876a02c0-11a6-4d26-8762-6bd564ed01cd" name="Changes" comment="" />
+      <created>1728157427651</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1728157427651</updated>
+      <workItem from="1728157429365" duration="23000" />
+      <workItem from="1728157460522" duration="628000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityProjectDiscoverer">
+    <option name="hasUnityReference" value="true" />
+    <option name="unityProject" value="true" />
+    <option name="unityProjectFolder" value="true" />
+  </component>
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
+  <component name="VcsManagerConfiguration">
+    <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="false" />
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+</project>
