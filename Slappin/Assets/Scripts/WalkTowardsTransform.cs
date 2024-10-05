@@ -6,6 +6,8 @@ public class WalkTowardsTransform : MonoBehaviour
     [SerializeField] private Transform targetTransform;
     [SerializeField] private float walkSpeed = 2f;
     [SerializeField] private float rotationSpeed = 5f;
+    [SerializeField] private float stoppingPoint = -2f;
+    [SerializeField] private Transform hurtLine;
 
     private void Start()
     {
@@ -17,6 +19,8 @@ public class WalkTowardsTransform : MonoBehaviour
 
     private void Update()
     {
+        if (transform.localPosition.z + transform.localScale.z *.05 <= hurtLine.localPosition.z) return;
+        
         // Get the direction from the current position to the target position
         Vector3 direction = (targetTransform.position - transform.position);
         direction.y = 0; // Ignore the Y axis for movement
