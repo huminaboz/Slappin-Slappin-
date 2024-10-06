@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class HandMovement : MonoBehaviour
 {
     [SerializeField] private float moveSpeed = 2.5f; // Default movement speed
     [SerializeField] private float boostedSpeedMultiplier = 2f; // How much faster when holding the right trigger
