@@ -44,16 +44,16 @@ public class SlapAttack : MonoBehaviour
         {
             downTween.Kill();
             Enemy_Spike enemySpike = other.GetComponent<Enemy_Spike>();
-            playerHealth.AdjustHp(-enemySpike.handStabDamage, enemySpike);
+            playerHealth.AdjustHp(-enemySpike.handStabDamage, gameObject);
             GoBackUp();
             return;
         }
 
         //If hitting an enemy, do damage to it
-        if (other.GetComponent(typeof(IDamageable)) != null)
+        if (other.GetComponent(typeof(Health)) != null)
         {
-            IDamageable damageable = other.GetComponent<IDamageable>();
-            damageable.AdjustHealth(-attackData.baseDamage);
+            Health health = other.GetComponent<Health>();
+            health.AdjustHp(-attackData.baseDamage, gameObject);
         }
     }
 

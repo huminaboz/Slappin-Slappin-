@@ -1,8 +1,9 @@
 using UnityEngine;
 
 [RequireComponent(typeof(Health))]
-public abstract class Enemy : MonoBehaviour, IDamageable
+public abstract class Enemy : MonoBehaviour, IHpAdjustmentListener
 {
+    private IHpAdjustmentListener _hpAdjustmentListenerImplementation;
     public Health thisHealth { get; set; }
 
     private void Awake()
@@ -10,16 +11,19 @@ public abstract class Enemy : MonoBehaviour, IDamageable
         thisHealth = GetComponent<Health>();
     }
 
-    public void AdjustHealth(int amount)
+    public void TookDamage(int damageAmount, GameObject attacker)
     {
-        thisHealth.AdjustHp(amount, this);
     }
 
-    public virtual void HandleDeath()
+    public void Healed(int healAmount, GameObject healer)
+    {
+    }
+
+    public float HandleDeath(int lastAttack, GameObject killer)
     {
         //Throw up a puff of particle
         //Return to the pool
-
         Destroy(gameObject);
+        return 0;
     }
 }

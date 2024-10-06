@@ -1,33 +1,18 @@
-using Unity.Collections;
 using UnityEngine;
 
 [RequireComponent(typeof(Health))]
 [RequireComponent(typeof(PlayerInput))]
-public class Player : MonoBehaviour, IDamageable
+public class Player : MonoBehaviour, IHpAdjustmentListener
 {
     public Health thisHealth { get; set; }
 
     [SerializeField] private HandMovement handMovement;
     private PlayerInput PlayerInput { get; set; }
 
-    [ReadOnly] public bool isAlive = true;
-
     private void Awake()
     {
         thisHealth = GetComponent<Health>();
         PlayerInput = GetComponent<PlayerInput>();
-    }
-
-    public void AdjustHealth(int amount)
-    {
-        thisHealth.AdjustHp(amount, this);
-    }
-
-    public void HandleDeath()
-    {
-        Debug.Log($"{gameObject.name} is handling death.");
-        DisableInputs();
-        isAlive = false;
     }
 
     public void DisableInputs()
@@ -38,8 +23,25 @@ public class Player : MonoBehaviour, IDamageable
 
     public void EnableInputs()
     {
-        if (!isAlive) return; 
         PlayerInput.enabled = true;
         handMovement.enabled = true;
+    }
+
+    public void TookDamage(int damageAmount, GameObject attacker)
+    {
+    }
+
+    public void Healed(int healAmount, GameObject healer)
+    {
+    }
+
+    public float HandleDeath(int lastAttack, GameObject killer)
+    {
+        
+        DisableInputs();
+
+        //TODO:: Use this for dying
+        float deathAnimationTime = 0f;
+        return deathAnimationTime;
     }
 }
