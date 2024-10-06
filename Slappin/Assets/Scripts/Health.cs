@@ -1,17 +1,23 @@
+using System;
 using Unity.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 
 public class Health : MonoBehaviour
 {
-    [ReadOnly] private int hp;
+    [field: ReadOnly] public int Hp { get; private set; }
     [SerializeField] private int maxHp = 5;
     [SerializeField] private UnityEvent OnDeath;
 
+    private void OnEnable()
+    {
+        Hp = maxHp;
+    }
+
     public void AdjustHp(int amount, IDamageable damageable)
     {
-        hp += amount;
-        if (hp < 0)
+        Hp += amount;
+        if (Hp <= 0)
         {
             HandleDeath(damageable);    
         }

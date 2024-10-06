@@ -9,7 +9,7 @@ public class SlapAttack : MonoBehaviour
     [SerializeField] private Health playerHealth;
 
     [SerializeField] private SO_AttackData attackData;
-
+    
 
     private const float OffScreenSlapYPosition = .88f;
     private float groundYPosition;
@@ -47,8 +47,7 @@ public class SlapAttack : MonoBehaviour
         if(other.GetComponent(typeof(IDamageable)) != null)
         {
             IDamageable damageable = other.GetComponent<IDamageable>();
-            damageable.AdjustHealth(attackData.baseDamage);
-            Debug.Log($"{other.name} damaged for {attackData.baseDamage}");
+            damageable.AdjustHealth(-attackData.baseDamage);
         }
     }
 

@@ -7,7 +7,6 @@ public interface IDamageable
 
     public void AdjustHealth(int amount)
     {
-        thisHealth.AdjustHp(amount, this);
     }
 
     public void HandleDeath();
