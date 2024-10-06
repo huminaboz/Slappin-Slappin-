@@ -1,9 +1,5 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using Unity.Collections;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 [RequireComponent(typeof(Health))]
 [RequireComponent(typeof(PlayerInput))]
@@ -14,6 +10,8 @@ public class Player : MonoBehaviour, IDamageable
     [SerializeField] private HandMovement handMovement;
     private PlayerInput PlayerInput { get; set; }
 
+    [ReadOnly] public bool isAlive = true;
+
     private void Awake()
     {
         thisHealth = GetComponent<Health>();
@@ -22,11 +20,14 @@ public class Player : MonoBehaviour, IDamageable
 
     public void AdjustHealth(int amount)
     {
+        thisHealth.AdjustHp(amount, this);
     }
 
     public void HandleDeath()
     {
+        Debug.Log($"{gameObject.name} is handling death.");
         DisableInputs();
+        isAlive = false;
     }
 
     public void DisableInputs()
@@ -37,6 +38,7 @@ public class Player : MonoBehaviour, IDamageable
 
     public void EnableInputs()
     {
+        if (!isAlive) return; 
         PlayerInput.enabled = true;
         handMovement.enabled = true;
     }

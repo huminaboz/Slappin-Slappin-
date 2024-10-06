@@ -20,15 +20,16 @@ public class SlapAttack : MonoBehaviour
         groundYPosition = slap.transform.localScale.y;
     }
 
-    private DOTween downTween;
+    private Tween downTween;
 
     public void DropSlap()
     {
+        downTween.Kill();
         //Warp to the off screen Y position and the x and z position of the shadow
         slap.transform.position = new Vector3(shadow.position.x, OffScreenSlapYPosition, shadow.position.z);
 
         //Tween down to the ground
-        slap.transform.DOMoveY(groundYPosition, .2f)
+        downTween = slap.transform.DOMoveY(groundYPosition, .2f)
             .SetEase(Ease.InOutQuint)
             .OnComplete(() => { GoBackUp(); });
         player.DisableInputs();
@@ -41,6 +42,7 @@ public class SlapAttack : MonoBehaviour
         //If hitting a spike, take damage and go back up
         if (other.GetComponent(typeof(Enemy_Spike)) != null)
         {
+            downTween.Kill();
             Enemy_Spike enemySpike = other.GetComponent<Enemy_Spike>();
             playerHealth.AdjustHp(-enemySpike.handStabDamage, enemySpike);
             GoBackUp();
@@ -61,6 +63,9 @@ public class SlapAttack : MonoBehaviour
         slap.transform.DOMoveY(OffScreenSlapYPosition, .2f)
             .SetDelay(.2f)
             .SetEase(Ease.InOutQuint)
-            .OnComplete(() => { player.EnableInputs(); });
+            .OnComplete(() =>
+            {
+                player.EnableInputs();
+            });
     }
 }
