@@ -1,29 +1,31 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public interface IObjectPool<T> where T: MonoBehaviour
+public interface IObjectPool<T> where T : MonoBehaviour
 {
     public void SetupObjectFirstTime();
     public void InitializeObjectFromPool();
     public void ReturnObjectToPool();
 }
 
-public static class ObjectPoolManager<T> where T: MonoBehaviour, IObjectPool<T>
+public static class ObjectPoolManager<T> where T : MonoBehaviour, IObjectPool<T>
 {
     private static List<T> poolOfObjects = new List<T>();
     private static List<T> objectsInUse = new List<T>();
     private static int objectNumber = 0;
     private static int maxObjects = 500;
-    
+
     public static bool ExceedingCapacity()
     {
         return objectsInUse.Count > maxObjects;
-}
-    
+    }
+
     public static T GetObject(GameObject templateObject)
     {
+        if (ExceedingCapacity()) return null;
+
         //Puts a new object in the pool if there's no more unused objects to use
-        if(poolOfObjects.Count < 1)
+        if (poolOfObjects.Count < 1)
         {
             CreateNewPooledObject(templateObject);
         }
@@ -32,7 +34,7 @@ public static class ObjectPoolManager<T> where T: MonoBehaviour, IObjectPool<T>
         objectsInUse.Add(nextObject); //Move the object over to the in Use list
         return nextObject;
     }
-    
+
     private static T PopNextObject()
     {
         //Grab the object at the end of the list
@@ -42,7 +44,7 @@ public static class ObjectPoolManager<T> where T: MonoBehaviour, IObjectPool<T>
         next.InitializeObjectFromPool(); //Grabbing a function from the interface
         return next;
     }
-    
+
     private static void CreateNewPooledObject(GameObject templateObject)
     {
         GameObject newObject = Object.Instantiate(templateObject);
@@ -51,7 +53,7 @@ public static class ObjectPoolManager<T> where T: MonoBehaviour, IObjectPool<T>
         newComponent.name = templateObject.name + objectNumber++;
         poolOfObjects.Add(newComponent);
     }
-    
+
     //When cleaning up the object
     public static void ReturnObject(T component)
     {

@@ -9,13 +9,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6975091110133648926}
+  - component: {fileID: 911431878403593769}
+  - component: {fileID: 1389226548232879295}
   - component: {fileID: 2825724572631976098}
   - component: {fileID: 871805040516139315}
   - component: {fileID: 2960555294106307458}
   - component: {fileID: 8499473609309861931}
   - component: {fileID: 3836345842740493001}
-  - component: {fileID: 911431878403593769}
-  - component: {fileID: 1389226548232879295}
   - component: {fileID: 2766326349189941661}
   m_Layer: 0
   m_Name: Bouncer
@@ -39,6 +39,38 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &911431878403593769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6825719715896144569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d78660ad45ce12c468593b550f6117f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  walkSpeed: 0.03
+  rotationSpeed: 5
+--- !u!114 &1389226548232879295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6825719715896144569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06b712ba2097a964aa1c1cca2ec11c72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 0
+  maxHp: 12
+  OnDeath:
+    m_PersistentCalls:
+      m_Calls: []
+  isAlive: 1
 --- !u!114 &2825724572631976098
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34091,46 +34123,13 @@ MeshCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
---- !u!114 &911431878403593769
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6825719715896144569}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d78660ad45ce12c468593b550f6117f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetTransform: {fileID: 0}
-  walkSpeed: 0.05
-  rotationSpeed: 5
-  stoppingPoint: -2.05
-  hurtLine: {fileID: 0}
---- !u!114 &1389226548232879295
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6825719715896144569}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06b712ba2097a964aa1c1cca2ec11c72, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHp: 12
-  OnDeath:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &2766326349189941661
 MonoBehaviour:
   m_ObjectHideFlags: 0

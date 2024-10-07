@@ -20,10 +20,12 @@ public class SlapAttack : MonoBehaviour, IHpAdjustmentListener
     [SerializeField] private AnimationCurve startSlapCurve;
     
     private Collider slapCollider;
+    private Material slapMaterial;
 
     private void Awake()
     {
         slapCollider = GetComponent<Collider>();
+        slapMaterial = GetComponent<Renderer>().material;
     }
 
     private void Start()
@@ -36,9 +38,13 @@ public class SlapAttack : MonoBehaviour, IHpAdjustmentListener
 
     public void DropSlap()
     {
-        if (!playerHealth.isAlive) return;
+        if (!playerHealth.isAlive)
+        {
+            Debug.Log("Can't slap - player is dead");
+            return;
+        }
         downTween.Kill();
-        slapCollider.enabled = true;
+        // slapCollider.enabled = true;
         //Warp to the off screen Y position and the x and z position of the shadow
 
         //Tween down to the ground
@@ -47,8 +53,8 @@ public class SlapAttack : MonoBehaviour, IHpAdjustmentListener
             .OnComplete(() => 
             {
                 //Make a big puff of smoke or something
-                slapCollider.enabled = false;
-                StartCoroutine(GoBackUp(true));
+                // slapCollider.enabled = false;
+                StartCoroutine(GoBackUp(.1f));
             });
         player.DisableInputs();
     }
@@ -57,13 +63,16 @@ public class SlapAttack : MonoBehaviour, IHpAdjustmentListener
     {
         //I think it makes more since to just let whatever the hand hits to handle what it does when it gets slapped
 
+        Debug.Log(other);
+        
         //If hitting a spike, take damage and go back up
         if (other.GetComponent(typeof(Enemy_Spike)) != null) //Could handle this on the spike
         {
             downTween.Kill();
             Enemy_Spike enemySpike = other.GetComponent<Enemy_Spike>();
             playerHealth.AdjustHp(-enemySpike.handStabDamage, gameObject);
-            StartCoroutine(GoBackUp(false));
+            slapMaterial.color = Color.red;
+            StartCoroutine(GoBackUp(1f));
             return;
         }
 
@@ -76,9 +85,9 @@ public class SlapAttack : MonoBehaviour, IHpAdjustmentListener
     }
 
 
-    IEnumerator GoBackUp(bool returnDelay)
+    IEnumerator GoBackUp(float returnDelay)
     {
-        if (returnDelay) yield return new WaitForSeconds(.1f * attackData.slapRecoveryMultiplier);
+        yield return new WaitForSeconds(returnDelay * attackData.slapRecoveryMultiplier);
 
         //To be able to start moving again while on the way up
         player.EnableMovement();
@@ -88,6 +97,7 @@ public class SlapAttack : MonoBehaviour, IHpAdjustmentListener
             .SetEase(Ease.InQuint)
             .OnComplete(() =>
             {
+                slapMaterial.color = Color.white;
                 player.EnableButtonInput();
             });
     }

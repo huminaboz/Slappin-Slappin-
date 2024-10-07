@@ -7,8 +7,6 @@ public abstract class Enemy : MonoBehaviour, IHpAdjustmentListener, IObjectPool<
     private IHpAdjustmentListener _hpAdjustmentListenerImplementation;
     public Health thisHealth { get; set; }
 
-    [SerializeField] public float spawnChance = .15f;
-
     public virtual void SetupObjectFirstTime()
     {
         gameObject.SetActive(false);

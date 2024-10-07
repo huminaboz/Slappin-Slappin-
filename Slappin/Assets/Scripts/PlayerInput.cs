@@ -8,7 +8,6 @@ public class PlayerInput : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1"))
         {
-            Debug.Log("Firing Slap");
             slapAttack.DropSlap();
         }
     }

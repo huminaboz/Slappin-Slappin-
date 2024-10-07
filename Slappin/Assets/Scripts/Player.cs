@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 [RequireComponent(typeof(Health))]
@@ -13,6 +14,11 @@ public class Player : MonoBehaviour, IHpAdjustmentListener
     {
         thisHealth = GetComponent<Health>();
         PlayerInput = GetComponent<PlayerInput>();
+    }
+
+    private void Start()
+    {
+        thisHealth.Initialize();
     }
 
     public void DisableInputs()
