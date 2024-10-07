@@ -1,4 +1,5 @@
 using System;
+using DG.Tweening;
 using UnityEngine;
 
 [RequireComponent(typeof(Health))]
@@ -31,8 +32,13 @@ public abstract class Enemy : MonoBehaviour, IHpAdjustmentListener, IObjectPool<
 
     public virtual float HandleDeath(int lastAttack, GameObject killer)
     {
-        //Throw up a puff of particle
-        ReturnObjectToPool();
+        //TODO: Throw up a puff of particle
+        
+        //Spin in a circle first
+        transform.DORotate(new Vector3(0, 720, 0), 1f, RotateMode.FastBeyond360)
+            .SetEase(Ease.Linear)
+            .OnComplete(ReturnObjectToPool);
+
         return 0;
     }
 
