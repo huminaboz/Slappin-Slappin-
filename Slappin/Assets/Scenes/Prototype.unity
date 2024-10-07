@@ -251,8 +251,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeBetweenSpawns: 0.25
   enemyPrefabs: []
-  spikePrefab: {fileID: 0}
-  bouncerPrefab: {fileID: 0}
+  spikePrefab: {fileID: 3917557613060000298, guid: e148037d1aff1fa4fb977d2a94f07868, type: 3}
+  bouncerPrefab: {fileID: 6825719715896144569, guid: 3fbd4ae7bcea3714f8ed9422d8834d87, type: 3}
   pawnPrefab: {fileID: 3826877389465147980, guid: e6d04478a9e4a9842b348cb91b662b77, type: 3}
   topLeftPossibleSpawn: {fileID: 280439155}
   bottomRightPossibleSpawn: {fileID: 37348742}
@@ -543,12 +543,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 734975209}
+  - component: {fileID: 734975210}
   - component: {fileID: 734975208}
   - component: {fileID: 734975207}
   - component: {fileID: 734975206}
   - component: {fileID: 734975205}
   - component: {fileID: 734975204}
-  - component: {fileID: 734975210}
   m_Layer: 0
   m_Name: HandShadow
   m_TagString: Untagged
@@ -34644,6 +34644,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 2.5
   boostedSpeedMultiplier: 2
+  slapHandObject: {fileID: 910431745}
 --- !u!1 &910431741
 GameObject:
   m_ObjectHideFlags: 0
@@ -35445,6 +35446,7 @@ MonoBehaviour:
   OnDeath:
     m_PersistentCalls:
       m_Calls: []
+  isAlive: 1
 --- !u!114 &2113894225
 MonoBehaviour:
   m_ObjectHideFlags: 0

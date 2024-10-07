@@ -12,5 +12,6 @@ public class Enemy_Spike : Enemy, IObjectPool<Enemy_Spike>
 
     public override void ReturnObjectToPool()
     {
+        ObjectPoolManager<Enemy_Spike>.ReturnObject(this);
     }
 }

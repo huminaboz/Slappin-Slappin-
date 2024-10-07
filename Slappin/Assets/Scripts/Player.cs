@@ -21,10 +21,14 @@ public class Player : MonoBehaviour, IHpAdjustmentListener
         handMovement.enabled = false;
     }
 
-    public void EnableInputs()
+    public void EnableMovement()
+    {
+        handMovement.enabled = true;
+    }
+
+    public void EnableButtonInput()
     {
         PlayerInput.enabled = true;
-        handMovement.enabled = true;
     }
 
     public void TookDamage(int damageAmount, GameObject attacker)

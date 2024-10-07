@@ -2,12 +2,12 @@ using UnityEngine;
 
 public class Enemy_Pawn : Enemy, IObjectPool<Enemy_Pawn>
 {
-    private Material thisMaterial;
+    // private Material thisMaterial;
     
     public override void SetupObjectFirstTime()
     {
         base.SetupObjectFirstTime();
-        thisMaterial = GetComponent<Renderer>().material;
+        // thisMaterial = GetComponent<Renderer>().material;
     }
 
     public override void InitializeObjectFromPool()
@@ -18,7 +18,7 @@ public class Enemy_Pawn : Enemy, IObjectPool<Enemy_Pawn>
 
     public override float HandleDeath(int lastAttack, GameObject killer)
     {
-        thisMaterial.color = Color.red;
+        // thisMaterial.color = Color.red;
         return base.HandleDeath(lastAttack, killer);
     }
 
