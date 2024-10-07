@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using DG.Tweening;
 using UnityEngine;
 
@@ -7,11 +8,19 @@ public abstract class Enemy : MonoBehaviour, IHpAdjustmentListener, IObjectPool<
 {
     private IHpAdjustmentListener _hpAdjustmentListenerImplementation;
     public Health thisHealth { get; set; }
+    
+    //Flash stuff
+    public float flashDuration = 0.5f;
+    private Color originalColor;
+    private Material thisMaterial;
+    public int flashCount = 5;   
 
     public virtual void SetupObjectFirstTime()
     {
         gameObject.SetActive(false);
         thisHealth = GetComponent<Health>();
+        thisMaterial = GetComponent<Renderer>().material;
+        originalColor = thisMaterial.color;
     }
 
     public virtual void InitializeObjectFromPool()
@@ -23,6 +32,23 @@ public abstract class Enemy : MonoBehaviour, IHpAdjustmentListener, IObjectPool<
     public void TookDamage(int damageAmount, GameObject attacker)
     {
         //Got hit feedback
+        StartCoroutine(FlashRedCoroutine());
+    }
+    
+    private IEnumerator FlashRedCoroutine()
+    {
+        float flashInterval = flashDuration / (flashCount * 2); // Time for one flash cycle (red to original color)
+
+        for (int i = 0; i < flashCount; i++)
+        {
+            thisMaterial.color = Color.red;
+            yield return new WaitForSeconds(flashInterval); // Wait for half of the interval
+            thisMaterial.color = originalColor;
+            yield return new WaitForSeconds(flashInterval); // Wait for the other half of the interval
+        }
+
+        // Ensure the material is set back to its original color
+        thisMaterial.color = originalColor;
     }
 
     public void Healed(int healAmount, GameObject healer)
