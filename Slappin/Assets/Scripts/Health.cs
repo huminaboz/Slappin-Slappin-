@@ -19,9 +19,8 @@ public class Health : MonoBehaviour
         hpAdjustmentListeners = GetComponents<IHpAdjustmentListener>();
     }
 
-    private void OnEnable()
+    public void Initialize()
     {
-        //This might be something to do in the pooling engine
         hp = maxHp;
     }
 
@@ -32,16 +31,17 @@ public class Health : MonoBehaviour
         Debug.Log($"{gameObject.name} damaged for {amount}. "
                   + $"\nHp is now {hp}");
 
+        //HEALING
         if (oldHealth < hp)
         {
             foreach (IHpAdjustmentListener damageListeners in hpAdjustmentListeners)
             {
                 damageListeners.Healed(amount, attacker);
             }
-
             return;
         }
 
+        //HURTING
         if (oldHealth > hp)
         {
             foreach (IHpAdjustmentListener damageListeners in hpAdjustmentListeners)
@@ -50,6 +50,7 @@ public class Health : MonoBehaviour
             }
         }
 
+        //DEADING
         if (hp <= 0)
         {
             isAlive = false;
@@ -62,14 +63,18 @@ public class Health : MonoBehaviour
             }
 
             OnDeath?.Invoke();
-            StartCoroutine(Cleanup(maxWaitTime + 0.1f));
+            StartCoroutine(QueueCleanup(maxWaitTime + 0.1f));
         }
     }
 
-    IEnumerator Cleanup(float waitTime)
+    IEnumerator QueueCleanup(float waitTime)
     {
         yield return waitTime;
+        Cleanup();
+    }
 
-        Destroy(gameObject);
+    private void Cleanup()
+    {
+        gameObject.SetActive(false);
     }
 }

@@ -51,6 +51,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ade335cace46394ba3953a5507dd3f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnChance: 0.15
 --- !u!114 &6055458593731207565
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63,11 +64,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d78660ad45ce12c468593b550f6117f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetTransform: {fileID: 0}
   walkSpeed: 0.2
   rotationSpeed: 5
-  stoppingPoint: -2.05
-  hurtLine: {fileID: 0}
 --- !u!114 &3636230606908791104
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -396,7 +394,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06b712ba2097a964aa1c1cca2ec11c72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHp: 6
+  hp: 0
+  maxHp: 3
   OnDeath:
     m_PersistentCalls:
       m_Calls: []

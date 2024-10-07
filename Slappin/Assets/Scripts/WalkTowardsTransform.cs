@@ -1,17 +1,15 @@
 using UnityEngine;
-using UnityEngine.Serialization;
 
 public class WalkTowardsTransform : MonoBehaviour
 {
-    [SerializeField] private Transform targetTransform;
     [SerializeField] private float walkSpeed = 2f;
     [SerializeField] private float rotationSpeed = 5f;
-    [SerializeField] private float stoppingPoint = -2f;
-    [SerializeField] private Transform hurtLine;
+
+    //TODO:: Can set this up to target a random X position at the hurt line
 
     private void Start()
     {
-        if (targetTransform == null)
+        if (EnemyTarget.I.targetTransform == null)
         {
             Debug.LogError("target transform is null");
         }
@@ -19,10 +17,10 @@ public class WalkTowardsTransform : MonoBehaviour
 
     private void Update()
     {
-        if (transform.localPosition.z + transform.localScale.z *.05 <= hurtLine.localPosition.z) return;
+        if (transform.localPosition.z + transform.localScale.z *.05 <= EnemyTarget.I.hurtLine.localPosition.z) return;
         
         // Get the direction from the current position to the target position
-        Vector3 direction = (targetTransform.position - transform.position);
+        Vector3 direction = (EnemyTarget.I.targetTransform.position - transform.position);
         direction.y = 0; // Ignore the Y axis for movement
 
         // Move the object towards the target
