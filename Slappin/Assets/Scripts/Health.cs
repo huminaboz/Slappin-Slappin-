@@ -1,4 +1,3 @@
-using System.Collections;
 using Unity.Collections;
 using UnityEngine;
 using UnityEngine.Events;
@@ -22,10 +21,13 @@ public class Health : MonoBehaviour
     public void Initialize()
     {
         hp = maxHp;
+        isAlive = true;
     }
 
     public void AdjustHp(int amount, GameObject attacker)
     {
+        if (!isAlive) return;
+        
         int oldHealth = hp;
         hp += amount;
         Debug.Log($"{gameObject.name} damaged for {amount}. "
@@ -63,18 +65,18 @@ public class Health : MonoBehaviour
             }
 
             OnDeath?.Invoke();
-            StartCoroutine(QueueCleanup(maxWaitTime + 0.1f));
+            // StartCoroutine(QueueCleanup(maxWaitTime + 0.1f));
         }
     }
 
-    IEnumerator QueueCleanup(float waitTime)
-    {
-        yield return waitTime;
-        Cleanup();
-    }
-
-    private void Cleanup()
-    {
-        gameObject.SetActive(false);
-    }
+    // IEnumerator QueueCleanup(float waitTime)
+    // {
+    //     yield return waitTime;
+    //     Cleanup();
+    // }
+    //
+    // private void Cleanup()
+    // {
+    //     gameObject.SetActive(false);
+    // }
 }

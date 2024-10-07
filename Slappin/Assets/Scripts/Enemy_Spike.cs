@@ -10,13 +10,7 @@ public class Enemy_Spike : Enemy, IObjectPool<Enemy_Spike>
         InitializeObjectFromPool();
     }
 
-    private void OnDisable()
-    {
-        ReturnObjectToPool();
-    }
-
     public override void ReturnObjectToPool()
     {
-        throw new NotImplementedException();
     }
 }

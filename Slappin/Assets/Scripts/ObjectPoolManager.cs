@@ -13,6 +13,12 @@ public static class ObjectPoolManager<T> where T: MonoBehaviour, IObjectPool<T>
     private static List<T> poolOfObjects = new List<T>();
     private static List<T> objectsInUse = new List<T>();
     private static int objectNumber = 0;
+    private static int maxObjects = 500;
+    
+    public static bool ExceedingCapacity()
+    {
+        return objectsInUse.Count > maxObjects;
+}
     
     public static T GetObject(GameObject templateObject)
     {
@@ -51,6 +57,7 @@ public static class ObjectPoolManager<T> where T: MonoBehaviour, IObjectPool<T>
     {
         // component.ReturnObjectToPool(); //This causes a stack overflow because it recalls this function
 
+        component.gameObject.SetActive(false);
         objectsInUse.Remove(component);
         poolOfObjects.Add(component);
     }

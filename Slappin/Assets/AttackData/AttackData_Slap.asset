@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e2054b6bef72e241bd179b54c914c61, type: 3}
   m_Name: AttackData_Slap
   m_EditorClassIdentifier: 
+  Notes: 
   baseDamage: 3
-  attackSpeed: 1
+  attackSpeed: 0.3
+  slapRecoveryMultiplier: 1

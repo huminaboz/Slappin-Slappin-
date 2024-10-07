@@ -15,6 +15,8 @@ public class SlapAttack : MonoBehaviour
     private const float OffScreenSlapYPosition = .88f;
     private float groundYPosition;
 
+    [SerializeField] private AnimationCurve startSlapCurve;
+
     private void Start()
     {
         groundYPosition = slap.transform.localScale.y;
@@ -29,8 +31,8 @@ public class SlapAttack : MonoBehaviour
         slap.transform.position = new Vector3(shadow.position.x, OffScreenSlapYPosition, shadow.position.z);
 
         //Tween down to the ground
-        downTween = slap.transform.DOMoveY(groundYPosition, .2f)
-            .SetEase(Ease.InOutQuint)
+        downTween = slap.transform.DOMoveY(groundYPosition, attackData.attackSpeed)
+            .SetEase(startSlapCurve)
             .OnComplete(() => { GoBackUp(); });
         player.DisableInputs();
     }
@@ -60,9 +62,9 @@ public class SlapAttack : MonoBehaviour
     private void GoBackUp()
     {
         //tween back up from current position
-        slap.transform.DOMoveY(OffScreenSlapYPosition, .2f)
-            .SetDelay(.2f)
-            .SetEase(Ease.InOutQuint)
+        slap.transform.DOMoveY(OffScreenSlapYPosition, .1f * attackData.slapRecoveryMultiplier)
+            .SetDelay(.1f * attackData.slapRecoveryMultiplier)
+            .SetEase(Ease.InQuint)
             .OnComplete(() =>
             {
                 player.EnableInputs();

@@ -24,7 +24,9 @@ public class Spawner : MonoBehaviour
         t += Time.deltaTime;
         if (t >= timeBetweenSpawns)
         {
+            if (ObjectPoolManager<Enemy_Pawn>.ExceedingCapacity()) return;
             Enemy_Pawn pawn = ObjectPoolManager<Enemy_Pawn>.GetObject(pawnPrefab);
+            if (pawn is null) return;
             pawn.transform.position = GetRandomSpawnPosition(); 
             t = 0;
         }

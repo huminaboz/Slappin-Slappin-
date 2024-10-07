@@ -23,24 +23,23 @@ public abstract class Enemy : MonoBehaviour, IHpAdjustmentListener, IObjectPool<
     
     public void TookDamage(int damageAmount, GameObject attacker)
     {
+        //Got hit feedback
     }
 
     public void Healed(int healAmount, GameObject healer)
     {
+        //Got healed feedback
     }
 
     public virtual float HandleDeath(int lastAttack, GameObject killer)
     {
         //Throw up a puff of particle
-        //Return to the pool
         ReturnObjectToPool();
         return 0;
     }
 
 
 
-    public virtual void ReturnObjectToPool()
-    {
-        //thisHealth = null;
-    }
+    //Abstract because you don't want to return the object to the pool as an Enemy, but as the specific enemy
+    public abstract void ReturnObjectToPool();
 }
