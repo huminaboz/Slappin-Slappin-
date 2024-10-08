@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: AttackData_Slap
   m_EditorClassIdentifier: 
   Notes: 
-  baseDamage: 3
+  baseDamage: 1
   attackSpeed: 0.3
   slapRecoveryMultiplier: 1

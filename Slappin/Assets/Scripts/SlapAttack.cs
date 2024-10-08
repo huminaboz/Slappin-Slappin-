@@ -39,7 +39,7 @@ public class SlapAttack : MonoBehaviour, IHpAdjustmentListener
     {
         if (!playerHealth.isAlive)
         {
-            Debug.Log("Can't slap - player is dead");
+            Debug.LogWarning("Can't slap - player is dead");
             return;
         }
         downTween.Kill();

@@ -33,6 +33,7 @@ public abstract class Enemy : MonoBehaviour, IHpAdjustmentListener, IObjectPool<
     {
         //Got hit feedback
         StartCoroutine(FlashRedCoroutine());
+        VFXSpawner.I.SpawnDamageNumber(damageAmount, transform.position);
     }
     
     private IEnumerator FlashRedCoroutine()

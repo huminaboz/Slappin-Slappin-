@@ -21,7 +21,7 @@ public class WalkTowardsTransform : MonoBehaviour
         
         // Get the direction from the current position to the target position
         Vector3 direction = (EnemyTarget.I.targetTransform.position - transform.position);
-        direction.y = 0; // Ignore the Y axis for movement
+        direction.y = 0f; // Ignore the Y axis for movement
 
         // Move the object towards the target
         Vector3 newPosition = transform.position + direction.normalized * walkSpeed * Time.deltaTime;

@@ -1,13 +1,16 @@
 using UnityEngine;
+using UnityEngine.ProBuilder;
 
 public class Enemy_Pawn : Enemy, IObjectPool<Enemy_Pawn>
 {
     // private Material thisMaterial;
+
     
     public override void SetupObjectFirstTime()
     {
         base.SetupObjectFirstTime();
         // thisMaterial = GetComponent<Renderer>().material;
+        transform.position += Vector3.up * 0.07410529f;
     }
 
     public override void InitializeObjectFromPool()
