@@ -6,6 +6,8 @@ public class PlayerInput : MonoBehaviour
     
     private void Update()
     {
+        if (!StateGame.PlayerInGameControlsEnabled) return;
+        
         if (Input.GetButtonDown("Fire1"))
         {
             slapAttack.DropSlap();

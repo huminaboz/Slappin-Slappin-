@@ -8,6 +8,8 @@ public class HandMovement : MonoBehaviour, IHpAdjustmentListener
     
     private void Update()
     {
+        if (!StateGame.PlayerInGameControlsEnabled) return;
+        
         // Read inputs from the left joystick
         float moveX = Input.GetAxis("Horizontal");
         float moveZ = Input.GetAxis("Vertical");

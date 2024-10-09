@@ -13,7 +13,11 @@ public abstract class Enemy : MonoBehaviour, IHpAdjustmentListener, IObjectPool<
     public float flashDuration = 0.5f;
     private Color originalColor;
     private Material thisMaterial;
-    public int flashCount = 5;   
+    public int flashCount = 5;
+
+    protected delegate void EnemyBehavior();
+
+    protected EnemyBehavior performBehavior;
 
     public virtual void SetupObjectFirstTime()
     {
@@ -28,7 +32,24 @@ public abstract class Enemy : MonoBehaviour, IHpAdjustmentListener, IObjectPool<
         thisHealth.Initialize();
         gameObject.SetActive(true);
     }
-    
+
+    private void Update()
+    {
+        //TODO:: Do attack
+        if(performBehavior is not null) performBehavior();
+    }
+
+    public void SwitchToAttackMode()
+    {
+        performBehavior += Attack;
+    }
+
+    public void TurnOffAttackMode()
+    {
+        performBehavior -= Attack;
+    }
+    protected abstract void Attack();
+
     public void TookDamage(int damageAmount, GameObject attacker)
     {
         //Got hit feedback
@@ -66,6 +87,8 @@ public abstract class Enemy : MonoBehaviour, IHpAdjustmentListener, IObjectPool<
             .SetEase(Ease.Linear)
             .OnComplete(ReturnObjectToPool);
 
+        performBehavior = null;
+        
         return 0;
     }
 

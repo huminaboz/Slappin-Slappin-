@@ -5,7 +5,18 @@ public class WalkTowardsTransform : MonoBehaviour
     [SerializeField] private float walkSpeed = 2f;
     [SerializeField] private float rotationSpeed = 5f;
 
+    private Enemy thisEnemy;
+
     //TODO:: Can set this up to target a random X position at the hurt line
+
+    private void Awake()
+    {
+        if (TryGetComponent(out Enemy enemy))
+        {
+            thisEnemy = enemy;
+        }
+        else Debug.LogError("Walk script doesn't have an enemy script");
+    }
 
     private void Start()
     {
@@ -17,8 +28,13 @@ public class WalkTowardsTransform : MonoBehaviour
 
     private void Update()
     {
-        if (transform.localPosition.z + transform.localScale.z *.05 <= EnemyTarget.I.hurtLine.localPosition.z) return;
-        
+        if (transform.localPosition.z + transform.localScale.z * .05 <= EnemyTarget.I.hurtLine.localPosition.z)
+        {
+            //TODO:: Turn off this component and inform the enemy it's time to attack
+            thisEnemy.SwitchToAttackMode();
+            return;
+        }
+
         // Get the direction from the current position to the target position
         Vector3 direction = (EnemyTarget.I.targetTransform.position - transform.position);
         direction.y = 0f; // Ignore the Y axis for movement
