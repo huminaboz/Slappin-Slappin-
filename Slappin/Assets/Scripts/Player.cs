@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 [RequireComponent(typeof(Health))]
@@ -19,6 +18,7 @@ public class Player : MonoBehaviour, IHpAdjustmentListener
     private void Start()
     {
         thisHealth.Initialize();
+        HpBar.I.UpdateHpBar(thisHealth);
     }
 
     public void DisableInputs()
@@ -39,10 +39,18 @@ public class Player : MonoBehaviour, IHpAdjustmentListener
 
     public void TookDamage(int damageAmount, GameObject attacker)
     {
+        Debug.Log("player took damage");
+        CameraShake.I.StartCameraShake();
+        HpBar.I.UpdateHpBar(thisHealth);
+        //player needs some sort of feedback of getting hurt
+        //sfx
+        //visual - vfx on the screen of ouchies? (based on the attacker)
+
     }
 
     public void Healed(int healAmount, GameObject healer)
     {
+        HpBar.I.UpdateHpBar(thisHealth);
     }
 
     public float HandleDeath(int lastAttack, GameObject killer)

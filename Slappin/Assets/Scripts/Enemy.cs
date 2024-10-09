@@ -41,7 +41,7 @@ public abstract class Enemy : MonoBehaviour, IHpAdjustmentListener, IObjectPool<
 
     public void SwitchToAttackMode()
     {
-        performBehavior += Attack;
+        performBehavior = Attack;
     }
 
     public void TurnOffAttackMode()

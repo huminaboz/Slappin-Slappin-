@@ -7,7 +7,6 @@ public class Enemy_Spike : Enemy, IObjectPool<Enemy_Spike>
 
     protected override void Attack()
     {
-        throw new NotImplementedException();
     }
 
     public override void ReturnObjectToPool()

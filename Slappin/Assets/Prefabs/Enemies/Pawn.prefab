@@ -53,6 +53,57 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   flashDuration: 0.5
   flashCount: 5
+  attackCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.25521797
+      value: 0.9084831
+      inSlope: 0.06692618
+      outSlope: 0.06692618
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.14015743
+    - serializedVersion: 3
+      time: 0.49788928
+      value: 0.18529499
+      inSlope: 0.16840208
+      outSlope: 0.16840208
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.6595512
+      value: 0.99976426
+      inSlope: 0.002348554
+      outSlope: 0.002348554
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.29475716
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!114 &79050552924222384
 MonoBehaviour:
   m_ObjectHideFlags: 0

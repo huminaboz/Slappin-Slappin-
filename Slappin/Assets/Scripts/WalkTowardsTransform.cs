@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class WalkTowardsTransform : MonoBehaviour
@@ -28,7 +29,8 @@ public class WalkTowardsTransform : MonoBehaviour
 
     private void Update()
     {
-        if (transform.localPosition.z + transform.localScale.z * .05 <= EnemyTarget.I.hurtLine.localPosition.z)
+        if (transform.localPosition.z + transform.localScale.z * .05 <= EnemyTarget.I.hurtLine.localPosition.z
+            && walkSpeed > 0f)
         {
             //TODO:: Turn off this component and inform the enemy it's time to attack
             thisEnemy.SwitchToAttackMode();
@@ -51,5 +53,22 @@ public class WalkTowardsTransform : MonoBehaviour
             // Rotate towards the target over time
             transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
         }
+    }
+
+    public void BackUp()
+    {
+        walkSpeed *= -10;
+        StartCoroutine(SwitchDirectionsTimer());
+    }
+
+    private void ReturnToForward()
+    {
+        walkSpeed *= -.1f;
+    }
+
+    IEnumerator SwitchDirectionsTimer()
+    {
+        yield return new WaitForSeconds(.5f);
+        ReturnToForward();
     }
 }
