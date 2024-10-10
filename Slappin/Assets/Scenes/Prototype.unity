@@ -923,7 +923,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!64 &569232624
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -35260,7 +35260,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6a8852673dc0e04e894ba58e6b2d854, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 2
+  moveSpeed: 1
   boostedSpeedMultiplier: 2.5
   slapHandObject: {fileID: 910431745}
 --- !u!850595691 &884789699
