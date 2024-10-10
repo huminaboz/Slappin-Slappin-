@@ -2,7 +2,7 @@ using System.Collections;
 using DG.Tweening;
 using UnityEngine;
 
-public class SlapAttack : MonoBehaviour, IHpAdjustmentListener
+public class SlapAttack : AttackType, IHpAdjustmentListener, IPickerUpper
 {
     [SerializeField] private Transform shadow;
     [SerializeField] private GameObject slap;
@@ -62,7 +62,7 @@ public class SlapAttack : MonoBehaviour, IHpAdjustmentListener
     {
         //I think it makes more since to just let whatever the hand hits to handle what it does when it gets slapped
 
-        Debug.Log(other);
+        // Debug.Log(other);
         
         //If hitting a spike, take damage and go back up
         if (other.GetComponent(typeof(Enemy_Spike)) != null) //Could handle this on the spike

@@ -14,13 +14,14 @@ public static class ObjectPoolManager<T> where T : MonoBehaviour, IObjectPool<T>
     private static List<T> objectsInUse = new List<T>();
     private static int objectNumber = 0;
     private static int maxObjects = 500;
+    
 
     public static bool ExceedingCapacity()
     {
         return objectsInUse.Count > maxObjects;
     }
 
-    public static T GetObject(GameObject templateObject)
+    public static T GetObject(GameObject templateObject, Vector3? spawnPosition = null)
     {
         if (ExceedingCapacity()) return null;
 
@@ -31,6 +32,7 @@ public static class ObjectPoolManager<T> where T : MonoBehaviour, IObjectPool<T>
         }
 
         T nextObject = PopNextObject();
+        nextObject.transform.position = spawnPosition ?? templateObject.transform.position;
         objectsInUse.Add(nextObject); //Move the object over to the in Use list
         return nextObject;
     }

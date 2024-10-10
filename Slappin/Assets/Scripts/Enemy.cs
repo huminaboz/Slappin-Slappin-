@@ -8,12 +8,17 @@ public abstract class Enemy : MonoBehaviour, IHpAdjustmentListener, IObjectPool<
 {
     private IHpAdjustmentListener _hpAdjustmentListenerImplementation;
     public Health thisHealth { get; set; }
+
+    [SerializeField] private int currencyDrop;
+    [SerializeField] private GameObject pickupToDrop;
+    
     
     //Flash stuff
     public float flashDuration = 0.5f;
     private Color originalColor;
     private Material thisMaterial;
     public int flashCount = 5;
+    
 
     protected delegate void EnemyBehavior();
 
@@ -89,6 +94,11 @@ public abstract class Enemy : MonoBehaviour, IHpAdjustmentListener, IObjectPool<
             .OnComplete(ReturnObjectToPool);
 
         performBehavior = null;
+        
+        //TODO:: Pop out of enemy in a celebration
+        Vector3 pickupSpawnPosition = new Vector3(transform.position.x,
+            transform.position.y + .02f, transform.position.z);
+        Pickup pickup = ObjectPoolManager<Pickup>.GetObject(pickupToDrop, pickupSpawnPosition);
         
         return 0;
     }

@@ -24,21 +24,25 @@ public class Health : MonoBehaviour
         isAlive = true;
     }
 
-    public void AdjustHp(int amount, GameObject attacker)
+    public void AdjustHp(int amountToIncrease, GameObject attacker)
     {
         if (!isAlive) return;
         
         int oldHealth = hp;
-        hp += amount;
-        Debug.Log($"{gameObject.name} damaged for {amount}. "
+        hp += amountToIncrease;
+        
+        if (oldHealth == hp) return;
+        
+        Debug.Log($"{gameObject.name} health adjusted by {amountToIncrease}. "
                   + $"\nHp is now {hp}");
 
+        
         //HEALING
         if (oldHealth < hp)
         {
             foreach (IHpAdjustmentListener damageListeners in hpAdjustmentListeners)
             {
-                damageListeners.Healed(amount, attacker);
+                damageListeners.Healed(amountToIncrease, attacker);
             }
             return;
         }
@@ -48,7 +52,7 @@ public class Health : MonoBehaviour
         {
             foreach (IHpAdjustmentListener damageListeners in hpAdjustmentListeners)
             {
-                damageListeners.TookDamage(amount, attacker);
+                damageListeners.TookDamage(amountToIncrease, attacker);
             }
         }
 
@@ -61,7 +65,7 @@ public class Health : MonoBehaviour
             foreach (IHpAdjustmentListener damageListeners in hpAdjustmentListeners)
             {
                 Debug.Log($"{damageListeners} is handling death.");
-                maxWaitTime = Mathf.Max(damageListeners.HandleDeath(amount, attacker), maxWaitTime);
+                maxWaitTime = Mathf.Max(damageListeners.HandleDeath(amountToIncrease, attacker), maxWaitTime);
             }
 
             OnDeath?.Invoke();

@@ -19,7 +19,6 @@ public class Enemy_Pawn : Enemy, IObjectPool<Enemy_Pawn>
         if (TryGetComponent(out WalkTowardsTransform walkTowardsTransform))
         {
             _walkTowardsTransform = walkTowardsTransform;
-            Debug.Log(_walkTowardsTransform);
         }
         else
         {

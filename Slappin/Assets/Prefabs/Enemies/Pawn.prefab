@@ -51,6 +51,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ade335cace46394ba3953a5507dd3f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currencyDrop: 0
+  pickupToDrop: {fileID: 4864087115399935888, guid: 9fe9c0010e31c1f499c0d5a3f63d0fe3, type: 3}
   flashDuration: 0.5
   flashCount: 5
   attackCurve:
@@ -104,6 +106,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  attackDamage: 1
 --- !u!114 &79050552924222384
 MonoBehaviour:
   m_ObjectHideFlags: 0
