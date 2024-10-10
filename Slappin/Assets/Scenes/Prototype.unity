@@ -5886,6 +5886,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageNumberPrefab: {fileID: 2176587288947762204, guid: cca11b44e33dee0469974cc8da7c838c, type: 3}
+  hitEffectPrefab: {fileID: 5024009746357069194, guid: 661d47e230c88164aa9c7738aa06fa68, type: 3}
+  cameraTransform: {fileID: 963194228}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
