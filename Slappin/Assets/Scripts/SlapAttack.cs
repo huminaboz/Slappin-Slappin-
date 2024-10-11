@@ -54,26 +54,26 @@ public class SlapAttack : AttackType, IHpAdjustmentListener
             {
                 //Make a big puff of smoke or something
                 // slapCollider.enabled = false;
+                // Debug.Break();
                 StartCoroutine(GoBackUp(.1f));
             });
         player.DisableInputs();
     }
-    
-    public override void HitSomething(GameObject thingThatGotHit)
+
+    public void HitSpike(GameObject thingThatGotHit)
     {
         //If hitting a spike, take damage and go back up
-        if (thingThatGotHit.GetComponent(typeof(Enemy_Spike)) != null) //Could handle this on the spike
-        {
             downTween.Kill();
             Enemy_Spike enemySpike = thingThatGotHit.GetComponent<Enemy_Spike>();
             playerHealth.AdjustHp(-enemySpike.handStabDamage, gameObject);
             slapMaterial.color = Color.red;
             StartCoroutine(GoBackUp(1f));
-            return;
-        }
-
-        base.HitSomething(thingThatGotHit);
     }
+    
+    // public override void HitSomething(GameObject thingThatGotHit)
+    // {
+    //     base.HitSomething(thingThatGotHit);
+    // }
 
     //The collider is in another place, probably a child
     private void OnTriggerEnter(Collider other) {}

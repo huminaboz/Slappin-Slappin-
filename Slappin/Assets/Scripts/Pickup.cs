@@ -8,13 +8,11 @@ public class Pickup : MonoBehaviour, IObjectPool<Pickup>
     [SerializeField] public int hp = 0;
 
     private Collider _collider;
-    private ArcToCamera _arcToCamera;
-    private Hover hover;
+    [HideInInspector] public Hover hover;
 
     public void SetupObjectFirstTime()
     {
         _collider = GetComponent<Collider>();
-        _arcToCamera = GetComponent<ArcToCamera>();
         hover = GetComponent<Hover>();
         gameObject.SetActive(false);
     }
@@ -22,9 +20,16 @@ public class Pickup : MonoBehaviour, IObjectPool<Pickup>
     public void InitializeObjectFromPool()
     {
         _collider.enabled = false;
-        hover.enabled = true;
         gameObject.SetActive(true);
         StartCoroutine(WaitToEnableCollider());
+        //NOTE: Have to call "SetNewPosition" separate because hover takes over the position
+    }
+
+    public void SetNewPosition(Vector3 newPosition)
+    {
+        transform.position = newPosition;
+        hover.SetOriginPosition();
+        hover.enabled = true; //This is dangerous because it takes over the position.
     }
 
     private IEnumerator WaitToEnableCollider()

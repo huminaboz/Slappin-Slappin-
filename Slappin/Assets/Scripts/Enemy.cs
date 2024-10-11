@@ -87,6 +87,11 @@ public abstract class Enemy : MonoBehaviour, IHpAdjustmentListener, IObjectPool<
     public virtual float HandleDeath(int lastAttack, GameObject killer)
     {
         //TODO: Throw up a puff of particle
+        //TODO:: Pop currency out of enemy in a celebration
+        Vector3 pickupSpawnPosition = new Vector3(transform.position.x,
+            transform.position.y + .02f, transform.position.z);
+        Pickup pickup = ObjectPoolManager<Pickup>.GetObject(pickupToDrop);
+        pickup.SetNewPosition(pickupSpawnPosition);
         
         //Spin in a circle first
         transform.DORotate(new Vector3(0, 720, 0), 1f, RotateMode.FastBeyond360)
@@ -94,11 +99,6 @@ public abstract class Enemy : MonoBehaviour, IHpAdjustmentListener, IObjectPool<
             .OnComplete(ReturnObjectToPool);
 
         performBehavior = null;
-        
-        //TODO:: Pop out of enemy in a celebration
-        Vector3 pickupSpawnPosition = new Vector3(transform.position.x,
-            transform.position.y + .02f, transform.position.z);
-        Pickup pickup = ObjectPoolManager<Pickup>.GetObject(pickupToDrop, pickupSpawnPosition);
         
         return 0;
     }

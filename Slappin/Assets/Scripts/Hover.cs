@@ -9,7 +9,7 @@ public class Hover : MonoBehaviour
     
     private Vector3 originalPosition;  // To store the original position of the sphere
     
-    void Start()
+    public void SetOriginPosition()
     {
         originalPosition = transform.position;
     }
