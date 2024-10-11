@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Notes: 
   baseDamage: 1
-  attackSpeed: 0.3
+  attackSpeed: 0.1
   slapRecoveryMultiplier: 1
