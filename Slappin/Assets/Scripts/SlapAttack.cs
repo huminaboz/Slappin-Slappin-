@@ -3,7 +3,7 @@ using DG.Tweening;
 using UnityEngine;
 using UnityEngine.Serialization;
 
-public class SlapAttack : AttackType, IHpAdjustmentListener, IPickerUpper
+public class SlapAttack : AttackType, IHpAdjustmentListener
 {
     // [SerializeField] private Transform shadow;
     [SerializeField] private Transform slapPosition;

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class AttackCollider : MonoBehaviour
+public class AttackCollider : MonoBehaviour, IPickerUpper
 {
     [SerializeField] private AttackType _attackType;
     
