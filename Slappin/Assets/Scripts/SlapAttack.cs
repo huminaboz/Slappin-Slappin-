@@ -1,6 +1,7 @@
 using System.Collections;
 using DG.Tweening;
 using UnityEngine;
+using System.Collections.Generic;
 using UnityEngine.Serialization;
 
 public class SlapAttack : AttackType, IHpAdjustmentListener
@@ -15,15 +16,15 @@ public class SlapAttack : AttackType, IHpAdjustmentListener
     [SerializeField] private Player player;
 
     //Todo:: Just make this disappear
-    private const float OffScreenSlapYPosition = .88f; //Measured by holding it off camera
-    private const float groundYPosition = -0.78f; //Measured by putting the hand on the ground 
+    [SerializeField] private float OffScreenSlapYPosition = .88f; //Measured by holding it off camera
+    [SerializeField] private float groundYPosition = -0.78f; //Measured by putting the hand on the ground 
 
     [SerializeField] private AnimationCurve startSlapCurve;
-    
-   [SerializeField] private Renderer slapRenderer;
+
+    [SerializeField] private Renderer slapRenderer;
     private Material slapMaterial;
-    
-    
+
+
     private void Awake()
     {
         slapMaterial = slapRenderer.material;
@@ -31,7 +32,8 @@ public class SlapAttack : AttackType, IHpAdjustmentListener
 
     private void Start()
     {
-        transform.position = new Vector3(transform.position.x, OffScreenSlapYPosition, transform.position.z);
+        slapPosition.DOMoveY(OffScreenSlapYPosition, 0f);
+        // transform.localPosition = new Vector3(transform.position.x, OffScreenSlapYPosition, transform.position.z);
     }
 
     private Tween downTween;
@@ -43,6 +45,9 @@ public class SlapAttack : AttackType, IHpAdjustmentListener
             Debug.LogWarning("Can't slap - player is dead");
             return;
         }
+
+        DumpCollisionsLists();
+        
         downTween.Kill();
         // slapCollider.enabled = true;
         //Warp to the off screen Y position and the x and z position of the shadow
@@ -50,42 +55,43 @@ public class SlapAttack : AttackType, IHpAdjustmentListener
         //Tween down to the ground
         downTween = slapPosition.DOMoveY(groundYPosition, attackData.attackSpeed)
             .SetEase(startSlapCurve)
-            .OnComplete(() => 
+            .OnComplete(() =>
             {
                 //Make a big puff of smoke or something
                 // slapCollider.enabled = false;
                 // Debug.Break();
+                HandleCollisions();
                 StartCoroutine(GoBackUp(.1f));
             });
         player.DisableInputs();
     }
 
+    //I think I'm going to have to send the hand down, collect all the collision data from multiple colliders
+    //Then sort through it and decide what was allowed to happen
+
+    //It could be a delegate that gets functions added to it and if you hit a spike, it empties the delegate and puts in the spike outcome
+    // Or save up a list of stuff to hit and stuff to collect and then wait for the go ahead to do it or not
+
+    
     public void HitSpike(GameObject thingThatGotHit)
     {
         //If hitting a spike, take damage and go back up
-            downTween.Kill();
-            Enemy_Spike enemySpike = thingThatGotHit.GetComponent<Enemy_Spike>();
-            playerHealth.AdjustHp(-enemySpike.handStabDamage, gameObject);
-            slapMaterial.color = Color.red;
-            StartCoroutine(GoBackUp(1f));
+        downTween.Kill();
+        Enemy_Spike enemySpike = thingThatGotHit.GetComponent<Enemy_Spike>();
+        playerHealth.AdjustHp(-enemySpike.handStabDamage, gameObject);
+        slapMaterial.color = Color.red;
+        DumpCollisionsLists();
+        StartCoroutine(GoBackUp(1f));
     }
-    
-    // public override void HitSomething(GameObject thingThatGotHit)
-    // {
-    //     base.HitSomething(thingThatGotHit);
-    // }
-
-    //The collider is in another place, probably a child
-    private void OnTriggerEnter(Collider other) {}
-
 
     IEnumerator GoBackUp(float returnDelay)
     {
         yield return new WaitForSeconds(returnDelay * attackData.slapRecoveryMultiplier);
 
+        
         //To be able to start moving again while on the way up
         player.EnableMovement();
-        
+
         //tween back up from current position
         slapPosition.DOMoveY(OffScreenSlapYPosition, .1f * attackData.slapRecoveryMultiplier)
             .SetEase(Ease.InQuint)
@@ -110,6 +116,4 @@ public class SlapAttack : AttackType, IHpAdjustmentListener
         downTween.Kill();
         return 0;
     }
-
-
 }

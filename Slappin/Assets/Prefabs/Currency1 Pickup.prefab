@@ -17,7 +17,6 @@ GameObject:
   - component: {fileID: 1828937414073673160}
   - component: {fileID: 5548487105792878567}
   - component: {fileID: 1182003071591993991}
-  - component: {fileID: 7953856426949305805}
   m_Layer: 0
   m_Name: Currency1 Pickup
   m_TagString: Untagged
@@ -55,6 +54,7 @@ MonoBehaviour:
   currency1: 1
   currency2: 0
   hp: 0
+  hover: {fileID: 0}
 --- !u!114 &2381142507936345336
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5045,17 +5045,3 @@ TrailRenderer:
   m_Autodestruct: 0
   m_Emitting: 1
   m_ApplyActiveColorSpace: 1
---- !u!114 &7953856426949305805
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4864087115399935888}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b332b500b6a54ed44b6953e717b643ba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  flightDuration: 2
-  arcHeight: 5

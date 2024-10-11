@@ -38,16 +38,16 @@ public class Pickup : MonoBehaviour, IObjectPool<Pickup>
         _collider.enabled = true;
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.GetComponent<IPickerUpper>() is not null)
-        {
-            // IPickerUpper pickerUpper = other.GetComponent<IPickerUpper>();
-            GetPickedUp();
-        }
-    }
+    // private void OnTriggerEnter(Collider other)
+    // {
+    //     if (other.GetComponent<IPickerUpper>() is not null)
+    //     {
+    //         // IPickerUpper pickerUpper = other.GetComponent<IPickerUpper>();
+    //         GetPickedUp();
+    //     }
+    // }
 
-    private void GetPickedUp()
+    public void GetPickedUp()
     {
         //Todo:: Play a sfx
         _collider.enabled = false;

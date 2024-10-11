@@ -18,7 +18,7 @@ public static class ObjectPoolManager<T> where T : MonoBehaviour, IObjectPool<T>
     
     //TODO:: refactor to require spawn position?
     
-    public static bool ExceedingCapacity()
+    private static bool ExceedingCapacity()
     {
         return objectsInUse.Count > maxObjects;
     }

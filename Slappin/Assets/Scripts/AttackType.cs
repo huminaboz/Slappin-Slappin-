@@ -6,13 +6,45 @@ public class AttackType : MonoBehaviour
 {
     [SerializeField] protected SO_AttackData attackData;
 
-    public virtual void HitSomething(GameObject thingThatGotHit)
+    protected List<Health> victimsHit = new List<Health>();
+    protected List<Pickup> pickupsHit = new List<Pickup>();
+    
+    public void AddHitHealth(Health health)
     {
-        //If hitting something with health, do damage to it
-        if (thingThatGotHit.GetComponent(typeof(Health)) != null)
+        victimsHit.Add(health);
+    }
+
+    public void AddHitPickup(Pickup pickup)
+    {
+        pickupsHit.Add(pickup);
+    }
+
+    protected void DumpCollisionsLists()
+    {
+        victimsHit.Clear();
+        pickupsHit.Clear();
+    }
+    
+    public virtual void HitVictim(Health thingThatGotHit)
+    {
+        thingThatGotHit.AdjustHp(-attackData.baseDamage, gameObject);
+    }
+
+    public virtual void PickSomethingUp(Pickup pickup)
+    {
+        pickup.GetPickedUp();
+    }
+    
+    protected void HandleCollisions()
+    {
+        foreach (Health health in victimsHit)
         {
-            Health health = thingThatGotHit.GetComponent<Health>();
-            health.AdjustHp(-attackData.baseDamage, gameObject);
+            HitVictim(health);
+        }
+
+        foreach (Pickup pickup in pickupsHit)
+        {
+            PickSomethingUp(pickup);
         }
     }
 }

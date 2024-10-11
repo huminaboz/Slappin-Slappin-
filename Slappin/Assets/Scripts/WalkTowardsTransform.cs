@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class WalkTowardsTransform : MonoBehaviour
+public class WalkTowardsTransform : MonoBehaviour, IHpAdjustmentListener
 {
     [SerializeField] private float walkSpeed = 2f;
     [SerializeField] private float rotationSpeed = 5f;
@@ -70,5 +70,20 @@ public class WalkTowardsTransform : MonoBehaviour
     {
         yield return new WaitForSeconds(.5f);
         ReturnToForward();
+    }
+
+    public void TookDamage(int damageAmount, GameObject attacker)
+    {
+    }
+
+    public void Healed(int healAmount, GameObject healer)
+    {
+    }
+
+    public float HandleDeath(int lastAttack, GameObject killer)
+    {
+        StopAllCoroutines();
+        
+        return 0;
     }
 }
