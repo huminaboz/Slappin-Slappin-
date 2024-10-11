@@ -23,11 +23,13 @@ public class SlapAttack : AttackType, IHpAdjustmentListener
 
     [SerializeField] private Renderer slapRenderer;
     private Material slapMaterial;
+    private Color defaultBottomOfHandColor;
 
 
     private void Awake()
     {
         slapMaterial = slapRenderer.material;
+        defaultBottomOfHandColor = slapRenderer.material.GetColor("_ColorDimExtra");
     }
 
     private void Start()
@@ -79,7 +81,7 @@ public class SlapAttack : AttackType, IHpAdjustmentListener
         downTween.Kill();
         Enemy_Spike enemySpike = thingThatGotHit.GetComponent<Enemy_Spike>();
         playerHealth.AdjustHp(-enemySpike.handStabDamage, gameObject);
-        slapMaterial.color = Color.red;
+        slapMaterial.SetColor("_ColorDimExtra",Color.red);
         DumpCollisionsLists();
         StartCoroutine(GoBackUp(1f));
     }
@@ -97,7 +99,7 @@ public class SlapAttack : AttackType, IHpAdjustmentListener
             .SetEase(Ease.InQuint)
             .OnComplete(() =>
             {
-                slapMaterial.color = Color.white;
+                slapRenderer.material.SetColor("_ColorDimExtra", defaultBottomOfHandColor);
                 player.EnableButtonInput();
             });
     }

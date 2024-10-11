@@ -1325,7 +1325,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: fbd67e0edffa1164ab83ee7ce6557d62, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: bfc2f44ce5ebb804e8e81bab12f31d14, type: 2}
+      objectReference: {fileID: 2100000, guid: 658ea6d85c83e9740b5745d99fb0be92, type: 2}
     - target: {fileID: 919132149155446097, guid: fbd67e0edffa1164ab83ee7ce6557d62, type: 3}
       propertyPath: m_Name
       value: Hand Flat
@@ -1425,7 +1425,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.92
+  m_Intensity: 1.29
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -1483,13 +1483,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 705507993}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.23926145, y: -0.15427937, z: 0.038537662, w: 0.95784485}
+  m_LocalRotation: {x: 0.65626556, y: 0.13495801, z: -0.12092092, w: 0.73244804}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 28.05, y: -18.3, z: 0}
+  m_LocalEulerAnglesHint: {x: 83.72, y: 20.88, z: 0}
 --- !u!1 &734975203
 GameObject:
   m_ObjectHideFlags: 0
@@ -36130,7 +36130,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 45fb0adac7c8777458f2a0a7fe8afd16, type: 2}
+  - {fileID: 2100000, guid: b3dcf63e87ab44756b448a2c5685af12, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -37034,7 +37034,7 @@ Camera:
   field of view: 106.9
   orthographic: 0
   orthographic size: 5
-  m_Depth: -1
+  m_Depth: -1.09
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 0
@@ -37177,7 +37177,7 @@ Transform:
   m_GameObject: {fileID: 1519639240}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.06, y: -0.25, z: 1.62}
+  m_LocalPosition: {x: -0.06, y: -0.79, z: 1.62}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -37937,12 +37937,12 @@ CanvasRenderer:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 705507995}
   - {fileID: 963194228}
   - {fileID: 1399312464}
   - {fileID: 398961227}
   - {fileID: 734975209}
   - {fileID: 2113894221}
-  - {fileID: 705507995}
   - {fileID: 982638840}
   - {fileID: 569232627}
   - {fileID: 1279097141}
