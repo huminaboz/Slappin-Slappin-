@@ -1,36 +1,37 @@
 using System.Collections;
 using DG.Tweening;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class SlapAttack : AttackType, IHpAdjustmentListener, IPickerUpper
 {
-    [SerializeField] private Transform shadow;
-    [SerializeField] private GameObject slap;
+    // [SerializeField] private Transform shadow;
+    [SerializeField] private Transform slapPosition;
 
     [SerializeField] private Health playerHealth;
 
-    [SerializeField] private SO_AttackData attackData;
+    [SerializeField] private Transform handModelTransform;
 
     [SerializeField] private Player player;
 
-    private const float OffScreenSlapYPosition = .88f;
-    private float groundYPosition;
+    //Todo:: Just make this disappear
+    private const float OffScreenSlapYPosition = .88f; //Measured by holding it off camera
+    private const float groundYPosition = -0.78f; //Measured by putting the hand on the ground 
 
     [SerializeField] private AnimationCurve startSlapCurve;
     
-    private Collider slapCollider;
+   [SerializeField] private Renderer slapRenderer;
     private Material slapMaterial;
-
+    
+    
     private void Awake()
     {
-        slapCollider = GetComponent<Collider>();
-        slapMaterial = GetComponent<Renderer>().material;
+        slapMaterial = slapRenderer.material;
     }
 
     private void Start()
     {
-        slap.transform.position = new Vector3(shadow.position.x, OffScreenSlapYPosition, shadow.position.z);
-        groundYPosition = slap.transform.localScale.y;
+        transform.position = new Vector3(transform.position.x, OffScreenSlapYPosition, transform.position.z);
     }
 
     private Tween downTween;
@@ -47,7 +48,7 @@ public class SlapAttack : AttackType, IHpAdjustmentListener, IPickerUpper
         //Warp to the off screen Y position and the x and z position of the shadow
 
         //Tween down to the ground
-        downTween = slap.transform.DOMoveY(groundYPosition, attackData.attackSpeed)
+        downTween = slapPosition.DOMoveY(groundYPosition, attackData.attackSpeed)
             .SetEase(startSlapCurve)
             .OnComplete(() => 
             {
@@ -57,31 +58,25 @@ public class SlapAttack : AttackType, IHpAdjustmentListener, IPickerUpper
             });
         player.DisableInputs();
     }
-
-    private void OnTriggerEnter(Collider other)
+    
+    public override void HitSomething(GameObject thingThatGotHit)
     {
-        //I think it makes more since to just let whatever the hand hits to handle what it does when it gets slapped
-
-        // Debug.Log(other);
-        
         //If hitting a spike, take damage and go back up
-        if (other.GetComponent(typeof(Enemy_Spike)) != null) //Could handle this on the spike
+        if (thingThatGotHit.GetComponent(typeof(Enemy_Spike)) != null) //Could handle this on the spike
         {
             downTween.Kill();
-            Enemy_Spike enemySpike = other.GetComponent<Enemy_Spike>();
+            Enemy_Spike enemySpike = thingThatGotHit.GetComponent<Enemy_Spike>();
             playerHealth.AdjustHp(-enemySpike.handStabDamage, gameObject);
             slapMaterial.color = Color.red;
             StartCoroutine(GoBackUp(1f));
             return;
         }
 
-        //If hitting an enemy, do damage to it
-        if (other.GetComponent(typeof(Health)) != null)
-        {
-            Health health = other.GetComponent<Health>();
-            health.AdjustHp(-attackData.baseDamage, gameObject);
-        }
+        base.HitSomething(thingThatGotHit);
     }
+
+    //The collider is in another place, probably a child
+    private void OnTriggerEnter(Collider other) {}
 
 
     IEnumerator GoBackUp(float returnDelay)
@@ -92,7 +87,7 @@ public class SlapAttack : AttackType, IHpAdjustmentListener, IPickerUpper
         player.EnableMovement();
         
         //tween back up from current position
-        slap.transform.DOMoveY(OffScreenSlapYPosition, .1f * attackData.slapRecoveryMultiplier)
+        slapPosition.DOMoveY(OffScreenSlapYPosition, .1f * attackData.slapRecoveryMultiplier)
             .SetEase(Ease.InQuint)
             .OnComplete(() =>
             {
@@ -115,4 +110,6 @@ public class SlapAttack : AttackType, IHpAdjustmentListener, IPickerUpper
         downTween.Kill();
         return 0;
     }
+
+
 }
