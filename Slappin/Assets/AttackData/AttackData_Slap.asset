@@ -15,4 +15,5 @@ MonoBehaviour:
   Notes: 
   baseDamage: 1
   attackSpeed: 100
-  slapRecoveryMultiplier: 200
+  slapGoUpSpeed: 200
+  slapRecoverFromSpikeTimer: 1

@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -90,7 +91,7 @@ public class SlapAttack : AttackType, IHpAdjustmentListener
         player.EnableMovement();
         goalPosition = new(transform.position.x, offScreenSlapYPosition, transform.position.z);
         OnCompletedTravel = StopMoving;
-        attackSpeed = attackData.slapRecoveryMultiplier;
+        attackSpeed = attackData.slapGoUpSpeed;
         
         direction = new(0, 1, 0);
     }
@@ -123,11 +124,18 @@ public class SlapAttack : AttackType, IHpAdjustmentListener
     {
         //If hitting a spike, take damage and go back up
         direction = Vector3.zero;
+        _slapRigidbody.velocity = Vector3.zero;
         Enemy_Spike enemySpike = thingThatGotHit.GetComponent<Enemy_Spike>();
         playerHealth.AdjustHp(-enemySpike.handStabDamage, gameObject);
         slapMaterial.SetColor("_ColorDimExtra", Color.red);
         //TODO:: Make a timer to get stunned, then when done set the direction to go back up
-        HeadBackUp();        
+        StartCoroutine(DoAfterDelay(attackData.slapRecoverFromSpikeTimer, HeadBackUp));
+    }
+
+    private IEnumerator DoAfterDelay(float delay, Action action)
+    {
+        yield return new WaitForSeconds(delay);
+        action?.Invoke();
     }
 
     public void TookDamage(int damageAmount, GameObject attacker)
