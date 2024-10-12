@@ -15,19 +15,18 @@ public abstract class AudioPlayer : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log("test");
-        playingClips.Clear();
-
-        foreach (AudioSource thisSource in audioSources.ToArray())
-        {
-            if (!thisSource.isPlaying)
-            {
-                if (audioSources.Count <= sourcePoolSize) continue;
-                audioSources.Remove(thisSource);
-                Destroy(thisSource); //TODO:: Make a pool
-            }
-            else playingClips.Add(thisSource.clip);
-        }
+        // playingClips.Clear();
+        //
+        // foreach (AudioSource thisSource in audioSources.ToArray())
+        // {
+        //     if (!thisSource.isPlaying)
+        //     {
+        //         if (audioSources.Count <= sourcePoolSize) continue;
+        //         audioSources.Remove(thisSource);
+        //         Destroy(thisSource); //TODO:: Make a pool
+        //     }
+        //     else playingClips.Add(thisSource.clip);
+        // }
     }
 
     protected AudioSource DoPlay(SFXScrob sfxScrob)
@@ -45,7 +44,7 @@ public abstract class AudioPlayer : MonoBehaviour
 
         if (sfxScrob.varyPitch)
         {
-            //TODO:: Handle varying pitch
+            source.pitch = Random.Range(.9f, 1f);
         }
 
         source.clip = sfxScrob.clip;
