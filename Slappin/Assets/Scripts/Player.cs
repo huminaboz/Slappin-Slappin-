@@ -32,7 +32,7 @@ public class Player : MonoBehaviour, IHpAdjustmentListener
         handMovement.enabled = true;
     }
 
-    public void EnableButtonInput()
+    public void EnablePlayerAttacks()
     {
         PlayerInput.enabled = true;
     }

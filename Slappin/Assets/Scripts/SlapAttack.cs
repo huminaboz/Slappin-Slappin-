@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using DG.Tweening;
 using UnityEngine;
@@ -16,7 +17,7 @@ public class SlapAttack : AttackType, IHpAdjustmentListener
     [SerializeField] private Player player;
 
     //Todo:: Just make this disappear
-    [SerializeField] private float OffScreenSlapYPosition = .88f; //Measured by holding it off camera
+    [SerializeField] private float offScreenSlapYPosition = -0.23f; //Measured by holding it off camera
     [SerializeField] private float groundYPosition = -0.78f; //Measured by putting the hand on the ground 
 
     [SerializeField] private AnimationCurve startSlapCurve;
@@ -25,17 +26,24 @@ public class SlapAttack : AttackType, IHpAdjustmentListener
     private Material slapMaterial;
     private Color defaultBottomOfHandColor;
 
+    private Rigidbody _slapRigidbody;
+    private Vector3 direction;
+    private Vector3 goalPosition;
+    private float attackSpeed;
+    private const float distanceFlexRoom = .05f;
+
+    private Action OnCompletedTravel;
 
     private void Awake()
     {
         slapMaterial = slapRenderer.material;
         defaultBottomOfHandColor = slapRenderer.material.GetColor("_ColorDimExtra");
+        _slapRigidbody = slapPosition.GetComponent<Rigidbody>();
     }
 
     private void Start()
     {
-        slapPosition.DOMoveY(OffScreenSlapYPosition, 0f);
-        // transform.localPosition = new Vector3(transform.position.x, OffScreenSlapYPosition, transform.position.z);
+        transform.position = new Vector3(transform.position.x, offScreenSlapYPosition, transform.position.z);
     }
 
     private Tween downTween;
@@ -49,59 +57,78 @@ public class SlapAttack : AttackType, IHpAdjustmentListener
         }
 
         DumpCollisionsLists();
-        
-        downTween.Kill();
-        // slapCollider.enabled = true;
-        //Warp to the off screen Y position and the x and z position of the shadow
-
-        //Tween down to the ground
-        downTween = slapPosition.DOMoveY(groundYPosition, attackData.attackSpeed)
-            .SetEase(startSlapCurve)
-            .OnComplete(() =>
-            {
-                //Make a big puff of smoke or something
-                // slapCollider.enabled = false;
-                // Debug.Break();
-                HandleCollisions();
-                StartCoroutine(GoBackUp(.1f));
-            });
-        player.DisableInputs();
+        HeadToGround();
+        // StartCoroutine(DoMovement(goalPosition, direction));
+        // downTween.Kill();
+        // //Tween down to the ground
+        // downTween = _slapRigidbody.DOMoveY(groundYPosition, attackData.attackSpeed)
+        //     .SetEase(startSlapCurve)
+        //     .OnComplete(() =>
+        //     {
+        //         //Make a big puff of smoke or something
+        //         // HandleCollisions();
+        //         StartCoroutine(GoBackUp(.1f));
+        //     });
     }
 
-    //I think I'm going to have to send the hand down, collect all the collision data from multiple colliders
-    //Then sort through it and decide what was allowed to happen
+    private void HeadToGround()
+    {
+        player.DisableInputs();
+        goalPosition = new(transform.position.x, groundYPosition, transform.position.z);
+        //TODO:: Put in a delay before heading back up
+        OnCompletedTravel = HeadBackUp;
+        attackSpeed = attackData.attackSpeed;
+        
+        
+        //Give Direction a value starts up the Fixedupdate telling the hand which way to go
+        direction = new(0, -1, 0);
+        
+    }
 
-    //It could be a delegate that gets functions added to it and if you hit a spike, it empties the delegate and puts in the spike outcome
-    // Or save up a list of stuff to hit and stuff to collect and then wait for the go ahead to do it or not
+    private void HeadBackUp()
+    {
+        player.EnableMovement();
+        goalPosition = new(transform.position.x, offScreenSlapYPosition, transform.position.z);
+        OnCompletedTravel = StopMoving;
+        attackSpeed = attackData.slapRecoveryMultiplier;
+        
+        direction = new(0, 1, 0);
+    }
 
-    
+    private void StopMoving()
+    {
+        _slapRigidbody.velocity = Vector3.zero;
+        direction = Vector3.zero;
+        slapRenderer.material.SetColor("_ColorDimExtra", defaultBottomOfHandColor);
+        player.EnablePlayerAttacks();
+    }
+
+    private void FixedUpdate()
+    {
+        float YDistance = Mathf.Abs(slapPosition.position.y - goalPosition.y);
+        if (direction == Vector3.zero) return;
+        //TODO:: Map acceleration along a animation curve - can use attackSpeed as the goal value
+        _slapRigidbody.velocity = direction * (Time.fixedDeltaTime * attackSpeed);
+        HandleCollisions();
+
+        //Made it to the goal
+        if (YDistance <= distanceFlexRoom)
+        {
+            //TODO:: Put in a delay
+            OnCompletedTravel?.Invoke();
+        }
+    }
+
     public void HitSpike(GameObject thingThatGotHit)
     {
         //If hitting a spike, take damage and go back up
-        downTween.Kill();
+        direction = Vector3.zero;
         Enemy_Spike enemySpike = thingThatGotHit.GetComponent<Enemy_Spike>();
         playerHealth.AdjustHp(-enemySpike.handStabDamage, gameObject);
-        slapMaterial.SetColor("_ColorDimExtra",Color.red);
+        slapMaterial.SetColor("_ColorDimExtra", Color.red);
         DumpCollisionsLists();
-        StartCoroutine(GoBackUp(1f));
-    }
-
-    IEnumerator GoBackUp(float returnDelay)
-    {
-        yield return new WaitForSeconds(returnDelay * attackData.slapRecoveryMultiplier);
-
-        
-        //To be able to start moving again while on the way up
-        player.EnableMovement();
-
-        //tween back up from current position
-        slapPosition.DOMoveY(OffScreenSlapYPosition, .1f * attackData.slapRecoveryMultiplier)
-            .SetEase(Ease.InQuint)
-            .OnComplete(() =>
-            {
-                slapRenderer.material.SetColor("_ColorDimExtra", defaultBottomOfHandColor);
-                player.EnableButtonInput();
-            });
+        //TODO:: Make a timer to get stunned, then when done set the direction to go back up
+        HeadBackUp();        
     }
 
     public void TookDamage(int damageAmount, GameObject attacker)

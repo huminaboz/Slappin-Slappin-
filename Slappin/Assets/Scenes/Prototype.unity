@@ -578,7 +578,7 @@ MonoBehaviour:
   playerHealth: {fileID: 2113894224}
   handModelTransform: {fileID: 641250392}
   player: {fileID: 2113894223}
-  OffScreenSlapYPosition: -0.23
+  offScreenSlapYPosition: -0.23
   groundYPosition: -0.78
   startSlapCurve:
     serializedVersion: 2
@@ -35828,7 +35828,7 @@ GameObject:
   - component: {fileID: 910431743}
   - component: {fileID: 910431746}
   - component: {fileID: 910431748}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Slap GetHurt Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35916,10 +35916,10 @@ Rigidbody:
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 55
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 0
@@ -36981,7 +36981,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1399312464}
   - component: {fileID: 1399312463}
-  - component: {fileID: 1399312462}
   - component: {fileID: 1399312465}
   m_Layer: 0
   m_Name: Skybox Camera
@@ -36990,14 +36989,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &1399312462
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1399312460}
-  m_Enabled: 1
 --- !u!20 &1399312463
 Camera:
   m_ObjectHideFlags: 0
@@ -37161,6 +37152,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1519639241}
+  - component: {fileID: 1519639242}
   m_Layer: 0
   m_Name: Slap Position
   m_TagString: Untagged
@@ -37177,7 +37169,7 @@ Transform:
   m_GameObject: {fileID: 1519639240}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.06, y: -0.79, z: 1.62}
+  m_LocalPosition: {x: -0.06, y: -0.18, z: 1.62}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -37187,6 +37179,33 @@ Transform:
   - {fileID: 778377381}
   m_Father: {fileID: 320039378}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &1519639242
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1519639240}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0
 --- !u!1 &1563791792
 GameObject:
   m_ObjectHideFlags: 0

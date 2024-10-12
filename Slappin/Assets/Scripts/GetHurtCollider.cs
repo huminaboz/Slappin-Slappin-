@@ -7,9 +7,9 @@ public class GetHurtCollider : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.GetComponent(typeof(Enemy_Spike)) != null) //Could handle this on the spike
-        {
+        // if (other.GetComponent(typeof(Enemy_Spike)) != null) 
+        // {
             _slapAttack.HitSpike(other.gameObject);
-        }
+        // }
     }
 }
