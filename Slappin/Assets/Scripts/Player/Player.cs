@@ -40,7 +40,7 @@ public class Player : MonoBehaviour, IHpAdjustmentListener
     public void TookDamage(int damageAmount, GameObject attacker)
     {
         Debug.Log("player took damage");
-        CameraShake.I.StartCameraShake();
+        CameraShake.I.StartCameraShake(0.013f, 0.13f);
         HpBar.I.UpdateHpBar(thisHealth);
         //player needs some sort of feedback of getting hurt
         //sfx

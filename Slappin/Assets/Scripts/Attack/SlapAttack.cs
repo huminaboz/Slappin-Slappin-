@@ -127,7 +127,11 @@ public class SlapAttack : AttackType, IHpAdjustmentListener
         //Made it to the goal
         if (YDistance <= distanceFlexRoom)
         {
-            if (direction == Vector3.down) SFXPlayer.I.Play(AudioEventsStorage.I.slapHitGround);
+            if (direction == Vector3.down) //When we know it's slapping down
+            {
+                CameraShake.I.StartCameraShake();
+                SFXPlayer.I.Play(AudioEventsStorage.I.slapHitGround);
+            }
             OnCompletedTravel?.Invoke();
         }
     }
