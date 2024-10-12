@@ -7,7 +7,7 @@ public class Health : MonoBehaviour
     [ReadOnly] public int hp;
     [SerializeField] public int maxHp = 5;
     [SerializeField] private UnityEvent OnDeath;
-    private bool immuneToDamage = false;
+    // private bool immuneToDamage = false;
     public bool isAlive = true;
 
     private IHpAdjustmentListener[] hpAdjustmentListeners;

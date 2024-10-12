@@ -11,6 +11,10 @@ public class AttackType : MonoBehaviour
         {
             Health health = thingThatGotHit.GetComponent<Health>();
             health.AdjustHp(-attackData.baseDamage, gameObject);
+            if (-attackData.baseDamage < 0)
+            {
+                SFXPlayer.I.Play(attackData.playSFXOnHit);
+            }
         }
     }
 }

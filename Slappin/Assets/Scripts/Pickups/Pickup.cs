@@ -46,9 +46,9 @@ public class Pickup : MonoBehaviour, IObjectPool<Pickup>
         }
     }
 
-    public void GetPickedUp()
+    private void GetPickedUp()
     {
-        //Todo:: Play a sfx
+        SFXPlayer.I.Play(AudioEventsStorage.I.pickedUpCurrency1);
         _collider.enabled = false;
         hover.enabled = false;
 

@@ -79,7 +79,6 @@ public class SlapAttack : AttackType, IHpAdjustmentListener
     {
         player.DisableInputs();
         goalPosition = new(transform.position.x, groundYPosition, transform.position.z);
-        //TODO:: Put in a delay before heading back up
         OnCompletedTravel = HeadBackUp;
         attackSpeed = attackData.attackSpeed;
         startingDistanceFromGoal = Mathf.Abs(slapPosition.position.y - goalPosition.y);
@@ -120,7 +119,6 @@ public class SlapAttack : AttackType, IHpAdjustmentListener
     {
         float YDistance = Mathf.Abs(slapPosition.position.y - goalPosition.y);
         if (direction == Vector3.zero) return;
-        //TODO:: Map acceleration along a animation curve - can use attackSpeed as the goal value
         float ratio = 1f - startSlapCurve.Evaluate(YDistance / startingDistanceFromGoal);
         ratio = Mathf.Clamp(ratio, .05f, 1f); //Don't let it be 0
         
@@ -129,7 +127,7 @@ public class SlapAttack : AttackType, IHpAdjustmentListener
         //Made it to the goal
         if (YDistance <= distanceFlexRoom)
         {
-            //TODO:: Put in a delay
+            if (direction == Vector3.down) SFXPlayer.I.Play(AudioEventsStorage.I.slapHitGround);
             OnCompletedTravel?.Invoke();
         }
     }
@@ -143,7 +141,7 @@ public class SlapAttack : AttackType, IHpAdjustmentListener
         Enemy_Spike enemySpike = thingThatGotHit.GetComponent<Enemy_Spike>();
         playerHealth.AdjustHp(-enemySpike.handStabDamage, gameObject);
         slapMaterial.SetColor("_ColorDimExtra", Color.red);
-        //TODO:: Make a timer to get stunned, then when done set the direction to go back up
+
         StartCoroutine(DoAfterDelay(attackData.slapRecoverFromSpikeTimer, HeadBackUp));
     }
 
@@ -164,7 +162,7 @@ public class SlapAttack : AttackType, IHpAdjustmentListener
 
     public float HandleDeath(int lastAttack, GameObject killer)
     {
-        downTween.Kill();
+        
         return 0;
     }
 }

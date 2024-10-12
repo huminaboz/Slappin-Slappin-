@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Notes: 
   baseDamage: 1
-  attackSpeed: 100
+  attackSpeed: 200
   slapGoUpSpeed: 200
   slapRecoverFromSpikeTimer: 1
+  playSFXOnHit: {fileID: 11400000, guid: c74ea2f08ae20404b8840f6f558053a1, type: 2}
