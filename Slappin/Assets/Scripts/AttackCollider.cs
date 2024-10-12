@@ -6,11 +6,6 @@ public class AttackCollider : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.GetComponent(typeof(Health)) != null)
-        {
-            Health health = other.GetComponent<Health>();
-            _attackType.AddHitHealth(health);
-            // _attackType.HitSomething(other.gameObject);
-        }
+        _attackType.HitSomething(other.gameObject);
     }
 }

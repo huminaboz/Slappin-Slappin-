@@ -614,6 +614,9 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   slapRenderer: {fileID: 641250393}
+  spikeGetHurtOnAttackCollider: {fileID: 910431749}
+  pickupColliderObject: {fileID: 778377380}
+  hitEnemiesColliderObject: {fileID: 176124177}
 --- !u!114 &337441564 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 114600693638766706, guid: 9ed2a051c32b4fe47a5e4fb95c20b03f, type: 3}
@@ -35616,7 +35619,7 @@ GameObject:
   - component: {fileID: 778377383}
   - component: {fileID: 778377382}
   m_Layer: 0
-  m_Name: GoodiesCollider
+  m_Name: PickupCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -35749,7 +35752,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee3b7a57c03198646a96a7b070675982, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _attackType: {fileID: 320039379}
 --- !u!850595691 &884789699
 LightingSettings:
   m_ObjectHideFlags: 0
@@ -35962,6 +35964,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _slapAttack: {fileID: 320039379}
+  _layerMask:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0

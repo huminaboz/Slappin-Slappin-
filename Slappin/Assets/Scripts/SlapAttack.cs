@@ -1,8 +1,6 @@
 using System;
-using System.Collections;
 using DG.Tweening;
 using UnityEngine;
-using System.Collections.Generic;
 using UnityEngine.Serialization;
 
 public class SlapAttack : AttackType, IHpAdjustmentListener
@@ -33,6 +31,9 @@ public class SlapAttack : AttackType, IHpAdjustmentListener
     private const float distanceFlexRoom = .05f;
 
     private Action OnCompletedTravel;
+    [SerializeField] private GetHurtOnAttackCollider spikeGetHurtOnAttackCollider;
+    [SerializeField] private GameObject pickupColliderObject;
+    [SerializeField] private GameObject hitEnemiesColliderObject;
 
     private void Awake()
     {
@@ -55,20 +56,21 @@ public class SlapAttack : AttackType, IHpAdjustmentListener
             Debug.LogWarning("Can't slap - player is dead");
             return;
         }
+        
+        pickupColliderObject.SetActive(true);
+        hitEnemiesColliderObject.SetActive(true);
+        spikeGetHurtOnAttackCollider.gameObject.SetActive(true);
 
-        DumpCollisionsLists();
+        if (spikeGetHurtOnAttackCollider.WillHitASpike())
+        {
+            pickupColliderObject.SetActive(false);
+            hitEnemiesColliderObject.SetActive(false);
+        }
+        else
+        {
+            spikeGetHurtOnAttackCollider.gameObject.SetActive(false);
+        }
         HeadToGround();
-        // StartCoroutine(DoMovement(goalPosition, direction));
-        // downTween.Kill();
-        // //Tween down to the ground
-        // downTween = _slapRigidbody.DOMoveY(groundYPosition, attackData.attackSpeed)
-        //     .SetEase(startSlapCurve)
-        //     .OnComplete(() =>
-        //     {
-        //         //Make a big puff of smoke or something
-        //         // HandleCollisions();
-        //         StartCoroutine(GoBackUp(.1f));
-        //     });
     }
 
     private void HeadToGround()
@@ -82,7 +84,6 @@ public class SlapAttack : AttackType, IHpAdjustmentListener
         
         //Give Direction a value starts up the Fixedupdate telling the hand which way to go
         direction = new(0, -1, 0);
-        
     }
 
     private void HeadBackUp()
@@ -109,7 +110,6 @@ public class SlapAttack : AttackType, IHpAdjustmentListener
         if (direction == Vector3.zero) return;
         //TODO:: Map acceleration along a animation curve - can use attackSpeed as the goal value
         _slapRigidbody.velocity = direction * (Time.fixedDeltaTime * attackSpeed);
-        HandleCollisions();
 
         //Made it to the goal
         if (YDistance <= distanceFlexRoom)
@@ -126,7 +126,6 @@ public class SlapAttack : AttackType, IHpAdjustmentListener
         Enemy_Spike enemySpike = thingThatGotHit.GetComponent<Enemy_Spike>();
         playerHealth.AdjustHp(-enemySpike.handStabDamage, gameObject);
         slapMaterial.SetColor("_ColorDimExtra", Color.red);
-        DumpCollisionsLists();
         //TODO:: Make a timer to get stunned, then when done set the direction to go back up
         HeadBackUp();        
     }
