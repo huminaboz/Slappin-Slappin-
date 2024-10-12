@@ -37839,7 +37839,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 0
-  maxHp: 20
+  maxHp: 5000
   OnDeath:
     m_PersistentCalls:
       m_Calls: []

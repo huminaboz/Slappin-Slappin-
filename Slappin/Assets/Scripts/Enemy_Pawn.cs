@@ -54,7 +54,6 @@ public class Enemy_Pawn : Enemy, IObjectPool<Enemy_Pawn>
 
     public override void ReturnObjectToPool()
     {
-        DOTween.KillAll();
         ObjectPoolManager<Enemy_Pawn>.ReturnObject(this);
     }
 }
