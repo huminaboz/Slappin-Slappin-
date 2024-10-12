@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 [CreateAssetMenu(fileName = "AttackData_", menuName = "Slappin/AttackData")]
 public class SO_AttackData : ScriptableObject

@@ -27,6 +27,7 @@ public class SlapAttack : AttackType, IHpAdjustmentListener
     private Vector3 goalPosition;
     private float attackSpeed;
     private const float distanceFlexRoom = .05f;
+    private float startingDistanceFromGoal;
 
     private Action OnCompletedTravel;
     [SerializeField] private GetHurtOnAttackCollider spikeGetHurtOnAttackCollider;
@@ -55,7 +56,7 @@ public class SlapAttack : AttackType, IHpAdjustmentListener
             Debug.LogWarning("Can't slap - player is dead");
             return;
         }
-        
+
         handModel.SetActive(true);
         pickupColliderObject.SetActive(true);
         hitEnemiesColliderObject.SetActive(true);
@@ -70,6 +71,7 @@ public class SlapAttack : AttackType, IHpAdjustmentListener
         {
             spikeGetHurtOnAttackCollider.gameObject.SetActive(false);
         }
+
         HeadToGround();
     }
 
@@ -80,20 +82,29 @@ public class SlapAttack : AttackType, IHpAdjustmentListener
         //TODO:: Put in a delay before heading back up
         OnCompletedTravel = HeadBackUp;
         attackSpeed = attackData.attackSpeed;
+        startingDistanceFromGoal = Mathf.Abs(slapPosition.position.y - goalPosition.y);
         
-        
-        //Give Direction a value starts up the Fixedupdate telling the hand which way to go
+        //Giving Direction a value starts up the Fixedupdate telling the hand which way to go
         direction = new(0, -1, 0);
     }
 
     private void HeadBackUp()
     {
-        player.EnableMovement();
         goalPosition = new(transform.position.x, offScreenSlapYPosition, transform.position.z);
+        startingDistanceFromGoal = Mathf.Abs(slapPosition.position.y - goalPosition.y);
         OnCompletedTravel = StopMoving;
         attackSpeed = attackData.slapGoUpSpeed;
-        
-        direction = new(0, 1, 0);
+
+        //Stop for a second to see the hand
+        direction = Vector3.zero;
+        _slapRigidbody.velocity = Vector3.zero;
+
+        //Start heading up after a quick delay
+        StartCoroutine(DoAfterDelay(.15f, () =>
+        {
+            player.EnableMovement();
+            direction = new(0, 1, 0);
+        }));
     }
 
     private void StopMoving()
@@ -110,7 +121,10 @@ public class SlapAttack : AttackType, IHpAdjustmentListener
         float YDistance = Mathf.Abs(slapPosition.position.y - goalPosition.y);
         if (direction == Vector3.zero) return;
         //TODO:: Map acceleration along a animation curve - can use attackSpeed as the goal value
-        _slapRigidbody.velocity = direction * (Time.fixedDeltaTime * attackSpeed);
+        float ratio = 1f - startSlapCurve.Evaluate(YDistance / startingDistanceFromGoal);
+        ratio = Mathf.Clamp(ratio, .05f, 1f); //Don't let it be 0
+        
+        _slapRigidbody.velocity = direction * (Time.fixedDeltaTime * attackSpeed * ratio);
 
         //Made it to the goal
         if (YDistance <= distanceFlexRoom)
@@ -123,6 +137,7 @@ public class SlapAttack : AttackType, IHpAdjustmentListener
     public void HitSpike(GameObject thingThatGotHit)
     {
         //If hitting a spike, take damage and go back up
+        spikeGetHurtOnAttackCollider.gameObject.SetActive(false); //Don't accidentally hit another
         direction = Vector3.zero;
         _slapRigidbody.velocity = Vector3.zero;
         Enemy_Spike enemySpike = thingThatGotHit.GetComponent<Enemy_Spike>();
