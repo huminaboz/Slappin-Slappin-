@@ -36565,7 +36565,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 870d577d230f5bc49b9e1f8a22e889d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sourcePoolSize: 4
+  maxSimultaneousSFXs: 4
   audioGroup: {fileID: -1679997838058148851, guid: 2e536806f2eb7e34391ecb00a77a8521, type: 2}
   fadeOutCurve:
     serializedVersion: 2
@@ -38035,7 +38035,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2caabda7bae069b44acf7fa419076077, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sourcePoolSize: 4
+  maxSimultaneousSFXs: 20
   audioGroup: {fileID: 5017474992789371534, guid: 2e536806f2eb7e34391ecb00a77a8521, type: 2}
 --- !u!1 &2113894220
 GameObject:

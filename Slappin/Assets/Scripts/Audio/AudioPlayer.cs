@@ -8,7 +8,7 @@ public abstract class AudioPlayer : MonoBehaviour
     // size of the pool of audio sources to keep consistently once created
     [SerializeField] private int maxSimultaneousSFXs = 4;
 
-    // protected List<AudioClip> playingClips = new List<AudioClip>();
+    protected List<AudioClip> playingAudioClips = new List<AudioClip>();
     [SerializeField] protected AudioMixerGroup audioGroup;
 
     private List<AudioSource> sourcesNotInUse = new List<AudioSource>();
@@ -17,13 +17,29 @@ public abstract class AudioPlayer : MonoBehaviour
 
     protected AudioSource DoPlay(SFXScrob sfxScrob)
     {
+        //First, clean up any unused AudioSources
+        for (int i = sourcesInUse.Count - 1; i > -1; i--)
+        {
+            if (sourcesInUse[i].isPlaying) continue;
+            sourcesNotInUse.Add(sourcesInUse[i]);
+            playingAudioClips.Remove(sourcesInUse[i].clip);
+            sourcesInUse.RemoveAt(i);
+        }
+        
         if (sfxScrob.clip is null)
         {
             Debug.LogError("There was no audio clip on soundScrob: " + sfxScrob.name);
             return null;
         }
 
-        AudioSource source = GetFreeAudioSource();
+        AudioSource source;
+        //Then see if the requested scrob is already playing and use that again
+        // if (playingAudioClips.Contains(sfxScrob.clip))
+        // {
+        //     source = GetSourceWithSameClip(sfxScrob.clip);
+        // }
+        // else 
+            source = GetFreeAudioSource();
         if (source is null) return null;
 
         source.outputAudioMixerGroup = sfxScrob.mixerGroup;
@@ -39,6 +55,7 @@ public abstract class AudioPlayer : MonoBehaviour
         source.loop = sfxScrob.looping;
 
         source.Play();
+        playingAudioClips.Add(sfxScrob.clip);
         return source;
     }
 
@@ -47,16 +64,22 @@ public abstract class AudioPlayer : MonoBehaviour
         return sourcesInUse.Count > maxSimultaneousSFXs;
     }
 
-    protected AudioSource GetFreeAudioSource()
+    private AudioSource GetSourceWithSameClip(AudioClip clip)
     {
-        //First, clean up any unused AudioSources
-        for (int i = sourcesInUse.Count - 1; i > -1; i--)
+        foreach (AudioSource audioSource in sourcesInUse)
         {
-            if (sourcesInUse[i].isPlaying) continue;
-            sourcesNotInUse.Add(sourcesInUse[i]);
-            sourcesInUse.RemoveAt(i);
+            if (audioSource.clip == clip)
+            {
+                return audioSource;
+            }
         }
 
+        Debug.Log("Couldn't find an audiosource with the same clip, despite knowing the list of audioscources contains it");
+        return null;
+    }
+
+    protected AudioSource GetFreeAudioSource()
+    {
         //If there are too many
         if (ExceedingCapacity()) return null;
 
