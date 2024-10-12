@@ -1,33 +1,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.Serialization;
 
 public abstract class AudioPlayer : MonoBehaviour
 {
-    private List<AudioSource> audioSources = new List<AudioSource>();
-
     // size of the pool of audio sources to keep consistently once created
-    [SerializeField] private int sourcePoolSize = 4;
+    [SerializeField] private int maxSimultaneousSFXs = 4;
 
-    protected List<AudioClip> playingClips = new List<AudioClip>();
+    // protected List<AudioClip> playingClips = new List<AudioClip>();
     [SerializeField] protected AudioMixerGroup audioGroup;
 
+    private List<AudioSource> sourcesNotInUse = new List<AudioSource>();
+    private List<AudioSource> sourcesInUse = new List<AudioSource>();
 
-    private void Update()
-    {
-        // playingClips.Clear();
-        //
-        // foreach (AudioSource thisSource in audioSources.ToArray())
-        // {
-        //     if (!thisSource.isPlaying)
-        //     {
-        //         if (audioSources.Count <= sourcePoolSize) continue;
-        //         audioSources.Remove(thisSource);
-        //         Destroy(thisSource); //TODO:: Make a pool
-        //     }
-        //     else playingClips.Add(thisSource.clip);
-        // }
-    }
 
     protected AudioSource DoPlay(SFXScrob sfxScrob)
     {
@@ -38,6 +24,7 @@ public abstract class AudioPlayer : MonoBehaviour
         }
 
         AudioSource source = GetFreeAudioSource();
+        if (source is null) return null;
 
         source.outputAudioMixerGroup = sfxScrob.mixerGroup;
         if (source.outputAudioMixerGroup == null) source.outputAudioMixerGroup = audioGroup;
@@ -55,25 +42,47 @@ public abstract class AudioPlayer : MonoBehaviour
         return source;
     }
 
-    protected void DoStop(AudioClip _clip)
+    private bool ExceedingCapacity()
     {
-        foreach (AudioSource src in audioSources)
-        {
-            if (src.clip == _clip)
-                src.Stop();
-        }
+        return sourcesInUse.Count > maxSimultaneousSFXs;
     }
 
     protected AudioSource GetFreeAudioSource()
     {
-        foreach (AudioSource source in audioSources)
+        //First, clean up any unused AudioSources
+        for (int i = sourcesInUse.Count - 1; i > -1; i--)
         {
-            if (!source.isPlaying) return source;
+            if (sourcesInUse[i].isPlaying) continue;
+            sourcesNotInUse.Add(sourcesInUse[i]);
+            sourcesInUse.RemoveAt(i);
         }
 
-        AudioSource newSource = gameObject.AddComponent<AudioSource>();
-        audioSources.Add(newSource);
+        //If there are too many
+        if (ExceedingCapacity()) return null;
 
-        return newSource;
+        //There are too few
+        if (sourcesNotInUse.Count < 1)
+        {
+            AudioSource newSource = gameObject.AddComponent<AudioSource>();
+            sourcesNotInUse.Add(newSource);
+        }
+
+        //Finally, get a free source from the bottom
+        int index = sourcesNotInUse.Count - 1;
+        AudioSource nextSource = sourcesNotInUse[index];
+        sourcesInUse.Add(nextSource);
+        sourcesNotInUse.RemoveAt(index);
+
+        return nextSource;
+    }
+
+
+    protected void DoStop(AudioScrob audioScrob)
+    {
+        foreach (AudioSource src in sourcesInUse)
+        {
+            if (src.clip == audioScrob.clip)
+                src.Stop();
+        }
     }
 }

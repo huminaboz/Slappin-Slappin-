@@ -42,10 +42,10 @@ public class SFXPlayer : AudioPlayer
     }
     
    
-    public bool IsPlaying(SFXScrob sfxScrob)
-    {
-        return playingClips.Contains(sfxScrob.clip);
-    }
+    // public bool IsPlaying(SFXScrob sfxScrob)
+    // {
+    //     return playingClips.Contains(sfxScrob.clip);
+    // }
     
     // public static void Stop(AudioClip _clip)
     // {
