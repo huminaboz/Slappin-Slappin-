@@ -18,6 +18,7 @@ public class VFXSpawner : Singleton<VFXSpawner>
         if(hitTransform is null) return;
         PoolableParticleEffect spawnedHit = ObjectPoolManager<PoolableParticleEffect>
             .GetObject(hitEffectPrefab);
+        //TODO:: I think maybe there's no cleanup for the spawn hit fx so it just maxes out
         spawnedHit.transform.position = hitTransform.position;
         spawnedHit.transform.LookAt(cameraTransform);
     }

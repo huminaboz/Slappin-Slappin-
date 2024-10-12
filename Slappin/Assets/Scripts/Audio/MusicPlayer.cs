@@ -24,7 +24,6 @@ public class MusicPlayer : AudioPlayer
         I = this;
     }
 
-
     public void Play(MusicScrob musicToPlay, float startTime = 0f)
     {
         _nowPlayingAudioSource ??= GetFreeAudioSource();

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 [RequireComponent(typeof(Health))]
@@ -8,6 +9,7 @@ public class Player : MonoBehaviour, IHpAdjustmentListener
 
     [SerializeField] private HandMovement handMovement;
     private PlayerInput PlayerInput { get; set; }
+    private PlayerState currentState { get; set; }
 
     private void Awake()
     {
@@ -19,6 +21,32 @@ public class Player : MonoBehaviour, IHpAdjustmentListener
     {
         thisHealth.Initialize();
         HpBar.I.UpdateHpBar(thisHealth);
+        currentState = new StateDefault(this);
+    }
+
+    private void Update()
+    {
+        currentState?.Update(Time.deltaTime);
+    }
+
+    private void FixedUpdate()
+    {
+        currentState?.FixedUpdate(Time.fixedDeltaTime);
+    }
+
+    private void SetState(PlayerState newState)
+    {
+        if (newState == null)
+        {
+            Debug.LogError("Tried to set player to a null state");
+        }
+        
+        PlayerState oldState = currentState;
+        currentState?.Exit(newState);
+        currentState = newState;
+        currentState?.Enter(oldState);
+        
+        Debug.Log($"Switching state from: {oldState?.state}\nTo: {newState.state}");
     }
 
     public void DisableInputs()

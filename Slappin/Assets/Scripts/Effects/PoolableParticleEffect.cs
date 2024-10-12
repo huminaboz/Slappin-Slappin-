@@ -5,8 +5,6 @@ public class PoolableParticleEffect : MonoBehaviour, IObjectPool<PoolableParticl
 {
     private ParticleSystem thisParticleSystem;
     
-    
-    
     public void SetupObjectFirstTime()
     {
         gameObject.SetActive(false);
