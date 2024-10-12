@@ -422,6 +422,11 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.000000052154064, y: -0.00000166893, z: -0.00000008940697}
+--- !u!1 &184228170 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: fbd67e0edffa1164ab83ee7ce6557d62, type: 3}
+  m_PrefabInstance: {fileID: 641250391}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &242380736
 GameObject:
   m_ObjectHideFlags: 0
@@ -576,7 +581,7 @@ MonoBehaviour:
   attackData: {fileID: 11400000, guid: f5ea50f4cb371cb46a26e9f293658657, type: 2}
   slapPosition: {fileID: 1519639241}
   playerHealth: {fileID: 2113894224}
-  handModelTransform: {fileID: 641250392}
+  handModel: {fileID: 184228170}
   player: {fileID: 2113894223}
   offScreenSlapYPosition: -0.23
   groundYPosition: -0.78
@@ -35897,8 +35902,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.061, y: 0.8362, z: -11.62}
-  m_LocalScale: {x: 0.4, y: 0.01, z: 0.4}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.37, y: 0.00925, z: 0.37}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1519639241}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

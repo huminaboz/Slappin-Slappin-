@@ -13,8 +13,6 @@ public class Enemy_Pawn : Enemy, IObjectPool<Enemy_Pawn>
     public override void SetupObjectFirstTime()
     {
         base.SetupObjectFirstTime();
-        // thisMaterial = GetComponent<Renderer>().material;
-        //transform.position += Vector3.up * 0.07410529f;
         _walkTowardsTransform = gameObject.GetComponent<WalkTowardsTransform>();
         if (TryGetComponent(out WalkTowardsTransform walkTowardsTransform))
         {

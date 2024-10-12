@@ -7,11 +7,8 @@ public class SlapAttack : AttackType, IHpAdjustmentListener
 {
     // [SerializeField] private Transform shadow;
     [SerializeField] private Transform slapPosition;
-
     [SerializeField] private Health playerHealth;
-
-    [SerializeField] private Transform handModelTransform;
-
+    [SerializeField] private GameObject handModel;
     [SerializeField] private Player player;
 
     //Todo:: Just make this disappear
@@ -40,6 +37,7 @@ public class SlapAttack : AttackType, IHpAdjustmentListener
         slapMaterial = slapRenderer.material;
         defaultBottomOfHandColor = slapRenderer.material.GetColor("_ColorDimExtra");
         _slapRigidbody = slapPosition.GetComponent<Rigidbody>();
+        handModel.SetActive(false);
     }
 
     private void Start()
@@ -57,6 +55,7 @@ public class SlapAttack : AttackType, IHpAdjustmentListener
             return;
         }
         
+        handModel.SetActive(true);
         pickupColliderObject.SetActive(true);
         hitEnemiesColliderObject.SetActive(true);
         spikeGetHurtOnAttackCollider.gameObject.SetActive(true);
@@ -102,6 +101,7 @@ public class SlapAttack : AttackType, IHpAdjustmentListener
         direction = Vector3.zero;
         slapRenderer.material.SetColor("_ColorDimExtra", defaultBottomOfHandColor);
         player.EnablePlayerAttacks();
+        handModel.SetActive(false);
     }
 
     private void FixedUpdate()

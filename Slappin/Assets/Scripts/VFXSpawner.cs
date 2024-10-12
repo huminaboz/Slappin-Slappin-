@@ -15,6 +15,7 @@ public class VFXSpawner : Singleton<VFXSpawner>
     
     public void SpawnHitFX(Transform hitTransform)
     {
+        if(hitTransform is null) return;
         PoolableParticleEffect spawnedHit = ObjectPoolManager<PoolableParticleEffect>
             .GetObject(hitEffectPrefab);
         spawnedHit.transform.position = hitTransform.position;
