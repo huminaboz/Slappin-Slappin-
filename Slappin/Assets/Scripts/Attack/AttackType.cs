@@ -3,27 +3,25 @@ using UnityEngine.Serialization;
 
 public class AttackType : MonoBehaviour
 {
-    [SerializeField] protected SO_AttackData attackData;
-    [SerializeField] protected Player player;
-
     [SerializeField] public Transform handPositioner;
-
-    [SerializeField] private Renderer handRenderer;
-
-    [SerializeField] protected Rigidbody handRigidbody;
-
-    [SerializeField] private float centerX = .29f;
-
     [SerializeField] public GameObject hurtEnemiesColliderObject;
 
+    [HideInInspector] public Vector3 offsetPosition;
+
+    [SerializeField] protected SO_AttackData attackData;
+    [SerializeField] protected Player player;
+    [SerializeField] protected Rigidbody handRigidbody;
+
+    protected Vector3 direction;
+
+    [SerializeField] private Transform cameraTransform;
+    [SerializeField] private Renderer handRenderer;
+    [SerializeField] private GameObject handModel;
+    [SerializeField] private Transform handShadowTransform;
 
     private Color _defaultBottomOfHandColor;
     private Material _handMaterial;
-
-    [SerializeField] private Transform handShadowTransform;
-    [SerializeField] private Transform cameraTransform;
     private Vector3 relativeAttackPositioning;
-    [HideInInspector] public Vector3 offsetPosition;
     private Vector3 storedRelativeAttackPosition;
     
     public void Initialize()
@@ -34,6 +32,7 @@ public class AttackType : MonoBehaviour
         relativeAttackPositioning = handPositioner.position - handShadowTransform.position;
         Debug.Log($"Relative positioning between shadow and hand is: {relativeAttackPositioning}");
         storedRelativeAttackPosition = relativeAttackPositioning;
+        handModel.SetActive(false);
     }
 
     private void SetDirection()
@@ -75,6 +74,7 @@ public class AttackType : MonoBehaviour
     {
         SetPosition(); //So the spike collision check is in the right place
         SetDirection();
+        handModel.SetActive(true);
     }
 
     private void GetHandMaterials()
@@ -107,6 +107,15 @@ public class AttackType : MonoBehaviour
                 SFXPlayer.I.Play(attackData.playSFXOnHit);
             }
         }
+    }
+
+    protected virtual void Cleanup()
+    {
+        handRigidbody.velocity = Vector3.zero;
+        direction = Vector3.zero;
+
+        handModel.SetActive(false);
+        player.SetState(new StateDefault(player));
     }
 
     private int GetBonusDamage(int baseDamage)

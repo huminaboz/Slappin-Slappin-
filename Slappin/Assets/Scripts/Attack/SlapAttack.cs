@@ -8,25 +8,19 @@ public class SlapAttack : AttackType
     [Header("Slap Attack Specific Stuff")]
     
     [SerializeField] private Health playerHealth;
-    [SerializeField] private GameObject handModel;
     [SerializeField] private float offScreenSlapYPosition = -0.23f; //Measured by holding it off camera
     [SerializeField] private float groundYPosition = -0.78f; //Measured by putting the hand on the ground 
     [SerializeField] private AnimationCurve startSlapCurve;
     [SerializeField] private GetHurtOnAttackCollider spikeGetHurtOnAttackCollider;
     [SerializeField] private GameObject pickupColliderObject;
 
-    private Vector3 direction;
+    
     private Vector3 goalPosition;
     private float attackSpeed;
     private const float distanceFlexRoom = .05f;
     private float startingDistanceFromGoal;
     private Action OnCompletedTravel;
     
-
-    private void Awake()
-    {
-        handModel.SetActive(false);
-    }
 
     private void Start()
     {
@@ -48,7 +42,6 @@ public class SlapAttack : AttackType
             return;
         }
 
-        handModel.SetActive(true);
         //TODO:: Consider moving this up to the parent - decide while making other attacks
         pickupColliderObject.SetActive(true);
         hurtEnemiesColliderObject.SetActive(true);
@@ -87,7 +80,7 @@ public class SlapAttack : AttackType
         // Debug.Break();
         goalPosition = new(transform.position.x, offScreenSlapYPosition, transform.position.z);
         startingDistanceFromGoal = Mathf.Abs(handPositioner.position.y - goalPosition.y);
-        OnCompletedTravel = StopMoving;
+        OnCompletedTravel = Cleanup;
         attackSpeed = attackData.slapGoUpSpeed;
 
         //Stop for a bit to see the hand
@@ -101,13 +94,9 @@ public class SlapAttack : AttackType
         }));
     }
 
-    //This is that substate stuff that's a bit confusing
-    private void StopMoving()
+    protected override void Cleanup()
     {
-        handRigidbody.velocity = Vector3.zero;
-        direction = Vector3.zero;
-        handModel.SetActive(false);
-        player.SetState(new StateDefault(player));
+        base.Cleanup();
     }
 
     private void FixedUpdate()
