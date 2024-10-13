@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using DG.Tweening;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 [RequireComponent(typeof(Health))]
 public abstract class Enemy : MonoBehaviour, IHpAdjustmentListener, IObjectPool<Enemy>
@@ -9,7 +10,7 @@ public abstract class Enemy : MonoBehaviour, IHpAdjustmentListener, IObjectPool<
     private IHpAdjustmentListener _hpAdjustmentListenerImplementation;
     public Health thisHealth { get; set; }
 
-    [SerializeField] private int currencyDrop;
+    [FormerlySerializedAs("currencyDropAmount")] [FormerlySerializedAs("currencyDrop")] [SerializeField] private int currency1DropAmount;
     [SerializeField] private GameObject pickupToDrop;
     
     
@@ -91,6 +92,7 @@ public abstract class Enemy : MonoBehaviour, IHpAdjustmentListener, IObjectPool<
         Vector3 pickupSpawnPosition = new Vector3(transform.position.x,
             transform.position.y + .02f, transform.position.z);
         Pickup pickup = ObjectPoolManager<Pickup>.GetObject(pickupToDrop);
+        pickup.SetupCurrency(currency1DropAmount);
         pickup.SetNewPosition(pickupSpawnPosition);
         
         //Spin in a circle first
@@ -102,8 +104,6 @@ public abstract class Enemy : MonoBehaviour, IHpAdjustmentListener, IObjectPool<
         
         return 0;
     }
-
-
 
     //Abstract because you don't want to return the object to the pool as an Enemy, but as the specific enemy
     public abstract void ReturnObjectToPool();

@@ -1413,7 +1413,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6a8852673dc0e04e894ba58e6b2d854, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 400
+  moveSpeed: 40
   boostedSpeedMultiplier: 2.5
   slapPositioner: {fileID: 1519639241}
   _rigidbody: {fileID: 0}

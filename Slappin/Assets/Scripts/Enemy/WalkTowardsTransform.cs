@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -7,6 +8,7 @@ public class WalkTowardsTransform : MonoBehaviour, IHpAdjustmentListener
     [SerializeField] private float rotationSpeed = 5f;
 
     private Enemy thisEnemy;
+    private Rigidbody _rigidbody;
 
     //TODO:: Can set this up to target a random X position at the hurt line
 
@@ -16,7 +18,8 @@ public class WalkTowardsTransform : MonoBehaviour, IHpAdjustmentListener
         {
             thisEnemy = enemy;
         }
-        else Debug.LogError("Walk script doesn't have an enemy script");
+        else Debug.LogError("Walkscript doesn't have an enemy script");
+        _rigidbody = GetComponent<Rigidbody>();
     }
 
     private void Start()
@@ -27,23 +30,26 @@ public class WalkTowardsTransform : MonoBehaviour, IHpAdjustmentListener
         }
     }
 
-    private void Update()
+    private void OnDisable()
+    {
+        StopAllCoroutines();
+    }
+
+    private void FixedUpdate()
     {
         if (transform.localPosition.z + transform.localScale.z * .05 <= EnemyTarget.I.hurtLine.localPosition.z
             && walkSpeed > 0f)
         {
-            //TODO:: Turn off this component and inform the enemy it's time to attack
+            _rigidbody.velocity = Vector3.zero;
             thisEnemy.SwitchToAttackMode();
             return;
         }
 
         // Get the direction from the current position to the target position
-        Vector3 direction = (EnemyTarget.I.targetTransform.position - transform.position);
-        direction.y = 0f; // Ignore the Y axis for movement
+        Vector3 direction = EnemyTarget.I.targetTransform.position - transform.position;
+        direction.y = 0f;
 
-        // Move the object towards the target
-        Vector3 newPosition = transform.position + direction.normalized * walkSpeed * Time.deltaTime;
-        transform.position = newPosition;
+        _rigidbody.velocity = direction.normalized * (walkSpeed * Time.deltaTime);
 
         // If there's movement, rotate to face the target
         if (direction.magnitude > 0.1f)

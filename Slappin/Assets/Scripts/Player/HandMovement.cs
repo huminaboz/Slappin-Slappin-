@@ -30,7 +30,7 @@ public class HandMovement : MonoBehaviour
         slapPositioner.position = new Vector3(offsetPosition.x, slapPositioner.position.y, offsetPosition.z);
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         if (!StateGame.PlayerInGameControlsEnabled) return;
 

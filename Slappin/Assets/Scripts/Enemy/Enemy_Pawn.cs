@@ -1,3 +1,4 @@
+using System;
 using DG.Tweening;
 using UnityEngine;
 
@@ -9,6 +10,7 @@ public class Enemy_Pawn : Enemy, IObjectPool<Enemy_Pawn>
     [SerializeField] private int attackDamage = 1;
 
     private WalkTowardsTransform _walkTowardsTransform;
+    private Tween attackTween;
 
     public override void SetupObjectFirstTime()
     {
@@ -29,11 +31,16 @@ public class Enemy_Pawn : Enemy, IObjectPool<Enemy_Pawn>
         base.InitializeObjectFromPool();
     }
 
+    private void OnDisable()
+    {
+        attackTween.Kill();
+    }
+
     protected override void Attack()
     {
         _walkTowardsTransform.enabled = false;
         PlayerInfo.I.health.AdjustHp(-attackDamage, gameObject);
-        transform.DORotate(new Vector3(57f, 0, 0), .5f, RotateMode.LocalAxisAdd)
+        attackTween = transform.DORotate(new Vector3(57f, 0, 0), .5f, RotateMode.LocalAxisAdd)
             .SetEase(attackCurve)
             .OnComplete(() =>
             {

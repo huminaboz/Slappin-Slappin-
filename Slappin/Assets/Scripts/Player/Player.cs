@@ -62,7 +62,7 @@ public class Player : MonoBehaviour, IHpAdjustmentListener
     public void TookDamage(int damageAmount, GameObject attacker)
     {
         Debug.Log("player took damage");
-        float stunTime = 0f; //Not everything will stun you??
+        // float stunTime = 0f; //Not everything will stun you??
         
         //TODO:: Set the values of the camera shake based on the attacker
         CameraShake.I.StartCameraShake(0.013f, 0.13f);

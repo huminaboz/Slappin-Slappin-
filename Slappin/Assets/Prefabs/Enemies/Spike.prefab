@@ -12,11 +12,12 @@ GameObject:
   - component: {fileID: 5004042527326481337}
   - component: {fileID: 2916117102104308091}
   - component: {fileID: 8881780924448471337}
+  - component: {fileID: 1577975985148870366}
   - component: {fileID: 2012794802681237938}
   - component: {fileID: 2008214651079618806}
   - component: {fileID: 2469762892176786808}
   - component: {fileID: 3780368011366827157}
-  - component: {fileID: 1577975985148870366}
+  - component: {fileID: 2246439515336334185}
   m_Layer: 6
   m_Name: Spike
   m_TagString: Untagged
@@ -51,7 +52,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d78660ad45ce12c468593b550f6117f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkSpeed: 0.04
+  walkSpeed: 4
   rotationSpeed: 5
 --- !u!114 &2916117102104308091
 MonoBehaviour:
@@ -320,6 +321,24 @@ MonoBehaviour:
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 
+--- !u!114 &1577975985148870366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3917557613060000298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 008a57a0d84c59d43a2b56e991c30ec8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currencyDropAmount: 4
+  pickupToDrop: {fileID: 4864087115399935888, guid: 9fe9c0010e31c1f499c0d5a3f63d0fe3, type: 3}
+  flashDuration: 0.5
+  flashCount: 5
+  handStabDamage: 1
+  handStabStunDuration: 1
 --- !u!114 &2012794802681237938
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -422,20 +441,30 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
---- !u!114 &1577975985148870366
-MonoBehaviour:
+--- !u!54 &2246439515336334185
+Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3917557613060000298}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 008a57a0d84c59d43a2b56e991c30ec8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currencyDrop: 0
-  pickupToDrop: {fileID: 4864087115399935888, guid: 9fe9c0010e31c1f499c0d5a3f63d0fe3, type: 3}
-  flashDuration: 0.5
-  flashCount: 5
-  handStabDamage: 1
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 4
+  m_CollisionDetection: 0

@@ -3,9 +3,9 @@ using UnityEngine;
 
 public class Pickup : MonoBehaviour, IObjectPool<Pickup>
 {
-    [SerializeField] public int currency1 = 1;
-    [SerializeField] public int currency2 = 0;
-    [SerializeField] public int hp = 0;
+    [SerializeField] private int currency1 = 1;
+    [SerializeField] private int currency2 = 0;
+    [SerializeField] private int hp = 0;
 
     private Collider _collider;
     [HideInInspector] public Hover hover;
@@ -46,6 +46,12 @@ public class Pickup : MonoBehaviour, IObjectPool<Pickup>
         }
     }
 
+    public void SetupCurrency(int value)
+    {
+        currency1 = value;
+        //TODO:: Make provisions for currency2
+    }
+
     private void GetPickedUp()
     {
         SFXPlayer.I.Play(AudioEventsStorage.I.pickedUpCurrency1);
@@ -59,7 +65,6 @@ public class Pickup : MonoBehaviour, IObjectPool<Pickup>
         PlayerInfo.I.health.AdjustHp(hp, gameObject);
         StartCoroutine(MoveTowardsCamera());
     }
-
 
     private IEnumerator MoveTowardsCamera()
     {

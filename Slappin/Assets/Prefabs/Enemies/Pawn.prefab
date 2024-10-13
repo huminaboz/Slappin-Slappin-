@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 520956407658430249}
   - component: {fileID: 7847976146695539044}
   - component: {fileID: 362152917729996988}
+  - component: {fileID: -9018553438512618351}
   m_Layer: 0
   m_Name: Pawn
   m_TagString: Untagged
@@ -51,7 +52,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ade335cace46394ba3953a5507dd3f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currencyDrop: 0
+  currencyDropAmount: 1
   pickupToDrop: {fileID: 4864087115399935888, guid: 9fe9c0010e31c1f499c0d5a3f63d0fe3, type: 3}
   flashDuration: 0.5
   flashCount: 5
@@ -137,7 +138,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d78660ad45ce12c468593b550f6117f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkSpeed: 0.05
+  walkSpeed: 5
   rotationSpeed: 5
 --- !u!114 &3636230606908791104
 MonoBehaviour:
@@ -455,3 +456,30 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.027475402, y: 0.07410529, z: 0.027196543}
   m_Center: {x: 0, y: -0.0000000018626451, z: 9.313226e-10}
+--- !u!54 &-9018553438512618351
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3826877389465147980}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 4
+  m_CollisionDetection: 0
