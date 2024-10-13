@@ -579,10 +579,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackData: {fileID: 11400000, guid: f5ea50f4cb371cb46a26e9f293658657, type: 2}
+  player: {fileID: 2113894223}
+  handRenderer: {fileID: 641250393}
+  _handRigidbody: {fileID: 1519639242}
   slapPosition: {fileID: 1519639241}
   playerHealth: {fileID: 2113894224}
   handModel: {fileID: 184228170}
-  player: {fileID: 2113894223}
   offScreenSlapYPosition: -0.23
   groundYPosition: -0.78
   startSlapCurve:
@@ -618,7 +620,6 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  slapRenderer: {fileID: 641250393}
   spikeGetHurtOnAttackCollider: {fileID: 910431749}
   pickupColliderObject: {fileID: 778377380}
   hitEnemiesColliderObject: {fileID: 176124177}
@@ -38089,6 +38090,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   handMovement: {fileID: 734975210}
+  slapAttack: {fileID: 320039379}
 --- !u!114 &2113894224
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38145,6 +38147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc6a2c96091a06e47950658dec5749c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stunRecoveryMultiplier: 1
 --- !u!1 &2132519981
 GameObject:
   m_ObjectHideFlags: 0

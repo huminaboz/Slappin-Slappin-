@@ -1,53 +1,43 @@
 using System;
-using System.Collections;
-using DG.Tweening;
 using UnityEngine;
-using UnityEngine.Serialization;
 
-public class SlapAttack : AttackType, IHpAdjustmentListener
+public class SlapAttack : AttackType
 {
     // [SerializeField] private Transform shadow;
     [SerializeField] private Transform slapPosition;
     [SerializeField] private Health playerHealth;
     [SerializeField] private GameObject handModel;
-    [SerializeField] private Player player;
-
-    //Todo:: Just make this disappear
     [SerializeField] private float offScreenSlapYPosition = -0.23f; //Measured by holding it off camera
     [SerializeField] private float groundYPosition = -0.78f; //Measured by putting the hand on the ground 
-
     [SerializeField] private AnimationCurve startSlapCurve;
+    [SerializeField] private GetHurtOnAttackCollider spikeGetHurtOnAttackCollider;
+    [SerializeField] private GameObject pickupColliderObject;
+    [SerializeField] private GameObject hitEnemiesColliderObject;
 
-    [SerializeField] private Renderer slapRenderer;
-    private Material slapMaterial;
-    private Color defaultBottomOfHandColor;
-
-    private Rigidbody _slapRigidbody;
     private Vector3 direction;
     private Vector3 goalPosition;
     private float attackSpeed;
     private const float distanceFlexRoom = .05f;
     private float startingDistanceFromGoal;
-
     private Action OnCompletedTravel;
-    [SerializeField] private GetHurtOnAttackCollider spikeGetHurtOnAttackCollider;
-    [SerializeField] private GameObject pickupColliderObject;
-    [SerializeField] private GameObject hitEnemiesColliderObject;
+    
 
     private void Awake()
     {
-        slapMaterial = slapRenderer.material;
-        defaultBottomOfHandColor = slapRenderer.material.GetColor("_ColorDimExtra");
-        _slapRigidbody = slapPosition.GetComponent<Rigidbody>();
         handModel.SetActive(false);
     }
 
     private void Start()
     {
-        transform.position = new Vector3(transform.position.x, offScreenSlapYPosition, transform.position.z);
+        transform.position = new Vector3(transform.position.x, 
+            offScreenSlapYPosition, transform.position.z);
     }
 
-    private Tween downTween;
+    public override void DoAttack()
+    {
+        base.DoAttack();
+        DropSlap();
+    }
 
     public void DropSlap()
     {
@@ -58,8 +48,12 @@ public class SlapAttack : AttackType, IHpAdjustmentListener
         }
 
         handModel.SetActive(true);
+        //TODO:: Consider moving this up to the parent - decide while making other attacks
         pickupColliderObject.SetActive(true);
         hitEnemiesColliderObject.SetActive(true);
+        
+        //TODO:: there might be more things that can hurt -
+        //or can genericize it on the parent for other hand types that can get hurt
         spikeGetHurtOnAttackCollider.gameObject.SetActive(true);
 
         if (spikeGetHurtOnAttackCollider.WillHitASpike())
@@ -77,7 +71,7 @@ public class SlapAttack : AttackType, IHpAdjustmentListener
 
     private void HeadToGround()
     {
-        player.DisableInputs();
+        player.DisableMovement();
         goalPosition = new(transform.position.x, groundYPosition, transform.position.z);
         OnCompletedTravel = HeadBackUp;
         attackSpeed = attackData.attackSpeed;
@@ -94,25 +88,24 @@ public class SlapAttack : AttackType, IHpAdjustmentListener
         OnCompletedTravel = StopMoving;
         attackSpeed = attackData.slapGoUpSpeed;
 
-        //Stop for a second to see the hand
+        //Stop for a bit to see the hand
+        const float handRestDuration = .15f;
         direction = Vector3.zero;
-        _slapRigidbody.velocity = Vector3.zero;
-
-        //Start heading up after a quick delay
-        StartCoroutine(DoAfterDelay(.15f, () =>
+        _handRigidbody.velocity = Vector3.zero;
+        StartCoroutine(BozUtilities.DoAfterDelay(handRestDuration, () =>
         {
             player.EnableMovement();
             direction = new(0, 1, 0);
         }));
     }
 
+    //This is that substate stuff that's a bit confusing
     private void StopMoving()
     {
-        _slapRigidbody.velocity = Vector3.zero;
+        _handRigidbody.velocity = Vector3.zero;
         direction = Vector3.zero;
-        slapRenderer.material.SetColor("_ColorDimExtra", defaultBottomOfHandColor);
-        player.EnablePlayerAttacks();
         handModel.SetActive(false);
+        player.SetState(new StateDefault(player));
     }
 
     private void FixedUpdate()
@@ -122,7 +115,7 @@ public class SlapAttack : AttackType, IHpAdjustmentListener
         float ratio = 1f - startSlapCurve.Evaluate(YDistance / startingDistanceFromGoal);
         ratio = Mathf.Clamp(ratio, .05f, 1f); //Don't let it be 0
         
-        _slapRigidbody.velocity = direction * (Time.fixedDeltaTime * attackSpeed * ratio);
+        _handRigidbody.velocity = direction * (Time.fixedDeltaTime * attackSpeed * ratio);
 
         //Made it to the goal
         if (YDistance <= distanceFlexRoom)
@@ -136,37 +129,19 @@ public class SlapAttack : AttackType, IHpAdjustmentListener
         }
     }
 
-    public void HitSpike(GameObject thingThatGotHit)
+    public void HitSpike(GameObject spike)
     {
         //If hitting a spike, take damage and go back up
         spikeGetHurtOnAttackCollider.gameObject.SetActive(false); //Don't accidentally hit another
         direction = Vector3.zero;
-        _slapRigidbody.velocity = Vector3.zero;
-        Enemy_Spike enemySpike = thingThatGotHit.GetComponent<Enemy_Spike>();
+        _handRigidbody.velocity = Vector3.zero;
+        Enemy_Spike enemySpike = spike.GetComponent<Enemy_Spike>();
         playerHealth.AdjustHp(-enemySpike.handStabDamage, gameObject);
-        slapMaterial.SetColor("_ColorDimExtra", Color.red);
 
-        StartCoroutine(DoAfterDelay(attackData.slapRecoverFromSpikeTimer, HeadBackUp));
+        StartCoroutine(BozUtilities.DoAfterDelay(enemySpike.handStabStunDuration 
+                                    * PlayerStats.I.stunRecoveryMultiplier, 
+            HeadBackUp));
     }
 
-    private IEnumerator DoAfterDelay(float delay, Action action)
-    {
-        yield return new WaitForSeconds(delay);
-        action?.Invoke();
-    }
 
-    public void TookDamage(int damageAmount, GameObject attacker)
-    {
-        //Feedback on the hand that it hit a spike
-    }
-
-    public void Healed(int healAmount, GameObject healer)
-    {
-    }
-
-    public float HandleDeath(int lastAttack, GameObject killer)
-    {
-        
-        return 0;
-    }
 }
