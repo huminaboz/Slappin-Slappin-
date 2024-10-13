@@ -88,7 +88,7 @@ public abstract class Enemy : MonoBehaviour, IHpAdjustmentListener, IObjectPool<
     public virtual float HandleDeath(int lastAttack, GameObject killer)
     {
         //TODO: Throw up a puff of particle
-        //TODO:: Pop currency out of enemy in a celebration
+        //TODO:: Pop currency(s) out of enemy in a celebration
         Vector3 pickupSpawnPosition = new Vector3(transform.position.x,
             transform.position.y + .02f, transform.position.z);
         Pickup pickup = ObjectPoolManager<Pickup>.GetObject(pickupToDrop);

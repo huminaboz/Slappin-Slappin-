@@ -45,12 +45,47 @@ public class AttackType : MonoBehaviour
         if (thingThatGotHit.GetComponent<Health>() != null)
         {
             Health health = thingThatGotHit.GetComponent<Health>();
-            health.AdjustHp(-attackData.baseDamage, gameObject);
+            int damage = GetBonusDamage(attackData.baseDamage);
+            health.AdjustHp(-damage, gameObject);
             if (-attackData.baseDamage < 0)
             {
                 SFXPlayer.I.Play(attackData.playSFXOnHit);
             }
         }
+    }
+
+    private int GetBonusDamage(int baseDamage)
+    {
+        float bonusDamage = baseDamage;
+        //TODO:: Attach a color for the damage number
+        float roll = BozUtilities.GetDiceRoll();
+
+        if (roll <= .5f)
+        {
+            return baseDamage;
+        }
+        
+        if (roll > .5f)
+        {
+            bonusDamage = Mathf.Max(baseDamage * attackData.bonus_goodHit, baseDamage+1);    
+        }
+
+        if (roll > .8f)
+        {
+            bonusDamage = Mathf.Max(baseDamage * attackData.bonus_greatHit, baseDamage+2);    
+        }
+
+        if (roll > .95f)
+        {
+            bonusDamage = Mathf.Max(baseDamage * attackData.bonus_criticalHit, baseDamage+5);    
+        }
+
+        if (roll > .99f)
+        {
+            bonusDamage = Mathf.Max(baseDamage * attackData.bonus_legendaryHit, bonusDamage+8);    
+        }
+
+        return (int) bonusDamage;
     }
 
     public void TookDamage(int damageAmount, GameObject attacker)

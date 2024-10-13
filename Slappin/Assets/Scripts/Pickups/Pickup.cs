@@ -4,7 +4,7 @@ using UnityEngine;
 public class Pickup : MonoBehaviour, IObjectPool<Pickup>
 {
     [SerializeField] private int currency1 = 1;
-    [SerializeField] private int currency2 = 0;
+    // [SerializeField] private int currency2 = 0;
     [SerializeField] private int hp = 0;
 
     private Collider _collider;
@@ -50,6 +50,7 @@ public class Pickup : MonoBehaviour, IObjectPool<Pickup>
     {
         currency1 = value;
         //TODO:: Make provisions for currency2
+        //TODO:: Make it fancier with higher values
     }
 
     private void GetPickedUp()

@@ -9,6 +9,10 @@ public class SO_AttackData : ScriptableObject
     [SerializeField] public int baseDamage;
     [SerializeField] public float attackSpeed;
     [SerializeField] public float slapGoUpSpeed = 1f;
+    [SerializeField] public float bonus_goodHit = 1.1f;
+    [SerializeField] public float bonus_greatHit = 1.2f;
+    [SerializeField] public float bonus_criticalHit = 1.5f;
+    [SerializeField] public float bonus_legendaryHit = 3f;
     
 
     [Header("Sound")]
