@@ -33,8 +33,8 @@ public class Health : MonoBehaviour
         
         if (oldHealth == hp) return;
         
-        Debug.Log($"{gameObject.name} health adjusted by {amountToIncrease}. "
-                  + $"\nHp is now {hp}");
+        // Debug.Log($"{gameObject.name} health adjusted by {amountToIncrease}. "
+                  // + $"\nHp is now {hp}");
 
         
         //HEALING

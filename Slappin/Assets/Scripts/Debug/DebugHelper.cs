@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using QFSW.QC;
 
@@ -23,6 +24,16 @@ public class DebugHelper : MonoBehaviour
     {
         _qc.OnActivate -= OnQuantumActivate;
         _qc.OnDeactivate -= OnQuantumDeactivate;
+    }
+
+    private void Update()
+    {
+        if (Input.GetButtonDown("Pause"))
+        {
+            Debug.LogWarning("asdf");
+            Time.timeScale = Time.timeScale == 1f ? 0f : 1f;
+        }
+            
     }
 
     private void OnQuantumActivate()

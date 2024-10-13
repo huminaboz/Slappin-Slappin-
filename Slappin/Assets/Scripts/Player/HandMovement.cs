@@ -1,14 +1,15 @@
 using System;
 using UnityEngine;
+using UnityEngine.Serialization;
 using Vector3 = UnityEngine.Vector3;
 
 public class HandMovement : MonoBehaviour
 {
     [SerializeField] private float moveSpeed = 2.5f; // Default movement speed
     [SerializeField] private float boostedSpeedMultiplier = 2f; // How much faster when holding the right trigger
-    [SerializeField] private Transform slapPositioner;
-
-    private Vector3 relativePositioning;
+    [FormerlySerializedAs("slapPositioner")] [SerializeField] private Transform handPositioner;
+    [SerializeField] private Player thisPlayer;
+    
     [HideInInspector] public Rigidbody _rigidbody;
 
     private void Awake()
@@ -16,18 +17,9 @@ public class HandMovement : MonoBehaviour
         _rigidbody = GetComponent<Rigidbody>();
     }
 
-    private void Start()
+    private void OnDisable()
     {
-        relativePositioning = slapPositioner.position - transform.position;
-        Debug.Log($"Relative positioning between shadow and hand is: {relativePositioning}");
-        SetSlapPosition();
-    }
-
-    private void SetSlapPosition()
-    {
-        Vector3 offsetPosition = transform.position + relativePositioning;
-        //Move the slap hand with the shadow only on X and Z 
-        slapPositioner.position = new Vector3(offsetPosition.x, slapPositioner.position.y, offsetPosition.z);
+        _rigidbody.velocity = Vector3.zero;
     }
 
     private void FixedUpdate()
@@ -49,8 +41,6 @@ public class HandMovement : MonoBehaviour
         if (direction.magnitude >= 0.1f)
         {
             _rigidbody.velocity = direction * (currentSpeed * Time.deltaTime);
-
-            SetSlapPosition();
         }
         else
         {

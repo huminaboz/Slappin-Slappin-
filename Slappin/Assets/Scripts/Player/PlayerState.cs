@@ -83,6 +83,7 @@ public class StateDefault : PlayerState
     public override void Enter(PlayerState fromState)
     {
         thisPlayer.EnableMovement();
+        thisPlayer.CurrentAttackType = null;
     }
 
     public override void Exit(PlayerState toState)
@@ -124,7 +125,8 @@ public class StateSlapState : PlayerState
     {
         //TODO:: Make this into an enum and function that happens on the player
         thisPlayer.CurrentAttackType = thisPlayer.slapAttack;
-        thisPlayer.slapAttack.DoAttack();
+        thisPlayer.CurrentAttackType.DoAttack();
+        thisPlayer.DisableMovement();
     }
 
     public override void Exit(PlayerState toState)

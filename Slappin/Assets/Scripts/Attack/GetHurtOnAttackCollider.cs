@@ -1,4 +1,3 @@
-using QFSW.QC;
 using UnityEngine;
 
 public class GetHurtOnAttackCollider : MonoBehaviour
@@ -18,7 +17,7 @@ public class GetHurtOnAttackCollider : MonoBehaviour
         bool hitASpike = Physics.CapsuleCast(transform.position, transform.position,
             transform.localScale.z * .5f, -transform.up,
             out RaycastHit hit, 10, _layerMask); 
-            // if(hit) Debug.Log($"Hit: {hit.collider.gameObject.name}");
+            if(hit.collider) Debug.Log($"Hit: {hit.collider.gameObject.name}");
             return hitASpike;
     }
 

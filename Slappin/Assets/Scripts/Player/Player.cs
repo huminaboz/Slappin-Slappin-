@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 [RequireComponent(typeof(Health))]
@@ -11,9 +12,15 @@ public class Player : MonoBehaviour, IHpAdjustmentListener
     public AttackType CurrentAttackType { get; set; }
     [SerializeField] public SlapAttack slapAttack;
 
+    [Header("Positioning Stuff")]
+    [SerializeField] private Transform handShadowTransform;
+    private Transform handPositioner;
+
+
     private void Awake()
     {
         thisHealth = GetComponent<Health>();
+        slapAttack.Initialize();
     }
 
     private void Start()
@@ -31,6 +38,8 @@ public class Player : MonoBehaviour, IHpAdjustmentListener
     private void FixedUpdate()
     {
         CurrentState?.FixedUpdate(Time.fixedDeltaTime);
+
+        CurrentAttackType?.SetPosition();
     }
 
     public void SetState(PlayerState newState)
@@ -45,7 +54,7 @@ public class Player : MonoBehaviour, IHpAdjustmentListener
         CurrentState = newState;
         CurrentState?.Enter(oldState);
         
-        Debug.Log($"Switching state from: <color=red>{oldState?.state}</color>" +
+        Debug.Log($"Switching state from: <color=pink>{oldState?.state}</color>" +
                   $" To: <color=green>{newState.state}</color>");
     }
 
@@ -61,7 +70,7 @@ public class Player : MonoBehaviour, IHpAdjustmentListener
 
     public void TookDamage(int damageAmount, GameObject attacker)
     {
-        Debug.Log("player took damage");
+        // Debug.Log("player took damage");
         // float stunTime = 0f; //Not everything will stun you??
         
         //TODO:: Set the values of the camera shake based on the attacker
