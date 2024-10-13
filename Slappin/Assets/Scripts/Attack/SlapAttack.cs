@@ -64,6 +64,7 @@ public class SlapAttack : AttackType
         }
         else
         {
+            Debug.LogWarning("Not hitting a spike");
             spikeGetHurtOnAttackCollider.gameObject.SetActive(false);
         }
 

@@ -70,7 +70,7 @@ public class AttackType : MonoBehaviour
     
     public virtual void DoAttack()
     {
-
+        SetPosition(); //So the spike collision check is in the right place
     }
 
     private void GetHandMaterials()

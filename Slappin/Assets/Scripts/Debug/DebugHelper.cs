@@ -30,7 +30,7 @@ public class DebugHelper : MonoBehaviour
     {
         if (Input.GetButtonDown("Pause"))
         {
-            Debug.LogWarning("asdf");
+            Debug.LogWarning("PAUSING OR UNPAUSING GAME");
             Time.timeScale = Time.timeScale == 1f ? 0f : 1f;
         }
             
