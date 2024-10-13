@@ -6,71 +6,75 @@ public class AttackType : MonoBehaviour
     [SerializeField] protected SO_AttackData attackData;
     [SerializeField] protected Player player;
 
-    [SerializeField]
-    public Transform handPositioner;
+    [SerializeField] public Transform handPositioner;
 
-    [SerializeField]
-    private Renderer handRenderer;
+    [SerializeField] private Renderer handRenderer;
 
-    [SerializeField]
-    protected Rigidbody handRigidbody;
+    [SerializeField] protected Rigidbody handRigidbody;
 
     [SerializeField] private float centerX = .29f;
 
+    [SerializeField] public GameObject hurtEnemiesColliderObject;
+
+
     private Color _defaultBottomOfHandColor;
     private Material _handMaterial;
-    
+
     [SerializeField] private Transform handShadowTransform;
     [SerializeField] private Transform cameraTransform;
     private Vector3 relativeAttackPositioning;
     [HideInInspector] public Vector3 offsetPosition;
-
+    private Vector3 storedRelativeAttackPosition;
+    
     public void Initialize()
     {
         GetHandMaterials();
-        
+
         //Every attack type is going to have different relative positioning because of the pivots and visuals
         relativeAttackPositioning = handPositioner.position - handShadowTransform.position;
         Debug.Log($"Relative positioning between shadow and hand is: {relativeAttackPositioning}");
+        storedRelativeAttackPosition = relativeAttackPositioning;
+    }
+
+    private void SetDirection()
+    {
+        //If on the right side of the center line, reverse the x scale
+        if (handPositioner.position.x > cameraTransform.position.x)
+        {
+            //FLIP IT
+            handPositioner.localScale = new Vector3(
+                -1f * Mathf.Abs(transform.localScale.x),
+                transform.localScale.y,
+                transform.localScale.z);
+            
+            //Flip the X of the relative attack position as well
+            relativeAttackPositioning = new Vector3(-storedRelativeAttackPosition.x,
+                storedRelativeAttackPosition.y, storedRelativeAttackPosition.z);
+        }
+        else
+        {
+            //DONT FLIP IT
+            handPositioner.localScale = new Vector3(
+                Mathf.Abs(transform.localScale.x),
+                transform.localScale.y,
+                transform.localScale.z);
+            relativeAttackPositioning = storedRelativeAttackPosition;
+        }
     }
 
     public void SetPosition()
     {
         //Move the hand with the shadow only on X and Z
-        
         offsetPosition = handShadowTransform.position + relativeAttackPositioning;
-        handPositioner.position = new Vector3(offsetPosition.x, 
-            handPositioner.position.y, offsetPosition.z);
-        
-        
-        
-        
-        //If on the right side of the center line, reverse the x scale
 
-        // if (handPositioner.localPosition.x > cameraTransform.position.x)
-        // {
-        //     Debug.Log("Hand Positioner is on the right side");
-        //
-        //     transform.localScale = new Vector3(
-        //         -1f * Mathf.Abs(transform.localScale.x),
-        //         transform.localScale.y,
-        //         transform.localScale.z);
-        // }
-        // else
-        // {
-        //     Debug.Log("Hand Positioner is on the left side");
-        //     transform.localScale = new Vector3(
-        //         Mathf.Abs(transform.localScale.x),
-        //         transform.localScale.y,
-        //         transform.localScale.z);
-        // }
-        //     
-        // Debug.Log("After the adjustment: " + transform.localScale.x);
+        handPositioner.position = new Vector3(offsetPosition.x,
+            handPositioner.position.y, offsetPosition.z);
     }
-    
+
     public virtual void DoAttack()
     {
         SetPosition(); //So the spike collision check is in the right place
+        SetDirection();
     }
 
     private void GetHandMaterials()

@@ -5,6 +5,7 @@ using UnityEngine.Serialization;
 public class SlapAttack : AttackType
 {
     // [SerializeField] private Transform shadow;
+    [Header("Slap Attack Specific Stuff")]
     
     [SerializeField] private Health playerHealth;
     [SerializeField] private GameObject handModel;
@@ -13,7 +14,6 @@ public class SlapAttack : AttackType
     [SerializeField] private AnimationCurve startSlapCurve;
     [SerializeField] private GetHurtOnAttackCollider spikeGetHurtOnAttackCollider;
     [SerializeField] private GameObject pickupColliderObject;
-    [FormerlySerializedAs("hitEnemiesColliderObject")] [SerializeField] private GameObject hurtEnemiesColliderObject;
 
     private Vector3 direction;
     private Vector3 goalPosition;
