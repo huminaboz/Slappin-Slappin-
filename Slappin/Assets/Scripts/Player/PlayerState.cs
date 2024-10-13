@@ -125,7 +125,7 @@ public class StateSlapState : PlayerState
     {
         //TODO:: Make this into an enum and function that happens on the player
         thisPlayer.CurrentAttackType = thisPlayer.slapAttack;
-        thisPlayer.CurrentAttackType.DoAttack();
+        thisPlayer.CurrentAttackType.InitiateAttack();
         thisPlayer.DisableMovement();
     }
 

@@ -7,20 +7,7 @@ public class SlapAttack : AttackType
     // [SerializeField] private Transform shadow;
     [Header("Slap Attack Specific Stuff")]
     
-    [SerializeField] private Health playerHealth;
-    [SerializeField] private float offScreenSlapYPosition = -0.23f; //Measured by holding it off camera
-    [SerializeField] private float groundYPosition = -0.78f; //Measured by putting the hand on the ground 
-    [SerializeField] private AnimationCurve startSlapCurve;
     [SerializeField] private GetHurtOnAttackCollider spikeGetHurtOnAttackCollider;
-    [SerializeField] private GameObject pickupColliderObject;
-
-    
-    private Vector3 goalPosition;
-    private float attackSpeed;
-    private const float distanceFlexRoom = .05f;
-    private float startingDistanceFromGoal;
-    private Action OnCompletedTravel;
-    
 
     private void Start()
     {
@@ -28,20 +15,14 @@ public class SlapAttack : AttackType
             offScreenSlapYPosition, transform.position.z);
     }
 
-    public override void DoAttack()
+    public override void InitiateAttack()
     {
-        base.DoAttack();
+        base.InitiateAttack();
         DropSlap();
     }
 
-    public void DropSlap()
+    private void DropSlap()
     {
-        if (!playerHealth.isAlive)
-        {
-            Debug.LogWarning("Can't slap - player is dead");
-            return;
-        }
-
         //TODO:: Consider moving this up to the parent - decide while making other attacks
         pickupColliderObject.SetActive(true);
         hurtEnemiesColliderObject.SetActive(true);
@@ -57,27 +38,30 @@ public class SlapAttack : AttackType
         }
         else
         {
-            Debug.LogWarning("Not hitting a spike");
             spikeGetHurtOnAttackCollider.gameObject.SetActive(false);
         }
 
-        HeadToGround();
+        InitiateTravelToGround();
     }
 
-    private void HeadToGround()
+    private void InitiateTravelToGround()
     {
         goalPosition = new(transform.position.x, groundYPosition, transform.position.z);
-        OnCompletedTravel = HeadBackUp;
+        OnCompletedTravel = InitiateTravelBackUp;
         attackSpeed = attackData.attackSpeed;
         startingDistanceFromGoal = Mathf.Abs(handPositioner.position.y - goalPosition.y);
         
         //Giving Direction a value starts up the Fixedupdate telling the hand which way to go
         direction = new(0, -1, 0);
+        OnCompletedTravel += () =>
+        {
+                CameraShake.I.StartCameraShake();
+                SFXPlayer.I.Play(AudioEventsStorage.I.slapHitGround);
+        };
     }
 
-    private void HeadBackUp()
+    private void InitiateTravelBackUp()
     {
-        // Debug.Break();
         goalPosition = new(transform.position.x, offScreenSlapYPosition, transform.position.z);
         startingDistanceFromGoal = Mathf.Abs(handPositioner.position.y - goalPosition.y);
         OnCompletedTravel = Cleanup;
@@ -94,16 +78,11 @@ public class SlapAttack : AttackType
         }));
     }
 
-    protected override void Cleanup()
-    {
-        base.Cleanup();
-    }
-
     private void FixedUpdate()
     {
-        float YDistance = Mathf.Abs(handPositioner.position.y - goalPosition.y);
         if (direction == Vector3.zero) return;
-        float ratio = 1f - startSlapCurve.Evaluate(YDistance / startingDistanceFromGoal);
+        float YDistance = Mathf.Abs(handPositioner.position.y - goalPosition.y);
+        float ratio = 1f - movementCurve.Evaluate(YDistance / startingDistanceFromGoal);
         ratio = Mathf.Clamp(ratio, .05f, 1f); //Don't let it be 0
         
         handRigidbody.velocity = direction * (Time.fixedDeltaTime * attackSpeed * ratio);
@@ -111,11 +90,6 @@ public class SlapAttack : AttackType
         //Made it to the goal
         if (YDistance <= distanceFlexRoom)
         {
-            if (direction == Vector3.down) //When we know it's slapping down
-            {
-                CameraShake.I.StartCameraShake();
-                SFXPlayer.I.Play(AudioEventsStorage.I.slapHitGround);
-            }
             OnCompletedTravel?.Invoke();
         }
     }
@@ -132,7 +106,7 @@ public class SlapAttack : AttackType
         
         StartCoroutine(BozUtilities.DoAfterDelay(enemySpike.handStabStunDuration 
                                     * PlayerStats.I.stunRecoveryMultiplier, 
-            HeadBackUp));
+            InitiateTravelBackUp));
     }
 
 

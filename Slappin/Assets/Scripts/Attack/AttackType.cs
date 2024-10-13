@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -5,20 +6,29 @@ public class AttackType : MonoBehaviour
 {
     [SerializeField] public Transform handPositioner;
     [SerializeField] public GameObject hurtEnemiesColliderObject;
-
+    
     [HideInInspector] public Vector3 offsetPosition;
 
     [SerializeField] protected SO_AttackData attackData;
     [SerializeField] protected Player player;
     [SerializeField] protected Rigidbody handRigidbody;
-
+    [SerializeField] protected float offScreenSlapYPosition = -0.23f; //Measured by holding it off camera
+    [SerializeField] protected float groundYPosition = -0.78f; //Measured by putting the hand on the ground
+    [FormerlySerializedAs("descentCurve")] [FormerlySerializedAs("startSlapCurve")] [SerializeField] protected AnimationCurve movementCurve;
+    [SerializeField] protected GameObject pickupColliderObject;
+    [SerializeField] protected Health playerHealth;
+    protected float attackSpeed;
+    protected const float distanceFlexRoom = .05f;
+    protected Vector3 goalPosition;
+    protected Action OnCompletedTravel;
+    protected float startingDistanceFromGoal;
     protected Vector3 direction;
 
     [SerializeField] private Transform cameraTransform;
     [SerializeField] private Renderer handRenderer;
     [SerializeField] private GameObject handModel;
     [SerializeField] private Transform handShadowTransform;
-
+    
     private Color _defaultBottomOfHandColor;
     private Material _handMaterial;
     private Vector3 relativeAttackPositioning;
@@ -70,8 +80,13 @@ public class AttackType : MonoBehaviour
             handPositioner.position.y, offsetPosition.z);
     }
 
-    public virtual void DoAttack()
+    public virtual void InitiateAttack()
     {
+        if (!playerHealth.isAlive)
+        {
+            Debug.LogWarning("Can't attack - player is dead");
+            return;
+        }
         SetPosition(); //So the spike collision check is in the right place
         SetDirection();
         handModel.SetActive(true);
@@ -117,7 +132,7 @@ public class AttackType : MonoBehaviour
         handModel.SetActive(false);
         player.SetState(new StateDefault(player));
     }
-
+    
     private int GetBonusDamage(int baseDamage)
     {
         float bonusDamage = baseDamage;

@@ -54,7 +54,7 @@ public class Player : MonoBehaviour, IHpAdjustmentListener
         CurrentState = newState;
         CurrentState?.Enter(oldState);
         
-        Debug.Log($"Switching state from: <color=pink>{oldState?.state}</color>" +
+        Debug.Log($"Switching state from: <color=yellow>{oldState?.state}</color>" +
                   $" To: <color=green>{newState.state}</color>");
     }
 
