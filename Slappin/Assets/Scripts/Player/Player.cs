@@ -5,7 +5,7 @@ public class Player : MonoBehaviour, IHpAdjustmentListener
 {
     public Health thisHealth { get; set; }
 
-    [SerializeField] private HandMovement handMovement;
+    [SerializeField] public HandMovement handMovement;
     private PlayerState CurrentState { get; set; }
 
     public AttackType CurrentAttackType { get; set; }
@@ -63,13 +63,6 @@ public class Player : MonoBehaviour, IHpAdjustmentListener
     {
         Debug.Log("player took damage");
         float stunTime = 0f; //Not everything will stun you??
-        if (attacker.GetComponent<Enemy_Spike>() is not null)
-        {
-            Enemy_Spike spike = attacker.GetComponent<Enemy_Spike>();
-            stunTime = spike.handStabStunDuration;
-        }
-        
-        SetState(new StateDamagedState(this));
         
         //TODO:: Set the values of the camera shake based on the attacker
         CameraShake.I.StartCameraShake(0.013f, 0.13f);

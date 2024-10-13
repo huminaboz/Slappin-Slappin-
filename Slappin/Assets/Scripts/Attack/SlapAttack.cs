@@ -137,7 +137,8 @@ public class SlapAttack : AttackType
         _handRigidbody.velocity = Vector3.zero;
         Enemy_Spike enemySpike = spike.GetComponent<Enemy_Spike>();
         playerHealth.AdjustHp(-enemySpike.handStabDamage, gameObject);
-
+        player.SetState(new StateDamagedState(player));
+        
         StartCoroutine(BozUtilities.DoAfterDelay(enemySpike.handStabStunDuration 
                                     * PlayerStats.I.stunRecoveryMultiplier, 
             HeadBackUp));

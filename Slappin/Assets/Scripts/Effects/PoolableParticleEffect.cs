@@ -33,7 +33,6 @@ public class PoolableParticleEffect : MonoBehaviour, IObjectPool<PoolableParticl
     // Callback function when the particle system is finished
     private void OnParticleSystemFinished()
     {
-        Debug.Log("Particle system finished playing!");
         ReturnObjectToPool();
     }
     

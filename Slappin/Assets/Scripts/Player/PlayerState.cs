@@ -87,6 +87,7 @@ public class StateDefault : PlayerState
 
     public override void Exit(PlayerState toState)
     {
+        thisPlayer.handMovement._rigidbody.velocity = Vector3.zero;
     }
 
     public override void Update(float deltaTime)

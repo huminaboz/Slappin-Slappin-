@@ -1,16 +1,20 @@
 using System;
-using System.Numerics;
 using UnityEngine;
-using UnityEngine.Serialization;
 using Vector3 = UnityEngine.Vector3;
 
-public class HandMovement : MonoBehaviour, IHpAdjustmentListener
+public class HandMovement : MonoBehaviour
 {
     [SerializeField] private float moveSpeed = 2.5f; // Default movement speed
     [SerializeField] private float boostedSpeedMultiplier = 2f; // How much faster when holding the right trigger
     [SerializeField] private Transform slapPositioner;
 
     private Vector3 relativePositioning;
+    [HideInInspector] public Rigidbody _rigidbody;
+
+    private void Awake()
+    {
+        _rigidbody = GetComponent<Rigidbody>();
+    }
 
     private void Start()
     {
@@ -44,23 +48,13 @@ public class HandMovement : MonoBehaviour, IHpAdjustmentListener
         // Apply movement to the player transform
         if (direction.magnitude >= 0.1f)
         {
-            transform.Translate(direction * (currentSpeed * Time.deltaTime), Space.World);
+            _rigidbody.velocity = direction * (currentSpeed * Time.deltaTime);
 
             SetSlapPosition();
         }
-    }
-
-    public void TookDamage(int damageAmount, GameObject attacker)
-    {
-    }
-
-    public void Healed(int healAmount, GameObject healer)
-    {
-    }
-
-    public float HandleDeath(int lastAttack, GameObject killer)
-    {
-        enabled = false;
-        return 0;
+        else
+        {
+            _rigidbody.velocity = Vector3.zero;
+        }
     }
 }
