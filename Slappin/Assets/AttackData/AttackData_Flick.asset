@@ -21,7 +21,7 @@ MonoBehaviour:
   bonus_criticalHit: 1.5
   bonus_legendaryHit: 3
   playSFXOnHit: {fileID: 11400000, guid: c74ea2f08ae20404b8840f6f558053a1, type: 2}
-  chargeMaxDamageMultiplier: 0
+  chargeMaxDamageMultiplier: 4
   chargeCurve:
     serializedVersion: 2
     m_Curve:
@@ -46,5 +46,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  distanceBase: 0
-  distanceMaxMultiplier: 0
+  distanceBase: 0.5
+  distanceMaxMultiplier: 3
+  attackWidthMultiplier: 1
+  maxChargeTime: 2

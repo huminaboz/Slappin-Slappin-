@@ -35,6 +35,7 @@ public class AttackType : MonoBehaviour
     private Vector3 relativeAttackPositioning;
     private Vector3 storedRelativeAttackPosition;
 
+
     private void Start()
     {
         handPositioner.position = new Vector3(handPositioner.position.x, 
@@ -168,7 +169,7 @@ public class AttackType : MonoBehaviour
         handRenderer.material.SetColor("_ColorDimExtra", _defaultBottomOfHandColor);
     }
 
-    public void HitSomething(GameObject thingThatGotHit)
+    public virtual void HitSomething(GameObject thingThatGotHit)
     {
         //HURT IT!
         if (thingThatGotHit.GetComponent<Health>() != null)
@@ -176,7 +177,7 @@ public class AttackType : MonoBehaviour
             Health health = thingThatGotHit.GetComponent<Health>();
             int damage = GetBonusDamage(attackData.baseDamage);
             health.AdjustHp(-damage, gameObject);
-            if (-attackData.baseDamage < 0)
+            if (-damage < 0)
             {
                 SFXPlayer.I.Play(attackData.playSFXOnHit);
             }
@@ -191,7 +192,7 @@ public class AttackType : MonoBehaviour
         player.SetState(new StateDefault(player));
     }
 
-    private int GetBonusDamage(int baseDamage)
+    public int GetBonusDamage(int baseDamage)
     {
         float bonusDamage = baseDamage;
         //TODO:: Attach a color for the damage number

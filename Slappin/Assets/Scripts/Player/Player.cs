@@ -45,7 +45,6 @@ public class Player : MonoBehaviour, IHpAdjustmentListener
     {
         CurrentState?.FixedUpdate(Time.fixedDeltaTime);
 
-        Debug.LogWarning("Setting parent position on: " +  CurrentAttackType);
         CurrentAttackType?.SetParentPosition();
     }
 
