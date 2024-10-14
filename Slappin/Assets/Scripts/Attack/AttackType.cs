@@ -6,35 +6,59 @@ public class AttackType : MonoBehaviour
 {
     [SerializeField] public Transform handPositioner;
     [SerializeField] public GameObject hurtEnemiesColliderObject;
-    
+
     [HideInInspector] public Vector3 offsetPosition;
 
     [SerializeField] protected SO_AttackData attackData;
     [SerializeField] protected Player player;
     [SerializeField] protected Rigidbody handRigidbody;
-    [SerializeField] protected float offScreenSlapYPosition = -0.23f; //Measured by holding it off camera
+    [SerializeField] protected float offScreenHandYPosition = -0.23f; //Measured by holding it off camera
     [SerializeField] protected float groundYPosition = -0.78f; //Measured by putting the hand on the ground
-    [FormerlySerializedAs("descentCurve")] [FormerlySerializedAs("startSlapCurve")] [SerializeField] protected AnimationCurve movementCurve;
-    [SerializeField] protected GameObject pickupColliderObject;
+    [SerializeField] protected AnimationCurve movementCurve;
     [SerializeField] protected Health playerHealth;
-    protected float attackSpeed;
-    protected const float distanceFlexRoom = .05f;
-    protected Vector3 goalPosition;
+
     protected Action OnCompletedTravel;
-    protected float startingDistanceFromGoal;
     protected Vector3 direction;
 
     [SerializeField] private Transform cameraTransform;
-    [SerializeField] private Renderer handRenderer;
-    [SerializeField] private GameObject handModel;
     [SerializeField] private Transform handShadowTransform;
+
+    [Header("Only needed if attack can get you hurt")]
+    [SerializeField] private Renderer handRenderer;
     
+    private float attackSpeed;
+    private const float distanceFlexRoom = .05f;
+    private Vector3 goalPosition;
+    private float startingDistanceFromGoal;
     private Color _defaultBottomOfHandColor;
     private Material _handMaterial;
     private Vector3 relativeAttackPositioning;
     private Vector3 storedRelativeAttackPosition;
+
+    private void Start()
+    {
+        handPositioner.position = new Vector3(handPositioner.position.x, 
+            offScreenHandYPosition, handPositioner.position.z);
+    }
+
+    private void FixedUpdate()
+    {
+        if (direction == Vector3.zero) return;
+        float YDistance = Mathf.Abs(handPositioner.position.y - goalPosition.y);
+        //TODO:: Different curve for going up and for going down
+        float ratio = 1f - movementCurve.Evaluate(YDistance / startingDistanceFromGoal);
+        ratio = Mathf.Clamp(ratio, .05f, 1f); //Don't let it be 0
+        
+        handRigidbody.velocity = direction * (Time.fixedDeltaTime * attackSpeed * ratio);
+
+        //Made it to the goal
+        if (YDistance <= distanceFlexRoom)
+        {
+            OnCompletedTravel?.Invoke();
+        }
+    }
     
-    public void Initialize()
+    public virtual void Initialize()
     {
         GetHandMaterials();
 
@@ -42,7 +66,6 @@ public class AttackType : MonoBehaviour
         relativeAttackPositioning = handPositioner.position - handShadowTransform.position;
         Debug.Log($"Relative positioning between shadow and hand is: {relativeAttackPositioning}");
         storedRelativeAttackPosition = relativeAttackPositioning;
-        handModel.SetActive(false);
     }
 
     private void SetDirection()
@@ -55,7 +78,7 @@ public class AttackType : MonoBehaviour
                 -1f * Mathf.Abs(transform.localScale.x),
                 transform.localScale.y,
                 transform.localScale.z);
-            
+
             //Flip the X of the relative attack position as well
             relativeAttackPositioning = new Vector3(-storedRelativeAttackPosition.x,
                 storedRelativeAttackPosition.y, storedRelativeAttackPosition.z);
@@ -71,7 +94,7 @@ public class AttackType : MonoBehaviour
         }
     }
 
-    public void SetPosition()
+    public void SetParentPosition()
     {
         //Move the hand with the shadow only on X and Z
         offsetPosition = handShadowTransform.position + relativeAttackPositioning;
@@ -87,9 +110,45 @@ public class AttackType : MonoBehaviour
             Debug.LogWarning("Can't attack - player is dead");
             return;
         }
-        SetPosition(); //So the spike collision check is in the right place
+
+        SetParentPosition(); //So the spike collision check is in the right place
         SetDirection();
-        handModel.SetActive(true);
+    }
+
+    protected virtual void InitiateTravelToGround()
+    {
+        goalPosition = new(transform.position.x, groundYPosition, transform.position.z);
+
+        OnCompletedTravel += DoWhenReachingGround;
+
+        attackSpeed = attackData.attackSpeed;
+        startingDistanceFromGoal = Mathf.Abs(handPositioner.position.y - goalPosition.y);
+
+        //Giving Direction a value starts up the Fixedupdate telling the hand which way to go
+        direction = new(0, -1, 0);
+    }
+
+    private void StopTraveling()
+    {
+        direction = Vector3.zero;
+        handRigidbody.velocity = Vector3.zero;
+    }
+
+    protected virtual void InitiateTravelBackUp()
+    {
+        StopTraveling();
+
+        goalPosition = new(transform.position.x, offScreenHandYPosition, transform.position.z);
+        startingDistanceFromGoal = Mathf.Abs(handPositioner.position.y - goalPosition.y);
+        attackSpeed = attackData.goBackUpSpeed;
+        direction = new(0, 1, 0);
+        
+        OnCompletedTravel = Cleanup;
+    }
+
+    protected virtual void DoWhenReachingGround()
+    {
+        StopTraveling();
     }
 
     private void GetHandMaterials()
@@ -128,11 +187,10 @@ public class AttackType : MonoBehaviour
     {
         handRigidbody.velocity = Vector3.zero;
         direction = Vector3.zero;
-
-        handModel.SetActive(false);
+        OnCompletedTravel = null;
         player.SetState(new StateDefault(player));
     }
-    
+
     private int GetBonusDamage(int baseDamage)
     {
         float bonusDamage = baseDamage;

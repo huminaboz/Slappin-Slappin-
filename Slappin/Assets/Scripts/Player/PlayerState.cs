@@ -97,10 +97,30 @@ public class StateDefault : PlayerState
 
         //NOTE: IF I decided to handle movement here, we wouldn't have the fun
         //sliding around on the way up - unless I converted all that to sub-states here
-        
+
+        /*
+         *  A=0
+            B=1
+            X=2
+            Y=3
+            LBUMP=4
+            RBUMP=5
+            LTRIG=6
+            RTRIG=9
+            SELECT=8
+            START=4
+            MIDDLE=10
+            LSTICK=11
+            RSTICK=12
+         */
+
         if (Input.GetButtonDown("Fire1"))
         {
             thisPlayer.SetState(new StateSlapState(thisPlayer));
+        }
+        else if (Input.GetButtonDown("Fire3"))
+        {
+            thisPlayer.SetState(new StateFlickState(thisPlayer));
         }
     }
 
@@ -142,6 +162,40 @@ public class StateSlapState : PlayerState
     }
 }
 
+/// <summary> =========================================================================
+/// The state when the flick is in action
+/// </summary> =========================================================================
+public class StateFlickState : PlayerState
+{
+    private FlickAttack _flickAttack;
+    
+    public StateFlickState(Player player) : base(player)
+    {
+        state = PossibleStates.FlickState;
+        thisPlayer = player;
+    }
+
+    public override void Enter(PlayerState fromState)
+    {
+        thisPlayer.CurrentAttackType = thisPlayer.flickAttack;
+        // _flickAttack = (FlickAttack) thisPlayer.CurrentAttackType;
+        thisPlayer.CurrentAttackType.InitiateAttack();
+        // _flickAttack.InitiateAttack();
+    }
+
+    public override void Exit(PlayerState toState)
+    {
+    }
+
+    public override void Update(float deltaTime)
+    {
+    }
+
+    public override void FixedUpdate(float fixedDeltaTime)
+    {
+    }
+}
+
 
 /// <summary> =========================================================================
 /// When the hand hits something that can damage it
@@ -161,19 +215,19 @@ public class StateDamagedState : PlayerState
     {
         //Disable the ability to move around or put in inputs
         thisPlayer.DisableMovement();
-        
+
         //Start the hand blinking or color changing or whatever
         thisPlayer.CurrentAttackType.HandleGettingHurt();
-        
+
         //Play a hand hurt animation?
-        
+
         // _t = 0f;
     }
 
     public override void Exit(PlayerState toState)
     {
         thisPlayer.EnableMovement();
-        
+
         //Return the hand materials to normal look
         thisPlayer.CurrentAttackType.RestoreDefaultAppearance();
     }
@@ -181,13 +235,12 @@ public class StateDamagedState : PlayerState
     public override void Update(float deltaTime)
     {
         //TODO:: If hp <= 0 , enter DeathState
-        
+
         // _t += deltaTime;
         // if (_t >= _damageAnimationTime)
         // {
         //     
         // }
-        
     }
 
     public override void FixedUpdate(float fixedDeltaTime)

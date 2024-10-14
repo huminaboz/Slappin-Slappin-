@@ -9,12 +9,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7e2054b6bef72e241bd179b54c914c61, type: 3}
+  m_Script: {fileID: 11500000, guid: 2658824753f2e784ab6358bedea9fbd7, type: 3}
   m_Name: AttackData_Slap
   m_EditorClassIdentifier: 
   Notes: 
   baseDamage: 1
   attackSpeed: 200
-  slapGoUpSpeed: 200
-  slapRecoverFromSpikeTimer: 1
+  goBackUpSpeed: 200
+  bonus_goodHit: 1.1
+  bonus_greatHit: 1.2
+  bonus_criticalHit: 1.5
+  bonus_legendaryHit: 3
   playSFXOnHit: {fileID: 11400000, guid: c74ea2f08ae20404b8840f6f558053a1, type: 2}
+  attackRadius: 1

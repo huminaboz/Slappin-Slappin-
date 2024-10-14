@@ -7,17 +7,23 @@ public class SlapAttack : AttackType
     // [SerializeField] private Transform shadow;
     [Header("Slap Attack Specific Stuff")]
     
-    [SerializeField] private GetHurtOnAttackCollider spikeGetHurtOnAttackCollider;
+    [SerializeField] protected GameObject pickupColliderObject;
 
-    private void Start()
+    [SerializeField] private GetHurtOnAttackCollider spikeGetHurtOnAttackCollider;
+    [SerializeField] private GameObject handModel;
+
+
+    public override void Initialize()
     {
-        transform.position = new Vector3(transform.position.x, 
-            offScreenSlapYPosition, transform.position.z);
+        base.Initialize();
+        handModel?.SetActive(false);
     }
 
     public override void InitiateAttack()
     {
         base.InitiateAttack();
+        handModel?.SetActive(true);
+
         DropSlap();
     }
 
@@ -44,54 +50,28 @@ public class SlapAttack : AttackType
         InitiateTravelToGround();
     }
 
-    private void InitiateTravelToGround()
+    protected override void InitiateTravelToGround()
     {
-        goalPosition = new(transform.position.x, groundYPosition, transform.position.z);
         OnCompletedTravel = InitiateTravelBackUp;
-        attackSpeed = attackData.attackSpeed;
-        startingDistanceFromGoal = Mathf.Abs(handPositioner.position.y - goalPosition.y);
-        
-        //Giving Direction a value starts up the Fixedupdate telling the hand which way to go
-        direction = new(0, -1, 0);
-        OnCompletedTravel += () =>
-        {
-                CameraShake.I.StartCameraShake();
-                SFXPlayer.I.Play(AudioEventsStorage.I.slapHitGround);
-        };
+        base.InitiateTravelToGround();
     }
 
-    private void InitiateTravelBackUp()
+    protected override void DoWhenReachingGround()
     {
-        goalPosition = new(transform.position.x, offScreenSlapYPosition, transform.position.z);
-        startingDistanceFromGoal = Mathf.Abs(handPositioner.position.y - goalPosition.y);
-        OnCompletedTravel = Cleanup;
-        attackSpeed = attackData.slapGoUpSpeed;
+        base.DoWhenReachingGround();
+        CameraShake.I.StartCameraShake();
+                        SFXPlayer.I.Play(AudioEventsStorage.I.slapHitGround);
+    }
 
+    protected override void InitiateTravelBackUp()
+    {
         //Stop for a bit to see the hand
         const float handRestDuration = .15f;
-        direction = Vector3.zero;
-        handRigidbody.velocity = Vector3.zero;
         StartCoroutine(BozUtilities.DoAfterDelay(handRestDuration, () =>
         {
             player.EnableMovement();
-            direction = new(0, 1, 0);
+            base.InitiateTravelBackUp();
         }));
-    }
-
-    private void FixedUpdate()
-    {
-        if (direction == Vector3.zero) return;
-        float YDistance = Mathf.Abs(handPositioner.position.y - goalPosition.y);
-        float ratio = 1f - movementCurve.Evaluate(YDistance / startingDistanceFromGoal);
-        ratio = Mathf.Clamp(ratio, .05f, 1f); //Don't let it be 0
-        
-        handRigidbody.velocity = direction * (Time.fixedDeltaTime * attackSpeed * ratio);
-
-        //Made it to the goal
-        if (YDistance <= distanceFlexRoom)
-        {
-            OnCompletedTravel?.Invoke();
-        }
     }
 
     public void HitSpike(GameObject spike)
@@ -109,5 +89,10 @@ public class SlapAttack : AttackType
             InitiateTravelBackUp));
     }
 
+    protected override void Cleanup()
+    {
+        handModel?.SetActive(false);
 
+        base.Cleanup();
+    }
 }

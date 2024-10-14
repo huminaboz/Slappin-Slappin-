@@ -11,6 +11,9 @@ public class Player : MonoBehaviour, IHpAdjustmentListener
 
     public AttackType CurrentAttackType { get; set; }
     [SerializeField] public SlapAttack slapAttack;
+    [SerializeField] public FlickAttack flickAttack;
+    [SerializeField] public SquishAttack squishAttack;
+    [SerializeField] public WildCardAttack wildCardAttack;
 
     [Header("Positioning Stuff")]
     [SerializeField] private Transform handShadowTransform;
@@ -21,6 +24,9 @@ public class Player : MonoBehaviour, IHpAdjustmentListener
     {
         thisHealth = GetComponent<Health>();
         slapAttack.Initialize();
+        flickAttack.Initialize();
+        squishAttack?.Initialize();
+        wildCardAttack?.Initialize();
     }
 
     private void Start()
@@ -39,7 +45,8 @@ public class Player : MonoBehaviour, IHpAdjustmentListener
     {
         CurrentState?.FixedUpdate(Time.fixedDeltaTime);
 
-        CurrentAttackType?.SetPosition();
+        Debug.LogWarning("Setting parent position on: " +  CurrentAttackType);
+        CurrentAttackType?.SetParentPosition();
     }
 
     public void SetState(PlayerState newState)
