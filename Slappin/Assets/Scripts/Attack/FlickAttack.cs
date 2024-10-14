@@ -20,6 +20,7 @@ public class FlickAttack : AttackType
         //For now, while we're switching between models for frames, two models
     [SerializeField] public GameObject chargeFrame;
     [SerializeField] public GameObject hitFrame;
+    [SerializeField] private ParticleSystem flickParticle;
     
     private ObjectShake _shake;
     private Action _currentAction;
@@ -83,6 +84,7 @@ public class FlickAttack : AttackType
 
     private void ReleaseCharge()
     {
+        flickParticle.Play();
         player.DisableMovement();
         _shake.StopShake();
         chargeFrame.SetActive(false);
