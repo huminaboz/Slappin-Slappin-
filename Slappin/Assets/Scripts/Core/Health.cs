@@ -64,7 +64,7 @@ public class Health : MonoBehaviour
             float maxWaitTime = 0;
             foreach (IHpAdjustmentListener damageListeners in hpAdjustmentListeners)
             {
-                Debug.Log($"{damageListeners} is handling death.");
+                // Debug.Log($"{damageListeners} is handling death.");
                 maxWaitTime = Mathf.Max(damageListeners.HandleDeath(amountToIncrease, attacker), maxWaitTime);
             }
 

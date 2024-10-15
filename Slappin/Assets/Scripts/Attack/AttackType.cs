@@ -1,4 +1,5 @@
 using System;
+using QFSW.QC.Actions;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -20,7 +21,15 @@ public class AttackType : MonoBehaviour
     [SerializeField] protected Renderer handRenderer;
 
     protected Action OnCompletedTravel;
-    protected Vector3 direction;
+    protected Vector3 Direction {
+        get => direction;
+        set
+        {
+            direction = value;
+        }
+        
+    }
+    private Vector3 direction;
     protected Color _defaultTopOfHandColor;
 
     [SerializeField] private Transform handShadowTransform;
@@ -34,7 +43,6 @@ public class AttackType : MonoBehaviour
     private Vector3 relativeAttackPositioning;
     private Vector3 storedRelativeAttackPosition;
 
-
     private void Start()
     {
         handPositioner.position = new Vector3(handPositioner.position.x, 
@@ -43,13 +51,15 @@ public class AttackType : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (direction == Vector3.zero) return;
+        // Debug.LogWarning(handRigidbody.velocity);
+        
+        if (Direction == Vector3.zero) return;
         float YDistance = Mathf.Abs(handPositioner.position.y - goalPosition.y);
         //TODO:: Different curve for going up and for going down
         float ratio = 1f - movementCurve.Evaluate(YDistance / startingDistanceFromGoal);
         ratio = Mathf.Clamp(ratio, .05f, 1f); //Don't let it be 0
         
-        handRigidbody.velocity = direction * (Time.fixedDeltaTime * attackSpeed * ratio);
+        handRigidbody.velocity = Direction * (Time.fixedDeltaTime * attackSpeed * ratio);
 
         //Made it to the goal
         if (YDistance <= distanceFlexRoom)
@@ -125,12 +135,12 @@ public class AttackType : MonoBehaviour
         startingDistanceFromGoal = Mathf.Abs(handPositioner.position.y - goalPosition.y);
 
         //Giving Direction a value starts up the Fixedupdate telling the hand which way to go
-        direction = new(0, -1, 0);
+        Direction = new(0, -1, 0);
     }
 
     private void StopTraveling()
     {
-        direction = Vector3.zero;
+        Direction = Vector3.zero;
         handRigidbody.velocity = Vector3.zero;
     }
 
@@ -141,7 +151,7 @@ public class AttackType : MonoBehaviour
         goalPosition = new(transform.position.x, offScreenHandYPosition, transform.position.z);
         startingDistanceFromGoal = Mathf.Abs(handPositioner.position.y - goalPosition.y);
         attackSpeed = attackData.goBackUpSpeed;
-        direction = new(0, 1, 0);
+        Direction = new(0, 1, 0);
         
         OnCompletedTravel = Cleanup;
     }
@@ -187,8 +197,7 @@ public class AttackType : MonoBehaviour
 
     protected virtual void Cleanup()
     {
-        handRigidbody.velocity = Vector3.zero;
-        direction = Vector3.zero;
+        StopTraveling();
         OnCompletedTravel = null;
         player.SetState(new StateDefault(player));
     }

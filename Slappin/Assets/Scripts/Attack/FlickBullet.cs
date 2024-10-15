@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.Serialization;
 
 public class FlickBullet : MonoBehaviour, IObjectPool<FlickBullet>
 {
@@ -8,8 +7,7 @@ public class FlickBullet : MonoBehaviour, IObjectPool<FlickBullet>
     [HideInInspector] public FlickAttack flickAttack; //Will have to set this up on spawn
     [HideInInspector] public Vector3 spawnPosition;
 
-    [FormerlySerializedAs("travelDistance")] [HideInInspector]
-    public float maxTravelDistance;
+    [HideInInspector] public float maxTravelDistance;
 
     [SerializeField] private ParticleSystem _particleSystem;
 
@@ -33,7 +31,7 @@ public class FlickBullet : MonoBehaviour, IObjectPool<FlickBullet>
     private void FixedUpdate()
     {
         _rigidbody.velocity = transform.forward * (Time.fixedDeltaTime * speed);
-        float distanceTraveled = Mathf.Abs(transform.position.z - spawnPosition.z);
+        float distanceTraveled = Vector3.Distance(spawnPosition, transform.position);
         // Debug.LogWarning($"Distance Traveled {distanceTraveled}\n" +
         //                  $"Max Travel Distance {maxTravelDistance}");
         if (distanceTraveled >= maxTravelDistance)

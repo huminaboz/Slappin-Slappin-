@@ -118,7 +118,7 @@ public class StateDefault : PlayerState
         {
             thisPlayer.SetState(new StateSlapState(thisPlayer));
         }
-        else if (Input.GetButtonDown("Fire3"))
+        else if (Input.GetButton("Fire3"))
         {
             thisPlayer.SetState(new StateFlickState(thisPlayer));
         }

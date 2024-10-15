@@ -77,7 +77,7 @@ public class SlapAttack : AttackType
     {
         //If hitting a spike, take damage and go back up
         spikeGetHurtOnAttackCollider.gameObject.SetActive(false); //Don't accidentally hit another
-        direction = Vector3.zero;
+        Direction = Vector3.zero;
         handRigidbody.velocity = Vector3.zero;
         Enemy_Spike enemySpike = spike.GetComponent<Enemy_Spike>();
         playerHealth.AdjustHp(-enemySpike.handStabDamage, gameObject);

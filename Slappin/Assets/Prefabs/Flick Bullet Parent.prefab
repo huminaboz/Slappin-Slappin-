@@ -62,7 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 48635c98027dcc54896eb03fa4ccd1aa, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -167,7 +167,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 116
+  m_Constraints: 118
   m_CollisionDetection: 0
 --- !u!114 &5045652553176257433
 MonoBehaviour:
@@ -183,7 +183,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 400
   flickAttack: {fileID: 0}
-  travelDistance: 0
+  spawnPosition: {x: 0, y: 0, z: 0}
+  maxTravelDistance: 0
   _particleSystem: {fileID: 215143933224784998}
 --- !u!1001 &3656246803979058020
 PrefabInstance:
@@ -243,7 +244,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3858622025608294646, guid: ea98b908c58da9c468fc3b1ca3b6ae5a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.074
+      value: -0.26
       objectReference: {fileID: 0}
     - target: {fileID: 3858622025608294646, guid: ea98b908c58da9c468fc3b1ca3b6ae5a, type: 3}
       propertyPath: m_LocalPosition.z

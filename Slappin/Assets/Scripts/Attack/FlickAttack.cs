@@ -26,6 +26,11 @@ public class FlickAttack : AttackType
     [SerializeField] private Transform flickBulletSpawnPoint;
     [SerializeField] private GameObject flickBulletPrefab;
     
+    //Flick forecast
+    [SerializeField] private GameObject forecastCube;
+    [SerializeField] private GameObject forecastCubePositioner;
+    [SerializeField] private Renderer handShadowRenderer;
+    
     private Action _currentAction;
     private SO_AttackData_Flick _flickData;
     
@@ -57,6 +62,7 @@ public class FlickAttack : AttackType
         //For now, while we're switching between models for frames, two models
         chargeFrame.SetActive(true);
         hitFrame.SetActive(false);
+        AdjustForecastScale(_flickData.distanceBase);
     }
 
     private void Update()
@@ -91,9 +97,29 @@ public class FlickAttack : AttackType
         //starting with a small circle in the center of the normal forecast
         
         //Increase the FoV on the camera so you can see from farther back
-        DOTween.To(() => _camera.fieldOfView, 
-            x => _camera.fieldOfView = x, 
-            65f, .25f);
+        // DOTween.To(() => _camera.fieldOfView, 
+        //     x => _camera.fieldOfView = x, 
+        //     65f, .25f);
+
+        //Setup forecast
+        AdjustForecastScale(_flickData.distanceBase);
+        //forecastCube.gameObject.SetActive(true);
+        handShadowRenderer.enabled = false;
+    }
+
+    private void AdjustForecastScale(float zDistance)
+    {
+        //Only needed this when the parent object was a different scale 
+        // const float defaultZScaleOfCube = 1f;
+        // zDistance *= defaultZScaleOfCube / flickBulletSpawnPoint.localScale.z; 
+        forecastCubePositioner.transform.localPosition =  new Vector3(
+            forecastCubePositioner.transform.localPosition.x,
+            forecastCubePositioner.transform.localPosition.y, 
+            zDistance*.5f);
+        forecastCube.transform.localScale = new Vector3(
+            forecastCube.transform.localScale.x,
+            forecastCube.transform.localScale.y, 
+            zDistance);
     }
 
 
@@ -108,15 +134,20 @@ public class FlickAttack : AttackType
         {
             _currentChargeTime = 0f;
         }
+        float ratio = _totalChargeTime / maxChargeTime;
+        
+        //Set up the forecast cube
+        //As you charge, the forecast on the ground grows longer/wider relative to the charge
+        chargedDistance = _flickData.distanceBase + _flickData.distanceBase 
+                           * _flickData.distanceMaxMultiplier * chargeCurve.Evaluate(ratio);
+        // Debug.LogWarning($"Charged Distance {chargedDistance}");
+        AdjustForecastScale(chargedDistance);
         
         //Alter the color based on the charge
-        float ratio = _totalChargeTime / maxChargeTime;
         Color chargeColor = Color.Lerp(_defaultTopOfHandColor, 
             Color.magenta, chargeCurve.Evaluate(ratio));
         handRenderer.material.SetColor("_ColorDim", chargeColor);
         
-        //TODO:: As you charge, the forecast on the ground grows longer/wider relative to the attack
-
         if (!Input.GetButton("Fire3"))
         {
             ReleaseCharge(ratio);
@@ -126,20 +157,15 @@ public class FlickAttack : AttackType
 
     private void ReleaseCharge(float ratio)
     {
-        chargeDamage = (int) (_flickData.baseDamage * 
-                              _flickData.chargeMaxDamageMultiplier * chargeCurve.Evaluate(ratio));
-        chargeDamage +=_flickData.baseDamage;
+        chargeDamage = _flickData.baseDamage + (int) (_flickData.baseDamage * 
+                        _flickData.chargeMaxDamageMultiplier * chargeCurve.Evaluate(ratio));
         
-        chargedDistance =  chargedDistance 
-                           * _flickData.distanceMaxMultiplier * chargeCurve.Evaluate(ratio);
-        chargedDistance += _flickData.distanceBase;
-        
-        //TODO:: calculate width
+        //TODO:: calculate attack width
      
         //Adjust the field of width back to normal
         DOTween.To(() => _camera.fieldOfView, 
             x => _camera.fieldOfView = x, 
-            startingFoV, .25f);
+            startingFoV, .4f).SetEase(Ease.OutQuad);
         
         //Do visuals
         flickParticle.Play();
@@ -150,6 +176,9 @@ public class FlickAttack : AttackType
         //Cleanup
         player.DisableMovement();
         _shake.StopShake();
+        // forecastCube.gameObject.SetActive(false);
+        AdjustForecastScale(_flickData.distanceBase);
+        handShadowRenderer.enabled = true;
         RestoreDefaultAppearance();
         InitiateTravelBackUp();
     }
@@ -162,7 +191,8 @@ public class FlickAttack : AttackType
         
         if (flickBullet is null) return;
         flickBullet.transform.position = flickBulletSpawnPoint.position;
-        flickBullet.spawnPosition = flickBullet.transform.position;
+        //Spawn position was getting set to the position before it gets reset - had to set it here
+        flickBullet.spawnPosition = flickBulletSpawnPoint.position;
         flickBullet.flickAttack = this;
         flickBullet.maxTravelDistance = chargedDistance;
         flickBullet.gameObject.SetActive(true);
