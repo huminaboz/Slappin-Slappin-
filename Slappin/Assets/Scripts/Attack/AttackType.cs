@@ -17,15 +17,14 @@ public class AttackType : MonoBehaviour
     [SerializeField] protected AnimationCurve movementCurve;
     [SerializeField] protected Health playerHealth;
     [SerializeField] protected Transform cameraTransform;
+    [SerializeField] protected Renderer handRenderer;
 
     protected Action OnCompletedTravel;
     protected Vector3 direction;
+    protected Color _defaultTopOfHandColor;
 
     [SerializeField] private Transform handShadowTransform;
 
-    [Header("Only needed if attack can get you hurt")]
-    [SerializeField] private Renderer handRenderer;
-    
     private float attackSpeed;
     private const float distanceFlexRoom = .05f;
     private Vector3 goalPosition;
@@ -156,6 +155,7 @@ public class AttackType : MonoBehaviour
     {
         //TODO:: Move this off to another script that's involved in the visuals of the hands
         _defaultBottomOfHandColor = handRenderer.material.GetColor("_ColorDimExtra");
+        _defaultTopOfHandColor = handRenderer.material.GetColor("_ColorDim");
         _handMaterial = handRenderer.material;
     }
 
@@ -167,6 +167,7 @@ public class AttackType : MonoBehaviour
     public void RestoreDefaultAppearance()
     {
         handRenderer.material.SetColor("_ColorDimExtra", _defaultBottomOfHandColor);
+        handRenderer.material.SetColor("_ColorDim", _defaultTopOfHandColor);
     }
 
     public virtual void HitSomething(GameObject thingThatGotHit)

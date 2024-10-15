@@ -87,6 +87,7 @@ public class FlickAttack : AttackType
         DOTween.To(() => _camera.fieldOfView, 
             x => _camera.fieldOfView = x, 
             65f, .25f);
+
     }
 
     private float currentChargeTime = 0f;
@@ -96,7 +97,7 @@ public class FlickAttack : AttackType
     {
         _shake.StartShake();
 
-        //TODO:: increase charge
+        //Increase charge
         currentChargeTime += Time.deltaTime;
         totalChargeTime += Time.deltaTime;
         if (currentChargeTime > chargeTickRate && totalChargeTime < maxChargeTime)
@@ -104,18 +105,23 @@ public class FlickAttack : AttackType
             currentChargeTime = 0f;
         }
         
+        //Alter the color based on the charge
+        float ratio = totalChargeTime / maxChargeTime;
+        Color chargeColor = Color.Lerp(_defaultTopOfHandColor, 
+            Color.magenta, chargeCurve.Evaluate(ratio));
+        handRenderer.material.SetColor("_ColorDim", chargeColor);
+        
         //TODO:: As you charge, the forecast on the ground grows longer/wider relative to the attack
 
         if (!Input.GetButton("Fire3"))
         {
-            ReleaseCharge();
+            ReleaseCharge(ratio);
             _currentAction = null;
         }
     }
 
-    private void ReleaseCharge()
+    private void ReleaseCharge(float ratio)
     {
-        float ratio = totalChargeTime / maxChargeTime;
         chargeDamage = (int) (_flickData.baseDamage * 
                               _flickData.chargeMaxDamageMultiplier * chargeCurve.Evaluate(ratio));
         chargeDamage +=_flickData.baseDamage;
@@ -139,6 +145,7 @@ public class FlickAttack : AttackType
         SpawnFlickBullet();
 
         InitiateTravelBackUp();
+        RestoreDefaultAppearance();
     }
 
     private void SpawnFlickBullet()
@@ -146,14 +153,13 @@ public class FlickAttack : AttackType
         SFXPlayer.I.Play(AudioEventsStorage.I.releasedFlick);
         
         FlickBullet flickBullet = ObjectPoolManager<FlickBullet>.GetObject(flickBulletPrefab);
-        if (flickBullet is not null)
-        {
-            flickBullet.transform.position = flickBulletSpawnPoint.position;
-            flickBullet.spawnPosition = flickBullet.transform.position;
-            flickBullet.flickAttack = this;
-            flickBullet.maxTravelDistance = chargedDistance;
-            flickBullet.gameObject.SetActive(true);
-        }
+        
+        if (flickBullet is null) return;
+        flickBullet.transform.position = flickBulletSpawnPoint.position;
+        flickBullet.spawnPosition = flickBullet.transform.position;
+        flickBullet.flickAttack = this;
+        flickBullet.maxTravelDistance = chargedDistance;
+        flickBullet.gameObject.SetActive(true);
     }
 
     public override void HitSomething(GameObject thingThatGotHit)
