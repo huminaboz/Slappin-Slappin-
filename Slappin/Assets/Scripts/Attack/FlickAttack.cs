@@ -26,13 +26,20 @@ public class FlickAttack : AttackType
     [SerializeField] private Transform flickBulletSpawnPoint;
     [SerializeField] private GameObject flickBulletPrefab;
     
-    private AnimationCurve chargeCurve;
-    private ObjectShake _shake;
     private Action _currentAction;
-    private int chargeDamage;
     private SO_AttackData_Flick _flickData;
+    
+    //Charging
+    private ObjectShake _shake;
+    private AnimationCurve chargeCurve;
+    private int chargeDamage;
     private float chargedDistance = 1f;
     private float maxChargeTime;
+    private float _currentChargeTime = 0f;
+    private readonly float chargeTickRate = .25f;
+    private float _totalChargeTime = 0f;
+    
+    //Camera
     private Camera _camera;
     private float startingFoV;
 
@@ -82,31 +89,28 @@ public class FlickAttack : AttackType
         _currentAction = ChargeAttack;
         //TODO::Make the forecast appear in front of the finger,
         //starting with a small circle in the center of the normal forecast
-        //TODO:: increase the FoV on the camera
         
+        //Increase the FoV on the camera so you can see from farther back
         DOTween.To(() => _camera.fieldOfView, 
             x => _camera.fieldOfView = x, 
             65f, .25f);
-
     }
 
-    private float currentChargeTime = 0f;
-    private float chargeTickRate = .25f;
-    private float totalChargeTime = 0f;
+
     private void ChargeAttack()
     {
         _shake.StartShake();
 
         //Increase charge
-        currentChargeTime += Time.deltaTime;
-        totalChargeTime += Time.deltaTime;
-        if (currentChargeTime > chargeTickRate && totalChargeTime < maxChargeTime)
+        _currentChargeTime += Time.deltaTime;
+        _totalChargeTime += Time.deltaTime;
+        if (_currentChargeTime > chargeTickRate && _totalChargeTime < maxChargeTime)
         {
-            currentChargeTime = 0f;
+            _currentChargeTime = 0f;
         }
         
         //Alter the color based on the charge
-        float ratio = totalChargeTime / maxChargeTime;
+        float ratio = _totalChargeTime / maxChargeTime;
         Color chargeColor = Color.Lerp(_defaultTopOfHandColor, 
             Color.magenta, chargeCurve.Evaluate(ratio));
         handRenderer.material.SetColor("_ColorDim", chargeColor);
@@ -132,20 +136,22 @@ public class FlickAttack : AttackType
         
         //TODO:: calculate width
      
+        //Adjust the field of width back to normal
         DOTween.To(() => _camera.fieldOfView, 
             x => _camera.fieldOfView = x, 
             startingFoV, .25f);
         
+        //Do visuals
         flickParticle.Play();
-        player.DisableMovement();
-        _shake.StopShake();
+        SpawnFlickBullet();
         chargeFrame.SetActive(false);
         hitFrame.SetActive(true);
 
-        SpawnFlickBullet();
-
-        InitiateTravelBackUp();
+        //Cleanup
+        player.DisableMovement();
+        _shake.StopShake();
         RestoreDefaultAppearance();
+        InitiateTravelBackUp();
     }
 
     private void SpawnFlickBullet()
@@ -191,8 +197,8 @@ public class FlickAttack : AttackType
     protected override void Cleanup()
     {
         _currentAction = null;
-        totalChargeTime = 0f;
-        currentChargeTime = 0f;
+        _totalChargeTime = 0f;
+        _currentChargeTime = 0f;
         base.Cleanup();
     }
 }
