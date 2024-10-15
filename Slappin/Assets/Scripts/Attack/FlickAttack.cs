@@ -1,4 +1,5 @@
 using System;
+using DG.Tweening;
 using QFSW.QC;
 using UnityEngine;
 
@@ -32,12 +33,16 @@ public class FlickAttack : AttackType
     private SO_AttackData_Flick _flickData;
     private float chargedDistance = 1f;
     private float maxChargeTime;
+    private Camera _camera;
+    private float startingFoV;
 
     public override void Initialize()
     {
         base.Initialize();
         _flickData = (SO_AttackData_Flick) attackData;
         _shake = GetComponent<ObjectShake>();
+        _camera = cameraTransform.gameObject.GetComponent<Camera>();
+        startingFoV = _camera.fieldOfView;
     }
 
     private void Start()
@@ -77,6 +82,11 @@ public class FlickAttack : AttackType
         _currentAction = ChargeAttack;
         //TODO::Make the forecast appear in front of the finger,
         //starting with a small circle in the center of the normal forecast
+        //TODO:: increase the FoV on the camera
+        
+        DOTween.To(() => _camera.fieldOfView, 
+            x => _camera.fieldOfView = x, 
+            65f, .25f);
     }
 
     private float currentChargeTime = 0f;
@@ -115,6 +125,10 @@ public class FlickAttack : AttackType
         chargedDistance += _flickData.distanceBase;
         
         //TODO:: calculate width
+     
+        DOTween.To(() => _camera.fieldOfView, 
+            x => _camera.fieldOfView = x, 
+            startingFoV, .25f);
         
         flickParticle.Play();
         player.DisableMovement();

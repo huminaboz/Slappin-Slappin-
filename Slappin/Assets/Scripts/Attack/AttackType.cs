@@ -16,11 +16,11 @@ public class AttackType : MonoBehaviour
     [SerializeField] protected float groundYPosition = -0.78f; //Measured by putting the hand on the ground
     [SerializeField] protected AnimationCurve movementCurve;
     [SerializeField] protected Health playerHealth;
+    [SerializeField] protected Transform cameraTransform;
 
     protected Action OnCompletedTravel;
     protected Vector3 direction;
 
-    [SerializeField] private Transform cameraTransform;
     [SerializeField] private Transform handShadowTransform;
 
     [Header("Only needed if attack can get you hurt")]
