@@ -99,7 +99,7 @@ public class FlickAttack : AttackType
         //Increase the FoV on the camera so you can see from farther back
         // DOTween.To(() => _camera.fieldOfView, 
         //     x => _camera.fieldOfView = x, 
-        //     65f, .25f);
+        //     65f, .4f).SetEase(Ease.OutQuad);
 
         //Setup forecast
         AdjustForecastScale(_flickData.distanceBase);
@@ -163,9 +163,9 @@ public class FlickAttack : AttackType
         //TODO:: calculate attack width
      
         //Adjust the field of width back to normal
-        DOTween.To(() => _camera.fieldOfView, 
-            x => _camera.fieldOfView = x, 
-            startingFoV, .4f).SetEase(Ease.OutQuad);
+        // DOTween.To(() => _camera.fieldOfView, 
+        //     x => _camera.fieldOfView = x, 
+        //     startingFoV, .25f).SetEase(Ease.OutQuad);
         
         //Do visuals
         flickParticle.Play();
