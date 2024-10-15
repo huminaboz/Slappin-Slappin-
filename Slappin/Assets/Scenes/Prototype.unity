@@ -1496,7 +1496,7 @@ Transform:
   m_GameObject: {fileID: 569232623}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.53, y: -0.1499, z: -1.0299997}
+  m_LocalPosition: {x: 0.53, y: -0.1499, z: -0.88}
   m_LocalScale: {x: 0.09, y: 0.04, z: 0.005}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3030,62 +3030,11 @@ ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 7364936370289906279, guid: 0547c9d777b48b64c910388ff5030ed5, type: 3}
   m_PrefabInstance: {fileID: 1210971081}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1242866904
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1242866905}
-  - component: {fileID: 1242866906}
-  m_Layer: 0
-  m_Name: Audio Events Storage
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1242866905
+--- !u!4 &1242866905 stripped
 Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 1208400692383285326, guid: f0e889d134e442244816425d1e48375b, type: 3}
+  m_PrefabInstance: {fileID: 9160617771100331429}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1242866904}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 398961227}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1242866906
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1242866904}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 316c94ba50de3884a88830c8d83aa795, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  notes: Hitting enemy sfx are stored on the scrobs in the AttackData folder.
-  master: {fileID: 24300002, guid: 2e536806f2eb7e34391ecb00a77a8521, type: 2}
-  music: {fileID: -1679997838058148851, guid: 2e536806f2eb7e34391ecb00a77a8521, type: 2}
-  soundEffects: {fileID: 5017474992789371534, guid: 2e536806f2eb7e34391ecb00a77a8521, type: 2}
-  slapHitGround: {fileID: 11400000, guid: 0490b68fef1e19a4db94a2f7ada64b98, type: 2}
-  pickedUpCurrency1: {fileID: 11400000, guid: 4d4d5669d0ddcd34894967105300e83f, type: 2}
-  UI_Menu_Back: {fileID: 0}
-  UI_Menu_Scroll: {fileID: 0}
-  UI_New_Game_Select: {fileID: 0}
-  UI_Toggle: {fileID: 0}
-  UI_Confirmation: {fileID: 0}
-  asdf: {fileID: 0}
 --- !u!1 &1247498460
 GameObject:
   m_ObjectHideFlags: 0
@@ -4136,12 +4085,6 @@ MonoBehaviour:
   flickParticle: {fileID: 1210971084}
   flickBulletSpawnPoint: {fileID: 1346545523}
   flickBulletPrefab: {fileID: 4220776660896476680, guid: 0c5e4ba83603afa4c8863f5c7215f37d, type: 3}
-  chargeCurve:
-    serializedVersion: 2
-    m_Curve: []
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!114 &1828830151
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4487,7 +4430,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2caabda7bae069b44acf7fa419076077, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSimultaneousSFXs: 10
+  maxSimultaneousSFXs: 5
   audioGroup: {fileID: 5017474992789371534, guid: 2e536806f2eb7e34391ecb00a77a8521, type: 2}
 --- !u!1 &2080990245
 GameObject:
@@ -4813,6 +4756,63 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2132519981}
   m_CullTransparentMesh: 1
+--- !u!1001 &9160617771100331429
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 398961227}
+    m_Modifications:
+    - target: {fileID: 1208400692383285326, guid: f0e889d134e442244816425d1e48375b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1208400692383285326, guid: f0e889d134e442244816425d1e48375b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1208400692383285326, guid: f0e889d134e442244816425d1e48375b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1208400692383285326, guid: f0e889d134e442244816425d1e48375b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1208400692383285326, guid: f0e889d134e442244816425d1e48375b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1208400692383285326, guid: f0e889d134e442244816425d1e48375b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1208400692383285326, guid: f0e889d134e442244816425d1e48375b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1208400692383285326, guid: f0e889d134e442244816425d1e48375b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1208400692383285326, guid: f0e889d134e442244816425d1e48375b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1208400692383285326, guid: f0e889d134e442244816425d1e48375b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4115612478522116143, guid: f0e889d134e442244816425d1e48375b, type: 3}
+      propertyPath: m_Name
+      value: Audio Events Storage
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f0e889d134e442244816425d1e48375b, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
