@@ -77,14 +77,11 @@ public class Player : MonoBehaviour, IHpAdjustmentListener
     public void TookDamage(int damageAmount, GameObject attacker)
     {
         // Debug.Log("player took damage");
-        // float stunTime = 0f; //Not everything will stun you??
-        
+        SFXPlayer.I.Play(AudioEventsStorage.I.playerTookDamage);
         //TODO:: Set the values of the camera shake based on the attacker
         CameraShake.I.StartCameraShake(0.013f, 0.13f);
         HpBar.I.UpdateHpBar(thisHealth);
-        //player needs some sort of feedback of getting hurt
-        //sfx
-        //visual - vfx on the screen of ouchies? (based on the attacker)
+        //visual - vfx on the screen of ouchies? (based on the attacker-no scope for this boy)
     }
 
     public void Healed(int healAmount, GameObject healer)
@@ -95,6 +92,7 @@ public class Player : MonoBehaviour, IHpAdjustmentListener
     public float HandleDeath(int lastAttack, GameObject killer)
     {
         DisableMovement();
+        SFXPlayer.I.Play(AudioEventsStorage.I.playerDied);
 
         //TODO:: Use this for dying
         float deathAnimationTime = 0f;

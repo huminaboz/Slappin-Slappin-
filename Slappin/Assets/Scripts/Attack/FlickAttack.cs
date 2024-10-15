@@ -143,6 +143,8 @@ public class FlickAttack : AttackType
 
     private void SpawnFlickBullet()
     {
+        SFXPlayer.I.Play(AudioEventsStorage.I.releasedFlick);
+        
         FlickBullet flickBullet = ObjectPoolManager<FlickBullet>.GetObject(flickBulletPrefab);
         if (flickBullet is not null)
         {

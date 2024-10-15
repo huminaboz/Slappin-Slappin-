@@ -249,8 +249,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84f9010b83f75f844a2dfee4d5fcff5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minTimeBetweenSpawns: 0.25
-  maxTimeBetweenSpawns: 0.5
+  minTimeBetweenSpawns: 0.5
+  maxTimeBetweenSpawns: 1
   spikePrefab: {fileID: 3917557613060000298, guid: e148037d1aff1fa4fb977d2a94f07868, type: 3}
   bouncerPrefab: {fileID: 6825719715896144569, guid: 3fbd4ae7bcea3714f8ed9422d8834d87, type: 3}
   pawnPrefab: {fileID: 3826877389465147980, guid: e6d04478a9e4a9842b348cb91b662b77, type: 3}

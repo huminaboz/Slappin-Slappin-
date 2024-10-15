@@ -38,6 +38,7 @@ public class Enemy_Pawn : Enemy, IObjectPool<Enemy_Pawn>
 
     protected override void Attack()
     {
+        SFXPlayer.I.Play(AudioEventsStorage.I.enemyAttacked);
         _walkTowardsTransform.enabled = false;
         PlayerInfo.I.health.AdjustHp(-attackDamage, gameObject);
         attackTween = transform.DORotate(new Vector3(57f, 0, 0), .5f, RotateMode.LocalAxisAdd)

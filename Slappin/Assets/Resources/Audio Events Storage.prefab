@@ -49,10 +49,17 @@ MonoBehaviour:
   music: {fileID: -1679997838058148851, guid: 2e536806f2eb7e34391ecb00a77a8521, type: 2}
   soundEffects: {fileID: 5017474992789371534, guid: 2e536806f2eb7e34391ecb00a77a8521, type: 2}
   slapHitGround: {fileID: 11400000, guid: 1c007225fd442f84ca0045247c4d6b5d, type: 2}
-  pickedUpCurrency1: {fileID: 11400000, guid: 4d4d5669d0ddcd34894967105300e83f, type: 2}
+  releasedFlick: {fileID: 11400000, guid: 98005e6b2b4c5ab48b1852a65e787b62, type: 2}
+  farted: {fileID: 11400000, guid: e8d2ef1131684aa438502578d00fc421, type: 2}
+  enemyDied: {fileID: 11400000, guid: e27dd9d44fb9b85488129f25e0b20e1c, type: 2}
+  enemyAttacked: {fileID: 11400000, guid: 5f4720733693f3647bd219183e56b16d, type: 2}
+  pickedUpCurrency1: {fileID: 11400000, guid: 715e4db3fe6fe5a4cb4d09b78370a32d, type: 2}
+  pickedUpCurrency2: {fileID: 11400000, guid: e530610b98cd9b84c851b617c0dd8832, type: 2}
   UI_Menu_Back: {fileID: 0}
   UI_Menu_Scroll: {fileID: 0}
   UI_New_Game_Select: {fileID: 0}
   UI_Toggle: {fileID: 0}
   UI_Confirmation: {fileID: 0}
+  playerDied: {fileID: 11400000, guid: 3027ca7a1ed787349bff6a3f3d66ac5c, type: 2}
+  playerTookDamage: {fileID: 11400000, guid: 49ecffaa9bd869844ac807c07dbffebd, type: 2}
   asdf: {fileID: 0}

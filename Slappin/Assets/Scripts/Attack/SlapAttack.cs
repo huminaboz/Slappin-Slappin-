@@ -5,9 +5,8 @@ using UnityEngine.Serialization;
 public class SlapAttack : AttackType
 {
     // [SerializeField] private Transform shadow;
-    [Header("Slap Attack Specific Stuff")]
-    
-    [SerializeField] protected GameObject pickupColliderObject;
+    [Header("Slap Attack Specific Stuff")] [SerializeField]
+    protected GameObject pickupColliderObject;
 
     [SerializeField] private GetHurtOnAttackCollider spikeGetHurtOnAttackCollider;
     [SerializeField] private GameObject handModel;
@@ -32,7 +31,7 @@ public class SlapAttack : AttackType
         //TODO:: Consider moving this up to the parent - decide while making other attacks
         pickupColliderObject.SetActive(true);
         hurtEnemiesColliderObject.SetActive(true);
-        
+
         //TODO:: there might be more things that can hurt -
         //or can genericize it on the parent for other hand types that can get hurt
         spikeGetHurtOnAttackCollider.gameObject.SetActive(true);
@@ -60,7 +59,7 @@ public class SlapAttack : AttackType
     {
         base.DoWhenReachingGround();
         CameraShake.I.StartCameraShake();
-                        SFXPlayer.I.Play(AudioEventsStorage.I.slapHitGround);
+        SFXPlayer.I.Play(AudioEventsStorage.I.slapHitGround);
     }
 
     protected override void InitiateTravelBackUp()
@@ -83,9 +82,9 @@ public class SlapAttack : AttackType
         Enemy_Spike enemySpike = spike.GetComponent<Enemy_Spike>();
         playerHealth.AdjustHp(-enemySpike.handStabDamage, gameObject);
         player.SetState(new StateDamagedState(player));
-        
-        StartCoroutine(BozUtilities.DoAfterDelay(enemySpike.handStabStunDuration 
-                                    * PlayerStats.I.stunRecoveryMultiplier, 
+
+        StartCoroutine(BozUtilities.DoAfterDelay(enemySpike.handStabStunDuration
+                                                 * PlayerStats.I.stunRecoveryMultiplier,
             InitiateTravelBackUp));
     }
 

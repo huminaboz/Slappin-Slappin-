@@ -95,6 +95,8 @@ public abstract class Enemy : MonoBehaviour, IHpAdjustmentListener, IObjectPool<
         pickup.SetupCurrency(currency1DropAmount);
         pickup.SetNewPosition(pickupSpawnPosition);
         
+        SFXPlayer.I.Play(AudioEventsStorage.I.enemyDied);
+        
         //Spin in a circle first
         transform.DORotate(new Vector3(0, 720, 0), 1f, RotateMode.FastBeyond360)
             .SetEase(Ease.Linear)

@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bcbc668ce5a76b438ce21772959a1dc, type: 3}
+  m_Name: Powerup
+  m_EditorClassIdentifier: 
+  notes: 
+  clip: {fileID: 8300000, guid: df0cbe943be72104e9e913c53ab77884, type: 3}
+  mixerGroup: {fileID: 5017474992789371534, guid: 2e536806f2eb7e34391ecb00a77a8521, type: 2}
+  volume: 1
+  varyPitch: 0
+  looping: 0
+  startDelaySeconds: 0
