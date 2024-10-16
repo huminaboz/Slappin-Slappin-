@@ -10,16 +10,19 @@ public abstract class Enemy : MonoBehaviour, IHpAdjustmentListener, IObjectPool<
     private IHpAdjustmentListener _hpAdjustmentListenerImplementation;
     public Health thisHealth { get; set; }
 
-    [FormerlySerializedAs("currencyDropAmount")] [FormerlySerializedAs("currencyDrop")] [SerializeField] private int currency1DropAmount;
+    [SerializeField] private int currency1DropAmount;
     [SerializeField] private GameObject pickupToDrop;
-    
+    [SerializeField] private EnemyAnimations _enemyAnimations;
+    [SerializeField] private float attackSpeedMultiplier = 1f;
+
+    private MoveTowardsTransform moveTowardsTransform;
     
     //Flash stuff
     public float flashDuration = 0.5f;
     private Color originalColor;
     private Material thisMaterial;
     public int flashCount = 5;
-    
+
 
     protected delegate void EnemyBehavior();
 
@@ -31,39 +34,63 @@ public abstract class Enemy : MonoBehaviour, IHpAdjustmentListener, IObjectPool<
         thisHealth = GetComponent<Health>();
         thisMaterial = GetComponent<Renderer>().material;
         originalColor = thisMaterial.color;
+        moveTowardsTransform = GetComponent<MoveTowardsTransform>();
     }
 
     public virtual void InitializeObjectFromPool()
     {
         thisHealth.Initialize();
         gameObject.SetActive(true);
+        _enemyAnimations?.Play(EnemyAnimations.AnimationFrames.WalkFWD);
     }
 
     private void Update()
     {
-        //TODO:: Do attack
-        if(performBehavior is not null) performBehavior();
+        if (performBehavior is not null) performBehavior();
     }
 
     public void SwitchToAttackMode()
     {
         performBehavior = Attack;
+        _enemyAnimations?.Play(EnemyAnimations.AnimationFrames.Attack01, 
+            DecideNextAnimation);
     }
 
     public void TurnOffAttackMode()
     {
         performBehavior -= Attack;
     }
+
     protected abstract void Attack();
+
+    private void DecideNextAnimation()
+    {
+        //Called when completing some animations
+        if (moveTowardsTransform.IsInAttackRange())
+        {
+            _enemyAnimations?.Play(EnemyAnimations.AnimationFrames.Attack01, 
+                DecideNextAnimation);
+        }
+        else
+        {
+            _enemyAnimations?.Play(moveTowardsTransform.isDashing
+                ? EnemyAnimations.AnimationFrames.RunFWD
+                : EnemyAnimations.AnimationFrames.WalkFWD);
+        }
+    }
 
     public void TookDamage(int damageAmount, GameObject attacker)
     {
+        if (!thisHealth.isAlive) return;
         //Got hit feedback
         StartCoroutine(FlashRedCoroutine());
         VFXSpawner.I.SpawnDamageNumber(damageAmount, transform.position);
         VFXSpawner.I.SpawnHitFX(transform);
+        performBehavior = null;
+        _enemyAnimations?.Play(EnemyAnimations.AnimationFrames.GetHit, 
+            DecideNextAnimation);
     }
-    
+
     private IEnumerator FlashRedCoroutine()
     {
         float flashInterval = flashDuration / (flashCount * 2); // Time for one flash cycle (red to original color)
@@ -94,16 +121,16 @@ public abstract class Enemy : MonoBehaviour, IHpAdjustmentListener, IObjectPool<
         Pickup pickup = ObjectPoolManager<Pickup>.GetObject(pickupToDrop);
         pickup.SetupCurrency(currency1DropAmount);
         pickup.SetNewPosition(pickupSpawnPosition);
-        
+
         SFXPlayer.I.Play(AudioEventsStorage.I.enemyDied);
-        
+
         //Spin in a circle first
         transform.DORotate(new Vector3(0, 720, 0), 1f, RotateMode.FastBeyond360)
             .SetEase(Ease.Linear)
             .OnComplete(ReturnObjectToPool);
 
         performBehavior = null;
-        
+
         return 0;
     }
 

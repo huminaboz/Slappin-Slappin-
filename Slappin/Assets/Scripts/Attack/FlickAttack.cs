@@ -60,7 +60,7 @@ public class FlickAttack : AttackType
     private void Start()
     {
         //For now, while we're switching between models for frames, two models
-        chargeFrame.SetActive(true);
+        chargeFrame.SetActive(false);
         hitFrame.SetActive(false);
         AdjustForecastScale(_flickData.distanceBase);
     }

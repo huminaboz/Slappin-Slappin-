@@ -9,16 +9,16 @@ public class Enemy_Pawn : Enemy, IObjectPool<Enemy_Pawn>
 
     [SerializeField] private int attackDamage = 1;
 
-    private WalkTowardsTransform _walkTowardsTransform;
+    private MoveTowardsTransform _moveTowardsTransform;
     private Tween attackTween;
 
     public override void SetupObjectFirstTime()
     {
         base.SetupObjectFirstTime();
-        _walkTowardsTransform = gameObject.GetComponent<WalkTowardsTransform>();
-        if (TryGetComponent(out WalkTowardsTransform walkTowardsTransform))
+        _moveTowardsTransform = gameObject.GetComponent<MoveTowardsTransform>();
+        if (TryGetComponent(out MoveTowardsTransform walkTowardsTransform))
         {
-            _walkTowardsTransform = walkTowardsTransform;
+            _moveTowardsTransform = walkTowardsTransform;
         }
         else
         {
@@ -39,14 +39,14 @@ public class Enemy_Pawn : Enemy, IObjectPool<Enemy_Pawn>
     protected override void Attack()
     {
         SFXPlayer.I.Play(AudioEventsStorage.I.enemyAttacked);
-        _walkTowardsTransform.enabled = false;
+        _moveTowardsTransform.enabled = false;
         PlayerInfo.I.health.AdjustHp(-attackDamage, gameObject);
         attackTween = transform.DORotate(new Vector3(57f, 0, 0), .5f, RotateMode.LocalAxisAdd)
             .SetEase(attackCurve)
             .OnComplete(() =>
             {
-                _walkTowardsTransform.BackUp();
-                _walkTowardsTransform.enabled = true;
+                _moveTowardsTransform.BackUp();
+                _moveTowardsTransform.enabled = true;
             });
 
         performBehavior = null;

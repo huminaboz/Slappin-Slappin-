@@ -13059,6 +13059,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 557188245}
     m_Modifications:
+    - target: {fileID: 93775406430535237, guid: 0547c9d777b48b64c910388ff5030ed5, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1173243701402730150, guid: 0547c9d777b48b64c910388ff5030ed5, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.068
@@ -13107,6 +13111,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Basic Slash Blue
       objectReference: {fileID: 0}
+    - target: {fileID: 5729379207388846900, guid: 0547c9d777b48b64c910388ff5030ed5, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7364936370289906279, guid: 0547c9d777b48b64c910388ff5030ed5, type: 3}
       propertyPath: looping
       value: 0
@@ -13114,6 +13122,10 @@ PrefabInstance:
     - target: {fileID: 7364936370289906279, guid: 0547c9d777b48b64c910388ff5030ed5, type: 3}
       propertyPath: lengthInSec
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7364936370289906279, guid: 0547c9d777b48b64c910388ff5030ed5, type: 3}
+      propertyPath: playOnAwake
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7364936370289906279, guid: 0547c9d777b48b64c910388ff5030ed5, type: 3}
       propertyPath: EmissionModule.enabled
@@ -13238,6 +13250,10 @@ PrefabInstance:
     - target: {fileID: 7364936370289906279, guid: 0547c9d777b48b64c910388ff5030ed5, type: 3}
       propertyPath: InitialModule.startLifetime.maxCurve.m_Curve.Array.data[0].outWeight
       value: 0.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 7981800728490180044, guid: 0547c9d777b48b64c910388ff5030ed5, type: 3}
+      propertyPath: playOnAwake
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

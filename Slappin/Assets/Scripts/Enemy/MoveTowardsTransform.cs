@@ -1,14 +1,14 @@
-using System;
 using System.Collections;
 using UnityEngine;
 
-public class WalkTowardsTransform : MonoBehaviour, IHpAdjustmentListener
+public class MoveTowardsTransform : MonoBehaviour, IHpAdjustmentListener
 {
     [SerializeField] private float walkSpeed = 2f;
     [SerializeField] private float rotationSpeed = 5f;
 
     private Enemy thisEnemy;
     private Rigidbody _rigidbody;
+    public bool isDashing = false;
 
     //TODO:: Can set this up to target a random X position at the hurt line
 
@@ -35,10 +35,15 @@ public class WalkTowardsTransform : MonoBehaviour, IHpAdjustmentListener
         StopAllCoroutines();
     }
 
+    public bool IsInAttackRange()
+    {
+        return transform.localPosition.z + transform.localScale.z * .05
+                <= EnemyTarget.I.hurtLine.localPosition.z;
+    }
+
     private void FixedUpdate()
     {
-        if (transform.localPosition.z + transform.localScale.z * .05 <= EnemyTarget.I.hurtLine.localPosition.z
-            && walkSpeed > 0f)
+        if (IsInAttackRange() && walkSpeed > 0f)
         {
             _rigidbody.velocity = Vector3.zero;
             thisEnemy.SwitchToAttackMode();

@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 2469762892176786808}
   - component: {fileID: 3780368011366827157}
   - component: {fileID: 2246439515336334185}
+  - component: {fileID: 5003413546357470793}
   m_Layer: 6
   m_Name: Spike
   m_TagString: Untagged
@@ -335,6 +336,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currency1DropAmount: 4
   pickupToDrop: {fileID: 4864087115399935888, guid: 9fe9c0010e31c1f499c0d5a3f63d0fe3, type: 3}
+  _enemyAnimations: {fileID: 0}
   flashDuration: 0.5
   flashCount: 5
   handStabDamage: 1
@@ -468,3 +470,15 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 4
   m_CollisionDetection: 1
+--- !u!114 &5003413546357470793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3917557613060000298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccac174d41c72984d8a7b70bbbd9a273, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 8499473609309861931}
   - component: {fileID: 3836345842740493001}
   - component: {fileID: -1834161089267994237}
+  - component: {fileID: -35294351610621068}
   m_Layer: 0
   m_Name: Bouncer
   m_TagString: Untagged
@@ -86,6 +87,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currency1DropAmount: 8
   pickupToDrop: {fileID: 4864087115399935888, guid: 9fe9c0010e31c1f499c0d5a3f63d0fe3, type: 3}
+  _enemyAnimations: {fileID: 0}
   flashDuration: 0.5
   flashCount: 5
 --- !u!114 &2825724572631976098
@@ -2374,3 +2376,15 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 4
   m_CollisionDetection: 0
+--- !u!114 &-35294351610621068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6825719715896144569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccac174d41c72984d8a7b70bbbd9a273, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
