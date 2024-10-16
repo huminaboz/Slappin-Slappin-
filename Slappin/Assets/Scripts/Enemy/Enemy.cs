@@ -7,14 +7,15 @@ using UnityEngine.Serialization;
 [RequireComponent(typeof(Health))]
 public abstract class Enemy : MonoBehaviour, IHpAdjustmentListener, IObjectPool<Enemy>
 {
-    private IHpAdjustmentListener _hpAdjustmentListenerImplementation;
     public Health thisHealth { get; set; }
+    
+    [SerializeField] protected EnemyAnimations _enemyAnimations;
 
     [SerializeField] private int currency1DropAmount;
     [SerializeField] private GameObject pickupToDrop;
-    [SerializeField] private EnemyAnimations _enemyAnimations;
     [SerializeField] private float attackSpeedMultiplier = 1f;
 
+    private IHpAdjustmentListener _hpAdjustmentListenerImplementation;
     private MoveTowardsTransform moveTowardsTransform;
 
     //Flash stuff
@@ -58,8 +59,7 @@ public abstract class Enemy : MonoBehaviour, IHpAdjustmentListener, IObjectPool<
     public void SwitchToAttackMode()
     {
         performBehavior = Attack;
-        _enemyAnimations?.Play(EnemyAnimations.AnimationFrames.Attack01,
-            DecideNextAnimation);
+
     }
 
     public void TurnOffAttackMode()

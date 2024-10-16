@@ -79,11 +79,27 @@ public class SlapAttack : AttackType
         spikeGetHurtOnAttackCollider.gameObject.SetActive(false); //Don't accidentally hit another
         Direction = Vector3.zero;
         handRigidbody.velocity = Vector3.zero;
-        Enemy_Spike enemySpike = spike.GetComponent<Enemy_Spike>();
-        playerHealth.AdjustHp(-enemySpike.handStabDamage, gameObject);
+
+        int handDamage = 0;
+        float handStabStunDuration = .15f;
+        //TODO:: Make an interface for enemies with spikes
+        if (spike.GetComponent<Enemy_Spike>())
+        {
+            Enemy_Spike enemySpike = spike.GetComponent<Enemy_Spike>();
+            handDamage = enemySpike.handStabDamage;
+            handStabStunDuration = enemySpike.handStabStunDuration;
+        }
+
+        if (spike.GetComponent<Enemy_Turtle>())
+        {
+            Enemy_Turtle enemySpike = spike.GetComponent<Enemy_Turtle>();
+            handDamage = enemySpike.handStabDamage;
+        }
+        
+        playerHealth.AdjustHp(-handDamage, gameObject);
         player.SetState(new StateDamagedState(player));
 
-        StartCoroutine(BozUtilities.DoAfterDelay(enemySpike.handStabStunDuration
+        StartCoroutine(BozUtilities.DoAfterDelay(handStabStunDuration
                                                  * PlayerStats.I.stunRecoveryMultiplier,
             InitiateTravelBackUp));
     }

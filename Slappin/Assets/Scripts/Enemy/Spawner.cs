@@ -12,6 +12,7 @@ public class Spawner : MonoBehaviour
     [SerializeField] private GameObject spikePrefab;
     [SerializeField] private GameObject bouncerPrefab;
     [SerializeField] private GameObject pawnPrefab;
+    [SerializeField] private GameObject turtlePrefab;
 
     [SerializeField] private float spikeSpawnChance = .05f;
     [SerializeField] private float bouncerSpawnChance = .013f;
@@ -48,12 +49,24 @@ public class Spawner : MonoBehaviour
             }
             else
             {
-                Enemy_Pawn enemy = ObjectPoolManager<Enemy_Pawn>.GetObject(pawnPrefab);
-                if (enemy is not null)
+                if(GetRandomNumberBetweenZeroAndOne() < .3f)
                 {
-                    enemy.transform.position = GetRandomSpawnPosition();
-                    enemy.transform.Rotate(0, 180, 0);
-                    extraSpawnTime = 0f;
+                    Enemy_Pawn enemy = ObjectPoolManager<Enemy_Pawn>.GetObject(pawnPrefab);
+                    if (enemy is not null)
+                    {
+                        enemy.transform.position = GetRandomSpawnPosition();
+                        enemy.transform.Rotate(0, 180, 0);
+                        extraSpawnTime = 0f;
+                    }
+                }
+                else
+                {
+                    Enemy_Turtle enemy = ObjectPoolManager<Enemy_Turtle>.GetObject(turtlePrefab);
+                    if (enemy is not null)
+                    {
+                        enemy.transform.position = GetRandomSpawnPosition();
+                        extraSpawnTime = 0f;
+                    }
                 }
             }
 

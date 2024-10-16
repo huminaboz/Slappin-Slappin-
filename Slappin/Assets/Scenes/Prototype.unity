@@ -1240,6 +1240,7 @@ MonoBehaviour:
   spikePrefab: {fileID: 3917557613060000298, guid: e148037d1aff1fa4fb977d2a94f07868, type: 3}
   bouncerPrefab: {fileID: 6825719715896144569, guid: 3fbd4ae7bcea3714f8ed9422d8834d87, type: 3}
   pawnPrefab: {fileID: 3826877389465147980, guid: e6d04478a9e4a9842b348cb91b662b77, type: 3}
+  turtlePrefab: {fileID: 3826877389465147980, guid: 003805da6baafbb40bdea08bdfe71c84, type: 3}
   spikeSpawnChance: 0.025
   bouncerSpawnChance: 0.025
   topLeftPossibleSpawn: {fileID: 280439155}

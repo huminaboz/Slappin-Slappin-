@@ -2,11 +2,11 @@ using System;
 using DG.Tweening;
 using UnityEngine;
 
-public class Enemy_Pawn : Enemy, IObjectPool<Enemy_Pawn>
+public class Enemy_Turtle : Enemy, IObjectPool<Enemy_Turtle>
 {
     // private Material thisMaterial;
     [SerializeField] private AnimationCurve attackCurve;
-
+    [SerializeField] public int handStabDamage = 1;
     [SerializeField] private int attackDamage = 1;
 
     private MoveTowardsTransform _moveTowardsTransform;
@@ -41,20 +41,12 @@ public class Enemy_Pawn : Enemy, IObjectPool<Enemy_Pawn>
         SFXPlayer.I.Play(AudioEventsStorage.I.enemyAttacked);
         _moveTowardsTransform.enabled = false;
         PlayerInfo.I.health.AdjustHp(-attackDamage, gameObject);
-        
         _enemyAnimations?.Play(EnemyAnimations.AnimationFrames.Attack01,
             () =>
             {
                 _moveTowardsTransform.BackUp();
                 _moveTowardsTransform.enabled = true;
             });
-        // attackTween = transform.DORotate(new Vector3(57f, 0, 0), .5f, RotateMode.LocalAxisAdd)
-        //     .SetEase(attackCurve)
-        //     .OnComplete(() =>
-        //     {
-        //         _moveTowardsTransform.BackUp();
-        //         _moveTowardsTransform.enabled = true;
-        //     });
 
         performBehavior = null;
     }
@@ -67,6 +59,6 @@ public class Enemy_Pawn : Enemy, IObjectPool<Enemy_Pawn>
 
     public override void ReturnObjectToPool()
     {
-        ObjectPoolManager<Enemy_Pawn>.ReturnObject(this);
+        ObjectPoolManager<Enemy_Turtle>.ReturnObject(this);
     }
 }
