@@ -217,7 +217,7 @@ public class StateDamagedState : PlayerState
         thisPlayer.DisableMovement();
 
         //Start the hand blinking or color changing or whatever
-        thisPlayer.CurrentAttackType.HandleGettingHurt();
+        thisPlayer.CurrentAttackType?.HandleGettingHurt();
 
         //Play a hand hurt animation?
 

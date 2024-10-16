@@ -29,20 +29,32 @@ public class Spawner : MonoBehaviour
             if (GetRandomNumberBetweenZeroAndOne() < bouncerSpawnChance)
             {
                 Enemy_Bouncer enemy = ObjectPoolManager<Enemy_Bouncer>.GetObject(bouncerPrefab);
-                if (enemy is not null) enemy.transform.position = GetRandomSpawnPosition();
-                extraSpawnTime = 1f;
+                if (enemy is not null)
+                {
+                    enemy.transform.position = GetRandomSpawnPosition();
+                    enemy.transform.Rotate(0, 180, 0);
+                    extraSpawnTime = 1f;
+                }
             }
             else if (GetRandomNumberBetweenZeroAndOne() < spikeSpawnChance)
             {
                 Enemy_Spike enemy = ObjectPoolManager<Enemy_Spike>.GetObject(spikePrefab);
-                if (enemy is not null) enemy.transform.position = GetRandomSpawnPosition();
-                extraSpawnTime = .5f;
+                if (enemy is not null)
+                {
+                    enemy.transform.position = GetRandomSpawnPosition();
+                    enemy.transform.Rotate(0, 180, 0);
+                    extraSpawnTime = .5f;
+                }
             }
             else
             {
                 Enemy_Pawn enemy = ObjectPoolManager<Enemy_Pawn>.GetObject(pawnPrefab);
-                if (enemy is not null) enemy.transform.position = GetRandomSpawnPosition();
-                extraSpawnTime = 0f;
+                if (enemy is not null)
+                {
+                    enemy.transform.position = GetRandomSpawnPosition();
+                    enemy.transform.Rotate(0, 180, 0);
+                    extraSpawnTime = 0f;
+                }
             }
 
             t = 0;
@@ -55,7 +67,7 @@ public class Spawner : MonoBehaviour
         float x = Random.Range(topLeftPossibleSpawn.position.x, bottomRightPossibleSpawn.position.x);
         float z = Random.Range(topLeftPossibleSpawn.position.z, bottomRightPossibleSpawn.position.z);
 
-        return new Vector3(x, 0, z);
+        return new Vector3(x, .01f, z);
     }
 
     private float GetRandomNumberBetweenZeroAndOne()
