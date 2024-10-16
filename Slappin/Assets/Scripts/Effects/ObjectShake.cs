@@ -44,7 +44,7 @@ public class ObjectShake : MonoBehaviour
         while (true)
         {
             // Apply a random shake by changing the camera position
-            objectToShake.localPosition = _originalPosition + Random.insideUnitSphere * intensity;
+            objectToShake.localPosition = _originalPosition + Random.insideUnitSphere * (intensity *Time.deltaTime * 120);
 
             // elapsedTime += Time.deltaTime;
 

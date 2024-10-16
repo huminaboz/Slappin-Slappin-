@@ -59,13 +59,13 @@ public class CameraShake : Singleton<CameraShake>
         while (elapsedTime < duration)
         {
             // Apply a random shake by changing the camera position
-            _cameraTransform.localPosition = _originalPosition + Random.insideUnitSphere * intensity;
+            _cameraTransform.localPosition = _originalPosition + Random.insideUnitSphere * (intensity * Time.deltaTime * 120);
 
             // Apply a random shake to the rotation
             Quaternion randomRotation = Quaternion.Euler(
-                Random.Range(-RotationIntensity, RotationIntensity), // X-axis rotation
-                Random.Range(-RotationIntensity, RotationIntensity), // Y-axis rotation
-                Random.Range(-RotationIntensity, RotationIntensity) // Z-axis rotation
+                Random.Range(-RotationIntensity, RotationIntensity) * Time.deltaTime * 120, // X-axis rotation
+                Random.Range(-RotationIntensity, RotationIntensity) * Time.deltaTime * 120, // Y-axis rotation
+                Random.Range(-RotationIntensity, RotationIntensity) * Time.deltaTime * 120 // Z-axis rotation
             );
             _cameraTransform.localRotation = _originalRotation * randomRotation;
 
