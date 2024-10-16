@@ -8,7 +8,22 @@ public class Hover : MonoBehaviour
     public float shiftSpeed = 1f;
     
     private Vector3 originalPosition;  // To store the original position of the sphere
-    
+
+    private void OnEnable()
+    {
+        float heightVariance = Random.Range(-hoverHeight*.5f, hoverHeight*.5f);
+        hoverHeight += heightVariance;
+        
+        float speedVariance = Random.Range(-hoverSpeed*.5f, hoverSpeed*.5f);
+        hoverSpeed += speedVariance;
+        
+        float shiftAmountVariance = Random.Range(-shiftAmount*.5f, shiftAmount*.5f);
+        shiftAmount += shiftAmountVariance;
+        
+        float shiftSpeedVariance = Random.Range(-shiftSpeed*.5f, shiftSpeed*.5f);
+        shiftSpeed += shiftSpeedVariance;
+    }
+
     public void SetOriginPosition()
     {
         originalPosition = transform.position;

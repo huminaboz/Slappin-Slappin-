@@ -16,7 +16,7 @@ public abstract class Enemy : MonoBehaviour, IHpAdjustmentListener, IObjectPool<
     [SerializeField] private float attackSpeedMultiplier = 1f;
 
     private MoveTowardsTransform moveTowardsTransform;
-    
+
     //Flash stuff
     public float flashDuration = 0.5f;
     private Color originalColor;
@@ -32,8 +32,13 @@ public abstract class Enemy : MonoBehaviour, IHpAdjustmentListener, IObjectPool<
     {
         gameObject.SetActive(false);
         thisHealth = GetComponent<Health>();
-        thisMaterial = GetComponent<Renderer>().material;
-        originalColor = thisMaterial.color;
+
+        if (GetComponent<Renderer>())
+        {
+            thisMaterial = GetComponent<Renderer>().material;
+            originalColor = thisMaterial.color;
+        }
+
         moveTowardsTransform = GetComponent<MoveTowardsTransform>();
     }
 
@@ -52,7 +57,7 @@ public abstract class Enemy : MonoBehaviour, IHpAdjustmentListener, IObjectPool<
     public void SwitchToAttackMode()
     {
         performBehavior = Attack;
-        _enemyAnimations?.Play(EnemyAnimations.AnimationFrames.Attack01, 
+        _enemyAnimations?.Play(EnemyAnimations.AnimationFrames.Attack01,
             DecideNextAnimation);
     }
 
@@ -68,7 +73,7 @@ public abstract class Enemy : MonoBehaviour, IHpAdjustmentListener, IObjectPool<
         //Called when completing some animations
         if (moveTowardsTransform.IsInAttackRange())
         {
-            _enemyAnimations?.Play(EnemyAnimations.AnimationFrames.Attack01, 
+            _enemyAnimations?.Play(EnemyAnimations.AnimationFrames.Attack01,
                 DecideNextAnimation);
         }
         else
@@ -83,18 +88,18 @@ public abstract class Enemy : MonoBehaviour, IHpAdjustmentListener, IObjectPool<
     {
         if (!thisHealth.isAlive) return;
         //Got hit feedback
-        StartCoroutine(FlashRedCoroutine());
+        if(thisMaterial) StartCoroutine(FlashRedCoroutine());
         VFXSpawner.I.SpawnDamageNumber(damageAmount, transform.position);
         VFXSpawner.I.SpawnHitFX(transform);
         performBehavior = null;
-        _enemyAnimations?.Play(EnemyAnimations.AnimationFrames.GetHit, 
+        _enemyAnimations?.Play(EnemyAnimations.AnimationFrames.GetHit,
             DecideNextAnimation);
     }
 
     private IEnumerator FlashRedCoroutine()
     {
         float flashInterval = flashDuration / (flashCount * 2); // Time for one flash cycle (red to original color)
-
+        
         for (int i = 0; i < flashCount; i++)
         {
             thisMaterial.color = Color.red;

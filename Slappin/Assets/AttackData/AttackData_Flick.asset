@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Notes: 
   baseDamage: 2
-  attackSpeed: 200
+  goDownSpeed: 300
   goBackUpSpeed: 200
   bonus_goodHit: 1.1
   bonus_greatHit: 1.2

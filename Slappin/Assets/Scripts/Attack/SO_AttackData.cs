@@ -6,7 +6,7 @@ public class SO_AttackData : ScriptableObject
     [SerializeField] [TextArea(3,100)] private string Notes;
 
     [SerializeField] public int baseDamage = 1;
-    [SerializeField] public float attackSpeed = 200f;
+    [FormerlySerializedAs("attackSpeed")] [SerializeField] public float goDownSpeed = 200f;
     [FormerlySerializedAs("slapGoUpSpeed")] [SerializeField] public float goBackUpSpeed = 200f;
     [SerializeField] public float bonus_goodHit = 1.1f;
     [SerializeField] public float bonus_greatHit = 1.2f;

@@ -68,7 +68,7 @@ public class EnemyAnimations : MonoBehaviour, IHpAdjustmentListener
     {
         previousClip = currentClip;
         currentClip = clip;
-        Debug.LogWarning("current clip set to: " + currentClip);
+        // Debug.LogWarning("current clip set to: " + currentClip);
         animator.Play(clip);
         _callback = callback;
     }

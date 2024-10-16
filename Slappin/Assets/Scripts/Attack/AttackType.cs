@@ -21,14 +21,13 @@ public class AttackType : MonoBehaviour
     [SerializeField] protected Renderer handRenderer;
 
     protected Action OnCompletedTravel;
-    protected Vector3 Direction {
+
+    protected Vector3 Direction
+    {
         get => direction;
-        set
-        {
-            direction = value;
-        }
-        
+        set { direction = value; }
     }
+
     private Vector3 direction;
     protected Color _defaultTopOfHandColor;
 
@@ -45,29 +44,56 @@ public class AttackType : MonoBehaviour
 
     private void Start()
     {
-        handPositioner.position = new Vector3(handPositioner.position.x, 
+        handPositioner.position = new Vector3(handPositioner.position.x,
             offScreenHandYPosition, handPositioner.position.z);
     }
 
     private void FixedUpdate()
     {
         // Debug.LogWarning(handRigidbody.velocity);
-        
+
         if (Direction == Vector3.zero) return;
         float YDistance = Mathf.Abs(handPositioner.position.y - goalPosition.y);
         //TODO:: Different curve for going up and for going down
+        //TODO:: Can't let starting distance from goal end up as zero
         float ratio = 1f - movementCurve.Evaluate(YDistance / startingDistanceFromGoal);
         ratio = Mathf.Clamp(ratio, .05f, 1f); //Don't let it be 0
-        
+
         handRigidbody.velocity = Direction * (Time.fixedDeltaTime * attackSpeed * ratio);
 
-        //Made it to the goal
-        if (YDistance <= distanceFlexRoom)
+        if (direction.y > 0)
         {
-            OnCompletedTravel?.Invoke();
+            //heading up
+            if (handPositioner.transform.position.y >= goalPosition.y)
+            {
+                DoWhenMadeItToGoalPosition();
+            }
         }
+        else
+        {
+            //heading down
+            if (handPositioner.transform.position.y <= goalPosition.y)
+            {
+                DoWhenMadeItToGoalPosition();
+            }
+        }
+
+        // Keep this around as the old way that caused some problems in case the new way causes problems
+        //Could calculate the flex space by making it slightly greater than the speed time deltafixed time, but would have to set an offset position as well
+        // if (YDistance <= distanceFlexRoom + attackData.goDownSpeed * .001f)
+        // {
+        //     DoWhenMadeItToGoalPosition();
+        // }
     }
-    
+
+    private void DoWhenMadeItToGoalPosition()
+    {
+        StopTraveling();
+        handPositioner.transform.position = new Vector3(handPositioner.position.x,
+            goalPosition.y, handPositioner.position.z);
+        OnCompletedTravel?.Invoke();
+    }
+
     public virtual void Initialize()
     {
         GetHandMaterials();
@@ -131,7 +157,7 @@ public class AttackType : MonoBehaviour
 
         OnCompletedTravel += DoWhenReachingGround;
 
-        attackSpeed = attackData.attackSpeed;
+        attackSpeed = attackData.goDownSpeed;
         startingDistanceFromGoal = Mathf.Abs(handPositioner.position.y - goalPosition.y);
 
         //Giving Direction a value starts up the Fixedupdate telling the hand which way to go
@@ -152,7 +178,7 @@ public class AttackType : MonoBehaviour
         startingDistanceFromGoal = Mathf.Abs(handPositioner.position.y - goalPosition.y);
         attackSpeed = attackData.goBackUpSpeed;
         Direction = new(0, 1, 0);
-        
+
         OnCompletedTravel = Cleanup;
     }
 
