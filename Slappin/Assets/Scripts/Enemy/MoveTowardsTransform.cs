@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -19,6 +20,7 @@ public class MoveTowardsTransform : MonoBehaviour, IHpAdjustmentListener
             thisEnemy = enemy;
         }
         else Debug.LogError("Walkscript doesn't have an enemy script");
+
         _rigidbody = GetComponent<Rigidbody>();
     }
 
@@ -30,6 +32,10 @@ public class MoveTowardsTransform : MonoBehaviour, IHpAdjustmentListener
         }
     }
 
+    private void OnEnable()
+    {
+    }
+
     private void OnDisable()
     {
         StopAllCoroutines();
@@ -38,11 +44,12 @@ public class MoveTowardsTransform : MonoBehaviour, IHpAdjustmentListener
     public bool IsInAttackRange()
     {
         return transform.localPosition.z + transform.localScale.z * .05
-                <= EnemyTarget.I.hurtLine.localPosition.z;
+               <= EnemyTarget.I.hurtLine.localPosition.z;
     }
 
     private void FixedUpdate()
     {
+        if (!thisEnemy.thisHealth.isAlive) return;
         if (IsInAttackRange() && walkSpeed > 0f)
         {
             _rigidbody.velocity = Vector3.zero;
@@ -93,8 +100,7 @@ public class MoveTowardsTransform : MonoBehaviour, IHpAdjustmentListener
 
     public float HandleDeath(int lastAttack, GameObject killer)
     {
-        StopAllCoroutines();
-        
+        _rigidbody.velocity = Vector3.zero;
         return 0;
     }
 }

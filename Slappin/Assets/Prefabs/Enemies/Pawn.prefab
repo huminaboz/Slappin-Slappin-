@@ -206,7 +206,7 @@ MonoBehaviour:
     m_Bits: 8
   rayDistance: 1.5
   groundOffset: -0.01
-  repositionSpeed: 50
+  repositionSpeed: 10
   showRaycastGizmo: 1
   forwardRayOffset: 0.5
   slopeDetectionDistance: 0.001

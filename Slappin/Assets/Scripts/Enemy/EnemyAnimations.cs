@@ -22,6 +22,7 @@ public class EnemyAnimations : MonoBehaviour, IHpAdjustmentListener
         RunFWD,
         GetHit, 
         Attack01,
+        Die,
         Dizzy,
         Victory,
         IdleNormal,
@@ -44,9 +45,7 @@ public class EnemyAnimations : MonoBehaviour, IHpAdjustmentListener
     {
         if (!animator) return;
         _stateInfo = animator.GetCurrentAnimatorStateInfo(0);
-        if (_stateInfo.IsName(currentClip) == false 
-            // || _stateInfo.loop
-            ) return;
+        if (_stateInfo.IsName(currentClip) == false) return;
         if (IsAnimationFinished(_stateInfo))
         {
             _callback?.Invoke();

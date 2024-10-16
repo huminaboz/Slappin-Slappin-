@@ -5,10 +5,10 @@ public class SlopeFollowing : MonoBehaviour
     public LayerMask groundLayer;           // The ground layer to detect
     public float rayDistance = 1.5f;        // How far the ray will check downwards
     public float groundOffset = 0f;         // Default offset above the ground after snapping (0 by default)
-    public float repositionSpeed = 2f;      // The speed at which the object moves to the ground (renamed)
+    public float repositionSpeed = 10f;      // The speed at which the object moves to the ground (renamed)
     public bool showRaycastGizmo = true;    // Show the debug ray in the scene view
     public float forwardRayOffset = 0.5f;   // Offset to cast ray in front of object for slope detection
-    public float slopeDetectionDistance = 1f; // Distance to cast the ray ahead of the object for slope detection
+    public float slopeDetectionDistance = .001f; // Distance to cast the ray ahead of the object for slope detection
 
     void Update()
     {

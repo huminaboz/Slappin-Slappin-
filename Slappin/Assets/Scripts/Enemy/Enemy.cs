@@ -51,7 +51,8 @@ public abstract class Enemy : MonoBehaviour, IHpAdjustmentListener, IObjectPool<
 
     private void Update()
     {
-        if (performBehavior is not null) performBehavior();
+        if (!thisHealth.isAlive) return;
+        performBehavior?.Invoke();
     }
 
     public void SwitchToAttackMode()
@@ -70,6 +71,8 @@ public abstract class Enemy : MonoBehaviour, IHpAdjustmentListener, IObjectPool<
 
     private void DecideNextAnimation()
     {
+        if (!thisHealth.isAlive) return;
+        
         //Called when completing some animations
         if (moveTowardsTransform.IsInAttackRange())
         {
@@ -88,10 +91,11 @@ public abstract class Enemy : MonoBehaviour, IHpAdjustmentListener, IObjectPool<
     {
         if (!thisHealth.isAlive) return;
         //Got hit feedback
-        if(thisMaterial) StartCoroutine(FlashRedCoroutine());
+        if (thisMaterial) StartCoroutine(FlashRedCoroutine());
         VFXSpawner.I.SpawnDamageNumber(damageAmount, transform.position);
         VFXSpawner.I.SpawnHitFX(transform);
         performBehavior = null;
+        
         _enemyAnimations?.Play(EnemyAnimations.AnimationFrames.GetHit,
             DecideNextAnimation);
     }
@@ -99,7 +103,7 @@ public abstract class Enemy : MonoBehaviour, IHpAdjustmentListener, IObjectPool<
     private IEnumerator FlashRedCoroutine()
     {
         float flashInterval = flashDuration / (flashCount * 2); // Time for one flash cycle (red to original color)
-        
+
         for (int i = 0; i < flashCount; i++)
         {
             thisMaterial.color = Color.red;
@@ -129,10 +133,21 @@ public abstract class Enemy : MonoBehaviour, IHpAdjustmentListener, IObjectPool<
 
         SFXPlayer.I.Play(AudioEventsStorage.I.enemyDied);
 
-        //Spin in a circle first
-        transform.DORotate(new Vector3(0, 720, 0), 1f, RotateMode.FastBeyond360)
-            .SetEase(Ease.Linear)
-            .OnComplete(ReturnObjectToPool);
+        if (_enemyAnimations)
+        {
+            _enemyAnimations.Play(EnemyAnimations.AnimationFrames.Die, () =>
+            {
+                //Let the final frame of die sit for a second
+                StartCoroutine(BozUtilities.DoAfterDelay(.2f, ReturnObjectToPool));
+            });
+        }
+        else
+        {
+            //Spin in a circle first
+            transform.DORotate(new Vector3(0, 720, 0), 1f, RotateMode.FastBeyond360)
+                .SetEase(Ease.Linear)
+                .OnComplete(ReturnObjectToPool);
+        }
 
         performBehavior = null;
 
