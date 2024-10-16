@@ -229,6 +229,8 @@ public class FlickAttack : AttackType
         _currentAction = null;
         _totalChargeTime = 0f;
         _currentChargeTime = 0f;
+        chargeFrame.SetActive(false);
+        hitFrame.SetActive(false);
         base.Cleanup();
     }
 }
