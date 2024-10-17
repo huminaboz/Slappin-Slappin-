@@ -12,6 +12,8 @@ public class Enemy_Turtle : Enemy, IObjectPool<Enemy_Turtle>
     private MoveTowardsTransform _moveTowardsTransform;
     private Tween attackTween;
 
+    private Collider _collider;
+    
     public override void SetupObjectFirstTime()
     {
         base.SetupObjectFirstTime();
@@ -24,6 +26,8 @@ public class Enemy_Turtle : Enemy, IObjectPool<Enemy_Turtle>
         {
             Debug.LogWarning("pawn didn't have a walk towards transform component");
         }
+        _collider = GetComponent<Collider>();
+        
     }
 
     public override void InitializeObjectFromPool()
@@ -53,6 +57,7 @@ public class Enemy_Turtle : Enemy, IObjectPool<Enemy_Turtle>
 
     public override float HandleDeath(int lastAttack, GameObject killer)
     {
+        _collider.enabled = false;
         // thisMaterial.color = Color.red;
         return base.HandleDeath(lastAttack, killer);
     }

@@ -49,7 +49,7 @@ public class Spawner : MonoBehaviour
             }
             else
             {
-                if(GetRandomNumberBetweenZeroAndOne() < .3f)
+                if(GetRandomNumberBetweenZeroAndOne() < .7f)
                 {
                     Enemy_Pawn enemy = ObjectPoolManager<Enemy_Pawn>.GetObject(pawnPrefab);
                     if (enemy is not null)
