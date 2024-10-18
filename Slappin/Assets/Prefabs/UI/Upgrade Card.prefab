@@ -36,7 +36,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 83.625114, y: -14.451}
+  m_AnchoredPosition: {x: 42.415222, y: -14.451}
   m_SizeDelta: {x: 41.83, y: 28.902}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5387472490962953840
@@ -728,6 +728,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2476714304695065922}
   - component: {fileID: 3405208563822318599}
+  - component: {fileID: 411365358097411827}
   m_Layer: 5
   m_Name: Price Container
   m_TagString: Untagged
@@ -754,7 +755,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
   m_AnchoredPosition: {x: 0.000034332, y: 14.450985}
-  m_SizeDelta: {x: 150, y: 28.902}
+  m_SizeDelta: {x: 0, y: 28.902}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &3405208563822318599
 MonoBehaviour:
@@ -774,7 +775,7 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 4
-  m_Spacing: 4.06
+  m_Spacing: 8.31
   m_ChildForceExpandWidth: 0
   m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 0
@@ -782,6 +783,20 @@ MonoBehaviour:
   m_ChildScaleWidth: 1
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &411365358097411827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5974333979665339345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3245ec927659c4140ac4f8d17403cc18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalFit: 2
+  m_VerticalFit: 0
 --- !u!1 &7172798784182282266
 GameObject:
   m_ObjectHideFlags: 0

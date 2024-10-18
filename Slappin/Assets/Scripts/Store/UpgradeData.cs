@@ -11,6 +11,7 @@ public class UpgradeData : MonoBehaviour
     //Should add this component to the upgrade card on creation 
     [SerializeField] public SO_Upgrade upgradeSO;
 
+    private UpgradeCard_Appearance _upgradeCardAppearance;
 
     public delegate void OnBoughtSomething();
 
@@ -18,6 +19,16 @@ public class UpgradeData : MonoBehaviour
 
     public int level = 1;
     // public 
+
+    private void Awake()
+    {
+        _upgradeCardAppearance = GetComponentInChildren<UpgradeCard_Appearance>();
+    }
+
+    private void Start()
+    {
+        _upgradeCardAppearance.Initialize();
+    }
 
     public void OnPurchased()
     {

@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8327b2e1f1789184f9cadc6d7f88cf8d, type: 3}
-  m_Name: SO_Upgrade_Test
+  m_Name: SO_Upgrade_SlapArea
   m_EditorClassIdentifier: 
-  title: Test
+  title: Slap Area
   baseValue: 1.1
   basePrice: 5
   upgradeType: 0
   numberType: 2
-  newValueGrowthCurve: {fileID: 11400000, guid: 33c126c1a22491b419a8a8c9cabed4cf, type: 2}
-  newPriceGrowthCurve: {fileID: 11400000, guid: 99b05994e507f8c488a71b2c3f31feab, type: 2}
+  newValueGrowthCurve: {fileID: 11400000, guid: afbe9aa71dfe15b42939dc4d02e85920, type: 2}
+  newPriceGrowthCurve: {fileID: 11400000, guid: a0aef777394841c4f99ccadc23c44c3e, type: 2}
   maxLevel: 1000

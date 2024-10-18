@@ -33,7 +33,9 @@ public class UpgradeCard_Appearance : MonoBehaviour
     private Color _defaultPriceBgColor;
     private Color _defaultPriceTextColor;
 
-    private void Awake()
+
+    //TODO:: This will get called when opening the menu in the future
+    public void Initialize()
     {
         upgradeData = GetComponent<UpgradeData>();
         shadowDefault = shadowImage.color;
@@ -41,8 +43,11 @@ public class UpgradeCard_Appearance : MonoBehaviour
         _defaultPriceBgColor = priceBgColor.color;
         _defaultPriceTextColor = priceText.color;
         thisButton = GetComponent<Button>();
+        gameObject.name = upgradeData.upgradeSO.title;
+        titleText.text = upgradeData.upgradeSO.title;
+        UpdateCardAppearance();
     }
-
+    
     private void OnEnable()
     {
         UpgradeData.OnPurchaseMade += UpdateCardAppearance;
@@ -54,20 +59,6 @@ public class UpgradeCard_Appearance : MonoBehaviour
         UpgradeData.OnPurchaseMade -= UpdateCardAppearance;
         StoreUIManager.OnDebugUpdateStoreUI -= UpdateCardAppearance;
     }
-
-    private void Start()
-    {
-        Initialize();
-    }
-
-    //TODO:: This will get called when opening the menu in the future
-    public void Initialize()
-    {
-        gameObject.name = upgradeData.upgradeSO.title;
-        titleText.text = upgradeData.upgradeSO.title;
-        UpdateCardAppearance();
-    }
-
 
     private void UpdateCardAppearance()
     {
