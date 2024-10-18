@@ -1,0 +1,7104 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!29 &1
+OcclusionCullingSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_OcclusionBakeSettings:
+    smallestOccluder: 5
+    smallestHole: 0.25
+    backfaceThreshold: 100
+  m_SceneGUID: 00000000000000000000000000000000
+  m_OcclusionCullingData: {fileID: 0}
+--- !u!104 &2
+RenderSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 9
+  m_Fog: 0
+  m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  m_FogMode: 3
+  m_FogDensity: 0.01
+  m_LinearFogStart: 0
+  m_LinearFogEnd: 300
+  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
+  m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
+  m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
+  m_AmbientIntensity: 1
+  m_AmbientMode: 0
+  m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
+  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_HaloStrength: 0.5
+  m_FlareStrength: 1
+  m_FlareFadeSpeed: 3
+  m_HaloTexture: {fileID: 0}
+  m_SpotCookie: {fileID: 10001, guid: 0000000000000000e000000000000000, type: 0}
+  m_DefaultReflectionMode: 0
+  m_DefaultReflectionResolution: 128
+  m_ReflectionBounces: 1
+  m_ReflectionIntensity: 1
+  m_CustomReflection: {fileID: 0}
+  m_Sun: {fileID: 0}
+  m_UseRadianceAmbientProbe: 0
+--- !u!157 &3
+LightmapSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 12
+  m_GIWorkflowMode: 1
+  m_GISettings:
+    serializedVersion: 2
+    m_BounceScale: 1
+    m_IndirectOutputScale: 1
+    m_AlbedoBoost: 1
+    m_EnvironmentLightingMode: 0
+    m_EnableBakedLightmaps: 1
+    m_EnableRealtimeLightmaps: 0
+  m_LightmapEditorSettings:
+    serializedVersion: 12
+    m_Resolution: 2
+    m_BakeResolution: 40
+    m_AtlasSize: 1024
+    m_AO: 0
+    m_AOMaxDistance: 1
+    m_CompAOExponent: 1
+    m_CompAOExponentDirect: 0
+    m_ExtractAmbientOcclusion: 0
+    m_Padding: 2
+    m_LightmapParameters: {fileID: 0}
+    m_LightmapsBakeMode: 1
+    m_TextureCompression: 1
+    m_FinalGather: 0
+    m_FinalGatherFiltering: 1
+    m_FinalGatherRayCount: 256
+    m_ReflectionCompression: 2
+    m_MixedBakeMode: 2
+    m_BakeBackend: 1
+    m_PVRSampling: 1
+    m_PVRDirectSampleCount: 32
+    m_PVRSampleCount: 512
+    m_PVRBounces: 2
+    m_PVREnvironmentSampleCount: 256
+    m_PVREnvironmentReferencePointCount: 2048
+    m_PVRFilteringMode: 1
+    m_PVRDenoiserTypeDirect: 1
+    m_PVRDenoiserTypeIndirect: 1
+    m_PVRDenoiserTypeAO: 1
+    m_PVRFilterTypeDirect: 0
+    m_PVRFilterTypeIndirect: 0
+    m_PVRFilterTypeAO: 0
+    m_PVREnvironmentMIS: 1
+    m_PVRCulling: 1
+    m_PVRFilteringGaussRadiusDirect: 1
+    m_PVRFilteringGaussRadiusIndirect: 5
+    m_PVRFilteringGaussRadiusAO: 2
+    m_PVRFilteringAtrousPositionSigmaDirect: 0.5
+    m_PVRFilteringAtrousPositionSigmaIndirect: 2
+    m_PVRFilteringAtrousPositionSigmaAO: 1
+    m_ExportTrainingData: 0
+    m_TrainingDataDestination: TrainingData
+    m_LightProbeSampleCountMultiplier: 4
+  m_LightingDataAsset: {fileID: 0}
+  m_LightingSettings: {fileID: 0}
+--- !u!196 &4
+NavMeshSettings:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_BuildSettings:
+    serializedVersion: 3
+    agentTypeID: 0
+    agentRadius: 0.5
+    agentHeight: 2
+    agentSlope: 45
+    agentClimb: 0.4
+    ledgeDropHeight: 0
+    maxJumpAcrossDistance: 0
+    minRegionArea: 2
+    manualCellSize: 0
+    cellSize: 0.16666667
+    manualTileSize: 0
+    tileSize: 256
+    buildHeightMesh: 0
+    maxJobWorkers: 0
+    preserveTilesOutsideBounds: 0
+    debug:
+      m_Flags: 0
+  m_NavMeshData: {fileID: 0}
+--- !u!1 &189627442
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 189627443}
+  - component: {fileID: 189627445}
+  - component: {fileID: 189627444}
+  m_Layer: 5
+  m_Name: Price
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &189627443
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 189627442}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1043117743}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -923, y: 332}
+  m_SizeDelta: {x: 200, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &189627444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 189627442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: 'Price
+
+    50
+
+    56
+
+    62
+
+    68
+
+    75
+
+    83
+
+    92
+
+    101
+
+    112
+
+    123
+
+    136
+
+    151
+
+    167
+
+    184
+
+    203
+
+    225
+
+    248
+
+    274
+
+    303
+
+    335
+
+    370
+
+    409
+
+    452
+
+    499
+
+    552
+
+    610
+
+    674
+
+    744
+
+    823
+
+    909
+
+    1.01k
+
+    1.11k
+
+    1.23k
+
+    1.36k
+
+    1.5k
+
+    1.66k
+
+    1.83k
+
+    2.02k
+
+    2.24k
+
+    2.47k
+
+    2.73k
+
+    3.02k
+
+    3.34k
+
+    3.69k
+
+    4.07k
+
+    4.5k
+
+    4.98k
+
+    5.5k
+
+    6.08k
+
+    6.72k
+
+    7.42k
+
+    8.2k
+
+    9.06k
+
+    10.02k
+
+    11.07k
+
+    12.24k
+
+    13.52k
+
+    14.94k
+
+    16.52k
+
+    18.25k
+
+    20.17k
+
+    22.29k
+
+    24.64k
+
+    27.23k
+
+    30.09k
+
+    33.26k
+
+    36.76k
+
+    40.62k
+
+    44.89k
+
+    49.61k
+
+    54.83k
+
+    60.6k
+
+    66.97k
+
+    74.02k
+
+    81.8k
+
+    90.4k
+
+    99.91k
+
+    110.42k
+
+    122.03k
+
+    134.87k
+
+    149.05k
+
+    164.72k
+
+    182.05k
+
+    201.19k
+
+    222.35k
+
+    245.74k
+
+    271.58k
+
+    300.15k
+
+    331.71k
+
+    366.6k
+
+    405.16k
+
+    447.77k
+
+    494.86k
+
+    546.9k
+
+    604.42k
+
+    667.99k
+
+    738.24k
+
+    815.88k
+
+    901.69k
+
+    996.52k
+
+    1.1M
+
+    1.22M
+
+    1.35M
+
+    1.49M
+
+    1.64M
+
+    1.82M
+
+    2.01M
+
+    2.22M
+
+    2.45M
+
+    2.71M
+
+    2.99M
+
+    3.31M
+
+    3.66M
+
+    4.04M
+
+    4.47M
+
+    4.94M
+
+    5.45M
+
+    6.03M
+
+    6.66M
+
+    7.36M
+
+    8.14M
+
+    8.99M
+
+    9.94M
+
+    10.98M
+
+    12.14M
+
+    13.42M
+
+    14.83M
+
+    16.39M
+
+    18.11M
+
+    20.02M
+
+    22.12M
+
+    24.45M
+
+    27.02M
+
+    29.86M
+
+    33M
+
+    36.47M
+
+    40.31M
+
+    44.55M
+
+    49.23M
+
+    54.41M
+
+    60.13M
+
+    66.45M
+
+    73.44M
+
+    81.17M
+
+    89.7M
+
+    99.14M
+
+    109.56M
+
+    121.09M
+
+    133.82M
+
+    147.9M
+
+    163.45M
+
+    180.64M
+
+    199.64M
+
+    220.64M
+
+    243.84M
+
+    269.48M
+
+    297.83M
+
+    329.15M
+
+    363.77M
+
+    402.02M
+
+    444.31M
+
+    491.03M
+
+    542.68M
+
+    599.75M
+
+    662.83M
+
+    732.54M
+
+    809.58M
+
+    894.72M
+
+    988.82M
+
+    1.09B
+
+    1.21B
+
+    1.33B
+
+    1.48B
+
+    1.63B
+
+    1.8B
+
+    1.99B
+
+    2.2B
+
+    2.43B
+
+    2.69B
+
+    2.97B
+
+    3.28B
+
+    3.63B
+
+    4.01B
+
+    4.43B
+
+    4.9B
+
+    5.41B
+
+    5.98B
+
+    6.61B
+
+    7.31B
+
+    8.07B
+
+    8.92B
+
+    9.86B
+
+    10.9B
+
+    12.05B
+
+    13.31B
+
+    14.71B
+
+    16.26B
+
+    17.97B
+
+    19.86B
+
+    21.95B
+
+    24.26B
+
+    26.81B
+
+    29.63B
+
+    32.75B
+
+    36.19B
+
+    40B
+
+    44.2B
+
+    48.85B
+
+    53.99B
+
+    59.67B
+
+    65.94B
+
+    72.88B
+
+    80.54B
+
+    89.01B
+
+    98.37B
+
+    108.72B
+
+    120.15B
+
+    132.79B
+
+    146.75B
+
+    162.19B
+
+    179.25B
+
+    198.1B
+
+    218.93B
+
+    241.96B
+
+    267.4B
+
+    295.53B
+
+    326.61B
+
+    360.96B
+
+    398.92B
+
+    440.87B
+
+    487.24B
+
+    538.48B
+
+    595.12B
+
+    657.71B
+
+    726.88B
+
+    803.32B
+
+    887.81B
+
+    981.18B
+
+    1.08T
+
+    1.2T
+
+    1.32T
+
+    1.46T
+
+    1.62T
+
+    1.79T
+
+    1.98T
+
+    2.18T
+
+    2.41T
+
+    2.67T
+
+    2.95T
+
+    3.26T
+
+    3.6T
+
+    3.98T
+
+    4.4T
+
+    4.86T
+
+    5.37T
+
+    5.94T
+
+    6.56T
+
+    7.25T
+
+    8.01T
+
+    8.86T
+
+    9.79T
+
+    10.82T
+
+    11.95T
+
+    13.21T
+
+    14.6T
+
+    16.14T
+
+    17.83T
+
+    19.71T
+
+    21.78T
+
+    24.07T
+
+    26.6T
+
+    29.4T
+
+    32.49T
+
+    35.91T
+
+    39.69T
+
+    43.86T
+
+    48.47T
+
+    53.57T
+
+    59.2T
+
+    65.43T
+
+    72.31T
+
+    79.92T
+
+    88.32T
+
+    97.61T
+
+    107.88T
+
+    119.22T
+
+    131.76T
+
+    145.62T
+
+    160.94T
+
+    177.86T
+
+    196.57T
+
+    217.24T
+
+    240.09T
+
+    265.34T
+
+    293.24T
+
+    324.08T
+
+    358.17T
+
+    395.84T
+
+    437.47T
+
+    483.48T
+
+    534.32T
+
+    590.52T
+
+    652.63T
+
+    721.26T
+
+    797.12T
+
+    880.95T
+
+    973.6T
+
+    1.08Q
+
+    1.19Q
+
+    1.31Q
+
+    1.45Q
+
+    1.61Q
+
+    1.77Q
+
+    1.96Q
+
+    2.17Q
+
+    2.39Q
+
+    2.65Q
+
+    2.92Q
+
+    3.23Q
+
+    3.57Q
+
+    3.95Q
+
+    4.36Q
+
+    4.82Q
+
+    5.33Q
+
+    5.89Q
+
+    6.51Q
+
+    7.19Q
+
+    7.95Q
+
+    8.79Q
+
+    9.71Q
+
+    10.73Q
+
+    11.86Q
+
+    13.11Q
+
+    14.49Q
+
+    16.01Q
+
+    17.69Q
+
+    19.56Q
+
+    21.61Q
+
+    23.88Q
+
+    26.4Q
+
+    29.17Q
+
+    32.24Q
+
+    35.63Q
+
+    39.38Q
+
+    43.52Q
+
+    48.1Q
+
+    53.16Q
+
+    58.75Q
+
+    64.93Q
+
+    71.75Q
+
+    79.3Q
+
+    87.64Q
+
+    96.86Q
+
+    107.04Q
+
+    118.3Q
+
+    130.74Q
+
+    144.5Q
+
+    159.69Q
+
+    176.49Q
+
+    195.05Q
+
+    215.56Q
+
+    238.23Q
+
+    263.29Q
+
+    290.98Q
+
+    321.58Q
+
+    355.4Q
+
+    392.78Q
+
+    434.09Q
+
+    479.74Q
+
+    530.2Q
+
+    585.96Q
+
+    647.58Q
+
+    715.69Q
+
+    790.96Q
+
+    874.15Q
+
+    966.08Q
+
+    1.07E
+
+    1.18E
+
+    1.3E
+
+    1.44E
+
+    1.59E
+
+    1.76E
+
+    1.95E
+
+    2.15E
+
+    2.38E
+
+    2.63E
+
+    2.9E
+
+    3.21E
+
+    3.54E
+
+    3.92E
+
+    4.33E
+
+    4.79E
+
+    5.29E
+
+    5.84E
+
+    6.46E
+
+    7.14E
+
+    7.89E
+
+    8.72E
+
+    9.64E
+
+    10.65E
+
+    11.77E
+
+    13.01E
+
+    14.38E
+
+    15.89E
+
+    17.56E
+
+    19.4E
+
+    21.45E
+
+    23.7E
+
+    26.19E
+
+    28.95E
+
+    31.99E
+
+    35.36E
+
+    39.08E
+
+    43.18E
+
+    47.73E
+
+    52.75E
+
+    58.29E
+
+    64.42E
+
+    71.2E
+
+    78.69E
+
+    86.96E
+
+    96.11E
+
+    106.22E
+
+    117.39E
+
+    129.73E
+
+    143.38E
+
+    158.46E
+
+    175.12E
+
+    193.54E
+
+    213.9E
+
+    236.39E
+
+    261.25E
+
+    288.73E
+
+    319.1E
+
+    352.66E
+
+    389.74E
+
+    430.74E
+
+    476.04E
+
+    526.1E
+
+    581.43E
+
+    642.58E
+
+    710.16E
+
+    784.85E
+
+    867.39E
+
+    958.62E
+
+    1059.44E
+
+    1170.86E
+
+    1294E
+
+    1430.09E
+
+    1580.49E
+
+    1746.71E
+
+    1930.42E
+
+    2133.44E
+
+    2357.82E
+
+    2605.79E
+
+    2879.84E
+
+    3182.73E
+
+    3517.45E
+
+    3887.38E
+
+    4296.23E
+
+    4748.06E
+
+    5247.43E
+
+    5799.3E
+
+    6409.21E
+
+    7083.28E
+
+    7828.23E
+
+    8651.55E
+
+    9561.43E
+
+    10566.99E
+
+    11678.36E
+
+    12906.56E
+
+    14263.99E
+
+    15764.13E
+
+    17422.03E
+
+    19254.36E
+
+    21279.33E
+
+    23517.35E
+
+    25990.65E
+
+    28724.07E
+
+    31745.07E
+
+    35083.68E
+
+    38773.55E
+
+    42851.34E
+
+    47357.98E
+
+    52338.78E
+
+    57843.21E
+
+    63926.78E
+
+    70649.91E
+
+    78080.11E
+
+    86292.06E
+
+    95367.34E
+
+    105397.4E
+
+    116482E
+
+    128732.3E
+
+    142271.6E
+
+    157234.1E
+
+    173771E
+
+    192046.4E
+
+    212243.7E
+
+    234566.1E
+
+    259235.3E
+
+    286500E
+
+    316630.9E
+
+    349930.8E
+
+    386734.2E
+
+    427406.8E
+
+    472358.5E
+
+    522036.2E
+
+    576938.3E
+
+    637616.9E
+
+    704674.5E
+
+    778787.6E
+
+    860692.1E
+
+    951210.5E
+
+    1051253E
+
+    1161812E
+
+    1284004E
+
+    1419041E
+
+    1568281E
+
+    1733222E
+
+    1915504E
+
+    2116964E
+
+    2339604E
+
+    2585658E
+
+    2857601E
+
+    3158132E
+
+    3490284E
+
+    3857354E
+
+    4263030E
+
+    4711387E
+
+    5206880E
+
+    5754505E
+
+    6359702E
+
+    7028548E
+
+    7767764E
+
+    8584693E
+
+    9487575E
+
+    10485380E
+
+    11588120E
+
+    12806880E
+
+    14153770E
+
+    15642370E
+
+    17287460E
+
+    19105570E
+
+    21114970E
+
+    23335620E
+
+    25789900E
+
+    28502210E
+
+    31499760E
+
+    34812700E
+
+    38473930E
+
+    42520360E
+
+    46992200E
+
+    51934330E
+
+    57396440E
+
+    63432780E
+
+    70104220E
+
+    77477040E
+
+    85625230E
+
+    94630730E
+
+    104583000E
+
+    115582300E
+
+    127738000E
+
+    141172100E
+
+    156019700E
+
+    172428200E
+
+    190563000E
+
+    210604400E
+
+    232753500E
+
+    257233000E
+
+    284286000E
+
+    314185300E
+
+    347228000E
+
+    383745700E
+
+    424105500E
+
+    468708400E
+
+    518004100E
+
+    572482100E
+
+    632689700E
+
+    699231800E
+
+    772769500E
+
+    854044400E
+
+    943863500E
+
+    1043129000E
+
+    1152838000E
+
+    1274082000E
+
+    1408081000E
+
+    1556168000E
+
+    1719829000E
+
+    1900709000E
+
+    2100605000E
+
+    2321533000E
+
+    2565687000E
+
+    2835518000E
+
+    3133740000E
+
+    3463312000E
+
+    3827561000E
+
+    4230103000E
+
+    4674979000E
+
+    5166663000E
+
+    5710037000E
+
+    6310582000E
+
+    6974260000E
+
+    7707738000E
+
+    8518387000E
+
+    9414259000E
+
+    10404390000E
+
+    11498610000E
+
+    12707910000E
+
+    14044450000E
+
+    15521490000E
+
+    17153940000E
+
+    18958010000E
+
+    20951800000E
+
+    23155380000E
+
+    25590610000E
+
+    28282060000E
+
+    31256470000E
+
+    34543690000E
+
+    38176760000E
+
+    42191790000E
+
+    46629240000E
+
+    51533200000E
+
+    56952910000E
+
+    62942850000E
+
+    69562490000E
+
+    76878620000E
+
+    84963890000E
+
+    93899470000E
+
+    103775200000E
+
+    114689200000E
+
+    126751400000E
+
+    140081800000E
+
+    154814100000E
+
+    171096400000E
+
+    189090500000E
+
+    208977800000E
+
+    230955800000E
+
+    255245200000E
+
+    282090200000E
+
+    311757400000E
+
+    344544700000E
+
+    380783200000E
+
+    420829900000E
+
+    465088200000E
+
+    514001100000E
+
+    568058200000E
+
+    627805300000E
+
+    693831100000E
+
+    766800800000E
+
+    847444600000E
+
+    936569700000E
+
+    1035076000000E
+
+    1143934000000E
+
+    1264241000000E
+
+    1397200000000E
+
+    1544142000000E
+
+    1706552000000E
+
+    1886028000000E
+
+    2084380000000E
+
+    2303593000000E
+
+    2545860000000E
+
+    2813628000000E
+
+    3109535000000E
+
+    3436563000000E
+
+    3797983000000E
+
+    4197414000000E
+
+    4638889000000E
+
+    5126757000000E
+
+    5665934000000E
+
+    6261816000000E
+
+    6920366000000E
+
+    7648234000000E
+
+    8452593000000E
+
+    9341545000000E
+
+    10323990000000E
+
+    11409750000000E
+
+    12609810000000E
+
+    13935970000000E
+
+    15401600000000E
+
+    17021380000000E
+
+    18811510000000E
+
+    20790060000000E
+
+    22976530000000E
+
+    25392960000000E
+
+    28063510000000E
+
+    31014930000000E
+
+    34277010000000E
+
+    37881890000000E
+
+    41865900000000E
+
+    46268910000000E
+
+    51134970000000E
+
+    56513230000000E
+
+    62456690000000E
+
+    69025210000000E
+
+    76284530000000E
+
+    84307320000000E
+
+    93174570000000E
+
+    102973700000000E
+
+    113803300000000E
+
+    125771900000000E
+
+    138999300000000E
+
+    153618900000000E
+
+    169774900000000E
+
+    187630000000000E
+
+    207362900000000E
+
+    229171100000000E
+
+    253274700000000E
+
+    279911500000000E
+
+    309349500000000E
+
+    341883600000000E
+
+    377839200000000E
+
+    417579500000000E
+
+    461496000000000E
+
+    510031100000000E
+
+    563670600000000E
+
+    622951500000000E
+
+    688472100000000E
+
+    760878200000000E
+
+    840899200000000E
+
+    929335800000000E
+
+    1027073000000000E
+
+    1135099000000000E
+
+    1254476000000000E
+
+    1386408000000000E
+
+    1532216000000000E
+
+    1693358000000000E
+
+    1871461000000000E
+
+    2068281000000000E
+
+    2285801000000000E
+
+    2526197000000000E
+
+    2791875000000000E
+
+    3085518000000000E
+
+    3410019000000000E
+
+    3768649000000000E
+
+    4164995000000000E
+
+    4603024000000000E
+
+    5087159000000000E
+
+    5622172000000000E
+
+    6213451000000000E
+
+    6866915000000000E
+
+    7589103000000000E
+
+    8387307000000000E
+
+    9269394000000000E
+
+    10244250000000000E
+
+    11321630000000000E
+
+    12512320000000000E
+
+    13828330000000000E
+
+    15282650000000000E
+
+    16889910000000000E
+
+    18666210000000000E
+
+    20629320000000000E
+
+    22799070000000000E
+
+    25196820000000000E
+
+    27846760000000000E
+
+    30775380000000000E
+
+    34012000000000000E
+
+    37589300000000000E
+
+    41542540000000000E
+
+    45911540000000000E
+
+    50740020000000000E
+
+    56076310000000000E
+
+    61974290000000000E
+
+    68492080000000000E
+
+    75695330000000000E
+
+    83656140000000000E
+
+    92454200000000000E
+
+    102178300000000000E
+
+    112924300000000000E
+
+    124800500000000000E
+
+    137925700000000000E
+
+    152431200000000000E
+
+    168463600000000000E
+
+    186180800000000000E
+
+    205761200000000000E
+
+    227401000000000000E
+
+    251316600000000000E
+
+    277749500000000000E
+
+    306960200000000000E
+
+    339242900000000000E
+
+    374920900000000000E
+
+    414351000000000000E
+
+    457931500000000000E
+
+    506091800000000000E
+
+    559317000000000000E
+
+    618140000000000000E
+
+    683149300000000000E
+
+    755001300000000000E
+
+    834404300000000000E
+
+    922157900000000000E
+
+    1019141000000000000E
+
+    1126323000000000000E
+
+    1244787000000000000E
+
+    1375700000000000000E
+
+    1520381000000000000E
+
+    1680279000000000000E
+
+    1856992000000000000E
+
+    2052306000000000000E
+
+    2268146000000000000E
+
+    2506685000000000000E
+
+    2770311000000000000E
+
+    3061663000000000000E
+
+    3383682000000000000E
+
+    3739540000000000000E
+
+    4132825000000000000E
+
+    4567471000000000000E
+
+    5047829000000000000E
+
+    5578747000000000000E
+
+    6165460000000000000E
+
+    6813877000000000000E
+
+    7530487000000000000E
+
+    8322462000000000000E
+
+    9197800000000000000E
+
+    10165120000000000000E
+
+    11234180000000000000E
+
+    12415670000000000000E
+
+    13721420000000000000E
+
+    15164610000000000000E
+
+    16759460000000000000E
+
+    18522040000000000000E
+
+    20469980000000000000E
+
+    22622800000000000000E
+
+    25002210000000000000E
+
+    27631670000000000000E
+
+    30537680000000000000E
+
+    33749300000000000000E
+
+    37298690000000000000E
+
+    41221680000000000000E
+
+    45556930000000000000E
+
+    50348120000000000000E
+
+    55643190000000000000E
+
+    61495140000000000000E
+
+    67963050000000000000E
+
+    75110670000000000000E
+
+    83010010000000000000E
+
+    91740110000000000000E
+
+    101388300000000000000E
+
+    112052100000000000000E
+
+    123836600000000000000E
+
+    136860400000000000000E
+
+    151253900000000000000E
+
+    167161100000000000000E
+
+    184742700000000000000E
+
+    204172000000000000000E
+
+    225644600000000000000E
+
+    249375400000000000000E
+
+    275602100000000000000E
+
+    304589300000000000000E
+
+    336622700000000000000E
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE'
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 36
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &189627445
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 189627442}
+  m_CullTransparentMesh: 1
+--- !u!1 &1043117742
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1043117743}
+  - component: {fileID: 1043117744}
+  - component: {fileID: 1043117747}
+  m_Layer: 5
+  m_Name: Debug Numbers Tester
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1043117743
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1043117742}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1854909081}
+  - {fileID: 1583410621}
+  - {fileID: 2107330068}
+  - {fileID: 1855121876}
+  - {fileID: 189627443}
+  m_Father: {fileID: 2130420860}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -1110.59, y: -256.60995}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1043117744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1043117742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55d1401588e50834086900fab8030c48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  upgradeSO: {fileID: 11400000, guid: e2e6aeb4304088d4aa394d713f6d0f17, type: 2}
+  upgradeName: {fileID: 1583410622}
+  levelText: {fileID: 2107330069}
+  value: {fileID: 1855121877}
+  price: {fileID: 189627444}
+  updateValues: 0.329
+--- !u!114 &1043117747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1043117742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3245ec927659c4140ac4f8d17403cc18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalFit: 2
+  m_VerticalFit: 2
+--- !u!1 &1251680290
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1251680293}
+  - component: {fileID: 1251680292}
+  - component: {fileID: 1251680291}
+  m_Layer: 0
+  m_Name: EventSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1251680291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1251680290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
+  m_HorizontalAxis: Horizontal
+  m_VerticalAxis: Vertical
+  m_SubmitButton: Submit
+  m_CancelButton: Cancel
+  m_InputActionsPerSecond: 10
+  m_RepeatDelay: 0.5
+  m_ForceModuleActive: 0
+--- !u!114 &1251680292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1251680290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 10
+--- !u!4 &1251680293
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1251680290}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1583410620
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1583410621}
+  - component: {fileID: 1583410623}
+  - component: {fileID: 1583410622}
+  m_Layer: 5
+  m_Name: Title
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1583410621
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1583410620}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1043117743}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -1505.031, y: 423.42133}
+  m_SizeDelta: {x: 543.938, y: 90.8427}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1583410622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1583410620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: SO_Upgrade_SlapDamage
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 36
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1583410623
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1583410620}
+  m_CullTransparentMesh: 1
+--- !u!1 &1664802838
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1664802841}
+  - component: {fileID: 1664802840}
+  - component: {fileID: 1664802839}
+  m_Layer: 0
+  m_Name: Camera
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!81 &1664802839
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1664802838}
+  m_Enabled: 1
+--- !u!20 &1664802840
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1664802838}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0.75, g: 0.8472222, b: 1, a: 0}
+  m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
+  m_Iso: 200
+  m_ShutterSpeed: 0.005
+  m_Aperture: 16
+  m_FocusDistance: 10
+  m_FocalLength: 50
+  m_BladeCount: 5
+  m_Curvature: {x: 2, y: 11}
+  m_BarrelClipping: 0.25
+  m_Anamorphism: 0
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+--- !u!4 &1664802841
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1664802838}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -153.1014, y: 284.01364, z: 0.3497019}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1854909080
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1854909081}
+  - component: {fileID: 1854909083}
+  - component: {fileID: 1854909082}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1854909081
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1854909080}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1043117743}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -2922.336, y: -29217.447}
+  m_SizeDelta: {x: 42631.207, y: 59721.363}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1854909082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1854909080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.122641504, g: 0.122641504, b: 0.122641504, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1854909083
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1854909080}
+  m_CullTransparentMesh: 1
+--- !u!1 &1855121875
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1855121876}
+  - component: {fileID: 1855121878}
+  - component: {fileID: 1855121877}
+  m_Layer: 5
+  m_Name: Value
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1855121876
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1855121875}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1043117743}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -1367, y: 332}
+  m_SizeDelta: {x: 200, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1855121877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1855121875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: 'Value
+
+    1.00%
+
+    1.11%
+
+    1.22%
+
+    1.35%
+
+    1.49%
+
+    1.65%
+
+    1.82%
+
+    2.01%
+
+    2.23%
+
+    2.46%
+
+    2.72%
+
+    3.00%
+
+    3.32%
+
+    3.67%
+
+    4.06%
+
+    4.48%
+
+    4.95%
+
+    5.47%
+
+    6.05%
+
+    6.69%
+
+    7.39%
+
+    8.17%
+
+    9.03%
+
+    9.97%
+
+    11.02%
+
+    12.18%
+
+    13.46%
+
+    14.88%
+
+    16.44%
+
+    18.17%
+
+    20.09%
+
+    22.20%
+
+    24.53%
+
+    27.11%
+
+    29.96%
+
+    33.12%
+
+    36.60%
+
+    40.45%
+
+    44.70%
+
+    49.40%
+
+    54.60%
+
+    60.34%
+
+    66.69%
+
+    73.70%
+
+    81.45%
+
+    90.02%
+
+    99.48%
+
+    109.95%
+
+    121.51%
+
+    134.29%
+
+    148.41%
+
+    164.02%
+
+    181.27%
+
+    200.34%
+
+    221.41%
+
+    244.69%
+
+    270.43%
+
+    298.87%
+
+    330.30%
+
+    365.04%
+
+    403.43%
+
+    445.86%
+
+    492.75%
+
+    544.57%
+
+    601.85%
+
+    665.14%
+
+    735.10%
+
+    812.41%
+
+    897.85%
+
+    992.27%
+
+    1096.63%
+
+    1211.97%
+
+    1339.43%
+
+    1480.30%
+
+    1635.99%
+
+    1808.04%
+
+    1998.20%
+
+    2208.35%
+
+    2440.60%
+
+    2697.28%
+
+    2980.96%
+
+    3294.47%
+
+    3640.95%
+
+    4023.87%
+
+    4447.07%
+
+    4914.77%
+
+    5431.66%
+
+    6002.91%
+
+    6634.25%
+
+    7331.98%
+
+    8103.08%
+
+    8955.30%
+
+    9897.13%
+
+    10938.02%
+
+    12088.39%
+
+    13359.73%
+
+    14764.79%
+
+    16317.60%
+
+    18033.75%
+
+    19930.38%
+
+    22026.46%
+
+    24343.02%
+
+    26903.18%
+
+    29732.62%
+
+    32859.64%
+
+    36315.50%
+
+    40134.85%
+
+    44355.85%
+
+    49020.81%
+
+    54176.39%
+
+    59874.14%
+
+    66171.19%
+
+    73130.43%
+
+    80821.66%
+
+    89321.77%
+
+    98715.77%
+
+    109097.80%
+
+    120571.70%
+
+    133252.40%
+
+    147266.70%
+
+    162754.80%
+
+    179871.90%
+
+    198789.10%
+
+    219696.00%
+
+    242801.70%
+
+    268337.30%
+
+    296558.70%
+
+    327747.80%
+
+    362217.50%
+
+    400312.40%
+
+    442413.40%
+
+    488942.60%
+
+    540364.80%
+
+    597195.80%
+
+    660003.60%
+
+    729416.40%
+
+    806130.00%
+
+    890910.90%
+
+    984609.30%
+
+    1088162.00%
+
+    1202604.00%
+
+    1329084.00%
+
+    1468864.00%
+
+    1623346.00%
+
+    1794076.00%
+
+    1982759.00%
+
+    2191289.00%
+
+    2421747.00%
+
+    2676446.00%
+
+    2957931.00%
+
+    3269017.00%
+
+    3612824.00%
+
+    3992786.00%
+
+    4412713.00%
+
+    4876804.00%
+
+    5389699.00%
+
+    5956540.00%
+
+    6582992.00%
+
+    7275334.00%
+
+    8040490.00%
+
+    8886111.00%
+
+    9820675.00%
+
+    10853530.00%
+
+    11995010.00%
+
+    13256510.00%
+
+    14650720.00%
+
+    16191560.00%
+
+    17894440.00%
+
+    19776420.00%
+
+    21856300.00%
+
+    24154950.00%
+
+    26695360.00%
+
+    29502950.00%
+
+    32605810.00%
+
+    36034940.00%
+
+    39824780.00%
+
+    44013210.00%
+
+    48642140.00%
+
+    53757890.00%
+
+    59411580.00%
+
+    65659970.00%
+
+    72565520.00%
+
+    80197330.00%
+
+    88631780.00%
+
+    97953130.00%
+
+    108255000.00%
+
+    119640300.00%
+
+    132223000.00%
+
+    146129100.00%
+
+    161497400.00%
+
+    178482300.00%
+
+    197253500.00%
+
+    217998900.00%
+
+    240926200.00%
+
+    266264200.00%
+
+    294267600.00%
+
+    325216100.00%
+
+    359419500.00%
+
+    397220100.00%
+
+    438995500.00%
+
+    485165200.00%
+
+    536190700.00%
+
+    592582500.00%
+
+    654905300.00%
+
+    723781100.00%
+
+    799902200.00%
+
+    884029000.00%
+
+    977003400.00%
+
+    1079756000.00%
+
+    1193313000.00%
+
+    1318816000.00%
+
+    1457517000.00%
+
+    1610806000.00%
+
+    1780217000.00%
+
+    1967441000.00%
+
+    2174360000.00%
+
+    2403039000.00%
+
+    2655771000.00%
+
+    2935081000.00%
+
+    3243762000.00%
+
+    3584913000.00%
+
+    3961943000.00%
+
+    4378626000.00%
+
+    4839132000.00%
+
+    5348060000.00%
+
+    5910522000.00%
+
+    6532139000.00%
+
+    7219133000.00%
+
+    7978379000.00%
+
+    8817459000.00%
+
+    9744804000.00%
+
+    10769680000.00%
+
+    11902340000.00%
+
+    13154120000.00%
+
+    14537530000.00%
+
+    16066460000.00%
+
+    17756200000.00%
+
+    19623640000.00%
+
+    21687480000.00%
+
+    23968340000.00%
+
+    26489120000.00%
+
+    29275020000.00%
+
+    32353910000.00%
+
+    35756620000.00%
+
+    39517110000.00%
+
+    43673180000.00%
+
+    48266350000.00%
+
+    53342580000.00%
+
+    58952690000.00%
+
+    65152700000.00%
+
+    72004900000.00%
+
+    79577740000.00%
+
+    87947040000.00%
+
+    97196560000.00%
+
+    107418600000.00%
+
+    118716000000.00%
+
+    131201500000.00%
+
+    145000200000.00%
+
+    160250000000.00%
+
+    177103400000.00%
+
+    195729600000.00%
+
+    216314800000.00%
+
+    239064900000.00%
+
+    264207600000.00%
+
+    291994100000.00%
+
+    322703500000.00%
+
+    356642800000.00%
+
+    394151300000.00%
+
+    435604800000.00%
+
+    481417000000.00%
+
+    532048200000.00%
+
+    588004500000.00%
+
+    649845700000.00%
+
+    718190800000.00%
+
+    793722400000.00%
+
+    877199200000.00%
+
+    969455500000.00%
+
+    1071414000000.00%
+
+    1184096000000.00%
+
+    1308627000000.00%
+
+    1446257000000.00%
+
+    1598362000000.00%
+
+    1766464000000.00%
+
+    1952245000000.00%
+
+    2157561000000.00%
+
+    2384474000000.00%
+
+    2635253000000.00%
+
+    2912406000000.00%
+
+    3218708000000.00%
+
+    3557217000000.00%
+
+    3931334000000.00%
+
+    4344798000000.00%
+
+    4801746000000.00%
+
+    5306752000000.00%
+
+    5864859000000.00%
+
+    6481674000000.00%
+
+    7163361000000.00%
+
+    7916740000000.00%
+
+    8749355000000.00%
+
+    9669518000000.00%
+
+    10686470000000.00%
+
+    11810390000000.00%
+
+    13052500000000.00%
+
+    14425250000000.00%
+
+    15942340000000.00%
+
+    17619020000000.00%
+
+    19472030000000.00%
+
+    21519930000000.00%
+
+    23783210000000.00%
+
+    26284480000000.00%
+
+    29048850000000.00%
+
+    32103960000000.00%
+
+    35480370000000.00%
+
+    39211890000000.00%
+
+    43335780000000.00%
+
+    47893460000000.00%
+
+    52930480000000.00%
+
+    58497240000000.00%
+
+    64649480000000.00%
+
+    71448610000000.00%
+
+    78962960000000.00%
+
+    87267760000000.00%
+
+    96445650000000.00%
+
+    106588800000000.00%
+
+    117799100000000.00%
+
+    130187900000000.00%
+
+    143880200000000.00%
+
+    159012000000000.00%
+
+    175735200000000.00%
+
+    194217800000000.00%
+
+    214643600000000.00%
+
+    237218400000000.00%
+
+    262166500000000.00%
+
+    289738300000000.00%
+
+    320211100000000.00%
+
+    353887400000000.00%
+
+    391107000000000.00%
+
+    432239400000000.00%
+
+    477697700000000.00%
+
+    527938800000000.00%
+
+    583461700000000.00%
+
+    644826400000000.00%
+
+    712642300000000.00%
+
+    787590400000000.00%
+
+    870423900000000.00%
+
+    961965700000000.00%
+
+    1063139000000000.00%
+
+    1174948000000000.00%
+
+    1298517000000000.00%
+
+    1435087000000000.00%
+
+    1586013000000000.00%
+
+    1752820000000000.00%
+
+    1937163000000000.00%
+
+    2140892000000000.00%
+
+    2366058000000000.00%
+
+    2614894000000000.00%
+
+    2889911000000000.00%
+
+    3193841000000000.00%
+
+    3529735000000000.00%
+
+    3900970000000000.00%
+
+    4311232000000000.00%
+
+    4764658000000000.00%
+
+    5265753000000000.00%
+
+    5819549000000000.00%
+
+    6431611000000000.00%
+
+    7108019000000000.00%
+
+    7855594000000000.00%
+
+    8681760000000000.00%
+
+    9594815000000000.00%
+
+    10603930000000000.00%
+
+    11719140000000000.00%
+
+    12951690000000000.00%
+
+    14313800000000000.00%
+
+    15819180000000000.00%
+
+    17482930000000000.00%
+
+    19321600000000000.00%
+
+    21353720000000000.00%
+
+    23599470000000000.00%
+
+    26081410000000000.00%
+
+    28824480000000000.00%
+
+    31855930000000000.00%
+
+    35206330000000000.00%
+
+    38908950000000000.00%
+
+    43000980000000000.00%
+
+    47523540000000000.00%
+
+    52521550000000000.00%
+
+    58045420000000000.00%
+
+    64150010000000000.00%
+
+    70896620000000000.00%
+
+    78353070000000000.00%
+
+    86593400000000000.00%
+
+    95700720000000000.00%
+
+    105765500000000000.00%
+
+    116888800000000000.00%
+
+    129182400000000000.00%
+
+    142768400000000000.00%
+
+    157783800000000000.00%
+
+    174377800000000000.00%
+
+    192717000000000000.00%
+
+    212985700000000000.00%
+
+    235385300000000000.00%
+
+    260141500000000000.00%
+
+    287500400000000000.00%
+
+    317736600000000000.00%
+
+    351154100000000000.00%
+
+    388084700000000000.00%
+
+    428900900000000000.00%
+
+    474008100000000000.00%
+
+    523859200000000000.00%
+
+    578955200000000000.00%
+
+    639843500000000000.00%
+
+    707138000000000000.00%
+
+    781507200000000000.00%
+
+    863697700000000000.00%
+
+    954535700000000000.00%
+
+    1054924000000000000.00%
+
+    1165873000000000000.00%
+
+    1288487000000000000.00%
+
+    1423997000000000000.00%
+
+    1573763000000000000.00%
+
+    1739275000000000000.00%
+
+    1922200000000000000.00%
+
+    2124357000000000000.00%
+
+    2347774000000000000.00%
+
+    2594697000000000000.00%
+
+    2867580000000000000.00%
+
+    3169173000000000000.00%
+
+    3502472000000000000.00%
+
+    3870825000000000000.00%
+
+    4277933000000000000.00%
+
+    4727840000000000000.00%
+
+    5225083000000000000.00%
+
+    5774600000000000000.00%
+
+    6381911000000000000.00%
+
+    7053119000000000000.00%
+
+    7794889000000000000.00%
+
+    8614704000000000000.00%
+
+    9520706000000000000.00%
+
+    10521990000000000000.00%
+
+    11628630000000000000.00%
+
+    12851600000000000000.00%
+
+    14203250000000000000.00%
+
+    15696990000000000000.00%
+
+    17347830000000000000.00%
+
+    19172360000000000000.00%
+
+    21188710000000000000.00%
+
+    23417200000000000000.00%
+
+    25879960000000000000.00%
+
+    28601740000000000000.00%
+
+    31609880000000000000.00%
+
+    34934270000000000000.00%
+
+    38608430000000000000.00%
+
+    42668850000000000000.00%
+
+    47156300000000000000.00%
+
+    52115880000000000000.00%
+
+    57596870000000000000.00%
+
+    63654540000000000000.00%
+
+    70349040000000000000.00%
+
+    77747590000000000000.00%
+
+    85924570000000000000.00%
+
+    94961200000000000000.00%
+
+    104948600000000000000.00%
+
+    115985900000000000000.00%
+
+    128184100000000000000.00%
+
+    141665700000000000000.00%
+
+    156564500000000000000.00%
+
+    173031000000000000000.00%
+
+    191228500000000000000.00%
+
+    211339900000000000000.00%
+
+    233567200000000000000.00%
+
+    258131300000000000000.00%
+
+    285279800000000000000.00%
+
+    315282500000000000000.00%
+
+    348440500000000000000.00%
+
+    385087200000000000000.00%
+
+    425586500000000000000.00%
+
+    470346900000000000000.00%
+
+    519813000000000000000.00%
+
+    574481300000000000000.00%
+
+    634901500000000000000.00%
+
+    701673500000000000000.00%
+
+    775470900000000000000.00%
+
+    857026700000000000000.00%
+
+    947159600000000000000.00%
+
+    1046776000000000000000.00%
+
+    1156864000000000000000.00%
+
+    1278536000000000000000.00%
+
+    1412998000000000000000.00%
+
+    1561602000000000000000.00%
+
+    1725841000000000000000.00%
+
+    1907346000000000000000.00%
+
+    2107949000000000000000.00%
+
+    2329640000000000000000.00%
+
+    2574647000000000000000.00%
+
+    2845431000000000000000.00%
+
+    3144683000000000000000.00%
+
+    3475420000000000000000.00%
+
+    3840927000000000000000.00%
+
+    4244874000000000000000.00%
+
+    4691322000000000000000.00%
+
+    5184705000000000000000.00%
+
+    5729999000000000000000.00%
+
+    6332618000000000000000.00%
+
+    6998615000000000000000.00%
+
+    7734684000000000000000.00%
+
+    8548134000000000000000.00%
+
+    9447171000000000000000.00%
+
+    10440720000000000000000.00%
+
+    11538770000000000000000.00%
+
+    12752340000000000000000.00%
+
+    14093490000000000000000.00%
+
+    15575750000000000000000.00%
+
+    17213840000000000000000.00%
+
+    19024210000000000000000.00%
+
+    21025050000000000000000.00%
+
+    23236240000000000000000.00%
+
+    25680070000000000000000.00%
+
+    28380830000000000000000.00%
+
+    31365610000000000000000.00%
+
+    34664450000000000000000.00%
+
+    38310080000000000000000.00%
+
+    42339280000000000000000.00%
+
+    46792070000000000000000.00%
+
+    51713160000000000000000.00%
+
+    57152010000000000000000.00%
+
+    63162640000000000000000.00%
+
+    69805670000000000000000.00%
+
+    77147080000000000000000.00%
+
+    85260590000000000000000.00%
+
+    94227730000000000000000.00%
+
+    104137600000000000000000.00%
+
+    115090100000000000000000.00%
+
+    127194000000000000000000.00%
+
+    140570900000000000000000.00%
+
+    155355300000000000000000.00%
+
+    171693800000000000000000.00%
+
+    189751500000000000000000.00%
+
+    209707500000000000000000.00%
+
+    231762300000000000000000.00%
+
+    256137500000000000000000.00%
+
+    283075300000000000000000.00%
+
+    312847300000000000000000.00%
+
+    345749300000000000000000.00%
+
+    382111400000000000000000.00%
+
+    422299400000000000000000.00%
+
+    466712300000000000000000.00%
+
+    515798100000000000000000.00%
+
+    570044100000000000000000.00%
+
+    629995200000000000000000.00%
+
+    696254100000000000000000.00%
+
+    769478500000000000000000.00%
+
+    850407200000000000000000.00%
+
+    939843900000000000000000.00%
+
+    1038687000000000000000000.00%
+
+    1147929000000000000000000.00%
+
+    1268656000000000000000000.00%
+
+    1402085000000000000000000.00%
+
+    1549541000000000000000000.00%
+
+    1712505000000000000000000.00%
+
+    1892615000000000000000000.00%
+
+    2091659000000000000000000.00%
+
+    2311647000000000000000000.00%
+
+    2554760000000000000000000.00%
+
+    2823443000000000000000000.00%
+
+    3120394000000000000000000.00%
+
+    3448563000000000000000000.00%
+
+    3811261000000000000000000.00%
+
+    4212088000000000000000000.00%
+
+    4655070000000000000000000.00%
+
+    5144660000000000000000000.00%
+
+    5685720000000000000000000.00%
+
+    6283707000000000000000000.00%
+
+    6944559000000000000000000.00%
+
+    7674913000000000000000000.00%
+
+    8482110000000000000000000.00%
+
+    9374167000000000000000000.00%
+
+    10360080000000000000000000.00%
+
+    11449640000000000000000000.00%
+
+    12653790000000000000000000.00%
+
+    13984640000000000000000000.00%
+
+    15455390000000000000000000.00%
+
+    17080880000000000000000000.00%
+
+    18877270000000000000000000.00%
+
+    20862580000000000000000000.00%
+
+    23056770000000000000000000.00%
+
+    25481630000000000000000000.00%
+
+    28161620000000000000000000.00%
+
+    31123350000000000000000000.00%
+
+    34396570000000000000000000.00%
+
+    38014180000000000000000000.00%
+
+    42012100000000000000000000.00%
+
+    46430660000000000000000000.00%
+
+    51313740000000000000000000.00%
+
+    56710360000000000000000000.00%
+
+    62674790000000000000000000.00%
+
+    69266250000000000000000000.00%
+
+    76551220000000000000000000.00%
+
+    84602050000000000000000000.00%
+
+    93499580000000000000000000.00%
+
+    103333300000000000000000000.00%
+
+    114200700000000000000000000.00%
+
+    126211600000000000000000000.00%
+
+    139485200000000000000000000.00%
+
+    154154800000000000000000000.00%
+
+    170367700000000000000000000.00%
+
+    188285200000000000000000000.00%
+
+    208087800000000000000000000.00%
+
+    229972200000000000000000000.00%
+
+    254158200000000000000000000.00%
+
+    280888900000000000000000000.00%
+
+    310429800000000000000000000.00%
+
+    343078800000000000000000000.00%
+
+    379160100000000000000000000.00%
+
+    419036100000000000000000000.00%
+
+    463107500000000000000000000.00%
+
+    511812200000000000000000000.00%
+
+    565641200000000000000000000.00%
+
+    625129300000000000000000000.00%
+
+    690873700000000000000000000.00%
+
+    763535200000000000000000000.00%
+
+    843835600000000000000000000.00%
+
+    932584700000000000000000000.00%
+
+    1030664000000000000000000000.00%
+
+    1139058000000000000000000000.00%
+
+    1258857000000000000000000000.00%
+
+    1391250000000000000000000000.00%
+
+    1537572000000000000000000000.00%
+
+    1699278000000000000000000000.00%
+
+    1877989000000000000000000000.00%
+
+    2075504000000000000000000000.00%
+
+    2293783000000000000000000000.00%
+
+    2535028000000000000000000000.00%
+
+    2801635000000000000000000000.00%
+
+    3096281000000000000000000000.00%
+
+    3421927000000000000000000000.00%
+
+    3781809000000000000000000000.00%
+
+    4179555000000000000000000000.00%
+
+    4619115000000000000000000000.00%
+
+    5104904000000000000000000000.00%
+
+    5641805000000000000000000000.00%
+
+    6235149000000000000000000000.00%
+
+    6890895000000000000000000000.00%
+
+    7615662000000000000000000000.00%
+
+    8416596000000000000000000000.00%
+
+    9301763000000000000000000000.00%
+
+    10280020000000000000000000000.00%
+
+    11361160000000000000000000000.00%
+
+    12556100000000000000000000000.00%
+
+    13876620000000000000000000000.00%
+
+    15336010000000000000000000000.00%
+
+    16948890000000000000000000000.00%
+
+    18731390000000000000000000000.00%
+
+    20701520000000000000000000000.00%
+
+    22878680000000000000000000000.00%
+
+    25284820000000000000000000000.00%
+
+    27944000000000000000000000000.00%
+
+    30882850000000000000000000000.00%
+
+    34131030000000000000000000000.00%
+
+    37720570000000000000000000000.00%
+
+    41687610000000000000000000000.00%
+
+    46071870000000000000000000000.00%
+
+    50917210000000000000000000000.00%
+
+    56272560000000000000000000000.00%
+
+    62190700000000000000000000000.00%
+
+    68731250000000000000000000000.00%
+
+    75959660000000000000000000000.00%
+
+    83948280000000000000000000000.00%
+
+    92777770000000000000000000000.00%
+
+    102535100000000000000000000000.00%
+
+    113318700000000000000000000000.00%
+
+    125236300000000000000000000000.00%
+
+    138407300000000000000000000000.00%
+
+    152964700000000000000000000000.00%
+
+    169051800000000000000000000000.00%
+
+    186830900000000000000000000000.00%
+
+    206479800000000000000000000000.00%
+
+    228195100000000000000000000000.00%
+
+    252196100000000000000000000000.00%
+
+    278719400000000000000000000000.00%
+
+    308032100000000000000000000000.00%
+
+    340427600000000000000000000000.00%
+
+    376230100000000000000000000000.00%
+
+    415801100000000000000000000000.00%
+
+    459530600000000000000000000000.00%
+
+    507859000000000000000000000000.00%
+
+    561270200000000000000000000000.00%
+
+    620298600000000000000000000000.00%
+
+    685540100000000000000000000000.00%
+
+    757637900000000000000000000000.00%
+
+    837318000000000000000000000000.00%
+
+    925378100000000000000000000000.00%
+
+    1022699000000000000000000000000.00%
+
+    1130265000000000000000000000000.00%
+
+    1249134000000000000000000000000.00%
+
+    1380504000000000000000000000000.00%
+
+    1525691000000000000000000000000.00%
+
+    1686146000000000000000000000000.00%
+
+    1863491000000000000000000000000.00%
+
+    2059473000000000000000000000000.00%
+
+    2276067000000000000000000000000.00%
+
+    2515439000000000000000000000000.00%
+
+    2779985000000000000000000000000.00%
+
+    3072378000000000000000000000000.00%
+
+    3395498000000000000000000000000.00%
+
+    3752599000000000000000000000000.00%
+
+    4147257000000000000000000000000.00%
+
+    4583421000000000000000000000000.00%
+
+    5065495000000000000000000000000.00%
+
+    5598229000000000000000000000000.00%
+
+    6186990000000000000000000000000.00%
+
+    6837671000000000000000000000000.00%
+
+    7556784000000000000000000000000.00%
+
+    8351589000000000000000000000000.00%
+
+    9229919000000000000000000000000.00%
+
+    10200620000000000000000000000000.00%
+
+    11273410000000000000000000000000.00%
+
+    12459030000000000000000000000000.00%
+
+    13769440000000000000000000000000.00%
+
+    15217560000000000000000000000000.00%
+
+    16817980000000000000000000000000.00%
+
+    18586720000000000000000000000000.00%
+
+    20541470000000000000000000000000.00%
+
+    22701970000000000000000000000000.00%
+
+    25089520000000000000000000000000.00%
+
+    27728170000000000000000000000000.00%
+
+    30644310000000000000000000000000.00%
+
+    33867150000000000000000000000000.00%
+
+    37429220000000000000000000000000.00%
+
+    41365630000000000000000000000000.00%
+
+    45716020000000000000000000000000.00%
+
+    50523940000000000000000000000000.00%
+
+    55837490000000000000000000000000.00%
+
+    61710350000000000000000000000000.00%
+
+    68200380000000000000000000000000.00%
+
+    75372970000000000000000000000000.00%
+
+    83299890000000000000000000000000.00%
+
+    92060470000000000000000000000000.00%
+
+    101743200000000000000000000000000.00%
+
+    112443400000000000000000000000000.00%
+
+    124269000000000000000000000000000.00%
+
+    137338300000000000000000000000000.00%
+
+    151782100000000000000000000000000.00%
+
+    167746100000000000000000000000000.00%
+
+    185387900000000000000000000000000.00%
+
+    204885000000000000000000000000000.00%
+
+    226432600000000000000000000000000.00%
+
+    250246300000000000000000000000000.00%
+
+    276566600000000000000000000000000.00%
+
+    305652900000000000000000000000000.00%
+
+    337798200000000000000000000000000.00%
+
+    373324200000000000000000000000000.00%
+
+    412586400000000000000000000000000.00%
+
+    455981300000000000000000000000000.00%
+
+    503936500000000000000000000000000.00%
+
+    556935100000000000000000000000000.00%
+
+    615507500000000000000000000000000.00%
+
+    680240000000000000000000000000000.00%
+
+    751786100000000000000000000000000.00%
+
+    830850800000000000000000000000000.00%
+
+    918230700000000000000000000000000.00%
+
+    1014800000000000000000000000000000.00%
+
+    1121526000000000000000000000000000.00%
+
+    1239486000000000000000000000000000.00%
+
+    1369841000000000000000000000000000.00%
+
+    1513906000000000000000000000000000.00%
+
+    1673123000000000000000000000000000.00%
+
+    1849084000000000000000000000000000.00%
+
+    2043566000000000000000000000000000.00%
+
+    2258487000000000000000000000000000.00%
+
+    2496010000000000000000000000000000.00%
+
+    2758514000000000000000000000000000.00%
+
+    3048624000000000000000000000000000.00%
+
+    3369271000000000000000000000000000.00%
+
+    3723615000000000000000000000000000.00%
+
+    4115225000000000000000000000000000.00%
+
+    4548020000000000000000000000000000.00%
+
+    5026331000000000000000000000000000.00%
+
+    5554989000000000000000000000000000.00%
+
+    6139203000000000000000000000000000.00%
+
+    6784858000000000000000000000000000.00%
+
+    7498417000000000000000000000000000.00%
+
+    8287019000000000000000000000000000.00%
+
+    9158628000000000000000000000000000.00%
+
+    10121830000000000000000000000000000.00%
+
+    11186340000000000000000000000000000.00%
+
+    12362800000000000000000000000000000.00%
+
+    13662990000000000000000000000000000.00%
+
+    15100030000000000000000000000000000.00%
+
+    16688090000000000000000000000000000.00%
+
+    18443160000000000000000000000000000.00%
+
+    20382810000000000000000000000000000.00%
+
+    22526450000000000000000000000000000.00%
+
+    24895730000000000000000000000000000.00%
+
+    27514000000000000000000000000000000.00%
+
+    30407630000000000000000000000000000.00%
+
+    33605570000000000000000000000000000.00%
+
+    37139850000000000000000000000000000.00%
+
+    41046130000000000000000000000000000.00%
+
+    45362920000000000000000000000000000.00%
+
+    50133700000000000000000000000000000.00%
+
+    55406220000000000000000000000000000.00%
+
+    61233250000000000000000000000000000.00%
+
+    67673630000000000000000000000000000.00%
+
+    74790810000000000000000000000000000.00%
+
+    82656500000000000000000000000000000.00%
+
+    91349420000000000000000000000000000.00%
+
+    100956600000000000000000000000000000.00%
+
+    111574900000000000000000000000000000.00%
+
+    123309200000000000000000000000000000.00%
+
+    136277500000000000000000000000000000.00%
+
+    150609700000000000000000000000000000.00%
+
+    166449200000000000000000000000000000.00%
+
+    183956000000000000000000000000000000.00%
+
+    203302500000000000000000000000000000.00%
+
+    224683700000000000000000000000000000.00%
+
+    248313500000000000000000000000000000.00%
+
+    274428400000000000000000000000000000.00%
+
+    303292100000000000000000000000000000.00%
+
+    335189200000000000000000000000000000.00%
+
+    370440700000000000000000000000000000.00%
+
+    409399700000000000000000000000000000.00%
+
+    452456000000000000000000000000000000.00%
+
+    500044200000000000000000000000000000.00%
+
+    552633500000000000000000000000000000.00%
+
+    610753500000000000000000000000000000.00%
+
+    674986000000000000000000000000000000.00%
+
+    745973700000000000000000000000000000.00%
+
+    824433500000000000000000000000000000.00%
+
+    911138400000000000000000000000000000.00%
+
+    1006962000000000000000000000000000000.00%
+
+    1112864000000000000000000000000000000.00%
+
+    1229903000000000000000000000000000000.00%
+
+    1359261000000000000000000000000000000.00%
+
+    1502213000000000000000000000000000000.00%
+
+    1660200000000000000000000000000000000.00%
+
+    1834802000000000000000000000000000000.00%
+
+    2027767000000000000000000000000000000.00%
+
+    2241043000000000000000000000000000000.00%
+
+    2476731000000000000000000000000000000.00%
+
+    2737207000000000000000000000000000000.00%
+
+    3025077000000000000000000000000000000.00%
+
+    3343222000000000000000000000000000000.00%
+
+    3694854000000000000000000000000000000.00%
+
+    4083440000000000000000000000000000000.00%
+
+    4512892000000000000000000000000000000.00%
+
+    4987509000000000000000000000000000000.00%
+
+    5512042000000000000000000000000000000.00%
+
+    6091786000000000000000000000000000000.00%
+
+    6732454000000000000000000000000000000.00%
+
+    7440501000000000000000000000000000000.00%
+
+    8223013000000000000000000000000000000.00%
+
+    9087821000000000000000000000000000000.00%
+
+    10043660000000000000000000000000000000.00%
+
+    11099940000000000000000000000000000000.00%
+
+    12267310000000000000000000000000000000.00%
+
+    13557460000000000000000000000000000000.00%
+
+    14983280000000000000000000000000000000.00%
+
+    16559190000000000000000000000000000000.00%
+
+    18300710000000000000000000000000000000.00%
+
+    20225380000000000000000000000000000000.00%
+
+    22352470000000000000000000000000000000.00%
+
+    24703250000000000000000000000000000000.00%
+
+    27301490000000000000000000000000000000.00%
+
+    30172760000000000000000000000000000000.00%
+
+    33346010000000000000000000000000000000.00%
+
+    36852980000000000000000000000000000000.00%
+
+    40728780000000000000000000000000000000.00%
+
+    45012540000000000000000000000000000000.00%
+
+    49746470000000000000000000000000000000.00%
+
+    54978280000000000000000000000000000000.00%
+
+    60760300000000000000000000000000000000.00%
+
+    67150410000000000000000000000000000000.00%
+
+    74213140000000000000000000000000000000.00%
+
+    82018080000000000000000000000000000000.00%
+
+    90643840000000000000000000000000000000.00%
+
+    100176800000000000000000000000000000000.00%
+
+    110712300000000000000000000000000000000.00%
+
+    122356800000000000000000000000000000000.00%
+
+    135224900000000000000000000000000000000.00%
+
+    149446500000000000000000000000000000000.00%
+
+    165163600000000000000000000000000000000.00%
+
+    182533800000000000000000000000000000000.00%
+
+    201732200000000000000000000000000000000.00%
+
+    222948300000000000000000000000000000000.00%
+
+    246395600000000000000000000000000000000.00%
+
+    272308800000000000000000000000000000000.00%
+
+    300947300000000000000000000000000000000.00%
+
+    332600200000000000000000000000000000000.00%
+
+    Infinity%
+
+    Infinity%
+
+    Infinity%
+
+    Infinity%
+
+    Infinity%
+
+    Infinity%
+
+    Infinity%
+
+    Infinity%
+
+    Infinity%
+
+    Infinity%
+
+    Infinity%
+
+    Infinity%
+
+    Infinity%
+
+    Infinity%
+
+    Infinity%
+
+    Infinity%
+
+    Infinity%
+
+    Infinity%
+
+    Infinity%
+
+    Infinity%
+
+    Infinity%
+
+    Infinity%
+
+    Infinity%
+
+    Infinity%
+
+    Infinity%
+
+    Infinity%
+
+    Infinity%
+
+    Infinity%
+
+    Infinity%
+
+    Infinity%
+
+    Infinity%
+
+    Infinity%
+
+    Infinity%
+
+    Infinity%
+
+    Infinity%
+
+    Infinity%
+
+    Infinity%
+
+    Infinity%
+
+    Infinity%
+
+    Infinity%
+
+    Infinity%
+
+    Infinity%
+
+    Infinity%
+
+    Infinity%
+
+    Infinity%
+
+    Infinity%
+
+    Infinity%
+
+    Infinity%
+
+    Infinity%
+
+    Infinity%
+
+    Infinity%
+
+    Infinity%
+
+    Infinity%
+
+    Infinity%
+
+    Infinity%
+
+    Infinity%
+
+    Infinity%
+
+    Infinity%
+
+    Infinity%
+
+    Infinity%
+
+    Infinity%
+
+    Infinity%
+
+    Infinity%
+
+    Infinity%
+
+    Infinity%
+
+    Infinity%
+
+    Infinity%
+
+    Infinity%
+
+    Infinity%
+
+    Infinity%
+
+    Infinity%
+
+    Infinity%
+
+    Infinity%
+
+    Infinity%
+
+    Infinity%
+
+    Infinity%
+
+    Infinity%
+
+    Infinity%
+
+    Infinity%
+
+    Infinity%
+
+    Infinity%
+
+    Infinity%
+
+    Infinity%
+
+    Infinity%
+
+    Infinity%
+
+    Infinity%
+
+    Infinity%
+
+    Infinity%
+
+    Infinity%
+
+    Infinity%
+
+    Infinity%
+
+    Infinity%
+
+    Infinity%
+
+    Infinity%
+
+    Infinity%
+
+    Infinity%
+
+    Infinity%
+
+    Infinity%
+
+    Infinity%
+
+    Infinity%
+
+    Infinity%
+
+    Infinity%
+
+    Infinity%
+
+    Infinity%
+
+    Infinity%
+
+    Infinity%
+
+    Infinity%
+
+    Infinity%
+
+    Infinity%
+
+    Infinity%
+
+    Infinity%'
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 36
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1855121878
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1855121875}
+  m_CullTransparentMesh: 1
+--- !u!1 &2107330067
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2107330068}
+  - component: {fileID: 2107330070}
+  - component: {fileID: 2107330069}
+  m_Layer: 5
+  m_Name: Level
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2107330068
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2107330067}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1043117743}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -1677, y: 332}
+  m_SizeDelta: {x: 200, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2107330069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2107330067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: 'Level
+
+    1
+
+    2
+
+    3
+
+    4
+
+    5
+
+    6
+
+    7
+
+    8
+
+    9
+
+    10
+
+    11
+
+    12
+
+    13
+
+    14
+
+    15
+
+    16
+
+    17
+
+    18
+
+    19
+
+    20
+
+    21
+
+    22
+
+    23
+
+    24
+
+    25
+
+    26
+
+    27
+
+    28
+
+    29
+
+    30
+
+    31
+
+    32
+
+    33
+
+    34
+
+    35
+
+    36
+
+    37
+
+    38
+
+    39
+
+    40
+
+    41
+
+    42
+
+    43
+
+    44
+
+    45
+
+    46
+
+    47
+
+    48
+
+    49
+
+    50
+
+    51
+
+    52
+
+    53
+
+    54
+
+    55
+
+    56
+
+    57
+
+    58
+
+    59
+
+    60
+
+    61
+
+    62
+
+    63
+
+    64
+
+    65
+
+    66
+
+    67
+
+    68
+
+    69
+
+    70
+
+    71
+
+    72
+
+    73
+
+    74
+
+    75
+
+    76
+
+    77
+
+    78
+
+    79
+
+    80
+
+    81
+
+    82
+
+    83
+
+    84
+
+    85
+
+    86
+
+    87
+
+    88
+
+    89
+
+    90
+
+    91
+
+    92
+
+    93
+
+    94
+
+    95
+
+    96
+
+    97
+
+    98
+
+    99
+
+    100
+
+    101
+
+    102
+
+    103
+
+    104
+
+    105
+
+    106
+
+    107
+
+    108
+
+    109
+
+    110
+
+    111
+
+    112
+
+    113
+
+    114
+
+    115
+
+    116
+
+    117
+
+    118
+
+    119
+
+    120
+
+    121
+
+    122
+
+    123
+
+    124
+
+    125
+
+    126
+
+    127
+
+    128
+
+    129
+
+    130
+
+    131
+
+    132
+
+    133
+
+    134
+
+    135
+
+    136
+
+    137
+
+    138
+
+    139
+
+    140
+
+    141
+
+    142
+
+    143
+
+    144
+
+    145
+
+    146
+
+    147
+
+    148
+
+    149
+
+    150
+
+    151
+
+    152
+
+    153
+
+    154
+
+    155
+
+    156
+
+    157
+
+    158
+
+    159
+
+    160
+
+    161
+
+    162
+
+    163
+
+    164
+
+    165
+
+    166
+
+    167
+
+    168
+
+    169
+
+    170
+
+    171
+
+    172
+
+    173
+
+    174
+
+    175
+
+    176
+
+    177
+
+    178
+
+    179
+
+    180
+
+    181
+
+    182
+
+    183
+
+    184
+
+    185
+
+    186
+
+    187
+
+    188
+
+    189
+
+    190
+
+    191
+
+    192
+
+    193
+
+    194
+
+    195
+
+    196
+
+    197
+
+    198
+
+    199
+
+    200
+
+    201
+
+    202
+
+    203
+
+    204
+
+    205
+
+    206
+
+    207
+
+    208
+
+    209
+
+    210
+
+    211
+
+    212
+
+    213
+
+    214
+
+    215
+
+    216
+
+    217
+
+    218
+
+    219
+
+    220
+
+    221
+
+    222
+
+    223
+
+    224
+
+    225
+
+    226
+
+    227
+
+    228
+
+    229
+
+    230
+
+    231
+
+    232
+
+    233
+
+    234
+
+    235
+
+    236
+
+    237
+
+    238
+
+    239
+
+    240
+
+    241
+
+    242
+
+    243
+
+    244
+
+    245
+
+    246
+
+    247
+
+    248
+
+    249
+
+    250
+
+    251
+
+    252
+
+    253
+
+    254
+
+    255
+
+    256
+
+    257
+
+    258
+
+    259
+
+    260
+
+    261
+
+    262
+
+    263
+
+    264
+
+    265
+
+    266
+
+    267
+
+    268
+
+    269
+
+    270
+
+    271
+
+    272
+
+    273
+
+    274
+
+    275
+
+    276
+
+    277
+
+    278
+
+    279
+
+    280
+
+    281
+
+    282
+
+    283
+
+    284
+
+    285
+
+    286
+
+    287
+
+    288
+
+    289
+
+    290
+
+    291
+
+    292
+
+    293
+
+    294
+
+    295
+
+    296
+
+    297
+
+    298
+
+    299
+
+    300
+
+    301
+
+    302
+
+    303
+
+    304
+
+    305
+
+    306
+
+    307
+
+    308
+
+    309
+
+    310
+
+    311
+
+    312
+
+    313
+
+    314
+
+    315
+
+    316
+
+    317
+
+    318
+
+    319
+
+    320
+
+    321
+
+    322
+
+    323
+
+    324
+
+    325
+
+    326
+
+    327
+
+    328
+
+    329
+
+    330
+
+    331
+
+    332
+
+    333
+
+    334
+
+    335
+
+    336
+
+    337
+
+    338
+
+    339
+
+    340
+
+    341
+
+    342
+
+    343
+
+    344
+
+    345
+
+    346
+
+    347
+
+    348
+
+    349
+
+    350
+
+    351
+
+    352
+
+    353
+
+    354
+
+    355
+
+    356
+
+    357
+
+    358
+
+    359
+
+    360
+
+    361
+
+    362
+
+    363
+
+    364
+
+    365
+
+    366
+
+    367
+
+    368
+
+    369
+
+    370
+
+    371
+
+    372
+
+    373
+
+    374
+
+    375
+
+    376
+
+    377
+
+    378
+
+    379
+
+    380
+
+    381
+
+    382
+
+    383
+
+    384
+
+    385
+
+    386
+
+    387
+
+    388
+
+    389
+
+    390
+
+    391
+
+    392
+
+    393
+
+    394
+
+    395
+
+    396
+
+    397
+
+    398
+
+    399
+
+    400
+
+    401
+
+    402
+
+    403
+
+    404
+
+    405
+
+    406
+
+    407
+
+    408
+
+    409
+
+    410
+
+    411
+
+    412
+
+    413
+
+    414
+
+    415
+
+    416
+
+    417
+
+    418
+
+    419
+
+    420
+
+    421
+
+    422
+
+    423
+
+    424
+
+    425
+
+    426
+
+    427
+
+    428
+
+    429
+
+    430
+
+    431
+
+    432
+
+    433
+
+    434
+
+    435
+
+    436
+
+    437
+
+    438
+
+    439
+
+    440
+
+    441
+
+    442
+
+    443
+
+    444
+
+    445
+
+    446
+
+    447
+
+    448
+
+    449
+
+    450
+
+    451
+
+    452
+
+    453
+
+    454
+
+    455
+
+    456
+
+    457
+
+    458
+
+    459
+
+    460
+
+    461
+
+    462
+
+    463
+
+    464
+
+    465
+
+    466
+
+    467
+
+    468
+
+    469
+
+    470
+
+    471
+
+    472
+
+    473
+
+    474
+
+    475
+
+    476
+
+    477
+
+    478
+
+    479
+
+    480
+
+    481
+
+    482
+
+    483
+
+    484
+
+    485
+
+    486
+
+    487
+
+    488
+
+    489
+
+    490
+
+    491
+
+    492
+
+    493
+
+    494
+
+    495
+
+    496
+
+    497
+
+    498
+
+    499
+
+    500
+
+    501
+
+    502
+
+    503
+
+    504
+
+    505
+
+    506
+
+    507
+
+    508
+
+    509
+
+    510
+
+    511
+
+    512
+
+    513
+
+    514
+
+    515
+
+    516
+
+    517
+
+    518
+
+    519
+
+    520
+
+    521
+
+    522
+
+    523
+
+    524
+
+    525
+
+    526
+
+    527
+
+    528
+
+    529
+
+    530
+
+    531
+
+    532
+
+    533
+
+    534
+
+    535
+
+    536
+
+    537
+
+    538
+
+    539
+
+    540
+
+    541
+
+    542
+
+    543
+
+    544
+
+    545
+
+    546
+
+    547
+
+    548
+
+    549
+
+    550
+
+    551
+
+    552
+
+    553
+
+    554
+
+    555
+
+    556
+
+    557
+
+    558
+
+    559
+
+    560
+
+    561
+
+    562
+
+    563
+
+    564
+
+    565
+
+    566
+
+    567
+
+    568
+
+    569
+
+    570
+
+    571
+
+    572
+
+    573
+
+    574
+
+    575
+
+    576
+
+    577
+
+    578
+
+    579
+
+    580
+
+    581
+
+    582
+
+    583
+
+    584
+
+    585
+
+    586
+
+    587
+
+    588
+
+    589
+
+    590
+
+    591
+
+    592
+
+    593
+
+    594
+
+    595
+
+    596
+
+    597
+
+    598
+
+    599
+
+    600
+
+    601
+
+    602
+
+    603
+
+    604
+
+    605
+
+    606
+
+    607
+
+    608
+
+    609
+
+    610
+
+    611
+
+    612
+
+    613
+
+    614
+
+    615
+
+    616
+
+    617
+
+    618
+
+    619
+
+    620
+
+    621
+
+    622
+
+    623
+
+    624
+
+    625
+
+    626
+
+    627
+
+    628
+
+    629
+
+    630
+
+    631
+
+    632
+
+    633
+
+    634
+
+    635
+
+    636
+
+    637
+
+    638
+
+    639
+
+    640
+
+    641
+
+    642
+
+    643
+
+    644
+
+    645
+
+    646
+
+    647
+
+    648
+
+    649
+
+    650
+
+    651
+
+    652
+
+    653
+
+    654
+
+    655
+
+    656
+
+    657
+
+    658
+
+    659
+
+    660
+
+    661
+
+    662
+
+    663
+
+    664
+
+    665
+
+    666
+
+    667
+
+    668
+
+    669
+
+    670
+
+    671
+
+    672
+
+    673
+
+    674
+
+    675
+
+    676
+
+    677
+
+    678
+
+    679
+
+    680
+
+    681
+
+    682
+
+    683
+
+    684
+
+    685
+
+    686
+
+    687
+
+    688
+
+    689
+
+    690
+
+    691
+
+    692
+
+    693
+
+    694
+
+    695
+
+    696
+
+    697
+
+    698
+
+    699
+
+    700
+
+    701
+
+    702
+
+    703
+
+    704
+
+    705
+
+    706
+
+    707
+
+    708
+
+    709
+
+    710
+
+    711
+
+    712
+
+    713
+
+    714
+
+    715
+
+    716
+
+    717
+
+    718
+
+    719
+
+    720
+
+    721
+
+    722
+
+    723
+
+    724
+
+    725
+
+    726
+
+    727
+
+    728
+
+    729
+
+    730
+
+    731
+
+    732
+
+    733
+
+    734
+
+    735
+
+    736
+
+    737
+
+    738
+
+    739
+
+    740
+
+    741
+
+    742
+
+    743
+
+    744
+
+    745
+
+    746
+
+    747
+
+    748
+
+    749
+
+    750
+
+    751
+
+    752
+
+    753
+
+    754
+
+    755
+
+    756
+
+    757
+
+    758
+
+    759
+
+    760
+
+    761
+
+    762
+
+    763
+
+    764
+
+    765
+
+    766
+
+    767
+
+    768
+
+    769
+
+    770
+
+    771
+
+    772
+
+    773
+
+    774
+
+    775
+
+    776
+
+    777
+
+    778
+
+    779
+
+    780
+
+    781
+
+    782
+
+    783
+
+    784
+
+    785
+
+    786
+
+    787
+
+    788
+
+    789
+
+    790
+
+    791
+
+    792
+
+    793
+
+    794
+
+    795
+
+    796
+
+    797
+
+    798
+
+    799
+
+    800
+
+    801
+
+    802
+
+    803
+
+    804
+
+    805
+
+    806
+
+    807
+
+    808
+
+    809
+
+    810
+
+    811
+
+    812
+
+    813
+
+    814
+
+    815
+
+    816
+
+    817
+
+    818
+
+    819
+
+    820
+
+    821
+
+    822
+
+    823
+
+    824
+
+    825
+
+    826
+
+    827
+
+    828
+
+    829
+
+    830
+
+    831
+
+    832
+
+    833
+
+    834
+
+    835
+
+    836
+
+    837
+
+    838
+
+    839
+
+    840
+
+    841
+
+    842
+
+    843
+
+    844
+
+    845
+
+    846
+
+    847
+
+    848
+
+    849
+
+    850
+
+    851
+
+    852
+
+    853
+
+    854
+
+    855
+
+    856
+
+    857
+
+    858
+
+    859
+
+    860
+
+    861
+
+    862
+
+    863
+
+    864
+
+    865
+
+    866
+
+    867
+
+    868
+
+    869
+
+    870
+
+    871
+
+    872
+
+    873
+
+    874
+
+    875
+
+    876
+
+    877
+
+    878
+
+    879
+
+    880
+
+    881
+
+    882
+
+    883
+
+    884
+
+    885
+
+    886
+
+    887
+
+    888
+
+    889
+
+    890
+
+    891
+
+    892
+
+    893
+
+    894
+
+    895
+
+    896
+
+    897
+
+    898
+
+    899
+
+    900
+
+    901
+
+    902
+
+    903
+
+    904
+
+    905
+
+    906
+
+    907
+
+    908
+
+    909
+
+    910
+
+    911
+
+    912
+
+    913
+
+    914
+
+    915
+
+    916
+
+    917
+
+    918
+
+    919
+
+    920
+
+    921
+
+    922
+
+    923
+
+    924
+
+    925
+
+    926
+
+    927
+
+    928
+
+    929
+
+    930
+
+    931
+
+    932
+
+    933
+
+    934
+
+    935
+
+    936
+
+    937
+
+    938
+
+    939
+
+    940
+
+    941
+
+    942
+
+    943
+
+    944
+
+    945
+
+    946
+
+    947
+
+    948
+
+    949
+
+    950
+
+    951
+
+    952
+
+    953
+
+    954
+
+    955
+
+    956
+
+    957
+
+    958
+
+    959
+
+    960
+
+    961
+
+    962
+
+    963
+
+    964
+
+    965
+
+    966
+
+    967
+
+    968
+
+    969
+
+    970
+
+    971
+
+    972
+
+    973
+
+    974
+
+    975
+
+    976
+
+    977
+
+    978
+
+    979
+
+    980
+
+    981
+
+    982
+
+    983
+
+    984
+
+    985
+
+    986
+
+    987
+
+    988
+
+    989
+
+    990
+
+    991
+
+    992
+
+    993
+
+    994
+
+    995
+
+    996
+
+    997
+
+    998
+
+    999'
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 36
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &2107330070
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2107330067}
+  m_CullTransparentMesh: 1
+--- !u!1 &2130420856
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2130420860}
+  - component: {fileID: 2130420861}
+  - component: {fileID: 2130420859}
+  - component: {fileID: 2130420858}
+  - component: {fileID: 2130420857}
+  m_Layer: 5
+  m_Name: Growth Curves
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2130420857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2130420856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &2130420858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2130420856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 0
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
+--- !u!223 &2130420859
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2130420856}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 0
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
+  m_AdditionalShaderChannelsFlag: 25
+  m_UpdateRectTransformForStandalone: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
+--- !u!224 &2130420860
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2130420856}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1043117743}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
+--- !u!114 &2130420861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2130420856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c133b5b5912a2bf43baae31ed0e26870, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  linearRate: 1
+  exponentialRate: 0.1
+  logisticRate: 0.1
+  logisticCarryingCapacity: 100
+  gompertzRate: 0.1
+  gompertzCarryingCapacity: 100
+  gompertzShift: 1
+  logarithmicScaleFactor: 10
+  polynomialCoefficient: 1
+  polynomialDegree: 2
+  powerLawExponent: 2
+  stepwiseStepSize: 10
+  stepwiseStepInterval: 5
+  dampingFactor: 0.1
+  oscillationFrequency: 1
+  hyperbolicSingularityTime: 50
+  biexponentialRate1: 0.1
+  biexponentialRate2: 0.05
+  biexponentialCoefficient: 0.5
+--- !u!1660057539 &9223372036854775807
+SceneRoots:
+  m_ObjectHideFlags: 0
+  m_Roots:
+  - {fileID: 2130420860}
+  - {fileID: 1251680293}
+  - {fileID: 1664802841}

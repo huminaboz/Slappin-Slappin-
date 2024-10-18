@@ -43,14 +43,14 @@ public class SO_Upgrade : ScriptableObject
     /// <summary>
     /// How much the value will increase with each level
     /// </summary>
-    [SerializeField] public GrowthCurves.GrowthCurveType valueGrowthCurve;
-    // [SerializeField] public AnimationCurve valueGrowthCurve;
-
+    [SerializeField] public SO_GrowthCurve newValueGrowthCurve;
+    
+    
     /// <summary>
     /// How much the price will increase with each level
     /// </summary>
-    [SerializeField] public GrowthCurves.GrowthCurveType priceGrowthCurve;
-    // [SerializeField] public AnimationCurve priceGrowthCurve;
+    [SerializeField] public SO_GrowthCurve newPriceGrowthCurve;
 
     [FormerlySerializedAs("maxLevels")] [SerializeField] public int maxLevel = 300;
+
 }

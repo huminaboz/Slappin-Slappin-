@@ -9682,6 +9682,2138 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4661435515762813124, guid: e289bf5debb17f6459818c207d781953, type: 3}
   m_PrefabInstance: {fileID: 679831611}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &692405308
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 692405309}
+  - component: {fileID: 692405311}
+  - component: {fileID: 692405310}
+  m_Layer: 5
+  m_Name: Value
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &692405309
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 692405308}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1186211407}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -1367, y: 332}
+  m_SizeDelta: {x: 200, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &692405310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 692405308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: 'Value
+
+    1
+
+    2
+
+    3
+
+    4
+
+    5
+
+    6
+
+    7
+
+    8
+
+    9
+
+    10
+
+    11
+
+    12
+
+    13
+
+    14
+
+    15
+
+    16
+
+    17
+
+    18
+
+    19
+
+    20
+
+    21
+
+    22
+
+    23
+
+    24
+
+    25
+
+    26
+
+    27
+
+    28
+
+    29
+
+    30
+
+    31
+
+    32
+
+    33
+
+    34
+
+    35
+
+    36
+
+    37
+
+    38
+
+    39
+
+    40
+
+    41
+
+    42
+
+    43
+
+    44
+
+    45
+
+    46
+
+    47
+
+    48
+
+    49
+
+    50
+
+    51
+
+    52
+
+    53
+
+    54
+
+    55
+
+    56
+
+    57
+
+    58
+
+    59
+
+    60
+
+    61
+
+    62
+
+    63
+
+    64
+
+    65
+
+    66
+
+    67
+
+    68
+
+    69
+
+    70
+
+    71
+
+    72
+
+    73
+
+    74
+
+    75
+
+    76
+
+    77
+
+    78
+
+    79
+
+    80
+
+    81
+
+    82
+
+    83
+
+    84
+
+    85
+
+    86
+
+    87
+
+    88
+
+    89
+
+    90
+
+    91
+
+    92
+
+    93
+
+    94
+
+    95
+
+    96
+
+    97
+
+    98
+
+    99
+
+    100
+
+    101
+
+    102
+
+    103
+
+    104
+
+    105
+
+    106
+
+    107
+
+    108
+
+    109
+
+    110
+
+    111
+
+    112
+
+    113
+
+    114
+
+    115
+
+    116
+
+    117
+
+    118
+
+    119
+
+    120
+
+    121
+
+    122
+
+    123
+
+    124
+
+    125
+
+    126
+
+    127
+
+    128
+
+    129
+
+    130
+
+    131
+
+    132
+
+    133
+
+    134
+
+    135
+
+    136
+
+    137
+
+    138
+
+    139
+
+    140
+
+    141
+
+    142
+
+    143
+
+    144
+
+    145
+
+    146
+
+    147
+
+    148
+
+    149
+
+    150
+
+    151
+
+    152
+
+    153
+
+    154
+
+    155
+
+    156
+
+    157
+
+    158
+
+    159
+
+    160
+
+    161
+
+    162
+
+    163
+
+    164
+
+    165
+
+    166
+
+    167
+
+    168
+
+    169
+
+    170
+
+    171
+
+    172
+
+    173
+
+    174
+
+    175
+
+    176
+
+    177
+
+    178
+
+    179
+
+    180
+
+    181
+
+    182
+
+    183
+
+    184
+
+    185
+
+    186
+
+    187
+
+    188
+
+    189
+
+    190
+
+    191
+
+    192
+
+    193
+
+    194
+
+    195
+
+    196
+
+    197
+
+    198
+
+    199
+
+    200
+
+    201
+
+    202
+
+    203
+
+    204
+
+    205
+
+    206
+
+    207
+
+    208
+
+    209
+
+    210
+
+    211
+
+    212
+
+    213
+
+    214
+
+    215
+
+    216
+
+    217
+
+    218
+
+    219
+
+    220
+
+    221
+
+    222
+
+    223
+
+    224
+
+    225
+
+    226
+
+    227
+
+    228
+
+    229
+
+    230
+
+    231
+
+    232
+
+    233
+
+    234
+
+    235
+
+    236
+
+    237
+
+    238
+
+    239
+
+    240
+
+    241
+
+    242
+
+    243
+
+    244
+
+    245
+
+    246
+
+    247
+
+    248
+
+    249
+
+    250
+
+    251
+
+    252
+
+    253
+
+    254
+
+    255
+
+    256
+
+    257
+
+    258
+
+    259
+
+    260
+
+    261
+
+    262
+
+    263
+
+    264
+
+    265
+
+    266
+
+    267
+
+    268
+
+    269
+
+    270
+
+    271
+
+    272
+
+    273
+
+    274
+
+    275
+
+    276
+
+    277
+
+    278
+
+    279
+
+    280
+
+    281
+
+    282
+
+    283
+
+    284
+
+    285
+
+    286
+
+    287
+
+    288
+
+    289
+
+    290
+
+    291
+
+    292
+
+    293
+
+    294
+
+    295
+
+    296
+
+    297
+
+    298
+
+    299
+
+    300
+
+    301
+
+    302
+
+    303
+
+    304
+
+    305
+
+    306
+
+    307
+
+    308
+
+    309
+
+    310
+
+    311
+
+    312
+
+    313
+
+    314
+
+    315
+
+    316
+
+    317
+
+    318
+
+    319
+
+    320
+
+    321
+
+    322
+
+    323
+
+    324
+
+    325
+
+    326
+
+    327
+
+    328
+
+    329
+
+    330
+
+    331
+
+    332
+
+    333
+
+    334
+
+    335
+
+    336
+
+    337
+
+    338
+
+    339
+
+    340
+
+    341
+
+    342
+
+    343
+
+    344
+
+    345
+
+    346
+
+    347
+
+    348
+
+    349
+
+    350
+
+    351
+
+    352
+
+    353
+
+    354
+
+    355
+
+    356
+
+    357
+
+    358
+
+    359
+
+    360
+
+    361
+
+    362
+
+    363
+
+    364
+
+    365
+
+    366
+
+    367
+
+    368
+
+    369
+
+    370
+
+    371
+
+    372
+
+    373
+
+    374
+
+    375
+
+    376
+
+    377
+
+    378
+
+    379
+
+    380
+
+    381
+
+    382
+
+    383
+
+    384
+
+    385
+
+    386
+
+    387
+
+    388
+
+    389
+
+    390
+
+    391
+
+    392
+
+    393
+
+    394
+
+    395
+
+    396
+
+    397
+
+    398
+
+    399
+
+    400
+
+    401
+
+    402
+
+    403
+
+    404
+
+    405
+
+    406
+
+    407
+
+    408
+
+    409
+
+    410
+
+    411
+
+    412
+
+    413
+
+    414
+
+    415
+
+    416
+
+    417
+
+    418
+
+    419
+
+    420
+
+    421
+
+    422
+
+    423
+
+    424
+
+    425
+
+    426
+
+    427
+
+    428
+
+    429
+
+    430
+
+    431
+
+    432
+
+    433
+
+    434
+
+    435
+
+    436
+
+    437
+
+    438
+
+    439
+
+    440
+
+    441
+
+    442
+
+    443
+
+    444
+
+    445
+
+    446
+
+    447
+
+    448
+
+    449
+
+    450
+
+    451
+
+    452
+
+    453
+
+    454
+
+    455
+
+    456
+
+    457
+
+    458
+
+    459
+
+    460
+
+    461
+
+    462
+
+    463
+
+    464
+
+    465
+
+    466
+
+    467
+
+    468
+
+    469
+
+    470
+
+    471
+
+    472
+
+    473
+
+    474
+
+    475
+
+    476
+
+    477
+
+    478
+
+    479
+
+    480
+
+    481
+
+    482
+
+    483
+
+    484
+
+    485
+
+    486
+
+    487
+
+    488
+
+    489
+
+    490
+
+    491
+
+    492
+
+    493
+
+    494
+
+    495
+
+    496
+
+    497
+
+    498
+
+    499
+
+    500
+
+    501
+
+    502
+
+    503
+
+    504
+
+    505
+
+    506
+
+    507
+
+    508
+
+    509
+
+    510
+
+    511
+
+    512
+
+    513
+
+    514
+
+    515
+
+    516
+
+    517
+
+    518
+
+    519
+
+    520
+
+    521
+
+    522
+
+    523
+
+    524
+
+    525
+
+    526
+
+    527
+
+    528
+
+    529
+
+    530
+
+    531
+
+    532
+
+    533
+
+    534
+
+    535
+
+    536
+
+    537
+
+    538
+
+    539
+
+    540
+
+    541
+
+    542
+
+    543
+
+    544
+
+    545
+
+    546
+
+    547
+
+    548
+
+    549
+
+    550
+
+    551
+
+    552
+
+    553
+
+    554
+
+    555
+
+    556
+
+    557
+
+    558
+
+    559
+
+    560
+
+    561
+
+    562
+
+    563
+
+    564
+
+    565
+
+    566
+
+    567
+
+    568
+
+    569
+
+    570
+
+    571
+
+    572
+
+    573
+
+    574
+
+    575
+
+    576
+
+    577
+
+    578
+
+    579
+
+    580
+
+    581
+
+    582
+
+    583
+
+    584
+
+    585
+
+    586
+
+    587
+
+    588
+
+    589
+
+    590
+
+    591
+
+    592
+
+    593
+
+    594
+
+    595
+
+    596
+
+    597
+
+    598
+
+    599
+
+    600
+
+    601
+
+    602
+
+    603
+
+    604
+
+    605
+
+    606
+
+    607
+
+    608
+
+    609
+
+    610
+
+    611
+
+    612
+
+    613
+
+    614
+
+    615
+
+    616
+
+    617
+
+    618
+
+    619
+
+    620
+
+    621
+
+    622
+
+    623
+
+    624
+
+    625
+
+    626
+
+    627
+
+    628
+
+    629
+
+    630
+
+    631
+
+    632
+
+    633
+
+    634
+
+    635
+
+    636
+
+    637
+
+    638
+
+    639
+
+    640
+
+    641
+
+    642
+
+    643
+
+    644
+
+    645
+
+    646
+
+    647
+
+    648
+
+    649
+
+    650
+
+    651
+
+    652
+
+    653
+
+    654
+
+    655
+
+    656
+
+    657
+
+    658
+
+    659
+
+    660
+
+    661
+
+    662
+
+    663
+
+    664
+
+    665
+
+    666
+
+    667
+
+    668
+
+    669
+
+    670
+
+    671
+
+    672
+
+    673
+
+    674
+
+    675
+
+    676
+
+    677
+
+    678
+
+    679
+
+    680
+
+    681
+
+    682
+
+    683
+
+    684
+
+    685
+
+    686
+
+    687
+
+    688
+
+    689
+
+    690
+
+    691
+
+    692
+
+    693
+
+    694
+
+    695
+
+    696
+
+    697
+
+    698
+
+    699
+
+    700
+
+    701
+
+    702
+
+    703
+
+    704
+
+    705
+
+    706
+
+    707
+
+    708
+
+    709
+
+    710
+
+    711
+
+    712
+
+    713
+
+    714
+
+    715
+
+    716
+
+    717
+
+    718
+
+    719
+
+    720
+
+    721
+
+    722
+
+    723
+
+    724
+
+    725
+
+    726
+
+    727
+
+    728
+
+    729
+
+    730
+
+    731
+
+    732
+
+    733
+
+    734
+
+    735
+
+    736
+
+    737
+
+    738
+
+    739
+
+    740
+
+    741
+
+    742
+
+    743
+
+    744
+
+    745
+
+    746
+
+    747
+
+    748
+
+    749
+
+    750
+
+    751
+
+    752
+
+    753
+
+    754
+
+    755
+
+    756
+
+    757
+
+    758
+
+    759
+
+    760
+
+    761
+
+    762
+
+    763
+
+    764
+
+    765
+
+    766
+
+    767
+
+    768
+
+    769
+
+    770
+
+    771
+
+    772
+
+    773
+
+    774
+
+    775
+
+    776
+
+    777
+
+    778
+
+    779
+
+    780
+
+    781
+
+    782
+
+    783
+
+    784
+
+    785
+
+    786
+
+    787
+
+    788
+
+    789
+
+    790
+
+    791
+
+    792
+
+    793
+
+    794
+
+    795
+
+    796
+
+    797
+
+    798
+
+    799
+
+    800
+
+    801
+
+    802
+
+    803
+
+    804
+
+    805
+
+    806
+
+    807
+
+    808
+
+    809
+
+    810
+
+    811
+
+    812
+
+    813
+
+    814
+
+    815
+
+    816
+
+    817
+
+    818
+
+    819
+
+    820
+
+    821
+
+    822
+
+    823
+
+    824
+
+    825
+
+    826
+
+    827
+
+    828
+
+    829
+
+    830
+
+    831
+
+    832
+
+    833
+
+    834
+
+    835
+
+    836
+
+    837
+
+    838
+
+    839
+
+    840
+
+    841
+
+    842
+
+    843
+
+    844
+
+    845
+
+    846
+
+    847
+
+    848
+
+    849
+
+    850
+
+    851
+
+    852
+
+    853
+
+    854
+
+    855
+
+    856
+
+    857
+
+    858
+
+    859
+
+    860
+
+    861
+
+    862
+
+    863
+
+    864
+
+    865
+
+    866
+
+    867
+
+    868
+
+    869
+
+    870
+
+    871
+
+    872
+
+    873
+
+    874
+
+    875
+
+    876
+
+    877
+
+    878
+
+    879
+
+    880
+
+    881
+
+    882
+
+    883
+
+    884
+
+    885
+
+    886
+
+    887
+
+    888
+
+    889
+
+    890
+
+    891
+
+    892
+
+    893
+
+    894
+
+    895
+
+    896
+
+    897
+
+    898
+
+    899
+
+    900
+
+    901
+
+    902
+
+    903
+
+    904
+
+    905
+
+    906
+
+    907
+
+    908
+
+    909
+
+    910
+
+    911
+
+    912
+
+    913
+
+    914
+
+    915
+
+    916
+
+    917
+
+    918
+
+    919
+
+    920
+
+    921
+
+    922
+
+    923
+
+    924
+
+    925
+
+    926
+
+    927
+
+    928
+
+    929
+
+    930
+
+    931
+
+    932
+
+    933
+
+    934
+
+    935
+
+    936
+
+    937
+
+    938
+
+    939
+
+    940
+
+    941
+
+    942
+
+    943
+
+    944
+
+    945
+
+    946
+
+    947
+
+    948
+
+    949
+
+    950
+
+    951
+
+    952
+
+    953
+
+    954
+
+    955
+
+    956
+
+    957
+
+    958
+
+    959
+
+    960
+
+    961
+
+    962
+
+    963
+
+    964
+
+    965
+
+    966
+
+    967
+
+    968
+
+    969
+
+    970
+
+    971
+
+    972
+
+    973
+
+    974
+
+    975
+
+    976
+
+    977
+
+    978
+
+    979
+
+    980
+
+    981
+
+    982
+
+    983
+
+    984
+
+    985
+
+    986
+
+    987
+
+    988
+
+    989
+
+    990
+
+    991
+
+    992
+
+    993
+
+    994
+
+    995
+
+    996
+
+    997
+
+    998
+
+    999'
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 36
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &692405311
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 692405308}
+  m_CullTransparentMesh: 1
 --- !u!4 &693076729 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3899520030807063256, guid: 299e7a1cb6456cf4fa6079cf5978df9b, type: 3}
@@ -16300,6 +18432,64 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8903058273634951509, guid: f1fc5bb90ac285e4486771552d63bcb8, type: 3}
   m_PrefabInstance: {fileID: 1179959257}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1186211406
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1186211407}
+  - component: {fileID: 1186211408}
+  m_Layer: 5
+  m_Name: Debug Numbers Tester
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1186211407
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1186211406}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1804075291}
+  - {fileID: 1357908154}
+  - {fileID: 692405309}
+  - {fileID: 1794275126}
+  m_Father: {fileID: 2135056449}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -1110.59, y: -256.60995}
+  m_SizeDelta: {x: 200, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1186211408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1186211406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55d1401588e50834086900fab8030c48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  upgrade: {fileID: 11400000, guid: 19dc01956c9634146945e218afed02c4, type: 2}
+  upgradeName: {fileID: 1804075292}
+  levelText: {fileID: 1357908155}
+  value: {fileID: 692405310}
+  price: {fileID: 1794275127}
+  updateValues: 0
 --- !u!1001 &1188436054
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18489,6 +20679,2138 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8104821465431802634, guid: 54b0692b1ad11e540adc595ef40b30cf, type: 3}
   m_PrefabInstance: {fileID: 1353505625}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1357908153
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1357908154}
+  - component: {fileID: 1357908156}
+  - component: {fileID: 1357908155}
+  m_Layer: 5
+  m_Name: Level
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1357908154
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1357908153}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1186211407}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -1677, y: 332}
+  m_SizeDelta: {x: 200, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1357908155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1357908153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: 'Level
+
+    1
+
+    2
+
+    3
+
+    4
+
+    5
+
+    6
+
+    7
+
+    8
+
+    9
+
+    10
+
+    11
+
+    12
+
+    13
+
+    14
+
+    15
+
+    16
+
+    17
+
+    18
+
+    19
+
+    20
+
+    21
+
+    22
+
+    23
+
+    24
+
+    25
+
+    26
+
+    27
+
+    28
+
+    29
+
+    30
+
+    31
+
+    32
+
+    33
+
+    34
+
+    35
+
+    36
+
+    37
+
+    38
+
+    39
+
+    40
+
+    41
+
+    42
+
+    43
+
+    44
+
+    45
+
+    46
+
+    47
+
+    48
+
+    49
+
+    50
+
+    51
+
+    52
+
+    53
+
+    54
+
+    55
+
+    56
+
+    57
+
+    58
+
+    59
+
+    60
+
+    61
+
+    62
+
+    63
+
+    64
+
+    65
+
+    66
+
+    67
+
+    68
+
+    69
+
+    70
+
+    71
+
+    72
+
+    73
+
+    74
+
+    75
+
+    76
+
+    77
+
+    78
+
+    79
+
+    80
+
+    81
+
+    82
+
+    83
+
+    84
+
+    85
+
+    86
+
+    87
+
+    88
+
+    89
+
+    90
+
+    91
+
+    92
+
+    93
+
+    94
+
+    95
+
+    96
+
+    97
+
+    98
+
+    99
+
+    100
+
+    101
+
+    102
+
+    103
+
+    104
+
+    105
+
+    106
+
+    107
+
+    108
+
+    109
+
+    110
+
+    111
+
+    112
+
+    113
+
+    114
+
+    115
+
+    116
+
+    117
+
+    118
+
+    119
+
+    120
+
+    121
+
+    122
+
+    123
+
+    124
+
+    125
+
+    126
+
+    127
+
+    128
+
+    129
+
+    130
+
+    131
+
+    132
+
+    133
+
+    134
+
+    135
+
+    136
+
+    137
+
+    138
+
+    139
+
+    140
+
+    141
+
+    142
+
+    143
+
+    144
+
+    145
+
+    146
+
+    147
+
+    148
+
+    149
+
+    150
+
+    151
+
+    152
+
+    153
+
+    154
+
+    155
+
+    156
+
+    157
+
+    158
+
+    159
+
+    160
+
+    161
+
+    162
+
+    163
+
+    164
+
+    165
+
+    166
+
+    167
+
+    168
+
+    169
+
+    170
+
+    171
+
+    172
+
+    173
+
+    174
+
+    175
+
+    176
+
+    177
+
+    178
+
+    179
+
+    180
+
+    181
+
+    182
+
+    183
+
+    184
+
+    185
+
+    186
+
+    187
+
+    188
+
+    189
+
+    190
+
+    191
+
+    192
+
+    193
+
+    194
+
+    195
+
+    196
+
+    197
+
+    198
+
+    199
+
+    200
+
+    201
+
+    202
+
+    203
+
+    204
+
+    205
+
+    206
+
+    207
+
+    208
+
+    209
+
+    210
+
+    211
+
+    212
+
+    213
+
+    214
+
+    215
+
+    216
+
+    217
+
+    218
+
+    219
+
+    220
+
+    221
+
+    222
+
+    223
+
+    224
+
+    225
+
+    226
+
+    227
+
+    228
+
+    229
+
+    230
+
+    231
+
+    232
+
+    233
+
+    234
+
+    235
+
+    236
+
+    237
+
+    238
+
+    239
+
+    240
+
+    241
+
+    242
+
+    243
+
+    244
+
+    245
+
+    246
+
+    247
+
+    248
+
+    249
+
+    250
+
+    251
+
+    252
+
+    253
+
+    254
+
+    255
+
+    256
+
+    257
+
+    258
+
+    259
+
+    260
+
+    261
+
+    262
+
+    263
+
+    264
+
+    265
+
+    266
+
+    267
+
+    268
+
+    269
+
+    270
+
+    271
+
+    272
+
+    273
+
+    274
+
+    275
+
+    276
+
+    277
+
+    278
+
+    279
+
+    280
+
+    281
+
+    282
+
+    283
+
+    284
+
+    285
+
+    286
+
+    287
+
+    288
+
+    289
+
+    290
+
+    291
+
+    292
+
+    293
+
+    294
+
+    295
+
+    296
+
+    297
+
+    298
+
+    299
+
+    300
+
+    301
+
+    302
+
+    303
+
+    304
+
+    305
+
+    306
+
+    307
+
+    308
+
+    309
+
+    310
+
+    311
+
+    312
+
+    313
+
+    314
+
+    315
+
+    316
+
+    317
+
+    318
+
+    319
+
+    320
+
+    321
+
+    322
+
+    323
+
+    324
+
+    325
+
+    326
+
+    327
+
+    328
+
+    329
+
+    330
+
+    331
+
+    332
+
+    333
+
+    334
+
+    335
+
+    336
+
+    337
+
+    338
+
+    339
+
+    340
+
+    341
+
+    342
+
+    343
+
+    344
+
+    345
+
+    346
+
+    347
+
+    348
+
+    349
+
+    350
+
+    351
+
+    352
+
+    353
+
+    354
+
+    355
+
+    356
+
+    357
+
+    358
+
+    359
+
+    360
+
+    361
+
+    362
+
+    363
+
+    364
+
+    365
+
+    366
+
+    367
+
+    368
+
+    369
+
+    370
+
+    371
+
+    372
+
+    373
+
+    374
+
+    375
+
+    376
+
+    377
+
+    378
+
+    379
+
+    380
+
+    381
+
+    382
+
+    383
+
+    384
+
+    385
+
+    386
+
+    387
+
+    388
+
+    389
+
+    390
+
+    391
+
+    392
+
+    393
+
+    394
+
+    395
+
+    396
+
+    397
+
+    398
+
+    399
+
+    400
+
+    401
+
+    402
+
+    403
+
+    404
+
+    405
+
+    406
+
+    407
+
+    408
+
+    409
+
+    410
+
+    411
+
+    412
+
+    413
+
+    414
+
+    415
+
+    416
+
+    417
+
+    418
+
+    419
+
+    420
+
+    421
+
+    422
+
+    423
+
+    424
+
+    425
+
+    426
+
+    427
+
+    428
+
+    429
+
+    430
+
+    431
+
+    432
+
+    433
+
+    434
+
+    435
+
+    436
+
+    437
+
+    438
+
+    439
+
+    440
+
+    441
+
+    442
+
+    443
+
+    444
+
+    445
+
+    446
+
+    447
+
+    448
+
+    449
+
+    450
+
+    451
+
+    452
+
+    453
+
+    454
+
+    455
+
+    456
+
+    457
+
+    458
+
+    459
+
+    460
+
+    461
+
+    462
+
+    463
+
+    464
+
+    465
+
+    466
+
+    467
+
+    468
+
+    469
+
+    470
+
+    471
+
+    472
+
+    473
+
+    474
+
+    475
+
+    476
+
+    477
+
+    478
+
+    479
+
+    480
+
+    481
+
+    482
+
+    483
+
+    484
+
+    485
+
+    486
+
+    487
+
+    488
+
+    489
+
+    490
+
+    491
+
+    492
+
+    493
+
+    494
+
+    495
+
+    496
+
+    497
+
+    498
+
+    499
+
+    500
+
+    501
+
+    502
+
+    503
+
+    504
+
+    505
+
+    506
+
+    507
+
+    508
+
+    509
+
+    510
+
+    511
+
+    512
+
+    513
+
+    514
+
+    515
+
+    516
+
+    517
+
+    518
+
+    519
+
+    520
+
+    521
+
+    522
+
+    523
+
+    524
+
+    525
+
+    526
+
+    527
+
+    528
+
+    529
+
+    530
+
+    531
+
+    532
+
+    533
+
+    534
+
+    535
+
+    536
+
+    537
+
+    538
+
+    539
+
+    540
+
+    541
+
+    542
+
+    543
+
+    544
+
+    545
+
+    546
+
+    547
+
+    548
+
+    549
+
+    550
+
+    551
+
+    552
+
+    553
+
+    554
+
+    555
+
+    556
+
+    557
+
+    558
+
+    559
+
+    560
+
+    561
+
+    562
+
+    563
+
+    564
+
+    565
+
+    566
+
+    567
+
+    568
+
+    569
+
+    570
+
+    571
+
+    572
+
+    573
+
+    574
+
+    575
+
+    576
+
+    577
+
+    578
+
+    579
+
+    580
+
+    581
+
+    582
+
+    583
+
+    584
+
+    585
+
+    586
+
+    587
+
+    588
+
+    589
+
+    590
+
+    591
+
+    592
+
+    593
+
+    594
+
+    595
+
+    596
+
+    597
+
+    598
+
+    599
+
+    600
+
+    601
+
+    602
+
+    603
+
+    604
+
+    605
+
+    606
+
+    607
+
+    608
+
+    609
+
+    610
+
+    611
+
+    612
+
+    613
+
+    614
+
+    615
+
+    616
+
+    617
+
+    618
+
+    619
+
+    620
+
+    621
+
+    622
+
+    623
+
+    624
+
+    625
+
+    626
+
+    627
+
+    628
+
+    629
+
+    630
+
+    631
+
+    632
+
+    633
+
+    634
+
+    635
+
+    636
+
+    637
+
+    638
+
+    639
+
+    640
+
+    641
+
+    642
+
+    643
+
+    644
+
+    645
+
+    646
+
+    647
+
+    648
+
+    649
+
+    650
+
+    651
+
+    652
+
+    653
+
+    654
+
+    655
+
+    656
+
+    657
+
+    658
+
+    659
+
+    660
+
+    661
+
+    662
+
+    663
+
+    664
+
+    665
+
+    666
+
+    667
+
+    668
+
+    669
+
+    670
+
+    671
+
+    672
+
+    673
+
+    674
+
+    675
+
+    676
+
+    677
+
+    678
+
+    679
+
+    680
+
+    681
+
+    682
+
+    683
+
+    684
+
+    685
+
+    686
+
+    687
+
+    688
+
+    689
+
+    690
+
+    691
+
+    692
+
+    693
+
+    694
+
+    695
+
+    696
+
+    697
+
+    698
+
+    699
+
+    700
+
+    701
+
+    702
+
+    703
+
+    704
+
+    705
+
+    706
+
+    707
+
+    708
+
+    709
+
+    710
+
+    711
+
+    712
+
+    713
+
+    714
+
+    715
+
+    716
+
+    717
+
+    718
+
+    719
+
+    720
+
+    721
+
+    722
+
+    723
+
+    724
+
+    725
+
+    726
+
+    727
+
+    728
+
+    729
+
+    730
+
+    731
+
+    732
+
+    733
+
+    734
+
+    735
+
+    736
+
+    737
+
+    738
+
+    739
+
+    740
+
+    741
+
+    742
+
+    743
+
+    744
+
+    745
+
+    746
+
+    747
+
+    748
+
+    749
+
+    750
+
+    751
+
+    752
+
+    753
+
+    754
+
+    755
+
+    756
+
+    757
+
+    758
+
+    759
+
+    760
+
+    761
+
+    762
+
+    763
+
+    764
+
+    765
+
+    766
+
+    767
+
+    768
+
+    769
+
+    770
+
+    771
+
+    772
+
+    773
+
+    774
+
+    775
+
+    776
+
+    777
+
+    778
+
+    779
+
+    780
+
+    781
+
+    782
+
+    783
+
+    784
+
+    785
+
+    786
+
+    787
+
+    788
+
+    789
+
+    790
+
+    791
+
+    792
+
+    793
+
+    794
+
+    795
+
+    796
+
+    797
+
+    798
+
+    799
+
+    800
+
+    801
+
+    802
+
+    803
+
+    804
+
+    805
+
+    806
+
+    807
+
+    808
+
+    809
+
+    810
+
+    811
+
+    812
+
+    813
+
+    814
+
+    815
+
+    816
+
+    817
+
+    818
+
+    819
+
+    820
+
+    821
+
+    822
+
+    823
+
+    824
+
+    825
+
+    826
+
+    827
+
+    828
+
+    829
+
+    830
+
+    831
+
+    832
+
+    833
+
+    834
+
+    835
+
+    836
+
+    837
+
+    838
+
+    839
+
+    840
+
+    841
+
+    842
+
+    843
+
+    844
+
+    845
+
+    846
+
+    847
+
+    848
+
+    849
+
+    850
+
+    851
+
+    852
+
+    853
+
+    854
+
+    855
+
+    856
+
+    857
+
+    858
+
+    859
+
+    860
+
+    861
+
+    862
+
+    863
+
+    864
+
+    865
+
+    866
+
+    867
+
+    868
+
+    869
+
+    870
+
+    871
+
+    872
+
+    873
+
+    874
+
+    875
+
+    876
+
+    877
+
+    878
+
+    879
+
+    880
+
+    881
+
+    882
+
+    883
+
+    884
+
+    885
+
+    886
+
+    887
+
+    888
+
+    889
+
+    890
+
+    891
+
+    892
+
+    893
+
+    894
+
+    895
+
+    896
+
+    897
+
+    898
+
+    899
+
+    900
+
+    901
+
+    902
+
+    903
+
+    904
+
+    905
+
+    906
+
+    907
+
+    908
+
+    909
+
+    910
+
+    911
+
+    912
+
+    913
+
+    914
+
+    915
+
+    916
+
+    917
+
+    918
+
+    919
+
+    920
+
+    921
+
+    922
+
+    923
+
+    924
+
+    925
+
+    926
+
+    927
+
+    928
+
+    929
+
+    930
+
+    931
+
+    932
+
+    933
+
+    934
+
+    935
+
+    936
+
+    937
+
+    938
+
+    939
+
+    940
+
+    941
+
+    942
+
+    943
+
+    944
+
+    945
+
+    946
+
+    947
+
+    948
+
+    949
+
+    950
+
+    951
+
+    952
+
+    953
+
+    954
+
+    955
+
+    956
+
+    957
+
+    958
+
+    959
+
+    960
+
+    961
+
+    962
+
+    963
+
+    964
+
+    965
+
+    966
+
+    967
+
+    968
+
+    969
+
+    970
+
+    971
+
+    972
+
+    973
+
+    974
+
+    975
+
+    976
+
+    977
+
+    978
+
+    979
+
+    980
+
+    981
+
+    982
+
+    983
+
+    984
+
+    985
+
+    986
+
+    987
+
+    988
+
+    989
+
+    990
+
+    991
+
+    992
+
+    993
+
+    994
+
+    995
+
+    996
+
+    997
+
+    998
+
+    999'
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 36
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1357908156
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1357908153}
+  m_CullTransparentMesh: 1
 --- !u!4 &1358583998 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2222111361405018444, guid: 88f2fd29f58b9734683512546acec310, type: 3}
@@ -23939,6 +28261,2138 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8104821465431802634, guid: 54b0692b1ad11e540adc595ef40b30cf, type: 3}
   m_PrefabInstance: {fileID: 1784839673}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1794275125
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1794275126}
+  - component: {fileID: 1794275128}
+  - component: {fileID: 1794275127}
+  m_Layer: 5
+  m_Name: Price
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1794275126
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1794275125}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1186211407}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -923, y: 332}
+  m_SizeDelta: {x: 200, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1794275127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1794275125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: 'Price
+
+    5
+
+    6
+
+    7
+
+    7
+
+    8
+
+    9
+
+    10
+
+    11
+
+    12
+
+    13
+
+    14
+
+    16
+
+    17
+
+    19
+
+    21
+
+    23
+
+    25
+
+    28
+
+    31
+
+    34
+
+    37
+
+    41
+
+    46
+
+    50
+
+    56
+
+    61
+
+    68
+
+    75
+
+    83
+
+    91
+
+    101
+
+    111
+
+    123
+
+    136
+
+    150
+
+    166
+
+    183
+
+    203
+
+    224
+
+    248
+
+    273
+
+    302
+
+    334
+
+    369
+
+    408
+
+    451
+
+    498
+
+    550
+
+    608
+
+    672
+
+    743
+
+    821
+
+    907
+
+    1k
+
+    1.11k
+
+    1.22k
+
+    1.35k
+
+    1.5k
+
+    1.65k
+
+    1.83k
+
+    2.02k
+
+    2.23k
+
+    2.46k
+
+    2.72k
+
+    3.01k
+
+    3.33k
+
+    3.68k
+
+    4.06k
+
+    4.49k
+
+    4.96k
+
+    5.48k
+
+    6.06k
+
+    6.7k
+
+    7.4k
+
+    8.18k
+
+    9.04k
+
+    9.99k
+
+    11.04k
+
+    12.2k
+
+    13.49k
+
+    14.91k
+
+    16.47k
+
+    18.21k
+
+    20.12k
+
+    22.24k
+
+    24.57k
+
+    27.16k
+
+    30.02k
+
+    33.17k
+
+    36.66k
+
+    40.52k
+
+    44.78k
+
+    49.49k
+
+    54.69k
+
+    60.44k
+
+    66.8k
+
+    73.82k
+
+    81.59k
+
+    90.17k
+
+    99.65k
+
+    110.13k
+
+    121.72k
+
+    134.52k
+
+    148.66k
+
+    164.3k
+
+    181.58k
+
+    200.68k
+
+    221.78k
+
+    245.11k
+
+    270.88k
+
+    299.37k
+
+    330.86k
+
+    365.65k
+
+    404.11k
+
+    446.61k
+
+    493.58k
+
+    545.49k
+
+    602.86k
+
+    666.26k
+
+    736.33k
+
+    813.77k
+
+    899.36k
+
+    993.95k
+
+    1.1M
+
+    1.21M
+
+    1.34M
+
+    1.48M
+
+    1.64M
+
+    1.81M
+
+    2M
+
+    2.21M
+
+    2.44M
+
+    2.7M
+
+    2.99M
+
+    3.3M
+
+    3.65M
+
+    4.03M
+
+    4.45M
+
+    4.92M
+
+    5.44M
+
+    6.01M
+
+    6.65M
+
+    7.34M
+
+    8.12M
+
+    8.97M
+
+    9.91M
+
+    10.96M
+
+    12.11M
+
+    13.38M
+
+    14.79M
+
+    16.35M
+
+    18.06M
+
+    19.96M
+
+    22.06M
+
+    24.38M
+
+    26.95M
+
+    29.78M
+
+    32.91M
+
+    36.38M
+
+    40.2M
+
+    44.43M
+
+    49.1M
+
+    54.27M
+
+    59.98M
+
+    66.28M
+
+    73.25M
+
+    80.96M
+
+    89.47M
+
+    98.88M
+
+    109.28M
+
+    120.77M
+
+    133.48M
+
+    147.51M
+
+    163.03M
+
+    180.17M
+
+    199.12M
+
+    220.07M
+
+    243.21M
+
+    268.79M
+
+    297.06M
+
+    328.3M
+
+    362.83M
+
+    400.99M
+
+    443.16M
+
+    489.77M
+
+    541.28M
+
+    598.2M
+
+    661.12M
+
+    730.65M
+
+    807.49M
+
+    892.41M
+
+    986.27M
+
+    1.09B
+
+    1.2B
+
+    1.33B
+
+    1.47B
+
+    1.63B
+
+    1.8B
+
+    1.99B
+
+    2.19B
+
+    2.43B
+
+    2.68B
+
+    2.96B
+
+    3.27B
+
+    3.62B
+
+    4B
+
+    4.42B
+
+    4.89B
+
+    5.4B
+
+    5.97B
+
+    6.59B
+
+    7.29B
+
+    8.05B
+
+    8.9B
+
+    9.84B
+
+    10.87B
+
+    12.02B
+
+    13.28B
+
+    14.68B
+
+    16.22B
+
+    17.92B
+
+    19.81B
+
+    21.89B
+
+    24.2B
+
+    26.74B
+
+    29.55B
+
+    32.66B
+
+    36.1B
+
+    39.89B
+
+    44.09B
+
+    48.72B
+
+    53.85B
+
+    59.51B
+
+    65.77B
+
+    72.69B
+
+    80.33B
+
+    88.78B
+
+    98.12B
+
+    108.44B
+
+    119.84B
+
+    132.45B
+
+    146.38B
+
+    161.77B
+
+    178.78B
+
+    197.59B
+
+    218.37B
+
+    241.33B
+
+    266.71B
+
+    294.76B
+
+    325.76B
+
+    360.02B
+
+    397.89B
+
+    439.74B
+
+    485.98B
+
+    537.09B
+
+    593.58B
+
+    656.01B
+
+    725B
+
+    801.25B
+
+    885.52B
+
+    978.65B
+
+    1.08T
+
+    1.2T
+
+    1.32T
+
+    1.46T
+
+    1.61T
+
+    1.78T
+
+    1.97T
+
+    2.18T
+
+    2.41T
+
+    2.66T
+
+    2.94T
+
+    3.25T
+
+    3.59T
+
+    3.97T
+
+    4.39T
+
+    4.85T
+
+    5.36T
+
+    5.92T
+
+    6.54T
+
+    7.23T
+
+    7.99T
+
+    8.83T
+
+    9.76T
+
+    10.79T
+
+    11.92T
+
+    13.18T
+
+    14.56T
+
+    16.09T
+
+    17.79T
+
+    19.66T
+
+    21.72T
+
+    24.01T
+
+    26.53T
+
+    29.32T
+
+    32.41T
+
+    35.82T
+
+    39.58T
+
+    43.75T
+
+    48.35T
+
+    53.43T
+
+    59.05T
+
+    65.26T
+
+    72.13T
+
+    79.71T
+
+    88.1T
+
+    97.36T
+
+    107.6T
+
+    118.92T
+
+    131.42T
+
+    145.24T
+
+    160.52T
+
+    177.4T
+
+    196.06T
+
+    216.68T
+
+    239.47T
+
+    264.65T
+
+    292.49T
+
+    323.25T
+
+    357.24T
+
+    394.81T
+
+    436.34T
+
+    482.23T
+
+    532.94T
+
+    589T
+
+    650.94T
+
+    719.4T
+
+    795.06T
+
+    878.68T
+
+    971.09T
+
+    1.07Q
+
+    1.19Q
+
+    1.31Q
+
+    1.45Q
+
+    1.6Q
+
+    1.77Q
+
+    1.96Q
+
+    2.16Q
+
+    2.39Q
+
+    2.64Q
+
+    2.92Q
+
+    3.22Q
+
+    3.56Q
+
+    3.94Q
+
+    4.35Q
+
+    4.81Q
+
+    5.32Q
+
+    5.87Q
+
+    6.49Q
+
+    7.18Q
+
+    7.93Q
+
+    8.76Q
+
+    9.69Q
+
+    10.7Q
+
+    11.83Q
+
+    13.07Q
+
+    14.45Q
+
+    15.97Q
+
+    17.65Q
+
+    19.5Q
+
+    21.56Q
+
+    23.82Q
+
+    26.33Q
+
+    29.1Q
+
+    32.16Q
+
+    35.54Q
+
+    39.28Q
+
+    43.41Q
+
+    47.97Q
+
+    53.02Q
+
+    58.6Q
+
+    64.76Q
+
+    71.57Q
+
+    79.1Q
+
+    87.41Q
+
+    96.61Q
+
+    106.77Q
+
+    118Q
+
+    130.41Q
+
+    144.12Q
+
+    159.28Q
+
+    176.03Q
+
+    194.54Q
+
+    215Q
+
+    237.62Q
+
+    262.61Q
+
+    290.23Q
+
+    320.75Q
+
+    354.48Q
+
+    391.77Q
+
+    432.97Q
+
+    478.5Q
+
+    528.83Q
+
+    584.44Q
+
+    645.91Q
+
+    713.84Q
+
+    788.92Q
+
+    871.89Q
+
+    963.59Q
+
+    1.06E
+
+    1.18E
+
+    1.3E
+
+    1.44E
+
+    1.59E
+
+    1.76E
+
+    1.94E
+
+    2.14E
+
+    2.37E
+
+    2.62E
+
+    2.89E
+
+    3.2E
+
+    3.54E
+
+    3.91E
+
+    4.32E
+
+    4.77E
+
+    5.27E
+
+    5.83E
+
+    6.44E
+
+    7.12E
+
+    7.87E
+
+    8.7E
+
+    9.61E
+
+    10.62E
+
+    11.74E
+
+    12.97E
+
+    14.34E
+
+    15.85E
+
+    17.51E
+
+    19.35E
+
+    21.39E
+
+    23.64E
+
+    26.13E
+
+    28.87E
+
+    31.91E
+
+    35.27E
+
+    38.97E
+
+    43.07E
+
+    47.6E
+
+    52.61E
+
+    58.14E
+
+    64.26E
+
+    71.02E
+
+    78.48E
+
+    86.74E
+
+    95.86E
+
+    105.94E
+
+    117.09E
+
+    129.4E
+
+    143.01E
+
+    158.05E
+
+    174.67E
+
+    193.04E
+
+    213.34E
+
+    235.78E
+
+    260.58E
+
+    287.98E
+
+    318.27E
+
+    351.75E
+
+    388.74E
+
+    429.62E
+
+    474.81E
+
+    524.74E
+
+    579.93E
+
+    640.92E
+
+    708.33E
+
+    782.82E
+
+    865.15E
+
+    956.14E
+
+    1056.7E
+
+    1167.84E
+
+    1290.66E
+
+    1426.4E
+
+    1576.41E
+
+    1742.2E
+
+    1925.44E
+
+    2127.93E
+
+    2351.74E
+
+    2599.07E
+
+    2872.41E
+
+    3174.51E
+
+    3508.37E
+
+    3877.36E
+
+    4285.13E
+
+    4735.8E
+
+    5233.88E
+
+    5784.32E
+
+    6392.68E
+
+    7064.99E
+
+    7808.01E
+
+    8629.21E
+
+    9536.73E
+
+    10539.74E
+
+    11648.2E
+
+    12873.23E
+
+    14227.16E
+
+    15723.42E
+
+    17377.1E
+
+    19204.64E
+
+    21224.37E
+
+    23456.61E
+
+    25923.53E
+
+    28650E
+
+    31663.09E
+
+    34993.08E
+
+    38673.42E
+
+    42740.68E
+
+    47235.85E
+
+    52203.62E
+
+    57693.83E
+
+    63761.69E
+
+    70467.45E
+
+    77878.76E
+
+    86069.21E
+
+    95121.05E
+
+    105125.3E
+
+    116181.2E
+
+    128400.4E
+
+    141904.1E
+
+    156828.1E
+
+    173322.2E
+
+    191550.4E
+
+    211696.4E
+
+    233960.4E
+
+    258565.8E
+
+    285760.1E
+
+    315813.3E
+
+    349028.4E
+
+    385735.4E
+
+    426303E
+
+    471138.7E
+
+    520688E
+
+    575450.5E
+
+    635970.2E
+
+    702854.8E
+
+    776776.4E
+
+    858469.3E
+
+    948757.5E
+
+    1048538E
+
+    1158812E
+
+    1280688E
+
+    1415377E
+
+    1564237E
+
+    1728747E
+
+    1910557E
+
+    2111497E
+
+    2333562E
+
+    2578990E
+
+    2850221E
+
+    3149976E
+
+    3481270E
+
+    3847393E
+
+    4252037E
+
+    4699220E
+
+    5193433E
+
+    5739645E
+
+    6343279E
+
+    7010423E
+
+    7747703E
+
+    8562523E
+
+    9463073E
+
+    10458300E
+
+    11558230E
+
+    12773800E
+
+    14117210E
+
+    15601970E
+
+    17242820E
+
+    19056300E
+
+    21060440E
+
+    23275350E
+
+    25723300E
+
+    28428600E
+
+    31418540E
+
+    34722800E
+
+    38374570E
+
+    42410550E
+
+    46870840E
+
+    51800400E
+
+    57248220E
+
+    63268970E
+
+    69923180E
+
+    77276940E
+
+    85404430E
+
+    94386340E
+
+    104312900E
+
+    115283800E
+
+    127408200E
+
+    140808100E
+
+    155616800E
+
+    171982900E
+
+    190070900E
+
+    210060500E
+
+    232153300E
+
+    256568700E
+
+    283551800E
+
+    313374000E
+
+    346331300E
+
+    382756100E
+
+    423010300E
+
+    467497900E
+
+    516666300E
+
+    571003700E
+
+    631058100E
+
+    697426000E
+
+    770773800E
+
+    851838800E
+
+    941425900E
+
+    1040439000E
+
+    1149861000E
+
+    1270791000E
+
+    1404445000E
+
+    1552149000E
+
+    1715394000E
+
+    1895801000E
+
+    2095180000E
+
+    2315538000E
+
+    2559061000E
+
+    2828206000E
+
+    3125647000E
+
+    3454368000E
+
+    3817676000E
+
+    4219178000E
+
+    4662924000E
+
+    5153320000E
+
+    5695291000E
+
+    6294284000E
+
+    6956249000E
+
+    7687862000E
+
+    8496388000E
+
+    9389947000E
+
+    10377520000E
+
+    11468920000E
+
+    12675140000E
+
+    14008180000E
+
+    15481410000E
+
+    17109640000E
+
+    18909050000E
+
+    20897780000E
+
+    23095580000E
+
+    25524520000E
+
+    28209020000E
+
+    31175740000E
+
+    34454470000E
+
+    38078320000E
+
+    42082980000E
+
+    46508820000E
+
+    51400120000E
+
+    56805820000E
+
+    62780530000E
+
+    69383110000E
+
+    76680080000E
+
+    84744460000E
+
+    93656970000E
+
+    103507600000E
+
+    114393400000E
+
+    126424100000E
+
+    139720000000E
+
+    154414300000E
+
+    170655200000E
+
+    188602800000E
+
+    208438100000E
+
+    230359300000E
+
+    254586000000E
+
+    281362800000E
+
+    310953500000E
+
+    343656300000E
+
+    379798300000E
+
+    419741400000E
+
+    463888900000E
+
+    512675700000E
+
+    566593400000E
+
+    626181600000E
+
+    692036600000E
+
+    764823500000E
+
+    845259300000E
+
+    934154500000E
+
+    1032399000000E
+
+    1140975000000E
+
+    1260981000000E
+
+    1393597000000E
+
+    1540161000000E
+
+    1702138000000E
+
+    1881151000000E
+
+    2079006000000E
+
+    2297653000000E
+
+    2539296000000E
+
+    2806351000000E
+
+    3101493000000E
+
+    3427701000000E
+
+    3788190000000E
+
+    4186590000000E
+
+    4626891000000E
+
+    5113498000000E
+
+    5651323000000E
+
+    6245669000000E
+
+    6902520000000E
+
+    7628454000000E
+
+    8430732000000E
+
+    9317457000000E
+
+    10297370000000E
+
+    11380330000000E
+
+    12577190000000E
+
+    13899930000000E
+
+    15361890000000E
+
+    16977490000000E
+
+    18763000000000E
+
+    20736290000000E
+
+    22917100000000E
+
+    25327470000000E
+
+    27991140000000E
+
+    30934950000000E
+
+    34188350000000E
+
+    37783920000000E
+
+    41757950000000E
+
+    46149590000000E
+
+    51003110000000E
+
+    56367070000000E
+
+    62295150000000E
+
+    68847210000000E
+
+    76087820000000E
+
+    84089920000000E
+
+    92933590000000E
+
+    102707300000000E
+
+    113509900000000E
+
+    125447600000000E
+
+    138640800000000E
+
+    153221600000000E
+
+    169335800000000E
+
+    187146100000000E
+
+    206828100000000E
+
+    228580100000000E
+
+    252619700000000E
+
+    279187500000000E
+
+    308551800000000E
+
+    341001900000000E
+
+    376864900000000E
+
+    416499500000000E
+
+    460302400000000E
+
+    508715900000000E
+
+    562217100000000E
+
+    621345100000000E
+
+    686691500000000E
+
+    758910300000000E
+
+    838730700000000E
+
+    926939400000000E
+
+    1024425000000000E
+
+    1132163000000000E
+
+    1251232000000000E
+
+    1382833000000000E
+
+    1528265000000000E
+
+    1688991000000000E
+
+    1866621000000000E
+
+    2062932000000000E
+
+    2279906000000000E
+
+    2519683000000000E
+
+    2784676000000000E
+
+    3077538000000000E
+
+    3401200000000000E
+
+    3758930000000000E
+
+    4154254000000000E
+
+    4591154000000000E
+
+    5074002000000000E
+
+    5607631000000000E
+
+    6197429000000000E
+
+    6849207000000000E
+
+    7569533000000000E
+
+    8365615000000000E
+
+    9245421000000000E
+
+    10217830000000000E
+
+    11292430000000000E
+
+    12480050000000000E
+
+    13792570000000000E
+
+    15243120000000000E
+
+    16846360000000000E
+
+    18618080000000000E
+
+    20576120000000000E
+
+    22740100000000000E
+
+    25131660000000000E
+
+    27774950000000000E
+
+    30696020000000000E
+
+    33924290000000000E
+
+    37492080000000000E
+
+    41435100000000000E
+
+    45793150000000000E
+
+    50609180000000000E
+
+    55931710000000000E
+
+    61814000000000000E
+
+    68314930000000000E
+
+    75500130000000000E
+
+    83440430000000000E
+
+    92215790000000000E
+
+    101914100000000000E
+
+    112632300000000000E
+
+    124478700000000000E
+
+    137570000000000000E
+
+    152038100000000000E
+
+    168027900000000000E
+
+    185699200000000000E
+
+    205230600000000000E
+
+    226814600000000000E
+
+    250668500000000000E
+
+    277031100000000000E
+
+    306166300000000000E
+
+    338368100000000000E
+
+    373954000000000000E
+
+    413282500000000000E
+
+    456747100000000000E
+
+    504782800000000000E
+
+    557874700000000000E
+
+    616546000000000000E
+
+    681387600000000000E
+
+    753048700000000000E
+
+    832246300000000000E
+
+    919780000000000000E
+
+    1016512000000000000E
+
+    1123418000000000000E
+
+    1241567000000000000E
+
+    1372142000000000000E
+
+    1516461000000000000E
+
+    1675946000000000000E
+
+    1852204000000000000E
+
+    2046998000000000000E
+
+    2262280000000000000E
+
+    2500221000000000000E
+
+    2763168000000000000E
+
+    3053767000000000000E
+
+    3374930000000000000E
+
+    3729869000000000000E
+
+    4122168000000000000E
+
+    4555693000000000000E
+
+    5034812000000000000E
+
+    5564319000000000000E
+
+    6149514000000000000E
+
+    6796305000000000000E
+
+    7511067000000000000E
+
+    8301001000000000000E
+
+    9174011000000000000E
+
+    10138830000000000000E
+
+    11205210000000000000E
+
+    12383660000000000000E
+
+    13686040000000000000E
+
+    15125390000000000000E
+
+    16716110000000000000E
+
+    18474270000000000000E
+
+    20417200000000000000E
+
+    22564460000000000000E
+
+    24937550000000000000E
+
+    27560210000000000000E
+
+    30458930000000000000E
+
+    33662270000000000000E
+
+    37202500000000000000E
+
+    41115070000000000000E
+
+    45439100000000000000E
+
+    50218280000000000000E
+
+    55499700000000000000E
+
+    61336560000000000000E
+
+    67787280000000000000E
+
+    74916420000000000000E
+
+    82795950000000000000E
+
+    91503530000000000000E
+
+    101126900000000000000E
+
+    111762300000000000000E
+
+    123516300000000000000E
+
+    136507500000000000000E
+
+    150863800000000000000E
+
+    166730100000000000000E
+
+    184264900000000000000E
+
+    203643900000000000000E
+
+    225062700000000000000E
+
+    248732400000000000000E
+
+    274891400000000000000E
+
+    303801500000000000000E
+
+    335752100000000000000E
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE
+
+    InfinityE'
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 36
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1794275128
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1794275125}
+  m_CullTransparentMesh: 1
 --- !u!1001 &1796054111
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24090,6 +30544,140 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4661435515762813124, guid: e289bf5debb17f6459818c207d781953, type: 3}
   m_PrefabInstance: {fileID: 1799736279}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1804075290
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1804075291}
+  - component: {fileID: 1804075293}
+  - component: {fileID: 1804075292}
+  m_Layer: 5
+  m_Name: Title
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1804075291
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1804075290}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1186211407}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -1505.031, y: 423.42133}
+  m_SizeDelta: {x: 543.938, y: 90.8427}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1804075292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1804075290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: SO_Upgrade_SlapDamage
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 36
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1804075293
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1804075290}
+  m_CullTransparentMesh: 1
 --- !u!1001 &1808226813
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29305,6 +35893,7 @@ RectTransform:
   - {fileID: 669304320}
   - {fileID: 619427074}
   - {fileID: 223876219}
+  - {fileID: 1186211407}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}

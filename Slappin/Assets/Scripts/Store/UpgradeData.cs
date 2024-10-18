@@ -29,8 +29,11 @@ public class UpgradeData : MonoBehaviour
         }
 
         //TODO:: Take care of adding all the stuff
-
+        
+        
         PlayerStats.I.currency1 -= GetPrice();
+        
+        //Remember that by incrementing this, it will increase everything, so updates after, purchases before
         level++;
         
         //Send out an event to update all the cards appearances for affordability or not
@@ -45,27 +48,32 @@ public class UpgradeData : MonoBehaviour
 
     private int GetPrice()
     {
-        return (int) GrowthCurves.I.ComputeGrowth(upgradeSO.basePrice, level, upgradeSO.priceGrowthCurve);
+        return (int) Mathf.Floor(upgradeSO.newPriceGrowthCurve.ComputeGrowth(upgradeSO.basePrice, level));
     }
 
     public string GetPriceText()
     {
-        return FormatLargeNumber(GetPrice());
+        return BozUtilities.FormatLargeNumber(GetPrice());
     }
 
 
     public string GetUpgradeText()
     {
+        float nextUpgrade = upgradeSO.newValueGrowthCurve.ComputeGrowth(upgradeSO.baseValue, level);
+        
         switch (upgradeSO.numberType)
         {
             case NumberType.Normal:
-                return FormatLargeNumber(upgradeSO.baseValue);
+                int roundedUpgrade = (int) Mathf.Ceil(nextUpgrade);
+                if (roundedUpgrade <= level) roundedUpgrade = level + 1;
+                roundedUpgrade--;
+                return BozUtilities.FormatLargeNumber(roundedUpgrade);
             case NumberType.Percentage:
-                return (upgradeSO.baseValue * 100).ToString("0.00") + "%";
+                return (nextUpgrade * 100).ToString("0.00") + "%";
             case NumberType.Multiplier:
-                return upgradeSO.baseValue.ToString("0.00") + "x";
+                return nextUpgrade.ToString("0.00") + "x";
             default:
-                return upgradeSO.ToString();
+                return nextUpgrade.ToString();
         }
     }
 
@@ -94,23 +102,5 @@ public class UpgradeData : MonoBehaviour
     //     }
     // }
 
-    static string FormatLargeNumber(float number)
-    {
-        if (number >= 1_000_000_000)
-        {
-            return (number / 1_000_000_000).ToString("0.##") + "B";
-        }
-        else if (number >= 1_000_000)
-        {
-            return (number / 1_000_000).ToString("0.##") + "M";
-        }
-        else if (number >= 1_000)
-        {
-            return (number / 1_000).ToString("0.##") + "k";
-        }
-        else
-        {
-            return number.ToString();
-        }
-    }
+
 }

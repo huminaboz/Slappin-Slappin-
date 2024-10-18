@@ -41,11 +41,12 @@ public class StoreUIManager : MonoBehaviour
     private void UpdateLabels()
     {
         nextWaveButtonText.text = "Start Wave " + PlayerStats.I.currentWave;
-        totalCurrencyText.text = PlayerStats.I.currency1.ToString();
+        totalCurrencyText.text = BozUtilities.FormatLargeNumber(PlayerStats.I.currency1);
+        // totalCurrencyText.text = PlayerStats.I.currency1.ToString("F0");
     }
 
     [Command]
-    private void DebugAddMoney(int amount)
+    private void DebugAddMoney(float amount)
     {
         PlayerStats.I.currency1 += amount;
         UpdateLabels();
