@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8397183933003221003}
   - component: {fileID: 761960854852723652}
   m_Layer: 5
-  m_Name: Price
+  m_Name: Text - Price
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -254,6 +254,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8104821465431802634}
+  - component: {fileID: 7193113102515376024}
   - component: {fileID: 7998376742190474416}
   - component: {fileID: 6672383314208851571}
   - component: {fileID: 5888076888558321643}
@@ -285,6 +286,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 150, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &7193113102515376024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3453357400148720055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd8bb85f29c476543b2031f40199799c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  upgradeSO: {fileID: 11400000, guid: 19dc01956c9634146945e218afed02c4, type: 2}
+  level: 1
 --- !u!114 &7998376742190474416
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -297,11 +312,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a29b14b0026c48f48a0f72c855b38220, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  priceBgColor: {fileID: 6848845819295990836}
+  priceText: {fileID: 6997864087183584607}
+  upgradeText: {fileID: 8910188072409095669}
+  titleText: {fileID: 4454453733856632207}
   border: {fileID: 2553592130719111442}
   shadowImage: {fileID: 19617965487162249}
-  shadowDefault: {r: 0, g: 0, b: 0, a: 0}
   shadowSelected: {r: 1, g: 0.42352942, b: 0.29411766, a: 1}
   shadowPressed: {r: 0.77254903, g: 0.18431373, b: 0.050980393, a: 1}
+  priceBgDisabledColor: {r: 0.2901961, g: 0.32156864, b: 0.3019608, a: 1}
+  priceTextDisabledColor: {r: 0.59607846, g: 0.59607846, b: 0.59607846, a: 1}
   cardBodyRect: {fileID: 2085656703454539236}
 --- !u!114 &6672383314208851571
 MonoBehaviour:
@@ -326,9 +346,9 @@ MonoBehaviour:
   m_Colors:
     m_NormalColor: {r: 0.9960785, g: 0.9686275, b: 0.77647066, a: 1}
     m_HighlightedColor: {r: 0.9960785, g: 0.9686275, b: 0.77647066, a: 1}
-    m_PressedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_PressedColor: {r: 0.9622642, g: 0.9310587, b: 0.7126202, a: 1}
     m_SelectedColor: {r: 0.9921569, g: 0.96470594, b: 0.7725491, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.85882354, g: 0.8352941, b: 0.6627451, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -346,7 +366,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6848845819295990836}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7193113102515376024}
+        m_TargetAssemblyTypeName: UpgradeData, Assembly-CSharp
+        m_MethodName: OnPurchased
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &5888076888558321643
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -382,7 +414,7 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 7998376742190474416}
           m_TargetAssemblyTypeName: UpgradeCard, Assembly-CSharp
-          m_MethodName: OnDefault
+          m_MethodName: SetDefaultAppearance
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -430,7 +462,7 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 7998376742190474416}
           m_TargetAssemblyTypeName: UpgradeCard, Assembly-CSharp
-          m_MethodName: OnDefault
+          m_MethodName: SetDefaultAppearance
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -543,7 +575,7 @@ GameObject:
   - component: {fileID: 7817590960066046556}
   - component: {fileID: 849643967740516980}
   m_Layer: 5
-  m_Name: Price Background
+  m_Name: Price Background Color
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -762,7 +794,7 @@ GameObject:
   - component: {fileID: 7034605713341095345}
   - component: {fileID: 4454453733856632207}
   m_Layer: 5
-  m_Name: Card Title
+  m_Name: Text - Card Title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -896,7 +928,7 @@ GameObject:
   - component: {fileID: 8465602449575393074}
   - component: {fileID: 8910188072409095669}
   m_Layer: 5
-  m_Name: Upgrade
+  m_Name: Text - Upgrade
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
