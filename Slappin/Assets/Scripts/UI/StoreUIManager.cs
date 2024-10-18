@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using QFSW.QC;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -11,6 +12,9 @@ public class StoreUIManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI nextWaveButtonText;
     [SerializeField] private Button nextWaveButton;
 
+    
+    public delegate void DebugUpdateStoreUI();
+    public static event DebugUpdateStoreUI OnDebugUpdateStoreUI;
     
     //TODO:: Populate all the categories from the resources folder scrobs
 
@@ -38,6 +42,13 @@ public class StoreUIManager : MonoBehaviour
     {
         nextWaveButtonText.text = "Start Wave " + PlayerStats.I.currentWave;
         totalCurrencyText.text = PlayerStats.I.currency1.ToString();
-        
+    }
+
+    [Command]
+    private void DebugAddMoney(int amount)
+    {
+        PlayerStats.I.currency1 += amount;
+        UpdateLabels();
+        OnDebugUpdateStoreUI?.Invoke();
     }
 }

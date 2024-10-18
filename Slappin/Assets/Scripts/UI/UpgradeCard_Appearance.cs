@@ -46,11 +46,13 @@ public class UpgradeCard_Appearance : MonoBehaviour
     private void OnEnable()
     {
         UpgradeData.OnPurchaseMade += UpdateCardAppearance;
+        StoreUIManager.OnDebugUpdateStoreUI += UpdateCardAppearance;
     }
 
     private void OnDisable()
     {
         UpgradeData.OnPurchaseMade -= UpdateCardAppearance;
+        StoreUIManager.OnDebugUpdateStoreUI -= UpdateCardAppearance;
     }
 
     private void Start()
