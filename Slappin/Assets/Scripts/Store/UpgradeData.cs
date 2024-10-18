@@ -30,6 +30,7 @@ public class UpgradeData : MonoBehaviour
 
         //TODO:: Take care of adding all the stuff
 
+        PlayerStats.I.currency1 -= GetPrice();
         level++;
         
         //Send out an event to update all the cards appearances for affordability or not
@@ -39,10 +40,10 @@ public class UpgradeData : MonoBehaviour
     public bool IsAllowedToBePurchased()
     {
         return GetPrice() <= PlayerStats.I.currency1
-               ||  level < upgradeSO.maxLevel;
+               &&  level < upgradeSO.maxLevel;
     }
 
-    public int GetPrice()
+    private int GetPrice()
     {
         return (int) GrowthCurves.I.ComputeGrowth(upgradeSO.basePrice, level, upgradeSO.priceGrowthCurve);
     }

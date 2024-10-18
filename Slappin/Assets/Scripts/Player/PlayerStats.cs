@@ -6,7 +6,7 @@ public class PlayerStats : Singleton<PlayerStats>
     //This should be a monohavior component on the player instead of a singleton
     [SerializeField] public float stunRecoveryMultiplier = 1f;
     
-    public int currency1;
+    public int currency1 = 0;
     public int currentWave = 1; //putting this here for now
     
     

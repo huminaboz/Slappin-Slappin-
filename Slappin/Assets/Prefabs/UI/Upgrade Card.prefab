@@ -312,10 +312,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a29b14b0026c48f48a0f72c855b38220, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  priceBgColor: {fileID: 6848845819295990836}
   priceText: {fileID: 6997864087183584607}
   upgradeText: {fileID: 8910188072409095669}
   titleText: {fileID: 4454453733856632207}
+  priceBgColor: {fileID: 849643967740516980}
   border: {fileID: 2553592130719111442}
   shadowImage: {fileID: 19617965487162249}
   shadowSelected: {r: 1, g: 0.42352942, b: 0.29411766, a: 1}

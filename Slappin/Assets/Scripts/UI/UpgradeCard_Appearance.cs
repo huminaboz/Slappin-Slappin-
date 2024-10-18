@@ -11,13 +11,13 @@ public class UpgradeCard_Appearance : MonoBehaviour
     private Button thisButton;
 
     //Text stuff
-    [SerializeField] public Image priceBgColor;
     [SerializeField] public TextMeshProUGUI priceText;
     [SerializeField] public TextMeshProUGUI upgradeText;
     [SerializeField] public TextMeshProUGUI titleText;
 
 
     //Background
+    [SerializeField] public Image priceBgColor;
     [SerializeField] private GameObject border;
     [SerializeField] private Image shadowImage;
 
@@ -91,22 +91,25 @@ public class UpgradeCard_Appearance : MonoBehaviour
 
         //Don't let the button get pressed
         thisButton.interactable = false;
-        
-        //TODO:: Do something special if the amount if maxed out
+
+        //TODO:: Do something special if the amount is maxed out
     }
 
     public void SetDefaultAppearance()
     {
-        //TODO:: Don't let the button events set this if there's no moneys
-        
         border.gameObject.SetActive(false);
         shadowImage.color = shadowDefault;
         cardBodyRect.anchoredPosition = _bodyDefaultPosition;
-        priceBgColor.color = _defaultPriceBgColor;
-        priceText.color = _defaultPriceTextColor;
 
-        //Allow the button to be pressed
-        thisButton.interactable = true;
+        //Don't let the button events set this if there's no moneys
+        if (upgradeData.IsAllowedToBePurchased())
+        {
+            priceBgColor.color = _defaultPriceBgColor;
+            priceText.color = _defaultPriceTextColor;
+
+            //Allow the button to be pressed
+            thisButton.interactable = true;
+        }
     }
 
     public void OnSelected()
@@ -118,6 +121,7 @@ public class UpgradeCard_Appearance : MonoBehaviour
 
     public void OnPressed()
     {
+        if (upgradeData.IsAllowedToBePurchased() == false) return;
         cardBodyRect.anchoredPosition = new Vector2(10f, -10f);
         border.gameObject.SetActive(true);
         shadowImage.color = shadowPressed;
