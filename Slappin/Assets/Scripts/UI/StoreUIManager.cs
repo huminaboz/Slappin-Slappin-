@@ -64,7 +64,6 @@ public class StoreUIManager : Singleton<StoreUIManager>
     {
         nextWaveButtonText.text = "Start Wave " + PlayerStats.I.currentWave;
         totalCurrencyText.text = BozUtilities.FormatLargeNumber(PlayerStats.I.currency1);
-        // totalCurrencyText.text = PlayerStats.I.currency1.ToString("F0");
     }
 
     Dictionary<UpgradeType, GameObject> categories = new Dictionary<UpgradeType, GameObject>();
@@ -103,6 +102,11 @@ public class StoreUIManager : Singleton<StoreUIManager>
         // Iterate through each SO_Upgrade and instantiate an UpgradeData prefab for each
         foreach (SO_Upgrade upgradeSO in upgrades)
         {
+            StatLiason.I.Stats.Add(upgradeSO.stat, upgradeSO.baseValue);
+            if (upgradeSO.stat == 0)
+            {
+                Debug.LogError("You forgot to set a stat enum on: " + upgradeSO.title);
+            }
             UpgradeData upgradeData = Instantiate(upgradeDataPrefab, 
                 GetCategoryParent(upgradeSO.upgradeType));
 

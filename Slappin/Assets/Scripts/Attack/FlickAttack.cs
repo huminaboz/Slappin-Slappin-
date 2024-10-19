@@ -204,8 +204,8 @@ public class FlickAttack : AttackType
         if (thingThatGotHit.GetComponent<Health>() != null)
         {
             Health health = thingThatGotHit.GetComponent<Health>();
-            int damage = GetBonusDamage(chargeDamage);
-            health.AdjustHp(-damage, gameObject);
+            float damage = GetLuckDamage(chargeDamage);
+            health.AdjustHp((int)-damage, gameObject);
             if (-damage < 0)
             {
                 SFXPlayer.I.Play(attackData.playSFXOnHit);

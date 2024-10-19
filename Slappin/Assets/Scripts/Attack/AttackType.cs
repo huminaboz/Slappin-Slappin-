@@ -84,6 +84,8 @@ public class AttackType : MonoBehaviour
         // {
         //     DoWhenMadeItToGoalPosition();
         // }
+        
+        //Could also initially grab the total distance you need to travel and then just compare to if you're past that
     }
 
     private void DoWhenMadeItToGoalPosition()
@@ -206,14 +208,20 @@ public class AttackType : MonoBehaviour
         handRenderer.material.SetColor("_ColorDim", _defaultTopOfHandColor);
     }
 
+    protected virtual float GetAttackTypeDamageNumber()
+    {
+        Debug.LogError("Attack type should define it's own Damage Number with an override");
+        return 0;
+    }
+
     public virtual void HitSomething(GameObject thingThatGotHit)
     {
         //HURT IT!
         if (thingThatGotHit.GetComponent<Health>() != null)
         {
             Health health = thingThatGotHit.GetComponent<Health>();
-            int damage = GetBonusDamage(attackData.baseDamage);
-            health.AdjustHp(-damage, gameObject);
+            float damage = GetLuckDamage(GetAttackTypeDamageNumber());
+            health.AdjustHp(-(int)damage, gameObject);
             if (-damage < 0)
             {
                 SFXPlayer.I.Play(attackData.playSFXOnHit);
@@ -228,7 +236,7 @@ public class AttackType : MonoBehaviour
         player.SetState(new StateDefault(player));
     }
 
-    public int GetBonusDamage(int baseDamage)
+    protected float GetLuckDamage(float baseDamage)
     {
         float bonusDamage = baseDamage;
         //TODO:: Attach a color for the damage number

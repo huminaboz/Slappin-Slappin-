@@ -39,13 +39,13 @@ public class UpgradeData : MonoBehaviour
             return;
         }
 
-        //TODO:: Take care of adding all the stuff
-        
         
         PlayerStats.I.currency1 -= GetPrice();
         
-        //Remember that by incrementing this, it will increase everything, so updates after, purchases before
+        //NOTE: Remember that by incrementing this, it will increase everything, so updates after, purchases before
         level++;
+        //Upgrade the universal source of truth for getting stat numbers
+        StatLiason.I.Stats[upgradeSO.stat] = upgradeSO.newValueGrowthCurve.ComputeGrowth(upgradeSO.baseValue, level);
         
         //Send out an event to update all the cards appearances for affordability or not
         OnPurchaseMade?.Invoke();
@@ -68,25 +68,7 @@ public class UpgradeData : MonoBehaviour
     }
 
 
-    public string GetUpgradeText()
-    {
-        float nextUpgrade = upgradeSO.newValueGrowthCurve.ComputeGrowth(upgradeSO.baseValue, level);
-        
-        switch (upgradeSO.numberType)
-        {
-            case NumberType.Normal:
-                int roundedUpgrade = (int) Mathf.Ceil(nextUpgrade);
-                if (roundedUpgrade <= level) roundedUpgrade = level + 1;
-                roundedUpgrade--;
-                return BozUtilities.FormatLargeNumber(roundedUpgrade);
-            case NumberType.Percentage:
-                return (nextUpgrade * 100).ToString("0.00") + "%";
-            case NumberType.Multiplier:
-                return nextUpgrade.ToString("0.00") + "x";
-            default:
-                return nextUpgrade.ToString();
-        }
-    }
+
 
     // public Color GetPriceBgColor()
     // {

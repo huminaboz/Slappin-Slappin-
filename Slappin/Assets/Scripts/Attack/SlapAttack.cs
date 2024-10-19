@@ -18,6 +18,12 @@ public class SlapAttack : AttackType
         handModel?.SetActive(false);
     }
 
+    protected override float GetAttackTypeDamageNumber()
+    {
+        float damage = StatLiason.I.Stats[Stat.SlapDamage];
+        return damage;
+    }
+
     public override void InitiateAttack()
     {
         base.InitiateAttack();
@@ -92,8 +98,8 @@ public class SlapAttack : AttackType
 
         if (spike.GetComponent<Enemy_Turtle>())
         {
-            Enemy_Turtle enemySpike = spike.GetComponent<Enemy_Turtle>();
-            handDamage = enemySpike.handStabDamage;
+            Enemy_Turtle enemyTurtle = spike.GetComponent<Enemy_Turtle>();
+            handDamage = enemyTurtle.handStabDamage;
         }
         
         playerHealth.AdjustHp(-handDamage, gameObject);

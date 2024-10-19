@@ -63,7 +63,7 @@ public class UpgradeCard_Appearance : MonoBehaviour
     private void UpdateCardAppearance()
     {
         priceText.text = upgradeData.GetPriceText();
-        upgradeText.text = upgradeData.GetUpgradeText();
+        upgradeText.text = BozUtilities.GetUpgradeText(upgradeData.upgradeSO, upgradeData.level);
 
         //TODO:: Set up a singleton or something that has all the category colors
         // priceBgColor.color = upgradeData.upgradeSO.GetCategoryColor;

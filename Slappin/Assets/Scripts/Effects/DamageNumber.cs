@@ -27,7 +27,10 @@ public class DamageNumber : MonoBehaviour, IObjectPool<DamageNumber>
     
     public void Spawn(int damage, Vector3 startPosition)
     {
-        textMesh.text = Mathf.Abs(damage).ToString();
+        string damageString = BozUtilities.FormatLargeNumber(Mathf.Abs(damage));
+        
+        //TODO::Change the color based on crits or healing
+        textMesh.text = damageString;
         startPosition += Vector3.up * yStartingOffset;
         transform.position = startPosition;
         

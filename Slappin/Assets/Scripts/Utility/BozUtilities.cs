@@ -16,6 +16,26 @@ public static class BozUtilities
         return Random.Range(0f, 1f);
     }
     
+    public static string GetUpgradeText(SO_Upgrade upgrade, int level)
+    {
+        float nextUpgrade = upgrade.newValueGrowthCurve.ComputeGrowth(upgrade.baseValue, level);
+        
+        switch (upgrade.numberType)
+        {
+            case NumberType.Normal:
+                int roundedUpgrade = (int) Mathf.Ceil(nextUpgrade);
+                if (roundedUpgrade <= level) roundedUpgrade = level + 1;
+                roundedUpgrade--;
+                return FormatLargeNumber(roundedUpgrade);
+            case NumberType.Percentage:
+                return (nextUpgrade * 100).ToString("0.00") + "%";
+            case NumberType.Multiplier:
+                return nextUpgrade.ToString("0.00") + "x";
+            default:
+                return nextUpgrade.ToString();
+        }
+    }
+    
     public static string FormatLargeNumber(float number)
     {
         switch (number)

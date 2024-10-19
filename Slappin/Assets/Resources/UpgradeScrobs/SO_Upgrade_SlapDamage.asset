@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8327b2e1f1789184f9cadc6d7f88cf8d, type: 3}
   m_Name: SO_Upgrade_SlapDamage
   m_EditorClassIdentifier: 
+  stat: 3001
   title: Slap Damage
   baseValue: 1
   basePrice: 5
