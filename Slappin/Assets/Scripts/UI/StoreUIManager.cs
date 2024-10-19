@@ -55,6 +55,11 @@ public class StoreUIManager : Singleton<StoreUIManager>
         BuildCategories();
     }
 
+    public void ExitStore()
+    {
+        UIStateSwapper.I.SetState(UIStateSwapper.UIState.playing);
+    }
+
     private void UpdateLabels()
     {
         nextWaveButtonText.text = "Start Wave " + PlayerStats.I.currentWave;
