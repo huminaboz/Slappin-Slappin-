@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: Slap Area
   baseValue: 1.1
-  basePrice: 5
-  upgradeType: 0
+  basePrice: 10
+  upgradeType: 2
   numberType: 2
-  newValueGrowthCurve: {fileID: 11400000, guid: afbe9aa71dfe15b42939dc4d02e85920, type: 2}
-  newPriceGrowthCurve: {fileID: 11400000, guid: a0aef777394841c4f99ccadc23c44c3e, type: 2}
+  newValueGrowthCurve: {fileID: 11400000, guid: ca67470c5832f32449813c12217dfdad, type: 2}
+  newPriceGrowthCurve: {fileID: 11400000, guid: cc86f3031b5bd3b4986b0ad8a407b060, type: 2}
   maxLevel: 1000

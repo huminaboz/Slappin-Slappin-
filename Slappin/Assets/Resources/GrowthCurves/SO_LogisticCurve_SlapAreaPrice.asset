@@ -14,3 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   logisticRate: 0.1
   logisticCarryingCapacity: 100
+  growthMultiplier: 1.05
+  baseGrowthRate: 1

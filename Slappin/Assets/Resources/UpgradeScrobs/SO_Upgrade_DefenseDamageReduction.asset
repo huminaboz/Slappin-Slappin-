@@ -17,6 +17,6 @@ MonoBehaviour:
   basePrice: 500
   upgradeType: 1
   numberType: 1
-  newValueGrowthCurve: {fileID: 11400000, guid: 7955562640e56534181915b29badd7cd, type: 2}
-  newPriceGrowthCurve: {fileID: 11400000, guid: 99b05994e507f8c488a71b2c3f31feab, type: 2}
+  newValueGrowthCurve: {fileID: 11400000, guid: afbe9aa71dfe15b42939dc4d02e85920, type: 2}
+  newPriceGrowthCurve: {fileID: 11400000, guid: ec043c0e73b5cb244b7af969807a6c3e, type: 2}
   maxLevel: 1000

@@ -12,4 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ac540fc2f4a5714994932f05a9106ff, type: 3}
   m_Name: SO_ExponentialGrowth_SlapDamage
   m_EditorClassIdentifier: 
-  exponentialRate: 0.15
+  growthRate: 0.04
+  growthFactor: 0.29
+  offset: 0.83

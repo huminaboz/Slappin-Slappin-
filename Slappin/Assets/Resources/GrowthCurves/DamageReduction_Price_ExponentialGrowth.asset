@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4ac540fc2f4a5714994932f05a9106ff, type: 3}
-  m_Name: SO_ExponentialGrowth_SlapDamagePrice
+  m_Name: DamageReduction_Price_ExponentialGrowth
   m_EditorClassIdentifier: 
-  growthRate: 0.05
-  growthFactor: 0.325
+  growthRate: 0.009
+  growthFactor: 0.64
   offset: 0
