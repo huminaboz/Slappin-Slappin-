@@ -1,4 +1,5 @@
 
+using System;
 using UnityEngine;
 
 public class PlayerStats : Singleton<PlayerStats>
@@ -9,7 +10,7 @@ public class PlayerStats : Singleton<PlayerStats>
     public float currency1 = 0;
     public int currentWave = 1; //putting this here for now
     
-    
+
     private void Start()
     {
         UpdateHUD();
@@ -23,9 +24,11 @@ public class PlayerStats : Singleton<PlayerStats>
         //todo:: Animate the number to show it went up
     }
 
-    private void UpdateHUD()
+    public void UpdateHUD()
     {
-        GameplayUIManager.I.currency1.text = currency1.ToString();
+        GameplayUIManager.I.currency1.text = BozUtilities.FormatLargeNumber(currency1);
+        GameplayUIManager.I.currency1.gameObject.SetActive(false);
+        GameplayUIManager.I.currency1.gameObject.SetActive(true);
     }
     
 }
