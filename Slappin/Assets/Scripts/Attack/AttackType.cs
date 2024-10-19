@@ -22,6 +22,11 @@ public class AttackType : MonoBehaviour
 
     protected Action OnCompletedTravel;
 
+    //Calculating Range Damage Bonus
+    [SerializeField] protected AnimationCurve rangeDamageCurve;
+    [SerializeField] protected Transform spawnerLine;
+    [SerializeField] protected Transform hurtLine;
+    
     protected Vector3 Direction
     {
         get => direction;
@@ -86,6 +91,25 @@ public class AttackType : MonoBehaviour
         // }
         
         //Could also initially grab the total distance you need to travel and then just compare to if you're past that
+    }
+
+
+    //Be sure to use this in addition to and not multiplied by the damage
+    protected float GetRangedDamageBonus(float damagePerDistance)
+    {
+        //Hurtline Z is 0% distance traveled
+        //Spawnline Z is 100% damage traveled
+        //Current position Z is X distance
+
+        float z1 = hurtLine.position.z;
+        float z2 = spawnerLine.position.z;
+        float pointZ = handShadowTransform.position.z;
+
+        float normalizedPosition = (pointZ - z1) / (z2 - z1);
+        float curveAdjustedRatio = rangeDamageCurve.Evaluate(normalizedPosition);
+        float rangeDamageBonus = curveAdjustedRatio * damagePerDistance;
+        // Debug.LogWarning($"Ranged Damage Bonus: {rangeDamageBonus}");
+        return rangeDamageBonus;
     }
 
     private void DoWhenMadeItToGoalPosition()

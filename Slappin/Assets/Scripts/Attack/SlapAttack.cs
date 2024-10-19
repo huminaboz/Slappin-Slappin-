@@ -15,6 +15,7 @@ public class SlapAttack : AttackType
     //TODO:: And the pickup collider drawing from an upgrade area too
     private Vector3 _hurtColliderDefaultLocalScale;
     private Vector3 _slapForecastShadowDefaultLocalScale;
+    private float distanceDamageBoost;
 
 
     private void OnEnable()
@@ -39,14 +40,22 @@ public class SlapAttack : AttackType
     protected override float GetAttackTypeDamageNumber()
     {
         float damage = StatLiason.I.Get(Stat.SlapDamage);
+        // Debug.LogWarning($"Slap damage was {damage} before distance damage boost");
+        damage +=  Mathf.Ceil(damage * distanceDamageBoost);
+        // Debug.LogWarning($"AND NOW Slap damage is {damage} after distance damage boost");
         return damage;
     }
 
+
+    
     public override void InitiateAttack()
     {
         base.InitiateAttack();
         handModel?.SetActive(true);
 
+        //Set it upon attack since that's where the distance comes from
+        distanceDamageBoost = GetRangedDamageBonus(StatLiason.I.Get(Stat.SlapDamagePerDistance));
+        
         DropSlap();
     }
 

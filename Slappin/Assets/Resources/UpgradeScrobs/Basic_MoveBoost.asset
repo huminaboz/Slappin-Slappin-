@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8327b2e1f1789184f9cadc6d7f88cf8d, type: 3}
   m_Name: Basic_MoveBoost
   m_EditorClassIdentifier: 
-  stat: 1002
+  stat: 1001
   title: Move Boost Speed
   baseValue: 1.5
   basePrice: 10

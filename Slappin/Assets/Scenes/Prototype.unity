@@ -4098,6 +4098,33 @@ MonoBehaviour:
   playerHealth: {fileID: 2113894224}
   cameraTransform: {fileID: 963194228}
   handRenderer: {fileID: 641250393}
+  rangeDamageCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spawnerLine: {fileID: 1279097141}
+  hurtLine: {fileID: 569232627}
+  handShadowPosition: {fileID: 617602404}
   handShadowTransform: {fileID: 617602404}
   pickupColliderObject: {fileID: 778377380}
   spikeGetHurtOnAttackCollider: {fileID: 910431749}
@@ -28152,6 +28179,33 @@ MonoBehaviour:
   playerHealth: {fileID: 2113894224}
   cameraTransform: {fileID: 963194228}
   handRenderer: {fileID: 1919054648}
+  rangeDamageCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spawnerLine: {fileID: 1279097141}
+  hurtLine: {fileID: 569232627}
+  handShadowPosition: {fileID: 0}
   handShadowTransform: {fileID: 617602404}
   chargeFrame: {fileID: 891544665}
   hitFrame: {fileID: 1377502997}

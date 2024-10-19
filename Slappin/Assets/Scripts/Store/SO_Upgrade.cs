@@ -36,20 +36,20 @@ public enum Stat
 
     //Basic
     Basic = 1000,
-    DamageReduction = 1001,
-    MoveBoostSpeed = 1002,
-
+    MoveBoostSpeed = 1001,
 
     //Defense
     Defense = 2000,
+    
     IncreaseMaxHp = 2001,
     WaveHealthRestore = 2002,
-    DamagePerDistance = 2003,
+    DamageReduction = 2003,
 
     //Slap
     Slap = 3000,
     SlapDamage = 3001,
     SlapAreaMultiplier = 3002,
+    SlapDamagePerDistance = 3003,
 
     //Flick
     Flick = 4000,

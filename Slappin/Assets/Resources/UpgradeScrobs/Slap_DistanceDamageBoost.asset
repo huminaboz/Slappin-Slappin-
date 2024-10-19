@@ -10,18 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8327b2e1f1789184f9cadc6d7f88cf8d, type: 3}
-  m_Name: Defense_DamageReduction
+  m_Name: Slap_DistanceDamageBoost
   m_EditorClassIdentifier: 
-  stat: 2003
-  title: Damage Reduction
-  baseValue: 0.005
-  basePrice: 500
-  upgradeType: 1
-  numberType: 1
+  stat: 3003
+  title: Damager per Distance
+  baseValue: 1
+  basePrice: 15
+  upgradeType: 2
+  numberType: 2
   useMinValue: 0
   useMaxValue: 0
   minValue: 0
   maxValue: 1e+12
-  newValueGrowthCurve: {fileID: 11400000, guid: afbe9aa71dfe15b42939dc4d02e85920, type: 2}
-  newPriceGrowthCurve: {fileID: 11400000, guid: ec043c0e73b5cb244b7af969807a6c3e, type: 2}
+  newValueGrowthCurve: {fileID: 11400000, guid: 2f9b41d3faf02354ebafcd863a06d56d, type: 2}
+  newPriceGrowthCurve: {fileID: 11400000, guid: d1bffa9f2e4336d4cbb851c0d5c045b6, type: 2}
   maxLevel: 1000

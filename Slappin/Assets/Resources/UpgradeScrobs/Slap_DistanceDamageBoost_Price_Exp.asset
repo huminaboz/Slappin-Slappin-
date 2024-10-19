@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ac540fc2f4a5714994932f05a9106ff, type: 3}
+  m_Name: Slap_DistanceDamageBoost_Price_Exp
+  m_EditorClassIdentifier: 
+  showPreview: 1
+  previewUpgrade: {fileID: 11400000, guid: e458e481e7050e440bdb0c44de3e967b, type: 2}
+  maxDisplayedRows: 34
+  startOffset: 0
+  debugValues: "Level\t\tAmount\t\t\tPrice\n0\t\t0.99x\t\t\t15\n1\t\t1.00x\t\t\t15\n2\t\t1.01x\t\t\t31\n3\t\t1.02x\t\t\t46\n4\t\t1.03x\t\t\t61\n5\t\t1.04x\t\t\t76\n6\t\t1.05x\t\t\t91\n7\t\t1.06x\t\t\t106\n8\t\t1.07x\t\t\t121\n9\t\t1.08x\t\t\t136\n10\t\t1.09x\t\t\t151\n11\t\t1.10x\t\t\t166\n12\t\t1.11x\t\t\t181\n13\t\t1.12x\t\t\t196\n14\t\t1.13x\t\t\t211\n15\t\t1.14x\t\t\t226\n16\t\t1.15x\t\t\t241\n17\t\t1.16x\t\t\t256\n18\t\t1.17x\t\t\t271\n19\t\t1.18x\t\t\t286\n20\t\t1.19x\t\t\t301\n21\t\t1.20x\t\t\t316\n22\t\t1.21x\t\t\t331\n23\t\t1.22x\t\t\t346\n24\t\t1.23x\t\t\t361\n25\t\t1.24x\t\t\t376\n26\t\t1.25x\t\t\t391\n27\t\t1.26x\t\t\t406\n28\t\t1.27x\t\t\t421\n29\t\t1.28x\t\t\t436\n30\t\t1.29x\t\t\t451\n31\t\t1.30x\t\t\t466\n32\t\t1.31x\t\t\t481\n33\t\t1.32x\t\t\t496\n"
+  growthRate: 0.0001
+  growthFactor: 0.01
+  offset: 0
