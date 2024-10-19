@@ -7,7 +7,7 @@ using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
 
-public class StoreUIManager : MonoBehaviour
+public class StoreUIManager : Singleton<StoreUIManager>
 {
     [SerializeField] private GameObject rowsParent;
     [SerializeField] private GameObject categoryRowPrefab;
@@ -19,6 +19,15 @@ public class StoreUIManager : MonoBehaviour
 
     [SerializeField] private GameObject categoryRowTitlePrefab;
 
+    [SerializeField] private Color colorBasic;
+    [SerializeField] private Color colorDefense;
+    [SerializeField] private Color colorSlap;
+    [SerializeField] private Color colorFlick;
+    [SerializeField] private Color colorSquish;
+    [SerializeField] private Color colorFart;
+    [SerializeField] private Color colorWild;
+    [SerializeField] private Color colorLuck;
+    
     public delegate void DebugUpdateStoreUI();
 
     public static event DebugUpdateStoreUI OnDebugUpdateStoreUI;
@@ -81,6 +90,7 @@ public class StoreUIManager : MonoBehaviour
 
             //Add the category title
             GameObject categoryRowTitle = Instantiate(categoryRowTitlePrefab, categoryRow.transform);
+            categoryRowTitle.GetComponent<Image>().color = GetCategoryColor(upgradeSO.upgradeType);
             TextMeshProUGUI categoryRowTitleText = categoryRowTitle.GetComponentInChildren<TextMeshProUGUI>();
             categoryRowTitleText.text = upgradeSO.upgradeType.ToString();
         }
@@ -100,6 +110,31 @@ public class StoreUIManager : MonoBehaviour
             {
                 Debug.LogError("UpgradeData component not found on prefab!");
             }
+        }
+    }
+
+    public Color GetCategoryColor(UpgradeType upgradeType)
+    {
+        switch (upgradeType)
+        {
+            case UpgradeType.Basic:
+                return colorBasic;
+            case UpgradeType.Defense:
+                return colorDefense;
+            case UpgradeType.Slap:
+                return colorSlap;
+            case UpgradeType.Flick:
+                return colorFlick;
+            case UpgradeType.Squish:
+                return colorSquish;
+            case UpgradeType.Fart:
+                return colorFart;
+            case UpgradeType.Wild:
+                return colorWild;
+            case UpgradeType.Luck:
+                return colorLuck;
+            default:
+                throw new ArgumentOutOfRangeException(nameof(upgradeType), upgradeType, null);
         }
     }
 

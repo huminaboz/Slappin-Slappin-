@@ -40,7 +40,7 @@ public class UpgradeCard_Appearance : MonoBehaviour
         upgradeData = GetComponent<UpgradeData>();
         shadowDefault = shadowImage.color;
         _bodyDefaultPosition = cardBodyRect.anchoredPosition;
-        _defaultPriceBgColor = priceBgColor.color;
+        _defaultPriceBgColor = StoreUIManager.I.GetCategoryColor(upgradeData.upgradeSO.upgradeType);
         _defaultPriceTextColor = priceText.color;
         thisButton = GetComponent<Button>();
         gameObject.name = upgradeData.upgradeSO.title;
