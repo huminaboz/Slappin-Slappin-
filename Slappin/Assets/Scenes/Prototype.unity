@@ -31030,6 +31030,7 @@ MonoBehaviour:
   totalCurrencyText: {fileID: 1089542335}
   nextWaveButtonText: {fileID: 139255375}
   nextWaveButton: {fileID: 454974031}
+  categoryRowTitlePrefab: {fileID: 6113853112663948703, guid: c2da063e12a200842954aac5e7af0d02, type: 3}
 --- !u!1001 &2144067105
 PrefabInstance:
   m_ObjectHideFlags: 0
