@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8327b2e1f1789184f9cadc6d7f88cf8d, type: 3}
+  m_Name: Basic_MoveBoost
+  m_EditorClassIdentifier: 
+  stat: 1002
+  title: Move Boost Speed
+  baseValue: 1.5
+  basePrice: 10
+  upgradeType: 0
+  numberType: 2
+  useMinValue: 0
+  useMaxValue: 1
+  minValue: 0
+  maxValue: 6
+  newValueGrowthCurve: {fileID: 11400000, guid: 831c76e4ba469004aa43cd8039870add, type: 2}
+  newPriceGrowthCurve: {fileID: 11400000, guid: abdc2d190821a2941b2198ba73e148c4, type: 2}
+  maxLevel: 1000

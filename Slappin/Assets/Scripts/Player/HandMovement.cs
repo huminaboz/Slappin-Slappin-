@@ -1,13 +1,11 @@
-using System;
 using UnityEngine;
-using UnityEngine.Serialization;
 using Vector3 = UnityEngine.Vector3;
 
 public class HandMovement : MonoBehaviour
 {
     [SerializeField] private float moveSpeed = 2.5f; // Default movement speed
     [SerializeField] private float boostedSpeedMultiplier = 2f; // How much faster when holding the right trigger
-    [FormerlySerializedAs("slapPositioner")] [SerializeField] private Transform handPositioner;
+    [SerializeField] private Transform handPositioner;
     [SerializeField] private Player thisPlayer;
     
     [HideInInspector] public Rigidbody _rigidbody;
@@ -32,11 +30,11 @@ public class HandMovement : MonoBehaviour
 
         // Calculate movement direction
         Vector3 direction = new Vector3(moveX, 0, moveZ).normalized;
-
         
         bool isBoosting = Input.GetAxis("RTrigger") > 0f;
         // Apply speed boost if holding right trigger
-        float currentSpeed = isBoosting ? moveSpeed * boostedSpeedMultiplier : moveSpeed;
+        float currentSpeed = isBoosting ? moveSpeed * StatLiason.I.Get(Stat.MoveBoostSpeed) : moveSpeed;
+        // Debug.LogWarning($"Current Speed: {currentSpeed}");
 
         // Apply movement to the player transform
         if (direction.magnitude >= 0.1f)

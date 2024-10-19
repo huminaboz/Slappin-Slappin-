@@ -12,6 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 074eb5741ff6a6b4c8b1a56f59ea95c4, type: 3}
   m_Name: Flick_MaxChargeTime_Logistic
   m_EditorClassIdentifier: 
+  showPreview: 1
+  previewUpgrade: {fileID: 11400000, guid: 71702d81249d75a45bb3f8f5f6f3a191, type: 2}
+  maxDisplayedRows: 34
+  startOffset: 0
+  debugValues: "Level\t\tAmount\t\t\tPrice\n0\t\t3.00s\t\t\t50\n1\t\t3.00s\t\t\t50\n2\t\t2.94s\t\t\t105\n3\t\t2.91s\t\t\t165\n4\t\t2.88s\t\t\t231\n5\t\t2.85s\t\t\t303\n6\t\t2.82s\t\t\t381\n7\t\t2.79s\t\t\t467\n8\t\t2.76s\t\t\t561\n9\t\t2.73s\t\t\t665\n10\t\t2.69s\t\t\t777\n11\t\t2.66s\t\t\t901\n12\t\t2.63s\t\t\t1.04k\n13\t\t2.60s\t\t\t1.18k\n14\t\t2.57s\t\t\t1.35k\n15\t\t2.54s\t\t\t1.52k\n16\t\t2.51s\t\t\t1.72k\n17\t\t2.48s\t\t\t1.93k\n18\t\t2.45s\t\t\t2.16k\n19\t\t2.42s\t\t\t2.42k\n20\t\t2.39s\t\t\t2.7k\n21\t\t2.35s\t\t\t3k\n22\t\t2.32s\t\t\t3.34k\n23\t\t2.29s\t\t\t3.7k\n24\t\t2.26s\t\t\t4.11k\n25\t\t2.23s\t\t\t4.54k\n26\t\t2.20s\t\t\t5.02k\n27\t\t2.17s\t\t\t5.55k\n28\t\t2.14s\t\t\t6.13k\n29\t\t2.11s\t\t\t6.76k\n30\t\t2.08s\t\t\t7.45k\n31\t\t2.04s\t\t\t8.2k\n32\t\t2.01s\t\t\t9.03k\n33\t\t1.98s\t\t\t9.93k\n"
   logisticRate: 3.49
   logisticCarryingCapacity: -44.2
   growthMultiplier: -0.07

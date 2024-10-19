@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -39,7 +37,7 @@ public enum Stat
     //Basic
     Basic = 1000,
     DamageReduction = 1001,
-    ShadowDashSpeed = 1002,
+    MoveBoostSpeed = 1002,
 
 
     //Defense
@@ -94,13 +92,13 @@ public class SO_Upgrade : ScriptableObject
     /// <summary>
     /// How much the value will increase with each level
     /// </summary>
+    [Header("Growth Curves")]
     [SerializeField] public SO_GrowthCurve newValueGrowthCurve;
 
 
     /// <summary>
     /// How much the price will increase with each level
     /// </summary>
-    [Header("Growth Curves")]
     [SerializeField] public SO_GrowthCurve newPriceGrowthCurve;
 
     [FormerlySerializedAs("maxLevels")] [SerializeField]

@@ -8217,7 +8217,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 40
-  boostedSpeedMultiplier: 2.5
+  boostedSpeedMultiplier: 1.5
   handPositioner: {fileID: 1519639241}
   thisPlayer: {fileID: 2113894223}
   _rigidbody: {fileID: 0}
