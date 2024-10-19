@@ -342,7 +342,7 @@ MonoBehaviour:
   attackSpeedMultiplier: 1
   flashDuration: 0.5
   flashCount: 5
-  handStabDamage: 1
+  handStabDamage: 20
   handStabStunDuration: 1
 --- !u!114 &2012794802681237938
 MonoBehaviour:
