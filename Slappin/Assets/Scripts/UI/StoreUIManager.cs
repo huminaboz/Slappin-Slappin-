@@ -27,6 +27,11 @@ public class StoreUIManager : Singleton<StoreUIManager>
     [SerializeField] private Color colorFart;
     [SerializeField] private Color colorWild;
     [SerializeField] private Color colorLuck;
+
+    [SerializeField] private TextMeshProUGUI buyModeText;
+    public int previewAmount = 1;
+    public static Action ChangedPreviewAmount;
+
     
     public delegate void DebugUpdateStoreUI();
 
@@ -53,6 +58,24 @@ public class StoreUIManager : Singleton<StoreUIManager>
     {
         UpdateLabels();
         BuildCategories();
+    }
+    
+    private void Update()
+    {
+        if (Input.GetButtonDown("Fire3") || Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            //TODO:: Update the price previews
+            previewAmount = 10;
+            UpdateBuyModeText(previewAmount);
+            ChangedPreviewAmount?.Invoke();
+        }
+        if (Input.GetButtonUp("Fire3") || Input.GetKeyUp(KeyCode.LeftShift))
+        {
+            //TODO:: Update the price previews
+            previewAmount = 1;
+            UpdateBuyModeText(previewAmount);
+            ChangedPreviewAmount?.Invoke();
+        }
     }
 
     public void ExitStore()
@@ -145,6 +168,11 @@ public class StoreUIManager : Singleton<StoreUIManager>
             default:
                 throw new ArgumentOutOfRangeException(nameof(upgradeType), upgradeType, null);
         }
+    }
+
+    public void UpdateBuyModeText(int amount)
+    {
+        buyModeText.text = "Buy Mode x" + amount;
     }
 
     [Command]

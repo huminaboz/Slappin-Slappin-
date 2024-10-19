@@ -13,25 +13,28 @@ public class Debug_GrowthTester : MonoBehaviour
 
     [SerializeField] [Range(0, 1)] private float updateValues;
 
-    public string GetUpgradeText(int level)
-    {
-        float nextUpgrade = upgradeSO.newValueGrowthCurve.ComputeGrowth(upgradeSO.baseValue, level);
-        
-        switch (upgradeSO.numberType)
-        {
-            case NumberType.Normal:
-                int roundedUpgrade = (int) Mathf.Ceil(nextUpgrade);
-                if (roundedUpgrade <= level) roundedUpgrade = level + 1;
-                roundedUpgrade--;
-                return BozUtilities.FormatLargeNumber(roundedUpgrade);
-            case NumberType.Percentage:
-                return (nextUpgrade * 100).ToString("0.00") + "%";
-            case NumberType.Multiplier:
-                return nextUpgrade.ToString("0.00") + "x";
-            default:
-                return nextUpgrade.ToString();
-        }
-    }
+    // public string GetUpgradeText(int level)
+    // {
+    //     float nextUpgrade = upgradeSO.newValueGrowthCurve.ComputeGrowth(upgradeSO.baseValue, level);
+    //     
+    //     switch (upgradeSO.numberType)
+    //     {
+    //         case NumberType.Normal:
+    //             int roundedUpgrade = (int) Mathf.Ceil(nextUpgrade);
+    //             //TODO:: Might need to make this actually take effect, too
+    //             if (roundedUpgrade <= level) roundedUpgrade = level + 1;
+    //             roundedUpgrade--;
+    //             return BozUtilities.FormatLargeNumber(roundedUpgrade);
+    //         case NumberType.Percentage:
+    //             return (nextUpgrade * 100).ToString("0.00") + "%";
+    //         case NumberType.Multiplier:
+    //             return nextUpgrade.ToString("0.00") + "x";
+    //         case NumberType.Seconds:
+    //             return nextUpgrade.ToString("0.00") + "s";
+    //         default:
+    //             return nextUpgrade.ToString();
+    //     }
+    // }
     
     private void Update()
     {
@@ -45,7 +48,7 @@ public class Debug_GrowthTester : MonoBehaviour
             levelText.text += "\n" + level;
 
             
-            string newValue = GetUpgradeText(level);
+            string newValue = BozUtilities.GetUpgradeText(upgradeSO, level);
             value.text += "\n" + newValue;
             float newPrice = upgradeSO.newPriceGrowthCurve.ComputeGrowth(upgradeSO.basePrice, level);
             newPrice = Mathf.Ceil(newPrice);

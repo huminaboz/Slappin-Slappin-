@@ -51,23 +51,25 @@ public class UpgradeCard_Appearance : MonoBehaviour
     private void OnEnable()
     {
         UpgradeData.OnPurchaseMade += UpdateCardAppearance;
+        StoreUIManager.ChangedPreviewAmount += UpdateCardAppearance;
         StoreUIManager.OnDebugUpdateStoreUI += UpdateCardAppearance;
     }
 
     private void OnDisable()
     {
         UpgradeData.OnPurchaseMade -= UpdateCardAppearance;
+        StoreUIManager.ChangedPreviewAmount -= UpdateCardAppearance;
         StoreUIManager.OnDebugUpdateStoreUI -= UpdateCardAppearance;
     }
 
     private void UpdateCardAppearance()
     {
-        priceText.text = upgradeData.GetPriceText();
-        upgradeText.text = BozUtilities.GetUpgradeText(upgradeData.upgradeSO, upgradeData.level+1);
+        priceText.text = upgradeData.GetPriceText(StoreUIManager.I.previewAmount);
+        upgradeText.text = BozUtilities.GetUpgradeText(upgradeData.upgradeSO, upgradeData.level+1+StoreUIManager.I.previewAmount);
 
         //TODO:: Set up a singleton or something that has all the category colors
         // priceBgColor.color = upgradeData.upgradeSO.GetCategoryColor;
-        if (upgradeData.IsAllowedToBePurchased())
+        if (upgradeData.IsAllowedToBePurchased(StoreUIManager.I.previewAmount))
         {
             SetDefaultAppearance();
         }
@@ -95,7 +97,7 @@ public class UpgradeCard_Appearance : MonoBehaviour
         cardBodyRect.anchoredPosition = _bodyDefaultPosition;
 
         //Don't let the button events set this if there's no moneys
-        if (upgradeData.IsAllowedToBePurchased())
+        if (upgradeData.IsAllowedToBePurchased(StoreUIManager.I.previewAmount))
         {
             priceBgColor.color = _defaultPriceBgColor;
             priceText.color = _defaultPriceTextColor;
@@ -114,7 +116,7 @@ public class UpgradeCard_Appearance : MonoBehaviour
 
     public void OnPressed()
     {
-        if (upgradeData.IsAllowedToBePurchased() == false) return;
+        if (upgradeData.IsAllowedToBePurchased(StoreUIManager.I.previewAmount) == false) return;
         cardBodyRect.anchoredPosition = new Vector2(10f, -10f);
         border.gameObject.SetActive(true);
         shadowImage.color = shadowPressed;

@@ -16,14 +16,39 @@ public static class BozUtilities
         return Random.Range(0f, 1f);
     }
     
+    public static bool HasHitMinOrMax(SO_Upgrade upgrade, int _level)
+    {
+        if (upgrade.useMinValue)
+        {
+            if (upgrade.minValue >= upgrade.newValueGrowthCurve.ComputeGrowth(upgrade.baseValue, _level))
+            {
+                //TODO:: Do something special about max level reached
+                return true;
+            }
+        }
+        else if (upgrade.useMaxValue)
+        {
+            if (upgrade.maxValue <= upgrade.newValueGrowthCurve.ComputeGrowth(upgrade.baseValue, _level))
+            {
+                //TODO:: Do something special about max level reached
+                return true;
+            }
+        }
+
+        return false;
+    }
+    
     public static string GetUpgradeText(SO_Upgrade upgrade, int level)
     {
         float nextUpgrade = upgrade.newValueGrowthCurve.ComputeGrowth(upgrade.baseValue, level);
+
+        if (HasHitMinOrMax(upgrade, level)) return $"{nextUpgrade} MIN/MAX";
         
         switch (upgrade.numberType)
         {
             case NumberType.Normal:
                 int roundedUpgrade = (int) Mathf.Ceil(nextUpgrade);
+                //TODO:: Might need to make this actually take effect, too
                 if (roundedUpgrade <= level) roundedUpgrade = level + 1;
                 roundedUpgrade--;
                 return FormatLargeNumber(roundedUpgrade);
@@ -31,6 +56,8 @@ public static class BozUtilities
                 return (nextUpgrade * 100).ToString("0.00") + "%";
             case NumberType.Multiplier:
                 return nextUpgrade.ToString("0.00") + "x";
+            case NumberType.Seconds:
+                return nextUpgrade.ToString("0.00") + "s";
             default:
                 return nextUpgrade.ToString();
         }

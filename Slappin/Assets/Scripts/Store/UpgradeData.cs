@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Globalization;
+using Mono.CSharp;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -18,7 +19,7 @@ public class UpgradeData : MonoBehaviour
     public static event OnBoughtSomething OnPurchaseMade;
 
     public int level = 1;
-    // public 
+
 
     private void Awake()
     {
@@ -30,17 +31,25 @@ public class UpgradeData : MonoBehaviour
         _upgradeCardAppearance.Initialize();
     }
 
-    public void OnPurchased()
+
+
+    public void OnAttemptedToPurchase()
     {
+        int amount = 1;
+        
+        if (Input.GetButton("Fire3") || Input.GetKey(KeyCode.LeftShift))
+        {
+            amount = 10;
+        }
+        
         //Check to see if you can afford this, and if not, disallow purchase   
-        if (IsAllowedToBePurchased() == false)
+        if (IsAllowedToBePurchased(amount) == false)
         {
             Debug.LogWarning("You can't afford that!");
             return;
         }
 
-
-        PlayerStats.I.currency1 -= GetPrice();
+        PlayerStats.I.currency1 -= GetPrice(amount);
 
         //NOTE: Remember that by incrementing this, it will increase everything, so updates after, purchases before
         level++;
@@ -52,19 +61,23 @@ public class UpgradeData : MonoBehaviour
         OnPurchaseMade?.Invoke();
     }
 
-    public bool IsAllowedToBePurchased()
+    public bool IsAllowedToBePurchased(int amount)
     {
-        return GetPrice() <= PlayerStats.I.currency1
-               && level < upgradeSO.maxLevel;
+        if (BozUtilities.HasHitMinOrMax(upgradeSO, level)) return false;
+
+        return GetPrice(amount) <= PlayerStats.I.currency1
+               && level + (amount - 1) < upgradeSO.maxLevel;
     }
 
-    private int GetPrice()
+
+    private int GetPrice(int amount)
     {
-        return (int)Mathf.Floor(upgradeSO.newPriceGrowthCurve.ComputeGrowth(upgradeSO.basePrice, level));
+        return (int)Mathf.Floor(upgradeSO.newPriceGrowthCurve
+            .ComputeGrowth(upgradeSO.basePrice, level + (amount - 1)));
     }
 
-    public string GetPriceText()
+    public string GetPriceText(int amount)
     {
-        return BozUtilities.FormatLargeNumber(GetPrice());
+        return BozUtilities.FormatLargeNumber(GetPrice(amount));
     }
 }
