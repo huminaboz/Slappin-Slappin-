@@ -33,6 +33,7 @@ public class Enemy_Turtle : Enemy, IObjectPool<Enemy_Turtle>
     public override void InitializeObjectFromPool()
     {
         base.InitializeObjectFromPool();
+        _collider.enabled = true;
     }
 
     private void OnDisable()

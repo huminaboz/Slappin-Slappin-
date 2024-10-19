@@ -11,6 +11,8 @@ public class UIStateSwapper : Singleton<UIStateSwapper>
     
     //TODO:: Create a lose screen
     [SerializeField] private GameObject loseScreen;
+
+    [SerializeField] private Player player;
     
     public enum UIState
     {
@@ -30,6 +32,15 @@ public class UIStateSwapper : Singleton<UIStateSwapper>
         
         //TODO:: Make sure none of the UI depends on Time.timescale
         Time.timeScale = currentUIState == UIState.playing ? 1f : 0f;
+
+        if (currentUIState != UIState.playing)
+        {
+            player.SetState(new StateEmpty(player));
+        }
+        else
+        {
+            player.SetState(new StateDefault(player));
+        }
         
         SetupUIState();
     }
@@ -50,7 +61,10 @@ public class UIStateSwapper : Singleton<UIStateSwapper>
     {
         storeUI.SetActive(currentUIState == UIState.store);
         playingHUD.SetActive(currentUIState == UIState.playing);
-        pauseScreen.SetActive(currentUIState == UIState.paused);
-        loseScreen.SetActive(currentUIState == UIState.youLose);
+        
+        //TODO:: Create a pause screen
+        // pauseScreen.SetActive(currentUIState == UIState.paused);
+        //TODO:: Create a lose screen
+        // loseScreen.SetActive(currentUIState == UIState.youLose);
     }
 }

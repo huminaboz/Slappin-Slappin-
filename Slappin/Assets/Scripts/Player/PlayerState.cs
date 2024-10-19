@@ -58,6 +58,7 @@ public class StateEmpty : PlayerState
 
     public override void Update(float deltaTime)
     {
+        //Enjoy the void
     }
 
     public override void FixedUpdate(float fixedDeltaTime)
@@ -114,7 +115,7 @@ public class StateDefault : PlayerState
             RSTICK=12
          */
 
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButton("Fire1"))
         {
             thisPlayer.SetState(new StateSlapState(thisPlayer));
         }

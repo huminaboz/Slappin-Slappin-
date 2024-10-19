@@ -17616,6 +17616,7 @@ MonoBehaviour:
   playingHUD: {fileID: 1994268922}
   pauseScreen: {fileID: 0}
   loseScreen: {fileID: 0}
+  player: {fileID: 2113894223}
 --- !u!1001 &1308550409
 PrefabInstance:
   m_ObjectHideFlags: 0
