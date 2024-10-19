@@ -39,15 +39,15 @@ public class UpgradeData : MonoBehaviour
             return;
         }
 
-        
+
         PlayerStats.I.currency1 -= GetPrice();
-        
+
         //NOTE: Remember that by incrementing this, it will increase everything, so updates after, purchases before
         level++;
         //Upgrade the universal source of truth for getting stat numbers
-        StatLiason.I.Stats[upgradeSO.stat] 
+        StatLiason.I.Stats[upgradeSO.stat]
             = upgradeSO.newValueGrowthCurve.ComputeGrowth(upgradeSO.baseValue, level);
-        
+
         //Send out an event to update all the cards appearances for affordability or not
         OnPurchaseMade?.Invoke();
     }
@@ -55,46 +55,16 @@ public class UpgradeData : MonoBehaviour
     public bool IsAllowedToBePurchased()
     {
         return GetPrice() <= PlayerStats.I.currency1
-               &&  level < upgradeSO.maxLevel;
+               && level < upgradeSO.maxLevel;
     }
 
     private int GetPrice()
     {
-        return (int) Mathf.Floor(upgradeSO.newPriceGrowthCurve.ComputeGrowth(upgradeSO.basePrice, level));
+        return (int)Mathf.Floor(upgradeSO.newPriceGrowthCurve.ComputeGrowth(upgradeSO.basePrice, level));
     }
 
     public string GetPriceText()
     {
         return BozUtilities.FormatLargeNumber(GetPrice());
     }
-
-
-
-
-    // public Color GetPriceBgColor()
-    // {
-    //     switch (upgradeSO.upgradeType)
-    //     {
-    //         case UpgradeType.Basic:
-    //             break;
-    //         case UpgradeType.Defense:
-    //             break;
-    //         case UpgradeType.Slap:
-    //             break;
-    //         case UpgradeType.Flick:
-    //             break;
-    //         case UpgradeType.Squish:
-    //             break;
-    //         case UpgradeType.Fart:
-    //             break;
-    //         case UpgradeType.Wild:
-    //             break;
-    //         case UpgradeType.Luck:
-    //             break;
-    //         default:
-    //             throw new ArgumentOutOfRangeException();
-    //     }
-    // }
-
-
 }
