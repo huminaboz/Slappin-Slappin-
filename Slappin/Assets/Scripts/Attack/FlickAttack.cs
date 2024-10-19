@@ -79,7 +79,7 @@ public class FlickAttack : AttackType
         chargedDistance = _flickData.distanceBase;
         chargeDamage = _flickData.baseDamage;
         chargeCurve = _flickData.chargeCurve;
-        maxChargeTime = _flickData.maxChargeTime;
+        maxChargeTime = StatLiason.I.Get(Stat.FlickMaxChargeTime);
     }
 
     protected override void InitiateTravelToGround()
