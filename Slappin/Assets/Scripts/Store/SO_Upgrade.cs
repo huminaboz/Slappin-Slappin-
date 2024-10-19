@@ -38,10 +38,15 @@ public enum Stat
     //Basic
     Basic = 1000,
     DamageReduction = 1001,
+    ShadowDashSpeed = 1002,
+    
+    
     
     //Defense
     Defense = 2000,
-    
+    IncreaseMaxHp = 2001,
+    WaveHealthRestore = 2002,
+    DamagePerDistance = 2003,
     
     //Slap
     Slap = 3000,
@@ -50,6 +55,8 @@ public enum Stat
     
     //Flick
     Flick = 4000,
+    FlickDamage = 4001,
+    FlickChargeSpeed = 4002,
     
     
     //Squish
@@ -66,8 +73,6 @@ public enum Stat
     
     //Luck
     Luck = 8000,
-    
-    
 }
 
 [CreateAssetMenu(fileName = "SO_Upgrade_", menuName = "Slappin/SO_Upgrade")]

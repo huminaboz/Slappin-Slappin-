@@ -44,7 +44,7 @@ public class StoreUIManager : Singleton<StoreUIManager>
         UpgradeData.OnPurchaseMade -= UpdateLabels;
     }
 
-    private void Start()
+    private void Awake()
     {
         Initialize();
     }

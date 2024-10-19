@@ -1,3 +1,4 @@
+using System;
 using Unity.Collections;
 using UnityEngine;
 using UnityEngine.Events;
@@ -19,8 +20,30 @@ public class Health : MonoBehaviour
         hpAdjustmentListeners = GetComponents<IHpAdjustmentListener>();
     }
 
+    private void OnEnable()
+    {
+        UpgradeData.OnPurchaseMade += BoughtHp;
+    }
+
+    private void OnDisable()
+    {
+        UpgradeData.OnPurchaseMade -= BoughtHp;
+    }
+
+    private void BoughtHp()
+    {
+        if(!isPlayer) return;
+        int previousMaxHp = maxHp;
+        maxHp = (int) StatLiason.I.Get(Stat.IncreaseMaxHp);
+        int hpUpgrade = maxHp - previousMaxHp;
+        Debug.Log($"Increased maxHp by: {hpUpgrade}. New value is {maxHp}");
+        AdjustHp(hpUpgrade, null);
+    }
+
     public void Initialize()
     {
+        if (isPlayer) maxHp = (int) StatLiason.I.Get(Stat.IncreaseMaxHp);
+        //TODO:: Get the enemy's max hp stat
         hp = maxHp;
         isAlive = true;
     }
@@ -51,6 +74,7 @@ public class Health : MonoBehaviour
         //HEALING
         if (oldHealth < hp)
         {
+            //TODO:: If attacker is nyull, don't play a celebration
             foreach (IHpAdjustmentListener damageListeners in hpAdjustmentListeners)
             {
                 damageListeners.Healed(amountToIncrease, attacker);

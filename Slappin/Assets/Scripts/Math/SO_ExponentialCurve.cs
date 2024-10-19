@@ -12,7 +12,7 @@ public class SO_ExponentialCurve : SO_GrowthCurve
         // For level 1, return the base value directly
         if (level == 1)
         {
-            return baseValue + offset; // Apply offset at level 1
+            return baseValue; // Apply offset at level 1
         }
         
         float totalValue = baseValue; // Start with the base value at level 1

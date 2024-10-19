@@ -9,8 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 19fe0575408ba1c4cb24ebe0097db439, type: 3}
-  m_Name: SO_SigmoidGrowth_TestValue
+  m_Script: {fileID: 11500000, guid: 4ac540fc2f4a5714994932f05a9106ff, type: 3}
+  m_Name: Defense_DamageReduction_Price_Exp
   m_EditorClassIdentifier: 
-  growthRate: 0.01
-  levelingFactor: 2.73
+  growthRate: 0.009
+  growthFactor: 0.64
+  offset: 0

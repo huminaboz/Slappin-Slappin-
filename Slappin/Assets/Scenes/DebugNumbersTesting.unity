@@ -2308,7 +2308,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55d1401588e50834086900fab8030c48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  upgradeSO: {fileID: 11400000, guid: 344855eea321da0429a05d49757a034b, type: 2}
+  upgradeSO: {fileID: 11400000, guid: 25e514833abb3c94d9ee64bc37cec3ab, type: 2}
   upgradeName: {fileID: 1583410622}
   levelText: {fileID: 2107330069}
   value: {fileID: 1855121877}
@@ -6970,7 +6970,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2130420860}
-  - component: {fileID: 2130420861}
   - component: {fileID: 2130420859}
   - component: {fileID: 2130420858}
   - component: {fileID: 2130420857}
@@ -7064,37 +7063,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &2130420861
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2130420856}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c133b5b5912a2bf43baae31ed0e26870, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  linearRate: 1
-  exponentialRate: 0.1
-  logisticRate: 0.1
-  logisticCarryingCapacity: 100
-  gompertzRate: 0.1
-  gompertzCarryingCapacity: 100
-  gompertzShift: 1
-  logarithmicScaleFactor: 10
-  polynomialCoefficient: 1
-  polynomialDegree: 2
-  powerLawExponent: 2
-  stepwiseStepSize: 10
-  stepwiseStepInterval: 5
-  dampingFactor: 0.1
-  oscillationFrequency: 1
-  hyperbolicSingularityTime: 50
-  biexponentialRate1: 0.1
-  biexponentialRate2: 0.05
-  biexponentialCoefficient: 0.5
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
