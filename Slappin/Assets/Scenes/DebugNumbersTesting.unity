@@ -2308,7 +2308,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55d1401588e50834086900fab8030c48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  upgradeSO: {fileID: 11400000, guid: 71702d81249d75a45bb3f8f5f6f3a191, type: 2}
+  upgradeSO: {fileID: 11400000, guid: c41a6946346f031479011de48fd452c3, type: 2}
   upgradeName: {fileID: 1583410622}
   levelText: {fileID: 2107330069}
   value: {fileID: 1855121877}

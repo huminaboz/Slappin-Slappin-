@@ -10,18 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8327b2e1f1789184f9cadc6d7f88cf8d, type: 3}
-  m_Name: Slap_Damage
+  m_Name: Flick_ChargeMaxDamage
   m_EditorClassIdentifier: 
-  stat: 3001
-  title: Base Damage
-  baseValue: 1
-  basePrice: 5
-  upgradeType: 2
-  numberType: 0
+  stat: 4001
+  title: Full Charge Damage
+  baseValue: 1.5
+  basePrice: 100
+  upgradeType: 3
+  numberType: 2
   useMinValue: 0
   useMaxValue: 0
   minValue: 0
   maxValue: 1e+12
-  newValueGrowthCurve: {fileID: 11400000, guid: 7955562640e56534181915b29badd7cd, type: 2}
-  newPriceGrowthCurve: {fileID: 11400000, guid: 99b05994e507f8c488a71b2c3f31feab, type: 2}
-  maxLevel: 500
+  newValueGrowthCurve: {fileID: 11400000, guid: 8a516192015b05342959510a7d276211, type: 2}
+  newPriceGrowthCurve: {fileID: 11400000, guid: 21290e8ec33494841940d66d56c58f01, type: 2}
+  maxLevel: 1000

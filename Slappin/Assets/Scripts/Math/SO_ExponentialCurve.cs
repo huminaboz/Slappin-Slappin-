@@ -1,11 +1,15 @@
+using System;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "SO_ExponentialGrowth_", menuName = "Slappin/SO_ExponentialGrowth")]
 public class SO_ExponentialCurve : SO_GrowthCurve
 {
+    [Header("Exponential Growth")] 
     [Range (0.0001f, 1f)] public float growthRate = 0.1f; // The exponential growth rate
     [Range (0.01f, 10f)] public float growthFactor = 1f;  // A multiplier to control the growth steepness
     public float offset = 0f;        // An offset to shift the growth curve
+
+
     
     public override float ComputeGrowth(float baseValue, int level)
     {
@@ -29,4 +33,6 @@ public class SO_ExponentialCurve : SO_GrowthCurve
 
         return totalValue; // Return the cumulative value at the current level
     }
+
+
 }

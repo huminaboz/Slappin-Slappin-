@@ -10,6 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f1dfd4b3344d2204f8c55629b0afa7d7, type: 3}
-  m_Name: Flick_ChargeSpeed_Linear
+  m_Name: Flick_Charge_Linear
   m_EditorClassIdentifier: 
-  linearRate: -0.025
+  linearRate: 0.025

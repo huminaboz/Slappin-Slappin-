@@ -55,7 +55,7 @@ public enum Stat
 
     //Flick
     Flick = 4000,
-    FlickDamage = 4001,
+    FlickMaxChargeDamage = 4001,
     FlickMaxChargeTime = 4002,
 
 
@@ -100,6 +100,7 @@ public class SO_Upgrade : ScriptableObject
     /// <summary>
     /// How much the price will increase with each level
     /// </summary>
+    [Header("Growth Curves")]
     [SerializeField] public SO_GrowthCurve newPriceGrowthCurve;
 
     [FormerlySerializedAs("maxLevels")] [SerializeField]

@@ -185,6 +185,7 @@ public class StoreUIManager : Singleton<StoreUIManager>
         OnDebugUpdateStoreUI?.Invoke();
     }
 
+    [Command]
     private void DebugGetRich()
     {
         PlayerStats.I.currency1 += 999999999;

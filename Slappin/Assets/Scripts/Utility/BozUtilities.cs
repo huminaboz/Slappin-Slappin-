@@ -79,7 +79,7 @@ public static class BozUtilities
         return output;
     }
 
-    public static string FormatLargeNumber(float number)
+    public static string FormatLargeNumber(float number, bool dontResizeLetter = false)
     {
         switch (number)
         {
@@ -94,7 +94,7 @@ public static class BozUtilities
             case >= 1_000_000:
                 return (number / 1_000_000).ToString("0.##") + "M";
             case >= 1_000:
-                return (number / 1_000).ToString("0.##") + "<size=70%>k</font>";
+                return (number / 1_000).ToString("0.##") + "k";
             default:
                 return number.ToString();
         }

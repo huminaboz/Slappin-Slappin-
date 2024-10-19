@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1dfd4b3344d2204f8c55629b0afa7d7, type: 3}
+  m_Name: Flick_MaxChargeDamage_Linear
+  m_EditorClassIdentifier: 
+  showPreview: 1
+  previewUpgrade: {fileID: 11400000, guid: c41a6946346f031479011de48fd452c3, type: 2}
+  maxDisplayedRows: 37
+  startOffset: 0
+  debugValues: "Level\t\tAmount\t\t\tPrice\n0\t\t1.33x\t\t\t100\n1\t\t1.50x\t\t\t100\n2\t\t1.67x\t\t\t202\n3\t\t1.84x\t\t\t304\n4\t\t2.01x\t\t\t408\n5\t\t2.18x\t\t\t514\n6\t\t2.35x\t\t\t621\n7\t\t2.52x\t\t\t729\n8\t\t2.69x\t\t\t838\n9\t\t2.86x\t\t\t950\n10\t\t3.03x\t\t\t1062\n11\t\t3.20x\t\t\t1176\n12\t\t3.37x\t\t\t1292\n13\t\t3.54x\t\t\t1409\n14\t\t3.71x\t\t\t1527\n15\t\t3.88x\t\t\t1647\n16\t\t4.05x\t\t\t1769\n17\t\t4.22x\t\t\t1893\n18\t\t4.39x\t\t\t2018\n19\t\t4.56x\t\t\t2144\n20\t\t4.73x\t\t\t2272\n21\t\t4.90x\t\t\t2402\n22\t\t5.07x\t\t\t2534\n23\t\t5.24x\t\t\t2668\n24\t\t5.41x\t\t\t2803\n25\t\t5.58x\t\t\t2940\n26\t\t5.75x\t\t\t3079\n27\t\t5.92x\t\t\t3219\n28\t\t6.09x\t\t\t3362\n29\t\t6.26x\t\t\t3506\n30\t\t6.43x\t\t\t3653\n31\t\t6.60x\t\t\t3801\n32\t\t6.77x\t\t\t3951\n33\t\t6.94x\t\t\t4103\n34\t\t7.11x\t\t\t4257\n35\t\t7.28x\t\t\t4414\n36\t\t7.45x\t\t\t4572\n"
+  linearRate: 0.17
