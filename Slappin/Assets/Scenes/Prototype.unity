@@ -3960,6 +3960,7 @@ MonoBehaviour:
   pickupColliderObject: {fileID: 778377380}
   spikeGetHurtOnAttackCollider: {fileID: 910431749}
   handModel: {fileID: 184228170}
+  slapForecastShadow: {fileID: 525235387}
 --- !u!1001 &325247466
 PrefabInstance:
   m_ObjectHideFlags: 0

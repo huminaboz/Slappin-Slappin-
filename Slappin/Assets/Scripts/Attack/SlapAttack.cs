@@ -10,12 +10,30 @@ public class SlapAttack : AttackType
 
     [SerializeField] private GetHurtOnAttackCollider spikeGetHurtOnAttackCollider;
     [SerializeField] private GameObject handModel;
+    [SerializeField] private Transform slapForecastShadow;
+    
+    //TODO:: And the pickup collider drawing from an upgrade area too
+    private Vector3 _hurtColliderDefaultLocalScale;
+    private Vector3 _slapForecastShadowDefaultLocalScale;
 
+
+    private void OnEnable()
+    {
+        UpgradeData.OnPurchaseMade += UpdateColliderAndForecastSize;
+    }
+
+    private void OnDisable()
+    {
+        //I THINK this should be enabled while you're in the store???
+        UpgradeData.OnPurchaseMade -= UpdateColliderAndForecastSize;
+    }
 
     public override void Initialize()
     {
         base.Initialize();
         handModel?.SetActive(false);
+        _hurtColliderDefaultLocalScale = hurtEnemiesColliderObject.transform.localScale;
+        _slapForecastShadowDefaultLocalScale = slapForecastShadow.transform.localScale;
     }
 
     protected override float GetAttackTypeDamageNumber()
@@ -30,6 +48,21 @@ public class SlapAttack : AttackType
         handModel?.SetActive(true);
 
         DropSlap();
+    }
+
+    private void UpdateColliderAndForecastSize()
+    {
+        //Set the collider size based on the slap size when you call a slap
+        hurtEnemiesColliderObject.transform.localScale = 
+            new Vector3(_hurtColliderDefaultLocalScale.x * StatLiason.I.Stats[Stat.SlapAreaMultiplier],
+                _hurtColliderDefaultLocalScale.y,
+                _hurtColliderDefaultLocalScale.z * StatLiason.I.Stats[Stat.SlapAreaMultiplier]); 
+        
+        //And the forecast size
+        slapForecastShadow.localScale = 
+            new Vector3(_slapForecastShadowDefaultLocalScale.x * StatLiason.I.Stats[Stat.SlapAreaMultiplier],
+                _slapForecastShadowDefaultLocalScale.y,
+                _slapForecastShadowDefaultLocalScale.z * StatLiason.I.Stats[Stat.SlapAreaMultiplier]); 
     }
 
     private void DropSlap()

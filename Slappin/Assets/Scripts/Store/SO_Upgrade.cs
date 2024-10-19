@@ -46,7 +46,7 @@ public enum Stat
     //Slap
     Slap = 3000,
     SlapDamage = 3001,
-    SlapArea = 3002,
+    SlapAreaMultiplier = 3002,
     
     //Flick
     Flick = 4000,
