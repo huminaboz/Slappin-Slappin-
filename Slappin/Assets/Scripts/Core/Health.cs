@@ -35,6 +35,7 @@ public class Health : MonoBehaviour
         if(!isPlayer) return;
         int previousMaxHp = maxHp;
         maxHp = (int) StatLiason.I.Get(Stat.IncreaseMaxHp);
+        if(previousMaxHp == maxHp) return;
         int hpUpgrade = maxHp - previousMaxHp;
         Debug.Log($"Increased maxHp by: {hpUpgrade}. New value is {maxHp}");
         AdjustHp(hpUpgrade, null);

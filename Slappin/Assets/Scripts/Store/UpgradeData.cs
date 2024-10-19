@@ -31,21 +31,19 @@ public class UpgradeData : MonoBehaviour
         _upgradeCardAppearance.Initialize();
     }
 
-
-
     public void OnAttemptedToPurchase()
     {
         int amount = 1;
-        
+
         if (Input.GetButton("Fire3") || Input.GetKey(KeyCode.LeftShift))
         {
             amount = 10;
         }
-        
+
         //Check to see if you can afford this, and if not, disallow purchase   
         if (IsAllowedToBePurchased(amount) == false)
         {
-            Debug.LogWarning("You can't afford that!");
+            Debug.LogWarning("You can't buy that!");
             return;
         }
 
@@ -63,7 +61,11 @@ public class UpgradeData : MonoBehaviour
 
     public bool IsAllowedToBePurchased(int amount)
     {
-        if (BozUtilities.HasHitMinOrMax(upgradeSO, level)) return false;
+        if (BozUtilities.HasHitMinOrMax(upgradeSO, level + amount))
+        {
+            
+            return false;
+        }
 
         return GetPrice(amount) <= PlayerStats.I.currency1
                && level + (amount - 1) < upgradeSO.maxLevel;

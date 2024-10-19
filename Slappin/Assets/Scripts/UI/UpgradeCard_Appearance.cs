@@ -87,7 +87,7 @@ public class UpgradeCard_Appearance : MonoBehaviour
         //Don't let the button get pressed
         thisButton.interactable = false;
 
-        //TODO:: Do something special if the amount is maxed out
+
     }
 
     public void SetDefaultAppearance()
@@ -104,6 +104,14 @@ public class UpgradeCard_Appearance : MonoBehaviour
 
             //Allow the button to be pressed
             thisButton.interactable = true;
+        }
+        //Do something special if the amount is maxed out
+        else
+        {
+            if (BozUtilities.HasHitMinOrMax(upgradeData.upgradeSO, upgradeData.level))
+            {
+                priceText.text = "MAX";
+            }
         }
     }
 

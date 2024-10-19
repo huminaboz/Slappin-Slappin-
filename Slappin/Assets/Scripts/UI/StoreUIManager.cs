@@ -170,7 +170,7 @@ public class StoreUIManager : Singleton<StoreUIManager>
         }
     }
 
-    public void UpdateBuyModeText(int amount)
+    private void UpdateBuyModeText(int amount)
     {
         buyModeText.text = "Buy Mode x" + amount;
     }

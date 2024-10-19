@@ -15,7 +15,7 @@ public static class BozUtilities
     {
         return Random.Range(0f, 1f);
     }
-    
+
     public static bool HasHitMinOrMax(SO_Upgrade upgrade, int _level)
     {
         if (upgrade.useMinValue)
@@ -37,32 +37,48 @@ public static class BozUtilities
 
         return false;
     }
-    
-    public static string GetUpgradeText(SO_Upgrade upgrade, int level)
+
+    public static string GetUpgradeText(SO_Upgrade upgrade, int level, bool debugMode = false)
     {
         float nextUpgrade = upgrade.newValueGrowthCurve.ComputeGrowth(upgrade.baseValue, level);
 
-        if (HasHitMinOrMax(upgrade, level)) return $"{nextUpgrade} MIN/MAX";
-        
+        string output;
+
         switch (upgrade.numberType)
         {
             case NumberType.Normal:
-                int roundedUpgrade = (int) Mathf.Ceil(nextUpgrade);
+                int roundedUpgrade = (int)Mathf.Ceil(nextUpgrade);
                 //TODO:: Might need to make this actually take effect, too
                 if (roundedUpgrade <= level) roundedUpgrade = level + 1;
                 roundedUpgrade--;
-                return FormatLargeNumber(roundedUpgrade);
+                output = FormatLargeNumber(roundedUpgrade);
+                break;
             case NumberType.Percentage:
-                return (nextUpgrade * 100).ToString("0.00") + "%";
+                output = (nextUpgrade * 100).ToString("0.00") + "%";
+                break;
             case NumberType.Multiplier:
-                return nextUpgrade.ToString("0.00") + "x";
+                output = nextUpgrade.ToString("0.00") + "x";
+                break;
             case NumberType.Seconds:
-                return nextUpgrade.ToString("0.00") + "s";
+                output = nextUpgrade.ToString("0.00") + "s";
+                break;
             default:
-                return nextUpgrade.ToString();
+                output = nextUpgrade.ToString();
+                break;
         }
+
+        if (HasHitMinOrMax(upgrade, level))
+        {
+            if (debugMode)
+            {
+                output += $" MAX";
+            }
+            else output += $"\nMAX";
+        }
+
+        return output;
     }
-    
+
     public static string FormatLargeNumber(float number)
     {
         switch (number)
