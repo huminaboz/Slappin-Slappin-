@@ -9,6 +9,7 @@ public class Health : MonoBehaviour
     [SerializeField] private UnityEvent OnDeath;
     // private bool immuneToDamage = false;
     public bool isAlive = true;
+    public bool isPlayer = false;
 
     private IHpAdjustmentListener[] hpAdjustmentListeners;
 
@@ -27,14 +28,24 @@ public class Health : MonoBehaviour
     public void AdjustHp(int amountToIncrease, GameObject attacker)
     {
         if (!isAlive) return;
+
+        if (isPlayer && amountToIncrease < 0)
+        {
+            float adjustedDamage = amountToIncrease - amountToIncrease 
+                * StatLiason.I.Get(Stat.DamageReduction);
+            Debug.Log($"{StatLiason.I.Get(Stat.DamageReduction)} " +
+                      $"Damage Reduction shaved off {amountToIncrease - adjustedDamage} damage" +
+                      $"\nFrom {amountToIncrease} to {adjustedDamage}");
+            amountToIncrease = Mathf.CeilToInt(adjustedDamage);
+        }
         
         int oldHealth = hp;
         hp += amountToIncrease;
         
         if (oldHealth == hp) return;
         
-        // Debug.Log($"{gameObject.name} health adjusted by {amountToIncrease}. "
-                  // + $"\nHp is now {hp}");
+        Debug.Log($"{gameObject.name} health adjusted by {amountToIncrease}. "
+                  + $"\nHp is now {hp}");
 
         
         //HEALING

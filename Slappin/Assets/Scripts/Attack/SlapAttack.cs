@@ -38,7 +38,7 @@ public class SlapAttack : AttackType
 
     protected override float GetAttackTypeDamageNumber()
     {
-        float damage = StatLiason.I.Stats[Stat.SlapDamage];
+        float damage = StatLiason.I.Get(Stat.SlapDamage);
         return damage;
     }
 
@@ -54,15 +54,15 @@ public class SlapAttack : AttackType
     {
         //Set the collider size based on the slap size when you call a slap
         hurtEnemiesColliderObject.transform.localScale = 
-            new Vector3(_hurtColliderDefaultLocalScale.x * StatLiason.I.Stats[Stat.SlapAreaMultiplier],
+            new Vector3(_hurtColliderDefaultLocalScale.x * StatLiason.I.Get(Stat.SlapAreaMultiplier),
                 _hurtColliderDefaultLocalScale.y,
-                _hurtColliderDefaultLocalScale.z * StatLiason.I.Stats[Stat.SlapAreaMultiplier]); 
+                _hurtColliderDefaultLocalScale.z * StatLiason.I.Get(Stat.SlapAreaMultiplier)); 
         
         //And the forecast size
         slapForecastShadow.localScale = 
-            new Vector3(_slapForecastShadowDefaultLocalScale.x * StatLiason.I.Stats[Stat.SlapAreaMultiplier],
+            new Vector3(_slapForecastShadowDefaultLocalScale.x * StatLiason.I.Get(Stat.SlapAreaMultiplier),
                 _slapForecastShadowDefaultLocalScale.y,
-                _slapForecastShadowDefaultLocalScale.z * StatLiason.I.Stats[Stat.SlapAreaMultiplier]); 
+                _slapForecastShadowDefaultLocalScale.z * StatLiason.I.Get(Stat.SlapAreaMultiplier)); 
     }
 
     private void DropSlap()

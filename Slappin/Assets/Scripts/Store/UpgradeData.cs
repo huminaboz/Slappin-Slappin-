@@ -45,7 +45,8 @@ public class UpgradeData : MonoBehaviour
         //NOTE: Remember that by incrementing this, it will increase everything, so updates after, purchases before
         level++;
         //Upgrade the universal source of truth for getting stat numbers
-        StatLiason.I.Stats[upgradeSO.stat] = upgradeSO.newValueGrowthCurve.ComputeGrowth(upgradeSO.baseValue, level);
+        StatLiason.I.Stats[upgradeSO.stat] 
+            = upgradeSO.newValueGrowthCurve.ComputeGrowth(upgradeSO.baseValue, level);
         
         //Send out an event to update all the cards appearances for affordability or not
         OnPurchaseMade?.Invoke();

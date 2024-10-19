@@ -31029,6 +31029,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   isAlive: 1
+  isPlayer: 1
 --- !u!114 &2113894226
 MonoBehaviour:
   m_ObjectHideFlags: 0

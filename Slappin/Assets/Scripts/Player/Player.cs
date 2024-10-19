@@ -76,6 +76,7 @@ public class Player : MonoBehaviour, IHpAdjustmentListener
 
     public void TookDamage(int damageAmount, GameObject attacker)
     {
+        
         // Debug.Log("player took damage");
         SFXPlayer.I.Play(AudioEventsStorage.I.playerTookDamage);
         //TODO:: Set the values of the camera shake based on the attacker
