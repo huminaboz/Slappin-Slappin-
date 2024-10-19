@@ -51,7 +51,7 @@ public static class BozUtilities
             case >= 1_000_000:
                 return (number / 1_000_000).ToString("0.##") + "M";
             case >= 1_000:
-                return (number / 1_000).ToString("0.##") + "k";
+                return (number / 1_000).ToString("0.##") + "<size=70%>k</font>";
             default:
                 return number.ToString();
         }
