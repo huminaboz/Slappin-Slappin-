@@ -32,7 +32,7 @@ public class StoreUIManager : Singleton<StoreUIManager>
     public int previewAmount = 1;
     public static Action ChangedPreviewAmount;
 
-    
+
     public delegate void DebugUpdateStoreUI();
 
     public static event DebugUpdateStoreUI OnDebugUpdateStoreUI;
@@ -59,7 +59,7 @@ public class StoreUIManager : Singleton<StoreUIManager>
         UpdateLabels();
         BuildCategories();
     }
-    
+
     private void Update()
     {
         if (Input.GetButtonDown("Fire3") || Input.GetKeyDown(KeyCode.LeftShift))
@@ -69,6 +69,7 @@ public class StoreUIManager : Singleton<StoreUIManager>
             UpdateBuyModeText(previewAmount);
             ChangedPreviewAmount?.Invoke();
         }
+
         if (Input.GetButtonUp("Fire3") || Input.GetKeyUp(KeyCode.LeftShift))
         {
             //TODO:: Update the price previews
@@ -83,7 +84,7 @@ public class StoreUIManager : Singleton<StoreUIManager>
         UIStateSwapper.I.SetState(UIStateSwapper.UIState.playing);
     }
 
-    private void UpdateLabels()
+    public void UpdateLabels()
     {
         nextWaveButtonText.text = "Start Wave " + PlayerStats.I.currentWave;
         totalCurrencyText.text = BozUtilities.FormatLargeNumber(PlayerStats.I.currency1);
@@ -130,7 +131,8 @@ public class StoreUIManager : Singleton<StoreUIManager>
             {
                 Debug.LogError("You forgot to set a stat enum on: " + upgradeSO.title);
             }
-            UpgradeData upgradeData = Instantiate(upgradeDataPrefab, 
+
+            UpgradeData upgradeData = Instantiate(upgradeDataPrefab,
                 GetCategoryParent(upgradeSO.upgradeType));
 
             // Assign the SO_Upgrade to the upgradeData's upgradeSO field
@@ -182,7 +184,7 @@ public class StoreUIManager : Singleton<StoreUIManager>
         UpdateLabels();
         OnDebugUpdateStoreUI?.Invoke();
     }
-    
+
     private void DebugGetRich()
     {
         PlayerStats.I.currency1 += 999999999;

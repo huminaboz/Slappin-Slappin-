@@ -7,12 +7,12 @@ public class AttackType : MonoBehaviour
 {
     [SerializeField] public Transform handPositioner;
     [SerializeField] public GameObject hurtEnemiesColliderObject;
+    [SerializeField] public Rigidbody handRigidbody;
 
     [HideInInspector] public Vector3 offsetPosition;
 
     [SerializeField] protected SO_AttackData attackData;
     [SerializeField] protected Player player;
-    [SerializeField] protected Rigidbody handRigidbody;
     [SerializeField] protected float offScreenHandYPosition = -0.23f; //Measured by holding it off camera
     [SerializeField] protected float groundYPosition = -0.78f; //Measured by putting the hand on the ground
     [SerializeField] protected AnimationCurve movementCurve;
@@ -106,7 +106,7 @@ public class AttackType : MonoBehaviour
         storedRelativeAttackPosition = relativeAttackPositioning;
     }
 
-    private void SetDirection()
+    public void SetDirection()
     {
         //If on the right side of the center line, reverse the x scale
         if (handPositioner.position.x > cameraTransform.position.x)

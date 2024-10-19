@@ -60,6 +60,7 @@ public class UIStateSwapper : Singleton<UIStateSwapper>
     private void SetupUIState()
     {
         storeUI.SetActive(currentUIState == UIState.store);
+        if(currentUIState == UIState.store) StoreUIManager.I.UpdateLabels();
         playingHUD.SetActive(currentUIState == UIState.playing);
         
         //TODO:: Create a pause screen

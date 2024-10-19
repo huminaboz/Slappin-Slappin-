@@ -33,6 +33,7 @@ public class HandMovement : MonoBehaviour
         // Calculate movement direction
         Vector3 direction = new Vector3(moveX, 0, moveZ).normalized;
 
+        
         bool isBoosting = Input.GetAxis("RTrigger") > 0f;
         // Apply speed boost if holding right trigger
         float currentSpeed = isBoosting ? moveSpeed * boostedSpeedMultiplier : moveSpeed;
@@ -41,6 +42,7 @@ public class HandMovement : MonoBehaviour
         if (direction.magnitude >= 0.1f)
         {
             _rigidbody.velocity = direction * (currentSpeed * Time.deltaTime);
+            thisPlayer.CurrentAttackType?.SetDirection();
         }
         else
         {
