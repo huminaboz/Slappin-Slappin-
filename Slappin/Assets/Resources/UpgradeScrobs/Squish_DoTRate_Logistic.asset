@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 074eb5741ff6a6b4c8b1a56f59ea95c4, type: 3}
+  m_Name: Squish_DoTRate_Logistic
+  m_EditorClassIdentifier: 
+  notes: 
+  showPreview: 0
+  previewUpgrade: {fileID: 11400000, guid: b39d075eda7617445bf2b09c3a1b0530, type: 2}
+  maxDisplayedRows: 34
+  startOffset: 57
+  debugValues: "Level\t\tAmount\t\t\tPrice\n57\t\t0.51x\t\t\t2.28k\n58\t\t0.50x\t\t\t2.32k\n59\t\t0.49x\t\t\t2.36k\n60\t\t0.48x\t\t\t2.4k\n61\t\t0.47x\t\t\t2.44k\n62\t\t0.47x\t\t\t2.48k\n63\t\t0.46x\t\t\t2.52k\n64\t\t0.45x\t\t\t2.56k\n65\t\t0.44x\t\t\t2.6k\n66\t\t0.43x\t\t\t2.64k\n67\t\t0.42x\t\t\t2.68k\n68\t\t0.41x\t\t\t2.72k\n69\t\t0.40x\t\t\t2.76k\n70\t\t0.40x\t\t\t2.8k\n71\t\t0.39x\t\t\t2.84k\n72\t\t0.38x\t\t\t2.88k\n73\t\t0.37x\t\t\t2.92k\n74\t\t0.36x\t\t\t2.96k\n75\t\t0.35x\t\t\t3k\n76\t\t0.34x\t\t\t3.04k\n77\t\t0.33x\t\t\t3.08k\n78\t\t0.33x\t\t\t3.12k\n79\t\t0.32x\t\t\t3.16k\n80\t\t0.31x\t\t\t3.2k\n81\t\t0.30x\t\t\t3.24k\n82\t\t0.29x\t\t\t3.28k\n83\t\t0.28x\t\t\t3.32k\n84\t\t0.27x\t\t\t3.36k\n85\t\t0.26x\t\t\t3.4k\n86\t\t0.26x\t\t\t3.44k\n87\t\t0.25x\t\t\t3.48k\n88\t\t0.24x\t\t\t3.52k\n89\t\t0.23x\t\t\t3.56k\n90\t\t0.22x\t\t\t3.6k\n"
+  logisticRate: 10.66
+  logisticCarryingCapacity: -21.9
+  growthMultiplier: -0.04
+  baseGrowthRate: -0.01

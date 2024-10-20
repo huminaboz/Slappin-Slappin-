@@ -44,7 +44,7 @@ public class SquishAttack : AttackType
         handModel?.SetActive(true);
 
         //Set it upon attack since that's where the distance comes from
-        distanceDamageBoost = GetRangedDamageBonus(StatLiason.I.Get(Stat.SlapDamagePerDistance));
+        distanceDamageBoost = GetRangedDamageBonus(StatLiason.I.Get(Stat.SquishDamagePerDistance));
 
         //TODO::I dunno, try to include drop speed into the animation delay
         float dropSpeed = attackData.goDownSpeed;

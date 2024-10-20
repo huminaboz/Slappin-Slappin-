@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ac540fc2f4a5714994932f05a9106ff, type: 3}
+  m_Name: Squish_Damage_Price_Exp
+  m_EditorClassIdentifier: 
+  notes: 
+  showPreview: 1
+  previewUpgrade: {fileID: 11400000, guid: 6340beb51dc57b8408d6fb4323756be4, type: 2}
+  maxDisplayedRows: 34
+  startOffset: 0
+  debugValues: "Level\t\tAmount\t\t\tPrice\n0\t\t9\t\t\t20\n1\t\t9\t\t\t20\n2\t\t20\t\t\t41\n3\t\t32\t\t\t61\n4\t\t43\t\t\t82\n5\t\t54\t\t\t104\n6\t\t65\t\t\t126\n7\t\t77\t\t\t148\n8\t\t89\t\t\t170\n9\t\t100\t\t\t193\n10\t\t112\t\t\t216\n11\t\t124\t\t\t239\n12\t\t137\t\t\t263\n13\t\t149\t\t\t288\n14\t\t161\t\t\t312\n15\t\t174\t\t\t337\n16\t\t187\t\t\t363\n17\t\t200\t\t\t389\n18\t\t213\t\t\t415\n19\t\t226\t\t\t442\n20\t\t239\t\t\t469\n21\t\t253\t\t\t497\n22\t\t266\t\t\t525\n23\t\t280\t\t\t554\n24\t\t294\t\t\t583\n25\t\t308\t\t\t612\n26\t\t322\t\t\t642\n27\t\t336\t\t\t673\n28\t\t351\t\t\t704\n29\t\t365\t\t\t735\n30\t\t380\t\t\t767\n31\t\t395\t\t\t800\n32\t\t410\t\t\t833\n33\t\t426\t\t\t867\n"
+  growthRate: 0.05
+  growthFactor: 0.325
+  offset: 0

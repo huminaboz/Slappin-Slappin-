@@ -7196,7 +7196,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &477183473
 Transform:
   m_ObjectHideFlags: 0
@@ -24889,7 +24889,7 @@ MonoBehaviour:
   hurtLine: {fileID: 569232627}
   handShadowTransform: {fileID: 617602404}
   spikeGetHurtOnAttackCollider: {fileID: 62056917}
-  damageOverTimeCollider: {fileID: 0}
+  damageOverTimeCollider: {fileID: 477183472}
   handModel: {fileID: 1438055156}
   slapForecastShadow: {fileID: 617602404}
 --- !u!114 &1608441093
