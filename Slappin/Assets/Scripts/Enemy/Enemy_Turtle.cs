@@ -7,7 +7,6 @@ public class Enemy_Turtle : Enemy, IObjectPool<Enemy_Turtle>
     // private Material thisMaterial;
     [SerializeField] private AnimationCurve attackCurve;
     [SerializeField] public int handStabDamage = 1;
-    [SerializeField] private int attackDamage = 1;
 
     private MoveTowardsTransform _moveTowardsTransform;
     private Tween attackTween;
@@ -45,7 +44,7 @@ public class Enemy_Turtle : Enemy, IObjectPool<Enemy_Turtle>
     {
         SFXPlayer.I.Play(AudioEventsStorage.I.enemyAttacked);
         _moveTowardsTransform.enabled = false;
-        PlayerInfo.I.health.AdjustHp(-attackDamage, gameObject);
+        PlayerInfo.I.health.AdjustHp((int)-damage, gameObject);
         _enemyAnimations?.Play(EnemyAnimations.AnimationFrames.Attack01,
             () =>
             {

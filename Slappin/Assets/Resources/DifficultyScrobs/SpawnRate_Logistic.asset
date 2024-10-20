@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 074eb5741ff6a6b4c8b1a56f59ea95c4, type: 3}
+  m_Name: SpawnRate_Logistic
+  m_EditorClassIdentifier: 
+  notes: 
+  showPreview: 1
+  previewUpgrade: {fileID: 11400000, guid: f6a790926c47c1b43a21b3f02a927c64, type: 2}
+  maxDisplayedRows: 34
+  startOffset: 0
+  debugValues: "Level\t\tAmount\t\t\tPrice\n0\t\t1.00x\t\t\t-3\n1\t\t1.01x\t\t\t0\n2\t\t0.99x\t\t\t4\n3\t\t0.98x\t\t\t7\n4\t\t0.98x\t\t\t11\n5\t\t0.97x\t\t\t14\n6\t\t0.97x\t\t\t18\n7\t\t0.97x\t\t\t21\n8\t\t0.97x\t\t\t25\n9\t\t0.96x\t\t\t28\n10\t\t0.96x\t\t\t32\n11\t\t0.96x\t\t\t35\n12\t\t0.96x\t\t\t39\n13\t\t0.96x\t\t\t42\n14\t\t0.96x\t\t\t46\n15\t\t0.96x\t\t\t49\n16\t\t0.95x\t\t\t53\n17\t\t0.95x\t\t\t56\n18\t\t0.95x\t\t\t59\n19\t\t0.95x\t\t\t63\n20\t\t0.95x\t\t\t66\n21\t\t0.95x\t\t\t70\n22\t\t0.95x\t\t\t73\n23\t\t0.95x\t\t\t77\n24\t\t0.95x\t\t\t80\n25\t\t0.95x\t\t\t84\n26\t\t0.94x\t\t\t87\n27\t\t0.94x\t\t\t91\n28\t\t0.94x\t\t\t94\n29\t\t0.94x\t\t\t98\n30\t\t0.94x\t\t\t101\n31\t\t0.94x\t\t\t105\n32\t\t0.94x\t\t\t108\n33\t\t0.94x\t\t\t112\n"
+  logisticRate: 0.09
+  logisticCarryingCapacity: -0.06
+  growthMultiplier: 0.05
+  baseGrowthRate: 0.28

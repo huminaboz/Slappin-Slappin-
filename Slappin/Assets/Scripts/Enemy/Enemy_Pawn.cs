@@ -7,8 +7,6 @@ public class Enemy_Pawn : Enemy, IObjectPool<Enemy_Pawn>
     // private Material thisMaterial;
     [SerializeField] private AnimationCurve attackCurve;
 
-    [SerializeField] private int attackDamage = 1;
-
     private MoveTowardsTransform _moveTowardsTransform;
     private Tween attackTween;
 
@@ -40,7 +38,7 @@ public class Enemy_Pawn : Enemy, IObjectPool<Enemy_Pawn>
     {
         SFXPlayer.I.Play(AudioEventsStorage.I.enemyAttacked);
         _moveTowardsTransform.enabled = false;
-        PlayerInfo.I.health.AdjustHp(-attackDamage, gameObject);
+        PlayerInfo.I.health.AdjustHp((int)-damage, gameObject);
         
         _enemyAnimations?.Play(EnemyAnimations.AnimationFrames.Attack01,
             () =>

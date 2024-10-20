@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ac540fc2f4a5714994932f05a9106ff, type: 3}
+  m_Name: MaxHp_Exp
+  m_EditorClassIdentifier: 
+  showPreview: 0
+  previewUpgrade: {fileID: 11400000, guid: 3504fb7df183c234ca6f60f541221db8, type: 2}
+  maxDisplayedRows: 34
+  startOffset: 0
+  debugValues: "Level\t\tAmount\t\t\tPrice\n0\t\t2\t\t\t0\n1\t\t2\t\t\t0\n2\t\t6\t\t\t1\n3\t\t10\t\t\t2\n4\t\t14\t\t\t3\n5\t\t18\t\t\t4\n6\t\t22\t\t\t5\n7\t\t25\t\t\t5\n8\t\t29\t\t\t6\n9\t\t33\t\t\t7\n10\t\t37\t\t\t8\n11\t\t41\t\t\t9\n12\t\t45\t\t\t10\n13\t\t48\t\t\t10\n14\t\t52\t\t\t11\n15\t\t56\t\t\t12\n16\t\t60\t\t\t13\n17\t\t64\t\t\t14\n18\t\t68\t\t\t15\n19\t\t71\t\t\t15\n20\t\t75\t\t\t16\n21\t\t79\t\t\t17\n22\t\t83\t\t\t18\n23\t\t87\t\t\t19\n24\t\t91\t\t\t20\n25\t\t94\t\t\t20\n26\t\t98\t\t\t21\n27\t\t102\t\t\t22\n28\t\t106\t\t\t23\n29\t\t110\t\t\t24\n30\t\t114\t\t\t25\n31\t\t117\t\t\t25\n32\t\t121\t\t\t26\n33\t\t125\t\t\t27\n"
+  growthRate: 0.0001
+  growthFactor: 0.01
+  offset: 0.83

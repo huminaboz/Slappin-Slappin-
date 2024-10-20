@@ -3,6 +3,8 @@ using UnityEngine.Serialization;
 
 public class SO_GrowthCurve : ScriptableObject
 {
+    [TextArea(3,100)][SerializeField] private string notes;
+    
     [Header("Preview Values")] [SerializeField]
     private bool showPreview;
 

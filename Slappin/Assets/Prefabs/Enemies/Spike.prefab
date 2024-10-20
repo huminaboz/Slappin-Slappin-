@@ -54,8 +54,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d78660ad45ce12c468593b550f6117f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkSpeed: 4
+  baseWalkSpeed: 2
   rotationSpeed: 5
+  walkSpeed: 4
   isDashing: 0
 --- !u!114 &2916117102104308091
 MonoBehaviour:
@@ -71,6 +72,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 0
   maxHp: 6
+  enemyMaxHp: 0
   OnDeath:
     m_PersistentCalls:
       m_Calls: []
@@ -338,12 +340,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _enemyAnimations: {fileID: 0}
-  currency1DropAmount: 4
+  currency1BaseDropAmount: 4
   pickupToDrop: {fileID: 4864087115399935888, guid: 9fe9c0010e31c1f499c0d5a3f63d0fe3, type: 3}
   attackSpeedMultiplier: 1
+  baseAttackDamage: 10
   flashDuration: 0.5
   flashCount: 5
-  handStabDamage: 20
+  damageIncreaser: {fileID: 11400000, guid: 292bf0af6cb4379408eb8735d1020d04, type: 2}
+  walkSpeedIncreaser: {fileID: 11400000, guid: be250cd15ea936d47bc228c223e50b43, type: 2}
+  currencyDropAmountIncreaser: {fileID: 11400000, guid: 2848e69c5f96c1148ba3f58c1d64ea12, type: 2}
+  maxHpIncreaser: {fileID: 11400000, guid: a736ca397d20653409f6184dc945db9a, type: 2}
+  damage: 0
+  walkSpeed: 0
+  currency1DropAmount: 4
+  maxHp: 0
   handStabStunDuration: 1
 --- !u!114 &2012794802681237938
 MonoBehaviour:

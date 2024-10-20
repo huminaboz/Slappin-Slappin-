@@ -7,7 +7,10 @@ public class Health : MonoBehaviour
 {
     [ReadOnly] public int hp;
     [SerializeField] public int maxHp = 5;
+    public int enemyMaxHp;
+
     [SerializeField] private UnityEvent OnDeath;
+
     // private bool immuneToDamage = false;
     public bool isAlive = true;
     public bool isPlayer = false;
@@ -32,10 +35,10 @@ public class Health : MonoBehaviour
 
     private void BoughtHp()
     {
-        if(!isPlayer) return;
+        if (!isPlayer) return;
         int previousMaxHp = maxHp;
-        maxHp = (int) StatLiason.I.Get(Stat.IncreaseMaxHp);
-        if(previousMaxHp == maxHp) return;
+        maxHp = (int)StatLiason.I.Get(Stat.IncreaseMaxHp);
+        if (previousMaxHp == maxHp) return;
         int hpUpgrade = maxHp - previousMaxHp;
         Debug.Log($"Increased maxHp by: {hpUpgrade}. New value is {maxHp}");
         AdjustHp(hpUpgrade, null);
@@ -43,8 +46,13 @@ public class Health : MonoBehaviour
 
     public void Initialize()
     {
-        if (isPlayer) maxHp = (int) StatLiason.I.Get(Stat.IncreaseMaxHp);
-        //TODO:: Get the enemy's max hp stat
+        if (isPlayer) maxHp = (int)StatLiason.I.Get(Stat.IncreaseMaxHp);
+        else
+        {
+            //TODO:: Get the enemy's max hp stat
+            maxHp = enemyMaxHp;
+        }
+
         hp = maxHp;
         isAlive = true;
     }
@@ -55,23 +63,23 @@ public class Health : MonoBehaviour
 
         if (isPlayer && amountToIncrease < 0)
         {
-            float adjustedDamage = amountToIncrease - amountToIncrease 
+            float adjustedDamage = amountToIncrease - amountToIncrease
                 * StatLiason.I.Get(Stat.DamageReduction);
             Debug.Log($"{StatLiason.I.Get(Stat.DamageReduction)} " +
                       $"Damage Reduction shaved off {amountToIncrease - adjustedDamage} damage" +
                       $"\nFrom {amountToIncrease} to {adjustedDamage}");
             amountToIncrease = Mathf.CeilToInt(adjustedDamage);
         }
-        
+
         int oldHealth = hp;
         hp += amountToIncrease;
-        
+
         if (oldHealth == hp) return;
-        
+
         Debug.Log($"{gameObject.name} health adjusted by {amountToIncrease}. "
                   + $"\nHp is now {hp}");
 
-        
+
         //HEALING
         if (oldHealth < hp)
         {
@@ -80,6 +88,7 @@ public class Health : MonoBehaviour
             {
                 damageListeners.Healed(amountToIncrease, attacker);
             }
+
             return;
         }
 

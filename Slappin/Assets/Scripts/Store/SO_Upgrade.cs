@@ -1,15 +1,6 @@
 using UnityEngine;
 using UnityEngine.Serialization;
 
-
-//For now I think I Can handle all of these with a curve
-// public enum GrowthAlgorithmTypes
-// {
-//     Linear,
-//     Exponential,
-//     Logarithmic,
-// }
-
 public enum NumberType
 {
     Normal,
@@ -27,12 +18,15 @@ public enum UpgradeType
     Squish,
     Fart,
     Wild,
-    Luck
+    Luck,
+    Enemy
 }
 
 public enum Stat
 {
     None = 0,
+    
+    Enemy = 100,
 
     //Basic
     Basic = 1000,
@@ -57,18 +51,14 @@ public enum Stat
     FlickMaxChargeDamage = 4001,
     FlickMaxChargeTime = 4002,
 
-
     //Squish
     Squish = 5000,
-
 
     //Wild
     Wild = 6000,
 
-
     //Fart
     Fart = 7000,
-
 
     //Luck
     Luck = 8000,

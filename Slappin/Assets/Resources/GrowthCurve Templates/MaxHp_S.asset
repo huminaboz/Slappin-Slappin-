@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c70223b2887daa4488c22758d96f107, type: 3}
+  m_Name: MaxHp_S
+  m_EditorClassIdentifier: 
+  notes: I'm looking for a nice gentle intro to the game, then exponentially increase,
+    then even out at some sort of level of way too hard
+  showPreview: 1
+  previewUpgrade: {fileID: 11400000, guid: 3504fb7df183c234ca6f60f541221db8, type: 2}
+  maxDisplayedRows: 34
+  startOffset: 1000
+  debugValues: "Level\t\tAmount\t\t\tPrice\n1000\t\t8.2k\t\t\t8.2k\n1001\t\t8.2k\t\t\t8.2k\n1002\t\t8.2k\t\t\t8.2k\n1003\t\t8.2k\t\t\t8.2k\n1004\t\t8.2k\t\t\t8.2k\n1005\t\t8.2k\t\t\t8.2k\n1006\t\t8.2k\t\t\t8.2k\n1007\t\t8.2k\t\t\t8.2k\n1008\t\t8.2k\t\t\t8.2k\n1009\t\t8.2k\t\t\t8.2k\n1010\t\t8.2k\t\t\t8.2k\n1011\t\t8.2k\t\t\t8.2k\n1012\t\t8.2k\t\t\t8.2k\n1013\t\t8.2k\t\t\t8.2k\n1014\t\t8.2k\t\t\t8.2k\n1015\t\t8.2k\t\t\t8.2k\n1016\t\t8.2k\t\t\t8.2k\n1017\t\t8.2k\t\t\t8.2k\n1018\t\t8.2k\t\t\t8.2k\n1019\t\t8.2k\t\t\t8.2k\n1020\t\t8.2k\t\t\t8.2k\n1021\t\t8.2k\t\t\t8.2k\n1022\t\t8.2k\t\t\t8.2k\n1023\t\t8.2k\t\t\t8.2k\n1024\t\t8.2k\t\t\t8.2k\n1025\t\t8.2k\t\t\t8.2k\n1026\t\t8.2k\t\t\t8.2k\n1027\t\t8.2k\t\t\t8.2k\n1028\t\t8.2k\t\t\t8.2k\n1029\t\t8.2k\t\t\t8.2k\n1030\t\t8.2k\t\t\t8.2k\n1031\t\t8.2k\t\t\t8.2k\n1032\t\t8.2k\t\t\t8.2k\n1033\t\t8.2k\t\t\t8.2k\n"
+  initialGrowthAmplitude: 1186.7
+  growthRate: 268
+  midpoint: 86.9
+  curveHeight: 47
+  verticalScale: 174.41

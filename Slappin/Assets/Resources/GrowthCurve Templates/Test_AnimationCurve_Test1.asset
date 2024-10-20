@@ -12,6 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 112740698b660524ab383a06df127396, type: 3}
   m_Name: Test_AnimationCurve_Test1
   m_EditorClassIdentifier: 
+  notes: 
+  showPreview: 1
+  previewUpgrade: {fileID: 0}
+  maxDisplayedRows: 34
+  startOffset: 0
+  debugValues: 
   AnimationCurve:
     serializedVersion: 2
     m_Curve:

@@ -1,12 +1,15 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class MoveTowardsTransform : MonoBehaviour, IHpAdjustmentListener
 {
-    [SerializeField] private float walkSpeed = 2f;
+    [FormerlySerializedAs("walkSpeed")] [SerializeField] public float baseWalkSpeed = 2f;
     [SerializeField] private float rotationSpeed = 5f;
 
+    [HideInInspector] public float walkSpeed;
+    
     private Enemy thisEnemy;
     private Rigidbody _rigidbody;
     public bool isDashing = false;
@@ -75,6 +78,7 @@ public class MoveTowardsTransform : MonoBehaviour, IHpAdjustmentListener
 
     public void BackUp()
     {
+        //TODO:: Make this not so depend on the speed and more so on the distance traveled
         walkSpeed *= -10;
         StartCoroutine(SwitchDirectionsTimer());
     }

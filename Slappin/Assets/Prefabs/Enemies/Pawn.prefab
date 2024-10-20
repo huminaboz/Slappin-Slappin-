@@ -51,11 +51,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _enemyAnimations: {fileID: 383072259906062188}
-  currency1DropAmount: 1
+  currency1BaseDropAmount: 1
   pickupToDrop: {fileID: 4864087115399935888, guid: 9fe9c0010e31c1f499c0d5a3f63d0fe3, type: 3}
   attackSpeedMultiplier: 1
+  baseAttackDamage: 10
   flashDuration: 0.5
   flashCount: 5
+  damageIncreaser: {fileID: 11400000, guid: 16b7e7cc526a395488aa3ebd5af4a464, type: 2}
+  walkSpeedIncreaser: {fileID: 11400000, guid: 2bf7d2c34dbca78439f51a0dc63a44c6, type: 2}
+  currencyDropAmountIncreaser: {fileID: 11400000, guid: 10e1dc05876fd9f4f86d3d93b48b3695, type: 2}
+  maxHpIncreaser: {fileID: 11400000, guid: 3504fb7df183c234ca6f60f541221db8, type: 2}
+  damage: 0
+  walkSpeed: 0
+  currency1DropAmount: 1
+  maxHp: 0
   attackCurve:
     serializedVersion: 2
     m_Curve:
@@ -107,7 +116,6 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  attackDamage: 10
 --- !u!114 &79050552924222384
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -122,6 +130,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 0
   maxHp: 3
+  enemyMaxHp: 0
   OnDeath:
     m_PersistentCalls:
       m_Calls: []
@@ -139,8 +148,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d78660ad45ce12c468593b550f6117f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkSpeed: 5
+  baseWalkSpeed: 4
   rotationSpeed: 5
+  walkSpeed: 4
   isDashing: 0
 --- !u!65 &362152917729996988
 BoxCollider:

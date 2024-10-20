@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class Enemy_Spike : Enemy, IObjectPool<Enemy_Spike>
 {
-    [SerializeField] public int handStabDamage = 2;
     [SerializeField] public float handStabStunDuration = 1f;
 
     private Collider _collider;

@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1dfd4b3344d2204f8c55629b0afa7d7, type: 3}
+  m_Name: MaxHp_Linear
+  m_EditorClassIdentifier: 
+  showPreview: 0
+  previewUpgrade: {fileID: 11400000, guid: 3504fb7df183c234ca6f60f541221db8, type: 2}
+  maxDisplayedRows: 37
+  startOffset: 0
+  debugValues: "Level\t\tAmount\t\t\tPrice\n0\t\t0\t\t\t-3\n1\t\t2\t\t\t0\n2\t\t6\t\t\t4\n3\t\t9\t\t\t7\n4\t\t13\t\t\t11\n5\t\t16\t\t\t14\n6\t\t20\t\t\t18\n7\t\t23\t\t\t21\n8\t\t27\t\t\t25\n9\t\t30\t\t\t28\n10\t\t34\t\t\t32\n11\t\t37\t\t\t35\n12\t\t41\t\t\t39\n13\t\t44\t\t\t42\n14\t\t48\t\t\t46\n15\t\t51\t\t\t49\n16\t\t55\t\t\t53\n17\t\t58\t\t\t56\n18\t\t61\t\t\t59\n19\t\t65\t\t\t63\n20\t\t68\t\t\t66\n21\t\t72\t\t\t70\n22\t\t75\t\t\t73\n23\t\t79\t\t\t77\n24\t\t82\t\t\t80\n25\t\t86\t\t\t84\n26\t\t89\t\t\t87\n27\t\t93\t\t\t91\n28\t\t96\t\t\t94\n29\t\t100\t\t\t98\n30\t\t103\t\t\t101\n31\t\t107\t\t\t105\n32\t\t110\t\t\t108\n33\t\t114\t\t\t112\n34\t\t117\t\t\t115\n35\t\t120\t\t\t118\n36\t\t124\t\t\t122\n"
+  linearRate: 3.47

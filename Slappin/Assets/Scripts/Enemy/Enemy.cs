@@ -11,10 +11,12 @@ public abstract class Enemy : MonoBehaviour, IHpAdjustmentListener, IObjectPool<
     
     [SerializeField] protected EnemyAnimations _enemyAnimations;
 
-    [SerializeField] private int currency1DropAmount;
+    [FormerlySerializedAs("currency1DropAmount")] [SerializeField] private int currency1BaseDropAmount;
     [SerializeField] private GameObject pickupToDrop;
-    [SerializeField] private float attackSpeedMultiplier = 1f;
 
+    [SerializeField] private float attackSpeedMultiplier = 1f;
+    [SerializeField] protected int baseAttackDamage = 10;
+    
     private IHpAdjustmentListener _hpAdjustmentListenerImplementation;
     private MoveTowardsTransform moveTowardsTransform;
 
@@ -24,7 +26,16 @@ public abstract class Enemy : MonoBehaviour, IHpAdjustmentListener, IObjectPool<
     private Material thisMaterial;
     public int flashCount = 5;
 
-
+    //STATS SET BY DIFFICULTY
+    [SerializeField] private SO_Upgrade damageIncreaser;
+    [SerializeField] private SO_Upgrade walkSpeedIncreaser;
+    [SerializeField] private SO_Upgrade currencyDropAmountIncreaser;
+    [SerializeField] private SO_Upgrade maxHpIncreaser;
+    public float damage;
+    public float walkSpeed;
+    public float currency1DropAmount;
+    
+    
     protected delegate void EnemyBehavior();
 
     protected EnemyBehavior performBehavior;
@@ -45,10 +56,28 @@ public abstract class Enemy : MonoBehaviour, IHpAdjustmentListener, IObjectPool<
 
     public virtual void InitializeObjectFromPool()
     {
+        SetupStats();
         thisHealth.Initialize();
         gameObject.SetActive(true);
         _enemyAnimations?.Play(EnemyAnimations.AnimationFrames.WalkFWD);
     }
+
+    protected void SetupStats()
+    {
+        int wave = DifficultyManager.I.currentWave;
+        //Go into the upgrades, send the current wave and set the stats
+        currency1DropAmount = currencyDropAmountIncreaser
+            .newValueGrowthCurve.ComputeGrowth(currency1BaseDropAmount, wave);
+        thisHealth.enemyMaxHp = (int) maxHpIncreaser.newValueGrowthCurve
+            .ComputeGrowth(thisHealth.maxHp, wave);
+        damage = damageIncreaser.newValueGrowthCurve.ComputeGrowth(baseAttackDamage, wave);
+        walkSpeed *= walkSpeedIncreaser.newValueGrowthCurve.ComputeGrowth(moveTowardsTransform.baseWalkSpeed, wave);
+        moveTowardsTransform.walkSpeed = walkSpeed;
+
+        Debug.LogWarning($"{gameObject.name} - Currency: {currency1DropAmount}. MaxHp: {thisHealth.enemyMaxHp}" +
+                         $"\n Damage: {damage}, WalkSpeed: {walkSpeed}");
+    }
+    
 
     private void Update()
     {
@@ -128,7 +157,7 @@ public abstract class Enemy : MonoBehaviour, IHpAdjustmentListener, IObjectPool<
         Vector3 pickupSpawnPosition = new Vector3(transform.position.x,
             transform.position.y + .02f, transform.position.z);
         Pickup pickup = ObjectPoolManager<Pickup>.GetObject(pickupToDrop);
-        pickup.SetupCurrency(currency1DropAmount);
+        pickup.SetupCurrency((int)currency1DropAmount);
         pickup.SetNewHoverPosition(pickupSpawnPosition);
 
         SFXPlayer.I.Play(AudioEventsStorage.I.enemyDied);

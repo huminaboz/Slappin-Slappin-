@@ -1,4 +1,6 @@
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -18,6 +20,9 @@ public class SlapAttack : AttackType
     private float distanceDamageBoost;
 
 
+    //Animation
+    [SerializeField] private Animator animator;
+    
     private void OnEnable()
     {
         UpgradeData.OnPurchaseMade += UpdateColliderAndForecastSize;
@@ -55,8 +60,26 @@ public class SlapAttack : AttackType
 
         //Set it upon attack since that's where the distance comes from
         distanceDamageBoost = GetRangedDamageBonus(StatLiason.I.Get(Stat.SlapDamagePerDistance));
-        
+
+        //TODO::I dunno, try to include drop speed into the animation delay
+        float dropSpeed = attackData.goDownSpeed;
+
+        PlayAnimationCoroutine(.1f, "Down");
         DropSlap();
+    }
+
+    private Coroutine _slapAnimationCoroutine;
+
+    private void PlayAnimationCoroutine(float delay, string animationName)
+    {
+        if(_slapAnimationCoroutine != null) StopCoroutine(_slapAnimationCoroutine);
+        _slapAnimationCoroutine = StartCoroutine(PlayAnimation(delay, animationName));
+    }
+    
+    private IEnumerator PlayAnimation(float delay, string animationName)
+    {
+        yield return new WaitForSeconds(delay);
+        animator.Play(animationName);
     }
 
     private void UpdateColliderAndForecastSize()
@@ -106,6 +129,7 @@ public class SlapAttack : AttackType
     protected override void DoWhenReachingGround()
     {
         base.DoWhenReachingGround();
+        //PlayAnimationCoroutine(0f, "Pause");
         CameraShake.I.StartCameraShake();
         SFXPlayer.I.Play(AudioEventsStorage.I.slapHitGround);
     }
@@ -113,6 +137,7 @@ public class SlapAttack : AttackType
     protected override void InitiateTravelBackUp()
     {
         //Stop for a bit to see the hand
+            PlayAnimationCoroutine(.1f, "Up");
         const float handRestDuration = .15f;
         StartCoroutine(BozUtilities.DoAfterDelay(handRestDuration, () =>
         {
@@ -134,7 +159,7 @@ public class SlapAttack : AttackType
         if (spike.GetComponent<Enemy_Spike>())
         {
             Enemy_Spike enemySpike = spike.GetComponent<Enemy_Spike>();
-            handDamage = enemySpike.handStabDamage;
+            handDamage = (int) enemySpike.damage;
             handStabStunDuration = enemySpike.handStabStunDuration;
         }
 

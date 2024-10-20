@@ -52,7 +52,7 @@ MonoBehaviour:
   releasedFlick: {fileID: 11400000, guid: 98005e6b2b4c5ab48b1852a65e787b62, type: 2}
   farted: {fileID: 11400000, guid: e8d2ef1131684aa438502578d00fc421, type: 2}
   enemyDied: {fileID: 11400000, guid: e27dd9d44fb9b85488129f25e0b20e1c, type: 2}
-  enemyAttacked: {fileID: 11400000, guid: 5f4720733693f3647bd219183e56b16d, type: 2}
+  enemyAttacked: {fileID: 11400000, guid: 49ecffaa9bd869844ac807c07dbffebd, type: 2}
   pickedUpCurrency1: {fileID: 11400000, guid: 715e4db3fe6fe5a4cb4d09b78370a32d, type: 2}
   pickedUpCurrency2: {fileID: 11400000, guid: e530610b98cd9b84c851b617c0dd8832, type: 2}
   UI_Menu_Back: {fileID: 0}

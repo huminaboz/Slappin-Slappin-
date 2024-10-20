@@ -12,6 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ac540fc2f4a5714994932f05a9106ff, type: 3}
   m_Name: Slap_Damage_Exp
   m_EditorClassIdentifier: 
+  showPreview: 0
+  previewUpgrade: {fileID: 11400000, guid: 19dc01956c9634146945e218afed02c4, type: 2}
+  maxDisplayedRows: 34
+  startOffset: 0
+  debugValues: "Level\t\tAmount\t\t\tPrice\n0\t\t0\t\t\t5\n1\t\t1\t\t\t5\n2\t\t2\t\t\t11\n3\t\t4\t\t\t16\n4\t\t6\t\t\t21\n5\t\t8\t\t\t26\n6\t\t10\t\t\t32\n7\t\t12\t\t\t37\n8\t\t14\t\t\t43\n9\t\t16\t\t\t49\n10\t\t18\t\t\t54\n11\t\t19\t\t\t60\n12\t\t21\t\t\t66\n13\t\t23\t\t\t72\n14\t\t25\t\t\t78\n15\t\t27\t\t\t85\n16\t\t29\t\t\t91\n17\t\t31\t\t\t98\n18\t\t34\t\t\t104\n19\t\t36\t\t\t111\n20\t\t38\t\t\t118\n21\t\t40\t\t\t125\n22\t\t42\t\t\t132\n23\t\t44\t\t\t139\n24\t\t46\t\t\t146\n25\t\t48\t\t\t153\n26\t\t50\t\t\t161\n27\t\t53\t\t\t169\n28\t\t55\t\t\t176\n29\t\t57\t\t\t184\n30\t\t59\t\t\t192\n31\t\t61\t\t\t200\n32\t\t64\t\t\t209\n33\t\t66\t\t\t217\n"
   growthRate: 0.04
   growthFactor: 0.29
   offset: 0.83

@@ -20,6 +20,8 @@ public class Spawner : MonoBehaviour
     [SerializeField] private Transform topLeftPossibleSpawn;
     [SerializeField] private Transform bottomRightPossibleSpawn;
 
+    [SerializeField] private SO_Upgrade spawnRateIncreaser;
+
     private float t = 0;
 
     private void Update()
@@ -49,7 +51,7 @@ public class Spawner : MonoBehaviour
             }
             else
             {
-                if(GetRandomNumberBetweenZeroAndOne() < .7f)
+                if (GetRandomNumberBetweenZeroAndOne() < .7f)
                 {
                     Enemy_Pawn enemy = ObjectPoolManager<Enemy_Pawn>.GetObject(pawnPrefab);
                     if (enemy is not null)
@@ -90,6 +92,15 @@ public class Spawner : MonoBehaviour
 
     private float GetRandomNextSpawnTime()
     {
-        return Random.Range(minTimeBetweenSpawns, maxTimeBetweenSpawns);
+        int wave = DifficultyManager.I.currentWave;
+
+        float spawnTimer = Random.Range(minTimeBetweenSpawns * spawnRateIncreaser
+                .newValueGrowthCurve.ComputeGrowth(spawnRateIncreaser.baseValue, wave)
+            , maxTimeBetweenSpawns * spawnRateIncreaser
+                .newValueGrowthCurve.ComputeGrowth(spawnRateIncreaser.baseValue, wave));
+
+        Debug.LogWarning($"Spawn timer is: {spawnTimer}");
+        
+        return spawnTimer;
     }
 }
