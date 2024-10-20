@@ -15,8 +15,8 @@ public class Pickup : MonoBehaviour, IObjectPool<Pickup>
     private float speed;
     private bool playerIsAbsorbing = false;
     private Vector3 goalPosition;
-    [FormerlySerializedAs("zOffset")] [SerializeField] private float pickupZoneZOffset = 1f;
-
+    [SerializeField] private float pickupZoneZOffset = 1f;
+    [SerializeField] private float pickupZoneYOffset = 1f;
 
     public void SetupObjectFirstTime()
     {
@@ -88,7 +88,7 @@ public class Pickup : MonoBehaviour, IObjectPool<Pickup>
 
         // Get the direction from the current position to the target position
         Vector3 direction = goalPosition - transform.position;
-        direction.y = 0f; // Ignore the Y axis for movement
+        direction.y = 0f + pickupZoneYOffset; //Manually set how high up it goes
 
         // Move the object towards the target
         Vector3 newPosition = transform.position + direction.normalized * speed * Time.deltaTime;
