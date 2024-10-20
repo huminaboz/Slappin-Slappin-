@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1dfd4b3344d2204f8c55629b0afa7d7, type: 3}
   m_Name: Slap_DistanceDamageBoost_Linear
   m_EditorClassIdentifier: 
-  showPreview: 1
+  showPreview: 0
   previewUpgrade: {fileID: 11400000, guid: e458e481e7050e440bdb0c44de3e967b, type: 2}
   maxDisplayedRows: 37
   startOffset: 0
-  debugValues: "Level\t\tAmount\t\t\tPrice\n0\t\t0.99x\t\t\t65\n1\t\t1.00x\t\t\t65\n2\t\t1.01x\t\t\t133\n3\t\t1.02x\t\t\t202\n4\t\t1.03x\t\t\t275\n5\t\t1.04x\t\t\t349\n6\t\t1.05x\t\t\t426\n7\t\t1.06x\t\t\t506\n8\t\t1.07x\t\t\t589\n9\t\t1.08x\t\t\t675\n10\t\t1.09x\t\t\t764\n11\t\t1.10x\t\t\t855\n12\t\t1.11x\t\t\t951\n13\t\t1.12x\t\t\t1.05k\n14\t\t1.13x\t\t\t1.15k\n15\t\t1.14x\t\t\t1.26k\n16\t\t1.15x\t\t\t1.37k\n17\t\t1.16x\t\t\t1.48k\n18\t\t1.17x\t\t\t1.6k\n19\t\t1.18x\t\t\t1.72k\n20\t\t1.19x\t\t\t1.84k\n21\t\t1.20x\t\t\t1.97k\n22\t\t1.21x\t\t\t2.11k\n23\t\t1.22x\t\t\t2.25k\n24\t\t1.23x\t\t\t2.39k\n25\t\t1.24x\t\t\t2.54k\n26\t\t1.25x\t\t\t2.69k\n27\t\t1.26x\t\t\t2.85k\n28\t\t1.27x\t\t\t3.02k\n29\t\t1.28x\t\t\t3.19k\n30\t\t1.29x\t\t\t3.37k\n31\t\t1.30x\t\t\t3.55k\n32\t\t1.31x\t\t\t3.74k\n33\t\t1.32x\t\t\t3.94k\n34\t\t1.33x\t\t\t4.14k\n35\t\t1.34x\t\t\t4.35k\n36\t\t1.35x\t\t\t4.57k\n"
+  debugValues: "Level\t\tAmount\t\t\tPrice\n0\t\t0.99x\t\t\t15\n1\t\t1.00x\t\t\t15\n2\t\t1.01x\t\t\t31\n3\t\t1.02x\t\t\t46\n4\t\t1.03x\t\t\t61\n5\t\t1.04x\t\t\t76\n6\t\t1.05x\t\t\t91\n7\t\t1.06x\t\t\t106\n8\t\t1.07x\t\t\t121\n9\t\t1.08x\t\t\t136\n10\t\t1.09x\t\t\t151\n11\t\t1.10x\t\t\t166\n12\t\t1.11x\t\t\t181\n13\t\t1.12x\t\t\t196\n14\t\t1.13x\t\t\t211\n15\t\t1.14x\t\t\t226\n16\t\t1.15x\t\t\t241\n17\t\t1.16x\t\t\t256\n18\t\t1.17x\t\t\t271\n19\t\t1.18x\t\t\t286\n20\t\t1.19x\t\t\t301\n21\t\t1.20x\t\t\t316\n22\t\t1.21x\t\t\t331\n23\t\t1.22x\t\t\t346\n24\t\t1.23x\t\t\t361\n25\t\t1.24x\t\t\t376\n26\t\t1.25x\t\t\t391\n27\t\t1.26x\t\t\t406\n28\t\t1.27x\t\t\t421\n29\t\t1.28x\t\t\t436\n30\t\t1.29x\t\t\t451\n31\t\t1.30x\t\t\t466\n32\t\t1.31x\t\t\t481\n33\t\t1.32x\t\t\t496\n34\t\t1.33x\t\t\t511\n35\t\t1.34x\t\t\t526\n36\t\t1.35x\t\t\t541\n"
   linearRate: 0.01

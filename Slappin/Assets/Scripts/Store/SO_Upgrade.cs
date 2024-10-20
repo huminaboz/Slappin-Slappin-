@@ -37,6 +37,7 @@ public enum Stat
     //Basic
     Basic = 1000,
     MoveBoostSpeed = 1001,
+    AbsorbSpeed = 1002,
 
     //Defense
     Defense = 2000,

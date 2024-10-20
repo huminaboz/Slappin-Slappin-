@@ -68,7 +68,7 @@ public class Pickup : MonoBehaviour, IObjectPool<Pickup>
         _collider.enabled = false;
         hover.enabled = false;
 
-        speed = 0.6f; //TOOD:: Set this to a stat upgrade
+        speed = 0.6f * StatLiason.I.Get(Stat.AbsorbSpeed);
         goalPosition = Camera.main.transform.position;
         playerIsAbsorbing = true;
     }

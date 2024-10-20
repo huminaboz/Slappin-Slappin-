@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ac540fc2f4a5714994932f05a9106ff, type: 3}
   m_Name: Flick_ChargeMaxDamage_Price_Exp
   m_EditorClassIdentifier: 
-  showPreview: 1
+  showPreview: 0
   previewUpgrade: {fileID: 11400000, guid: c41a6946346f031479011de48fd452c3, type: 2}
   maxDisplayedRows: 34
   startOffset: 0

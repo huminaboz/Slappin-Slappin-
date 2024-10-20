@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ac540fc2f4a5714994932f05a9106ff, type: 3}
   m_Name: Slap_DistanceDamageBoost_Price_Exp
   m_EditorClassIdentifier: 
-  showPreview: 1
+  showPreview: 0
   previewUpgrade: {fileID: 11400000, guid: e458e481e7050e440bdb0c44de3e967b, type: 2}
   maxDisplayedRows: 34
   startOffset: 0

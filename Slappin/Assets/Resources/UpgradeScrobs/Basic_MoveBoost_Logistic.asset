@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 074eb5741ff6a6b4c8b1a56f59ea95c4, type: 3}
   m_Name: Basic_MoveBoost_Logistic
   m_EditorClassIdentifier: 
-  showPreview: 1
+  showPreview: 0
   previewUpgrade: {fileID: 11400000, guid: eb6209f12d621e24daca77dc73352d5b, type: 2}
   maxDisplayedRows: 34
   startOffset: 0
-  debugValues: "Level\t\tAmount\t\t\tPrice\n0\t\t1.50x\t\t\t10\n1\t\t1.50x\t\t\t11\n2\t\t1.52x\t\t\t11\n3\t\t1.55x\t\t\t11\n4\t\t1.58x\t\t\t11\n5\t\t1.61x\t\t\t11\n6\t\t1.64x\t\t\t11\n7\t\t1.67x\t\t\t11\n8\t\t1.70x\t\t\t11\n9\t\t1.73x\t\t\t11\n10\t\t1.76x\t\t\t11\n11\t\t1.80x\t\t\t11\n12\t\t1.83x\t\t\t11\n13\t\t1.86x\t\t\t11\n14\t\t1.89x\t\t\t11\n15\t\t1.92x\t\t\t11\n16\t\t1.95x\t\t\t11\n17\t\t1.98x\t\t\t11\n18\t\t2.01x\t\t\t11\n19\t\t2.04x\t\t\t11\n20\t\t2.07x\t\t\t11\n21\t\t2.10x\t\t\t11\n22\t\t2.14x\t\t\t11\n23\t\t2.17x\t\t\t11\n24\t\t2.20x\t\t\t11\n25\t\t2.23x\t\t\t11\n26\t\t2.26x\t\t\t11\n27\t\t2.29x\t\t\t11\n28\t\t2.32x\t\t\t11\n29\t\t2.35x\t\t\t11\n30\t\t2.38x\t\t\t11\n31\t\t2.41x\t\t\t11\n32\t\t2.45x\t\t\t11\n33\t\t2.48x\t\t\t11\n"
+  debugValues: "Level\t\tAmount\t\t\tPrice\n0\t\t1.50x\t\t\t10\n1\t\t1.50x\t\t\t10\n2\t\t1.52x\t\t\t21\n3\t\t1.55x\t\t\t31\n4\t\t1.58x\t\t\t42\n5\t\t1.61x\t\t\t54\n6\t\t1.64x\t\t\t65\n7\t\t1.67x\t\t\t77\n8\t\t1.70x\t\t\t89\n9\t\t1.73x\t\t\t102\n10\t\t1.76x\t\t\t115\n11\t\t1.80x\t\t\t128\n12\t\t1.83x\t\t\t142\n13\t\t1.86x\t\t\t157\n14\t\t1.89x\t\t\t171\n15\t\t1.92x\t\t\t186\n16\t\t1.95x\t\t\t202\n17\t\t1.98x\t\t\t218\n18\t\t2.01x\t\t\t234\n19\t\t2.04x\t\t\t251\n20\t\t2.07x\t\t\t269\n21\t\t2.10x\t\t\t287\n22\t\t2.14x\t\t\t305\n23\t\t2.17x\t\t\t325\n24\t\t2.20x\t\t\t344\n25\t\t2.23x\t\t\t365\n26\t\t2.26x\t\t\t385\n27\t\t2.29x\t\t\t407\n28\t\t2.32x\t\t\t429\n29\t\t2.35x\t\t\t452\n30\t\t2.38x\t\t\t475\n31\t\t2.41x\t\t\t499\n32\t\t2.45x\t\t\t524\n33\t\t2.48x\t\t\t550\n"
   logisticRate: 3.49
   logisticCarryingCapacity: 44.2
   growthMultiplier: 0.07

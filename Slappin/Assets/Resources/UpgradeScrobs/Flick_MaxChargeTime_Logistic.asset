@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 074eb5741ff6a6b4c8b1a56f59ea95c4, type: 3}
   m_Name: Flick_MaxChargeTime_Logistic
   m_EditorClassIdentifier: 
-  showPreview: 1
+  showPreview: 0
   previewUpgrade: {fileID: 11400000, guid: 71702d81249d75a45bb3f8f5f6f3a191, type: 2}
   maxDisplayedRows: 34
   startOffset: 0
