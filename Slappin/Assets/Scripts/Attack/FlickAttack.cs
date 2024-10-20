@@ -226,7 +226,7 @@ public class FlickAttack : AttackType
         }
     }
 
-    protected override void InitiateTravelBackUp()
+    public override void InitiateTravelBackUp()
     {
         //Stop for a bit to see the hand
         const float handRestDuration = .15f;

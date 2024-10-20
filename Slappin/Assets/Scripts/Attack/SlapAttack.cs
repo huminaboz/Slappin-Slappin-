@@ -1,8 +1,5 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 public class SlapAttack : AttackType
 {
@@ -14,7 +11,6 @@ public class SlapAttack : AttackType
     [SerializeField] private GameObject handModel;
     [SerializeField] private Transform slapForecastShadow;
     
-    //TODO:: And the pickup collider drawing from an upgrade area too
     private Vector3 _hurtColliderDefaultLocalScale;
     private Vector3 _slapForecastShadowDefaultLocalScale;
     private float distanceDamageBoost;
@@ -30,7 +26,6 @@ public class SlapAttack : AttackType
 
     private void OnDisable()
     {
-        //I THINK this should be enabled while you're in the store???
         UpgradeData.OnPurchaseMade -= UpdateColliderAndForecastSize;
     }
 
@@ -134,7 +129,7 @@ public class SlapAttack : AttackType
         SFXPlayer.I.Play(AudioEventsStorage.I.slapHitGround);
     }
 
-    protected override void InitiateTravelBackUp()
+    public override void InitiateTravelBackUp()
     {
         //Stop for a bit to see the hand
             PlayAnimationCoroutine(.1f, "Up");
@@ -146,7 +141,7 @@ public class SlapAttack : AttackType
         }));
     }
 
-    public void HitSpike(GameObject spike)
+    public override void HitSpike(GameObject spike)
     {
         //If hitting a spike, take damage and go back up
         spikeGetHurtOnAttackCollider.gameObject.SetActive(false); //Don't accidentally hit another

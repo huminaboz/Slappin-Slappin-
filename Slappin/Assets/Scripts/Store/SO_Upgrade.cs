@@ -53,6 +53,8 @@ public enum Stat
 
     //Squish
     Squish = 5000,
+    SquishDamage = 5001,
+    SquishDamagePerDistance = 5002,
 
     //Wild
     Wild = 6000,

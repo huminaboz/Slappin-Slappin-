@@ -112,6 +112,9 @@ public class AttackType : MonoBehaviour
         // Debug.LogWarning($"Ranged Damage Bonus: {rangeDamageBonus}");
         return rangeDamageBonus;
     }
+    
+    public virtual void HitSpike(GameObject spike)
+    {}
 
     private void DoWhenMadeItToGoalPosition()
     {
@@ -197,7 +200,7 @@ public class AttackType : MonoBehaviour
         handRigidbody.velocity = Vector3.zero;
     }
 
-    protected virtual void InitiateTravelBackUp()
+    public virtual void InitiateTravelBackUp()
     {
         StopTraveling();
 

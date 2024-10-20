@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eefdc27e1aad8a148a7c49d9323775b8, type: 3}
+  m_Name: AttackData_Squish
+  m_EditorClassIdentifier: 
+  Notes: 
+  baseDamage: 10
+  goDownSpeed: 300
+  goBackUpSpeed: 100
+  bonus_goodHit: 1.1
+  bonus_greatHit: 1.2
+  bonus_criticalHit: 1.5
+  bonus_legendaryHit: 3
+  playSFXOnHit: {fileID: 11400000, guid: ba5341b442a655045bee1bfa1f1b5b1c, type: 2}
+  nothin: 0

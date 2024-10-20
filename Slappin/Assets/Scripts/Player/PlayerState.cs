@@ -131,6 +131,10 @@ public class StateDefault : PlayerState
         {
             thisPlayer.SetState(new StateFlickState(thisPlayer));
         }
+        else if (Input.GetButton("Fire4"))
+        {
+            thisPlayer.SetState(new SquishState(thisPlayer));
+        }
 
 
     }
@@ -200,6 +204,7 @@ public class StateFlickState : PlayerState
 
     public override void Update(float deltaTime)
     {
+
     }
 
     public override void FixedUpdate(float fixedDeltaTime)
@@ -208,7 +213,48 @@ public class StateFlickState : PlayerState
 }
 
 /// <summary> =========================================================================
-/// The state when the slap is heading down or up
+/// The state when the squish is in action
+/// </summary> =========================================================================
+public class SquishState : PlayerState
+{
+    private SquishState _squishAttack;
+    
+    public SquishState(Player player) : base(player)
+    {
+        state = PossibleStates.SquishState;
+        thisPlayer = player;
+    }
+
+    public override void Enter(PlayerState fromState)
+    {
+        thisPlayer.CurrentAttackType = thisPlayer.squishAttack;
+        thisPlayer.CurrentAttackType.InitiateAttack();
+    }
+
+    public override void Exit(PlayerState toState)
+    {
+    }
+
+    public override void Update(float deltaTime)
+    {
+        // if (Input.GetButtonUp("Fire4"))
+        // {
+        //     thisPlayer.squishAttack.InitiateTravelBackUp();
+        // }
+        
+    }
+
+    public override void FixedUpdate(float fixedDeltaTime)
+    {
+        // if (Input.GetButton("Fire4"))
+        // {
+        //     thisPlayer.squishAttack.DoShitWhileTouchingGround();
+        // }
+    }
+}
+
+/// <summary> =========================================================================
+/// The state when absorbing
 /// </summary> =========================================================================
 public class StateAbsorbState : PlayerState
 {

@@ -1,12 +1,22 @@
+using System;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class GetHurtOnAttackCollider : MonoBehaviour
 {
-    [SerializeField] private SlapAttack _slapAttack;
+    [FormerlySerializedAs("_slapAttack")] [SerializeField] private AttackType _thisAttack;
     [SerializeField] private LayerMask _layerMask;
+
+    private Collider _collider;
+    
+    private void Awake()
+    {
+        _collider = GetComponent<Collider>();
+    }
 
     public bool WillHitASpike()
     {
+        _collider.enabled = true;
         bool hitASpike = Physics.CapsuleCast(transform.position, transform.position,
             transform.localScale.z * .5f, -transform.up,
             out RaycastHit hit, 10, _layerMask); 
@@ -16,6 +26,7 @@ public class GetHurtOnAttackCollider : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        _slapAttack.HitSpike(other.gameObject);
+        _thisAttack.HitSpike(other.gameObject);
+        _collider.enabled = false;
     }
 }
