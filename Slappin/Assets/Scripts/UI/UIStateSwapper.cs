@@ -46,7 +46,7 @@ public class UIStateSwapper : Singleton<UIStateSwapper>
     }
 
     [Command]
-    private void GoToStore()
+    public void GoToStore()
     {
         SetState(UIState.store);
     }
@@ -55,6 +55,7 @@ public class UIStateSwapper : Singleton<UIStateSwapper>
     {
         //TODO:: Enemy stuff states new waves and etc etc
         SetState(UIState.playing);
+        GameplayUIManager.I.StartNewWave();
     }
 
     private void SetupUIState()

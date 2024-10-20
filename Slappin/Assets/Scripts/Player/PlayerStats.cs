@@ -8,7 +8,6 @@ public class PlayerStats : Singleton<PlayerStats>
     [SerializeField] public float stunRecoveryMultiplier = 1f;
     
     public float currency1 = 0;
-    public int currentWave = 1; //putting this here for now
     
 
     private void Start()

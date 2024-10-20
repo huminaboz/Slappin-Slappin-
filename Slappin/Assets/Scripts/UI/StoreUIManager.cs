@@ -81,12 +81,12 @@ public class StoreUIManager : Singleton<StoreUIManager>
 
     public void ExitStore()
     {
-        UIStateSwapper.I.SetState(UIStateSwapper.UIState.playing);
+        UIStateSwapper.I.ReturnToPlaying();
     }
 
     public void UpdateLabels()
     {
-        nextWaveButtonText.text = "Start Wave " + PlayerStats.I.currentWave;
+        nextWaveButtonText.text = "Start Wave " + DifficultyManager.I.currentWave;
         totalCurrencyText.text = BozUtilities.FormatLargeNumber(PlayerStats.I.currency1);
     }
 
