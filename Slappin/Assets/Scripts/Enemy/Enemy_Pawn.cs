@@ -47,6 +47,7 @@ public class Enemy_Pawn : Enemy, IObjectPool<Enemy_Pawn>
             {
                 _moveTowardsTransform.BackUp();
                 _moveTowardsTransform.enabled = true;
+                DecideNextAnimation();
             });
         // attackTween = transform.DORotate(new Vector3(57f, 0, 0), .5f, RotateMode.LocalAxisAdd)
         //     .SetEase(attackCurve)

@@ -69,22 +69,22 @@ public abstract class Enemy : MonoBehaviour, IHpAdjustmentListener, IObjectPool<
 
     protected abstract void Attack();
 
-    private void DecideNextAnimation()
+    protected void DecideNextAnimation()
     {
         if (!thisHealth.isAlive) return;
         
-        //Called when completing some animations
-        if (moveTowardsTransform.IsInAttackRange())
-        {
-            _enemyAnimations?.Play(EnemyAnimations.AnimationFrames.Attack01,
-                DecideNextAnimation);
-        }
-        else
-        {
+        // //Called when completing some animations
+        // if (moveTowardsTransform.IsInAttackRange())
+        // {
+        //     _enemyAnimations?.Play(EnemyAnimations.AnimationFrames.Attack01,
+        //         DecideNextAnimation);
+        // }
+        // else
+        // {
             _enemyAnimations?.Play(moveTowardsTransform.isDashing
                 ? EnemyAnimations.AnimationFrames.RunFWD
                 : EnemyAnimations.AnimationFrames.WalkFWD);
-        }
+        // }
     }
 
     public void TookDamage(int damageAmount, GameObject attacker)

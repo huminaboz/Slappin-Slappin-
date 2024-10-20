@@ -51,6 +51,7 @@ public class Enemy_Turtle : Enemy, IObjectPool<Enemy_Turtle>
             {
                 _moveTowardsTransform.BackUp();
                 _moveTowardsTransform.enabled = true;
+                DecideNextAnimation();
             });
 
         performBehavior = null;

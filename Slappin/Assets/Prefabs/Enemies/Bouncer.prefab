@@ -75,6 +75,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   isAlive: 1
+  isPlayer: 0
 --- !u!114 &2766326349189941661
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -87,9 +88,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9dbfb723f8df93644b9983ae73924d98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _enemyAnimations: {fileID: 0}
   currency1DropAmount: 8
   pickupToDrop: {fileID: 4864087115399935888, guid: 9fe9c0010e31c1f499c0d5a3f63d0fe3, type: 3}
-  _enemyAnimations: {fileID: 0}
   attackSpeedMultiplier: 1
   flashDuration: 0.5
   flashCount: 5
@@ -2412,4 +2413,6 @@ MonoBehaviour:
   rayDistance: 1.5
   groundOffset: 0
   repositionSpeed: 5
-  showRaycastGizmo: 1
+  showRaycastGizmo: 0
+  forwardRayOffset: 0.5
+  slopeDetectionDistance: 0.001

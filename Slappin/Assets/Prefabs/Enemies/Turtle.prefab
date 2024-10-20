@@ -82,6 +82,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   isAlive: 1
+  isPlayer: 0
 --- !u!114 &6055458593731207565
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -163,7 +164,7 @@ MonoBehaviour:
   rayDistance: 1.5
   groundOffset: -0.01
   repositionSpeed: 10
-  showRaycastGizmo: 1
+  showRaycastGizmo: 0
   forwardRayOffset: 0.5
   slopeDetectionDistance: 0.001
 --- !u!1001 &4751719500396404803

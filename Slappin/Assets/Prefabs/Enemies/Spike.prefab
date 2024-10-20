@@ -507,6 +507,6 @@ MonoBehaviour:
   rayDistance: 1.5
   groundOffset: 0
   repositionSpeed: 5
-  showRaycastGizmo: 1
+  showRaycastGizmo: 0
   forwardRayOffset: 0.5
   slopeDetectionDistance: 0.001
