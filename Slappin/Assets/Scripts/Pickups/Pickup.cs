@@ -1,14 +1,22 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class Pickup : MonoBehaviour, IObjectPool<Pickup>
 {
     [SerializeField] private int currency1 = 1;
+
     // [SerializeField] private int currency2 = 0;
     [SerializeField] private int hp = 0;
 
     private Collider _collider;
     [HideInInspector] public Hover hover;
+
+    private float speed;
+    private bool playerIsAbsorbing = false;
+    private Vector3 goalPosition;
+    [FormerlySerializedAs("zOffset")] [SerializeField] private float pickupZoneZOffset = 1f;
+
 
     public void SetupObjectFirstTime()
     {
@@ -21,11 +29,13 @@ public class Pickup : MonoBehaviour, IObjectPool<Pickup>
     {
         _collider.enabled = false;
         gameObject.SetActive(true);
-        StartCoroutine(WaitToEnableCollider());
+        //StartCoroutine(WaitToEnableCollider());
         //NOTE: Have to call "SetNewPosition" separate because hover takes over the position
+        StateAbsorbState.OnAbsorbPressed += PlayerStartedAbsorbing;
+        StateAbsorbState.OnAbsorbReleased += PlayerStoppedAbsorbing;
     }
 
-    public void SetNewPosition(Vector3 newPosition)
+    public void SetNewHoverPosition(Vector3 newPosition)
     {
         transform.position = newPosition;
         hover.SetOriginPosition();
@@ -38,13 +48,13 @@ public class Pickup : MonoBehaviour, IObjectPool<Pickup>
         _collider.enabled = true;
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.GetComponent<IPickerUpper>() is not null)
-        {
-            GetPickedUp();
-        }
-    }
+    // private void OnTriggerEnter(Collider other)
+    // {
+    //     if (other.GetComponent<IPickerUpper>() is not null)
+    //     {
+    //         PlayerStartedAbsorbing();
+    //     }
+    // }
 
     public void SetupCurrency(int value)
     {
@@ -53,44 +63,75 @@ public class Pickup : MonoBehaviour, IObjectPool<Pickup>
         //TODO:: Make it fancier with higher values
     }
 
-    private void GetPickedUp()
+    private void PlayerStartedAbsorbing()
     {
-        SFXPlayer.I.Play(AudioEventsStorage.I.pickedUpCurrency1);
         _collider.enabled = false;
         hover.enabled = false;
 
-        //TODO:: Fix this - or some other animation for feedback
-        // _arcToCamera.FlyTowardsCamera();
-
-        PlayerStats.I.AddCurency(currency1);
-        PlayerInfo.I.health.AdjustHp(hp, gameObject);
-        StartCoroutine(MoveTowardsCamera());
+        speed = 0.6f; //TOOD:: Set this to a stat upgrade
+        goalPosition = Camera.main.transform.position;
+        playerIsAbsorbing = true;
     }
 
-    private IEnumerator MoveTowardsCamera()
+    private void PlayerStoppedAbsorbing()
     {
-        float speed = 2f;
-        Vector3 goalPosition = Camera.main.transform.position;
-
-        while (transform.localPosition.z > goalPosition.z)
-        {
-            // Get the direction from the current position to the target position
-            Vector3 direction = goalPosition - transform.position;
-            direction.y = 0f; // Ignore the Y axis for movement
-
-            // Move the object towards the target
-            Vector3 newPosition = transform.position + direction.normalized * speed * Time.deltaTime;
-            transform.position = newPosition;
-            yield return null;
-        }
-
-        ReturnObjectToPool();
+        _collider.enabled = true;
+        hover.enabled = true;
+        playerIsAbsorbing = false;
+        SetNewHoverPosition(transform.position);
     }
+
+    private void Update()
+    {
+        if (!playerIsAbsorbing) return;
+
+
+        // Get the direction from the current position to the target position
+        Vector3 direction = goalPosition - transform.position;
+        direction.y = 0f; // Ignore the Y axis for movement
+
+        // Move the object towards the target
+        Vector3 newPosition = transform.position + direction.normalized * speed * Time.deltaTime;
+        transform.position = newPosition;
+
+        if (transform.localPosition.z <= goalPosition.z + pickupZoneZOffset)
+        {
+            PlayerInfo.I.health.AdjustHp(hp, gameObject);
+            SFXPlayer.I.Play(AudioEventsStorage.I.pickedUpCurrency1);
+            PlayerStats.I.AddCurency(currency1);
+            ReturnObjectToPool();
+        }
+    }
+
+
+    //Might still use this if I decide to let the collider of an attack pick up stuff
+    // private IEnumerator MoveTowardsCamera()
+    // {
+    //     float speed = 2f;
+    //     Vector3 goalPosition = Camera.main.transform.position;
+    //
+    //     while (transform.localPosition.z > goalPosition.z)
+    //     {
+    //         // Get the direction from the current position to the target position
+    //         Vector3 direction = goalPosition - transform.position;
+    //         direction.y = 0f; // Ignore the Y axis for movement
+    //
+    //         // Move the object towards the target
+    //         Vector3 newPosition = transform.position + direction.normalized * speed * Time.deltaTime;
+    //         transform.position = newPosition;
+    //         yield return null;
+    //     }
+    //
+    //     PlayerStats.I.AddCurency(currency1);
+    //     ReturnObjectToPool();
+    // }
 
 
     public void ReturnObjectToPool()
     {
-        StopAllCoroutines();
+        StateAbsorbState.OnAbsorbPressed -= PlayerStartedAbsorbing;
+        StateAbsorbState.OnAbsorbReleased -= PlayerStoppedAbsorbing;
+        // StopAllCoroutines();
         ObjectPoolManager<Pickup>.ReturnObject(this);
     }
 }

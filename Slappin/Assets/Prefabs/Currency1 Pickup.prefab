@@ -55,6 +55,7 @@ MonoBehaviour:
   currency1: 1
   hp: 0
   hover: {fileID: 0}
+  pickupZoneZOffset: 0.75
 --- !u!114 &2381142507936345336
 MonoBehaviour:
   m_ObjectHideFlags: 0

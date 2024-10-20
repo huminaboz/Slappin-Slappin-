@@ -129,7 +129,7 @@ public abstract class Enemy : MonoBehaviour, IHpAdjustmentListener, IObjectPool<
             transform.position.y + .02f, transform.position.z);
         Pickup pickup = ObjectPoolManager<Pickup>.GetObject(pickupToDrop);
         pickup.SetupCurrency(currency1DropAmount);
-        pickup.SetNewPosition(pickupSpawnPosition);
+        pickup.SetNewHoverPosition(pickupSpawnPosition);
 
         SFXPlayer.I.Play(AudioEventsStorage.I.enemyDied);
 

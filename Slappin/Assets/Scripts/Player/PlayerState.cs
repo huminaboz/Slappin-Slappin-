@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public enum PossibleStates
@@ -9,6 +10,8 @@ public enum PossibleStates
     SlapState = 100,
 
     FlickState = 500,
+    
+    AbsorbState = 750,
 
     SquishState = 1000,
 
@@ -76,6 +79,7 @@ public class StateDefault : PlayerState
     //In the movement class
     private HandMovement _handMovement;
 
+
     public StateDefault(Player player) : base(player)
     {
         state = PossibleStates.DefaultState;
@@ -119,10 +123,16 @@ public class StateDefault : PlayerState
         {
             thisPlayer.SetState(new StateSlapState(thisPlayer));
         }
+        else if (Input.GetButton("Fire2"))
+        {
+            thisPlayer.SetState(new StateAbsorbState(thisPlayer));
+        }
         else if (Input.GetButton("Fire3"))
         {
             thisPlayer.SetState(new StateFlickState(thisPlayer));
         }
+
+
     }
 
     public override void FixedUpdate(float fixedDeltaTime)
@@ -190,6 +200,43 @@ public class StateFlickState : PlayerState
 
     public override void Update(float deltaTime)
     {
+    }
+
+    public override void FixedUpdate(float fixedDeltaTime)
+    {
+    }
+}
+
+/// <summary> =========================================================================
+/// The state when the slap is heading down or up
+/// </summary> =========================================================================
+public class StateAbsorbState : PlayerState
+{
+    public static Action OnAbsorbPressed;
+    public static Action OnAbsorbReleased;
+    
+    public StateAbsorbState(Player player) : base(player)
+    {
+        state = PossibleStates.AbsorbState;
+        thisPlayer = player;
+    }
+
+    public override void Enter(PlayerState fromState)
+    {
+        OnAbsorbPressed?.Invoke();
+    }
+
+    public override void Exit(PlayerState toState)
+    {
+    }
+
+    public override void Update(float deltaTime)
+    {
+        if (Input.GetButtonUp("Fire2"))
+        {
+            OnAbsorbReleased?.Invoke();
+            thisPlayer.SetState(new StateDefault(thisPlayer));
+        }
     }
 
     public override void FixedUpdate(float fixedDeltaTime)
