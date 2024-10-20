@@ -5,16 +5,18 @@ using UnityEngine;
 
 public class SquishAttack : AttackType
 {
-    [Header("Squish Specific Stuff")] [SerializeField]
+    [Header("Squish Specific Stuff")]
+
+    //Colliders
+    [SerializeField]
     private GetHurtOnAttackCollider spikeGetHurtOnAttackCollider;
+
+    [SerializeField] private GameObject damageOverTimeCollider;
 
     [SerializeField] private GameObject handModel;
     [SerializeField] private Transform slapForecastShadow;
 
-    private Vector3 _hurtColliderDefaultLocalScale;
-    private Vector3 _slapForecastShadowDefaultLocalScale;
     private float distanceDamageBoost;
-
     private bool touchingGround = false;
 
     private Action _currentAction;
@@ -24,14 +26,12 @@ public class SquishAttack : AttackType
     {
         base.Initialize();
         handModel?.SetActive(false);
-        _hurtColliderDefaultLocalScale = hurtEnemiesColliderObject.transform.localScale;
-        _slapForecastShadowDefaultLocalScale = slapForecastShadow.transform.localScale;
         _shake = GetComponent<ObjectShake>();
     }
 
     protected override float GetAttackTypeDamageNumber()
     {
-        float damage = StatLiason.I.Get(Stat.Squish);
+        float damage = StatLiason.I.Get(Stat.SquishDamage);
         Debug.LogWarning($"Squish damage was {damage} before distance damage boost");
         damage += Mathf.Ceil(damage * distanceDamageBoost);
         Debug.LogWarning($"AND NOW Squish damage is {damage} after distance damage boost");
@@ -54,8 +54,6 @@ public class SquishAttack : AttackType
 
     private void DropSquish()
     {
-        hurtEnemiesColliderObject.SetActive(true);
-
         spikeGetHurtOnAttackCollider.gameObject.SetActive(true);
 
         if (spikeGetHurtOnAttackCollider.WillHitASpike())
@@ -64,6 +62,8 @@ public class SquishAttack : AttackType
         }
         else
         {
+            hurtEnemiesColliderObject.SetActive(true);
+            damageOverTimeCollider.SetActive(true);
             spikeGetHurtOnAttackCollider.gameObject.SetActive(false);
         }
 
@@ -78,6 +78,13 @@ public class SquishAttack : AttackType
         touchingGround = true;
         _shake.StartShake();
         _currentAction = DoShitWhileTouchingGround;
+        StartCoroutine(DisableInitialDamageCollider());
+    }
+
+    private IEnumerator DisableInitialDamageCollider()
+    {
+        yield return new WaitForSeconds(0.1f);
+        hurtEnemiesColliderObject.SetActive(false);
     }
 
     private void Update()
@@ -101,6 +108,7 @@ public class SquishAttack : AttackType
     {
         //TODO:: Once you release the button
         _shake.StopShake();
+        damageOverTimeCollider.SetActive(false);
 
         base.InitiateTravelBackUp();
     }

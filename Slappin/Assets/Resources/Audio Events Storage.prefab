@@ -52,6 +52,7 @@ MonoBehaviour:
   releasedFlick: {fileID: 11400000, guid: 98005e6b2b4c5ab48b1852a65e787b62, type: 2}
   squishHitGround: {fileID: 11400000, guid: cfa08de6c18528140a551295e5abee14, type: 2}
   farted: {fileID: 11400000, guid: e8d2ef1131684aa438502578d00fc421, type: 2}
+  dotHit: {fileID: 11400000, guid: 3771ed07ad3c86c45ac2ba213c417a20, type: 2}
   enemyDied: {fileID: 11400000, guid: e27dd9d44fb9b85488129f25e0b20e1c, type: 2}
   enemyAttacked: {fileID: 11400000, guid: 49ecffaa9bd869844ac807c07dbffebd, type: 2}
   bouncerExploded: {fileID: 11400000, guid: 16d6d68781ec8d04cb9da9ac585b13f7, type: 2}

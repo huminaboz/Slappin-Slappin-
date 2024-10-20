@@ -17,6 +17,7 @@ public class AudioEventsStorage : Singleton<AudioEventsStorage>
     public SFXScrob releasedFlick;
     public SFXScrob squishHitGround;
     public SFXScrob farted;
+    public SFXScrob dotHit;
     
     [Header("Enemy")] 
     public SFXScrob enemyDied;
