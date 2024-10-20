@@ -46,6 +46,7 @@ public class FlickBullet : MonoBehaviour, IObjectPool<FlickBullet>
         flickAttack.HitSomething(other.gameObject);
 
         if (!isFlickImpact) return;
+        if (other.GetComponent<Enemy_Bouncer>()) return;
         if (other.GetComponent<Health>() != null)
         {
             if (other.GetComponent<Health>().isAlive == false) return;

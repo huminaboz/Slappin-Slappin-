@@ -17,7 +17,6 @@ public class SquishAttack : AttackType
     [SerializeField] private Transform slapForecastShadow;
 
     private float distanceDamageBoost;
-    private bool touchingGround = false;
 
     private Action _currentAction;
     private ObjectShake _shake;
@@ -75,7 +74,6 @@ public class SquishAttack : AttackType
         base.DoWhenReachingGround();
         //TODO:: Start playing some enemy hitting stuff
         SFXPlayer.I.Play(AudioEventsStorage.I.squishHitGround);
-        touchingGround = true;
         _shake.StartShake();
         _currentAction = DoShitWhileTouchingGround;
         StartCoroutine(DisableInitialDamageCollider());

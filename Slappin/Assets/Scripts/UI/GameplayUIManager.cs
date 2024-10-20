@@ -1,4 +1,5 @@
 using System;
+using QFSW.QC;
 using TMPro;
 using UnityEngine;
 
@@ -44,6 +45,12 @@ public class GameplayUIManager : Singleton<GameplayUIManager>
         }
     }
 
+    [Command]
+    private void DebugDropTimer()
+    {
+        timeRemaining = .5f;
+    }
+
     // Updates the TextMeshPro text with the remaining time formatted as "mm:ss:ff"
     private void UpdateTimerDisplay(float time)
     {
@@ -65,7 +72,4 @@ public class GameplayUIManager : Singleton<GameplayUIManager>
         UIStateSwapper.I.GoToStore();
     }
 
-    public void IncreaseDifficulty()
-    {
-    }
 }
