@@ -20,16 +20,10 @@ public class DifficultyManager : Singleton<DifficultyManager>
         //the last wave
         
         
-        //ENEMY STATS
-        //TODO::Increase enemy speed
-        //TODO::Increase enemy damage   
-        //TODO::Increase enemy max hp
-        
         //SPAWNING
         //TODO::Turn on spawning for certain enemies
         //TODO::Increase chances certain enemies spawn
         //TODO::Increase spawn rate
-        //TODO:: Make a semi-randomized spawn type thingy to get some variety
     }
 
     [Command]
