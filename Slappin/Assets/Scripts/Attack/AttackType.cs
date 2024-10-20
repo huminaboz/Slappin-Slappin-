@@ -38,7 +38,7 @@ public class AttackType : MonoBehaviour
 
     [SerializeField] private Transform handShadowTransform;
 
-    private float attackSpeed;
+    private float attackSpeed = 0f;
     private const float distanceFlexRoom = .05f;
     private Vector3 goalPosition;
     private float startingDistanceFromGoal;
@@ -61,6 +61,7 @@ public class AttackType : MonoBehaviour
         float YDistance = Mathf.Abs(handPositioner.position.y - goalPosition.y);
         //TODO:: Different curve for going up and for going down
         //TODO:: Can't let starting distance from goal end up as zero
+        if (startingDistanceFromGoal == 0f) return;
         float ratio = 1f - movementCurve.Evaluate(YDistance / startingDistanceFromGoal);
         ratio = Mathf.Clamp(ratio, .05f, 1f); //Don't let it be 0
 

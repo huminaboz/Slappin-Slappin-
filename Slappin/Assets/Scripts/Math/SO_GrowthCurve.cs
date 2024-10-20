@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -13,6 +14,11 @@ public class SO_GrowthCurve : ScriptableObject
     [Range(0, 1000)] [SerializeField] private int startOffset = 1;
     [SerializeField] [TextArea(1, 200)] private string debugValues;
 
+
+    private void Awake()
+    {
+        showPreview = false;
+    }
 
     public virtual float ComputeGrowth(float baseValue, int level)
     {

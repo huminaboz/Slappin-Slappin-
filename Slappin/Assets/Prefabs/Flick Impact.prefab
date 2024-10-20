@@ -119,7 +119,7 @@ GameObject:
   - component: {fileID: 1036478414232743498}
   - component: {fileID: 5045652553176257433}
   m_Layer: 7
-  m_Name: Flick Bullet Parent
+  m_Name: Flick Impact
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -181,13 +181,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f134fe2b9dd5b6d4687519d6826b95b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 400
+  speed: 100
   flickAttack: {fileID: 0}
   spawnPosition: {x: 0, y: 0, z: 0}
   maxTravelDistance: 0
   _particleSystem: {fileID: 215143933224784998}
-  isFlickImpact: 0
-  flickForce: -1
+  isFlickImpact: 1
+  flickForce: 20
 --- !u!1001 &3656246803979058020
 PrefabInstance:
   m_ObjectHideFlags: 0

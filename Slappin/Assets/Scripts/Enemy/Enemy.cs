@@ -14,8 +14,9 @@ public abstract class Enemy : MonoBehaviour, IHpAdjustmentListener, IObjectPool<
     [FormerlySerializedAs("currency1DropAmount")] [SerializeField] private int currency1BaseDropAmount;
     [SerializeField] private GameObject pickupToDrop;
 
-    // [SerializeField] private float attackSpeedMultiplier = 1f;
-    [SerializeField] protected int baseAttackDamage = 10;
+    //Movement
+    [SerializeField] private Rigidbody _rigidbody;
+    
     
     private IHpAdjustmentListener _hpAdjustmentListenerImplementation;
     private MoveTowardsTransform moveTowardsTransform;
@@ -27,6 +28,7 @@ public abstract class Enemy : MonoBehaviour, IHpAdjustmentListener, IObjectPool<
     public int flashCount = 5;
 
     //STATS SET BY DIFFICULTY
+    [SerializeField] protected int baseAttackDamage = 10;
     [SerializeField] private SO_Upgrade damageIncreaser;
     [FormerlySerializedAs("walkSpeedIncreaser")] [SerializeField] private SO_Upgrade walkSpeedMultiplier;
     [SerializeField] private SO_Upgrade currencyDropAmountIncreaser;
@@ -44,7 +46,7 @@ public abstract class Enemy : MonoBehaviour, IHpAdjustmentListener, IObjectPool<
     {
         gameObject.SetActive(false);
         thisHealth = GetComponent<Health>();
-
+        
         if (GetComponent<Renderer>())
         {
             thisMaterial = GetComponent<Renderer>().material;
@@ -56,7 +58,9 @@ public abstract class Enemy : MonoBehaviour, IHpAdjustmentListener, IObjectPool<
 
     public virtual void InitializeObjectFromPool()
     {
+        _rigidbody.isKinematic = false;
         SetupStats();
+        thisHealth.enabled = true;
         thisHealth.Initialize();
         gameObject.SetActive(true);
         _enemyAnimations?.Play(EnemyAnimations.AnimationFrames.WalkFWD);
@@ -163,6 +167,7 @@ public abstract class Enemy : MonoBehaviour, IHpAdjustmentListener, IObjectPool<
         pickup.SetNewHoverPosition(pickupSpawnPosition);
 
         SFXPlayer.I.Play(AudioEventsStorage.I.enemyDied);
+        if(_rigidbody) _rigidbody.velocity = Vector3.zero;
 
         if (_enemyAnimations)
         {
@@ -181,6 +186,8 @@ public abstract class Enemy : MonoBehaviour, IHpAdjustmentListener, IObjectPool<
         }
 
         performBehavior = null;
+        thisHealth.enabled = false;
+        _rigidbody.isKinematic = true;
 
         return 0;
     }

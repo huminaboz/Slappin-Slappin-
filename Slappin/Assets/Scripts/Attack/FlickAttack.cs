@@ -19,21 +19,24 @@ public class FlickAttack : AttackType
 
     [Header("Flick Specific Stuff")]
     //For now, while we're switching between models for frames, two models
-    [SerializeField] public GameObject chargeFrame;
+    [SerializeField]
+    public GameObject chargeFrame;
 
     [SerializeField] public GameObject hitFrame;
     [SerializeField] private ParticleSystem flickParticle;
     [SerializeField] private Transform flickBulletSpawnPoint;
     [SerializeField] private GameObject flickBulletPrefab;
-    
+    [SerializeField] private GameObject flickImpactPrefab;
+
     //Flick forecast
     [SerializeField] private GameObject forecastCube;
     [SerializeField] private GameObject forecastCubePositioner;
     [SerializeField] private Renderer handShadowRenderer;
-    
+
+
     private Action _currentAction;
     private SO_AttackData_Flick _flickData;
-    
+
     //Charging
     private ObjectShake _shake;
     private AnimationCurve chargeCurve;
@@ -43,7 +46,7 @@ public class FlickAttack : AttackType
     private float _currentChargeTime = 0f;
     private readonly float chargeTickRate = .25f;
     private float _totalChargeTime = 0f;
-    
+
     //Camera
     private Camera _camera;
     private float startingFoV;
@@ -51,7 +54,7 @@ public class FlickAttack : AttackType
     public override void Initialize()
     {
         base.Initialize();
-        _flickData = (SO_AttackData_Flick) attackData;
+        _flickData = (SO_AttackData_Flick)attackData;
         _shake = GetComponent<ObjectShake>();
         _camera = cameraTransform.gameObject.GetComponent<Camera>();
         startingFoV = _camera.fieldOfView;
@@ -95,7 +98,7 @@ public class FlickAttack : AttackType
         _currentAction = ChargeAttack;
         //TODO::Make the forecast appear in front of the finger,
         //starting with a small circle in the center of the normal forecast
-        
+
         //Increase the FoV on the camera so you can see from farther back
         // DOTween.To(() => _camera.fieldOfView, 
         //     x => _camera.fieldOfView = x, 
@@ -112,13 +115,13 @@ public class FlickAttack : AttackType
         //Only needed this when the parent object was a different scale 
         // const float defaultZScaleOfCube = 1f;
         // zDistance *= defaultZScaleOfCube / flickBulletSpawnPoint.localScale.z; 
-        forecastCubePositioner.transform.localPosition =  new Vector3(
+        forecastCubePositioner.transform.localPosition = new Vector3(
             forecastCubePositioner.transform.localPosition.x,
-            forecastCubePositioner.transform.localPosition.y, 
-            zDistance*.5f);
+            forecastCubePositioner.transform.localPosition.y,
+            zDistance * .5f);
         forecastCube.transform.localScale = new Vector3(
             forecastCube.transform.localScale.x,
-            forecastCube.transform.localScale.y, 
+            forecastCube.transform.localScale.y,
             zDistance);
     }
 
@@ -134,20 +137,21 @@ public class FlickAttack : AttackType
         {
             _currentChargeTime = 0f;
         }
+
         float ratio = _totalChargeTime / maxChargeTime;
-        
+
         //Set up the forecast cube
         //As you charge, the forecast on the ground grows longer/wider relative to the charge
-        chargedDistance = _flickData.distanceBase + _flickData.distanceBase 
-                           * _flickData.distanceMaxMultiplier * chargeCurve.Evaluate(ratio);
+        chargedDistance = _flickData.distanceBase + _flickData.distanceBase
+            * _flickData.distanceMaxMultiplier * chargeCurve.Evaluate(ratio);
         // Debug.LogWarning($"Charged Distance {chargedDistance}");
         AdjustForecastScale(chargedDistance);
-        
+
         //Alter the color based on the charge
-        Color chargeColor = Color.Lerp(_defaultTopOfHandColor, 
+        Color chargeColor = Color.Lerp(_defaultTopOfHandColor,
             Color.magenta, chargeCurve.Evaluate(ratio));
         handRenderer.material.SetColor("_ColorDim", chargeColor);
-        
+
         if (!Input.GetButton("Fire3"))
         {
             ReleaseCharge(ratio);
@@ -158,17 +162,18 @@ public class FlickAttack : AttackType
     private void ReleaseCharge(float ratio)
     {
         Debug.Log($"Charge Ratio: {ratio}");
-        chargeDamage = _flickData.baseDamage + (int) (_flickData.baseDamage * 
-                        StatLiason.I.Get(Stat.FlickMaxChargeDamage) * chargeCurve.Evaluate(ratio));
+        chargeDamage = _flickData.baseDamage + (int)(_flickData.baseDamage *
+                                                     StatLiason.I.Get(Stat.FlickMaxChargeDamage) *
+                                                     chargeCurve.Evaluate(ratio));
         Debug.Log($"Max charge damage {_flickData.baseDamage} x {StatLiason.I.Get(Stat.FlickMaxChargeDamage)}x" +
-                         $"\n Charged Damage: {chargeDamage}");
+                  $"\n Charged Damage: {chargeDamage}");
         //TODO:: calculate attack width
-     
+
         //Adjust the field of width back to normal
         // DOTween.To(() => _camera.fieldOfView, 
         //     x => _camera.fieldOfView = x, 
         //     startingFoV, .25f).SetEase(Ease.OutQuad);
-        
+
         //Do visuals
         flickParticle.Play();
         SpawnFlickBullet();
@@ -188,9 +193,15 @@ public class FlickAttack : AttackType
     private void SpawnFlickBullet()
     {
         SFXPlayer.I.Play(AudioEventsStorage.I.releasedFlick);
-        
+
         FlickBullet flickBullet = ObjectPoolManager<FlickBullet>.GetObject(flickBulletPrefab);
-        
+        FlickBullet flickImpact = ObjectPoolManager<FlickBullet>.GetObject(flickImpactPrefab);
+        SetupFlickBullet(flickBullet);
+        SetupFlickBullet(flickImpact);
+    }
+
+    private void SetupFlickBullet(FlickBullet flickBullet)
+    {
         if (flickBullet is null) return;
         flickBullet.transform.position = flickBulletSpawnPoint.position;
         //Spawn position was getting set to the position before it gets reset - had to set it here

@@ -15742,7 +15742,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 50, y: -39.27745}
-  m_SizeDelta: {x: 157.86, y: 50}
+  m_SizeDelta: {x: 406.04, y: 50}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &1065801553
 MonoBehaviour:
@@ -15778,7 +15778,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 1:00<size=70%>:99</size>
+  m_text: 1:00<size=70%>:99</size> Wave 999
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8cb5f96fbce464e43a46b10628950d9f, type: 2}
   m_sharedMaterial: {fileID: 5712178099155612699, guid: 8cb5f96fbce464e43a46b10628950d9f, type: 2}
@@ -28911,6 +28911,7 @@ MonoBehaviour:
   flickParticle: {fileID: 1210971084}
   flickBulletSpawnPoint: {fileID: 1346545523}
   flickBulletPrefab: {fileID: 4220776660896476680, guid: 0c5e4ba83603afa4c8863f5c7215f37d, type: 3}
+  flickImpactPrefab: {fileID: 4220776660896476680, guid: ecb0e0a2586b38c489b1908c9ab6034f, type: 3}
   forecastCube: {fileID: 369316357}
   forecastCubePositioner: {fileID: 70739107}
   handShadowRenderer: {fileID: 525235388}
