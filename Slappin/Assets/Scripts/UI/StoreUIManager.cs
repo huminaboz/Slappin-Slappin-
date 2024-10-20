@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using QFSW.QC;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
@@ -52,6 +53,12 @@ public class StoreUIManager : Singleton<StoreUIManager>
     private void Awake()
     {
         Initialize();
+    }
+
+    private void Start()
+    {
+        MusicPlayer.I.Play(AudioEventsStorage.I.playing);
+        
     }
 
     private void Initialize()

@@ -20,5 +20,5 @@ MonoBehaviour:
   bonus_greatHit: 1.2
   bonus_criticalHit: 1.5
   bonus_legendaryHit: 3
-  playSFXOnHit: {fileID: 11400000, guid: c74ea2f08ae20404b8840f6f558053a1, type: 2}
+  playSFXOnHit: {fileID: 11400000, guid: ba5341b442a655045bee1bfa1f1b5b1c, type: 2}
   attackRadiusMultiplier: 1

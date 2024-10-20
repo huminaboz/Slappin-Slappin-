@@ -47,7 +47,7 @@ public class UpgradeCard_Appearance : MonoBehaviour
         titleText.text = upgradeData.upgradeSO.title;
         UpdateCardAppearance();
     }
-    
+
     private void OnEnable()
     {
         UpgradeData.OnPurchaseMade += UpdateCardAppearance;
@@ -65,7 +65,8 @@ public class UpgradeCard_Appearance : MonoBehaviour
     private void UpdateCardAppearance()
     {
         priceText.text = upgradeData.GetPriceText(StoreUIManager.I.previewAmount);
-        upgradeText.text = BozUtilities.GetUpgradeText(upgradeData.upgradeSO, upgradeData.level+1+StoreUIManager.I.previewAmount);
+        upgradeText.text = BozUtilities.GetUpgradeText(upgradeData.upgradeSO,
+            upgradeData.level + 1 + StoreUIManager.I.previewAmount);
 
         //TODO:: Set up a singleton or something that has all the category colors
         // priceBgColor.color = upgradeData.upgradeSO.GetCategoryColor;
@@ -86,8 +87,6 @@ public class UpgradeCard_Appearance : MonoBehaviour
 
         //Don't let the button get pressed
         thisButton.interactable = false;
-
-
     }
 
     public void SetDefaultAppearance()
@@ -117,6 +116,11 @@ public class UpgradeCard_Appearance : MonoBehaviour
 
     public void OnSelected()
     {
+        if (upgradeData.IsAllowedToBePurchased(StoreUIManager.I.previewAmount))
+        {
+            SFXPlayer.I.Play(AudioEventsStorage.I.HoverUpgrade);
+        }
+
         border.gameObject.SetActive(true);
         shadowImage.color = shadowSelected;
         cardBodyRect.anchoredPosition = _bodyDefaultPosition;

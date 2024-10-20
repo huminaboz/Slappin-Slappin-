@@ -50,16 +50,17 @@ MonoBehaviour:
   soundEffects: {fileID: 5017474992789371534, guid: 2e536806f2eb7e34391ecb00a77a8521, type: 2}
   slapHitGround: {fileID: 11400000, guid: 1c007225fd442f84ca0045247c4d6b5d, type: 2}
   releasedFlick: {fileID: 11400000, guid: 98005e6b2b4c5ab48b1852a65e787b62, type: 2}
+  squishHitGround: {fileID: 11400000, guid: cfa08de6c18528140a551295e5abee14, type: 2}
   farted: {fileID: 11400000, guid: e8d2ef1131684aa438502578d00fc421, type: 2}
   enemyDied: {fileID: 11400000, guid: e27dd9d44fb9b85488129f25e0b20e1c, type: 2}
   enemyAttacked: {fileID: 11400000, guid: 49ecffaa9bd869844ac807c07dbffebd, type: 2}
+  bouncerExploded: {fileID: 11400000, guid: 16d6d68781ec8d04cb9da9ac585b13f7, type: 2}
   pickedUpCurrency1: {fileID: 11400000, guid: 715e4db3fe6fe5a4cb4d09b78370a32d, type: 2}
-  pickedUpCurrency2: {fileID: 11400000, guid: e530610b98cd9b84c851b617c0dd8832, type: 2}
-  UI_Menu_Back: {fileID: 0}
-  UI_Menu_Scroll: {fileID: 0}
-  UI_New_Game_Select: {fileID: 0}
-  UI_Toggle: {fileID: 0}
-  UI_Confirmation: {fileID: 0}
+  WaveEnded: {fileID: 11400000, guid: e719805b7f265784594d9e1691660216, type: 2}
+  WaveStart: {fileID: 11400000, guid: 22a14b79b917f6842ae908825bb3964b, type: 2}
+  BoughtUpgrade: {fileID: 11400000, guid: f38ab625caef5a64c8037fd289e7a2b7, type: 2}
+  HoverUpgrade: {fileID: 11400000, guid: 64800678eb13424448c9a38c0a3a59cb, type: 2}
   playerDied: {fileID: 11400000, guid: 3027ca7a1ed787349bff6a3f3d66ac5c, type: 2}
   playerTookDamage: {fileID: 11400000, guid: 49ecffaa9bd869844ac807c07dbffebd, type: 2}
-  asdf: {fileID: 0}
+  playing: {fileID: 11400000, guid: 85893988650493c47a4feb987d474b38, type: 2}
+  store: {fileID: 11400000, guid: f0f88ea4c19026848b069354cfeb5980, type: 2}

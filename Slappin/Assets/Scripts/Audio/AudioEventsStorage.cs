@@ -15,25 +15,25 @@ public class AudioEventsStorage : Singleton<AudioEventsStorage>
 
     [Header("Attacks")] public SFXScrob slapHitGround;
     public SFXScrob releasedFlick;
+    public SFXScrob squishHitGround;
     public SFXScrob farted;
     
     [Header("Enemy")] 
     public SFXScrob enemyDied;
     public SFXScrob enemyAttacked;
+    public SFXScrob bouncerExploded;
 
     [Header("Pickups")] 
     public SFXScrob pickedUpCurrency1;
-    public SFXScrob pickedUpCurrency2;
     
     [Header("Effects")] 
     
     
     [Header("UI")]
-    public SFXScrob UI_Menu_Back;
-    public SFXScrob UI_Menu_Scroll;
-    public SFXScrob UI_New_Game_Select;
-    public SFXScrob UI_Toggle;
-    public SFXScrob UI_Confirmation;
+    public SFXScrob WaveEnded;
+    public SFXScrob WaveStart;
+    public SFXScrob BoughtUpgrade;
+    public SFXScrob HoverUpgrade;
     
     
     [Header("Player")] 
@@ -43,6 +43,7 @@ public class AudioEventsStorage : Singleton<AudioEventsStorage>
 
 
     [Header("Music")]
-    public MusicScrob asdf;
+    public MusicScrob playing;
+    public MusicScrob store;
     
 }

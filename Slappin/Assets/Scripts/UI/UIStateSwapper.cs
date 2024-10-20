@@ -49,11 +49,15 @@ public class UIStateSwapper : Singleton<UIStateSwapper>
     public void GoToStore()
     {
         SetState(UIState.store);
+        MusicPlayer.I.Play(AudioEventsStorage.I.store);
+        SFXPlayer.I.Play(AudioEventsStorage.I.WaveEnded);
     }
     
     public void ReturnToPlaying()
     {
-        //TODO:: Enemy stuff states new waves and etc etc
+        MusicPlayer.I.Play(AudioEventsStorage.I.playing);
+        SFXPlayer.I.Play(AudioEventsStorage.I.WaveStart);
+
         SetState(UIState.playing);
         GameplayUIManager.I.StartNewWave();
     }
