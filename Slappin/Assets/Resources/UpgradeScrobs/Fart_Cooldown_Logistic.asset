@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 074eb5741ff6a6b4c8b1a56f59ea95c4, type: 3}
+  m_Name: Fart_Cooldown_Logistic
+  m_EditorClassIdentifier: 
+  notes: 
+  showPreview: 1
+  previewUpgrade: {fileID: 11400000, guid: 69742ca13f0d0e941a65c523df180f9f, type: 2}
+  maxDisplayedRows: 34
+  startOffset: 0
+  debugValues: "Level\t\tAmount\t\t\tPrice\n0\t\t10.00s\t\t\t40\n1\t\t10.08s\t\t\t40\n2\t\t10.00s\t\t\t83\n3\t\t9.93s\t\t\t128\n4\t\t9.86s\t\t\t175\n5\t\t9.78s\t\t\t226\n6\t\t9.71s\t\t\t279\n7\t\t9.63s\t\t\t336\n8\t\t9.56s\t\t\t395\n9\t\t9.48s\t\t\t459\n10\t\t9.41s\t\t\t526\n11\t\t9.34s\t\t\t597\n12\t\t9.26s\t\t\t673\n13\t\t9.19s\t\t\t752\n14\t\t9.11s\t\t\t837\n15\t\t9.04s\t\t\t927\n16\t\t8.96s\t\t\t1.02k\n17\t\t8.89s\t\t\t1.12k\n18\t\t8.82s\t\t\t1.23k\n19\t\t8.74s\t\t\t1.34k\n20\t\t8.67s\t\t\t1.46k\n21\t\t8.59s\t\t\t1.59k\n22\t\t8.52s\t\t\t1.72k\n23\t\t8.44s\t\t\t1.86k\n24\t\t8.37s\t\t\t2.01k\n25\t\t8.30s\t\t\t2.17k\n26\t\t8.22s\t\t\t2.34k\n27\t\t8.15s\t\t\t2.52k\n28\t\t8.07s\t\t\t2.71k\n29\t\t8.00s\t\t\t2.91k\n30\t\t7.92s\t\t\t3.12k\n31\t\t7.85s\t\t\t3.35k\n32\t\t7.78s\t\t\t3.59k\n33\t\t7.70s\t\t\t3.84k\n"
+  logisticRate: 7.2
+  logisticCarryingCapacity: -9.5
+  growthMultiplier: -7.82
+  baseGrowthRate: -0.001

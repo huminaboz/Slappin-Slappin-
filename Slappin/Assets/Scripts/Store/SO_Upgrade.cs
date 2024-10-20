@@ -63,6 +63,8 @@ public enum Stat
 
     //Fart
     Fart = 7000,
+    FartCooldown = 7001,
+    FartDamage = 7002,
 
     //Luck
     Luck = 8000,

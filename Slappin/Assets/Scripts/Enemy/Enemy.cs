@@ -64,6 +64,12 @@ public abstract class Enemy : MonoBehaviour, IHpAdjustmentListener, IObjectPool<
         thisHealth.Initialize();
         gameObject.SetActive(true);
         _enemyAnimations?.Play(EnemyAnimations.AnimationFrames.WalkFWD);
+        FartAttack.OnFart += GetFartedOn;
+    }
+
+    private void GetFartedOn(float fartDamage)
+    {
+        thisHealth.AdjustHp((int)-fartDamage, null);
     }
 
     protected void SetupStats()
@@ -158,6 +164,7 @@ public abstract class Enemy : MonoBehaviour, IHpAdjustmentListener, IObjectPool<
 
     public virtual float HandleDeath(int lastAttack, GameObject killer)
     {
+        FartAttack.OnFart -= GetFartedOn;
         //TODO: Throw up a puff of particle
         //TODO:: Pop currency(s) out of enemy in a celebration
         Vector3 pickupSpawnPosition = new Vector3(transform.position.x,
