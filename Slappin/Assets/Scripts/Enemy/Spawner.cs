@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
 
 public class Spawner : MonoBehaviour
@@ -20,7 +21,7 @@ public class Spawner : MonoBehaviour
     [SerializeField] private Transform topLeftPossibleSpawn;
     [SerializeField] private Transform bottomRightPossibleSpawn;
 
-    [SerializeField] private SO_Upgrade spawnRateIncreaser;
+    [FormerlySerializedAs("spawnRateIncreaser")] [SerializeField] private SO_Upgrade spawnRateMultiplier;
 
     private float t = 0;
 
@@ -94,10 +95,10 @@ public class Spawner : MonoBehaviour
     {
         int wave = DifficultyManager.I.currentWave;
 
-        float spawnTimer = Random.Range(minTimeBetweenSpawns * spawnRateIncreaser
-                .newValueGrowthCurve.ComputeGrowth(spawnRateIncreaser.baseValue, wave)
-            , maxTimeBetweenSpawns * spawnRateIncreaser
-                .newValueGrowthCurve.ComputeGrowth(spawnRateIncreaser.baseValue, wave));
+        float spawnTimer = Random.Range(minTimeBetweenSpawns * spawnRateMultiplier
+                .newValueGrowthCurve.ComputeGrowth(spawnRateMultiplier.baseValue, wave)
+            , maxTimeBetweenSpawns * spawnRateMultiplier
+                .newValueGrowthCurve.ComputeGrowth(spawnRateMultiplier.baseValue, wave));
 
         Debug.LogWarning($"Spawn timer is: {spawnTimer}");
         

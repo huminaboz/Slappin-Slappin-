@@ -4,7 +4,7 @@ using Vector3 = UnityEngine.Vector3;
 public class HandMovement : MonoBehaviour
 {
     [SerializeField] private float moveSpeed = 2.5f; // Default movement speed
-    [SerializeField] private float boostedSpeedMultiplier = 2f; // How much faster when holding the right trigger
+    // [SerializeField] private float boostedSpeedMultiplier = 2f; // How much faster when holding the right trigger
     [SerializeField] private Transform handPositioner;
     [SerializeField] private Player thisPlayer;
     

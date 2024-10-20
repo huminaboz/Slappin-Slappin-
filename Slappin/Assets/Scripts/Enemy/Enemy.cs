@@ -14,7 +14,7 @@ public abstract class Enemy : MonoBehaviour, IHpAdjustmentListener, IObjectPool<
     [FormerlySerializedAs("currency1DropAmount")] [SerializeField] private int currency1BaseDropAmount;
     [SerializeField] private GameObject pickupToDrop;
 
-    [SerializeField] private float attackSpeedMultiplier = 1f;
+    // [SerializeField] private float attackSpeedMultiplier = 1f;
     [SerializeField] protected int baseAttackDamage = 10;
     
     private IHpAdjustmentListener _hpAdjustmentListenerImplementation;
@@ -28,7 +28,7 @@ public abstract class Enemy : MonoBehaviour, IHpAdjustmentListener, IObjectPool<
 
     //STATS SET BY DIFFICULTY
     [SerializeField] private SO_Upgrade damageIncreaser;
-    [SerializeField] private SO_Upgrade walkSpeedIncreaser;
+    [FormerlySerializedAs("walkSpeedIncreaser")] [SerializeField] private SO_Upgrade walkSpeedMultiplier;
     [SerializeField] private SO_Upgrade currencyDropAmountIncreaser;
     [SerializeField] private SO_Upgrade maxHpIncreaser;
     public float damage;
@@ -71,7 +71,9 @@ public abstract class Enemy : MonoBehaviour, IHpAdjustmentListener, IObjectPool<
         thisHealth.enemyMaxHp = (int) maxHpIncreaser.newValueGrowthCurve
             .ComputeGrowth(thisHealth.maxHp, wave);
         damage = damageIncreaser.newValueGrowthCurve.ComputeGrowth(baseAttackDamage, wave);
-        walkSpeed *= walkSpeedIncreaser.newValueGrowthCurve.ComputeGrowth(moveTowardsTransform.baseWalkSpeed, wave);
+        walkSpeed = moveTowardsTransform.baseWalkSpeed * 
+                    walkSpeedMultiplier.newValueGrowthCurve
+                        .ComputeGrowth(walkSpeedMultiplier.baseValue, wave);
         moveTowardsTransform.walkSpeed = walkSpeed;
 
         Debug.LogWarning($"{gameObject.name} - Currency: {currency1DropAmount}. MaxHp: {thisHealth.enemyMaxHp}" +
