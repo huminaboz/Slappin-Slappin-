@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4ac540fc2f4a5714994932f05a9106ff, type: 3}
-  m_Name: Basic_MoveBoost_Price_Exp
+  m_Name: Basic_AttackSpeedMultiplier_Price_Exp
   m_EditorClassIdentifier: 
   showPreview: 0
   previewUpgrade: {fileID: 11400000, guid: eb6209f12d621e24daca77dc73352d5b, type: 2}

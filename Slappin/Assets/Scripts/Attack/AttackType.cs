@@ -26,7 +26,7 @@ public class AttackType : MonoBehaviour
     [SerializeField] protected AnimationCurve rangeDamageCurve;
     [SerializeField] protected Transform spawnerLine;
     [SerializeField] protected Transform hurtLine;
-    
+
     protected Vector3 Direction
     {
         get => direction;
@@ -90,7 +90,7 @@ public class AttackType : MonoBehaviour
         // {
         //     DoWhenMadeItToGoalPosition();
         // }
-        
+
         //Could also initially grab the total distance you need to travel and then just compare to if you're past that
     }
 
@@ -112,9 +112,10 @@ public class AttackType : MonoBehaviour
         // Debug.LogWarning($"Ranged Damage Bonus: {rangeDamageBonus}");
         return rangeDamageBonus;
     }
-    
+
     public virtual void HitSpike(GameObject spike)
-    {}
+    {
+    }
 
     private void DoWhenMadeItToGoalPosition()
     {
@@ -187,7 +188,7 @@ public class AttackType : MonoBehaviour
 
         OnCompletedTravel += DoWhenReachingGround;
 
-        attackSpeed = attackData.goDownSpeed;
+        attackSpeed = attackData.baseGoDownSpeed * StatLiason.I.Get(Stat.AttackSpeed);
         startingDistanceFromGoal = Mathf.Abs(handPositioner.position.y - goalPosition.y);
 
         //Giving Direction a value starts up the Fixedupdate telling the hand which way to go
@@ -206,7 +207,7 @@ public class AttackType : MonoBehaviour
 
         goalPosition = new(transform.position.x, offScreenHandYPosition, transform.position.z);
         startingDistanceFromGoal = Mathf.Abs(handPositioner.position.y - goalPosition.y);
-        attackSpeed = attackData.goBackUpSpeed;
+        attackSpeed = attackData.goBackUpSpeed * StatLiason.I.Get(Stat.AttackSpeed);
         Direction = new(0, 1, 0);
 
         OnCompletedTravel = Cleanup;

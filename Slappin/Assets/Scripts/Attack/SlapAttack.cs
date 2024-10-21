@@ -56,9 +56,6 @@ public class SlapAttack : AttackType
         //Set it upon attack since that's where the distance comes from
         distanceDamageBoost = GetRangedDamageBonus(StatLiason.I.Get(Stat.SlapDamagePerDistance));
 
-        //TODO::I dunno, try to include drop speed into the animation delay
-        float dropSpeed = attackData.goDownSpeed;
-
         PlayAnimationCoroutine(.1f, "Down");
         DropSlap();
     }

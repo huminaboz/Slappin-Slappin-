@@ -32,10 +32,10 @@ public enum Stat
     Basic = 1000,
     MoveBoostSpeed = 1001,
     AbsorbSpeed = 1002,
+    AttackSpeed = 1003,
 
     //Defense
     Defense = 2000,
-    
     IncreaseMaxHp = 2001,
     WaveHealthRestore = 2002,
     DamageReduction = 2003,

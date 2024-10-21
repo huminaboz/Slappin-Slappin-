@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aaf371d22c65cd14ab65d603456a522f, type: 3}
+  m_Name: Basic_AttackSpeedMultiplier_AniMax
+  m_EditorClassIdentifier: 
+  notes: 
+  showPreview: 1
+  previewUpgrade: {fileID: 11400000, guid: 156072e63a9db3e49a1ca51f54a61fd4, type: 2}
+  maxDisplayedRows: 34
+  startOffset: 0
+  debugValues: "Level\t\tAmount\t\t\tPrice\n0\t\t1.00x\t\t\t10\n1\t\t1.09x\t\t\t10\n2\t\t1.18x\t\t\t21\n3\t\t1.27x\t\t\t31\n4\t\t1.36x\t\t\t42\n5\t\t1.44x\t\t\t54\n6\t\t1.53x\t\t\t65\n7\t\t1.62x\t\t\t77\n8\t\t1.71x\t\t\t89\n9\t\t1.79x\t\t\t102\n10\t\t1.88x\t\t\t115\n11\t\t1.96x\t\t\t128\n12\t\t2.05x\t\t\t142\n13\t\t2.13x\t\t\t157\n14\t\t2.22x\t\t\t171\n15\t\t2.30x\t\t\t186\n16\t\t2.38x\t\t\t202\n17\t\t2.46x\t\t\t218\n18\t\t2.55x\t\t\t234\n19\t\t2.63x\t\t\t251\n20\t\t2.71x\t\t\t269\n21\t\t2.79x\t\t\t287\n22\t\t2.87x\t\t\t305\n23\t\t2.95x\t\t\t325\n24\t\t3.03x\t\t\t344\n25\t\t3.11x\t\t\t365\n26\t\t3.19x\t\t\t385\n27\t\t3.27x\t\t\t407\n28\t\t3.34x\t\t\t429\n29\t\t3.42x\t\t\t452\n30\t\t3.50x\t\t\t475\n31\t\t3.57x\t\t\t499\n32\t\t3.65x\t\t\t524\n33\t\t3.72x\t\t\t550\n"
+  AnimationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  levelAtWhichGraphReaches1: 200
+  maximumValue: 10

@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 074eb5741ff6a6b4c8b1a56f59ea95c4, type: 3}
   m_Name: Basic_MoveBoost_Logistic
   m_EditorClassIdentifier: 
-  showPreview: 0
+  notes: 
+  showPreview: 1
   previewUpgrade: {fileID: 11400000, guid: eb6209f12d621e24daca77dc73352d5b, type: 2}
   maxDisplayedRows: 34
   startOffset: 0
