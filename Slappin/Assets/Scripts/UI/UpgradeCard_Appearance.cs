@@ -50,6 +50,7 @@ public class UpgradeCard_Appearance : MonoBehaviour
 
     private void OnEnable()
     {
+        Initialize();
         UpgradeData.OnPurchaseMade += UpdateCardAppearance;
         StoreUIManager.ChangedPreviewAmount += UpdateCardAppearance;
         StoreUIManager.OnDebugUpdateStoreUI += UpdateCardAppearance;
@@ -64,12 +65,11 @@ public class UpgradeCard_Appearance : MonoBehaviour
 
     private void UpdateCardAppearance()
     {
+        if (!upgradeData) return;
         priceText.text = upgradeData.GetPriceText(StoreUIManager.I.previewAmount);
         upgradeText.text = BozUtilities.GetUpgradeText(upgradeData.upgradeSO,
             upgradeData.level + 1 + StoreUIManager.I.previewAmount);
 
-        //TODO:: Set up a singleton or something that has all the category colors
-        // priceBgColor.color = upgradeData.upgradeSO.GetCategoryColor;
         if (upgradeData.IsAllowedToBePurchased(StoreUIManager.I.previewAmount))
         {
             SetDefaultAppearance();

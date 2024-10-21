@@ -21,6 +21,8 @@ public class DoTCollider : MonoBehaviour
 
     private void HurtHealth(Collider other)
     {
+
+        
         if (other.GetComponent<Health>() != null)
         {
             Health health = other.GetComponent<Health>();
@@ -34,12 +36,15 @@ public class DoTCollider : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.GetComponent<Enemy_Spike>() is not null) return;
-
         if (other.GetComponent<Health>() == null) return;
         t += Time.deltaTime;
         if (t >= damageRate)
         {
+            if (other.GetComponent<Enemy_Spike>() is not null)
+            {
+                SFXPlayer.I.Play(AudioEventsStorage.I.bouncerBlocked);
+                return;
+            }
             Health health = other.GetComponent<Health>();
             health.AdjustHp(-(int)damage, gameObject);
             if (-damage < 0)

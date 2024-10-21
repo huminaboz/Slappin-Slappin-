@@ -53,9 +53,10 @@ MonoBehaviour:
   squishHitGround: {fileID: 11400000, guid: cfa08de6c18528140a551295e5abee14, type: 2}
   farted: {fileID: 11400000, guid: 426f3f01243874a4490d61fa7619a858, type: 2}
   dotHit: {fileID: 11400000, guid: 3771ed07ad3c86c45ac2ba213c417a20, type: 2}
-  enemyDied: {fileID: 11400000, guid: e27dd9d44fb9b85488129f25e0b20e1c, type: 2}
+  enemyDied: {fileID: 11400000, guid: 4969bc41109874a449c8a51b3d5bd892, type: 2}
   enemyAttacked: {fileID: 11400000, guid: 49ecffaa9bd869844ac807c07dbffebd, type: 2}
   bouncerExploded: {fileID: 11400000, guid: 16d6d68781ec8d04cb9da9ac585b13f7, type: 2}
+  bouncerBlocked: {fileID: 11400000, guid: ffae0d88f357d1945aeb811fdc90992e, type: 2}
   pickedUpCurrency1: {fileID: 11400000, guid: 715e4db3fe6fe5a4cb4d09b78370a32d, type: 2}
   WaveEnded: {fileID: 11400000, guid: e719805b7f265784594d9e1691660216, type: 2}
   WaveStart: {fileID: 11400000, guid: 22a14b79b917f6842ae908825bb3964b, type: 2}

@@ -23,6 +23,7 @@ public class AudioEventsStorage : Singleton<AudioEventsStorage>
     public SFXScrob enemyDied;
     public SFXScrob enemyAttacked;
     public SFXScrob bouncerExploded;
+    public SFXScrob bouncerBlocked;
 
     [Header("Pickups")] 
     public SFXScrob pickedUpCurrency1;

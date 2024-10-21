@@ -8,5 +8,9 @@ public class AttackCollider : MonoBehaviour
     {
         if (other.GetComponent<Enemy_Spike>() is not null) return;
         _attackType.HitSomething(other.gameObject);
+        if (_attackType is SquishAttack)
+        {
+            enabled = false;
+        }
     }
 }

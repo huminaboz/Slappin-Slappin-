@@ -16,8 +16,9 @@ public class FlickBullet : MonoBehaviour, IObjectPool<FlickBullet>
     private Rigidbody _rigidbody;
 
 
-    [Header("Flick Impact stuff")] 
-    [SerializeField] private bool isFlickImpact = false;
+    [Header("Flick Impact stuff")] [SerializeField]
+    private bool isFlickImpact = false;
+
     [SerializeField] private float flickForce = 1f;
 
     public void SetupObjectFirstTime()
@@ -43,16 +44,34 @@ public class FlickBullet : MonoBehaviour, IObjectPool<FlickBullet>
 
     private void OnTriggerEnter(Collider other)
     {
-        flickAttack.HitSomething(other.gameObject);
-
-        if (!isFlickImpact) return;
-        if (other.GetComponent<Enemy_Bouncer>()) return;
-        if (other.GetComponent<Health>() != null)
+        if (!isFlickImpact)
         {
-            if (other.GetComponent<Health>().isAlive == false) return;
-            Vector3 flickForceVector = new Vector3(0f, 0f, flickForce);
-            other.GetComponent<Rigidbody>().AddForce(flickForceVector, ForceMode.Impulse);
+            //Normal Flick Bullet
+            if (other.GetComponent<Enemy_Bouncer>())
+            {
+                //Can't do this right now because they can have spikes INSIDe them
+                // //TODO:: tink sfx
+                // SFXPlayer.I.Play(AudioEventsStorage.I.bouncerBlocked);
+                // ReturnObjectToPool();
+                // return;
+            }
         }
+        else
+        {
+            //A Flick Impact
+            if (other.GetComponent<Enemy_Bouncer>())
+            {
+                SFXPlayer.I.Play(AudioEventsStorage.I.bouncerBlocked);
+                return;
+            }
+            if (other.GetComponent<Health>() != null)
+            {
+                if (other.GetComponent<Health>().isAlive == false) return;
+                Vector3 flickForceVector = new Vector3(0f, 0f, flickForce);
+                other.GetComponent<Rigidbody>().AddForce(flickForceVector, ForceMode.Impulse);
+            }
+        }
+        flickAttack.HitSomething(other.gameObject);
     }
 
     private void FixedUpdate()

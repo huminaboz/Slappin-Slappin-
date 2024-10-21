@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -9018553438512618351}
   - component: {fileID: -8401236401870184322}
   m_Layer: 0
-  m_Name: Pawn
+  m_Name: Orc
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

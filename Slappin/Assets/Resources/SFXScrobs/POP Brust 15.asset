@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2bcbc668ce5a76b438ce21772959a1dc, type: 3}
-  m_Name: Enemy Death
+  m_Name: POP Brust 15
   m_EditorClassIdentifier: 
   notes: 
-  clip: {fileID: 8300000, guid: 12b3108d1a84d4541aa69cd519b26d02, type: 3}
+  clip: {fileID: 8300000, guid: 2b458cb85186f5842a733d87284ed9dd, type: 3}
   mixerGroup: {fileID: 5017474992789371534, guid: 2e536806f2eb7e34391ecb00a77a8521, type: 2}
-  volume: 0.559
+  volume: 1
   varyPitch: 0
   looping: 0
   startDelaySeconds: 0
