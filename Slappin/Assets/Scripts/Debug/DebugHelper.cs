@@ -26,7 +26,31 @@ public class DebugHelper : MonoBehaviour
         _qc.OnDeactivate -= OnQuantumDeactivate;
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.N))
+        {
+            Time.timeScale -= 1f;
+            Debug.Log($"N increased timescale to: {Time.timeScale}");
+        }
 
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            Time.timeScale += 1f;
+            Debug.Log($"M decreased timescale to: {Time.timeScale}");
+        }
+
+        if (Input.GetKeyDown(KeyCode.B))
+        {
+            Debug.Log("B restores time to normal");
+            Time.timeScale = 1f;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Keypad0))
+        {
+            Debug.Break();
+        }
+    }
 
     private void OnQuantumActivate()
     {
