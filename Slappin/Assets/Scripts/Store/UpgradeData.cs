@@ -54,8 +54,8 @@ public class UpgradeData : MonoBehaviour
         //Upgrade the universal source of truth for getting stat numbers
         StatLiason.I.Stats[upgradeSO.stat]
             = upgradeSO.newValueGrowthCurve.ComputeGrowth(upgradeSO.baseValue, level);
-         
-         SFXPlayer.I.Play(AudioEventsStorage.I.BoughtUpgrade);
+
+        SFXPlayer.I.Play(AudioEventsStorage.I.BoughtUpgrade);
         //Send out an event to update all the cards appearances for affordability or not
         OnPurchaseMade?.Invoke();
     }
@@ -64,7 +64,6 @@ public class UpgradeData : MonoBehaviour
     {
         if (BozUtilities.HasHitMinOrMax(upgradeSO, level + amount))
         {
-            
             return false;
         }
 

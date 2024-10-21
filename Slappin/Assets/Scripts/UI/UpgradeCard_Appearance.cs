@@ -68,7 +68,7 @@ public class UpgradeCard_Appearance : MonoBehaviour
         if (!upgradeData) return;
         priceText.text = upgradeData.GetPriceText(StoreUIManager.I.previewAmount);
         upgradeText.text = BozUtilities.GetUpgradeText(upgradeData.upgradeSO,
-            upgradeData.level + 1 + StoreUIManager.I.previewAmount);
+            upgradeData.level + StoreUIManager.I.previewAmount);
 
         if (upgradeData.IsAllowedToBePurchased(StoreUIManager.I.previewAmount))
         {

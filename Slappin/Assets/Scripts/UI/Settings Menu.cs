@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class SettingsMenu : MonoBehaviour
 {
     [SerializeField] private GameObject contents;
-    
+
     [SerializeField] private AudioMixerGroup sfxGroup;
     [SerializeField] private AudioMixerGroup musicGroup;
 
@@ -38,14 +38,30 @@ public class SettingsMenu : MonoBehaviour
     // Method to set SFX volume and save to PlayerPrefs
     public void SetSFXVolume(float volume)
     {
-        audioMixer.SetFloat("SFX", Mathf.Log10(sfxSlider.value) * 20); // Convert linear slider value to decibel
+        if (volume == 0f)
+        {
+            audioMixer.SetFloat("Music", -80f); // Convert linear slider value to decibel
+        }
+        else
+        {
+            audioMixer.SetFloat("SFX", Mathf.Log10(sfxSlider.value) * 20); // Convert linear slider value to decibel
+        }
+
         PlayerPrefs.SetFloat(SFX_PREF_KEY, sfxSlider.value);
     }
 
     // Method to set Music volume and save to PlayerPrefs
     public void SetMusicVolume(float volume)
     {
-        audioMixer.SetFloat("Music", Mathf.Log10(volume) * 20); // Convert linear slider value to decibel
+        if (volume == 0f)
+        {
+            audioMixer.SetFloat("Music", -80f); // Convert linear slider value to decibel
+        }
+        else
+        {
+            audioMixer.SetFloat("Music", Mathf.Log10(volume) * 20); // Convert linear slider value to decibel
+        }
+
         PlayerPrefs.SetFloat(MUSIC_PREF_KEY, volume);
     }
 
