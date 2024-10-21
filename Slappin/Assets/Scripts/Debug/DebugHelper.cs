@@ -28,6 +28,8 @@ public class DebugHelper : MonoBehaviour
 
     private void Update()
     {
+        if (!StateGame.debugModeOn) return;
+        
         if (Input.GetKeyDown(KeyCode.N))
         {
             Time.timeScale -= 1f;
