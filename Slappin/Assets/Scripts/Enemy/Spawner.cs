@@ -15,8 +15,10 @@ public class Spawner : MonoBehaviour
     [SerializeField] private GameObject pawnPrefab;
     [SerializeField] private GameObject turtlePrefab;
     [SerializeField] private GameObject magePrefab;
+    [SerializeField] private GameObject orcPrefab;
 
     [SerializeField] private float mageSpawnChance = .1f;
+    [SerializeField] private float orcSpawnChance = .065f;
     [SerializeField] private float spikeSpawnChance = .05f;
     [SerializeField] private float bouncerSpawnChance = .013f;
 
@@ -45,6 +47,16 @@ public class Spawner : MonoBehaviour
             else if (GetRandomNumberBetweenZeroAndOne() < spikeSpawnChance)
             {
                 Enemy_Spike enemy = ObjectPoolManager<Enemy_Spike>.GetObject(spikePrefab);
+                if (enemy is not null)
+                {
+                    enemy.transform.position = GetRandomSpawnPosition();
+                    enemy.transform.Rotate(0, 180, 0);
+                    extraSpawnTime = .5f;
+                }
+            }
+            else if (GetRandomNumberBetweenZeroAndOne() < orcSpawnChance)
+            {
+                Enemy_Pawn enemy = ObjectPoolManager<Enemy_Pawn>.GetObject(orcPrefab);
                 if (enemy is not null)
                 {
                     enemy.transform.position = GetRandomSpawnPosition();

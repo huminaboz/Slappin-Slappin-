@@ -68,7 +68,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 0
-  maxHp: 12
+  maxHp: 20
   enemyMaxHp: 0
   OnDeath:
     m_PersistentCalls:

@@ -1824,7 +1824,9 @@ MonoBehaviour:
   pawnPrefab: {fileID: 3826877389465147980, guid: e6d04478a9e4a9842b348cb91b662b77, type: 3}
   turtlePrefab: {fileID: 3826877389465147980, guid: 003805da6baafbb40bdea08bdfe71c84, type: 3}
   magePrefab: {fileID: 3826877389465147980, guid: 21460f950cee80c47a88a3d2f118d4ed, type: 3}
+  orcPrefab: {fileID: 3826877389465147980, guid: f5e1940c5fdb374489abd41d68e0baaa, type: 3}
   mageSpawnChance: 0.1
+  orcSpawnChance: 0.05
   spikeSpawnChance: 0.025
   bouncerSpawnChance: 0.025
   topLeftPossibleSpawn: {fileID: 280439155}
