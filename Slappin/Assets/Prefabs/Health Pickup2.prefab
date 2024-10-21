@@ -14660,8 +14660,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9403197fcb1cd84089515fa3ffb39f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currency1: 1
-  hp: 0
+  currency1: 0
+  hpPercentageRefill: 0.05
   hover: {fileID: 0}
   pickupZoneZOffset: 0.65
   pickupZoneYOffset: 0.34

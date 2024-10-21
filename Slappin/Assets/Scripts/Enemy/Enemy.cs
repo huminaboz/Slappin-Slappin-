@@ -178,7 +178,7 @@ public abstract class Enemy : MonoBehaviour, IHpAdjustmentListener, IObjectPool<
         pickup.SetupCurrency((int)currency1DropAmount);
         pickup.SetNewHoverPosition(pickupSpawnPosition);
 
-        if (BozUtilities.GetDiceRoll() < 1f)
+        if (BozUtilities.GetDiceRoll() < .02f)
         {
             Pickup healthPickup = ObjectPoolManager<Pickup>.GetObject(healthPickupPrefab);
             healthPickup.SetNewHoverPosition(pickupSpawnPosition);

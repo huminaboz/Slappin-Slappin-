@@ -83,7 +83,7 @@ public class Health : MonoBehaviour
         //HEALING
         if (oldHealth < hp)
         {
-            //TODO:: If attacker is nyull, don't play a celebration
+            //TODO:: If attacker is null, don't play a celebration
             foreach (IHpAdjustmentListener damageListeners in hpAdjustmentListeners)
             {
                 damageListeners.Healed(amountToIncrease, attacker);
