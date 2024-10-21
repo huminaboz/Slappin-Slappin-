@@ -20,7 +20,7 @@ public class GetHurtOnAttackCollider : MonoBehaviour
         bool hitASpike = Physics.CapsuleCast(transform.position, transform.position,
             transform.localScale.z * .5f, -transform.up,
             out RaycastHit hit, 10, _layerMask); 
-            if(hit.collider) Debug.LogWarning($"Hit: {hit.collider.gameObject.name}");
+            if(hit.collider) Debug.LogWarning($"Hit a spike: {hit.collider.gameObject.name}");
             return hitASpike;
     }
 

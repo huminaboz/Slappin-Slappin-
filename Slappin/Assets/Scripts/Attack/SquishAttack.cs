@@ -65,7 +65,7 @@ public class SquishAttack : AttackType
 
         InitiateTravelToGround();
     }
-
+    
     protected override void DoWhenReachingGround()
     {
         base.DoWhenReachingGround();
@@ -106,6 +106,7 @@ public class SquishAttack : AttackType
         base.InitiateTravelBackUp();
     }
 
+    private Coroutine stunDelayCoroutine;
     public override void HitSpike(GameObject spike)
     {
         //If hitting a spike, take damage and go back up
@@ -132,8 +133,9 @@ public class SquishAttack : AttackType
         playerHealth.AdjustHp(-handDamage, gameObject);
         player.SetState(new StateDamagedState(player));
 
-        StartCoroutine(BozUtilities.DoAfterDelay(handStabStunDuration
-                                                 * PlayerStats.I.stunRecoveryMultiplier,
+        if(stunDelayCoroutine != null) StopCoroutine(stunDelayCoroutine);
+        stunDelayCoroutine = StartCoroutine(BozUtilities.DoAfterDelay(handStabStunDuration
+                                                                   * PlayerStats.I.stunRecoveryMultiplier,
             InitiateTravelBackUp));
     }
 

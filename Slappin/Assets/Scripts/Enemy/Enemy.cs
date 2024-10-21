@@ -92,7 +92,7 @@ public abstract class Enemy : MonoBehaviour, IHpAdjustmentListener, IObjectPool<
                         .ComputeGrowth(walkSpeedMultiplier.baseValue, wave);
         moveTowardsTransform.walkSpeed = walkSpeed;
 
-        Debug.LogWarning($"{gameObject.name} - Currency: {currency1DropAmount}. MaxHp: {thisHealth.enemyMaxHp}" +
+        Debug.Log($"{gameObject.name} - Currency: {currency1DropAmount}. MaxHp: {thisHealth.enemyMaxHp}" +
                          $"\n Damage: {damage}, WalkSpeed: {walkSpeed}");
     }
 

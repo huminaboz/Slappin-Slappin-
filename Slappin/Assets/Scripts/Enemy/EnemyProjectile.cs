@@ -48,7 +48,6 @@ public class EnemyProjectile : MonoBehaviour, IObjectPool<EnemyProjectile>, IHpA
 
         if (transform.localPosition.z <= goalPosition.z + hitPlayerZoneZOffset)
         {
-            Debug.LogWarning("asdf");
             SFXPlayer.I.Play(AudioEventsStorage.I.enemyAttacked);
             PlayerInfo.I.health.AdjustHp((int)damage, gameObject);
             ReturnObjectToPool();

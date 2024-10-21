@@ -124,7 +124,7 @@ public class Spawner : MonoBehaviour
             , maxTimeBetweenSpawns * spawnRateMultiplier
                 .newValueGrowthCurve.ComputeGrowth(spawnRateMultiplier.baseValue, wave));
 
-        Debug.LogWarning($"Spawn timer is: {spawnTimer}");
+        Debug.Log($"Spawn timer is: {spawnTimer}");
         
         return spawnTimer;
     }

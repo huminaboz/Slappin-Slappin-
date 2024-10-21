@@ -172,11 +172,11 @@ public class AttackType : MonoBehaviour
 
     public virtual void InitiateAttack()
     {
-        if (!playerHealth.isAlive)
-        {
-            Debug.LogWarning("Can't attack - player is dead");
-            return;
-        }
+        // if (!playerHealth.isAlive)
+        // {
+        //     Debug.LogWarning("Can't attack - player is dead");
+        //     return;
+        // }
 
         SetParentPosition(); //So the spike collision check is in the right place
         SetDirection();
@@ -262,6 +262,7 @@ public class AttackType : MonoBehaviour
     {
         StopTraveling();
         OnCompletedTravel = null;
+        RestoreDefaultAppearance();
         player.SetState(new StateDefault(player));
     }
 

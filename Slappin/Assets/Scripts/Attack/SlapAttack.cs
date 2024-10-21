@@ -126,12 +126,14 @@ public class SlapAttack : AttackType
         SFXPlayer.I.Play(AudioEventsStorage.I.slapHitGround);
     }
 
+    private Coroutine stunDelayCoroutine;
     public override void InitiateTravelBackUp()
     {
         //Stop for a bit to see the hand
             PlayAnimationCoroutine(.1f, "Up");
         const float handRestDuration = .15f;
-        StartCoroutine(BozUtilities.DoAfterDelay(handRestDuration, () =>
+        if(stunDelayCoroutine != null) StopCoroutine(stunDelayCoroutine);
+        stunDelayCoroutine = StartCoroutine(BozUtilities.DoAfterDelay(handRestDuration, () =>
         {
             player.EnableMovement();
             base.InitiateTravelBackUp();

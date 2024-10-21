@@ -317,14 +317,15 @@ public class StateDamagedState : PlayerState
         //Play a hand hurt animation?
 
         // _t = 0f;
+        StateGame.PlayerInGameControlsEnabled = false;
     }
 
     public override void Exit(PlayerState toState)
     {
+        StateGame.PlayerInGameControlsEnabled = true;
         thisPlayer.EnableMovement();
 
         //Return the hand materials to normal look
-        thisPlayer.CurrentAttackType.RestoreDefaultAppearance();
     }
 
     public override void Update(float deltaTime)
