@@ -6422,8 +6422,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 55.17445, y: -41}
-  m_SizeDelta: {x: 48.3489, y: 52.828}
+  m_AnchoredPosition: {x: 47, y: -41}
+  m_SizeDelta: {x: 0, y: 82}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!4 &415489722 stripped
 Transform:
@@ -9441,7 +9441,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
   m_AnchoredPosition: {x: -0.9246826, y: -453}
-  m_SizeDelta: {x: 428.1889, y: 82}
+  m_SizeDelta: {x: 421.27002, y: 82}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &634027012
 MonoBehaviour:
@@ -9494,16 +9494,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
-    m_Left: 31
+    m_Left: 47
     m_Right: 43
     m_Top: 0
     m_Bottom: 0
-  m_ChildAlignment: 4
-  m_Spacing: 11.93
+  m_ChildAlignment: 3
+  m_Spacing: 37.36
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
-  m_ChildControlWidth: 0
-  m_ChildControlHeight: 0
+  m_ChildControlWidth: 1
+  m_ChildControlHeight: 1
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
@@ -17494,8 +17494,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 91.2789, y: -41}
-  m_SizeDelta: {x: 293.91, y: 50}
+  m_AnchoredPosition: {x: 84.36, y: -41}
+  m_SizeDelta: {x: 293.91003, y: 82}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &1089542335
 MonoBehaviour:

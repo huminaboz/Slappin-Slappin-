@@ -95,6 +95,8 @@ public class StoreUIManager : Singleton<StoreUIManager>
     {
         nextWaveButtonText.text = "Start Wave " + DifficultyManager.I.currentWave;
         totalCurrencyText.text = BozUtilities.FormatLargeNumber(PlayerStats.I.currency1);
+        totalCurrencyText.gameObject.SetActive(false);
+        totalCurrencyText.gameObject.SetActive(true);
     }
 
     Dictionary<UpgradeType, GameObject> categories = new Dictionary<UpgradeType, GameObject>();
