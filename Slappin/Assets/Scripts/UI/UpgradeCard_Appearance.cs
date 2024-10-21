@@ -96,7 +96,7 @@ public class UpgradeCard_Appearance : MonoBehaviour
         //Don't let the button events set this if there's no moneys
         if (upgradeData.IsAllowedToBePurchased(StoreUIManager.I.previewAmount))
         {
-            Debug.LogWarning($"Default Appearance set up for {upgradeData.upgradeSO.title}");
+            // Debug.LogWarning($"Default Appearance set up for {upgradeData.upgradeSO.title}");
             priceBgColor.color = _defaultPriceBgColor;
             priceText.color = defaultPriceTextColor;
 
