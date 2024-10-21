@@ -36,8 +36,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 42.415222, y: -14.451}
-  m_SizeDelta: {x: 41.83, y: 28.902}
+  m_AnchoredPosition: {x: 72.1066, y: -14.451}
+  m_SizeDelta: {x: 90.81, y: 28.902}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5387472490962953840
 CanvasRenderer:
@@ -67,7 +67,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 300
+  m_text: 16515516
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8cb5f96fbce464e43a46b10628950d9f, type: 2}
   m_sharedMaterial: {fileID: 5712178099155612699, guid: 8cb5f96fbce464e43a46b10628950d9f, type: 2}
@@ -322,7 +322,7 @@ MonoBehaviour:
   shadowPressed: {r: 0.77254903, g: 0.18431373, b: 0.050980393, a: 1}
   priceBgDisabledColor: {r: 0.2901961, g: 0.32156864, b: 0.3019608, a: 1}
   priceTextDisabledColor: {r: 0.59607846, g: 0.59607846, b: 0.59607846, a: 1}
-  _defaultPriceTextColor: {r: 0.99607843, g: 0.96862745, b: 0.7764706, a: 1}
+  defaultPriceTextColor: {r: 1, g: 1, b: 1, a: 1}
   cardBodyRect: {fileID: 2085656703454539236}
 --- !u!114 &6672383314208851571
 MonoBehaviour:
@@ -776,12 +776,12 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 4
-  m_Spacing: 8.31
-  m_ChildForceExpandWidth: 0
-  m_ChildForceExpandHeight: 0
-  m_ChildControlWidth: 0
-  m_ChildControlHeight: 0
-  m_ChildScaleWidth: 1
+  m_Spacing: -2.61
+  m_ChildForceExpandWidth: 1
+  m_ChildForceExpandHeight: 1
+  m_ChildControlWidth: 1
+  m_ChildControlHeight: 1
+  m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
 --- !u!114 &411365358097411827
@@ -1102,7 +1102,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 29.3116, y: 29.3116}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &9114697070936724816
 CanvasRenderer:
