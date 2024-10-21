@@ -67,7 +67,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 58b0614648c9749abbbe0cf1f48cab9a, type: 2}
+  - {fileID: 2100000, guid: fab778e119b8f4f47b65372606390d97, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -287,15 +287,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198446971744627332, guid: a46042fa6a69a8d4a9f749b337f0d576, type: 3}
       propertyPath: InitialModule.startColor.maxColor.b
-      value: 0.03324836
-      objectReference: {fileID: 0}
-    - target: {fileID: 198446971744627332, guid: a46042fa6a69a8d4a9f749b337f0d576, type: 3}
-      propertyPath: InitialModule.startColor.maxColor.g
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 198446971744627332, guid: a46042fa6a69a8d4a9f749b337f0d576, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 0.0059069074
+      objectReference: {fileID: 0}
+    - target: {fileID: 198446971744627332, guid: a46042fa6a69a8d4a9f749b337f0d576, type: 3}
       propertyPath: InitialModule.startColor.maxColor.r
-      value: 0.0754717
+      value: 0.2830189
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

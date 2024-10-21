@@ -8,16 +8,19 @@ using UnityEngine.Serialization;
 public abstract class Enemy : MonoBehaviour, IHpAdjustmentListener, IObjectPool<Enemy>
 {
     public Health thisHealth { get; set; }
-    
+
     [SerializeField] protected EnemyAnimations _enemyAnimations;
 
-    [FormerlySerializedAs("currency1DropAmount")] [SerializeField] private int currency1BaseDropAmount;
+    [FormerlySerializedAs("currency1DropAmount")] [SerializeField]
+    private int currency1BaseDropAmount;
+
     [SerializeField] private GameObject pickupToDrop;
+    [SerializeField] private GameObject healthPickupPrefab;
 
     //Movement
     [SerializeField] private Rigidbody _rigidbody;
-    
-    
+
+
     private IHpAdjustmentListener _hpAdjustmentListenerImplementation;
     private MoveTowardsTransform moveTowardsTransform;
 
@@ -30,14 +33,17 @@ public abstract class Enemy : MonoBehaviour, IHpAdjustmentListener, IObjectPool<
     //STATS SET BY DIFFICULTY
     [SerializeField] protected int baseAttackDamage = 10;
     [SerializeField] private SO_Upgrade damageIncreaser;
-    [FormerlySerializedAs("walkSpeedIncreaser")] [SerializeField] private SO_Upgrade walkSpeedMultiplier;
+
+    [FormerlySerializedAs("walkSpeedIncreaser")] [SerializeField]
+    private SO_Upgrade walkSpeedMultiplier;
+
     [SerializeField] private SO_Upgrade currencyDropAmountIncreaser;
     [SerializeField] private SO_Upgrade maxHpIncreaser;
     [HideInInspector] public float damage;
     [HideInInspector] public float walkSpeed;
     [HideInInspector] public float currency1DropAmount;
-    
-    
+
+
     protected delegate void EnemyBehavior();
 
     protected EnemyBehavior performBehavior;
@@ -46,7 +52,7 @@ public abstract class Enemy : MonoBehaviour, IHpAdjustmentListener, IObjectPool<
     {
         gameObject.SetActive(false);
         thisHealth = GetComponent<Health>();
-        
+
         if (GetComponent<Renderer>())
         {
             thisMaterial = GetComponent<Renderer>().material;
@@ -78,10 +84,10 @@ public abstract class Enemy : MonoBehaviour, IHpAdjustmentListener, IObjectPool<
         //Go into the upgrades, send the current wave and set the stats
         currency1DropAmount = currencyDropAmountIncreaser
             .newValueGrowthCurve.ComputeGrowth(currency1BaseDropAmount, wave);
-        thisHealth.enemyMaxHp = (int) maxHpIncreaser.newValueGrowthCurve
+        thisHealth.enemyMaxHp = (int)maxHpIncreaser.newValueGrowthCurve
             .ComputeGrowth(thisHealth.maxHp, wave);
         damage = damageIncreaser.newValueGrowthCurve.ComputeGrowth(baseAttackDamage, wave);
-        walkSpeed = moveTowardsTransform.baseWalkSpeed * 
+        walkSpeed = moveTowardsTransform.baseWalkSpeed *
                     walkSpeedMultiplier.newValueGrowthCurve
                         .ComputeGrowth(walkSpeedMultiplier.baseValue, wave);
         moveTowardsTransform.walkSpeed = walkSpeed;
@@ -89,7 +95,7 @@ public abstract class Enemy : MonoBehaviour, IHpAdjustmentListener, IObjectPool<
         Debug.LogWarning($"{gameObject.name} - Currency: {currency1DropAmount}. MaxHp: {thisHealth.enemyMaxHp}" +
                          $"\n Damage: {damage}, WalkSpeed: {walkSpeed}");
     }
-    
+
 
     private void Update()
     {
@@ -112,7 +118,7 @@ public abstract class Enemy : MonoBehaviour, IHpAdjustmentListener, IObjectPool<
     protected void DecideNextAnimation()
     {
         if (!thisHealth.isAlive) return;
-        
+
         // //Called when completing some animations
         // if (moveTowardsTransform.IsInAttackRange())
         // {
@@ -121,9 +127,9 @@ public abstract class Enemy : MonoBehaviour, IHpAdjustmentListener, IObjectPool<
         // }
         // else
         // {
-            _enemyAnimations?.Play(moveTowardsTransform.isDashing
-                ? EnemyAnimations.AnimationFrames.RunFWD
-                : EnemyAnimations.AnimationFrames.WalkFWD);
+        _enemyAnimations?.Play(moveTowardsTransform.isDashing
+            ? EnemyAnimations.AnimationFrames.RunFWD
+            : EnemyAnimations.AnimationFrames.WalkFWD);
         // }
     }
 
@@ -135,7 +141,7 @@ public abstract class Enemy : MonoBehaviour, IHpAdjustmentListener, IObjectPool<
         VFXSpawner.I.SpawnDamageNumber(damageAmount, transform.position);
         VFXSpawner.I.SpawnHitFX(transform);
         performBehavior = null;
-        
+
         _enemyAnimations?.Play(EnemyAnimations.AnimationFrames.GetHit,
             DecideNextAnimation);
     }
@@ -172,8 +178,14 @@ public abstract class Enemy : MonoBehaviour, IHpAdjustmentListener, IObjectPool<
         pickup.SetupCurrency((int)currency1DropAmount);
         pickup.SetNewHoverPosition(pickupSpawnPosition);
 
+        if (BozUtilities.GetDiceRoll() < 1f)
+        {
+            Pickup healthPickup = ObjectPoolManager<Pickup>.GetObject(healthPickupPrefab);
+            healthPickup.SetNewHoverPosition(pickupSpawnPosition);
+        }
+
         SFXPlayer.I.Play(AudioEventsStorage.I.enemyDied);
-        if(_rigidbody) _rigidbody.velocity = Vector3.zero;
+        if (_rigidbody) _rigidbody.velocity = Vector3.zero;
 
         if (_enemyAnimations)
         {

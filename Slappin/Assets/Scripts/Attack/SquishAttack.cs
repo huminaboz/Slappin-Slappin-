@@ -76,13 +76,13 @@ public class SquishAttack : AttackType
         SFXPlayer.I.Play(AudioEventsStorage.I.squishHitGround);
         _shake.StartShake();
         _currentAction = DoShitWhileTouchingGround;
-        hurtEnemiesColliderObject.SetActive(false);
-        // StartCoroutine(DisableInitialDamageCollider());
+        StartCoroutine(DisableInitialDamageCollider());
     }
 
     private IEnumerator DisableInitialDamageCollider()
     {
         yield return new WaitForSeconds(0.1f);
+        hurtEnemiesColliderObject.SetActive(false);
     }
 
     private void Update()

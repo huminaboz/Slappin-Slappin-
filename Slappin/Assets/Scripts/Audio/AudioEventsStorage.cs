@@ -29,6 +29,7 @@ public class AudioEventsStorage : Singleton<AudioEventsStorage>
 
     [Header("Pickups")] 
     public SFXScrob pickedUpCurrency1;
+    public SFXScrob healthPickup;
     
     [Header("Effects")] 
     

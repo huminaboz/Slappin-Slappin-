@@ -30,6 +30,12 @@ public class EnemyProjectile : MonoBehaviour, IObjectPool<EnemyProjectile>, IHpA
         goalPosition = new Vector3(transform.position.x, transform.position.y,
             Camera.main.transform.position.z);
         health.enabled = false;
+        FartAttack.OnFart += GetFartedOn;
+    }
+    
+    private void GetFartedOn(float fartDamage)
+    {
+        health.AdjustHp((int)-fartDamage, null);
     }
 
     private void FixedUpdate()
@@ -62,11 +68,13 @@ public class EnemyProjectile : MonoBehaviour, IObjectPool<EnemyProjectile>, IHpA
     public void Healed(int healAmount, GameObject healer)
     {
     }
+    
 
     public float HandleDeath(int lastAttack, GameObject killer)
     {
         SFXPlayer.I.Play(AudioEventsStorage.I.snuffedProjectile);
         health.enabled = false;
+        FartAttack.OnFart -= GetFartedOn;
         ReturnObjectToPool();
         return 0;
     }

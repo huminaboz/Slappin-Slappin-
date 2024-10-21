@@ -7,7 +7,7 @@ public class Pickup : MonoBehaviour, IObjectPool<Pickup>
     [SerializeField] private int currency1 = 1;
 
     // [SerializeField] private int currency2 = 0;
-    [SerializeField] private int hp = 0;
+    [SerializeField] private float hp = .1f;
 
     private Collider _collider;
     [HideInInspector] public Hover hover;
@@ -96,8 +96,16 @@ public class Pickup : MonoBehaviour, IObjectPool<Pickup>
 
         if (transform.localPosition.z <= goalPosition.z + pickupZoneZOffset)
         {
-            PlayerInfo.I.health.AdjustHp(hp, gameObject);
-            SFXPlayer.I.Play(AudioEventsStorage.I.pickedUpCurrency1);
+            if (hp > 0)
+            {
+                PlayerInfo.I.health.AdjustHp((int)(PlayerInfo.I.health.maxHp * hp), gameObject);
+                SFXPlayer.I.Play(AudioEventsStorage.I.healthPickup);
+            }
+            else
+            {
+                SFXPlayer.I.Play(AudioEventsStorage.I.pickedUpCurrency1);
+            }
+
             PlayerStats.I.AddCurency(currency1);
             ReturnObjectToPool();
         }
