@@ -58,8 +58,6 @@ public class FartAttack : MonoBehaviour
             return;
         }
 
-        Debug.LogWarning("Can fart");
-        
         if (Input.GetAxis("LTrigger") > 0f)
         {
             UpdateFartStats();

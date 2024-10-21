@@ -14,14 +14,16 @@ public class Spawner : MonoBehaviour
     [SerializeField] private GameObject bouncerPrefab;
     [SerializeField] private GameObject pawnPrefab;
     [SerializeField] private GameObject turtlePrefab;
+    [SerializeField] private GameObject magePrefab;
 
+    [SerializeField] private float mageSpawnChance = .1f;
     [SerializeField] private float spikeSpawnChance = .05f;
     [SerializeField] private float bouncerSpawnChance = .013f;
 
     [SerializeField] private Transform topLeftPossibleSpawn;
     [SerializeField] private Transform bottomRightPossibleSpawn;
 
-    [FormerlySerializedAs("spawnRateIncreaser")] [SerializeField] private SO_Upgrade spawnRateMultiplier;
+    [SerializeField] private SO_Upgrade spawnRateMultiplier;
 
     private float t = 0;
 
@@ -48,6 +50,16 @@ public class Spawner : MonoBehaviour
                     enemy.transform.position = GetRandomSpawnPosition();
                     enemy.transform.Rotate(0, 180, 0);
                     extraSpawnTime = .5f;
+                }
+            }
+            else if (GetRandomNumberBetweenZeroAndOne() < mageSpawnChance)
+            {
+                Enemy_Mage enemy = ObjectPoolManager<Enemy_Mage>.GetObject(magePrefab);
+                if (enemy is not null)
+                {
+                    enemy.transform.position = GetRandomSpawnPosition();
+                    enemy.transform.Rotate(0, 180, 0);
+                    extraSpawnTime = .25f;
                 }
             }
             else

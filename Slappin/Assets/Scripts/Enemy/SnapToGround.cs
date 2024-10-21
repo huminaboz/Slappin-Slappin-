@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class SlopeFollowing : MonoBehaviour
+public class SnapToTheGround : MonoBehaviour
 {
     public LayerMask groundLayer;           // The ground layer to detect
     public float rayDistance = 1.5f;        // How far the ray will check downwards

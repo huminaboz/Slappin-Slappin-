@@ -57,6 +57,8 @@ MonoBehaviour:
   enemyAttacked: {fileID: 11400000, guid: 49ecffaa9bd869844ac807c07dbffebd, type: 2}
   bouncerExploded: {fileID: 11400000, guid: 16d6d68781ec8d04cb9da9ac585b13f7, type: 2}
   bouncerBlocked: {fileID: 11400000, guid: ffae0d88f357d1945aeb811fdc90992e, type: 2}
+  projectileShot: {fileID: 11400000, guid: 2763b9598536fbe4dafd97656f242bdf, type: 2}
+  snuffedProjectile: {fileID: 11400000, guid: 41d82d549a3c29e4d822ae6336567c43, type: 2}
   pickedUpCurrency1: {fileID: 11400000, guid: 715e4db3fe6fe5a4cb4d09b78370a32d, type: 2}
   WaveEnded: {fileID: 11400000, guid: e719805b7f265784594d9e1691660216, type: 2}
   WaveStart: {fileID: 11400000, guid: 22a14b79b917f6842ae908825bb3964b, type: 2}

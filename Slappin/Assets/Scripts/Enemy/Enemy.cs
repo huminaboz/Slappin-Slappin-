@@ -33,9 +33,9 @@ public abstract class Enemy : MonoBehaviour, IHpAdjustmentListener, IObjectPool<
     [FormerlySerializedAs("walkSpeedIncreaser")] [SerializeField] private SO_Upgrade walkSpeedMultiplier;
     [SerializeField] private SO_Upgrade currencyDropAmountIncreaser;
     [SerializeField] private SO_Upgrade maxHpIncreaser;
-    public float damage;
-    public float walkSpeed;
-    public float currency1DropAmount;
+    [HideInInspector] public float damage;
+    [HideInInspector] public float walkSpeed;
+    [HideInInspector] public float currency1DropAmount;
     
     
     protected delegate void EnemyBehavior();
@@ -97,10 +97,9 @@ public abstract class Enemy : MonoBehaviour, IHpAdjustmentListener, IObjectPool<
         performBehavior?.Invoke();
     }
 
-    public void SwitchToAttackMode()
+    public virtual void SwitchToAttackMode()
     {
         performBehavior = Attack;
-
     }
 
     public void TurnOffAttackMode()
