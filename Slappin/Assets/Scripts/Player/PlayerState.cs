@@ -233,6 +233,7 @@ public class SquishState : PlayerState
 
     public override void Exit(PlayerState toState)
     {
+        //TODO:: Make absorb mode stop
     }
 
     public override void Update(float deltaTime)
@@ -274,13 +275,13 @@ public class StateAbsorbState : PlayerState
 
     public override void Exit(PlayerState toState)
     {
+        OnAbsorbReleased?.Invoke();
     }
 
     public override void Update(float deltaTime)
     {
         if (Input.GetButtonUp("Fire2"))
         {
-            OnAbsorbReleased?.Invoke();
             thisPlayer.SetState(new StateDefault(thisPlayer));
         }
     }

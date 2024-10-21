@@ -9357,7 +9357,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   rayDistance: 1.5
-  groundOffset: 0
+  groundOffset: 0.02
   repositionSpeed: 10
   showRaycastGizmo: 0
   forwardRayOffset: 0.5
@@ -24252,7 +24252,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -108.7, y: 118.2}
+  m_AnchoredPosition: {x: -105.1, y: 111}
   m_SizeDelta: {x: 256, y: 256}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1483443555
@@ -24268,7 +24268,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.1764706, g: 0.20784315, b: 0.39607847, a: 0.5019608}
+  m_Color: {r: 0.4509804, g: 0.9411765, b: 0.6431373, a: 0.45490196}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
