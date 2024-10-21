@@ -26,15 +26,7 @@ public class DebugHelper : MonoBehaviour
         _qc.OnDeactivate -= OnQuantumDeactivate;
     }
 
-    private void Update()
-    {
-        if (Input.GetButtonDown("Pause"))
-        {
-            Debug.LogWarning("PAUSING OR UNPAUSING GAME");
-            Time.timeScale = Time.timeScale == 1f ? 0f : 1f;
-            StateGame.PlayerInGameControlsEnabled = Time.timeScale == 1f;
-        }
-    }
+
 
     private void OnQuantumActivate()
     {

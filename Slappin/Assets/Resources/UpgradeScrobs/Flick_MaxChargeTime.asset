@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: Flick_MaxChargeTime
   m_EditorClassIdentifier: 
   stat: 4002
-  title: Max Charge Time
+  title: Faster Full Charge
   baseValue: 3
   basePrice: 50
   upgradeType: 3
   numberType: 3
-  useMaxValue: 0
   useMinValue: 1
+  useMaxValue: 0
   minValue: 0.47
   maxValue: 1e+12
   newValueGrowthCurve: {fileID: 11400000, guid: 3582cab9c367f0f43bbae932625e8bae, type: 2}
