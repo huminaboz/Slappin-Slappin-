@@ -122,6 +122,7 @@ public class StoreUIManager : Singleton<StoreUIManager>
             upgradeTypes.Add(upgradeSO.upgradeType);
             GameObject categoryRow = Instantiate(categoryRowPrefab, rowsParent.transform);
             categories.Add(upgradeSO.upgradeType, categoryRow);
+            categoryRow.gameObject.name = upgradeSO.upgradeType.ToString();
 
             //Add the category title
             GameObject categoryRowTitle = Instantiate(categoryRowTitlePrefab, categoryRow.transform);

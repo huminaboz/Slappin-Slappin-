@@ -322,6 +322,7 @@ MonoBehaviour:
   shadowPressed: {r: 0.77254903, g: 0.18431373, b: 0.050980393, a: 1}
   priceBgDisabledColor: {r: 0.2901961, g: 0.32156864, b: 0.3019608, a: 1}
   priceTextDisabledColor: {r: 0.59607846, g: 0.59607846, b: 0.59607846, a: 1}
+  _defaultPriceTextColor: {r: 0.99607843, g: 0.96862745, b: 0.7764706, a: 1}
   cardBodyRect: {fileID: 2085656703454539236}
 --- !u!114 &6672383314208851571
 MonoBehaviour:

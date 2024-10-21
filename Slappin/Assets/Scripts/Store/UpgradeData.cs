@@ -26,7 +26,7 @@ public class UpgradeData : MonoBehaviour
         _upgradeCardAppearance = GetComponentInChildren<UpgradeCard_Appearance>();
     }
 
-    private void Start()
+    private void OnEnable()
     {
         _upgradeCardAppearance.Initialize();
     }
@@ -67,8 +67,7 @@ public class UpgradeData : MonoBehaviour
             return false;
         }
 
-        return GetPrice(amount) <= PlayerStats.I.currency1
-               && level + (amount - 1) < upgradeSO.maxLevel;
+        return GetPrice(amount) <= PlayerStats.I.currency1;
     }
 
 

@@ -26,13 +26,12 @@ public class UpgradeCard_Appearance : MonoBehaviour
     [SerializeField] private Color shadowPressed;
     [SerializeField] private Color priceBgDisabledColor;
     [SerializeField] private Color priceTextDisabledColor;
+    [SerializeField] private Color defaultPriceTextColor = Color.white;
 
     [SerializeField] private RectTransform cardBodyRect;
 
     private Vector2 _bodyDefaultPosition;
     private Color _defaultPriceBgColor;
-    private Color _defaultPriceTextColor;
-
 
     //TODO:: This will get called when opening the menu in the future
     public void Initialize()
@@ -41,7 +40,6 @@ public class UpgradeCard_Appearance : MonoBehaviour
         shadowDefault = shadowImage.color;
         _bodyDefaultPosition = cardBodyRect.anchoredPosition;
         _defaultPriceBgColor = StoreUIManager.I.GetCategoryColor(upgradeData.upgradeSO.upgradeType);
-        _defaultPriceTextColor = priceText.color;
         thisButton = GetComponent<Button>();
         gameObject.name = upgradeData.upgradeSO.title;
         titleText.text = upgradeData.upgradeSO.title;
@@ -98,8 +96,9 @@ public class UpgradeCard_Appearance : MonoBehaviour
         //Don't let the button events set this if there's no moneys
         if (upgradeData.IsAllowedToBePurchased(StoreUIManager.I.previewAmount))
         {
+            Debug.LogWarning($"Default Appearance set up for {upgradeData.upgradeSO.title}");
             priceBgColor.color = _defaultPriceBgColor;
-            priceText.color = _defaultPriceTextColor;
+            priceText.color = defaultPriceTextColor;
 
             //Allow the button to be pressed
             thisButton.interactable = true;
