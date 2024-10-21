@@ -6,7 +6,7 @@ public class AttackCollider : MonoBehaviour
     
     private void OnTriggerEnter(Collider other)
     {
-        Debug.LogWarning($"{_attackType} hit {other}");
+        Debug.Log($"{_attackType} hit {other}");
         if (other.GetComponent<Enemy_Spike>() is not null) return;
         _attackType.HitSomething(other.gameObject);
         if (_attackType is SquishAttack)

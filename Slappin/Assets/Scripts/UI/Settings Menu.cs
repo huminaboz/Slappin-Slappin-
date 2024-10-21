@@ -85,7 +85,7 @@ public class SettingsMenu : MonoBehaviour
     {
         MusicPlayer.I.Play(AudioEventsStorage.I.store);
         contents.SetActive(true);
-        Debug.LogWarning("UNPAUSING GAME");
+        Debug.Log("UNPAUSING GAME");
         Time.timeScale = 0f;
         StateGame.PlayerInGameControlsEnabled = false;
     }
@@ -94,7 +94,7 @@ public class SettingsMenu : MonoBehaviour
     {
         MusicPlayer.I.Play(AudioEventsStorage.I.playing);
         contents.SetActive(false);
-        Debug.LogWarning("PAUSING GAME");
+        Debug.Log("PAUSING GAME");
         Time.timeScale = 1f;
         StateGame.PlayerInGameControlsEnabled = true;
     }

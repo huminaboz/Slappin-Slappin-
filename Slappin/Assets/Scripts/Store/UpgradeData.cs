@@ -47,6 +47,7 @@ public class UpgradeData : MonoBehaviour
             return;
         }
 
+        
         PlayerStats.I.currency1 -= GetPrice(amount);
 
         //NOTE: Remember that by incrementing this, it will increase everything, so updates after, purchases before
@@ -73,8 +74,14 @@ public class UpgradeData : MonoBehaviour
 
     private int GetPrice(int amount)
     {
-        return (int)Mathf.Floor(upgradeSO.newPriceGrowthCurve
-            .ComputeGrowth(upgradeSO.basePrice, level + (amount - 1)));
+        float totalPrice = 0f;
+        for (int i = 1; i <= amount; i++)
+        {
+            totalPrice += (int)Mathf.Floor(upgradeSO.newPriceGrowthCurve
+                .ComputeGrowth(upgradeSO.basePrice, level + i));
+        }
+            
+        return (int) totalPrice;
     }
 
     public string GetPriceText(int amount)

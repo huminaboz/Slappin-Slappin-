@@ -90,8 +90,6 @@ public class SquishAttack : AttackType
     //For calling on the playerstate
     private void DoShitWhileTouchingGround()
     {
-        Debug.Log("Touching the ground, hurt things!");
-
         if (!Input.GetButton("Fire4"))
         {
             _currentAction = null;
