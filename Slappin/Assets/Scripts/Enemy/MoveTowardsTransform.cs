@@ -55,6 +55,37 @@ public class MoveTowardsTransform : MonoBehaviour, IHpAdjustmentListener
                <= goalAttackLine.localPosition.z;
     }
 
+    float NormalizeZPosition(float startZ, float endZ, float currentZ)
+    {
+        return (currentZ - startZ) / (endZ - startZ);
+    }
+    
+    /// <summary>
+    /// Enemy will walk much faster at the start, and then down to half their base speed as they get close
+    /// </summary>
+    /// <param name="walkSpeed"></param>
+    /// <returns></returns>
+    private float GetSpeedBasedOnDistance(float walkSpeed)
+    {
+        float maxMultiplier = DifficultyManager.I.maxSpawnSpeedBoostMultiplier;
+        float startZ = EnemyTarget.I.spawnLine.position.z;
+        float endZ = goalAttackLine.position.z;
+        float currentZ = transform.position.z;
+
+        float normalizedZPosition = NormalizeZPosition(startZ, endZ, currentZ);
+        
+        // Debug.LogWarning($"Normalized Position: " + normalizedZPosition);
+        
+        float curveAdjustedRatio = DifficultyManager.I
+            .spawnSpeedBoostCurve.Evaluate(normalizedZPosition);
+        // Debug.LogWarning($"Curve adjusted ratio: " + curveAdjustedRatio);
+        // Debug.LogWarning($"Boost Multiplier: " + curveAdjustedRatio * maxMultiplier);
+        float newWalkSpeed = (walkSpeed * .5f) + (curveAdjustedRatio * maxMultiplier);
+        Debug.LogWarning($"New Walk Speed: " + newWalkSpeed);
+            
+        return newWalkSpeed;
+    }
+
     private void FixedUpdate()
     {
         if (!thisEnemy.thisHealth.isAlive) return;
@@ -69,7 +100,10 @@ public class MoveTowardsTransform : MonoBehaviour, IHpAdjustmentListener
         Vector3 direction = EnemyTarget.I.targetTransform.position - transform.position;
         direction.y = 0f;
 
-        _rigidbody.velocity = direction.normalized * (walkSpeed * Time.deltaTime);
+        
+        
+        _rigidbody.velocity = direction.normalized 
+                              * (GetSpeedBasedOnDistance(walkSpeed) * Time.deltaTime);
 
         // If there's movement, rotate to face the target
         if (direction.magnitude > 0.1f)

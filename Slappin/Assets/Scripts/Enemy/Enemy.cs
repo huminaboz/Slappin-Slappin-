@@ -91,6 +91,7 @@ public abstract class Enemy : MonoBehaviour, IHpAdjustmentListener, IObjectPool<
         thisHealth.enemyMaxHp = (int)(thisHealth.maxHp * hpMultiplier);
         damage = baseAttackDamage * damageMultiplier;
         walkSpeed = moveTowardsTransform.baseWalkSpeed * walkSpeedMultiplier;
+        //TODO: Make an speedmultiplier based on distance to goal that ends in 1
         moveTowardsTransform.walkSpeed = walkSpeed;
 
         Debug.Log($"{gameObject.name} - Currency: {currency1DropAmount}. MaxHp: {thisHealth.enemyMaxHp}" +

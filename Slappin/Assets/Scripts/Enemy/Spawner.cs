@@ -1,3 +1,6 @@
+using System;
+using System.Collections;
+using Mono.CSharp;
 using UnityEngine;
 using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
@@ -26,81 +29,103 @@ public class Spawner : MonoBehaviour
     [SerializeField] private Transform topLeftPossibleSpawn;
     [SerializeField] private Transform bottomRightPossibleSpawn;
 
+    [Header("DEBUG")] [SerializeField] private bool onlySpawnOne = false;
 
     private float t = 0;
 
+    private void Start()
+    {
+        if (onlySpawnOne)
+        {
+            DoSpawn();
+            Debug.LogError("ONLY SPAWN ONE IS ON");
+        }
+    }
+
+
     private void Update()
     {
+        if (onlySpawnOne) return;
         t += Time.deltaTime;
         if (t >= timeTilNextSpawn)
         {
-            if (GetRandomNumberBetweenZeroAndOne() < bouncerSpawnChance*StatLiason.I.GetEnemy(Stat.Enemy_SpawnChance))
-            {
-                Enemy_Bouncer enemy = ObjectPoolManager<Enemy_Bouncer>.GetObject(bouncerPrefab);
-                if (enemy is not null)
-                {
-                    enemy.transform.position = GetRandomSpawnPosition();
-                    enemy.transform.Rotate(0, 180, 0);
-                    extraSpawnTime = 1f;
-                }
-            }
-            else if (GetRandomNumberBetweenZeroAndOne() < spikeSpawnChance*StatLiason.I.GetEnemy(Stat.Enemy_SpawnChance))
-            {
-                Enemy_Spike enemy = ObjectPoolManager<Enemy_Spike>.GetObject(spikePrefab);
-                if (enemy is not null)
-                {
-                    enemy.transform.position = GetRandomSpawnPosition();
-                    enemy.transform.Rotate(0, 180, 0);
-                    extraSpawnTime = .5f;
-                }
-            }
-            else if (GetRandomNumberBetweenZeroAndOne() < orcSpawnChance*StatLiason.I.GetEnemy(Stat.Enemy_SpawnChance))
-            {
-                Enemy_Pawn enemy = ObjectPoolManager<Enemy_Pawn>.GetObject(orcPrefab);
-                if (enemy is not null)
-                {
-                    enemy.transform.position = GetRandomSpawnPosition();
-                    enemy.transform.Rotate(0, 180, 0);
-                    extraSpawnTime = .5f;
-                }
-            }
-            else if (GetRandomNumberBetweenZeroAndOne() < mageSpawnChance*StatLiason.I.GetEnemy(Stat.Enemy_SpawnChance))
-            {
-                Enemy_Mage enemy = ObjectPoolManager<Enemy_Mage>.GetObject(magePrefab);
-                if (enemy is not null)
-                {
-                    enemy.transform.position = GetRandomSpawnPosition();
-                    enemy.transform.Rotate(0, 180, 0);
-                    extraSpawnTime = .25f;
-                }
-            }
-            else
-            {
-                if (GetRandomNumberBetweenZeroAndOne() < 1 - turtleSpawnChance*StatLiason.I.GetEnemy(Stat.Enemy_SpawnChance))
-                {
-                    Enemy_Pawn enemy = ObjectPoolManager<Enemy_Pawn>.GetObject(pawnPrefab);
-                    if (enemy is not null)
-                    {
-                        enemy.transform.position = GetRandomSpawnPosition();
-                        enemy.transform.Rotate(0, 180, 0);
-                        extraSpawnTime = 0f;
-                    }
-                }
-                else
-                {
-                    Enemy_Turtle enemy = ObjectPoolManager<Enemy_Turtle>.GetObject(turtlePrefab);
-                    if (enemy is not null)
-                    {
-                        enemy.transform.position = GetRandomSpawnPosition();
-                        extraSpawnTime = 0f;
-                    }
-                }
-            }
-
+            DoSpawn();
             t = 0;
             timeTilNextSpawn = GetRandomNextSpawnTime() + extraSpawnTime;
         }
     }
+
+    private void DoSpawn()
+    {
+        if (GetRandomNumberBetweenZeroAndOne() < bouncerSpawnChance * StatLiason.I.GetEnemy(Stat.Enemy_SpawnChance))
+        {
+            Enemy_Bouncer enemy = ObjectPoolManager<Enemy_Bouncer>.GetObject(bouncerPrefab);
+            if (enemy is not null)
+            {
+                enemy.transform.position = GetRandomSpawnPosition();
+                enemy.transform.Rotate(0, 180, 0);
+                extraSpawnTime = 1f;
+            }
+        }
+        else if (GetRandomNumberBetweenZeroAndOne() <
+                 spikeSpawnChance * StatLiason.I.GetEnemy(Stat.Enemy_SpawnChance))
+        {
+            Enemy_Spike enemy = ObjectPoolManager<Enemy_Spike>.GetObject(spikePrefab);
+            if (enemy is not null)
+            {
+                enemy.transform.position = GetRandomSpawnPosition();
+                enemy.transform.Rotate(0, 180, 0);
+                extraSpawnTime = .5f;
+            }
+        }
+        else if (GetRandomNumberBetweenZeroAndOne() <
+                 orcSpawnChance * StatLiason.I.GetEnemy(Stat.Enemy_SpawnChance))
+        {
+            Enemy_Pawn enemy = ObjectPoolManager<Enemy_Pawn>.GetObject(orcPrefab);
+            if (enemy is not null)
+            {
+                enemy.transform.position = GetRandomSpawnPosition();
+                enemy.transform.Rotate(0, 180, 0);
+                extraSpawnTime = .5f;
+            }
+        }
+        else if (GetRandomNumberBetweenZeroAndOne() <
+                 mageSpawnChance * StatLiason.I.GetEnemy(Stat.Enemy_SpawnChance))
+        {
+            Enemy_Mage enemy = ObjectPoolManager<Enemy_Mage>.GetObject(magePrefab);
+            if (enemy is not null)
+            {
+                enemy.transform.position = GetRandomSpawnPosition();
+                enemy.transform.Rotate(0, 180, 0);
+                extraSpawnTime = .25f;
+            }
+        }
+        else
+        {
+            if (GetRandomNumberBetweenZeroAndOne() <
+                1 - turtleSpawnChance * StatLiason.I.GetEnemy(Stat.Enemy_SpawnChance))
+            {
+                Enemy_Pawn enemy = ObjectPoolManager<Enemy_Pawn>.GetObject(pawnPrefab);
+                if (enemy is not null)
+                {
+                    enemy.transform.position = GetRandomSpawnPosition();
+                    enemy.transform.Rotate(0, 180, 0);
+                    extraSpawnTime = 0f;
+                }
+            }
+            else
+            {
+                Enemy_Turtle enemy = ObjectPoolManager<Enemy_Turtle>.GetObject(turtlePrefab);
+                if (enemy is not null)
+                {
+                    enemy.transform.position = GetRandomSpawnPosition();
+                    extraSpawnTime = 0f;
+                }
+            }
+        }
+
+    }
+
 
     private Vector3 GetRandomSpawnPosition()
     {

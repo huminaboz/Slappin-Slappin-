@@ -8,7 +8,9 @@ public class DifficultyManager : Singleton<DifficultyManager>
     //TODO:: Get a reference to the spawner
     [SerializeField] private Spawner _spawner;
     public int currentWave = 1;
-    
+
+    [SerializeField] public float maxSpawnSpeedBoostMultiplier = 5f;
+    [SerializeField] public AnimationCurve spawnSpeedBoostCurve;
     
     public void SetupNextWave()
     {
