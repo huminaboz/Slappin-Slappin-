@@ -69,6 +69,8 @@ public class Enemy_Mage : Enemy, IObjectPool<Enemy_Mage>
         _enemyAnimations?.Play(EnemyAnimations.AnimationFrames.Attack01,
             () =>
             {
+                isTryingToAttack = false;
+
                 DecideNextAnimation();
                 StartCoroutine(RandomlyStopToAttack());
                 _moveTowardsTransform.enabled = true;

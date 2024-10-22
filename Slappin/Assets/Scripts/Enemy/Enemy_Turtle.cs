@@ -12,7 +12,7 @@ public class Enemy_Turtle : Enemy, IObjectPool<Enemy_Turtle>
     private Tween attackTween;
 
     private Collider _collider;
-    
+
     public override void SetupObjectFirstTime()
     {
         base.SetupObjectFirstTime();
@@ -25,8 +25,8 @@ public class Enemy_Turtle : Enemy, IObjectPool<Enemy_Turtle>
         {
             Debug.LogWarning("pawn didn't have a walk towards transform component");
         }
+
         _collider = GetComponent<Collider>();
-        
     }
 
     public override void InitializeObjectFromPool()
@@ -44,10 +44,11 @@ public class Enemy_Turtle : Enemy, IObjectPool<Enemy_Turtle>
     {
         SFXPlayer.I.Play(AudioEventsStorage.I.enemyAttacked);
         _moveTowardsTransform.enabled = false;
-        PlayerInfo.I.health.AdjustHp((int)-damage, gameObject);
         _enemyAnimations?.Play(EnemyAnimations.AnimationFrames.Attack01,
             () =>
             {
+                PlayerInfo.I.health.AdjustHp((int)-damage, gameObject);
+                isTryingToAttack = false;
                 _moveTowardsTransform.BackUp();
                 _moveTowardsTransform.enabled = true;
                 DecideNextAnimation();

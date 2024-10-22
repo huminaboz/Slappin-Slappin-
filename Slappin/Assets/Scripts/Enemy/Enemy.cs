@@ -93,7 +93,7 @@ public abstract class Enemy : MonoBehaviour, IHpAdjustmentListener, IObjectPool<
         moveTowardsTransform.walkSpeed = walkSpeed;
 
         Debug.Log($"{gameObject.name} - Currency: {currency1DropAmount}. MaxHp: {thisHealth.enemyMaxHp}" +
-                         $"\n Damage: {damage}, WalkSpeed: {walkSpeed}");
+                  $"\n Damage: {damage}, WalkSpeed: {walkSpeed}");
     }
 
 
@@ -106,6 +106,9 @@ public abstract class Enemy : MonoBehaviour, IHpAdjustmentListener, IObjectPool<
     public virtual void SwitchToAttackMode()
     {
         performBehavior = Attack;
+        
+        //NOTE:: This is shitty, but you gotta set this to false at the end of their animation
+        isTryingToAttack = true;
     }
 
     public void TurnOffAttackMode()
@@ -115,22 +118,23 @@ public abstract class Enemy : MonoBehaviour, IHpAdjustmentListener, IObjectPool<
 
     protected abstract void Attack();
 
+    protected bool isTryingToAttack = false;
+    
     protected void DecideNextAnimation()
     {
+        // //Called when completing some animations
         if (!thisHealth.isAlive) return;
 
-        // //Called when completing some animations
-        // if (moveTowardsTransform.IsInAttackRange())
-        // {
-        //     _enemyAnimations?.Play(EnemyAnimations.AnimationFrames.Attack01,
-        //         DecideNextAnimation);
-        // }
-        // else
-        // {
-        _enemyAnimations?.Play(moveTowardsTransform.isDashing
-            ? EnemyAnimations.AnimationFrames.RunFWD
-            : EnemyAnimations.AnimationFrames.WalkFWD);
-        // }
+        if (moveTowardsTransform.IsInAttackRange() && isTryingToAttack)
+        {
+            SwitchToAttackMode();
+        }
+        else
+        {
+            _enemyAnimations?.Play(moveTowardsTransform.isDashing
+                ? EnemyAnimations.AnimationFrames.RunFWD
+                : EnemyAnimations.AnimationFrames.WalkFWD);
+        }
     }
 
     public void TookDamage(int damageAmount, GameObject attacker)
@@ -169,6 +173,7 @@ public abstract class Enemy : MonoBehaviour, IHpAdjustmentListener, IObjectPool<
 
     public virtual float HandleDeath(int lastAttack, GameObject killer)
     {
+        isTryingToAttack = false;
         FartAttack.OnFart -= GetFartedOn;
         //TODO: Throw up a puff of particle
         //TODO:: Pop currency(s) out of enemy in a celebration
