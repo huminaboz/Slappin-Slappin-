@@ -43,4 +43,5 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   levelAtWhichGraphReaches1: 1000
-  maximumValue: 100
+  maximumValue: 10000
+  multiplier: 1

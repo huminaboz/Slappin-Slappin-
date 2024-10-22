@@ -5,6 +5,7 @@ public class DoTCollider : MonoBehaviour
 {
     private float damageRate;
     private float damage;
+    private float t = 0f;
 
 
     private void OnEnable()
@@ -28,7 +29,6 @@ public class DoTCollider : MonoBehaviour
         damage = StatLiason.I.Get(Stat.SquishDamgeOverTime);
     }
 
-    private float t = 0f;
 
     private void OnTriggerEnter(Collider other)
     {
