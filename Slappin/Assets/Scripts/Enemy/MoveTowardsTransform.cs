@@ -81,7 +81,7 @@ public class MoveTowardsTransform : MonoBehaviour, IHpAdjustmentListener
         // Debug.LogWarning($"Curve adjusted ratio: " + curveAdjustedRatio);
         // Debug.LogWarning($"Boost Multiplier: " + curveAdjustedRatio * maxMultiplier);
         float newWalkSpeed = (walkSpeed * .5f) + (curveAdjustedRatio * maxMultiplier);
-        Debug.LogWarning($"New Walk Speed: " + newWalkSpeed);
+        // Debug.LogWarning($"New Walk Speed: " + newWalkSpeed);
             
         return newWalkSpeed;
     }
