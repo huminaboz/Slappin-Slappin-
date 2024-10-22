@@ -9,12 +9,15 @@ public class MoveTowardsTransform : MonoBehaviour, IHpAdjustmentListener
     [SerializeField] private float rotationSpeed = 5f;
 
     [HideInInspector] public float walkSpeed;
+
+    [HideInInspector] public Transform goalAttackLine;
     
     private Enemy thisEnemy;
     private Rigidbody _rigidbody;
     public bool isDashing = false;
 
     //TODO:: Can set this up to target a random X position at the hurt line
+
 
     private void Awake()
     {
@@ -25,6 +28,8 @@ public class MoveTowardsTransform : MonoBehaviour, IHpAdjustmentListener
         else Debug.LogError("Walkscript doesn't have an enemy script");
 
         _rigidbody = GetComponent<Rigidbody>();
+
+        goalAttackLine = EnemyTarget.I.hurtLine;
     }
 
     private void Start()
@@ -47,7 +52,7 @@ public class MoveTowardsTransform : MonoBehaviour, IHpAdjustmentListener
     public bool IsInAttackRange()
     {
         return transform.localPosition.z + transform.localScale.z * .05
-               <= EnemyTarget.I.hurtLine.localPosition.z;
+               <= goalAttackLine.localPosition.z;
     }
 
     private void FixedUpdate()

@@ -27,6 +27,11 @@ public class Enemy_Mage : Enemy, IObjectPool<Enemy_Mage>
         }
     }
 
+    private void Start()
+    {
+        _moveTowardsTransform.goalAttackLine = EnemyTarget.I.mageLine;
+    }
+
     public override void InitializeObjectFromPool()
     {
         base.InitializeObjectFromPool();
