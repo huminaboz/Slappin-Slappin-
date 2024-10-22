@@ -40,7 +40,7 @@ public class HandMovement : MonoBehaviour
         if (direction.magnitude >= 0.1f)
         {
             _rigidbody.velocity = direction * (currentSpeed * Time.deltaTime);
-            thisPlayer.CurrentAttackType?.SetDirection();
+            thisPlayer.CurrentAttackType?.SetFacingDirection();
         }
         else
         {

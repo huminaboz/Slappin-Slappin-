@@ -39,6 +39,11 @@ public class SquishAttack : AttackType
 
     public override void InitiateAttack()
     {
+        //Little extra cleanup in case some async stuff is happening
+        StopAllCoroutines(); 
+        _currentAction = null;
+        
+        //The attack as scheduled
         base.InitiateAttack();
         handModel?.SetActive(true);
 

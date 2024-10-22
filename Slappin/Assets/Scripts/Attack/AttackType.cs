@@ -135,7 +135,7 @@ public class AttackType : MonoBehaviour
         storedRelativeAttackPosition = relativeAttackPositioning;
     }
 
-    public void SetDirection()
+    public void SetFacingDirection()
     {
         //If on the right side of the center line, reverse the x scale
         if (handPositioner.position.x > cameraTransform.position.x)
@@ -179,7 +179,7 @@ public class AttackType : MonoBehaviour
         // }
 
         SetParentPosition(); //So the spike collision check is in the right place
-        SetDirection();
+        SetFacingDirection();
     }
 
     protected virtual void InitiateTravelToGround()
