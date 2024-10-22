@@ -47,14 +47,18 @@ public class UpgradeData : MonoBehaviour
             return;
         }
 
-        
+
         PlayerStats.I.currency1 -= GetPrice(amount);
 
         //NOTE: Remember that by incrementing this, it will increase everything, so updates after, purchases before
-        level++;
         //Upgrade the universal source of truth for getting stat numbers
-        StatLiason.I.Stats[upgradeSO.stat]
-            = upgradeSO.newValueGrowthCurve.ComputeGrowth(upgradeSO.baseValue, level);
+
+        for (int i = 0; i <= amount; i++)
+        {
+            level++;
+            StatLiason.I.Stats[upgradeSO.stat]
+                = upgradeSO.newValueGrowthCurve.ComputeGrowth(upgradeSO.baseValue, level);
+        }
 
         SFXPlayer.I.Play(AudioEventsStorage.I.BoughtUpgrade);
         //Send out an event to update all the cards appearances for affordability or not
@@ -80,8 +84,8 @@ public class UpgradeData : MonoBehaviour
             totalPrice += (int)Mathf.Floor(upgradeSO.newPriceGrowthCurve
                 .ComputeGrowth(upgradeSO.basePrice, level + i));
         }
-            
-        return (int) totalPrice;
+
+        return (int)totalPrice;
     }
 
     public string GetPriceText(int amount)

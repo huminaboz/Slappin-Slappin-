@@ -201,5 +201,6 @@ public class StoreUIManager : Singleton<StoreUIManager>
         PlayerStats.I.currency1 += 999999999;
         UpdateLabels();
         OnDebugUpdateStoreUI?.Invoke();
+        UIStateSwapper.I.GoToStore();
     }
 }
