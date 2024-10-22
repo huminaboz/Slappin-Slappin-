@@ -21,6 +21,7 @@ public class Spawner : MonoBehaviour
     [SerializeField] private float orcSpawnChance = .065f;
     [SerializeField] private float spikeSpawnChance = .05f;
     [SerializeField] private float bouncerSpawnChance = .013f;
+    [SerializeField] private float turtleSpawnChance = .15f;
 
     [SerializeField] private Transform topLeftPossibleSpawn;
     [SerializeField] private Transform bottomRightPossibleSpawn;
@@ -76,7 +77,7 @@ public class Spawner : MonoBehaviour
             }
             else
             {
-                if (GetRandomNumberBetweenZeroAndOne() < .7f)
+                if (GetRandomNumberBetweenZeroAndOne() < 1-turtleSpawnChance)
                 {
                     Enemy_Pawn enemy = ObjectPoolManager<Enemy_Pawn>.GetObject(pawnPrefab);
                     if (enemy is not null)

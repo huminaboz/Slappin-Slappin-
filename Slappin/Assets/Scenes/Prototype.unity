@@ -1827,6 +1827,7 @@ MonoBehaviour:
   orcSpawnChance: 0.05
   spikeSpawnChance: 0.025
   bouncerSpawnChance: 0.025
+  turtleSpawnChance: 0.15
   topLeftPossibleSpawn: {fileID: 280439155}
   bottomRightPossibleSpawn: {fileID: 37348742}
   spawnRateMultiplier: {fileID: 11400000, guid: f6a790926c47c1b43a21b3f02a927c64, type: 2}
