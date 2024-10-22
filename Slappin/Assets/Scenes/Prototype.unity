@@ -16834,6 +16834,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hpText: {fileID: 1120360009}
+  defaulthpBarColor: {r: 0.99607843, g: 0.9529412, b: 0.6509804, a: 1}
+  dangerColor: {r: 1, g: 0.42352942, b: 0.29411766, a: 1}
+  hpFillImage: {fileID: 1482482589}
 --- !u!1001 &1040757695
 PrefabInstance:
   m_ObjectHideFlags: 0
