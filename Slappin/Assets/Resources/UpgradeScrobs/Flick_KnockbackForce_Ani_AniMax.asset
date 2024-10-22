@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aaf371d22c65cd14ab65d603456a522f, type: 3}
+  m_Name: Flick_KnockbackForce_Ani_AniMax
+  m_EditorClassIdentifier: 
+  notes: 
+  showPreview: 1
+  previewUpgrade: {fileID: 11400000, guid: c82186fe2471cbc4ab1b41031bf26a67, type: 2}
+  maxDisplayedRows: 34
+  startOffset: 0
+  debugValues: "Level\t\tAmount\t\t\tPrice\n0\t\t1.02x\t\t\t10\n1\t\t1.07x\t\t\t10\n2\t\t1.11x\t\t\t21\n3\t\t1.16x\t\t\t31\n4\t\t1.20x\t\t\t42\n5\t\t1.24x\t\t\t52\n6\t\t1.29x\t\t\t63\n7\t\t1.33x\t\t\t75\n8\t\t1.37x\t\t\t86\n9\t\t1.41x\t\t\t98\n10\t\t1.45x\t\t\t109\n11\t\t1.49x\t\t\t121\n12\t\t1.53x\t\t\t134\n13\t\t1.57x\t\t\t146\n14\t\t1.61x\t\t\t159\n15\t\t1.65x\t\t\t172\n16\t\t1.68x\t\t\t185\n17\t\t1.72x\t\t\t198\n18\t\t1.76x\t\t\t212\n19\t\t1.79x\t\t\t226\n20\t\t1.83x\t\t\t240\n21\t\t1.86x\t\t\t255\n22\t\t1.89x\t\t\t270\n23\t\t1.93x\t\t\t285\n24\t\t1.96x\t\t\t300\n25\t\t1.99x\t\t\t315\n26\t\t2.02x\t\t\t331\n27\t\t2.05x\t\t\t347\n28\t\t2.08x\t\t\t364\n29\t\t2.11x\t\t\t381\n30\t\t2.14x\t\t\t398\n31\t\t2.17x\t\t\t415\n32\t\t2.20x\t\t\t433\n33\t\t2.23x\t\t\t451\n"
+  AnimationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 2.0793152
+      outSlope: 2.0793152
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.04990758
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1.8919165
+      outSlope: 1.8919165
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.053604424
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  levelAtWhichGraphReaches1: 200
+  maximumValue: 5.51

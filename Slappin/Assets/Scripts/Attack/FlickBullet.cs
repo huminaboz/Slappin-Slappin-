@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class FlickBullet : MonoBehaviour, IObjectPool<FlickBullet>
 {
@@ -19,7 +20,7 @@ public class FlickBullet : MonoBehaviour, IObjectPool<FlickBullet>
     [Header("Flick Impact stuff")] [SerializeField]
     private bool isFlickImpact = false;
 
-    [SerializeField] private float flickForce = 1f;
+    [FormerlySerializedAs("impactKnockbackForce")] [SerializeField] private float baseImpactKnockbackForce = 20f;
 
     public void SetupObjectFirstTime()
     {
@@ -49,8 +50,7 @@ public class FlickBullet : MonoBehaviour, IObjectPool<FlickBullet>
             //Normal Flick Bullet
             if (other.GetComponent<Enemy_Bouncer>())
             {
-                //Can't do this right now because they can have spikes INSIDe them
-                // //TODO:: tink sfx
+                //TODO:: Can't do this right now because they can have spikes INSIDe them - but if you fix that you can have it
                 // SFXPlayer.I.Play(AudioEventsStorage.I.bouncerBlocked);
                 // ReturnObjectToPool();
                 // return;
@@ -67,7 +67,8 @@ public class FlickBullet : MonoBehaviour, IObjectPool<FlickBullet>
             if (other.GetComponent<Health>() != null)
             {
                 if (other.GetComponent<Health>().isAlive == false) return;
-                Vector3 flickForceVector = new Vector3(0f, 0f, flickForce);
+                float knockbackForce = baseImpactKnockbackForce * StatLiason.I.Get(Stat.FlickKnockbackForce);
+                Vector3 flickForceVector = new Vector3(0f, 0f, knockbackForce);
                 other.GetComponent<Rigidbody>().AddForce(flickForceVector, ForceMode.Impulse);
             }
         }

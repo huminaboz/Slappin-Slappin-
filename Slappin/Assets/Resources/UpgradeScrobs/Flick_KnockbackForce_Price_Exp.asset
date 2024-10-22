@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ac540fc2f4a5714994932f05a9106ff, type: 3}
+  m_Name: Flick_KnockbackForce_Price_Exp
+  m_EditorClassIdentifier: 
+  notes: 
+  showPreview: 1
+  previewUpgrade: {fileID: 11400000, guid: c82186fe2471cbc4ab1b41031bf26a67, type: 2}
+  maxDisplayedRows: 34
+  startOffset: 0
+  debugValues: "Level\t\tAmount\t\t\tPrice\n0\t\t1.02x\t\t\t25\n1\t\t1.02x\t\t\t25\n2\t\t1.03x\t\t\t51\n3\t\t1.03x\t\t\t77\n4\t\t1.04x\t\t\t103\n5\t\t1.05x\t\t\t130\n6\t\t1.05x\t\t\t158\n7\t\t1.06x\t\t\t186\n8\t\t1.07x\t\t\t214\n9\t\t1.08x\t\t\t243\n10\t\t1.08x\t\t\t273\n11\t\t1.09x\t\t\t303\n12\t\t1.10x\t\t\t333\n13\t\t1.10x\t\t\t365\n14\t\t1.11x\t\t\t396\n15\t\t1.12x\t\t\t429\n16\t\t1.13x\t\t\t462\n17\t\t1.13x\t\t\t495\n18\t\t1.14x\t\t\t530\n19\t\t1.15x\t\t\t564\n20\t\t1.15x\t\t\t600\n21\t\t1.16x\t\t\t636\n22\t\t1.17x\t\t\t673\n23\t\t1.18x\t\t\t711\n24\t\t1.18x\t\t\t749\n25\t\t1.19x\t\t\t788\n26\t\t1.20x\t\t\t828\n27\t\t1.20x\t\t\t868\n28\t\t1.21x\t\t\t909\n29\t\t1.22x\t\t\t951\n30\t\t1.23x\t\t\t994\n31\t\t1.23x\t\t\t1.04k\n32\t\t1.24x\t\t\t1.08k\n33\t\t1.25x\t\t\t1.13k\n"
+  growthRate: 0.05
+  growthFactor: 0.37
+  offset: 0

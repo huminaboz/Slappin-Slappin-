@@ -101,7 +101,6 @@ public class Pickup : MonoBehaviour, IObjectPool<Pickup>
             speedDoubler = speed + speed * speedIncreaseCurve.Evaluate(ratio); //Up to double speed
         }
 
-        Debug.LogWarning(speedDoubler);
 
         // Get the direction from the current position to the target position
         Vector3 direction = goalPosition - transform.position;

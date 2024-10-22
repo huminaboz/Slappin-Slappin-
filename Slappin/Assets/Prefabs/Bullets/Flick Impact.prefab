@@ -187,7 +187,7 @@ MonoBehaviour:
   maxTravelDistance: 0
   _particleSystem: {fileID: 215143933224784998}
   isFlickImpact: 1
-  flickForce: 20
+  baseImpactKnockbackForce: 10
 --- !u!1001 &3656246803979058020
 PrefabInstance:
   m_ObjectHideFlags: 0
