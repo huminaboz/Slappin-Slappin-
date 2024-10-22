@@ -40,7 +40,7 @@ public class FlickAttack : AttackType
     //Charging
     private ObjectShake _shake;
     private AnimationCurve chargeCurve;
-    private int chargeDamage;
+    private float chargeDamage;
     private float chargedDistance = 1f;
     private float maxChargeTime;
     private float _currentChargeTime = 0f;
@@ -80,7 +80,7 @@ public class FlickAttack : AttackType
         InitiateTravelToGround();
         player.EnableMovement();
         chargedDistance = _flickData.distanceBase;
-        chargeDamage = _flickData.baseDamage;
+        chargeDamage = StatLiason.I.Get(Stat.FlickDamage);
         chargeCurve = _flickData.chargeCurve;
         maxChargeTime = StatLiason.I.Get(Stat.FlickMaxChargeTime);
     }
@@ -162,10 +162,10 @@ public class FlickAttack : AttackType
     private void ReleaseCharge(float ratio)
     {
         Debug.Log($"Charge Ratio: {ratio}");
-        chargeDamage = _flickData.baseDamage + (int)(_flickData.baseDamage *
-                                                     StatLiason.I.Get(Stat.FlickMaxChargeDamage) *
-                                                     chargeCurve.Evaluate(ratio));
-        Debug.Log($"Max charge damage {_flickData.baseDamage} x {StatLiason.I.Get(Stat.FlickMaxChargeDamage)}x" +
+        chargeDamage = StatLiason.I.Get(Stat.FlickDamage) + StatLiason.I.Get(Stat.FlickDamage) *
+            StatLiason.I.Get(Stat.FlickMaxChargeDamage) *
+            chargeCurve.Evaluate(ratio);
+        Debug.Log($"Max charge damage {StatLiason.I.Get(Stat.FlickDamage)} x {StatLiason.I.Get(Stat.FlickMaxChargeDamage)}x" +
                   $"\n Charged Damage: {chargeDamage}");
         //TODO:: calculate attack width
 

@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Flick_ChargeMaxDamage
   m_EditorClassIdentifier: 
   stat: 4001
-  title: Full Charge Damage
+  title: Charge Damage
   baseValue: 1.5
-  basePrice: 100
+  basePrice: 20
   upgradeType: 3
   numberType: 2
   useMinValue: 0

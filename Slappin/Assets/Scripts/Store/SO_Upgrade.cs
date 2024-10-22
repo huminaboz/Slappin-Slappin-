@@ -51,6 +51,7 @@ public enum Stat
     FlickMaxChargeDamage = 4001,
     FlickMaxChargeTime = 4002,
     FlickKnockbackForce = 4003,
+    FlickDamage = 4004,
 
     //Squish
     Squish = 5000,

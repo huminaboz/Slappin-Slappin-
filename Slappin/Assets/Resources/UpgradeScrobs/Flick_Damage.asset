@@ -10,18 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8327b2e1f1789184f9cadc6d7f88cf8d, type: 3}
-  m_Name: Flick_MaxChargeTime
+  m_Name: Flick_Damage
   m_EditorClassIdentifier: 
-  stat: 4002
-  title: Faster Full Charge
+  stat: 4004
+  title: Base Damage
   baseValue: 3
-  basePrice: 18
+  basePrice: 10
   upgradeType: 3
-  numberType: 3
-  useMinValue: 1
+  numberType: 0
+  useMinValue: 0
   useMaxValue: 0
-  minValue: 0.47
+  minValue: 0
   maxValue: 1e+12
-  newValueGrowthCurve: {fileID: 11400000, guid: 3582cab9c367f0f43bbae932625e8bae, type: 2}
-  newPriceGrowthCurve: {fileID: 11400000, guid: 7060c958d457b2f4ba26d61078cbeb21, type: 2}
+  newValueGrowthCurve: {fileID: 11400000, guid: 21c5104b49ae410409e7ca691139a690, type: 2}
+  newPriceGrowthCurve: {fileID: 11400000, guid: c91c5f1eecd48214ebc2bba615a2ddbd, type: 2}
   maxLevel: 1000

@@ -12,6 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ac540fc2f4a5714994932f05a9106ff, type: 3}
   m_Name: Flick_MaxChargeTime_Price_Exp
   m_EditorClassIdentifier: 
+  notes: 
+  showPreview: 1
+  previewUpgrade: {fileID: 11400000, guid: 71702d81249d75a45bb3f8f5f6f3a191, type: 2}
+  maxDisplayedRows: 34
+  startOffset: 0
+  debugValues: "Level\t\tAmount\t\t\tPrice\n0\t\t3.00s\t\t\t18\n1\t\t3.00s\t\t\t18\n2\t\t2.94s\t\t\t38\n3\t\t2.91s\t\t\t60\n4\t\t2.88s\t\t\t83\n5\t\t2.85s\t\t\t109\n6\t\t2.82s\t\t\t138\n7\t\t2.79s\t\t\t169\n8\t\t2.76s\t\t\t202\n9\t\t2.73s\t\t\t240\n10\t\t2.69s\t\t\t280\n11\t\t2.66s\t\t\t325\n12\t\t2.63s\t\t\t373\n13\t\t2.60s\t\t\t427\n14\t\t2.57s\t\t\t485\n15\t\t2.54s\t\t\t549\n16\t\t2.51s\t\t\t619\n17\t\t2.48s\t\t\t696\n18\t\t2.45s\t\t\t779\n19\t\t2.42s\t\t\t871\n20\t\t2.39s\t\t\t972\n21\t\t2.35s\t\t\t1.08k\n22\t\t2.32s\t\t\t1.2k\n23\t\t2.29s\t\t\t1.33k\n24\t\t2.26s\t\t\t1.48k\n25\t\t2.23s\t\t\t1.64k\n26\t\t2.20s\t\t\t1.81k\n27\t\t2.17s\t\t\t2k\n28\t\t2.14s\t\t\t2.21k\n29\t\t2.11s\t\t\t2.43k\n30\t\t2.08s\t\t\t2.68k\n31\t\t2.04s\t\t\t2.95k\n32\t\t2.01s\t\t\t3.25k\n33\t\t1.98s\t\t\t3.58k\n"
   growthRate: 0.05
   growthFactor: 1.81
   offset: 0
