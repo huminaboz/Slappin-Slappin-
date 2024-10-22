@@ -71,6 +71,8 @@ public class Pickup : MonoBehaviour, IObjectPool<Pickup>
         speed = 0.6f * StatLiason.I.Get(Stat.AbsorbSpeed);
         goalPosition = Camera.main.transform.position;
         playerIsAbsorbing = true;
+        currentTime = 0f;
+        speedDoubler = 0f;
     }
 
     private void PlayerStoppedAbsorbing()
@@ -79,19 +81,34 @@ public class Pickup : MonoBehaviour, IObjectPool<Pickup>
         hover.enabled = true;
         playerIsAbsorbing = false;
         SetNewHoverPosition(transform.position);
+        currentTime = 0f;
+        speedDoubler = speed;
     }
 
+    [SerializeField] private AnimationCurve speedIncreaseCurve;
+    private float maxIncreaseTime = 4f;
+    private float currentTime = 0f;
+    private float speedDoubler = 0f;
+    
     private void Update()
     {
         if (!playerIsAbsorbing) return;
 
+        if (currentTime < maxIncreaseTime)
+        {
+            currentTime += Time.deltaTime;
+            float ratio = currentTime / maxIncreaseTime;
+            speedDoubler = speed + speed * speedIncreaseCurve.Evaluate(ratio); //Up to double speed
+        }
+
+        Debug.LogWarning(speedDoubler);
 
         // Get the direction from the current position to the target position
         Vector3 direction = goalPosition - transform.position;
         direction.y = 0f + pickupZoneYOffset; //Manually set how high up it goes
 
         // Move the object towards the target
-        Vector3 newPosition = transform.position + direction.normalized * speed * Time.deltaTime;
+        Vector3 newPosition = transform.position + direction.normalized * speedDoubler * Time.deltaTime;
         transform.position = newPosition;
 
         if (transform.localPosition.z <= goalPosition.z + pickupZoneZOffset)
