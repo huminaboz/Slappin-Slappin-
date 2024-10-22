@@ -16,6 +16,8 @@ public class SlapAttack : AttackType
     private float distanceDamageBoost;
 
 
+    private Vector3 _attackColliderDefaultLocalPosition;
+    
     //Animation
     [SerializeField] private Animator animator;
     
@@ -35,6 +37,7 @@ public class SlapAttack : AttackType
         handModel?.SetActive(false);
         _hurtColliderDefaultLocalScale = hurtEnemiesColliderObject.transform.localScale;
         _slapForecastShadowDefaultLocalScale = slapForecastShadow.transform.localScale;
+        _attackColliderDefaultLocalPosition = hurtEnemiesColliderObject.transform.localPosition;
     }
 
     protected override float GetAttackTypeDamageNumber()
@@ -55,7 +58,7 @@ public class SlapAttack : AttackType
 
         //Set it upon attack since that's where the distance comes from
         distanceDamageBoost = GetRangedDamageBonus(StatLiason.I.Get(Stat.SlapDamagePerDistance));
-
+        hurtEnemiesColliderObject.transform.localPosition = new(100, 100, 100);
         PlayAnimationCoroutine(.1f, "Down");
         DropSlap();
     }
@@ -124,6 +127,7 @@ public class SlapAttack : AttackType
         //PlayAnimationCoroutine(0f, "Pause");
         CameraShake.I.StartCameraShake();
         SFXPlayer.I.Play(AudioEventsStorage.I.slapHitGround);
+        hurtEnemiesColliderObject.transform.localPosition = _attackColliderDefaultLocalPosition;
     }
 
     private Coroutine stunDelayCoroutine;
