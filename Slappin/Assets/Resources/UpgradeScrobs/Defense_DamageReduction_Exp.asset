@@ -12,7 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 074eb5741ff6a6b4c8b1a56f59ea95c4, type: 3}
   m_Name: Defense_DamageReduction_Exp
   m_EditorClassIdentifier: 
+  notes: 
+  showPreview: 1
+  previewUpgrade: {fileID: 11400000, guid: 344855eea321da0429a05d49757a034b, type: 2}
+  maxDisplayedRows: 34
+  startOffset: 0
+  debugValues: "Level\t\tAmount\t\t\tPrice\n0\t\t0.50%\t\t\t500\n1\t\t0.50%\t\t\t500\n2\t\t0.75%\t\t\t1k\n3\t\t1.00%\t\t\t1.51k\n4\t\t1.24%\t\t\t2.02k\n5\t\t1.49%\t\t\t2.53k\n6\t\t1.74%\t\t\t3.04k\n7\t\t1.99%\t\t\t3.56k\n8\t\t2.23%\t\t\t4.08k\n9\t\t2.48%\t\t\t4.61k\n10\t\t2.73%\t\t\t5.13k\n11\t\t2.98%\t\t\t5.66k\n12\t\t3.22%\t\t\t6.2k\n13\t\t3.47%\t\t\t6.73k\n14\t\t3.72%\t\t\t7.27k\n15\t\t3.97%\t\t\t7.81k\n16\t\t4.21%\t\t\t8.36k\n17\t\t4.46%\t\t\t8.91k\n18\t\t4.71%\t\t\t9.46k\n19\t\t4.96%\t\t\t10.01k\n20\t\t5.20%\t\t\t10.57k\n21\t\t5.45%\t\t\t11.13k\n22\t\t5.70%\t\t\t11.69k\n23\t\t5.95%\t\t\t12.26k\n24\t\t6.19%\t\t\t12.83k\n25\t\t6.44%\t\t\t13.41k\n26\t\t6.69%\t\t\t13.98k\n27\t\t6.94%\t\t\t14.57k\n28\t\t7.19%\t\t\t15.15k\n29\t\t7.43%\t\t\t15.74k\n30\t\t7.68%\t\t\t16.33k\n31\t\t7.93%\t\t\t16.92k\n32\t\t8.18%\t\t\t17.52k\n33\t\t8.42%\t\t\t18.12k\n"
   logisticRate: 17.96
-  logisticCarryingCapacity: 11
+  logisticCarryingCapacity: 24.76
   growthMultiplier: 0.001
   baseGrowthRate: 0.1

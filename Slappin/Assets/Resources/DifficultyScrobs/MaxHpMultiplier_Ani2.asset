@@ -17,7 +17,7 @@ MonoBehaviour:
   previewUpgrade: {fileID: 11400000, guid: f246b068ac359934a84b36c0637167e3, type: 2}
   maxDisplayedRows: 34
   startOffset: 0
-  debugValues: "Level\t\tAmount\t\t\tPrice\n0\t\t1.00x\t\t\t0\n1\t\t1.03x\t\t\t1\n2\t\t1.09x\t\t\t1\n3\t\t1.19x\t\t\t1\n4\t\t1.32x\t\t\t1\n5\t\t1.47x\t\t\t1\n6\t\t1.63x\t\t\t1\n7\t\t1.81x\t\t\t1\n8\t\t1.98x\t\t\t2\n9\t\t2.16x\t\t\t2\n10\t\t2.33x\t\t\t2\n11\t\t2.48x\t\t\t2\n12\t\t2.62x\t\t\t2\n13\t\t2.73x\t\t\t2\n14\t\t2.80x\t\t\t2\n15\t\t2.84x\t\t\t2\n16\t\t2.85x\t\t\t2\n17\t\t2.86x\t\t\t2\n18\t\t2.87x\t\t\t2\n19\t\t2.88x\t\t\t2\n20\t\t2.89x\t\t\t2\n21\t\t2.90x\t\t\t2\n22\t\t2.91x\t\t\t2\n23\t\t2.92x\t\t\t2\n24\t\t2.93x\t\t\t2\n25\t\t2.94x\t\t\t3\n26\t\t2.94x\t\t\t3\n27\t\t2.95x\t\t\t3\n28\t\t2.96x\t\t\t3\n29\t\t2.97x\t\t\t3\n30\t\t2.98x\t\t\t3\n31\t\t2.99x\t\t\t3\n32\t\t3.00x\t\t\t3\n33\t\t3.01x\t\t\t3\n"
+  debugValues: "Level\t\tAmount\t\t\tPrice\n0\t\t1.00x\t\t\t0\n1\t\t1.84x\t\t\t1\n2\t\t3.57x\t\t\t3\n3\t\t6.02x\t\t\t6\n4\t\t8.98x\t\t\t8\n5\t\t12.25x\t\t\t12\n6\t\t15.65x\t\t\t15\n7\t\t18.98x\t\t\t18\n8\t\t22.03x\t\t\t22\n9\t\t24.63x\t\t\t24\n10\t\t26.56x\t\t\t26\n11\t\t27.64x\t\t\t27\n12\t\t28.28x\t\t\t28\n13\t\t28.91x\t\t\t28\n14\t\t29.54x\t\t\t29\n15\t\t30.17x\t\t\t30\n16\t\t30.81x\t\t\t30\n17\t\t31.44x\t\t\t31\n18\t\t32.07x\t\t\t32\n19\t\t32.71x\t\t\t32\n20\t\t33.34x\t\t\t33\n21\t\t33.98x\t\t\t33\n22\t\t34.62x\t\t\t34\n23\t\t35.25x\t\t\t35\n24\t\t35.89x\t\t\t35\n25\t\t36.53x\t\t\t36\n26\t\t37.17x\t\t\t37\n27\t\t37.81x\t\t\t37\n28\t\t38.45x\t\t\t38\n29\t\t39.09x\t\t\t39\n30\t\t39.74x\t\t\t39\n31\t\t40.38x\t\t\t40\n32\t\t41.02x\t\t\t41\n33\t\t41.67x\t\t\t41\n"
   AnimationCurve:
     serializedVersion: 2
     m_Curve:
@@ -31,8 +31,8 @@ MonoBehaviour:
       inWeight: 0
       outWeight: 0.38972002
     - serializedVersion: 3
-      time: 0.015223943
-      value: 0.06368503
+      time: 0.010959111
+      value: 0.013315767
       inSlope: 0.31595865
       outSlope: 0.31595865
       tangentMode: 0
@@ -61,4 +61,4 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   levelAtWhichGraphReaches1: 1000
-  maximumValue: 30
+  maximumValue: 2000

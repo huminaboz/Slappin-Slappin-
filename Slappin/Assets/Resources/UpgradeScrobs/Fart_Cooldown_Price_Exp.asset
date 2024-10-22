@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: Fart_Cooldown_Price_Exp
   m_EditorClassIdentifier: 
   notes: 
-  showPreview: 0
-  previewUpgrade: {fileID: 11400000, guid: b39d075eda7617445bf2b09c3a1b0530, type: 2}
+  showPreview: 1
+  previewUpgrade: {fileID: 11400000, guid: 69742ca13f0d0e941a65c523df180f9f, type: 2}
   maxDisplayedRows: 34
   startOffset: 0
-  debugValues: "Level\t\tAmount\t\t\tPrice\n0\t\t1.00x\t\t\t40\n1\t\t1.00x\t\t\t40\n2\t\t0.99x\t\t\t83\n3\t\t0.98x\t\t\t128\n4\t\t0.97x\t\t\t175\n5\t\t0.97x\t\t\t226\n6\t\t0.96x\t\t\t279\n7\t\t0.95x\t\t\t336\n8\t\t0.94x\t\t\t395\n9\t\t0.93x\t\t\t459\n10\t\t0.92x\t\t\t526\n11\t\t0.91x\t\t\t597\n12\t\t0.90x\t\t\t673\n13\t\t0.90x\t\t\t752\n14\t\t0.89x\t\t\t837\n15\t\t0.88x\t\t\t927\n16\t\t0.87x\t\t\t1.02k\n17\t\t0.86x\t\t\t1.12k\n18\t\t0.85x\t\t\t1.23k\n19\t\t0.84x\t\t\t1.34k\n20\t\t0.83x\t\t\t1.46k\n21\t\t0.83x\t\t\t1.59k\n22\t\t0.82x\t\t\t1.72k\n23\t\t0.81x\t\t\t1.86k\n24\t\t0.80x\t\t\t2.01k\n25\t\t0.79x\t\t\t2.17k\n26\t\t0.78x\t\t\t2.34k\n27\t\t0.77x\t\t\t2.52k\n28\t\t0.76x\t\t\t2.71k\n29\t\t0.76x\t\t\t2.91k\n30\t\t0.75x\t\t\t3.12k\n31\t\t0.74x\t\t\t3.35k\n32\t\t0.73x\t\t\t3.59k\n33\t\t0.72x\t\t\t3.84k\n"
-  growthRate: 0.048
-  growthFactor: 1.2
+  debugValues: "Level\t\tAmount\t\t\tPrice\n0\t\t20.00s\t\t\t20\n1\t\t20.16s\t\t\t20\n2\t\t20.08s\t\t\t41\n3\t\t20.01s\t\t\t63\n4\t\t19.93s\t\t\t86\n5\t\t19.86s\t\t\t110\n6\t\t19.78s\t\t\t135\n7\t\t19.71s\t\t\t161\n8\t\t19.64s\t\t\t188\n9\t\t19.56s\t\t\t216\n10\t\t19.49s\t\t\t246\n11\t\t19.41s\t\t\t276\n12\t\t19.34s\t\t\t309\n13\t\t19.26s\t\t\t342\n14\t\t19.19s\t\t\t378\n15\t\t19.12s\t\t\t414\n16\t\t19.04s\t\t\t453\n17\t\t18.97s\t\t\t493\n18\t\t18.89s\t\t\t535\n19\t\t18.82s\t\t\t578\n20\t\t18.74s\t\t\t624\n21\t\t18.67s\t\t\t672\n22\t\t18.60s\t\t\t721\n23\t\t18.52s\t\t\t773\n24\t\t18.45s\t\t\t828\n25\t\t18.37s\t\t\t884\n26\t\t18.30s\t\t\t944\n27\t\t18.22s\t\t\t1.01k\n28\t\t18.15s\t\t\t1.07k\n29\t\t18.08s\t\t\t1.14k\n30\t\t18.00s\t\t\t1.21k\n31\t\t17.93s\t\t\t1.28k\n32\t\t17.85s\t\t\t1.36k\n33\t\t17.78s\t\t\t1.44k\n"
+  growthRate: 0.043
+  growthFactor: 1.01
   offset: 0

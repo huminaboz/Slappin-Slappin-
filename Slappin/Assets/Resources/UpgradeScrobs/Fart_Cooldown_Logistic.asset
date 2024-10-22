@@ -17,8 +17,8 @@ MonoBehaviour:
   previewUpgrade: {fileID: 11400000, guid: 69742ca13f0d0e941a65c523df180f9f, type: 2}
   maxDisplayedRows: 34
   startOffset: 0
-  debugValues: "Level\t\tAmount\t\t\tPrice\n0\t\t10.00s\t\t\t40\n1\t\t10.08s\t\t\t40\n2\t\t10.00s\t\t\t83\n3\t\t9.93s\t\t\t128\n4\t\t9.86s\t\t\t175\n5\t\t9.78s\t\t\t226\n6\t\t9.71s\t\t\t279\n7\t\t9.63s\t\t\t336\n8\t\t9.56s\t\t\t395\n9\t\t9.48s\t\t\t459\n10\t\t9.41s\t\t\t526\n11\t\t9.34s\t\t\t597\n12\t\t9.26s\t\t\t673\n13\t\t9.19s\t\t\t752\n14\t\t9.11s\t\t\t837\n15\t\t9.04s\t\t\t927\n16\t\t8.96s\t\t\t1.02k\n17\t\t8.89s\t\t\t1.12k\n18\t\t8.82s\t\t\t1.23k\n19\t\t8.74s\t\t\t1.34k\n20\t\t8.67s\t\t\t1.46k\n21\t\t8.59s\t\t\t1.59k\n22\t\t8.52s\t\t\t1.72k\n23\t\t8.44s\t\t\t1.86k\n24\t\t8.37s\t\t\t2.01k\n25\t\t8.30s\t\t\t2.17k\n26\t\t8.22s\t\t\t2.34k\n27\t\t8.15s\t\t\t2.52k\n28\t\t8.07s\t\t\t2.71k\n29\t\t8.00s\t\t\t2.91k\n30\t\t7.92s\t\t\t3.12k\n31\t\t7.85s\t\t\t3.35k\n32\t\t7.78s\t\t\t3.59k\n33\t\t7.70s\t\t\t3.84k\n"
+  debugValues: "Level\t\tAmount\t\t\tPrice\n0\t\t20.00s\t\t\t20\n1\t\t20.16s\t\t\t20\n2\t\t19.95s\t\t\t41\n3\t\t19.74s\t\t\t63\n4\t\t19.54s\t\t\t86\n5\t\t19.33s\t\t\t110\n6\t\t19.12s\t\t\t135\n7\t\t18.92s\t\t\t161\n8\t\t18.71s\t\t\t188\n9\t\t18.51s\t\t\t216\n10\t\t18.30s\t\t\t246\n11\t\t18.09s\t\t\t276\n12\t\t17.89s\t\t\t309\n13\t\t17.68s\t\t\t342\n14\t\t17.47s\t\t\t378\n15\t\t17.27s\t\t\t414\n16\t\t17.06s\t\t\t453\n17\t\t16.86s\t\t\t493\n18\t\t16.65s\t\t\t535\n19\t\t16.44s\t\t\t578\n20\t\t16.24s\t\t\t624\n21\t\t16.03s\t\t\t672\n22\t\t15.82s\t\t\t721\n23\t\t15.62s\t\t\t773\n24\t\t15.41s\t\t\t828\n25\t\t15.21s\t\t\t884\n26\t\t15.00s\t\t\t944\n27\t\t14.79s\t\t\t1.01k\n28\t\t14.59s\t\t\t1.07k\n29\t\t14.38s\t\t\t1.14k\n30\t\t14.17s\t\t\t1.21k\n31\t\t13.97s\t\t\t1.28k\n32\t\t13.76s\t\t\t1.36k\n33\t\t13.55s\t\t\t1.44k\n"
   logisticRate: 7.2
-  logisticCarryingCapacity: -9.5
+  logisticCarryingCapacity: -26.38
   growthMultiplier: -7.82
   baseGrowthRate: -0.001

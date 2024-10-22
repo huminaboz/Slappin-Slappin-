@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aaf371d22c65cd14ab65d603456a522f, type: 3}
+  m_Name: Slap_Damage_AniMax
+  m_EditorClassIdentifier: 
+  notes: 
+  showPreview: 1
+  previewUpgrade: {fileID: 11400000, guid: 19dc01956c9634146945e218afed02c4, type: 2}
+  maxDisplayedRows: 34
+  startOffset: 0
+  debugValues: "Level\t\tAmount\t\t\tPrice\n0\t\t0\t\t\t5\n1\t\t3\t\t\t5\n2\t\t5\t\t\t11\n3\t\t7\t\t\t16\n4\t\t9\t\t\t21\n5\t\t11\t\t\t26\n6\t\t13\t\t\t32\n7\t\t15\t\t\t37\n8\t\t17\t\t\t43\n9\t\t19\t\t\t49\n10\t\t21\t\t\t54\n11\t\t23\t\t\t60\n12\t\t25\t\t\t66\n13\t\t27\t\t\t72\n14\t\t29\t\t\t78\n15\t\t31\t\t\t85\n16\t\t33\t\t\t91\n17\t\t35\t\t\t98\n18\t\t37\t\t\t104\n19\t\t39\t\t\t111\n20\t\t41\t\t\t118\n21\t\t43\t\t\t125\n22\t\t45\t\t\t132\n23\t\t47\t\t\t139\n24\t\t49\t\t\t146\n25\t\t51\t\t\t153\n26\t\t52\t\t\t161\n27\t\t54\t\t\t169\n28\t\t56\t\t\t176\n29\t\t58\t\t\t184\n30\t\t60\t\t\t192\n31\t\t62\t\t\t200\n32\t\t64\t\t\t209\n33\t\t66\t\t\t217\n"
+  AnimationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 2.0793152
+      outSlope: 2.0793152
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.04990758
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1.8919165
+      outSlope: 1.8919165
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.053604424
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  levelAtWhichGraphReaches1: 1000
+  maximumValue: 1000

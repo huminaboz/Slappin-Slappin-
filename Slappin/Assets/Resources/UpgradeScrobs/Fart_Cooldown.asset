@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stat: 7001
   title: Cooldown Timer
-  baseValue: 10
-  basePrice: 40
+  baseValue: 20
+  basePrice: 20
   upgradeType: 5
   numberType: 3
   useMinValue: 1

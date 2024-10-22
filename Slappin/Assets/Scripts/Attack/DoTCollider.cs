@@ -6,8 +6,24 @@ public class DoTCollider : MonoBehaviour
     private float damageRate;
     private float damage;
 
+
     private void OnEnable()
     {
+        UpgradeData.OnPurchaseMade += UpdateStats;
+    }
+
+    private void OnDisable()
+    {
+    }
+
+    private void Start()
+    {
+        UpdateStats();
+    }
+
+    private void UpdateStats()
+    {
+        Debug.LogWarning($"Stat.SquishDamgeOverTime {StatLiason.I.Get(Stat.SquishDamgeOverTime)}");
         damageRate = StatLiason.I.Get(Stat.SquishDotRate);
         damage = StatLiason.I.Get(Stat.SquishDamgeOverTime);
     }
@@ -21,10 +37,9 @@ public class DoTCollider : MonoBehaviour
 
     private void HurtHealth(Collider other)
     {
-
-        
         if (other.GetComponent<Health>() != null)
         {
+            UpdateStats();
             Health health = other.GetComponent<Health>();
             health.AdjustHp(-(int)damage, gameObject);
             if (-damage < 0)
@@ -45,12 +60,14 @@ public class DoTCollider : MonoBehaviour
                 SFXPlayer.I.Play(AudioEventsStorage.I.bouncerBlocked);
                 return;
             }
+
             Health health = other.GetComponent<Health>();
             health.AdjustHp(-(int)damage, gameObject);
             if (-damage < 0)
             {
                 SFXPlayer.I.Play(AudioEventsStorage.I.dotHit);
             }
+
             t = 0f;
         }
     }

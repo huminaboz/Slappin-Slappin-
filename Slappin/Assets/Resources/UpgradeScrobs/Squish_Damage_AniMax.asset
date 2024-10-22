@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aaf371d22c65cd14ab65d603456a522f, type: 3}
+  m_Name: Squish_Damage_AniMax
+  m_EditorClassIdentifier: 
+  notes: 
+  showPreview: 1
+  previewUpgrade: {fileID: 11400000, guid: 6340beb51dc57b8408d6fb4323756be4, type: 2}
+  maxDisplayedRows: 34
+  startOffset: 0
+  debugValues: "Level\t\tAmount\t\t\tPrice\n0\t\t9\t\t\t20\n1\t\t11\t\t\t20\n2\t\t13\t\t\t41\n3\t\t18\t\t\t61\n4\t\t24\t\t\t82\n5\t\t30\t\t\t104\n6\t\t37\t\t\t126\n7\t\t44\t\t\t148\n8\t\t51\t\t\t170\n9\t\t57\t\t\t193\n10\t\t63\t\t\t216\n11\t\t67\t\t\t239\n12\t\t70\t\t\t263\n13\t\t72\t\t\t288\n14\t\t74\t\t\t312\n15\t\t76\t\t\t337\n16\t\t78\t\t\t363\n17\t\t80\t\t\t389\n18\t\t82\t\t\t415\n19\t\t84\t\t\t442\n20\t\t86\t\t\t469\n21\t\t88\t\t\t497\n22\t\t90\t\t\t525\n23\t\t93\t\t\t554\n24\t\t95\t\t\t583\n25\t\t97\t\t\t612\n26\t\t99\t\t\t642\n27\t\t101\t\t\t673\n28\t\t103\t\t\t704\n29\t\t106\t\t\t735\n30\t\t108\t\t\t767\n31\t\t110\t\t\t800\n32\t\t112\t\t\t833\n33\t\t115\t\t\t867\n"
+  AnimationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.011843543
+      value: 0.0059986697
+      inSlope: 0.20056061
+      outSlope: 0.20056061
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.01835172
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  levelAtWhichGraphReaches1: 1000
+  maximumValue: 10000

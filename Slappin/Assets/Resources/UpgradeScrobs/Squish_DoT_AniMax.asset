@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aaf371d22c65cd14ab65d603456a522f, type: 3}
+  m_Name: Squish_DoT_AniMax
+  m_EditorClassIdentifier: 
+  notes: 
+  showPreview: 1
+  previewUpgrade: {fileID: 11400000, guid: 5212d0102480d344baea636c0fc42889, type: 2}
+  maxDisplayedRows: 34
+  startOffset: 0
+  debugValues: "Level\t\tAmount\t\t\tPrice\n0\t\t0\t\t\t5\n1\t\t1\t\t\t5\n2\t\t2\t\t\t11\n3\t\t3\t\t\t16\n4\t\t4\t\t\t21\n5\t\t5\t\t\t26\n6\t\t6\t\t\t31\n7\t\t7\t\t\t36\n8\t\t8\t\t\t41\n9\t\t9\t\t\t46\n10\t\t10\t\t\t51\n11\t\t11\t\t\t56\n12\t\t12\t\t\t61\n13\t\t13\t\t\t66\n14\t\t14\t\t\t71\n15\t\t15\t\t\t76\n16\t\t16\t\t\t81\n17\t\t17\t\t\t86\n18\t\t18\t\t\t91\n19\t\t19\t\t\t96\n20\t\t20\t\t\t101\n21\t\t21\t\t\t106\n22\t\t22\t\t\t111\n23\t\t23\t\t\t116\n24\t\t24\t\t\t121\n25\t\t25\t\t\t126\n26\t\t26\t\t\t131\n27\t\t27\t\t\t136\n28\t\t28\t\t\t141\n29\t\t29\t\t\t146\n30\t\t30\t\t\t151\n31\t\t31\t\t\t156\n32\t\t32\t\t\t161\n33\t\t33\t\t\t166\n"
+  AnimationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  levelAtWhichGraphReaches1: 1000
+  maximumValue: 100

@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aaf371d22c65cd14ab65d603456a522f, type: 3}
+  m_Name: Defense_DamageReduction_AniMax
+  m_EditorClassIdentifier: 
+  notes: 
+  showPreview: 1
+  previewUpgrade: {fileID: 11400000, guid: 344855eea321da0429a05d49757a034b, type: 2}
+  maxDisplayedRows: 34
+  startOffset: 0
+  debugValues: "Level\t\tAmount\t\t\tPrice\n0\t\t0.50%\t\t\t500\n1\t\t0.57%\t\t\t500\n2\t\t0.67%\t\t\t1k\n3\t\t0.78%\t\t\t1.51k\n4\t\t0.92%\t\t\t2.02k\n5\t\t1.08%\t\t\t2.53k\n6\t\t1.25%\t\t\t3.04k\n7\t\t1.45%\t\t\t3.56k\n8\t\t1.65%\t\t\t4.08k\n9\t\t1.87%\t\t\t4.61k\n10\t\t2.11%\t\t\t5.13k\n11\t\t2.36%\t\t\t5.66k\n12\t\t2.61%\t\t\t6.2k\n13\t\t2.88%\t\t\t6.73k\n14\t\t3.15%\t\t\t7.27k\n15\t\t3.43%\t\t\t7.81k\n16\t\t3.71%\t\t\t8.36k\n17\t\t4.00%\t\t\t8.91k\n18\t\t4.29%\t\t\t9.46k\n19\t\t4.58%\t\t\t10.01k\n20\t\t4.87%\t\t\t10.57k\n21\t\t5.16%\t\t\t11.13k\n22\t\t5.45%\t\t\t11.69k\n23\t\t5.73%\t\t\t12.26k\n24\t\t6.01%\t\t\t12.83k\n25\t\t6.28%\t\t\t13.41k\n26\t\t6.54%\t\t\t13.98k\n27\t\t6.79%\t\t\t14.57k\n28\t\t7.03%\t\t\t15.15k\n29\t\t7.26%\t\t\t15.74k\n30\t\t7.48%\t\t\t16.33k\n31\t\t7.68%\t\t\t16.92k\n32\t\t7.86%\t\t\t17.52k\n33\t\t8.03%\t\t\t18.12k\n"
+  AnimationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.019676916
+      value: 0.13632914
+      inSlope: 0.47955206
+      outSlope: 0.47955206
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.062452868
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  levelAtWhichGraphReaches1: 2000
+  maximumValue: 0.6
