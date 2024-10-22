@@ -20,7 +20,7 @@ MonoBehaviour:
   numberType: 3
   useMinValue: 1
   useMaxValue: 0
-  minValue: 0.5
+  minValue: 2
   maxValue: 1e+12
   newValueGrowthCurve: {fileID: 11400000, guid: 829e8798e36145c45934356426535e2c, type: 2}
   newPriceGrowthCurve: {fileID: 11400000, guid: 40f74422d3e6b1a429d7be50fcf030cd, type: 2}

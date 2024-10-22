@@ -34,7 +34,7 @@ public class Spawner : MonoBehaviour
         t += Time.deltaTime;
         if (t >= timeTilNextSpawn)
         {
-            if (GetRandomNumberBetweenZeroAndOne() < bouncerSpawnChance)
+            if (GetRandomNumberBetweenZeroAndOne() < bouncerSpawnChance*StatLiason.I.GetEnemy(Stat.Enemy_SpawnChance))
             {
                 Enemy_Bouncer enemy = ObjectPoolManager<Enemy_Bouncer>.GetObject(bouncerPrefab);
                 if (enemy is not null)
@@ -44,7 +44,7 @@ public class Spawner : MonoBehaviour
                     extraSpawnTime = 1f;
                 }
             }
-            else if (GetRandomNumberBetweenZeroAndOne() < spikeSpawnChance)
+            else if (GetRandomNumberBetweenZeroAndOne() < spikeSpawnChance*StatLiason.I.GetEnemy(Stat.Enemy_SpawnChance))
             {
                 Enemy_Spike enemy = ObjectPoolManager<Enemy_Spike>.GetObject(spikePrefab);
                 if (enemy is not null)
@@ -54,7 +54,7 @@ public class Spawner : MonoBehaviour
                     extraSpawnTime = .5f;
                 }
             }
-            else if (GetRandomNumberBetweenZeroAndOne() < orcSpawnChance)
+            else if (GetRandomNumberBetweenZeroAndOne() < orcSpawnChance*StatLiason.I.GetEnemy(Stat.Enemy_SpawnChance))
             {
                 Enemy_Pawn enemy = ObjectPoolManager<Enemy_Pawn>.GetObject(orcPrefab);
                 if (enemy is not null)
@@ -64,7 +64,7 @@ public class Spawner : MonoBehaviour
                     extraSpawnTime = .5f;
                 }
             }
-            else if (GetRandomNumberBetweenZeroAndOne() < mageSpawnChance)
+            else if (GetRandomNumberBetweenZeroAndOne() < mageSpawnChance*StatLiason.I.GetEnemy(Stat.Enemy_SpawnChance))
             {
                 Enemy_Mage enemy = ObjectPoolManager<Enemy_Mage>.GetObject(magePrefab);
                 if (enemy is not null)
@@ -76,7 +76,7 @@ public class Spawner : MonoBehaviour
             }
             else
             {
-                if (GetRandomNumberBetweenZeroAndOne() < 1 - turtleSpawnChance)
+                if (GetRandomNumberBetweenZeroAndOne() < 1 - turtleSpawnChance*StatLiason.I.GetEnemy(Stat.Enemy_SpawnChance))
                 {
                     Enemy_Pawn enemy = ObjectPoolManager<Enemy_Pawn>.GetObject(pawnPrefab);
                     if (enemy is not null)
