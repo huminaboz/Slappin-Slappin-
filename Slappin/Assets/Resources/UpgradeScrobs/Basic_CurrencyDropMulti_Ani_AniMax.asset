@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aaf371d22c65cd14ab65d603456a522f, type: 3}
+  m_Name: Basic_CurrencyDropMulti_Ani_AniMax
+  m_EditorClassIdentifier: 
+  notes: 
+  showPreview: 0
+  previewUpgrade: {fileID: 11400000, guid: d1c70a2ded9a6de4e919177ed31d1a83, type: 2}
+  maxDisplayedRows: 34
+  startOffset: 0
+  debugValues: "Level\t\tAmount\t\t\tPrice\n0\t\t1.02x\t\t\t50\n1\t\t1.07x\t\t\t50\n2\t\t1.18x\t\t\t101\n3\t\t1.35x\t\t\t153\n4\t\t1.57x\t\t\t206\n5\t\t1.82x\t\t\t260\n6\t\t2.10x\t\t\t315\n7\t\t2.40x\t\t\t371\n8\t\t2.71x\t\t\t428\n9\t\t3.01x\t\t\t486\n10\t\t3.30x\t\t\t545\n11\t\t3.57x\t\t\t605\n12\t\t3.80x\t\t\t666\n13\t\t3.98x\t\t\t729\n14\t\t4.12x\t\t\t792\n15\t\t4.18x\t\t\t857\n16\t\t4.20x\t\t\t923\n17\t\t4.22x\t\t\t990\n18\t\t4.23x\t\t\t1.06k\n19\t\t4.25x\t\t\t1.13k\n20\t\t4.26x\t\t\t1.2k\n21\t\t4.28x\t\t\t1.27k\n22\t\t4.30x\t\t\t1.35k\n23\t\t4.31x\t\t\t1.42k\n24\t\t4.33x\t\t\t1.5k\n25\t\t4.34x\t\t\t1.58k\n26\t\t4.36x\t\t\t1.66k\n27\t\t4.37x\t\t\t1.74k\n28\t\t4.39x\t\t\t1.82k\n29\t\t4.40x\t\t\t1.9k\n30\t\t4.42x\t\t\t1.99k\n31\t\t4.43x\t\t\t2.07k\n32\t\t4.45x\t\t\t2.16k\n33\t\t4.46x\t\t\t2.25k\n"
+  AnimationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  levelAtWhichGraphReaches1: 1000
+  maximumValue: 50.79
+  multiplier: 1

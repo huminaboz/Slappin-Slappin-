@@ -24,7 +24,7 @@ public class DoTCollider : MonoBehaviour
 
     private void UpdateStats()
     {
-        Debug.LogWarning($"Stat.SquishDamgeOverTime {StatLiason.I.Get(Stat.SquishDamgeOverTime)}");
+        // Debug.LogWarning($"Stat.SquishDamgeOverTime {StatLiason.I.Get(Stat.SquishDamgeOverTime)}");
         damageRate = StatLiason.I.Get(Stat.SquishDotRate);
         damage = StatLiason.I.Get(Stat.SquishDamgeOverTime);
     }

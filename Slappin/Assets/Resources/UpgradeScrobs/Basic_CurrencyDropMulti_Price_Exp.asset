@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ac540fc2f4a5714994932f05a9106ff, type: 3}
+  m_Name: Basic_CurrencyDropMulti_Price_Exp
+  m_EditorClassIdentifier: 
+  notes: 
+  showPreview: 1
+  previewUpgrade: {fileID: 11400000, guid: d1c70a2ded9a6de4e919177ed31d1a83, type: 2}
+  maxDisplayedRows: 34
+  startOffset: 0
+  debugValues: "Level\t\tAmount\t\t\tPrice\n0\t\t1.02x\t\t\t50\n1\t\t1.07x\t\t\t50\n2\t\t1.18x\t\t\t103\n3\t\t1.35x\t\t\t159\n4\t\t1.57x\t\t\t218\n5\t\t1.82x\t\t\t279\n6\t\t2.10x\t\t\t345\n7\t\t2.40x\t\t\t413\n8\t\t2.71x\t\t\t486\n9\t\t3.01x\t\t\t563\n10\t\t3.30x\t\t\t643\n11\t\t3.57x\t\t\t729\n12\t\t3.80x\t\t\t818\n13\t\t3.98x\t\t\t913\n14\t\t4.12x\t\t\t1.01k\n15\t\t4.18x\t\t\t1.12k\n16\t\t4.20x\t\t\t1.23k\n17\t\t4.22x\t\t\t1.35k\n18\t\t4.23x\t\t\t1.47k\n19\t\t4.25x\t\t\t1.6k\n20\t\t4.26x\t\t\t1.74k\n21\t\t4.28x\t\t\t1.88k\n22\t\t4.30x\t\t\t2.04k\n23\t\t4.31x\t\t\t2.2k\n24\t\t4.33x\t\t\t2.37k\n25\t\t4.34x\t\t\t2.55k\n26\t\t4.36x\t\t\t2.74k\n27\t\t4.37x\t\t\t2.94k\n28\t\t4.39x\t\t\t3.15k\n29\t\t4.40x\t\t\t3.37k\n30\t\t4.42x\t\t\t3.61k\n31\t\t4.43x\t\t\t3.85k\n32\t\t4.45x\t\t\t4.11k\n33\t\t4.46x\t\t\t4.39k\n"
+  growthRate: 0.144
+  growthFactor: 0.37
+  offset: 0

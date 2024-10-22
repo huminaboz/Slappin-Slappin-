@@ -31,7 +31,7 @@ public enum Stat
     MoveBoostSpeed = 1001,
     AbsorbSpeed = 1002,
     AttackSpeed = 1003,
-    PickupMultiplier = 1004,
+    Currency1Multiplier = 1004,
 
     //Defense
     Defense = 2000,

@@ -86,7 +86,8 @@ public abstract class Enemy : MonoBehaviour, IHpAdjustmentListener, IObjectPool<
         float walkSpeedMultiplier = StatLiason.I.GetEnemy(Stat.Enemy_WalkSpeed);
 
         //Go into the upgrades, send the current wave and set the stats
-        currency1DropAmount = currency1BaseDropAmount * currencyMultiplier;
+        currency1DropAmount = currency1BaseDropAmount * currencyMultiplier
+                                                      * StatLiason.I.Get(Stat.Currency1Multiplier);
         thisHealth.enemyMaxHp = (int)(thisHealth.maxHp * hpMultiplier);
         damage = baseAttackDamage * damageMultiplier;
         walkSpeed = moveTowardsTransform.baseWalkSpeed * walkSpeedMultiplier;

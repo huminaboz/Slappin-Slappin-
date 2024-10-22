@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8327b2e1f1789184f9cadc6d7f88cf8d, type: 3}
+  m_Name: Basic_CurrencyDropMulti
+  m_EditorClassIdentifier: 
+  stat: 1004
+  title: Increase Currency Drop
+  baseValue: 1.02
+  basePrice: 100
+  upgradeType: 0
+  numberType: 2
+  useMinValue: 0
+  useMaxValue: 1
+  minValue: 0
+  maxValue: 50
+  newValueGrowthCurve: {fileID: 11400000, guid: ccab613d4978ffd40b0b398efbe63527, type: 2}
+  newPriceGrowthCurve: {fileID: 11400000, guid: 9e7475841848d204ebac7b7d8af44459, type: 2}
+  maxLevel: 1000
