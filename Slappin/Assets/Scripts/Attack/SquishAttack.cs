@@ -55,6 +55,7 @@ public class SquishAttack : AttackType
 
     private void DropSquish()
     {
+        damageOverTimeCollider.SetActive(false);
         spikeGetHurtOnAttackCollider.gameObject.SetActive(true);
 
         if (spikeGetHurtOnAttackCollider.WillHitASpike())
@@ -64,7 +65,6 @@ public class SquishAttack : AttackType
         else
         {
             hurtEnemiesColliderObject.SetActive(true);
-            damageOverTimeCollider.SetActive(true);
             spikeGetHurtOnAttackCollider.gameObject.SetActive(false);
         }
 
@@ -78,13 +78,15 @@ public class SquishAttack : AttackType
         SFXPlayer.I.Play(AudioEventsStorage.I.squishHitGround);
         _shake.StartShake();
         _currentAction = DoShitWhileTouchingGround;
-        StartCoroutine(DisableInitialDamageCollider());
+        StartCoroutine(SwapDamageColliders());
     }
 
-    private IEnumerator DisableInitialDamageCollider()
+    private IEnumerator SwapDamageColliders()
     {
         yield return new WaitForSeconds(0.1f);
         hurtEnemiesColliderObject.SetActive(false);
+        yield return new WaitForSeconds(0.25f);
+        damageOverTimeCollider.SetActive(true);
     }
 
     private void Update()
