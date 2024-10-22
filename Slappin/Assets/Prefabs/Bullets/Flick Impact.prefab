@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 385027281578924827}
   - component: {fileID: 7831938312324833479}
   - component: {fileID: 7650300007524109647}
-  - component: {fileID: 895829366405827485}
+  - component: {fileID: 929482893966284975}
   m_Layer: 7
   m_Name: Flick Bullet
   m_TagString: Untagged
@@ -84,8 +84,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &895829366405827485
-CapsuleCollider:
+--- !u!65 &929482893966284975
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -102,11 +102,9 @@ CapsuleCollider:
   m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 1
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+  serializedVersion: 3
+  m_Size: {x: 1.0000001, y: 2, z: 2.5440602}
+  m_Center: {x: 0, y: 0, z: 0.7720299}
 --- !u!1 &4220776660896476680
 GameObject:
   m_ObjectHideFlags: 0
