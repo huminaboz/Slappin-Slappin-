@@ -36,12 +36,12 @@ public class Enemy_Pawn : Enemy, IObjectPool<Enemy_Pawn>
 
     protected override void Attack()
     {
-        SFXPlayer.I.Play(AudioEventsStorage.I.enemyAttacked);
         _moveTowardsTransform.enabled = false;
         _enemyAnimations?.Play(EnemyAnimations.AnimationFrames.Attack01,
             () =>
             {
                 isTryingToAttack = false;
+                SFXPlayer.I.Play(AudioEventsStorage.I.enemyAttacked);
                 PlayerInfo.I.health.AdjustHp((int)-damage, gameObject);
                 _moveTowardsTransform.BackUp();
                 _moveTowardsTransform.enabled = true;

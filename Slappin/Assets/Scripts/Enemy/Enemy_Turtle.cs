@@ -42,11 +42,11 @@ public class Enemy_Turtle : Enemy, IObjectPool<Enemy_Turtle>
 
     protected override void Attack()
     {
-        SFXPlayer.I.Play(AudioEventsStorage.I.enemyAttacked);
         _moveTowardsTransform.enabled = false;
         _enemyAnimations?.Play(EnemyAnimations.AnimationFrames.Attack01,
             () =>
             {
+                SFXPlayer.I.Play(AudioEventsStorage.I.enemyAttacked);
                 PlayerInfo.I.health.AdjustHp((int)-damage, gameObject);
                 isTryingToAttack = false;
                 _moveTowardsTransform.BackUp();
