@@ -26,7 +26,6 @@ public class Spawner : MonoBehaviour
     [SerializeField] private Transform topLeftPossibleSpawn;
     [SerializeField] private Transform bottomRightPossibleSpawn;
 
-    [SerializeField] private SO_Upgrade spawnRateMultiplier;
 
     private float t = 0;
 
@@ -77,7 +76,7 @@ public class Spawner : MonoBehaviour
             }
             else
             {
-                if (GetRandomNumberBetweenZeroAndOne() < 1-turtleSpawnChance)
+                if (GetRandomNumberBetweenZeroAndOne() < 1 - turtleSpawnChance)
                 {
                     Enemy_Pawn enemy = ObjectPoolManager<Enemy_Pawn>.GetObject(pawnPrefab);
                     if (enemy is not null)
@@ -118,15 +117,15 @@ public class Spawner : MonoBehaviour
 
     private float GetRandomNextSpawnTime()
     {
-        int wave = DifficultyManager.I.currentWave;
+        float spawnRateMultiplier = StatLiason.I.GetEnemy(Stat.Enemy_SpawnRate);
+
+        //TODO:: Include current wave into the equation
 
         float spawnTimer = Random.Range(minTimeBetweenSpawns * spawnRateMultiplier
-                .newValueGrowthCurve.ComputeGrowth(spawnRateMultiplier.baseValue, wave)
-            , maxTimeBetweenSpawns * spawnRateMultiplier
-                .newValueGrowthCurve.ComputeGrowth(spawnRateMultiplier.baseValue, wave));
+            , maxTimeBetweenSpawns * spawnRateMultiplier);
 
         Debug.Log($"Spawn timer is: {spawnTimer}");
-        
+
         return spawnTimer;
     }
 }

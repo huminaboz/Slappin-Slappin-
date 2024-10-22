@@ -26,8 +26,6 @@ public enum Stat
 {
     None = 0,
     
-    Enemy = 100,
-
     //Basic
     Basic = 1000,
     MoveBoostSpeed = 1001,
@@ -70,6 +68,14 @@ public enum Stat
 
     //Luck
     Luck = 8000,
+    
+    //Enemy
+    Enemy_MaxHp = 9000,
+    Enemy_SpawnRate = 9001,
+    Enemy_Currency = 9002,
+    Enemy_DamageMultiplier = 9003,
+    Enemy_WalkSpeed = 9004,
+    Enemy_SpawnChance = 9005,
 }
 
 [CreateAssetMenu(fileName = "SO_Upgrade_", menuName = "Slappin/SO_Upgrade")]

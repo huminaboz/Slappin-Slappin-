@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aaf371d22c65cd14ab65d603456a522f, type: 3}
+  m_Name: CurrencyMultiplier_Ani2
+  m_EditorClassIdentifier: 
+  notes: 
+  showPreview: 1
+  previewUpgrade: {fileID: 11400000, guid: a0c5a6eb63a2d8d4d91fe07a41fe5ecf, type: 2}
+  maxDisplayedRows: 34
+  startOffset: 0
+  debugValues: "Level\t\tAmount\t\t\tPrice\n0\t\t1.00x\t\t\t0\n1\t\t3.85x\t\t\t3\n2\t\t11.92x\t\t\t11\n3\t\t24.46x\t\t\t24\n4\t\t40.74x\t\t\t40\n5\t\t60.02x\t\t\t60\n6\t\t81.56x\t\t\t81\n7\t\t104.62x\t\t\t104\n8\t\t128.46x\t\t\t128\n9\t\t152.35x\t\t\t152\n10\t\t175.55x\t\t\t175\n11\t\t197.32x\t\t\t197\n12\t\t216.93x\t\t\t216\n13\t\t235.63x\t\t\t235\n14\t\t254.47x\t\t\t254\n15\t\t273.44x\t\t\t273\n16\t\t292.54x\t\t\t292\n17\t\t311.77x\t\t\t311\n18\t\t331.14x\t\t\t331\n19\t\t350.64x\t\t\t350\n20\t\t370.27x\t\t\t370\n21\t\t390.04x\t\t\t390\n22\t\t409.95x\t\t\t409\n23\t\t429.98x\t\t\t429\n24\t\t450.15x\t\t\t450\n25\t\t470.46x\t\t\t470\n26\t\t490.90x\t\t\t490\n27\t\t511.47x\t\t\t511\n28\t\t532.18x\t\t\t532\n29\t\t553.02x\t\t\t553\n30\t\t574.00x\t\t\t574\n31\t\t595.11x\t\t\t595\n32\t\t616.36x\t\t\t616\n33\t\t637.75x\t\t\t637\n"
+  AnimationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.01187671
+      value: 0.0021363972
+      inSlope: 0.18618068
+      outSlope: 0.18618068
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  levelAtWhichGraphReaches1: 1000
+  maximumValue: 100000

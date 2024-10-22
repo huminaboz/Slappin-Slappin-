@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aaf371d22c65cd14ab65d603456a522f, type: 3}
+  m_Name: Defense_MaxHp_AniMax
+  m_EditorClassIdentifier: 
+  notes: 
+  showPreview: 1
+  previewUpgrade: {fileID: 11400000, guid: 25e514833abb3c94d9ee64bc37cec3ab, type: 2}
+  maxDisplayedRows: 34
+  startOffset: 0
+  debugValues: "Level\t\tAmount\t\t\tPrice\n0\t\t99\t\t\t20\n1\t\t103\t\t\t20\n2\t\t107\t\t\t41\n3\t\t111\t\t\t61\n4\t\t115\t\t\t82\n5\t\t120\t\t\t102\n6\t\t124\t\t\t123\n7\t\t129\t\t\t144\n8\t\t134\t\t\t166\n9\t\t139\t\t\t187\n10\t\t144\t\t\t209\n11\t\t150\t\t\t231\n12\t\t156\t\t\t253\n13\t\t161\t\t\t275\n14\t\t168\t\t\t298\n15\t\t174\t\t\t320\n16\t\t180\t\t\t343\n17\t\t187\t\t\t366\n18\t\t194\t\t\t390\n19\t\t201\t\t\t413\n20\t\t208\t\t\t437\n21\t\t215\t\t\t461\n22\t\t223\t\t\t485\n23\t\t231\t\t\t509\n24\t\t238\t\t\t534\n25\t\t247\t\t\t559\n26\t\t255\t\t\t584\n27\t\t263\t\t\t609\n28\t\t272\t\t\t635\n29\t\t281\t\t\t660\n30\t\t290\t\t\t686\n31\t\t299\t\t\t712\n32\t\t309\t\t\t739\n33\t\t318\t\t\t766\n"
+  AnimationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0.035659697
+      outSlope: 0.035659697
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.09290932
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  levelAtWhichGraphReaches1: 1000
+  maximumValue: 100000

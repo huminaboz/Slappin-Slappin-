@@ -10,18 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8327b2e1f1789184f9cadc6d7f88cf8d, type: 3}
-  m_Name: Defense_MaxHp
+  m_Name: MaxHpMultiplier
   m_EditorClassIdentifier: 
-  stat: 2001
-  title: Max Hp
-  baseValue: 100
-  basePrice: 20
-  upgradeType: 1
-  numberType: 0
+  stat: 9000
+  title: Currency1
+  baseValue: 1
+  basePrice: 0
+  upgradeType: 8
+  numberType: 2
   useMinValue: 0
   useMaxValue: 0
   minValue: 0
   maxValue: 1e+12
-  newValueGrowthCurve: {fileID: 11400000, guid: eec9801999c5ca3458fd816b19436134, type: 2}
-  newPriceGrowthCurve: {fileID: 11400000, guid: b8249adaef50abe49ac1e785ec089bbb, type: 2}
-  maxLevel: 1000
+  newValueGrowthCurve: {fileID: 11400000, guid: 6959fefcfd0a3b94b90ee5a7cdb4880b, type: 2}
+  newPriceGrowthCurve: {fileID: 11400000, guid: 6959fefcfd0a3b94b90ee5a7cdb4880b, type: 2}
+  maxLevel: 500

@@ -340,7 +340,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _enemyAnimations: {fileID: 0}
-  currency1BaseDropAmount: 4
+  currency1BaseDropAmount: 15
   pickupToDrop: {fileID: 4864087115399935888, guid: 9fe9c0010e31c1f499c0d5a3f63d0fe3, type: 3}
   healthPickupPrefab: {fileID: 5958930582490666564, guid: 674e26a964a55af47b08423d93685d40, type: 3}
   _rigidbody: {fileID: 2246439515336334185}

@@ -32,13 +32,6 @@ public abstract class Enemy : MonoBehaviour, IHpAdjustmentListener, IObjectPool<
 
     //STATS SET BY DIFFICULTY
     [SerializeField] protected int baseAttackDamage = 10;
-    [SerializeField] private SO_Upgrade damageIncreaser;
-
-    [FormerlySerializedAs("walkSpeedIncreaser")] [SerializeField]
-    private SO_Upgrade walkSpeedMultiplier;
-
-    [SerializeField] private SO_Upgrade currencyDropAmountIncreaser;
-    [SerializeField] private SO_Upgrade maxHpIncreaser;
     [HideInInspector] public float damage;
     [HideInInspector] public float walkSpeed;
     [HideInInspector] public float currency1DropAmount;
@@ -80,16 +73,16 @@ public abstract class Enemy : MonoBehaviour, IHpAdjustmentListener, IObjectPool<
 
     protected void SetupStats()
     {
-        int wave = DifficultyManager.I.currentWave;
+        float currencyMultiplier = StatLiason.I.GetEnemy(Stat.Enemy_Currency);
+        float hpMultiplier = StatLiason.I.GetEnemy(Stat.Enemy_MaxHp);
+        float damageMultiplier = StatLiason.I.GetEnemy(Stat.Enemy_DamageMultiplier);
+        float walkSpeedMultiplier = StatLiason.I.GetEnemy(Stat.Enemy_WalkSpeed);
+        
         //Go into the upgrades, send the current wave and set the stats
-        currency1DropAmount = currencyDropAmountIncreaser
-            .newValueGrowthCurve.ComputeGrowth(currency1BaseDropAmount, wave);
-        thisHealth.enemyMaxHp = (int)maxHpIncreaser.newValueGrowthCurve
-            .ComputeGrowth(thisHealth.maxHp, wave);
-        damage = damageIncreaser.newValueGrowthCurve.ComputeGrowth(baseAttackDamage, wave);
-        walkSpeed = moveTowardsTransform.baseWalkSpeed *
-                    walkSpeedMultiplier.newValueGrowthCurve
-                        .ComputeGrowth(walkSpeedMultiplier.baseValue, wave);
+        currency1DropAmount = currency1BaseDropAmount * currencyMultiplier;
+        thisHealth.enemyMaxHp = (int)(thisHealth.maxHp * hpMultiplier);
+        damage = baseAttackDamage * damageMultiplier;
+        walkSpeed = moveTowardsTransform.baseWalkSpeed * walkSpeedMultiplier;
         moveTowardsTransform.walkSpeed = walkSpeed;
 
         Debug.Log($"{gameObject.name} - Currency: {currency1DropAmount}. MaxHp: {thisHealth.enemyMaxHp}" +

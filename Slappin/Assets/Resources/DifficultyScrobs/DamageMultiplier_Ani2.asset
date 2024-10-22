@@ -1,0 +1,64 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aaf371d22c65cd14ab65d603456a522f, type: 3}
+  m_Name: DamageMultiplier_Ani2
+  m_EditorClassIdentifier: 
+  notes: 
+  showPreview: 1
+  previewUpgrade: {fileID: 11400000, guid: 3222dc1f9bc173541934a831c348bcc7, type: 2}
+  maxDisplayedRows: 34
+  startOffset: 0
+  debugValues: "Level\t\tAmount\t\t\tPrice\n0\t\t1.00x\t\t\t0\n1\t\t1.01x\t\t\t1\n2\t\t1.03x\t\t\t1\n3\t\t1.06x\t\t\t1\n4\t\t1.10x\t\t\t1\n5\t\t1.14x\t\t\t1\n6\t\t1.20x\t\t\t1\n7\t\t1.25x\t\t\t1\n8\t\t1.31x\t\t\t1\n9\t\t1.36x\t\t\t1\n10\t\t1.41x\t\t\t1\n11\t\t1.46x\t\t\t1\n12\t\t1.50x\t\t\t1\n13\t\t1.54x\t\t\t1\n14\t\t1.56x\t\t\t1\n15\t\t1.57x\t\t\t1\n16\t\t1.58x\t\t\t1\n17\t\t1.58x\t\t\t1\n18\t\t1.58x\t\t\t1\n19\t\t1.58x\t\t\t1\n20\t\t1.59x\t\t\t1\n21\t\t1.59x\t\t\t1\n22\t\t1.59x\t\t\t1\n23\t\t1.60x\t\t\t1\n24\t\t1.60x\t\t\t1\n25\t\t1.60x\t\t\t1\n26\t\t1.60x\t\t\t1\n27\t\t1.61x\t\t\t1\n28\t\t1.61x\t\t\t1\n29\t\t1.61x\t\t\t1\n30\t\t1.61x\t\t\t1\n31\t\t1.62x\t\t\t1\n32\t\t1.62x\t\t\t1\n33\t\t1.62x\t\t\t1\n"
+  AnimationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0.1595765
+      outSlope: 0.1595765
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.38972002
+    - serializedVersion: 3
+      time: 0.015223943
+      value: 0.06368503
+      inSlope: 0.31595865
+      outSlope: 0.31595865
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.50544035
+      value: 0.50809455
+      inSlope: 2.3324232
+      outSlope: 2.3324232
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.16136195
+      outWeight: 0.17208731
+    - serializedVersion: 3
+      time: 1
+      value: 0.9976425
+      inSlope: 0.33057877
+      outSlope: 0.33057877
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.3203171
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  levelAtWhichGraphReaches1: 1000
+  maximumValue: 10
