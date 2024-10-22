@@ -7,7 +7,8 @@ using UnityEngine.UI;
 
 public class FartAttack : MonoBehaviour
 {
-    public static Action<float> OnFart;
+    public static Action<float, float> OnFart;
+    [SerializeField] private float fartKnockback = 40f; 
 
     [SerializeField] private Image cooldownMeter;
     [SerializeField] private Color defaultColor = Color.white;
@@ -61,7 +62,7 @@ public class FartAttack : MonoBehaviour
         if (Input.GetAxis("LTrigger") > 0f)
         {
             UpdateFartStats();
-            OnFart?.Invoke(fartDamage);
+            OnFart?.Invoke(fartDamage, fartKnockback);
             currentCooldown = 0f;
             cooldownMeter.color = defaultColor;
             fartText.text = "...";

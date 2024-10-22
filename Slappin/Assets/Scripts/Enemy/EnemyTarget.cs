@@ -4,6 +4,7 @@ public class EnemyTarget : Singleton<EnemyTarget>
 {
     [SerializeField] public Transform targetTransform;
     [SerializeField] public Transform hurtLine;
+    [SerializeField] public Transform fartLine;
 
     [Header("Debug Stuff")] 
     [SerializeField] private Transform spawnLeft;

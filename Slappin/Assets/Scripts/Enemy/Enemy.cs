@@ -66,8 +66,15 @@ public abstract class Enemy : MonoBehaviour, IHpAdjustmentListener, IObjectPool<
         FartAttack.OnFart += GetFartedOn;
     }
 
-    private void GetFartedOn(float fartDamage)
+    private void GetFartedOn(float fartDamage, float knockbackForce)
     {
+        //Knockback if far enough forward
+        if (transform.position.z < EnemyTarget.I.fartLine.position.z)
+        {
+            Vector3 flickForceVector = new Vector3(0f, 0f, knockbackForce);
+            _rigidbody.AddForce(flickForceVector, ForceMode.Impulse);
+        }
+
         thisHealth.AdjustHp((int)-fartDamage, null);
     }
 
@@ -77,7 +84,7 @@ public abstract class Enemy : MonoBehaviour, IHpAdjustmentListener, IObjectPool<
         float hpMultiplier = StatLiason.I.GetEnemy(Stat.Enemy_MaxHp);
         float damageMultiplier = StatLiason.I.GetEnemy(Stat.Enemy_DamageMultiplier);
         float walkSpeedMultiplier = StatLiason.I.GetEnemy(Stat.Enemy_WalkSpeed);
-        
+
         //Go into the upgrades, send the current wave and set the stats
         currency1DropAmount = currency1BaseDropAmount * currencyMultiplier;
         thisHealth.enemyMaxHp = (int)(thisHealth.maxHp * hpMultiplier);
@@ -99,7 +106,7 @@ public abstract class Enemy : MonoBehaviour, IHpAdjustmentListener, IObjectPool<
     public virtual void SwitchToAttackMode()
     {
         performBehavior = Attack;
-        
+
         //NOTE:: This is shitty, but you gotta set this to false at the end of their animation
         isTryingToAttack = true;
     }
@@ -112,7 +119,7 @@ public abstract class Enemy : MonoBehaviour, IHpAdjustmentListener, IObjectPool<
     protected abstract void Attack();
 
     protected bool isTryingToAttack = false;
-    
+
     protected void DecideNextAnimation()
     {
         // //Called when completing some animations

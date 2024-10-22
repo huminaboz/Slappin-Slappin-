@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Flick_KnockbackForce_Ani_AniMax
   m_EditorClassIdentifier: 
   notes: 
-  showPreview: 1
+  showPreview: 0
   previewUpgrade: {fileID: 11400000, guid: c82186fe2471cbc4ab1b41031bf26a67, type: 2}
   maxDisplayedRows: 34
   startOffset: 0
@@ -44,3 +44,4 @@ MonoBehaviour:
     m_RotationOrder: 4
   levelAtWhichGraphReaches1: 200
   maximumValue: 5.51
+  multiplier: 1

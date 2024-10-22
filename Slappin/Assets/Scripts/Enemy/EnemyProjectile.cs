@@ -33,7 +33,7 @@ public class EnemyProjectile : MonoBehaviour, IObjectPool<EnemyProjectile>, IHpA
         FartAttack.OnFart += GetFartedOn;
     }
     
-    private void GetFartedOn(float fartDamage)
+    private void GetFartedOn(float fartDamage, float knockback)
     {
         health.AdjustHp((int)-fartDamage, null);
     }
