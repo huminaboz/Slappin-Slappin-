@@ -4,7 +4,6 @@ using UnityEngine.UI;
 
 public class SettingsMenu : MonoBehaviour
 {
-    [SerializeField] private GameObject contents;
 
     [SerializeField] private AudioMixerGroup sfxGroup;
     [SerializeField] private AudioMixerGroup musicGroup;
@@ -65,39 +64,7 @@ public class SettingsMenu : MonoBehaviour
         PlayerPrefs.SetFloat(MUSIC_PREF_KEY, volume);
     }
 
-    private void Update()
-    {
-        if (Input.GetButtonDown("Pause") || Input.GetKeyDown(KeyCode.Escape))
-        {
-            PlayerPrefs.Save();
-            if (Time.timeScale == 1f)
-            {
-                Pause();
-            }
-            else
-            {
-                UnPause();
-            }
-        }
-    }
-
-    public void Pause()
-    {
-        MusicPlayer.I.Play(AudioEventsStorage.I.store);
-        contents.SetActive(true);
-        Debug.Log("UNPAUSING GAME");
-        Time.timeScale = 0f;
-        StateGame.PlayerInGameControlsEnabled = false;
-    }
-
-    public void UnPause()
-    {
-        MusicPlayer.I.Play(AudioEventsStorage.I.playing);
-        contents.SetActive(false);
-        Debug.Log("PAUSING GAME");
-        Time.timeScale = 1f;
-        StateGame.PlayerInGameControlsEnabled = true;
-    }
+  
 
     public void Quit()
     {
