@@ -17,7 +17,7 @@ MonoBehaviour:
   previewUpgrade: {fileID: 11400000, guid: f246b068ac359934a84b36c0637167e3, type: 2}
   maxDisplayedRows: 34
   startOffset: 0
-  debugValues: "Level\t\tAmount\t\t\tPrice\n0\t\t1.00x\t\t\t0\n1\t\t1.21x\t\t\t1\n2\t\t1.64x\t\t\t1\n3\t\t2.25x\t\t\t2\n4\t\t2.99x\t\t\t2\n5\t\t3.81x\t\t\t3\n6\t\t4.66x\t\t\t4\n7\t\t5.49x\t\t\t5\n8\t\t6.25x\t\t\t6\n9\t\t6.90x\t\t\t6\n10\t\t7.38x\t\t\t7\n11\t\t7.65x\t\t\t7\n12\t\t7.81x\t\t\t7\n13\t\t7.97x\t\t\t7\n14\t\t8.12x\t\t\t8\n15\t\t8.28x\t\t\t8\n16\t\t8.44x\t\t\t8\n17\t\t8.60x\t\t\t8\n18\t\t8.76x\t\t\t8\n19\t\t8.92x\t\t\t8\n20\t\t9.07x\t\t\t9\n21\t\t9.23x\t\t\t9\n22\t\t9.39x\t\t\t9\n23\t\t9.55x\t\t\t9\n24\t\t9.71x\t\t\t9\n25\t\t9.87x\t\t\t9\n26\t\t10.03x\t\t\t10\n27\t\t10.19x\t\t\t10\n28\t\t10.35x\t\t\t10\n29\t\t10.51x\t\t\t10\n30\t\t10.67x\t\t\t10\n31\t\t10.83x\t\t\t10\n32\t\t10.99x\t\t\t11\n33\t\t11.15x\t\t\t11\n"
+  debugValues: "Level\t\tAmount\t\t\tPrice\n0\t\t1.00x\t\t\t0\n1\t\t1.27x\t\t\t1\n2\t\t1.89x\t\t\t1\n3\t\t2.78x\t\t\t2\n4\t\t3.88x\t\t\t3\n5\t\t5.11x\t\t\t5\n6\t\t6.40x\t\t\t6\n7\t\t7.68x\t\t\t7\n8\t\t8.89x\t\t\t8\n9\t\t9.96x\t\t\t9\n10\t\t10.81x\t\t\t10\n11\t\t11.37x\t\t\t11\n12\t\t11.60x\t\t\t11\n13\t\t11.76x\t\t\t11\n14\t\t11.92x\t\t\t11\n15\t\t12.07x\t\t\t12\n16\t\t12.23x\t\t\t12\n17\t\t12.39x\t\t\t12\n18\t\t12.55x\t\t\t12\n19\t\t12.71x\t\t\t12\n20\t\t12.86x\t\t\t12\n21\t\t13.02x\t\t\t13\n22\t\t13.18x\t\t\t13\n23\t\t13.34x\t\t\t13\n24\t\t13.49x\t\t\t13\n25\t\t13.65x\t\t\t13\n26\t\t13.81x\t\t\t13\n27\t\t13.97x\t\t\t13\n28\t\t14.13x\t\t\t14\n29\t\t14.29x\t\t\t14\n30\t\t14.45x\t\t\t14\n31\t\t14.60x\t\t\t14\n32\t\t14.76x\t\t\t14\n33\t\t14.92x\t\t\t14\n"
   AnimationCurve:
     serializedVersion: 2
     m_Curve:
@@ -31,8 +31,8 @@ MonoBehaviour:
       inWeight: 0
       outWeight: 0.38972002
     - serializedVersion: 3
-      time: 0.010959111
-      value: 0.013315767
+      time: 0.011630498
+      value: 0.021128267
       inSlope: 0.31595865
       outSlope: 0.31595865
       tangentMode: 0
