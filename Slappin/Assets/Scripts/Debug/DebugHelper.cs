@@ -28,7 +28,7 @@ public class DebugHelper : Singleton<DebugHelper>
 
     private void Start()
     {
-        if(StateGame.debugModeOn) Debug.LogWarning("DEBUG MODE IS ON");
+        if(StateGame.debugModeOn) Debug.LogError("DEBUG MODE IS ON");
     }
 
     private void Update()

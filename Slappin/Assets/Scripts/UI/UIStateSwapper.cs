@@ -16,6 +16,7 @@ public class UIStateSwapper : Singleton<UIStateSwapper>
 
     [SerializeField] private TextMeshProUGUI modalText;
     [SerializeField] private GameObject modalActivator;
+    [SerializeField] private GameObject controlsScreen;
 
     private bool restartingEnabled = false;
 
@@ -99,7 +100,7 @@ public class UIStateSwapper : Singleton<UIStateSwapper>
         storeUI.SetActive(currentUIState == UIState.store);
         playingHUD.SetActive(currentUIState == UIState.playing);
         modalActivator.SetActive(currentUIState == UIState.youLose);
-        
+
         switch (currentUIState)
         {
             case UIState.playing:
@@ -129,11 +130,31 @@ public class UIStateSwapper : Singleton<UIStateSwapper>
             PlayerPrefs.Save();
             if (!pauseScreen.activeSelf)
             {
+                if(controlsScreen.activeSelf) controlsScreen.SetActive(false);
                 Pause();
             }
             else
             {
                 UnPause();
+            }
+        }
+
+        if (Input.GetButtonDown("Select"))
+        {
+            if (!pauseScreen.activeSelf)
+            {
+                controlsScreen.SetActive(!controlsScreen.activeSelf);
+                if (controlsScreen.activeSelf)
+                {
+                    TurnOffGameplay();
+                }
+                else
+                {
+                    if (currentUIState != UIState.store)
+                    {
+                        TurnOnGameplay();
+                    }
+                }
             }
         }
 
@@ -153,8 +174,19 @@ public class UIStateSwapper : Singleton<UIStateSwapper>
         pauseScreen.SetActive(true);
         SettingsMenu.I.OnOpenedSettings();
         Debug.Log("PAUSING GAME and showing settings menu");
+        TurnOffGameplay();
+    }
+
+    private void TurnOffGameplay()
+    {
         Time.timeScale = 0f;
         StateGame.PlayerInGameControlsEnabled = false;
+    }
+
+    private void TurnOnGameplay()
+    {
+        Time.timeScale = 1f;
+        StateGame.PlayerInGameControlsEnabled = true;
     }
 
     public void UnPause()
@@ -164,8 +196,7 @@ public class UIStateSwapper : Singleton<UIStateSwapper>
         if (currentUIState == UIState.playing)
         {
             MusicPlayer.I.Play(AudioEventsStorage.I.playing);
-            Time.timeScale = 1f;
-            StateGame.PlayerInGameControlsEnabled = true;
+            TurnOnGameplay();
         }
 
         if (currentUIState == UIState.store)
