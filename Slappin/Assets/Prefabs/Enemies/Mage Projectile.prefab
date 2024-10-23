@@ -145,6 +145,7 @@ MonoBehaviour:
       m_Calls: []
   isAlive: 1
   isPlayer: 0
+  isInvincible: 0
 --- !u!54 &7822763252202247519
 Rigidbody:
   m_ObjectHideFlags: 0

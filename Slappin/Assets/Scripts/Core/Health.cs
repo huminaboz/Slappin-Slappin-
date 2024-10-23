@@ -14,7 +14,8 @@ public class Health : MonoBehaviour
     // private bool immuneToDamage = false;
     public bool isAlive = true;
     public bool isPlayer = false;
-
+    [SerializeField] private bool isInvincible = false;
+    
     private IHpAdjustmentListener[] hpAdjustmentListeners;
 
     private void Awake()
@@ -46,6 +47,7 @@ public class Health : MonoBehaviour
 
     public void Initialize()
     {
+        if(isInvincible) Debug.LogError($"{gameObject.name} is invincible!!");
         if (isPlayer) maxHp = (int)StatLiason.I.Get(Stat.IncreaseMaxHp);
         else
         {
@@ -104,6 +106,11 @@ public class Health : MonoBehaviour
         //DEADING
         if (hp <= 0)
         {
+            if (isInvincible)
+            {
+                hp = maxHp;
+                return;
+            }
             isAlive = false;
 
             float maxWaitTime = 0;

@@ -57,6 +57,7 @@ MonoBehaviour:
   baseWalkSpeed: 2
   rotationSpeed: 5
   walkSpeed: 4
+  goalAttackLine: {fileID: 0}
   isDashing: 0
 --- !u!114 &2916117102104308091
 MonoBehaviour:
@@ -78,6 +79,7 @@ MonoBehaviour:
       m_Calls: []
   isAlive: 1
   isPlayer: 0
+  isInvincible: 0
 --- !u!114 &8881780924448471337
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -322,7 +324,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 11025
+  m_VersionIndex: 11028
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
@@ -347,10 +349,6 @@ MonoBehaviour:
   flashDuration: 0.5
   flashCount: 5
   baseAttackDamage: 10
-  damageIncreaser: {fileID: 11400000, guid: 292bf0af6cb4379408eb8735d1020d04, type: 2}
-  walkSpeedMultiplier: {fileID: 11400000, guid: be250cd15ea936d47bc228c223e50b43, type: 2}
-  currencyDropAmountIncreaser: {fileID: 11400000, guid: 2848e69c5f96c1148ba3f58c1d64ea12, type: 2}
-  maxHpIncreaser: {fileID: 11400000, guid: a736ca397d20653409f6184dc945db9a, type: 2}
   damage: 0
   walkSpeed: 0
   currency1DropAmount: 4
@@ -482,7 +480,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 4
+  m_Constraints: 0
   m_CollisionDetection: 1
 --- !u!114 &5003413546357470793
 MonoBehaviour:

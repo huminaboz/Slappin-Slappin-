@@ -16,6 +16,8 @@ public class MoveTowardsTransform : MonoBehaviour, IHpAdjustmentListener
     private Rigidbody _rigidbody;
     public bool isDashing = false;
 
+    private SnapToTheGround _snapToTheGround;
+    
     //TODO:: Can set this up to target a random X position at the hurt line
 
 
@@ -28,6 +30,7 @@ public class MoveTowardsTransform : MonoBehaviour, IHpAdjustmentListener
         else Debug.LogError("Walkscript doesn't have an enemy script");
 
         _rigidbody = GetComponent<Rigidbody>();
+        _snapToTheGround = GetComponent<SnapToTheGround>();
 
         goalAttackLine = EnemyTarget.I.hurtLine;
     }
@@ -113,6 +116,7 @@ public class MoveTowardsTransform : MonoBehaviour, IHpAdjustmentListener
             // Rotate towards the target over time
             transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
         }
+        _snapToTheGround.StayYDistanceFromGround(_rigidbody);
     }
 
     public void BackUp()
