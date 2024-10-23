@@ -1,6 +1,7 @@
 using System;
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
 
@@ -84,7 +85,7 @@ public class UpgradeCard_Appearance : MonoBehaviour
         priceText.color = priceTextDisabledColor;
 
         //Don't let the button get pressed
-        thisButton.interactable = false;
+        //thisButton.interactable = false;
     }
 
     public void SetDefaultAppearance()
@@ -101,7 +102,7 @@ public class UpgradeCard_Appearance : MonoBehaviour
             priceText.color = defaultPriceTextColor;
 
             //Allow the button to be pressed
-            thisButton.interactable = true;
+            //thisButton.interactable = true;
         }
         //Do something special if the amount is maxed out
         else
@@ -123,6 +124,7 @@ public class UpgradeCard_Appearance : MonoBehaviour
         border.gameObject.SetActive(true);
         shadowImage.color = shadowSelected;
         cardBodyRect.anchoredPosition = _bodyDefaultPosition;
+        StoreUIManager.I.ScrollTo(cardBodyRect);
     }
 
     public void OnPressed()
@@ -132,4 +134,7 @@ public class UpgradeCard_Appearance : MonoBehaviour
         border.gameObject.SetActive(true);
         shadowImage.color = shadowPressed;
     }
+    
+    
+
 }

@@ -44,6 +44,10 @@ public class UpgradeData : MonoBehaviour
         if (IsAllowedToBePurchased(amount) == false)
         {
             Debug.LogWarning("You can't buy that!");
+            InGameMessageAnnouncer.I.MakeAnouncement(
+                $"<size=50%>You don't have {GetPrice(amount)} orbs!</size>",
+                .5f, .5f);
+            SFXPlayer.I.Play(AudioEventsStorage.I.CantBuy);
             return;
         }
 

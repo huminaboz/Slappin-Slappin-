@@ -36,7 +36,8 @@ public class StoreUIManager : Singleton<StoreUIManager>
     public static Action ChangedPreviewAmount;
 
     [FormerlySerializedAs("UpgradeCards")] public List<GameObject> UpgradeCardButtons = new List<GameObject>();
-    
+    [SerializeField] private Button startWaveButton;
+
 
     public delegate void DebugUpdateStoreUI();
 
@@ -47,11 +48,13 @@ public class StoreUIManager : Singleton<StoreUIManager>
     private void OnEnable()
     {
         UpgradeData.OnPurchaseMade += UpdateLabels;
+        DebugHelper.I._qc.OnDeactivate += OnEnteredStore;
     }
 
     private void OnDisable()
     {
         UpgradeData.OnPurchaseMade -= UpdateLabels;
+        DebugHelper.I._qc.OnDeactivate -= OnEnteredStore;
     }
 
     private void Awake()
@@ -89,10 +92,29 @@ public class StoreUIManager : Singleton<StoreUIManager>
             ChangedPreviewAmount?.Invoke();
         }
     }
+    
+    [SerializeField] private ScrollRect scrollRect;
+    [SerializeField] private RectTransform contentPanel;
+    
+    public void ScrollTo(RectTransform target)
+    {
+        Canvas.ForceUpdateCanvases();
+        Vector2 viewportPosition = scrollRect.viewport.InverseTransformPoint(scrollRect.viewport.position);
+        Vector2 targetPosition = scrollRect.viewport.InverseTransformPoint(target.position);
+        Vector2 newPosition = contentPanel.anchoredPosition + (viewportPosition - targetPosition);
+        contentPanel.anchoredPosition = new Vector2(contentPanel.anchoredPosition.x, newPosition.y);
+    }
+    
 
     public void ExitStore()
     {
+        EventSystem.current.SetSelectedGameObject(null);
         UIStateSwapper.I.ReturnToPlaying();
+    }
+
+    public void OnEnteredStore()
+    {
+        EventSystem.current.SetSelectedGameObject(firstEntryInStore);
     }
 
     public void UpdateLabels()
@@ -122,6 +144,8 @@ public class StoreUIManager : Singleton<StoreUIManager>
         string resourcePath = "UpgradeScrobs";
         SO_Upgrade[] upgrades = Resources.LoadAll<SO_Upgrade>(resourcePath);
 
+        
+        
         foreach (SO_Upgrade upgradeSO in upgrades)
         {
             if (upgradeTypes.Contains(upgradeSO.upgradeType)) continue;
@@ -149,6 +173,8 @@ public class StoreUIManager : Singleton<StoreUIManager>
             UpgradeData upgradeData = Instantiate(upgradeDataPrefab,
                 GetCategoryParent(upgradeSO.upgradeType));
             UpgradeCardButtons.Add(upgradeData.gameObject);
+            //TODO:: When you add an item to a row, set up it's left and right navigation to anything else on that same row
+            //
 
             // Assign the SO_Upgrade to the upgradeData's upgradeSO field
             if (upgradeData != null)
@@ -162,8 +188,110 @@ public class StoreUIManager : Singleton<StoreUIManager>
         }
         
         //For the first time you set this up
-        EventSystem.current.SetSelectedGameObject(UpgradeCardButtons[0]);
+        SetupButtonNavigation(rowsParent.transform);
     }
+
+    private void SetupButtonNavigation(Transform parentRows)
+    {
+        List<Transform> rows = new List<Transform>();
+
+        // Collect all children of rowParent into a list of transforms
+        for (int i = 0; i < parentRows.childCount; i++)
+        {
+            rows.Add(parentRows.GetChild(i));
+        }
+
+        // Go through each transform in the rows list
+        for (int rowIndex = 0; rowIndex < rows.Count; rowIndex++)
+        {
+            Transform row = rows[rowIndex];
+
+            // Iterate through all children starting from index 1
+            for (int childIndex = 1; childIndex < row.childCount; childIndex++)
+            {
+                Transform child = row.GetChild(childIndex);
+                Button button = child.GetComponent<Button>();
+
+                if (button != null)
+                {
+                    Navigation nav = new Navigation();
+                    nav.mode = Navigation.Mode.Explicit;
+
+                    // Set left navigation
+                    if (childIndex > 1)
+                    {
+                        Button leftButton = row.GetChild(childIndex - 1).GetComponent<Button>();
+                        if (leftButton != null)
+                        {
+                            nav.selectOnLeft = leftButton;
+                        }
+                    }
+
+                    // Set right navigation
+                    if (childIndex < row.childCount - 1)
+                    {
+                        Button rightButton = row.GetChild(childIndex + 1).GetComponent<Button>();
+                        if (rightButton != null)
+                        {
+                            nav.selectOnRight = rightButton;
+                        }
+                    }
+
+                    // Set up navigation
+                    if (rowIndex > 0)
+                    {
+                        Transform previousRow = rows[rowIndex - 1];
+                        Button upButton = childIndex < previousRow.childCount ? previousRow.GetChild(childIndex).GetComponent<Button>() : previousRow.GetChild(previousRow.childCount - 1).GetComponent<Button>();
+                        if (upButton != null)
+                        {
+                            nav.selectOnUp = upButton;
+                        }
+                    }
+
+                    if (rowIndex < rows.Count - 1)
+                    {
+                        Transform nextRow = rows[rowIndex + 1];
+                        Button downButton = childIndex < nextRow.childCount ? nextRow.GetChild(childIndex).GetComponent<Button>() : nextRow.GetChild(nextRow.childCount - 1).GetComponent<Button>();
+                        if (downButton != null)
+                        {
+                            nav.selectOnDown = downButton;
+                        }
+                    }
+                    else
+                    {
+                        nav.selectOnDown = startWaveButton;
+                    }
+
+                    button.navigation = nav;
+                }
+            }
+        }
+
+        // Setup navigation for startWaveButton
+        if (rows.Count > 0)
+        {
+            Transform lastRow = rows[rows.Count - 1];
+            Button lastButton = lastRow.GetChild(lastRow.childCount - 1).GetComponent<Button>();
+            if (lastButton != null)
+            {
+                Navigation nav = new Navigation();
+                nav.mode = Navigation.Mode.Explicit;
+                nav.selectOnUp = lastButton;
+                nav.selectOnLeft = lastButton;
+                startWaveButton.navigation = nav;
+            }
+            
+            // Set the selected GameObject to the first item on the first row
+            if (rows[0].childCount > 1)
+            {
+                firstEntryInStore = rows[0].GetChild(1).gameObject;
+                
+            }
+        }
+    }
+
+    private GameObject firstEntryInStore; 
+    
 
     public Color GetCategoryColor(UpgradeType upgradeType)
     {

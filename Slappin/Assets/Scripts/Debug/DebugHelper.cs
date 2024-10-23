@@ -2,9 +2,9 @@ using System;
 using UnityEngine;
 using QFSW.QC;
 
-public class DebugHelper : MonoBehaviour
+public class DebugHelper : Singleton<DebugHelper>
 {
-    [SerializeField] QuantumConsole _qc;
+    [SerializeField] public QuantumConsole _qc;
 
 
     private void Awake()

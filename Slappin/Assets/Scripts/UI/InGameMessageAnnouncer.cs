@@ -18,7 +18,7 @@ public class InGameMessageAnnouncer : Singleton<InGameMessageAnnouncer>
         activator.SetActive(true);
     }
 
-    public void MakeAnouncement(string announcement)
+    public void MakeAnouncement(string announcement, float duration, float fadeDuration)
     {
         //Pop it up quickly
         FadeAnnouncement(.25f, 1f);
@@ -35,14 +35,14 @@ public class InGameMessageAnnouncer : Singleton<InGameMessageAnnouncer>
 
         //Fade it out after a little time
         clearTextCo = StartCoroutine(BozUtilities
-            .DoAfterDelay(2f, () => { FadeAnnouncement(1f, .0f); }));
+            .DoAfterRealTimeDelay(duration, () => { FadeAnnouncement(fadeDuration, .0f); }));
     }
 
     private void FadeAnnouncement(float duration, float goal)
     {
         foreach (TextMeshProUGUI text in announcements)
         {
-            text.DOFade(goal, duration).SetEase(Ease.OutQuad);
+            text.DOFade(goal, duration).SetEase(Ease.OutQuad).SetUpdate(true);
         }
     }
 }

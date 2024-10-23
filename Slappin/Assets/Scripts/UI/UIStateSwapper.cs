@@ -99,7 +99,6 @@ public class UIStateSwapper : Singleton<UIStateSwapper>
         storeUI.SetActive(currentUIState == UIState.store);
         playingHUD.SetActive(currentUIState == UIState.playing);
         modalActivator.SetActive(currentUIState == UIState.youLose);
-        EventSystem.current.SetSelectedGameObject(null);
         
         switch (currentUIState)
         {
@@ -108,7 +107,7 @@ public class UIStateSwapper : Singleton<UIStateSwapper>
                 break;
             case UIState.store:
                 StoreUIManager.I.UpdateLabels();
-                // EventSystem.current.SetSelectedGameObject(StoreUIManager.I.UpgradeCardButtons[0]);
+                StoreUIManager.I.OnEnteredStore();
                 break;
             case UIState.youLose:
                 SetModalMessage($"Hands Down" +

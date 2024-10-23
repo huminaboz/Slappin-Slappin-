@@ -39,6 +39,7 @@ public class AudioEventsStorage : Singleton<AudioEventsStorage>
     public SFXScrob WaveStart;
     public SFXScrob BoughtUpgrade;
     public SFXScrob HoverUpgrade;
+    public SFXScrob CantBuy;
     
     
     [Header("Player")] 

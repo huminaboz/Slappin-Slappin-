@@ -4360,7 +4360,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &271585837
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6828,10 +6828,10 @@ RectTransform:
   - {fileID: 70558004}
   m_Father: {fileID: 634027011}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 47, y: -41}
+  m_SizeDelta: {x: 0, y: 82}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!4 &415489722 stripped
 Transform:
@@ -9983,7 +9983,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
   m_AnchoredPosition: {x: -0.9246826, y: -453}
-  m_SizeDelta: {x: 0, y: 82}
+  m_SizeDelta: {x: 421.27002, y: 82}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &634027012
 MonoBehaviour:
@@ -13674,7 +13674,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0.000061035156}
-  m_SizeDelta: {x: 1658.5332, y: 0}
+  m_SizeDelta: {x: 1658.5332, y: 160}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &742603572
 MonoBehaviour:
@@ -14859,8 +14859,9 @@ GameObject:
   m_Component:
   - component: {fileID: 842374461}
   - component: {fileID: 842374462}
+  - component: {fileID: 842374463}
   m_Layer: 5
-  m_Name: Wave Announcer
+  m_Name: Announcer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14873,18 +14874,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 842374460}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.1547005, y: 1.1547005, z: 1.1547005}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1485367602}
-  m_Father: {fileID: 1994268926}
+  m_Father: {fileID: 1401901909}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: -257.2312, y: -144.69257}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &842374462
 MonoBehaviour:
@@ -14902,6 +14903,18 @@ MonoBehaviour:
   - {fileID: 895962928}
   - {fileID: 262610846}
   activator: {fileID: 1485367601}
+--- !u!225 &842374463
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 842374460}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
+  m_IgnoreParentGroups: 0
 --- !u!4 &851911750 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1576488453971394810, guid: a778b631c6253a04899cb31bad047c81, type: 3}
@@ -16572,7 +16585,7 @@ RectTransform:
   m_Father: {fileID: 1364405841}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 8.9841, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -17057,7 +17070,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -24988,6 +25001,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 542480595}
+  - {fileID: 842374461}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -35359,7 +35373,6 @@ RectTransform:
   - {fileID: 438390613}
   - {fileID: 1564815928}
   - {fileID: 1004793314}
-  - {fileID: 842374461}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -37493,6 +37506,9 @@ MonoBehaviour:
   buyModeText: {fileID: 700745712}
   previewAmount: 1
   UpgradeCardButtons: []
+  startWaveButton: {fileID: 454974031}
+  scrollRect: {fileID: 1966064405}
+  contentPanel: {fileID: 742603571}
 --- !u!1001 &2144067105
 PrefabInstance:
   m_ObjectHideFlags: 0

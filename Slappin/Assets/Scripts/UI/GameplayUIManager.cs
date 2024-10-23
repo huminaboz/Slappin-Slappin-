@@ -23,7 +23,8 @@ public class GameplayUIManager : Singleton<GameplayUIManager>
         //TODO:: Some sort of buffer screen first announcing the wave number
         timeRemaining = maxWaveTimer;
         timerRunning = true;
-        InGameMessageAnnouncer.I.MakeAnouncement($"Wave {DifficultyManager.I.currentWave}");
+        InGameMessageAnnouncer.I.MakeAnouncement($"Wave {DifficultyManager.I.currentWave}",
+            2f, 1f);
         waveEndingAnnouncementMade = false;
     }
 
@@ -37,7 +38,8 @@ public class GameplayUIManager : Singleton<GameplayUIManager>
 
             if (timeRemaining <= 6.5f && !waveEndingAnnouncementMade)
             {
-                InGameMessageAnnouncer.I.MakeAnouncement($"5 seconds left!");
+                InGameMessageAnnouncer.I.MakeAnouncement($"5 seconds left!",
+                    2f, 1f);
                 waveEndingAnnouncementMade = true;
             }
             
