@@ -35445,7 +35445,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Hands down.
+  m_text: 'Hands down
+
+    on Wave<color=#746CA5> 382</color>.
+
+    \n<color=#FF6C4B><size=50%>Post
+    it in the comments!</size></color>'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a827d3b4f618e1940a06c5438c39c230, type: 2}
   m_sharedMaterial: {fileID: 8812891653361001597, guid: a827d3b4f618e1940a06c5438c39c230, type: 2}
@@ -35484,7 +35489,7 @@ MonoBehaviour:
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: -37.81
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0

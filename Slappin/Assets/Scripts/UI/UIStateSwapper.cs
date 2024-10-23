@@ -106,9 +106,12 @@ public class UIStateSwapper : Singleton<UIStateSwapper>
         modalActivator.SetActive(currentUIState == UIState.youLose);
         if (currentUIState == UIState.youLose)
         {
-            SetModalMessage("Hands Down.");
-            StartCoroutine(BozUtilities.DoAfterRealTimeDelay(1f, () =>
+            SetModalMessage($"Hands Down" +
+                            $"\non Wave <color=#746CA5>{DifficultyManager.I.currentWave}</color>." +
+                            $"\n\n<color=#FF6C4B><size=45%>Post it in the comments!</size></color>");
+            StartCoroutine(BozUtilities.DoAfterRealTimeDelay(2f, () =>
             {
+                //TODO:: Show the button you can press
                 restartingEnabled = true;
             }));
         }
