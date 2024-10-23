@@ -37,7 +37,7 @@ public class StoreUIManager : Singleton<StoreUIManager>
 
     [FormerlySerializedAs("UpgradeCards")] public List<GameObject> UpgradeCardButtons = new List<GameObject>();
     [SerializeField] private Button startWaveButton;
-
+    [SerializeField] public QuantumConsole _qc;
 
     public delegate void DebugUpdateStoreUI();
 
@@ -48,13 +48,13 @@ public class StoreUIManager : Singleton<StoreUIManager>
     private void OnEnable()
     {
         UpgradeData.OnPurchaseMade += UpdateLabels;
-        DebugHelper.I._qc.OnDeactivate += OnEnteredStore;
+        _qc.OnDeactivate += OnEnteredStore;
     }
 
     private void OnDisable()
     {
         UpgradeData.OnPurchaseMade -= UpdateLabels;
-        DebugHelper.I._qc.OnDeactivate -= OnEnteredStore;
+        _qc.OnDeactivate -= OnEnteredStore;
     }
 
     private void Awake()

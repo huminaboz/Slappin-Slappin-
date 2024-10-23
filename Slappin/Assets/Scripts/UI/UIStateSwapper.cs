@@ -151,6 +151,7 @@ public class UIStateSwapper : Singleton<UIStateSwapper>
     {
         MusicPlayer.I.Play(AudioEventsStorage.I.store);
         pauseScreen.SetActive(true);
+        SettingsMenu.I.OnOpenedSettings();
         Debug.Log("PAUSING GAME and showing settings menu");
         Time.timeScale = 0f;
         StateGame.PlayerInGameControlsEnabled = false;

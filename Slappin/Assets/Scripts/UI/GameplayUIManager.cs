@@ -13,8 +13,13 @@ public class GameplayUIManager : Singleton<GameplayUIManager>
     private bool timerRunning = true;
     private bool waveEndingAnnouncementMade = false;
 
+    private void Awake()
+    {
+    }
+
     private void Start()
     {
+        SFXPlayer.I.Play(AudioEventsStorage.I.gameStarted);
         StartNewWave();
     }
 

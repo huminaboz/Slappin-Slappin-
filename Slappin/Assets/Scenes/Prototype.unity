@@ -1142,6 +1142,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Quit
       objectReference: {fileID: 0}
+    - target: {fileID: 5925325144664347493, guid: 35608f30d0b66a7408da03891e717f20, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7090275856974637357, guid: 35608f30d0b66a7408da03891e717f20, type: 3}
       propertyPath: m_SizeDelta.x
       value: 569.6
@@ -15017,10 +15021,10 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_NormalColor: {r: 0.4509804, g: 0.9411765, b: 0.6431373, a: 1}
+    m_HighlightedColor: {r: 1, g: 0.42352942, b: 0.29411766, a: 1}
+    m_PressedColor: {r: 0.14509805, g: 0.15686275, b: 0.39607844, a: 1}
+    m_SelectedColor: {r: 1, g: 0.42352942, b: 0.29411766, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -17741,7 +17745,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -18211,7 +18215,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.4509804, g: 0.9411765, b: 0.6431373, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -21010,7 +21014,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.4509804, g: 0.9411765, b: 0.6431373, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -22028,6 +22032,7 @@ MonoBehaviour:
   musicGroup: {fileID: -1679997838058148851, guid: 2e536806f2eb7e34391ecb00a77a8521, type: 2}
   sfxSlider: {fileID: 1685540726}
   musicSlider: {fileID: 858677848}
+  firstObjectSelectedOnLoad: {fileID: 1685540724}
   audioMixer: {fileID: 24100000, guid: 2e536806f2eb7e34391ecb00a77a8521, type: 2}
 --- !u!1001 &1344036056
 PrefabInstance:
@@ -28127,10 +28132,10 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_NormalColor: {r: 0.4509804, g: 0.9411765, b: 0.6431373, a: 1}
+    m_HighlightedColor: {r: 1, g: 0.58781445, b: 0.495283, a: 1}
+    m_PressedColor: {r: 0.14509805, g: 0.15686275, b: 0.39607844, a: 1}
+    m_SelectedColor: {r: 1, g: 0.42352942, b: 0.29411766, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -37507,6 +37512,7 @@ MonoBehaviour:
   previewAmount: 1
   UpgradeCardButtons: []
   startWaveButton: {fileID: 454974031}
+  _qc: {fileID: 337441564}
   scrollRect: {fileID: 1966064405}
   contentPanel: {fileID: 742603571}
 --- !u!1001 &2144067105

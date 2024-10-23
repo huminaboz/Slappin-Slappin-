@@ -1,15 +1,18 @@
+using System;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class SettingsMenu : MonoBehaviour
+public class SettingsMenu : Singleton<SettingsMenu>
 {
-
     [SerializeField] private AudioMixerGroup sfxGroup;
     [SerializeField] private AudioMixerGroup musicGroup;
 
     [SerializeField] private Slider sfxSlider;
     [SerializeField] private Slider musicSlider;
+
+    [SerializeField] private GameObject firstObjectSelectedOnLoad;
 
     // Reference to the AudioMixer (assuming you have one)
     public AudioMixer audioMixer;
@@ -18,8 +21,15 @@ public class SettingsMenu : MonoBehaviour
     private const string SFX_PREF_KEY = "SFXVolume";
     private const string MUSIC_PREF_KEY = "MusicVolume";
 
+    private bool madeFirstAdjustment = false;
+
+    public void OnOpenedSettings()
+    {
+        EventSystem.current.SetSelectedGameObject(firstObjectSelectedOnLoad);
+    }
+
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         // Load saved values from PlayerPrefs or set default to 1 (full volume)
         sfxSlider.value = PlayerPrefs.GetFloat(SFX_PREF_KEY, 1f);
@@ -47,6 +57,13 @@ public class SettingsMenu : MonoBehaviour
         }
 
         PlayerPrefs.SetFloat(SFX_PREF_KEY, sfxSlider.value);
+        if (!madeFirstAdjustment)
+        {
+            madeFirstAdjustment = true;
+            return;
+        }
+
+        SFXPlayer.I.Play(AudioEventsStorage.I.changedSFXVolume);
     }
 
     // Method to set Music volume and save to PlayerPrefs
@@ -64,7 +81,6 @@ public class SettingsMenu : MonoBehaviour
         PlayerPrefs.SetFloat(MUSIC_PREF_KEY, volume);
     }
 
-  
 
     public void Quit()
     {

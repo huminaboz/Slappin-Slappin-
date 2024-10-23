@@ -30,9 +30,8 @@ public class AudioEventsStorage : Singleton<AudioEventsStorage>
     [Header("Pickups")] 
     public SFXScrob pickedUpCurrency1;
     public SFXScrob healthPickup;
-    
-    [Header("Effects")] 
-    
+
+    [Header("Effects")] public SFXScrob gameStarted;
     
     [Header("UI")]
     public SFXScrob WaveEnded;
@@ -40,6 +39,7 @@ public class AudioEventsStorage : Singleton<AudioEventsStorage>
     public SFXScrob BoughtUpgrade;
     public SFXScrob HoverUpgrade;
     public SFXScrob CantBuy;
+    public SFXScrob changedSFXVolume;
     
     
     [Header("Player")] 
