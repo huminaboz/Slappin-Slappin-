@@ -43,6 +43,8 @@ public class UIStateSwapper : Singleton<UIStateSwapper>
     private void Start()
     {
         SetState(UIState.playing);
+        controlsScreen.SetActive(!controlsScreen.activeSelf);
+        TurnOffGameplay();
     }
 
     private void SetState(UIState state)
@@ -130,7 +132,7 @@ public class UIStateSwapper : Singleton<UIStateSwapper>
             PlayerPrefs.Save();
             if (!pauseScreen.activeSelf)
             {
-                if(controlsScreen.activeSelf) controlsScreen.SetActive(false);
+                if (controlsScreen.activeSelf) controlsScreen.SetActive(false);
                 Pause();
             }
             else
