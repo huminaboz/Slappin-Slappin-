@@ -167,5 +167,10 @@ public class UIStateSwapper : Singleton<UIStateSwapper>
             Time.timeScale = 1f;
             StateGame.PlayerInGameControlsEnabled = true;
         }
+
+        if (currentUIState == UIState.store)
+        {
+            StoreUIManager.I.OnEnteredStore();
+        }
     }
 }

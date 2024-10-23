@@ -65,7 +65,6 @@ public class StoreUIManager : Singleton<StoreUIManager>
     private void Start()
     {
         MusicPlayer.I.Play(AudioEventsStorage.I.playing);
-        
     }
 
     private void Initialize()
