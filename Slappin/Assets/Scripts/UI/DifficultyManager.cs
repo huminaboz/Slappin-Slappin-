@@ -17,14 +17,6 @@ public class DifficultyManager : Singleton<DifficultyManager>
         currentWave++;
         Debug.LogWarning($"Current Wave is now: {currentWave}");
         StatLiason.I.UpgradeEnemyStats();
-
-        //NOTE:: Make sure that the stats put on the new enemies are only on spawn
-        //That way any remaining enemies from the last wave will be at the same stats as
-        //the last wave
-        
-        
-        //SPAWNING
-        //TODO::Turn on spawning for certain enemies
     }
 
     [Command]

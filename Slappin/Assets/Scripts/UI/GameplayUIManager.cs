@@ -11,6 +11,7 @@ public class GameplayUIManager : Singleton<GameplayUIManager>
 
     private float timeRemaining = 60f; // 60 seconds (1 minute)
     private bool timerRunning = true;
+    private bool waveEndingAnnouncementMade = false;
 
     private void Start()
     {
@@ -22,6 +23,8 @@ public class GameplayUIManager : Singleton<GameplayUIManager>
         //TODO:: Some sort of buffer screen first announcing the wave number
         timeRemaining = maxWaveTimer;
         timerRunning = true;
+        InGameMessageAnnouncer.I.MakeAnouncement($"Wave {DifficultyManager.I.currentWave}");
+        waveEndingAnnouncementMade = false;
     }
 
     private void Update()
@@ -32,6 +35,12 @@ public class GameplayUIManager : Singleton<GameplayUIManager>
             // Decrease the remaining time by the time passed since the last frame
             timeRemaining -= Time.deltaTime;
 
+            if (timeRemaining <= 6.5f && !waveEndingAnnouncementMade)
+            {
+                InGameMessageAnnouncer.I.MakeAnouncement($"5 seconds left!");
+                waveEndingAnnouncementMade = true;
+            }
+            
             // If time has run out, stop the timer and trigger the function
             if (timeRemaining <= 0)
             {

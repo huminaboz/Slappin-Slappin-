@@ -1,21 +1,23 @@
 using System;
+using QFSW.QC;
 using Unity.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 
 public class Health : MonoBehaviour
 {
+    [SerializeField] private string notes = "MaxHp is set by upgrades on scrobs";
     [ReadOnly] public int hp;
     [SerializeField] public int maxHp = 5;
     public int enemyMaxHp;
 
-    [SerializeField] private UnityEvent OnDeath;
+    public static Action OnDeath;
 
     // private bool immuneToDamage = false;
     public bool isAlive = true;
     public bool isPlayer = false;
     [SerializeField] private bool isInvincible = false;
-    
+
     private IHpAdjustmentListener[] hpAdjustmentListeners;
 
     private void Awake()
@@ -47,7 +49,7 @@ public class Health : MonoBehaviour
 
     public void Initialize()
     {
-        if(isInvincible) Debug.LogError($"{gameObject.name} is invincible!!");
+        if (isInvincible) Debug.LogError($"{gameObject.name} is invincible!!");
         if (isPlayer) maxHp = (int)StatLiason.I.Get(Stat.IncreaseMaxHp);
         else
         {
@@ -111,6 +113,7 @@ public class Health : MonoBehaviour
                 hp = maxHp;
                 return;
             }
+
             isAlive = false;
 
             float maxWaitTime = 0;
@@ -120,9 +123,21 @@ public class Health : MonoBehaviour
                 maxWaitTime = Mathf.Max(damageListeners.HandleDeath(amountToIncrease, attacker), maxWaitTime);
             }
 
-            OnDeath?.Invoke();
+            if (isPlayer) OnDeath?.Invoke();
             // StartCoroutine(QueueCleanup(maxWaitTime + 0.1f));
         }
+    }
+
+    [Command]
+    private void DebugKillAllEnemies()
+    {
+        if (!isPlayer) AdjustHp(-maxHp, null);
+    }
+
+    [Command]
+    private void DebugKillPlayer()
+    {
+        if (isPlayer) AdjustHp(-maxHp, null);
     }
 
     // IEnumerator QueueCleanup(float waitTime)

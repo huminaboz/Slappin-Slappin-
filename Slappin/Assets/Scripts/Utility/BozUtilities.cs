@@ -10,6 +10,12 @@ public static class BozUtilities
         yield return new WaitForSeconds(delay);
         action?.Invoke();
     }
+    
+    public static IEnumerator DoAfterRealTimeDelay(float delay, Action action)
+    {
+        yield return new WaitForSecondsRealtime(delay);
+        action?.Invoke();
+    }
 
     public static float GetDiceRoll()
     {

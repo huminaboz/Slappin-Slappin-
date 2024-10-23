@@ -1,5 +1,8 @@
+using System;
 using QFSW.QC;
+using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class UIStateSwapper : Singleton<UIStateSwapper>
 {
@@ -8,11 +11,13 @@ public class UIStateSwapper : Singleton<UIStateSwapper>
 
     [SerializeField] private GameObject pauseScreen;
 
-    //TODO:: Create a lose screen
-    [SerializeField] private GameObject loseScreen;
-
     [SerializeField] private Player player;
 
+    [SerializeField] private TextMeshProUGUI modalText;
+    [SerializeField] private GameObject modalActivator;
+
+    private bool restartingEnabled = false;
+    
     public enum UIState
     {
         playing,
@@ -23,7 +28,22 @@ public class UIStateSwapper : Singleton<UIStateSwapper>
 
     private UIState currentUIState = UIState.playing;
 
-    public void SetState(UIState state)
+    private void OnEnable()
+    {
+        Health.OnDeath += SetLoseState;
+    }
+
+    private void OnDisable()
+    {
+        Health.OnDeath -= SetLoseState;
+    }
+
+    private void Start()
+    {
+        SetState(UIState.playing);
+    }
+
+    private void SetState(UIState state)
     {
         currentUIState = state;
 
@@ -61,6 +81,18 @@ public class UIStateSwapper : Singleton<UIStateSwapper>
         GameplayUIManager.I.StartNewWave();
     }
 
+    private void SetLoseState()
+    {
+        Health.OnDeath -= SetLoseState;
+        SetState(UIState.youLose);
+        MusicPlayer.I.Play(AudioEventsStorage.I.store);
+    }
+
+    private void SetModalMessage(string message)
+    {
+        modalText.text = message;
+    }
+
     private void SetupUIState()
     {
         storeUI.SetActive(currentUIState == UIState.store);
@@ -71,10 +103,15 @@ public class UIStateSwapper : Singleton<UIStateSwapper>
             PlayerStats.I.UpdateHUD();
         }
 
-        //TODO:: Create a pause screen
-        // pauseScreen.SetActive(currentUIState == UIState.paused);
-        //TODO:: Create a lose screen
-        // loseScreen.SetActive(currentUIState == UIState.youLose);
+        modalActivator.SetActive(currentUIState == UIState.youLose);
+        if (currentUIState == UIState.youLose)
+        {
+            SetModalMessage("Hands Down.");
+            StartCoroutine(BozUtilities.DoAfterRealTimeDelay(1f, () =>
+            {
+                restartingEnabled = true;
+            }));
+        }
     }
 
     private void Update()
@@ -89,6 +126,15 @@ public class UIStateSwapper : Singleton<UIStateSwapper>
             else
             {
                 UnPause();
+            }
+        }
+
+        if (currentUIState == UIState.youLose && restartingEnabled)
+        {
+            if (Input.GetButtonDown("Fire1"))
+            {
+                //TODO:: Reload the scene
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             }
         }
     }

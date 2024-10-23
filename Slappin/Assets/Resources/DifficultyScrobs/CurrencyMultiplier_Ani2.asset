@@ -17,7 +17,7 @@ MonoBehaviour:
   previewUpgrade: {fileID: 11400000, guid: a0c5a6eb63a2d8d4d91fe07a41fe5ecf, type: 2}
   maxDisplayedRows: 34
   startOffset: 0
-  debugValues: "Level\t\tAmount\t\t\tPrice\n0\t\t1.00x\t\t\t0\n1\t\t3.85x\t\t\t3\n2\t\t11.92x\t\t\t11\n3\t\t24.46x\t\t\t24\n4\t\t40.74x\t\t\t40\n5\t\t60.02x\t\t\t60\n6\t\t81.56x\t\t\t81\n7\t\t104.62x\t\t\t104\n8\t\t128.46x\t\t\t128\n9\t\t152.35x\t\t\t152\n10\t\t175.55x\t\t\t175\n11\t\t197.32x\t\t\t197\n12\t\t216.93x\t\t\t216\n13\t\t235.63x\t\t\t235\n14\t\t254.47x\t\t\t254\n15\t\t273.44x\t\t\t273\n16\t\t292.54x\t\t\t292\n17\t\t311.77x\t\t\t311\n18\t\t331.14x\t\t\t331\n19\t\t350.64x\t\t\t350\n20\t\t370.27x\t\t\t370\n21\t\t390.04x\t\t\t390\n22\t\t409.95x\t\t\t409\n23\t\t429.98x\t\t\t429\n24\t\t450.15x\t\t\t450\n25\t\t470.46x\t\t\t470\n26\t\t490.90x\t\t\t490\n27\t\t511.47x\t\t\t511\n28\t\t532.18x\t\t\t532\n29\t\t553.02x\t\t\t553\n30\t\t574.00x\t\t\t574\n31\t\t595.11x\t\t\t595\n32\t\t616.36x\t\t\t616\n33\t\t637.75x\t\t\t637\n"
+  debugValues: "Level\t\tAmount\t\t\tPrice\n0\t\t1.00x\t\t\t0\n1\t\t1.25x\t\t\t1\n2\t\t2.33x\t\t\t2\n3\t\t4.70x\t\t\t4\n4\t\t8.84x\t\t\t8\n5\t\t15.24x\t\t\t15\n6\t\t24.35x\t\t\t24\n7\t\t36.67x\t\t\t36\n8\t\t52.65x\t\t\t52\n9\t\t70.20x\t\t\t70\n10\t\t86.22x\t\t\t86\n11\t\t100.96x\t\t\t100\n12\t\t114.68x\t\t\t114\n13\t\t127.64x\t\t\t127\n14\t\t140.10x\t\t\t140\n15\t\t152.30x\t\t\t152\n16\t\t164.53x\t\t\t164\n17\t\t177.02x\t\t\t177\n18\t\t190.05x\t\t\t190\n19\t\t203.86x\t\t\t203\n20\t\t218.72x\t\t\t218\n21\t\t234.89x\t\t\t234\n22\t\t252.63x\t\t\t252\n23\t\t271.31x\t\t\t271\n24\t\t290.14x\t\t\t290\n25\t\t309.11x\t\t\t309\n26\t\t328.22x\t\t\t328\n27\t\t347.47x\t\t\t347\n28\t\t366.86x\t\t\t366\n29\t\t386.39x\t\t\t386\n30\t\t406.06x\t\t\t406\n31\t\t425.88x\t\t\t425\n32\t\t445.84x\t\t\t445\n33\t\t465.93x\t\t\t465\n"
   AnimationCurve:
     serializedVersion: 2
     m_Curve:
@@ -31,8 +31,17 @@ MonoBehaviour:
       inWeight: 0
       outWeight: 0
     - serializedVersion: 3
-      time: 0.01187671
-      value: 0.0021363972
+      time: 0.008072433
+      value: 0.0005296881
+      inSlope: 0.18285887
+      outSlope: 0.18285887
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.36597595
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.022008546
+      value: 0.002517867
       inSlope: 0.18618068
       outSlope: 0.18618068
       tangentMode: 0
@@ -53,3 +62,4 @@ MonoBehaviour:
     m_RotationOrder: 4
   levelAtWhichGraphReaches1: 1000
   maximumValue: 100000
+  multiplier: 1

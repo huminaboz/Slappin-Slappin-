@@ -26,6 +26,11 @@ public class DebugHelper : MonoBehaviour
         _qc.OnDeactivate -= OnQuantumDeactivate;
     }
 
+    private void Start()
+    {
+        if(StateGame.debugModeOn) Debug.LogWarning("DEBUG MODE IS ON");
+    }
+
     private void Update()
     {
         if (!StateGame.debugModeOn) return;
