@@ -5,8 +5,10 @@ using QFSW.QC;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
+
 
 public class StoreUIManager : Singleton<StoreUIManager>
 {
@@ -33,6 +35,8 @@ public class StoreUIManager : Singleton<StoreUIManager>
     public int previewAmount = 1;
     public static Action ChangedPreviewAmount;
 
+    [FormerlySerializedAs("UpgradeCards")] public List<GameObject> UpgradeCardButtons = new List<GameObject>();
+    
 
     public delegate void DebugUpdateStoreUI();
 
@@ -144,6 +148,7 @@ public class StoreUIManager : Singleton<StoreUIManager>
 
             UpgradeData upgradeData = Instantiate(upgradeDataPrefab,
                 GetCategoryParent(upgradeSO.upgradeType));
+            UpgradeCardButtons.Add(upgradeData.gameObject);
 
             // Assign the SO_Upgrade to the upgradeData's upgradeSO field
             if (upgradeData != null)
@@ -155,6 +160,9 @@ public class StoreUIManager : Singleton<StoreUIManager>
                 Debug.LogError("UpgradeData component not found on prefab!");
             }
         }
+        
+        //For the first time you set this up
+        EventSystem.current.SetSelectedGameObject(UpgradeCardButtons[0]);
     }
 
     public Color GetCategoryColor(UpgradeType upgradeType)

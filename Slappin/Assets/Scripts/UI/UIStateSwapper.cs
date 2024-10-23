@@ -3,6 +3,7 @@ using QFSW.QC;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
 public class UIStateSwapper : Singleton<UIStateSwapper>
 {
@@ -17,7 +18,7 @@ public class UIStateSwapper : Singleton<UIStateSwapper>
     [SerializeField] private GameObject modalActivator;
 
     private bool restartingEnabled = false;
-    
+
     public enum UIState
     {
         playing,
@@ -96,24 +97,29 @@ public class UIStateSwapper : Singleton<UIStateSwapper>
     private void SetupUIState()
     {
         storeUI.SetActive(currentUIState == UIState.store);
-        if (currentUIState == UIState.store) StoreUIManager.I.UpdateLabels();
         playingHUD.SetActive(currentUIState == UIState.playing);
-        if (currentUIState == UIState.playing)
-        {
-            PlayerStats.I.UpdateHUD();
-        }
-
         modalActivator.SetActive(currentUIState == UIState.youLose);
-        if (currentUIState == UIState.youLose)
+        EventSystem.current.SetSelectedGameObject(null);
+        
+        switch (currentUIState)
         {
-            SetModalMessage($"Hands Down" +
-                            $"\non Wave <color=#746CA5>{DifficultyManager.I.currentWave}</color>." +
-                            $"\n\n<color=#FF6C4B><size=45%>Post it in the comments!</size></color>");
-            StartCoroutine(BozUtilities.DoAfterRealTimeDelay(2f, () =>
-            {
-                //TODO:: Show the button you can press
-                restartingEnabled = true;
-            }));
+            case UIState.playing:
+                PlayerStats.I.UpdateHUD();
+                break;
+            case UIState.store:
+                StoreUIManager.I.UpdateLabels();
+                // EventSystem.current.SetSelectedGameObject(StoreUIManager.I.UpgradeCardButtons[0]);
+                break;
+            case UIState.youLose:
+                SetModalMessage($"Hands Down" +
+                                $"\non Wave <color=#746CA5>{DifficultyManager.I.currentWave}</color>." +
+                                $"\n\n<color=#FF6C4B><size=45%>Post it in the comments!</size></color>");
+                StartCoroutine(BozUtilities.DoAfterRealTimeDelay(2f, () =>
+                {
+                    //TODO:: Show the button you can press
+                    restartingEnabled = true;
+                }));
+                break;
         }
     }
 
