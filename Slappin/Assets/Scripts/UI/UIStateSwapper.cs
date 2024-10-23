@@ -43,6 +43,9 @@ public class UIStateSwapper : Singleton<UIStateSwapper>
     private void Start()
     {
         SetState(UIState.playing);
+        
+        //Skip the controls screen if debugging 
+        if (StateGame.debugModeOn) return;
         controlsScreen.SetActive(!controlsScreen.activeSelf);
         TurnOffGameplay();
     }
