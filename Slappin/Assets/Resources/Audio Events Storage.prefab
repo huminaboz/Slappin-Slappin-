@@ -66,6 +66,7 @@ MonoBehaviour:
   WaveStart: {fileID: 11400000, guid: 22a14b79b917f6842ae908825bb3964b, type: 2}
   BoughtUpgrade: {fileID: 11400000, guid: f38ab625caef5a64c8037fd289e7a2b7, type: 2}
   HoverUpgrade: {fileID: 11400000, guid: 64800678eb13424448c9a38c0a3a59cb, type: 2}
+  HoverUpgradeCantAfford: {fileID: 11400000, guid: 0a0aed62ad3c73b41a46de24b55ac7a1, type: 2}
   CantBuy: {fileID: 11400000, guid: 4228559675e994846b3c33e1307973d8, type: 2}
   changedSFXVolume: {fileID: 11400000, guid: 3771ed07ad3c86c45ac2ba213c417a20, type: 2}
   playerDied: {fileID: 11400000, guid: 3027ca7a1ed787349bff6a3f3d66ac5c, type: 2}

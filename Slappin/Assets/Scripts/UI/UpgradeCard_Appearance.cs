@@ -120,6 +120,10 @@ public class UpgradeCard_Appearance : MonoBehaviour
         {
             SFXPlayer.I.Play(AudioEventsStorage.I.HoverUpgrade);
         }
+        else
+        {
+            SFXPlayer.I.Play(AudioEventsStorage.I.HoverUpgradeCantAfford);
+        }
 
         border.gameObject.SetActive(true);
         shadowImage.color = shadowSelected;
@@ -134,7 +138,4 @@ public class UpgradeCard_Appearance : MonoBehaviour
         border.gameObject.SetActive(true);
         shadowImage.color = shadowPressed;
     }
-    
-    
-
 }
