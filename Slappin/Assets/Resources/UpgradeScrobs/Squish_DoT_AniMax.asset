@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notes: 
   showPreview: 1
-  previewUpgrade: {fileID: 11400000, guid: 5212d0102480d344baea636c0fc42889, type: 2}
+  previewUpgrade: {fileID: 11400000, guid: 39994a825dc479942850add0e35aa5f5, type: 2}
   maxDisplayedRows: 34
   startOffset: 0
-  debugValues: "Level\t\tAmount\t\t\tPrice\n0\t\t0\t\t\t5\n1\t\t1\t\t\t5\n2\t\t2\t\t\t11\n3\t\t3\t\t\t16\n4\t\t4\t\t\t21\n5\t\t5\t\t\t26\n6\t\t6\t\t\t31\n7\t\t7\t\t\t36\n8\t\t8\t\t\t41\n9\t\t9\t\t\t46\n10\t\t10\t\t\t51\n11\t\t11\t\t\t56\n12\t\t12\t\t\t61\n13\t\t13\t\t\t66\n14\t\t14\t\t\t71\n15\t\t15\t\t\t76\n16\t\t16\t\t\t81\n17\t\t17\t\t\t86\n18\t\t18\t\t\t91\n19\t\t19\t\t\t96\n20\t\t20\t\t\t101\n21\t\t21\t\t\t106\n22\t\t22\t\t\t111\n23\t\t23\t\t\t116\n24\t\t24\t\t\t121\n25\t\t25\t\t\t126\n26\t\t26\t\t\t131\n27\t\t27\t\t\t136\n28\t\t28\t\t\t141\n29\t\t29\t\t\t146\n30\t\t30\t\t\t151\n31\t\t31\t\t\t156\n32\t\t32\t\t\t161\n33\t\t33\t\t\t166\n"
+  debugValues: "Level\t\tAmount\t\t\tPrice\n0\t\t0\t\t\t21\n1\t\t1\t\t\t21\n2\t\t2\t\t\t22\n3\t\t3\t\t\t22\n4\t\t4\t\t\t22\n5\t\t5\t\t\t22\n6\t\t6\t\t\t22\n7\t\t7\t\t\t23\n8\t\t8\t\t\t23\n9\t\t9\t\t\t23\n10\t\t10\t\t\t23\n11\t\t11\t\t\t23\n12\t\t12\t\t\t23\n13\t\t13\t\t\t24\n14\t\t14\t\t\t24\n15\t\t15\t\t\t24\n16\t\t16\t\t\t24\n17\t\t17\t\t\t24\n18\t\t18\t\t\t24\n19\t\t19\t\t\t25\n20\t\t20\t\t\t25\n21\t\t21\t\t\t25\n22\t\t22\t\t\t25\n23\t\t23\t\t\t25\n24\t\t24\t\t\t25\n25\t\t25\t\t\t26\n26\t\t26\t\t\t26\n27\t\t27\t\t\t26\n28\t\t28\t\t\t26\n29\t\t29\t\t\t26\n30\t\t30\t\t\t26\n31\t\t31\t\t\t27\n32\t\t32\t\t\t27\n33\t\t33\t\t\t27\n"
   AnimationCurve:
     serializedVersion: 2
     m_Curve:

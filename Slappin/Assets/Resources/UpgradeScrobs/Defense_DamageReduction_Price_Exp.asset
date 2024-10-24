@@ -12,6 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ac540fc2f4a5714994932f05a9106ff, type: 3}
   m_Name: Defense_DamageReduction_Price_Exp
   m_EditorClassIdentifier: 
+  notes: 
+  showPreview: 1
+  previewUpgrade: {fileID: 11400000, guid: 344855eea321da0429a05d49757a034b, type: 2}
+  maxDisplayedRows: 34
+  startOffset: 1
+  debugValues: "Level\t\tAmount\t\t\tPrice\n1\t\t0.57%\t\t\t200\n2\t\t0.67%\t\t\t402\n3\t\t0.78%\t\t\t604\n4\t\t0.92%\t\t\t807\n5\t\t1.08%\t\t\t1.01k\n6\t\t1.25%\t\t\t1.22k\n7\t\t1.45%\t\t\t1.43k\n8\t\t1.65%\t\t\t1.63k\n9\t\t1.87%\t\t\t1.84k\n10\t\t2.11%\t\t\t2.05k\n11\t\t2.36%\t\t\t2.27k\n12\t\t2.61%\t\t\t2.48k\n13\t\t2.88%\t\t\t2.69k\n14\t\t3.15%\t\t\t2.91k\n15\t\t3.43%\t\t\t3.13k\n16\t\t3.71%\t\t\t3.34k\n17\t\t4.00%\t\t\t3.56k\n18\t\t4.29%\t\t\t3.78k\n19\t\t4.58%\t\t\t4.01k\n20\t\t4.87%\t\t\t4.23k\n21\t\t5.16%\t\t\t4.45k\n22\t\t5.45%\t\t\t4.68k\n23\t\t5.73%\t\t\t4.91k\n24\t\t6.01%\t\t\t5.13k\n25\t\t6.28%\t\t\t5.36k\n26\t\t6.54%\t\t\t5.59k\n27\t\t6.79%\t\t\t5.83k\n28\t\t7.03%\t\t\t6.06k\n29\t\t7.26%\t\t\t6.3k\n30\t\t7.48%\t\t\t6.53k\n31\t\t7.68%\t\t\t6.77k\n32\t\t7.86%\t\t\t7.01k\n33\t\t8.03%\t\t\t7.25k\n34\t\t8.18%\t\t\t7.49k\n"
   growthRate: 0.009
   growthFactor: 0.64
   offset: 0

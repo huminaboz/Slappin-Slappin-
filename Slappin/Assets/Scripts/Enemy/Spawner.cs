@@ -81,11 +81,11 @@ public class Spawner : MonoBehaviour
         else if (GetRandomNumberBetweenZeroAndOne() <
                  orcSpawnChance * StatLiason.I.GetEnemy(Stat.Enemy_SpawnChance))
         {
-            Enemy_Pawn enemy = ObjectPoolManager<Enemy_Pawn>.GetObject(orcPrefab);
-            if (enemy is not null)
+            Enemy_Pawn orcPawn = ObjectPoolManager<Enemy_Pawn>.GetObject(orcPrefab);
+            if (orcPawn is not null)
             {
-                enemy.transform.position = GetRandomSpawnPosition();
-                enemy.transform.Rotate(0, 180, 0);
+                orcPawn.transform.position = GetRandomSpawnPosition();
+                orcPawn.transform.Rotate(0, 180, 0);
                 extraSpawnTime = .5f;
             }
         }

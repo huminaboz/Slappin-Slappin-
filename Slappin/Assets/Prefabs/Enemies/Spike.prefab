@@ -71,12 +71,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06b712ba2097a964aa1c1cca2ec11c72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  notes: MaxHp is MULTIPLIED by upgrades on scrobs
   hp: 0
-  maxHp: 6
+  maxHp: 3
   enemyMaxHp: 0
-  OnDeath:
-    m_PersistentCalls:
-      m_Calls: []
   isAlive: 1
   isPlayer: 0
   isInvincible: 0
@@ -324,7 +322,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 11028
+  m_VersionIndex: 11031
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []

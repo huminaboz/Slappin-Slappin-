@@ -12,6 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ac540fc2f4a5714994932f05a9106ff, type: 3}
   m_Name: Slap_Damage_Price_Exp
   m_EditorClassIdentifier: 
-  growthRate: 0.05
+  notes: 
+  showPreview: 1
+  previewUpgrade: {fileID: 11400000, guid: 19dc01956c9634146945e218afed02c4, type: 2}
+  maxDisplayedRows: 34
+  startOffset: 1
+  debugValues: "Level\t\tAmount\t\t\tPrice\n1\t\t3\t\t\t5\n2\t\t5\t\t\t11\n3\t\t7\t\t\t16\n4\t\t9\t\t\t22\n5\t\t11\t\t\t28\n6\t\t13\t\t\t34\n7\t\t15\t\t\t40\n8\t\t17\t\t\t47\n9\t\t19\t\t\t54\n10\t\t21\t\t\t61\n11\t\t23\t\t\t69\n12\t\t25\t\t\t77\n13\t\t27\t\t\t85\n14\t\t29\t\t\t94\n15\t\t31\t\t\t103\n16\t\t33\t\t\t112\n17\t\t35\t\t\t122\n18\t\t37\t\t\t133\n19\t\t39\t\t\t143\n20\t\t41\t\t\t154\n21\t\t43\t\t\t166\n22\t\t45\t\t\t178\n23\t\t47\t\t\t191\n24\t\t49\t\t\t204\n25\t\t51\t\t\t218\n26\t\t52\t\t\t232\n27\t\t54\t\t\t247\n28\t\t56\t\t\t263\n29\t\t58\t\t\t279\n30\t\t60\t\t\t296\n31\t\t62\t\t\t314\n32\t\t64\t\t\t332\n33\t\t66\t\t\t352\n34\t\t68\t\t\t372\n"
+  growthRate: 0.13
   growthFactor: 0.325
   offset: 0

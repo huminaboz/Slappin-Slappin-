@@ -15,7 +15,7 @@ MonoBehaviour:
   stat: 2003
   title: Damage Reduction
   baseValue: 0.005
-  basePrice: 500
+  basePrice: 200
   upgradeType: 1
   numberType: 1
   useMinValue: 0

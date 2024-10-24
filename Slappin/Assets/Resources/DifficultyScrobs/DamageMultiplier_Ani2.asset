@@ -17,7 +17,7 @@ MonoBehaviour:
   previewUpgrade: {fileID: 11400000, guid: 3222dc1f9bc173541934a831c348bcc7, type: 2}
   maxDisplayedRows: 34
   startOffset: 0
-  debugValues: "Level\t\tAmount\t\t\tPrice\n0\t\t1.00x\t\t\t0\n1\t\t1.01x\t\t\t1\n2\t\t1.03x\t\t\t1\n3\t\t1.06x\t\t\t1\n4\t\t1.10x\t\t\t1\n5\t\t1.14x\t\t\t1\n6\t\t1.20x\t\t\t1\n7\t\t1.25x\t\t\t1\n8\t\t1.31x\t\t\t1\n9\t\t1.36x\t\t\t1\n10\t\t1.41x\t\t\t1\n11\t\t1.46x\t\t\t1\n12\t\t1.50x\t\t\t1\n13\t\t1.54x\t\t\t1\n14\t\t1.56x\t\t\t1\n15\t\t1.57x\t\t\t1\n16\t\t1.58x\t\t\t1\n17\t\t1.58x\t\t\t1\n18\t\t1.58x\t\t\t1\n19\t\t1.58x\t\t\t1\n20\t\t1.59x\t\t\t1\n21\t\t1.59x\t\t\t1\n22\t\t1.59x\t\t\t1\n23\t\t1.60x\t\t\t1\n24\t\t1.60x\t\t\t1\n25\t\t1.60x\t\t\t1\n26\t\t1.60x\t\t\t1\n27\t\t1.61x\t\t\t1\n28\t\t1.61x\t\t\t1\n29\t\t1.61x\t\t\t1\n30\t\t1.61x\t\t\t1\n31\t\t1.62x\t\t\t1\n32\t\t1.62x\t\t\t1\n33\t\t1.62x\t\t\t1\n"
+  debugValues: "Level\t\tAmount\t\t\tPrice\n0\t\t1.00x\t\t\t0\n1\t\t1.01x\t\t\t1\n2\t\t1.02x\t\t\t1\n3\t\t1.02x\t\t\t1\n4\t\t1.03x\t\t\t1\n5\t\t1.04x\t\t\t1\n6\t\t1.05x\t\t\t1\n7\t\t1.06x\t\t\t1\n8\t\t1.07x\t\t\t1\n9\t\t1.08x\t\t\t1\n10\t\t1.09x\t\t\t1\n11\t\t1.10x\t\t\t1\n12\t\t1.12x\t\t\t1\n13\t\t1.13x\t\t\t1\n14\t\t1.14x\t\t\t1\n15\t\t1.16x\t\t\t1\n16\t\t1.17x\t\t\t1\n17\t\t1.18x\t\t\t1\n18\t\t1.20x\t\t\t1\n19\t\t1.22x\t\t\t1\n20\t\t1.23x\t\t\t1\n21\t\t1.25x\t\t\t1\n22\t\t1.27x\t\t\t1\n23\t\t1.29x\t\t\t1\n24\t\t1.30x\t\t\t1\n25\t\t1.32x\t\t\t1\n26\t\t1.34x\t\t\t1\n27\t\t1.37x\t\t\t1\n28\t\t1.39x\t\t\t1\n29\t\t1.41x\t\t\t1\n30\t\t1.43x\t\t\t1\n31\t\t1.46x\t\t\t1\n32\t\t1.48x\t\t\t1\n33\t\t1.51x\t\t\t1\n"
   AnimationCurve:
     serializedVersion: 2
     m_Curve:
@@ -30,15 +30,6 @@ MonoBehaviour:
       weightedMode: 0
       inWeight: 0
       outWeight: 0.38972002
-    - serializedVersion: 3
-      time: 0.015223943
-      value: 0.06368503
-      inSlope: 0.31595865
-      outSlope: 0.31595865
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
     - serializedVersion: 3
       time: 0.50544035
       value: 0.50809455
@@ -60,5 +51,6 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  levelAtWhichGraphReaches1: 1000
+  levelAtWhichGraphReaches1: 196
   maximumValue: 10
+  multiplier: 1

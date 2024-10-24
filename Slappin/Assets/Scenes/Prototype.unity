@@ -1946,10 +1946,10 @@ MonoBehaviour:
   magePrefab: {fileID: 3826877389465147980, guid: 21460f950cee80c47a88a3d2f118d4ed, type: 3}
   orcPrefab: {fileID: 3826877389465147980, guid: f5e1940c5fdb374489abd41d68e0baaa, type: 3}
   mageSpawnChance: 0.07
-  orcSpawnChance: 0.04
+  orcSpawnChance: 0.035
   spikeSpawnChance: 0.036
   bouncerSpawnChance: 0.025
-  turtleSpawnChance: 0.15
+  turtleSpawnChance: 0.17
   topLeftPossibleSpawn: {fileID: 280439155}
   bottomRightPossibleSpawn: {fileID: 37348742}
   onlySpawnOne: 0

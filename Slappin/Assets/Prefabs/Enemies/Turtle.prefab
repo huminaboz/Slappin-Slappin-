@@ -57,7 +57,7 @@ MonoBehaviour:
   _rigidbody: {fileID: -9018553438512618351}
   flashDuration: 0.5
   flashCount: 5
-  baseAttackDamage: 5
+  baseAttackDamage: 10
   damage: 0
   walkSpeed: 0
   currency1DropAmount: 3
@@ -67,7 +67,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  handStabDamage: 10
+  handStabDamage: 15
 --- !u!114 &79050552924222384
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -80,12 +80,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06b712ba2097a964aa1c1cca2ec11c72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  notes: MaxHp is MULTIPLIED by upgrades on scrobs
   hp: 0
-  maxHp: 2
+  maxHp: 1
   enemyMaxHp: 0
-  OnDeath:
-    m_PersistentCalls:
-      m_Calls: []
   isAlive: 1
   isPlayer: 0
   isInvincible: 0

@@ -10,18 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8327b2e1f1789184f9cadc6d7f88cf8d, type: 3}
-  m_Name: Squish_DoT
+  m_Name: Squish_DOT
   m_EditorClassIdentifier: 
   stat: 5003
-  title: Damage over Time
+  title: Hold Damage over Time
   baseValue: 1
-  basePrice: 5
+  basePrice: 21
   upgradeType: 4
   numberType: 0
   useMinValue: 0
   useMaxValue: 0
   minValue: 0
   maxValue: 1e+12
-  newValueGrowthCurve: {fileID: 11400000, guid: 8034fdc8a5b8d424a82464d354523352, type: 2}
-  newPriceGrowthCurve: {fileID: 11400000, guid: 5a7f74492b845c14390fb6d143f0c134, type: 2}
+  newValueGrowthCurve: {fileID: 11400000, guid: 7eed849aab262c347928fc8aa7318d38, type: 2}
+  newPriceGrowthCurve: {fileID: 11400000, guid: 704eac34b1fc6d04db8baab509493439, type: 2}
   maxLevel: 500
