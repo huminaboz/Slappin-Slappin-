@@ -17,7 +17,7 @@ MonoBehaviour:
   previewUpgrade: {fileID: 11400000, guid: 6340beb51dc57b8408d6fb4323756be4, type: 2}
   maxDisplayedRows: 34
   startOffset: 0
-  debugValues: "Level\t\tAmount\t\t\tPrice\n0\t\t31\t\t\t30\n1\t\t36\t\t\t30\n2\t\t41\t\t\t61\n3\t\t45\t\t\t92\n4\t\t50\t\t\t123\n5\t\t56\t\t\t155\n6\t\t61\t\t\t187\n7\t\t66\t\t\t220\n8\t\t71\t\t\t253\n9\t\t77\t\t\t287\n10\t\t82\t\t\t322\n11\t\t88\t\t\t356\n12\t\t94\t\t\t392\n13\t\t100\t\t\t428\n14\t\t106\t\t\t464\n15\t\t112\t\t\t501\n16\t\t118\t\t\t538\n17\t\t124\t\t\t576\n18\t\t130\t\t\t615\n19\t\t137\t\t\t654\n20\t\t143\t\t\t694\n21\t\t150\t\t\t735\n22\t\t157\t\t\t776\n23\t\t163\t\t\t817\n24\t\t170\t\t\t859\n25\t\t177\t\t\t902\n26\t\t185\t\t\t946\n27\t\t192\t\t\t990\n28\t\t199\t\t\t1.04k\n29\t\t207\t\t\t1.08k\n30\t\t214\t\t\t1.13k\n31\t\t222\t\t\t1.17k\n32\t\t230\t\t\t1.22k\n33\t\t238\t\t\t1.27k\n"
-  growthRate: 0.048
+  debugValues: "Level\t\tAmount\t\t\tPrice\n0\t\t33\t\t\t40\n1\t\t39\t\t\t40\n2\t\t49\t\t\t82\n3\t\t63\t\t\t124\n4\t\t80\t\t\t167\n5\t\t99\t\t\t211\n6\t\t118\t\t\t257\n7\t\t138\t\t\t304\n8\t\t156\t\t\t352\n9\t\t173\t\t\t401\n10\t\t188\t\t\t451\n11\t\t199\t\t\t503\n12\t\t207\t\t\t557\n13\t\t216\t\t\t611\n14\t\t225\t\t\t667\n15\t\t234\t\t\t725\n16\t\t244\t\t\t784\n17\t\t253\t\t\t845\n18\t\t264\t\t\t907\n19\t\t274\t\t\t971\n20\t\t285\t\t\t1.04k\n21\t\t296\t\t\t1.1k\n22\t\t308\t\t\t1.17k\n23\t\t320\t\t\t1.24k\n24\t\t332\t\t\t1.32k\n25\t\t344\t\t\t1.39k\n26\t\t357\t\t\t1.47k\n27\t\t370\t\t\t1.55k\n28\t\t384\t\t\t1.63k\n29\t\t397\t\t\t1.71k\n30\t\t411\t\t\t1.8k\n31\t\t425\t\t\t1.88k\n32\t\t440\t\t\t1.97k\n33\t\t455\t\t\t2.07k\n"
+  growthRate: 0.084
   growthFactor: 0.31
   offset: 0

@@ -32,8 +32,8 @@ public class SettingsMenu : Singleton<SettingsMenu>
     private void Start()
     {
         // Load saved values from PlayerPrefs or set default to 1 (full volume)
-        sfxSlider.value = PlayerPrefs.GetFloat(SFX_PREF_KEY, 1f);
-        musicSlider.value = PlayerPrefs.GetFloat(MUSIC_PREF_KEY, 1f);
+        sfxSlider.value = PlayerPrefs.GetFloat(SFX_PREF_KEY, .35f);
+        musicSlider.value = PlayerPrefs.GetFloat(MUSIC_PREF_KEY, .25f);
 
         // Apply the values to the AudioMixer
         SetSFXVolume(sfxSlider.value);

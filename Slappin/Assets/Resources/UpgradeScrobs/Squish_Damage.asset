@@ -15,7 +15,7 @@ MonoBehaviour:
   stat: 5001
   title: Base Damage
   baseValue: 30
-  basePrice: 30
+  basePrice: 50
   upgradeType: 4
   numberType: 0
   useMinValue: 0
