@@ -128,7 +128,7 @@ public class UpgradeCard_Appearance : MonoBehaviour
         border.gameObject.SetActive(true);
         shadowImage.color = shadowSelected;
         cardBodyRect.anchoredPosition = _bodyDefaultPosition;
-        StoreUIManager.I.ScrollTo(cardBodyRect);
+        StoreUIManager.I.ScrollTo(gameObject.GetComponent<RectTransform>());
     }
 
     public void OnPressed()

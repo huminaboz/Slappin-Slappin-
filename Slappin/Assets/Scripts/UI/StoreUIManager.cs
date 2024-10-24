@@ -91,19 +91,29 @@ public class StoreUIManager : Singleton<StoreUIManager>
             ChangedPreviewAmount?.Invoke();
         }
     }
-    
+
     [SerializeField] private ScrollRect scrollRect;
     [SerializeField] private RectTransform contentPanel;
-    
+
     public void ScrollTo(RectTransform target)
     {
+        // Reset the scroll position
+        scrollRect.verticalNormalizedPosition = 1f; // Top position
+
+        // Force update the canvas to apply the reset position
         Canvas.ForceUpdateCanvases();
+
+        // Calculate the new position
         Vector2 viewportPosition = scrollRect.viewport.InverseTransformPoint(scrollRect.viewport.position);
         Vector2 targetPosition = scrollRect.viewport.InverseTransformPoint(target.position);
         Vector2 newPosition = contentPanel.anchoredPosition + (viewportPosition - targetPosition);
+
+        // Directly set the new position
         contentPanel.anchoredPosition = new Vector2(contentPanel.anchoredPosition.x, newPosition.y);
     }
-    
+
+
+
 
     public void ExitStore()
     {
@@ -143,8 +153,7 @@ public class StoreUIManager : Singleton<StoreUIManager>
         string resourcePath = "UpgradeScrobs";
         SO_Upgrade[] upgrades = Resources.LoadAll<SO_Upgrade>(resourcePath);
 
-        
-        
+
         foreach (SO_Upgrade upgradeSO in upgrades)
         {
             if (upgradeTypes.Contains(upgradeSO.upgradeType)) continue;
@@ -185,7 +194,7 @@ public class StoreUIManager : Singleton<StoreUIManager>
                 Debug.LogError("UpgradeData component not found on prefab!");
             }
         }
-        
+
         //For the first time you set this up
         SetupButtonNavigation(rowsParent.transform);
     }
@@ -240,7 +249,9 @@ public class StoreUIManager : Singleton<StoreUIManager>
                     if (rowIndex > 0)
                     {
                         Transform previousRow = rows[rowIndex - 1];
-                        Button upButton = childIndex < previousRow.childCount ? previousRow.GetChild(childIndex).GetComponent<Button>() : previousRow.GetChild(previousRow.childCount - 1).GetComponent<Button>();
+                        Button upButton = childIndex < previousRow.childCount
+                            ? previousRow.GetChild(childIndex).GetComponent<Button>()
+                            : previousRow.GetChild(previousRow.childCount - 1).GetComponent<Button>();
                         if (upButton != null)
                         {
                             nav.selectOnUp = upButton;
@@ -250,7 +261,9 @@ public class StoreUIManager : Singleton<StoreUIManager>
                     if (rowIndex < rows.Count - 1)
                     {
                         Transform nextRow = rows[rowIndex + 1];
-                        Button downButton = childIndex < nextRow.childCount ? nextRow.GetChild(childIndex).GetComponent<Button>() : nextRow.GetChild(nextRow.childCount - 1).GetComponent<Button>();
+                        Button downButton = childIndex < nextRow.childCount
+                            ? nextRow.GetChild(childIndex).GetComponent<Button>()
+                            : nextRow.GetChild(nextRow.childCount - 1).GetComponent<Button>();
                         if (downButton != null)
                         {
                             nav.selectOnDown = downButton;
@@ -279,18 +292,17 @@ public class StoreUIManager : Singleton<StoreUIManager>
                 nav.selectOnLeft = lastButton;
                 startWaveButton.navigation = nav;
             }
-            
+
             // Set the selected GameObject to the first item on the first row
             if (rows[0].childCount > 1)
             {
                 firstEntryInStore = rows[0].GetChild(1).gameObject;
-                
             }
         }
     }
 
-    private GameObject firstEntryInStore; 
-    
+    private GameObject firstEntryInStore;
+
 
     public Color GetCategoryColor(UpgradeType upgradeType)
     {
