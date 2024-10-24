@@ -82,7 +82,7 @@ MonoBehaviour:
   enemyBaseMaxHp: 3
   isAlive: 1
   isPlayer: 0
-  isInvincible: 1
+  isInvincible: 0
 --- !u!114 &6055458593731207565
 MonoBehaviour:
   m_ObjectHideFlags: 0

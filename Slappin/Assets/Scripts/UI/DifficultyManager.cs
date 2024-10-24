@@ -22,6 +22,10 @@ public class DifficultyManager : Singleton<DifficultyManager>
     [Command]
     private void SetWave(int wave)
     {
+        for (int i = currentWave; i < wave; i++)
+        {
+            PlayerStats.I.currency1 += i * 1000;
+        }
         currentWave = wave;
     }
     

@@ -100,8 +100,6 @@ public class StoreUIManager : Singleton<StoreUIManager>
         // Reset the scroll position
         scrollRect.verticalNormalizedPosition = 1f; // Top position
 
-        LayoutRebuilder.ForceRebuildLayoutImmediate(contentPanel);
-
         // Force update the canvas to apply the reset position
         Canvas.ForceUpdateCanvases();
 
@@ -112,8 +110,6 @@ public class StoreUIManager : Singleton<StoreUIManager>
 
         // Directly set the new position
         contentPanel.anchoredPosition = new Vector2(contentPanel.anchoredPosition.x, newPosition.y);
-
-        LayoutRebuilder.ForceRebuildLayoutImmediate(contentPanel);
     }
 
 

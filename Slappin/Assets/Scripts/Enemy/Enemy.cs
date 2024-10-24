@@ -65,6 +65,8 @@ public abstract class Enemy : MonoBehaviour, IHpAdjustmentListener, IObjectPool<
         _enemyAnimations?.Play(EnemyAnimations.AnimationFrames.WalkFWD);
         FartAttack.OnFart += GetFartedOn;
         GameplayUIManager.StartedNewWave += NewWavePushback;
+        Debug.Log($"{gameObject.name} - Currency: {currency1DropAmount}. MaxHp: {thisHealth.enemyBaseMaxHp}" +
+                  $"\n Damage: {damage}, WalkSpeed: {walkSpeed}");
     }
 
     private void GetFartedOn(float fartDamage, float knockbackForce)
@@ -105,14 +107,22 @@ public abstract class Enemy : MonoBehaviour, IHpAdjustmentListener, IObjectPool<
         //TODO: Make an speedmultiplier based on distance to goal that ends in 1
         moveTowardsTransform.walkSpeed = walkSpeed;
 
-        Debug.Log($"{gameObject.name} - Currency: {currency1DropAmount}. MaxHp: {thisHealth.enemyBaseMaxHp}" +
-                  $"\n Damage: {damage}, WalkSpeed: {walkSpeed}");
+
     }
+    
+
 
 
     private void Update()
     {
         if (!thisHealth.isAlive) return;
+
+        if (transform.position.z > EnemyTarget.I.spawnLine.position.z)
+        {
+            transform.position = new Vector3(transform.position.x, transform.position.y, 
+                EnemyTarget.I.spawnLine.position.z);
+        }
+        
         performBehavior?.Invoke();
     }
 

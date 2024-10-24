@@ -56,6 +56,7 @@ public class Health : MonoBehaviour
         {
             float hpMultiplier = StatLiason.I.GetEnemy(Stat.Enemy_MaxHp);
             maxHp = (int)(enemyBaseMaxHp * hpMultiplier);
+            Debug.LogWarning($"Set enemy maxHp to {maxHp}");
         }
 
         hp = maxHp;
@@ -129,6 +130,12 @@ public class Health : MonoBehaviour
         }
     }
 
+    [Command]
+    private void DebugInvincible(bool invincibility = true)
+    {
+        isInvincible = invincibility;
+    }
+    
     [Command]
     private void DebugKillAllEnemies()
     {
