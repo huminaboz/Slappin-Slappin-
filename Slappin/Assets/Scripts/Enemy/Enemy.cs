@@ -194,8 +194,10 @@ public abstract class Enemy : MonoBehaviour, IHpAdjustmentListener, IObjectPool<
         //Got healed feedback
     }
 
+    
     public virtual float HandleDeath(int lastAttack, GameObject killer)
     {
+        DifficultyManager.I.healthSpawnChanceIncrement += .005f;
         isTryingToAttack = false;
         FartAttack.OnFart -= GetFartedOn;
         GameplayUIManager.StartedNewWave += NewWavePushback;
@@ -207,10 +209,11 @@ public abstract class Enemy : MonoBehaviour, IHpAdjustmentListener, IObjectPool<
         pickup.SetupCurrency((int)currency1DropAmount);
         pickup.SetNewHoverPosition(pickupSpawnPosition);
 
-        if (BozUtilities.GetDiceRoll() < .02f)
+        if (BozUtilities.GetDiceRoll() < .02f + DifficultyManager.I.healthSpawnChanceIncrement)
         {
             Pickup healthPickup = ObjectPoolManager<Pickup>.GetObject(healthPickupPrefab);
             healthPickup.SetNewHoverPosition(pickupSpawnPosition);
+            DifficultyManager.I.healthSpawnChanceIncrement = 0f;
         }
 
         SFXPlayer.I.Play(AudioEventsStorage.I.enemyDied);

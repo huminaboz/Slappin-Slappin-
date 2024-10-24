@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stat: 4002
   title: Faster Full Charge
-  baseValue: 3
-  basePrice: 18
+  baseValue: 20
+  basePrice: 12
   upgradeType: 3
   numberType: 3
   useMinValue: 1

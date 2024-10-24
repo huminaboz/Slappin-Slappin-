@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stat: 4001
   title: Charge Damage
-  baseValue: 1.5
+  baseValue: 20
   basePrice: 15
   upgradeType: 3
   numberType: 2

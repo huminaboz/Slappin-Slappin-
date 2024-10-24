@@ -11,6 +11,7 @@ public class DifficultyManager : Singleton<DifficultyManager>
 
     [SerializeField] public float maxSpawnSpeedBoostMultiplier = 5f;
     [SerializeField] public AnimationCurve spawnSpeedBoostCurve;
+    [SerializeField] public float healthSpawnChanceIncrement = .005f;
     
     public void SetupNextWave()
     {

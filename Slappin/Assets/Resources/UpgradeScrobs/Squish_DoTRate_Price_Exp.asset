@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: Squish_DoTRate_Price_Exp
   m_EditorClassIdentifier: 
   notes: 
-  showPreview: 0
+  showPreview: 1
   previewUpgrade: {fileID: 11400000, guid: b39d075eda7617445bf2b09c3a1b0530, type: 2}
   maxDisplayedRows: 34
   startOffset: 0
-  debugValues: "Level\t\tAmount\t\t\tPrice\n0\t\t1.00x\t\t\t40\n1\t\t1.00x\t\t\t40\n2\t\t0.99x\t\t\t83\n3\t\t0.98x\t\t\t128\n4\t\t0.97x\t\t\t175\n5\t\t0.97x\t\t\t226\n6\t\t0.96x\t\t\t279\n7\t\t0.95x\t\t\t336\n8\t\t0.94x\t\t\t395\n9\t\t0.93x\t\t\t459\n10\t\t0.92x\t\t\t526\n11\t\t0.91x\t\t\t597\n12\t\t0.90x\t\t\t673\n13\t\t0.90x\t\t\t752\n14\t\t0.89x\t\t\t837\n15\t\t0.88x\t\t\t927\n16\t\t0.87x\t\t\t1.02k\n17\t\t0.86x\t\t\t1.12k\n18\t\t0.85x\t\t\t1.23k\n19\t\t0.84x\t\t\t1.34k\n20\t\t0.83x\t\t\t1.46k\n21\t\t0.83x\t\t\t1.59k\n22\t\t0.82x\t\t\t1.72k\n23\t\t0.81x\t\t\t1.86k\n24\t\t0.80x\t\t\t2.01k\n25\t\t0.79x\t\t\t2.17k\n26\t\t0.78x\t\t\t2.34k\n27\t\t0.77x\t\t\t2.52k\n28\t\t0.76x\t\t\t2.71k\n29\t\t0.76x\t\t\t2.91k\n30\t\t0.75x\t\t\t3.12k\n31\t\t0.74x\t\t\t3.35k\n32\t\t0.73x\t\t\t3.59k\n33\t\t0.72x\t\t\t3.84k\n"
-  growthRate: 0.048
-  growthFactor: 1.2
+  debugValues: "Level\t\tAmount\t\t\tPrice\n0\t\t0.64s\t\t\t40\n1\t\t0.64s\t\t\t40\n2\t\t0.63s\t\t\t81\n3\t\t0.62s\t\t\t121\n4\t\t0.61s\t\t\t161\n5\t\t0.60s\t\t\t201\n6\t\t0.59s\t\t\t241\n7\t\t0.59s\t\t\t281\n8\t\t0.58s\t\t\t321\n9\t\t0.57s\t\t\t361\n10\t\t0.56s\t\t\t401\n11\t\t0.55s\t\t\t441\n12\t\t0.54s\t\t\t481\n13\t\t0.53s\t\t\t521\n14\t\t0.52s\t\t\t561\n15\t\t0.51s\t\t\t601\n16\t\t0.50s\t\t\t641\n17\t\t0.50s\t\t\t681\n18\t\t0.49s\t\t\t721\n19\t\t0.48s\t\t\t761\n20\t\t0.47s\t\t\t801\n21\t\t0.46s\t\t\t841\n22\t\t0.45s\t\t\t881\n23\t\t0.44s\t\t\t921\n24\t\t0.43s\t\t\t961\n25\t\t0.42s\t\t\t1k\n26\t\t0.41s\t\t\t1.04k\n27\t\t0.41s\t\t\t1.08k\n28\t\t0.40s\t\t\t1.12k\n29\t\t0.39s\t\t\t1.16k\n30\t\t0.38s\t\t\t1.2k\n31\t\t0.37s\t\t\t1.24k\n32\t\t0.36s\t\t\t1.28k\n33\t\t0.35s\t\t\t1.32k\n"
+  growthRate: 0.0001
+  growthFactor: 0.01
   offset: 0

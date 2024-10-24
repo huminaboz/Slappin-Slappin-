@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Squish_DoTRate
   m_EditorClassIdentifier: 
   stat: 5004
-  title: DoT Rate
-  baseValue: 1
-  basePrice: 40
+  title: 'DoT Hits Every:'
+  baseValue: 0.64
+  basePrice: 17
   upgradeType: 4
   numberType: 3
   useMinValue: 1

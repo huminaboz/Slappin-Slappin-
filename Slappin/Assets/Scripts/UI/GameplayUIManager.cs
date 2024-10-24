@@ -82,6 +82,7 @@ public class GameplayUIManager : Singleton<GameplayUIManager>
     private void OnTimerEnd()
     {
         Debug.Log("Timer has ended!");
+        PlayerStats.I.currency1 += 300 * DifficultyManager.I.currentWave;
         //TODO:: Some sort of buffer screen first announcing the wave number has ended
         DifficultyManager.I.SetupNextWave();
         UIStateSwapper.I.GoToStore();
