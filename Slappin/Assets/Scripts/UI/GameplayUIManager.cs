@@ -13,9 +13,7 @@ public class GameplayUIManager : Singleton<GameplayUIManager>
     private bool timerRunning = true;
     private bool waveEndingAnnouncementMade = false;
 
-    private void Awake()
-    {
-    }
+    public static Action StartedNewWave;
 
     private void Start()
     {
@@ -31,6 +29,7 @@ public class GameplayUIManager : Singleton<GameplayUIManager>
         InGameMessageAnnouncer.I.MakeAnouncement($"Wave {DifficultyManager.I.currentWave}",
             2f, 1f);
         waveEndingAnnouncementMade = false;
+        StartedNewWave?.Invoke();
     }
 
     private void Update()

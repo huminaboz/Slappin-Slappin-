@@ -31,6 +31,7 @@ public class EnemyProjectile : MonoBehaviour, IObjectPool<EnemyProjectile>, IHpA
             Camera.main.transform.position.z);
         health.enabled = false;
         FartAttack.OnFart += GetFartedOn;
+        GameplayUIManager.StartedNewWave += NewWavePushback;
     }
     
     private void GetFartedOn(float fartDamage, float knockback)
@@ -53,6 +54,18 @@ public class EnemyProjectile : MonoBehaviour, IObjectPool<EnemyProjectile>, IHpA
             ReturnObjectToPool();
         }
     }
+    
+    private void NewWavePushback()
+    {
+        //Knockback if far enough forward
+        if (transform.position.z < EnemyTarget.I.fartLine.position.z)
+        {
+            Vector3 flickForceVector = new Vector3(0f, 0f, 40f);
+            _rigidbody.AddForce(flickForceVector, ForceMode.Impulse);
+        }
+
+        // thisHealth.AdjustHp((int)-10, null);
+    }
 
 
     public void ReturnObjectToPool()
@@ -74,6 +87,7 @@ public class EnemyProjectile : MonoBehaviour, IObjectPool<EnemyProjectile>, IHpA
         SFXPlayer.I.Play(AudioEventsStorage.I.snuffedProjectile);
         health.enabled = false;
         FartAttack.OnFart -= GetFartedOn;
+        GameplayUIManager.StartedNewWave -= NewWavePushback;
         ReturnObjectToPool();
         return 0;
     }

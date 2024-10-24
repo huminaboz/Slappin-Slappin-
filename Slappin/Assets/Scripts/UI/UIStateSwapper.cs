@@ -19,6 +19,7 @@ public class UIStateSwapper : Singleton<UIStateSwapper>
     [SerializeField] private GameObject controlsScreen;
 
     private bool restartingEnabled = false;
+    
 
     public enum UIState
     {
@@ -86,6 +87,7 @@ public class UIStateSwapper : Singleton<UIStateSwapper>
 
         SetState(UIState.playing);
         GameplayUIManager.I.StartNewWave();
+        
     }
 
     private void SetLoseState()

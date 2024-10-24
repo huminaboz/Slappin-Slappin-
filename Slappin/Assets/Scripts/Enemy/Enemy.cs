@@ -64,6 +64,7 @@ public abstract class Enemy : MonoBehaviour, IHpAdjustmentListener, IObjectPool<
         gameObject.SetActive(true);
         _enemyAnimations?.Play(EnemyAnimations.AnimationFrames.WalkFWD);
         FartAttack.OnFart += GetFartedOn;
+        GameplayUIManager.StartedNewWave += NewWavePushback;
     }
 
     private void GetFartedOn(float fartDamage, float knockbackForce)
@@ -76,6 +77,18 @@ public abstract class Enemy : MonoBehaviour, IHpAdjustmentListener, IObjectPool<
         }
 
         thisHealth.AdjustHp((int)-fartDamage, null);
+    }
+
+    private void NewWavePushback()
+    {
+        //Knockback if far enough forward
+        if (transform.position.z < EnemyTarget.I.fartLine.position.z)
+        {
+            Vector3 flickForceVector = new Vector3(0f, 0f, 40f);
+            _rigidbody.AddForce(flickForceVector, ForceMode.Impulse);
+        }
+
+        // thisHealth.AdjustHp((int)-10, null);
     }
 
     protected void SetupStats()
@@ -177,6 +190,7 @@ public abstract class Enemy : MonoBehaviour, IHpAdjustmentListener, IObjectPool<
     {
         isTryingToAttack = false;
         FartAttack.OnFart -= GetFartedOn;
+        GameplayUIManager.StartedNewWave += NewWavePushback;
         //TODO: Throw up a puff of particle
         //TODO:: Pop currency(s) out of enemy in a celebration
         Vector3 pickupSpawnPosition = new Vector3(transform.position.x,
