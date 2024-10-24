@@ -31,7 +31,7 @@ public class UIStateSwapper : Singleton<UIStateSwapper>
         youLose
     }
 
-    private UIState currentUIState = UIState.playing;
+    public UIState currentUIState = UIState.playing;
 
     private void OnEnable()
     {

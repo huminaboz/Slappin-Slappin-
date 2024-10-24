@@ -44,6 +44,8 @@ public class FartAttack : MonoBehaviour
 
     private void Update()
     {
+        if (UIStateSwapper.I.currentUIState != UIStateSwapper.UIState.playing) return;
+        
         if (currentCooldown < fartCooldown)
         {
             currentCooldown += Time.deltaTime;
