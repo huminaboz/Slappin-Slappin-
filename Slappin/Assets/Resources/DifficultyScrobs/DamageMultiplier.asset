@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: DamageMultiplier
   m_EditorClassIdentifier: 
   stat: 9003
-  title: Currency1
+  title: 
   baseValue: 1
   basePrice: 0
   upgradeType: 8

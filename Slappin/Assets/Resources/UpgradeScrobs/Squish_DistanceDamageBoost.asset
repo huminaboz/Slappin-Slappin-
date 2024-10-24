@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Squish_DistanceDamageBoost
   m_EditorClassIdentifier: 
   stat: 5002
-  title: Damager per Distance
+  title: Do More Damge Farther From You
   baseValue: 1
   basePrice: 5
   upgradeType: 4

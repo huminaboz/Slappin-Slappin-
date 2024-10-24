@@ -67,7 +67,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  handStabDamage: 15
+  handStabDamage: 2
 --- !u!114 &79050552924222384
 MonoBehaviour:
   m_ObjectHideFlags: 0
