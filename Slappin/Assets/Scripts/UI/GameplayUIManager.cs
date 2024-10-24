@@ -7,7 +7,7 @@ public class GameplayUIManager : Singleton<GameplayUIManager>
 {
     [SerializeField] public TextMeshProUGUI currency1;
     [SerializeField] public TextMeshProUGUI countdownTimer;
-    [SerializeField] public float maxWaveTimer = 60f;
+    [SerializeField] public float maxWaveTimer = 30f;
 
     private float timeRemaining = 30f; // 60 seconds (1 minute)
     private bool timerRunning = true;

@@ -35665,7 +35665,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currency1: {fileID: 1563791794}
   countdownTimer: {fileID: 1065801554}
-  maxWaveTimer: 60
+  maxWaveTimer: 30
 --- !u!4 &2000875929 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9069115365609054727, guid: 60f79905accf3b24fa0114b941f1aac0, type: 3}
@@ -37518,7 +37518,7 @@ MonoBehaviour:
   notes: MaxHp is set by upgrades on scrobs
   hp: 0
   maxHp: 5000
-  enemyMaxHp: 0
+  enemyBaseMaxHp: 0
   isAlive: 1
   isPlayer: 1
   isInvincible: 0
