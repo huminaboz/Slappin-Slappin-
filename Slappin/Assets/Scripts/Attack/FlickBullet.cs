@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using FlatKit;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -67,7 +68,13 @@ public class FlickBullet : MonoBehaviour, IObjectPool<FlickBullet>
             if (other.GetComponent<Health>() != null)
             {
                 if (other.GetComponent<Health>().isAlive == false) return;
+                
                 float knockbackForce = baseImpactKnockbackForce * StatLiason.I.Get(Stat.FlickKnockbackForce);
+
+                if (other.GetComponent<Enemy_Spike>() is not null || other.GetComponent<Enemy_Turtle>() is not null)
+                {
+                    knockbackForce *= 3f;
+                }
                 Vector3 flickForceVector = new Vector3(0f, 0f, knockbackForce);
                 other.GetComponent<Rigidbody>().AddForce(flickForceVector, ForceMode.Impulse);
             }

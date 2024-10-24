@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stat: 2001
   title: Max Hp
-  baseValue: 100
+  baseValue: 500
   basePrice: 20
   upgradeType: 1
   numberType: 0

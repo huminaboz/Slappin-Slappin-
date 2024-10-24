@@ -137,12 +137,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06b712ba2097a964aa1c1cca2ec11c72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  notes: MaxHp is set by upgrades on scrobs
   hp: 0
   maxHp: 1
   enemyMaxHp: 1
-  OnDeath:
-    m_PersistentCalls:
-      m_Calls: []
   isAlive: 1
   isPlayer: 0
   isInvincible: 0
@@ -189,7 +187,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   rayDistance: 1.5
-  groundOffset: 0.05
+  groundOffset: 0.2
   repositionSpeed: 10
   showRaycastGizmo: 0
   forwardRayOffset: 0.5
