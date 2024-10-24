@@ -77,6 +77,7 @@ public class Pickup : MonoBehaviour, IObjectPool<Pickup>
 
     private void PlayerStoppedAbsorbing()
     {
+        if (!_collider) return;
         _collider.enabled = true;
         hover.enabled = true;
         playerIsAbsorbing = false;

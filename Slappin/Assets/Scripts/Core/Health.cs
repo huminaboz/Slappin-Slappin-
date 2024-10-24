@@ -25,6 +25,7 @@ public class Health : MonoBehaviour
     {
         //This is so anything we need to inform of this object's untimely demise can know
         hpAdjustmentListeners = GetComponents<IHpAdjustmentListener>();
+        isAlive = true;
     }
 
     private void OnEnable()

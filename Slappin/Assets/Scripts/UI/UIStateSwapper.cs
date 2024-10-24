@@ -18,8 +18,10 @@ public class UIStateSwapper : Singleton<UIStateSwapper>
     [SerializeField] private GameObject modalActivator;
     [SerializeField] private GameObject controlsScreen;
 
+    [SerializeField] private GameObject exitButtonIcon;
+
     private bool restartingEnabled = false;
-    
+
 
     public enum UIState
     {
@@ -44,7 +46,7 @@ public class UIStateSwapper : Singleton<UIStateSwapper>
     private void Start()
     {
         SetState(UIState.playing);
-        
+
         //Skip the controls screen if debugging 
         if (StateGame.debugModeOn) return;
         controlsScreen.SetActive(!controlsScreen.activeSelf);
@@ -87,7 +89,6 @@ public class UIStateSwapper : Singleton<UIStateSwapper>
 
         SetState(UIState.playing);
         GameplayUIManager.I.StartNewWave();
-        
     }
 
     private void SetLoseState()
@@ -116,6 +117,9 @@ public class UIStateSwapper : Singleton<UIStateSwapper>
             case UIState.store:
                 StoreUIManager.I.UpdateLabels();
                 StoreUIManager.I.OnEnteredStore();
+                canExitStore = false;
+                exitButtonIcon.SetActive(false);
+                StartCoroutine(BozUtilities.DoAfterRealTimeDelay(2f, SetStoreExitPossibility));
                 break;
             case UIState.youLose:
                 SetModalMessage($"Hands Down" +
@@ -130,8 +134,27 @@ public class UIStateSwapper : Singleton<UIStateSwapper>
         }
     }
 
+    private bool canExitStore = false;
+
+    private void SetStoreExitPossibility()
+    {
+        canExitStore = true;
+        //Show the exit icon
+        exitButtonIcon.SetActive(true);
+    }
+
     private void Update()
     {
+        if (Input.GetButton("Fire2"))
+        {
+            if (currentUIState == UIState.store && !pauseScreen.activeSelf
+                                                && !controlsScreen.activeSelf && canExitStore)
+            {
+                StoreUIManager.I.ExitStore();
+                canExitStore = false;
+            }
+        }
+
         if (Input.GetButtonDown("Pause") || Input.GetKeyDown(KeyCode.Escape))
         {
             PlayerPrefs.Save();
@@ -169,8 +192,9 @@ public class UIStateSwapper : Singleton<UIStateSwapper>
         {
             if (Input.GetButtonDown("Fire1"))
             {
-                //TODO:: Reload the scene
+                //Reload the scene
                 SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                //TODO:: Clean up static variables
             }
         }
     }
