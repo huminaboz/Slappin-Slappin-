@@ -17,31 +17,49 @@ MonoBehaviour:
   previewUpgrade: {fileID: 11400000, guid: 39994a825dc479942850add0e35aa5f5, type: 2}
   maxDisplayedRows: 34
   startOffset: 0
-  debugValues: "Level\t\tAmount\t\t\tPrice\n0\t\t0\t\t\t21\n1\t\t1\t\t\t21\n2\t\t2\t\t\t22\n3\t\t3\t\t\t22\n4\t\t4\t\t\t22\n5\t\t5\t\t\t22\n6\t\t6\t\t\t22\n7\t\t7\t\t\t23\n8\t\t8\t\t\t23\n9\t\t9\t\t\t23\n10\t\t10\t\t\t23\n11\t\t11\t\t\t23\n12\t\t12\t\t\t23\n13\t\t13\t\t\t24\n14\t\t14\t\t\t24\n15\t\t15\t\t\t24\n16\t\t16\t\t\t24\n17\t\t17\t\t\t24\n18\t\t18\t\t\t24\n19\t\t19\t\t\t25\n20\t\t20\t\t\t25\n21\t\t21\t\t\t25\n22\t\t22\t\t\t25\n23\t\t23\t\t\t25\n24\t\t24\t\t\t25\n25\t\t25\t\t\t26\n26\t\t26\t\t\t26\n27\t\t27\t\t\t26\n28\t\t28\t\t\t26\n29\t\t29\t\t\t26\n30\t\t30\t\t\t26\n31\t\t31\t\t\t27\n32\t\t32\t\t\t27\n33\t\t33\t\t\t27\n"
+  debugValues: "Level\t\tAmount\t\t\tPrice\n0\t\t1\t\t\t21\n1\t\t3\t\t\t21\n2\t\t4\t\t\t43\n3\t\t6\t\t\t64\n4\t\t8\t\t\t85\n5\t\t10\t\t\t106\n6\t\t12\t\t\t127\n7\t\t14\t\t\t148\n8\t\t17\t\t\t169\n9\t\t19\t\t\t190\n10\t\t22\t\t\t211\n11\t\t25\t\t\t232\n12\t\t28\t\t\t253\n13\t\t31\t\t\t274\n14\t\t34\t\t\t295\n15\t\t37\t\t\t316\n16\t\t41\t\t\t337\n17\t\t44\t\t\t358\n18\t\t47\t\t\t379\n19\t\t51\t\t\t400\n20\t\t54\t\t\t421\n21\t\t58\t\t\t442\n22\t\t61\t\t\t463\n23\t\t65\t\t\t484\n24\t\t68\t\t\t505\n25\t\t71\t\t\t526\n26\t\t75\t\t\t547\n27\t\t78\t\t\t568\n28\t\t81\t\t\t589\n29\t\t84\t\t\t610\n30\t\t87\t\t\t631\n31\t\t90\t\t\t652\n32\t\t93\t\t\t673\n33\t\t96\t\t\t694\n"
   AnimationCurve:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
       time: 0
       value: 0
-      inSlope: 0
-      outSlope: 0
+      inSlope: 0.1595765
+      outSlope: 0.1595765
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
-      outWeight: 0
+      outWeight: 0.38972002
+    - serializedVersion: 3
+      time: 0.024657689
+      value: 0.01024875
+      inSlope: 0.31595865
+      outSlope: 0.31595865
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.50544035
+      value: 0.50809455
+      inSlope: 2.3324232
+      outSlope: 2.3324232
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.16136195
+      outWeight: 0.17208731
     - serializedVersion: 3
       time: 1
-      value: 1
-      inSlope: 2
-      outSlope: 2
+      value: 0.9976425
+      inSlope: 0.33057877
+      outSlope: 0.33057877
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0
+      inWeight: 0.3203171
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  levelAtWhichGraphReaches1: 1000
+  levelAtWhichGraphReaches1: 1474
   maximumValue: 10000
   multiplier: 1

@@ -13,19 +13,19 @@ MonoBehaviour:
   m_Name: Basic_CurrencyDropMulti_Ani_AniMax
   m_EditorClassIdentifier: 
   notes: 
-  showPreview: 0
+  showPreview: 1
   previewUpgrade: {fileID: 11400000, guid: d1c70a2ded9a6de4e919177ed31d1a83, type: 2}
   maxDisplayedRows: 34
   startOffset: 0
-  debugValues: "Level\t\tAmount\t\t\tPrice\n0\t\t1.02x\t\t\t50\n1\t\t1.07x\t\t\t50\n2\t\t1.18x\t\t\t101\n3\t\t1.35x\t\t\t153\n4\t\t1.57x\t\t\t206\n5\t\t1.82x\t\t\t260\n6\t\t2.10x\t\t\t315\n7\t\t2.40x\t\t\t371\n8\t\t2.71x\t\t\t428\n9\t\t3.01x\t\t\t486\n10\t\t3.30x\t\t\t545\n11\t\t3.57x\t\t\t605\n12\t\t3.80x\t\t\t666\n13\t\t3.98x\t\t\t729\n14\t\t4.12x\t\t\t792\n15\t\t4.18x\t\t\t857\n16\t\t4.20x\t\t\t923\n17\t\t4.22x\t\t\t990\n18\t\t4.23x\t\t\t1.06k\n19\t\t4.25x\t\t\t1.13k\n20\t\t4.26x\t\t\t1.2k\n21\t\t4.28x\t\t\t1.27k\n22\t\t4.30x\t\t\t1.35k\n23\t\t4.31x\t\t\t1.42k\n24\t\t4.33x\t\t\t1.5k\n25\t\t4.34x\t\t\t1.58k\n26\t\t4.36x\t\t\t1.66k\n27\t\t4.37x\t\t\t1.74k\n28\t\t4.39x\t\t\t1.82k\n29\t\t4.40x\t\t\t1.9k\n30\t\t4.42x\t\t\t1.99k\n31\t\t4.43x\t\t\t2.07k\n32\t\t4.45x\t\t\t2.16k\n33\t\t4.46x\t\t\t2.25k\n"
+  debugValues: "Level\t\tAmount\t\t\tPrice\n0\t\t1.02x\t\t\t100\n1\t\t1.10x\t\t\t100\n2\t\t1.19x\t\t\t206\n3\t\t1.27x\t\t\t317\n4\t\t1.36x\t\t\t435\n5\t\t1.44x\t\t\t558\n6\t\t1.53x\t\t\t689\n7\t\t1.61x\t\t\t826\n8\t\t1.70x\t\t\t972\n9\t\t1.78x\t\t\t1.13k\n10\t\t1.86x\t\t\t1.29k\n11\t\t1.95x\t\t\t1.46k\n12\t\t2.03x\t\t\t1.64k\n13\t\t2.12x\t\t\t1.83k\n14\t\t2.20x\t\t\t2.03k\n15\t\t2.28x\t\t\t2.24k\n16\t\t2.37x\t\t\t2.46k\n17\t\t2.45x\t\t\t2.69k\n18\t\t2.54x\t\t\t2.94k\n19\t\t2.62x\t\t\t3.2k\n20\t\t2.70x\t\t\t3.48k\n21\t\t2.79x\t\t\t3.77k\n22\t\t2.87x\t\t\t4.07k\n23\t\t2.95x\t\t\t4.4k\n24\t\t3.04x\t\t\t4.74k\n25\t\t3.12x\t\t\t5.1k\n26\t\t3.20x\t\t\t5.48k\n27\t\t3.28x\t\t\t5.88k\n28\t\t3.37x\t\t\t6.3k\n29\t\t3.45x\t\t\t6.74k\n30\t\t3.53x\t\t\t7.21k\n31\t\t3.62x\t\t\t7.7k\n32\t\t3.70x\t\t\t8.23k\n33\t\t3.78x\t\t\t8.78k\n"
   AnimationCurve:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
       time: 0
       value: 0
-      inSlope: 0
-      outSlope: 0
+      inSlope: 2
+      outSlope: 2
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
@@ -33,8 +33,8 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 1
       value: 1
-      inSlope: 2
-      outSlope: 2
+      inSlope: 0
+      outSlope: 0
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
@@ -42,6 +42,6 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  levelAtWhichGraphReaches1: 1000
+  levelAtWhichGraphReaches1: 1173
   maximumValue: 50.79
   multiplier: 1

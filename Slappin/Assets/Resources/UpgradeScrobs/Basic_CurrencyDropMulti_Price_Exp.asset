@@ -17,7 +17,7 @@ MonoBehaviour:
   previewUpgrade: {fileID: 11400000, guid: d1c70a2ded9a6de4e919177ed31d1a83, type: 2}
   maxDisplayedRows: 34
   startOffset: 0
-  debugValues: "Level\t\tAmount\t\t\tPrice\n0\t\t1.02x\t\t\t50\n1\t\t1.07x\t\t\t50\n2\t\t1.18x\t\t\t103\n3\t\t1.35x\t\t\t159\n4\t\t1.57x\t\t\t218\n5\t\t1.82x\t\t\t279\n6\t\t2.10x\t\t\t345\n7\t\t2.40x\t\t\t413\n8\t\t2.71x\t\t\t486\n9\t\t3.01x\t\t\t563\n10\t\t3.30x\t\t\t643\n11\t\t3.57x\t\t\t729\n12\t\t3.80x\t\t\t818\n13\t\t3.98x\t\t\t913\n14\t\t4.12x\t\t\t1.01k\n15\t\t4.18x\t\t\t1.12k\n16\t\t4.20x\t\t\t1.23k\n17\t\t4.22x\t\t\t1.35k\n18\t\t4.23x\t\t\t1.47k\n19\t\t4.25x\t\t\t1.6k\n20\t\t4.26x\t\t\t1.74k\n21\t\t4.28x\t\t\t1.88k\n22\t\t4.30x\t\t\t2.04k\n23\t\t4.31x\t\t\t2.2k\n24\t\t4.33x\t\t\t2.37k\n25\t\t4.34x\t\t\t2.55k\n26\t\t4.36x\t\t\t2.74k\n27\t\t4.37x\t\t\t2.94k\n28\t\t4.39x\t\t\t3.15k\n29\t\t4.40x\t\t\t3.37k\n30\t\t4.42x\t\t\t3.61k\n31\t\t4.43x\t\t\t3.85k\n32\t\t4.45x\t\t\t4.11k\n33\t\t4.46x\t\t\t4.39k\n"
-  growthRate: 0.144
+  debugValues: "Level\t\tAmount\t\t\tPrice\n0\t\t1.02x\t\t\t100\n1\t\t1.10x\t\t\t100\n2\t\t1.19x\t\t\t204\n3\t\t1.27x\t\t\t311\n4\t\t1.36x\t\t\t421\n5\t\t1.44x\t\t\t535\n6\t\t1.53x\t\t\t653\n7\t\t1.61x\t\t\t775\n8\t\t1.70x\t\t\t901\n9\t\t1.78x\t\t\t1.03k\n10\t\t1.86x\t\t\t1.17k\n11\t\t1.95x\t\t\t1.3k\n12\t\t2.03x\t\t\t1.45k\n13\t\t2.12x\t\t\t1.6k\n14\t\t2.20x\t\t\t1.75k\n15\t\t2.28x\t\t\t1.91k\n16\t\t2.37x\t\t\t2.07k\n17\t\t2.45x\t\t\t2.24k\n18\t\t2.54x\t\t\t2.42k\n19\t\t2.62x\t\t\t2.6k\n20\t\t2.70x\t\t\t2.79k\n21\t\t2.79x\t\t\t2.98k\n22\t\t2.87x\t\t\t3.18k\n23\t\t2.95x\t\t\t3.38k\n24\t\t3.04x\t\t\t3.6k\n25\t\t3.12x\t\t\t3.82k\n26\t\t3.20x\t\t\t4.05k\n27\t\t3.28x\t\t\t4.28k\n28\t\t3.37x\t\t\t4.52k\n29\t\t3.45x\t\t\t4.78k\n30\t\t3.53x\t\t\t5.04k\n31\t\t3.62x\t\t\t5.3k\n32\t\t3.70x\t\t\t5.58k\n33\t\t3.78x\t\t\t5.87k\n"
+  growthRate: 0.089
   growthFactor: 0.37
   offset: 0

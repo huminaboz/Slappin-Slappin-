@@ -15,7 +15,7 @@ MonoBehaviour:
   stat: 3003
   title: Damager per Distance
   baseValue: 1
-  basePrice: 15
+  basePrice: 5
   upgradeType: 2
   numberType: 2
   useMinValue: 0

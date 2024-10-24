@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stat: 5003
   title: Hold Damage over Time
-  baseValue: 1
+  baseValue: 2
   basePrice: 21
   upgradeType: 4
   numberType: 0
