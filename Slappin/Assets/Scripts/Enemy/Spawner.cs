@@ -55,75 +55,84 @@ public class Spawner : MonoBehaviour
         }
     }
 
+    private void SpawnEnemy<T>(GameObject prefab, float postSpawnDelay) where T : MonoBehaviour, IObjectPool<T>
+    {
+        T enemy = ObjectPoolManager<T>.GetObject(prefab);
+        if (enemy is not null)
+        {
+            enemy.transform.position = GetRandomSpawnPosition();
+            enemy.transform.Rotate(0, 180, 0);
+            extraSpawnTime = postSpawnDelay;
+        }
+    }
+
     private void DoSpawn()
     {
-        if (GetRandomNumberBetweenZeroAndOne() < bouncerSpawnChance * StatLiason.I.GetEnemy(Stat.Enemy_SpawnChance))
+        if (GetRandomNumberBetweenZeroAndOne() < bouncerSpawnChance * StatLiason.I.GetEnemy(Stat.Enemy_SpawnChance)
+            && DifficultyManager.I.currentWave >= 12)
         {
-            Enemy_Bouncer enemy = ObjectPoolManager<Enemy_Bouncer>.GetObject(bouncerPrefab);
-            if (enemy is not null)
-            {
-                enemy.transform.position = GetRandomSpawnPosition();
-                enemy.transform.Rotate(0, 180, 0);
-                extraSpawnTime = 1f;
-            }
+            SpawnEnemy<Enemy_Bouncer>(bouncerPrefab, 2f);
         }
         else if (GetRandomNumberBetweenZeroAndOne() <
-                 spikeSpawnChance * StatLiason.I.GetEnemy(Stat.Enemy_SpawnChance))
+                 spikeSpawnChance * StatLiason.I.GetEnemy(Stat.Enemy_SpawnChance)
+                 && DifficultyManager.I.currentWave >= 10)
         {
-            Enemy_Spike enemy = ObjectPoolManager<Enemy_Spike>.GetObject(spikePrefab);
-            if (enemy is not null)
-            {
-                enemy.transform.position = GetRandomSpawnPosition();
-                enemy.transform.Rotate(0, 180, 0);
-                extraSpawnTime = .5f;
-            }
+            SpawnEnemy<Enemy_Spike>(spikePrefab, 0f);
         }
         else if (GetRandomNumberBetweenZeroAndOne() <
-                 orcSpawnChance * StatLiason.I.GetEnemy(Stat.Enemy_SpawnChance))
+                 orcSpawnChance * StatLiason.I.GetEnemy(Stat.Enemy_SpawnChance)
+                 && DifficultyManager.I.currentWave >= 8)
         {
-            Enemy_Pawn orcPawn = ObjectPoolManager<Enemy_Pawn>.GetObject(orcPrefab);
-            if (orcPawn is not null)
-            {
-                orcPawn.transform.position = GetRandomSpawnPosition();
-                orcPawn.transform.Rotate(0, 180, 0);
-                extraSpawnTime = .5f;
-            }
+            SpawnEnemy<Enemy_Pawn>(orcPrefab, 1.5f);
         }
         else if (GetRandomNumberBetweenZeroAndOne() <
-                 mageSpawnChance * StatLiason.I.GetEnemy(Stat.Enemy_SpawnChance))
+                 mageSpawnChance * StatLiason.I.GetEnemy(Stat.Enemy_SpawnChance)
+                 && DifficultyManager.I.currentWave >= 6)
         {
-            Enemy_Mage enemy = ObjectPoolManager<Enemy_Mage>.GetObject(magePrefab);
-            if (enemy is not null)
-            {
-                enemy.transform.position = GetRandomSpawnPosition();
-                enemy.transform.Rotate(0, 180, 0);
-                extraSpawnTime = .25f;
-            }
+            SpawnEnemy<Enemy_Mage>(magePrefab, .25f);
         }
         else
         {
             if (GetRandomNumberBetweenZeroAndOne() <
-                1 - turtleSpawnChance * StatLiason.I.GetEnemy(Stat.Enemy_SpawnChance))
+                1 - turtleSpawnChance * StatLiason.I.GetEnemy(Stat.Enemy_SpawnChance)
+                || DifficultyManager.I.currentWave < 3)
             {
-                Enemy_Pawn enemy = ObjectPoolManager<Enemy_Pawn>.GetObject(pawnPrefab);
-                if (enemy is not null)
+                if (IsDivisibleBy(4, DifficultyManager.I.currentWave) && DifficultyManager.I.currentWave > 3)
                 {
-                    enemy.transform.position = GetRandomSpawnPosition();
-                    enemy.transform.Rotate(0, 180, 0);
-                    extraSpawnTime = 0f;
+                    DoSpawn();
+                }
+                else
+                {
+                    SpawnEnemy<Enemy_Pawn>(pawnPrefab, -.25f);
                 }
             }
             else
             {
-                Enemy_Turtle enemy = ObjectPoolManager<Enemy_Turtle>.GetObject(turtlePrefab);
-                if (enemy is not null)
+                if (IsDivisibleBy(3, DifficultyManager.I.currentWave) && DifficultyManager.I.currentWave > 3)
                 {
-                    enemy.transform.position = GetRandomSpawnPosition();
-                    extraSpawnTime = 0f;
+                    DoSpawn();
+                }
+                else
+                {
+                    SpawnEnemy<Enemy_Turtle>(turtlePrefab, 0f);
                 }
             }
         }
+    }
 
+    bool IsDivisibleBy(int count, int number)
+    {
+        int sumOfDigits = 0;
+
+        // Calculate the sum of the digits
+        while (number != 0)
+        {
+            sumOfDigits += number % 10;
+            number /= 10;
+        }
+
+        // Check if the sum is divisible by 3
+        return sumOfDigits % count == 0;
     }
 
 
