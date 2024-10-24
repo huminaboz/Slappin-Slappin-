@@ -17,7 +17,7 @@ MonoBehaviour:
   previewUpgrade: {fileID: 11400000, guid: 6340beb51dc57b8408d6fb4323756be4, type: 2}
   maxDisplayedRows: 34
   startOffset: 0
-  debugValues: "Level\t\tAmount\t\t\tPrice\n0\t\t7\t\t\t40\n1\t\t9\t\t\t40\n2\t\t11\t\t\t82\n3\t\t12\t\t\t124\n4\t\t14\t\t\t168\n5\t\t16\t\t\t214\n6\t\t17\t\t\t260\n7\t\t19\t\t\t309\n8\t\t21\t\t\t358\n9\t\t22\t\t\t410\n10\t\t24\t\t\t463\n11\t\t26\t\t\t518\n12\t\t28\t\t\t574\n13\t\t29\t\t\t632\n14\t\t31\t\t\t692\n15\t\t33\t\t\t754\n16\t\t35\t\t\t818\n17\t\t37\t\t\t884\n18\t\t39\t\t\t953\n19\t\t41\t\t\t1.02k\n20\t\t42\t\t\t1.1k\n21\t\t44\t\t\t1.17k\n22\t\t46\t\t\t1.25k\n23\t\t48\t\t\t1.33k\n24\t\t50\t\t\t1.41k\n25\t\t52\t\t\t1.49k\n26\t\t54\t\t\t1.58k\n27\t\t56\t\t\t1.67k\n28\t\t58\t\t\t1.77k\n29\t\t60\t\t\t1.86k\n30\t\t62\t\t\t1.96k\n31\t\t64\t\t\t2.06k\n32\t\t67\t\t\t2.17k\n33\t\t69\t\t\t2.28k\n"
+  debugValues: "Level\t\tAmount\t\t\tPrice\n0\t\t15\t\t\t30\n1\t\t20\t\t\t30\n2\t\t25\t\t\t61\n3\t\t30\t\t\t92\n4\t\t35\t\t\t123\n5\t\t40\t\t\t155\n6\t\t45\t\t\t187\n7\t\t50\t\t\t220\n8\t\t56\t\t\t253\n9\t\t61\t\t\t287\n10\t\t67\t\t\t322\n11\t\t72\t\t\t356\n12\t\t78\t\t\t392\n13\t\t84\t\t\t428\n14\t\t90\t\t\t464\n15\t\t96\t\t\t501\n16\t\t102\t\t\t538\n17\t\t108\t\t\t576\n18\t\t115\t\t\t615\n19\t\t121\t\t\t654\n20\t\t128\t\t\t694\n21\t\t134\t\t\t735\n22\t\t141\t\t\t776\n23\t\t148\t\t\t817\n24\t\t155\t\t\t859\n25\t\t162\t\t\t902\n26\t\t169\t\t\t946\n27\t\t176\t\t\t990\n28\t\t184\t\t\t1.04k\n29\t\t191\t\t\t1.08k\n30\t\t199\t\t\t1.13k\n31\t\t207\t\t\t1.17k\n32\t\t214\t\t\t1.22k\n33\t\t222\t\t\t1.27k\n"
   AnimationCurve:
     serializedVersion: 2
     m_Curve:
@@ -51,5 +51,6 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  levelAtWhichGraphReaches1: 1000
+  levelAtWhichGraphReaches1: 529
   maximumValue: 10000
+  multiplier: 1.57

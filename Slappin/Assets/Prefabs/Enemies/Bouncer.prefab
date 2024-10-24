@@ -68,10 +68,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06b712ba2097a964aa1c1cca2ec11c72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  notes: MaxHp is MULTIPLIED by upgrades on scrobs
+  notes: MaxHp = EnemyBaseMaxHp * EnemyMaxHp Stat
   hp: 0
-  maxHp: 20
-  enemyMaxHp: 0
+  maxHp: 0
+  enemyBaseMaxHp: 20
   isAlive: 1
   isPlayer: 0
   isInvincible: 0

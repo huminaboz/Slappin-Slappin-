@@ -12,6 +12,7 @@ public class Enemy_Mage : Enemy, IObjectPool<Enemy_Mage>
 
     [SerializeField] private GameObject projectilePrefab;
     [SerializeField] private float zProjectileSpawnOffset;
+    [SerializeField] private float yProjectileSpawnOffset = .2f;
 
     public override void SetupObjectFirstTime()
     {
@@ -66,7 +67,8 @@ public class Enemy_Mage : Enemy, IObjectPool<Enemy_Mage>
         if (enemyProjectile is not null)
         {
             enemyProjectile.transform.position = new Vector3(transform.position.x,
-                transform.position.y, transform.position.z + zProjectileSpawnOffset);
+                transform.position.y + yProjectileSpawnOffset, 
+                transform.position.z + zProjectileSpawnOffset);
             enemyProjectile.damage = -damage;
             enemyProjectile.gameObject.SetActive(true);
         }

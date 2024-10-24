@@ -3,13 +3,14 @@ using QFSW.QC;
 using Unity.Collections;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Serialization;
 
 public class Health : MonoBehaviour
 {
     [SerializeField] private string notes = "MaxHp is set by upgrades on scrobs";
     [ReadOnly] public int hp;
     [SerializeField] public int maxHp = 5;
-    public int enemyMaxHp;
+    [FormerlySerializedAs("enemyMaxHp")] public int enemyBaseMaxHp;
 
     public static Action OnDeath;
 
@@ -53,8 +54,8 @@ public class Health : MonoBehaviour
         if (isPlayer) maxHp = (int)StatLiason.I.Get(Stat.IncreaseMaxHp);
         else
         {
-            //TODO:: Get the enemy's max hp stat
-            maxHp = enemyMaxHp;
+            float hpMultiplier = StatLiason.I.GetEnemy(Stat.Enemy_MaxHp);
+            maxHp = (int)(enemyBaseMaxHp * hpMultiplier);
         }
 
         hp = maxHp;

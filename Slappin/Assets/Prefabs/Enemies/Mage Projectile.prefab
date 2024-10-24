@@ -187,7 +187,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   rayDistance: 1.5
-  groundOffset: 0.2
+  groundOffset: 0.4
   repositionSpeed: 10
   showRaycastGizmo: 0
   forwardRayOffset: 0.5
