@@ -113,8 +113,6 @@ public class StoreUIManager : Singleton<StoreUIManager>
     }
 
 
-
-
     public void ExitStore()
     {
         EventSystem.current.SetSelectedGameObject(null);
@@ -123,7 +121,8 @@ public class StoreUIManager : Singleton<StoreUIManager>
 
     public void OnEnteredStore()
     {
-        EventSystem.current.SetSelectedGameObject(firstEntryInStore);
+        StartCoroutine(BozUtilities.DoAfterRealTimeDelay(1f,
+            () => EventSystem.current.SetSelectedGameObject(firstEntryInStore)));
     }
 
     public void UpdateLabels()
