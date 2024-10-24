@@ -108,6 +108,9 @@ public class FlickAttack : AttackType
         AdjustForecastScale(_flickData.distanceBase);
         //forecastCube.gameObject.SetActive(true);
         handShadowRenderer.enabled = false;
+        Debug.LogWarning($"Goal position: {goalPosition}");
+        Debug.LogWarning($"Current position: {transform.position}");
+        Debug.LogWarning($"Hand positioner: {handPositioner.transform.position}");
     }
 
     private void AdjustForecastScale(float zDistance)
@@ -237,7 +240,7 @@ public class FlickAttack : AttackType
         }));
     }
 
-    protected override void Cleanup()
+    public override void Cleanup()
     {
         _currentAction = null;
         _totalChargeTime = 0f;

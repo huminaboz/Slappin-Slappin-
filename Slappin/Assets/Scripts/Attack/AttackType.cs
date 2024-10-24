@@ -40,12 +40,22 @@ public class AttackType : MonoBehaviour
 
     private float attackSpeed = 0f;
     private const float distanceFlexRoom = .05f;
-    private Vector3 goalPosition;
+    protected Vector3 goalPosition;
     private float startingDistanceFromGoal;
     private Color _defaultBottomOfHandColor;
     private Material _handMaterial;
     private Vector3 relativeAttackPositioning;
     private Vector3 storedRelativeAttackPosition;
+
+    private void OnEnable()
+    {
+        UIStateSwapper.OnEnterStore += Cleanup;
+    }
+
+    private void OnDisable()
+    {
+        UIStateSwapper.OnEnterStore -= Cleanup;
+    }
 
     private void Start()
     {
@@ -195,7 +205,7 @@ public class AttackType : MonoBehaviour
         Direction = new(0, -1, 0);
     }
 
-    private void StopTraveling()
+    public void StopTraveling()
     {
         Direction = Vector3.zero;
         handRigidbody.velocity = Vector3.zero;
@@ -258,12 +268,16 @@ public class AttackType : MonoBehaviour
         }
     }
 
-    protected virtual void Cleanup()
+    public bool cleanupCalledFromStateMachine = false;
+    public virtual void Cleanup()
     {
         StopTraveling();
         OnCompletedTravel = null;
         RestoreDefaultAppearance();
-        player.SetState(new StateDefault(player));
+        goalPosition = new(transform.position.x, offScreenHandYPosition, transform.position.z);
+        transform.position = goalPosition;
+        gameObject.SetActive(false);
+        if(!cleanupCalledFromStateMachine) player.SetState(new StateDefault(player));
     }
 
     protected float GetLuckDamage(float baseDamage)

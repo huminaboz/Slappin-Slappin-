@@ -22,7 +22,8 @@ public class UIStateSwapper : Singleton<UIStateSwapper>
 
     private bool restartingEnabled = false;
 
-
+    public static Action OnEnterStore;
+    
     public enum UIState
     {
         playing,
@@ -120,6 +121,7 @@ public class UIStateSwapper : Singleton<UIStateSwapper>
                 canExitStore = false;
                 exitButtonIcon.SetActive(false);
                 StartCoroutine(BozUtilities.DoAfterRealTimeDelay(2f, SetStoreExitPossibility));
+                OnEnterStore?.Invoke();
                 break;
             case UIState.youLose:
                 SetModalMessage($"Hands Down" +

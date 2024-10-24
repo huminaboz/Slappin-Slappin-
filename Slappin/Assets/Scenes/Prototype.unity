@@ -304,6 +304,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  healthSpawnChanceIncrement: 0.01
 --- !u!1001 &33460808
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5225,6 +5226,7 @@ MonoBehaviour:
   spawnerLine: {fileID: 1279097141}
   hurtLine: {fileID: 569232627}
   handShadowTransform: {fileID: 617602404}
+  cleanupCalledFromStateMachine: 0
   pickupColliderObject: {fileID: 778377380}
   spikeGetHurtOnAttackCollider: {fileID: 910431749}
   handModel: {fileID: 1767934652}
@@ -22022,6 +22024,7 @@ MonoBehaviour:
   modalActivator: {fileID: 542480594}
   controlsScreen: {fileID: 1060367166}
   exitButtonIcon: {fileID: 1286095172}
+  currentUIState: 0
 --- !u!1001 &1308550409
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27924,6 +27927,7 @@ MonoBehaviour:
   spawnerLine: {fileID: 1279097141}
   hurtLine: {fileID: 569232627}
   handShadowTransform: {fileID: 617602404}
+  cleanupCalledFromStateMachine: 0
   spikeGetHurtOnAttackCollider: {fileID: 62056917}
   damageOverTimeCollider: {fileID: 477183472}
   handModel: {fileID: 1438055156}
@@ -33344,7 +33348,7 @@ MonoBehaviour:
   attackData: {fileID: 11400000, guid: b966ce4be6e1c884880894110514d247, type: 2}
   player: {fileID: 2113894223}
   offScreenHandYPosition: 0.27
-  groundYPosition: -0.45
+  groundYPosition: 0.03
   movementCurve:
     serializedVersion: 2
     m_Curve:
@@ -33399,6 +33403,7 @@ MonoBehaviour:
   spawnerLine: {fileID: 1279097141}
   hurtLine: {fileID: 569232627}
   handShadowTransform: {fileID: 617602404}
+  cleanupCalledFromStateMachine: 0
   chargeFrame: {fileID: 891544665}
   hitFrame: {fileID: 1377502997}
   flickParticle: {fileID: 1210971084}

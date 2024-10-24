@@ -175,7 +175,7 @@ public class SlapAttack : AttackType
             InitiateTravelBackUp));
     }
 
-    protected override void Cleanup()
+    public override void Cleanup()
     {
         handModel?.SetActive(false);
 

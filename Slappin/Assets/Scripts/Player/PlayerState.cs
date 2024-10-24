@@ -160,6 +160,10 @@ public class StateSlapState : PlayerState
     {
         //TODO:: Make this into an enum and function that happens on the player
         thisPlayer.CurrentAttackType = thisPlayer.slapAttack;
+        thisPlayer.CurrentAttackType.cleanupCalledFromStateMachine = true;
+        thisPlayer.CurrentAttackType.Cleanup();
+        thisPlayer.CurrentAttackType.cleanupCalledFromStateMachine = false;
+        thisPlayer.CurrentAttackType.gameObject.SetActive(true);
         thisPlayer.CurrentAttackType.InitiateAttack();
         thisPlayer.DisableMovement();
     }
@@ -194,6 +198,10 @@ public class StateFlickState : PlayerState
     {
         thisPlayer.CurrentAttackType = thisPlayer.flickAttack;
         // _flickAttack = (FlickAttack) thisPlayer.CurrentAttackType;
+        thisPlayer.CurrentAttackType.cleanupCalledFromStateMachine = true;
+        thisPlayer.CurrentAttackType.Cleanup();
+        thisPlayer.CurrentAttackType.cleanupCalledFromStateMachine = false;
+        thisPlayer.CurrentAttackType.gameObject.SetActive(true);
         thisPlayer.CurrentAttackType.InitiateAttack();
         // _flickAttack.InitiateAttack();
     }
@@ -228,6 +236,10 @@ public class SquishState : PlayerState
     public override void Enter(PlayerState fromState)
     {
         thisPlayer.CurrentAttackType = thisPlayer.squishAttack;
+        thisPlayer.CurrentAttackType.cleanupCalledFromStateMachine = true;
+        thisPlayer.CurrentAttackType.Cleanup();
+        thisPlayer.CurrentAttackType.cleanupCalledFromStateMachine = false;
+        thisPlayer.CurrentAttackType.gameObject.SetActive(true);
         thisPlayer.CurrentAttackType.InitiateAttack();
     }
 
@@ -310,6 +322,7 @@ public class StateDamagedState : PlayerState
     {
         //Disable the ability to move around or put in inputs
         thisPlayer.DisableMovement();
+        thisPlayer.CurrentAttackType.StopTraveling();
 
         //Start the hand blinking or color changing or whatever
         thisPlayer.CurrentAttackType?.HandleGettingHurt();
