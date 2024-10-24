@@ -17,7 +17,7 @@ MonoBehaviour:
   previewUpgrade: {fileID: 11400000, guid: 6340beb51dc57b8408d6fb4323756be4, type: 2}
   maxDisplayedRows: 34
   startOffset: 0
-  debugValues: "Level\t\tAmount\t\t\tPrice\n0\t\t15\t\t\t30\n1\t\t20\t\t\t30\n2\t\t25\t\t\t61\n3\t\t30\t\t\t92\n4\t\t35\t\t\t123\n5\t\t40\t\t\t155\n6\t\t45\t\t\t187\n7\t\t50\t\t\t220\n8\t\t56\t\t\t253\n9\t\t61\t\t\t287\n10\t\t67\t\t\t322\n11\t\t72\t\t\t356\n12\t\t78\t\t\t392\n13\t\t84\t\t\t428\n14\t\t90\t\t\t464\n15\t\t96\t\t\t501\n16\t\t102\t\t\t538\n17\t\t108\t\t\t576\n18\t\t115\t\t\t615\n19\t\t121\t\t\t654\n20\t\t128\t\t\t694\n21\t\t134\t\t\t735\n22\t\t141\t\t\t776\n23\t\t148\t\t\t817\n24\t\t155\t\t\t859\n25\t\t162\t\t\t902\n26\t\t169\t\t\t946\n27\t\t176\t\t\t990\n28\t\t184\t\t\t1.04k\n29\t\t191\t\t\t1.08k\n30\t\t199\t\t\t1.13k\n31\t\t207\t\t\t1.17k\n32\t\t214\t\t\t1.22k\n33\t\t222\t\t\t1.27k\n"
+  debugValues: "Level\t\tAmount\t\t\tPrice\n0\t\t47\t\t\t30\n1\t\t55\t\t\t30\n2\t\t70\t\t\t61\n3\t\t90\t\t\t92\n4\t\t114\t\t\t123\n5\t\t141\t\t\t155\n6\t\t169\t\t\t187\n7\t\t198\t\t\t220\n8\t\t225\t\t\t253\n9\t\t249\t\t\t287\n10\t\t270\t\t\t322\n11\t\t286\t\t\t356\n12\t\t298\t\t\t392\n13\t\t310\t\t\t428\n14\t\t323\t\t\t464\n15\t\t336\t\t\t501\n16\t\t350\t\t\t538\n17\t\t365\t\t\t576\n18\t\t379\t\t\t615\n19\t\t395\t\t\t654\n20\t\t410\t\t\t694\n21\t\t427\t\t\t735\n22\t\t443\t\t\t776\n23\t\t460\t\t\t817\n24\t\t478\t\t\t859\n25\t\t496\t\t\t902\n26\t\t514\t\t\t946\n27\t\t533\t\t\t990\n28\t\t552\t\t\t1.04k\n29\t\t572\t\t\t1.08k\n30\t\t592\t\t\t1.13k\n31\t\t613\t\t\t1.17k\n32\t\t634\t\t\t1.22k\n33\t\t655\t\t\t1.27k\n"
   AnimationCurve:
     serializedVersion: 2
     m_Curve:
@@ -31,13 +31,22 @@ MonoBehaviour:
       inWeight: 0
       outWeight: 0.38972002
     - serializedVersion: 3
-      time: 0.50544035
-      value: 0.50809455
-      inSlope: 2.3324232
-      outSlope: 2.3324232
+      time: 0.021090772
+      value: 0.015398549
+      inSlope: 0.39779964
+      outSlope: 0.39779964
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.16136195
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.50072336
+      value: 0.50453156
+      inSlope: 0.15415183
+      outSlope: 0.15415183
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.16474852
       outWeight: 0.17208731
     - serializedVersion: 3
       time: 1

@@ -15,7 +15,7 @@ MonoBehaviour:
   Notes: 
   baseDamage: 2
   baseGoDownSpeed: 600
-  goBackUpSpeed: 200
+  goBackUpSpeed: 100
   bonus_goodHit: 1.1
   bonus_greatHit: 1.2
   bonus_criticalHit: 1.5

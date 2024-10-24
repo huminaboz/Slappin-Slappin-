@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stat: 5001
   title: Base Damage
-  baseValue: 10
+  baseValue: 30
   basePrice: 30
   upgradeType: 4
   numberType: 0
