@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: Flick_MaxChargeTime_Price_Exp
   m_EditorClassIdentifier: 
   notes: 
-  showPreview: 1
+  showPreview: 0
   previewUpgrade: {fileID: 11400000, guid: 71702d81249d75a45bb3f8f5f6f3a191, type: 2}
   maxDisplayedRows: 34
   startOffset: 0
-  debugValues: "Level\t\tAmount\t\t\tPrice\n0\t\t20.00s\t\t\t18\n1\t\t20.01s\t\t\t18\n2\t\t19.90s\t\t\t37\n3\t\t19.79s\t\t\t55\n4\t\t19.68s\t\t\t73\n5\t\t19.57s\t\t\t91\n6\t\t19.46s\t\t\t109\n7\t\t19.35s\t\t\t127\n8\t\t19.24s\t\t\t145\n9\t\t19.13s\t\t\t163\n10\t\t19.02s\t\t\t181\n11\t\t18.91s\t\t\t199\n12\t\t18.80s\t\t\t217\n13\t\t18.69s\t\t\t235\n14\t\t18.58s\t\t\t253\n15\t\t18.47s\t\t\t271\n16\t\t18.36s\t\t\t289\n17\t\t18.25s\t\t\t307\n18\t\t18.14s\t\t\t325\n19\t\t18.03s\t\t\t343\n20\t\t17.92s\t\t\t361\n21\t\t17.80s\t\t\t379\n22\t\t17.69s\t\t\t397\n23\t\t17.58s\t\t\t415\n24\t\t17.47s\t\t\t433\n25\t\t17.36s\t\t\t451\n26\t\t17.25s\t\t\t469\n27\t\t17.14s\t\t\t487\n28\t\t17.03s\t\t\t505\n29\t\t16.92s\t\t\t523\n30\t\t16.81s\t\t\t541\n31\t\t16.70s\t\t\t559\n32\t\t16.59s\t\t\t577\n33\t\t16.48s\t\t\t595\n"
-  growthRate: 0.0001
+  debugValues: "Level\t\tAmount\t\t\tPrice\n0\t\t20.00s\t\t\t12\n1\t\t20.01s\t\t\t12\n2\t\t19.83s\t\t\t25\n3\t\t19.65s\t\t\t37\n4\t\t19.47s\t\t\t49\n5\t\t19.29s\t\t\t61\n6\t\t19.11s\t\t\t73\n7\t\t18.93s\t\t\t85\n8\t\t18.74s\t\t\t97\n9\t\t18.56s\t\t\t109\n10\t\t18.38s\t\t\t121\n11\t\t18.20s\t\t\t133\n12\t\t18.02s\t\t\t145\n13\t\t17.84s\t\t\t157\n14\t\t17.66s\t\t\t169\n15\t\t17.47s\t\t\t181\n16\t\t17.29s\t\t\t193\n17\t\t17.11s\t\t\t205\n18\t\t16.93s\t\t\t217\n19\t\t16.75s\t\t\t229\n20\t\t16.57s\t\t\t241\n21\t\t16.39s\t\t\t253\n22\t\t16.21s\t\t\t265\n23\t\t16.02s\t\t\t277\n24\t\t15.84s\t\t\t289\n25\t\t15.66s\t\t\t301\n26\t\t15.48s\t\t\t313\n27\t\t15.30s\t\t\t325\n28\t\t15.12s\t\t\t337\n29\t\t14.94s\t\t\t349\n30\t\t14.75s\t\t\t361\n31\t\t14.57s\t\t\t373\n32\t\t14.39s\t\t\t385\n33\t\t14.21s\t\t\t397\n"
+  growthRate: 0.03
   growthFactor: 0.31
   offset: 0

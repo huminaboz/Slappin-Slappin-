@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stat: 9000
   title: Currency1
-  baseValue: 1
+  baseValue: 0.5
   basePrice: 0
   upgradeType: 8
   numberType: 2

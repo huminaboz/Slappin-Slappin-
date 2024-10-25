@@ -15,7 +15,7 @@ MonoBehaviour:
   stat: 1004
   title: Increase Currency Drop
   baseValue: 1.02
-  basePrice: 50
+  basePrice: 75
   upgradeType: 0
   numberType: 2
   useMinValue: 0
