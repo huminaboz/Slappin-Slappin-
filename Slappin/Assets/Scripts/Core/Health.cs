@@ -80,6 +80,7 @@ public class Health : MonoBehaviour
 
         int oldHealth = hp;
         hp += amountToIncrease;
+        hp = Mathf.Clamp(hp, 0, maxHp);
 
         if (oldHealth == hp) return;
 
