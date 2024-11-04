@@ -17,7 +17,7 @@ public class StatLiason : Singleton<StatLiason>
 
         foreach (SO_Upgrade difficultyIncreaser in difficulties)
         {
-            Debug.LogWarning(difficultyIncreaser.stat);
+            // Debug.LogWarning(difficultyIncreaser.stat);
             EnemyStats.Add(difficultyIncreaser.stat, difficultyIncreaser.baseValue);
             DifficultyIncreasers.Add(difficultyIncreaser.stat, difficultyIncreaser);
         }

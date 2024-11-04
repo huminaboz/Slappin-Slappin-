@@ -24,6 +24,8 @@ public class UIStateSwapper : Singleton<UIStateSwapper>
 
     public static Action OnEnterStore;
     
+    private InputSystem_Actions _inputSystem;
+    
     public enum UIState
     {
         playing,
@@ -33,6 +35,12 @@ public class UIStateSwapper : Singleton<UIStateSwapper>
     }
 
     public UIState currentUIState = UIState.playing;
+
+    private void Awake()
+    {
+        _inputSystem = new InputSystem_Actions();
+        _inputSystem.Player.Enable();
+    }
 
     private void OnEnable()
     {
@@ -147,7 +155,7 @@ public class UIStateSwapper : Singleton<UIStateSwapper>
 
     private void Update()
     {
-        if (Input.GetButton("Fire2"))
+        if (_inputSystem.Player.Absorb.WasPerformedThisFrame())
         {
             if (currentUIState == UIState.store && !pauseScreen.activeSelf
                                                 && !controlsScreen.activeSelf && canExitStore)
@@ -157,7 +165,7 @@ public class UIStateSwapper : Singleton<UIStateSwapper>
             }
         }
 
-        if (Input.GetButtonDown("Pause") || Input.GetKeyDown(KeyCode.Escape))
+        if (_inputSystem.Player.Settings.WasPerformedThisFrame())
         {
             PlayerPrefs.Save();
             if (!pauseScreen.activeSelf)
@@ -171,7 +179,7 @@ public class UIStateSwapper : Singleton<UIStateSwapper>
             }
         }
 
-        if (Input.GetButtonDown("Select"))
+        if (_inputSystem.Player.Instructions.WasPerformedThisFrame())
         {
             if (!pauseScreen.activeSelf)
             {
@@ -192,7 +200,7 @@ public class UIStateSwapper : Singleton<UIStateSwapper>
 
         if (currentUIState == UIState.youLose && restartingEnabled)
         {
-            if (Input.GetButtonDown("Fire1"))
+            if (_inputSystem.Player.Slap.WasPerformedThisFrame())
             {
                 //Reload the scene
                 SceneManager.LoadScene(SceneManager.GetActiveScene().name);

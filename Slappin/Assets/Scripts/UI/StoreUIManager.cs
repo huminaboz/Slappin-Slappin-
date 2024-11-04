@@ -39,12 +39,21 @@ public class StoreUIManager : Singleton<StoreUIManager>
     [SerializeField] private Button startWaveButton;
     [SerializeField] public QuantumConsole _qc;
 
+    private InputSystem_Actions _inputSystem;
+    
     public delegate void DebugUpdateStoreUI();
 
     public static event DebugUpdateStoreUI OnDebugUpdateStoreUI;
 
     //TODO:: Populate all the categories from the resources folder scrobs
 
+    private void Awake()
+    {
+        Initialize();
+        _inputSystem = new InputSystem_Actions();
+        _inputSystem.Player.Enable();
+    }
+    
     private void OnEnable()
     {
         UpgradeData.OnPurchaseMade += UpdateLabels;
@@ -55,12 +64,9 @@ public class StoreUIManager : Singleton<StoreUIManager>
     {
         UpgradeData.OnPurchaseMade -= UpdateLabels;
         _qc.OnDeactivate -= OnEnteredStore;
+        _inputSystem.Player.Disable();
     }
 
-    private void Awake()
-    {
-        Initialize();
-    }
 
     private void Start()
     {
@@ -75,7 +81,7 @@ public class StoreUIManager : Singleton<StoreUIManager>
 
     private void Update()
     {
-        if (Input.GetButtonDown("Fire3") || Input.GetKeyDown(KeyCode.LeftShift))
+        if (_inputSystem.Player.Fart.WasPressedThisFrame())
         {
             //TODO:: Update the price previews
             previewAmount = 10;
@@ -83,7 +89,7 @@ public class StoreUIManager : Singleton<StoreUIManager>
             ChangedPreviewAmount?.Invoke();
         }
 
-        if (Input.GetButtonUp("Fire3") || Input.GetKeyUp(KeyCode.LeftShift))
+        if (_inputSystem.Player.Fart.WasReleasedThisFrame())
         {
             //TODO:: Update the price previews
             previewAmount = 1;

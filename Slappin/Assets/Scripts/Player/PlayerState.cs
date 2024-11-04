@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public enum PossibleStates
 {
@@ -78,7 +79,7 @@ public class StateDefault : PlayerState
     //You want to use this to check for state, essentially - what's possible and then run the functions
     //In the movement class
     private HandMovement _handMovement;
-
+    private InputSystem_Actions _inputSystem;
 
     public StateDefault(Player player) : base(player)
     {
@@ -89,11 +90,14 @@ public class StateDefault : PlayerState
     {
         thisPlayer.EnableMovement();
         thisPlayer.CurrentAttackType = null;
+        _inputSystem = new InputSystem_Actions();
+        _inputSystem.Player.Enable();
     }
 
     public override void Exit(PlayerState toState)
     {
         thisPlayer.handMovement._rigidbody.velocity = Vector3.zero;
+        _inputSystem.Player.Disable();
     }
 
     public override void Update(float deltaTime)
@@ -119,24 +123,22 @@ public class StateDefault : PlayerState
             RSTICK=12
          */
 
-        if (Input.GetButton("Fire1"))
+        if (_inputSystem.Player.Slap.IsPressed())
         {
             thisPlayer.SetState(new StateSlapState(thisPlayer));
         }
-        else if (Input.GetButton("Fire2"))
+        else if (_inputSystem.Player.Absorb.IsPressed())
         {
             thisPlayer.SetState(new StateAbsorbState(thisPlayer));
         }
-        else if (Input.GetButton("Fire3"))
+        else if (_inputSystem.Player.Flick.IsPressed())
         {
             thisPlayer.SetState(new StateFlickState(thisPlayer));
         }
-        else if (Input.GetButton("Fire4"))
+        else if (_inputSystem.Player.Squish.IsPressed())
         {
             thisPlayer.SetState(new SquishState(thisPlayer));
         }
-
-
     }
 
     public override void FixedUpdate(float fixedDeltaTime)
@@ -245,7 +247,6 @@ public class SquishState : PlayerState
 
     public override void Exit(PlayerState toState)
     {
-        //TODO:: Make absorb mode stop
     }
 
     public override void Update(float deltaTime)
@@ -274,6 +275,8 @@ public class StateAbsorbState : PlayerState
     public static Action OnAbsorbPressed;
     public static Action OnAbsorbReleased;
     
+    private InputSystem_Actions _inputSystem;
+    
     public StateAbsorbState(Player player) : base(player)
     {
         state = PossibleStates.AbsorbState;
@@ -283,16 +286,19 @@ public class StateAbsorbState : PlayerState
     public override void Enter(PlayerState fromState)
     {
         OnAbsorbPressed?.Invoke();
+        _inputSystem = new InputSystem_Actions();
+        _inputSystem.Player.Enable();
     }
 
     public override void Exit(PlayerState toState)
     {
         OnAbsorbReleased?.Invoke();
+        _inputSystem.Player.Disable();
     }
 
     public override void Update(float deltaTime)
     {
-        if (Input.GetButtonUp("Fire2"))
+        if (_inputSystem.Player.Absorb.WasReleasedThisFrame())
         {
             thisPlayer.SetState(new StateDefault(thisPlayer));
         }

@@ -20,6 +20,14 @@ public class FartAttack : MonoBehaviour
     private float fartDamage;
     private float currentCooldown;
 
+    private InputSystem_Actions _inputSystem;
+
+    private void Awake()
+    {
+        _inputSystem = new InputSystem_Actions();
+        _inputSystem.Player.Enable();
+    }
+
     private void OnEnable()
     {
         UpgradeData.OnPurchaseMade += UpdateFartStats;
@@ -61,7 +69,7 @@ public class FartAttack : MonoBehaviour
             return;
         }
 
-        if (Input.GetAxis("LTrigger") > 0f)
+        if (_inputSystem.Player.Fart.WasPerformedThisFrame())
         {
             UpdateFartStats();
             OnFart?.Invoke(fartDamage, fartKnockback);

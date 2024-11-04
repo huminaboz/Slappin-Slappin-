@@ -1527,7 +1527,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: (hold LShift or Btn West)
+  m_text: (Left Trigger or Q)
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a827d3b4f618e1940a06c5438c39c230, type: 2}
   m_sharedMaterial: {fileID: 8812891653361001597, guid: a827d3b4f618e1940a06c5438c39c230, type: 2}
@@ -37617,6 +37617,7 @@ GameObject:
   - component: {fileID: 2113894226}
   - component: {fileID: 2113894227}
   - component: {fileID: 2113894228}
+  - component: {fileID: 2113894229}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -37724,6 +37725,36 @@ MonoBehaviour:
   defaultColor: {r: 0.1764706, g: 0.20784314, b: 0.39607844, a: 0.87058824}
   fartReadyColor: {r: 0.9529412, g: 0.7529412, b: 0.08627451, a: 1}
   fartText: {fileID: 1759688702}
+--- !u!114 &2113894229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2113894220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: 78c2a43877753584fb1e0c957bf28be4, type: 3}
+  m_NotificationBehavior: 0
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents: []
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: Player
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!1 &2132519981
 GameObject:
   m_ObjectHideFlags: 0
@@ -37891,7 +37922,7 @@ GameObject:
   - component: {fileID: 2135056447}
   - component: {fileID: 2135056446}
   m_Layer: 5
-  m_Name: Canvas - Buy Stuff
+  m_Name: Canvas - Store
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

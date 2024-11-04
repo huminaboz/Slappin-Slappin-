@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using Vector3 = UnityEngine.Vector3;
 
@@ -16,16 +17,24 @@ public class HandMovement : MonoBehaviour
     [SerializeField] private Transform southWestPoint;
 
     private SnapToTheGround _snapToTheGround;
+    private InputSystem_Actions _inputSystem;
     
     private void Awake()
     {
         _rigidbody = GetComponent<Rigidbody>();
         _snapToTheGround = GetComponent<SnapToTheGround>();
+        _inputSystem = new InputSystem_Actions();
+    }
+
+    private void OnEnable()
+    {
+        _inputSystem.Player.Enable();
     }
 
     private void OnDisable()
     {
         _rigidbody.velocity = Vector3.zero;
+        _inputSystem.Player.Disable();
     }
 
     private void FixedUpdate()
@@ -33,15 +42,16 @@ public class HandMovement : MonoBehaviour
         if (!StateGame.PlayerInGameControlsEnabled) return;
 
         // Read inputs from the left joystick
-        float moveX = Input.GetAxis("Horizontal");
-        float moveZ = Input.GetAxis("Vertical");
-
+        // float moveX = Input.GetAxis("Horizontal");
+        // float moveZ = Input.GetAxis("Vertical");
+        Vector2 movement = _inputSystem.Player.Move.ReadValue<Vector2>();
 
         // Calculate movement direction
-        Vector3 direction = new Vector3(moveX, 0, moveZ).normalized;
+        Vector3 direction = new Vector3(movement.x, 0, movement.y).normalized;
         // if (moveX == 0f && moveZ == 0f) return;
 
-        bool isBoosting = Input.GetAxis("RTrigger") > 0f;
+        // bool isBoosting = Input.GetAxis("RTrigger") > 0f;
+        bool isBoosting = _inputSystem.Player.Boost.inProgress;
         // Apply speed boost if holding right trigger
         float currentSpeed = isBoosting ? moveSpeed * StatLiason.I.Get(Stat.MoveBoostSpeed) : moveSpeed;
         // Debug.LogWarning($"Current Speed: {currentSpeed}");

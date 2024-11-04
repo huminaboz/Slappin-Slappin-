@@ -23,8 +23,8 @@ public class Player : MonoBehaviour, IHpAdjustmentListener
     private void Awake()
     {
         thisHealth = GetComponent<Health>();
-        slapAttack.Initialize();
-        flickAttack.Initialize();
+        slapAttack?.Initialize();
+        flickAttack?.Initialize();
         squishAttack?.Initialize();
         wildCardAttack?.Initialize();
     }
