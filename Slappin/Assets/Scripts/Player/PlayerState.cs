@@ -79,7 +79,6 @@ public class StateDefault : PlayerState
     //You want to use this to check for state, essentially - what's possible and then run the functions
     //In the movement class
     private HandMovement _handMovement;
-    private InputSystem_Actions _inputSystem;
 
     public StateDefault(Player player) : base(player)
     {
@@ -90,14 +89,11 @@ public class StateDefault : PlayerState
     {
         thisPlayer.EnableMovement();
         thisPlayer.CurrentAttackType = null;
-        _inputSystem = new InputSystem_Actions();
-        _inputSystem.Player.Enable();
     }
 
     public override void Exit(PlayerState toState)
     {
         thisPlayer.handMovement._rigidbody.velocity = Vector3.zero;
-        _inputSystem.Player.Disable();
     }
 
     public override void Update(float deltaTime)
@@ -123,19 +119,19 @@ public class StateDefault : PlayerState
             RSTICK=12
          */
 
-        if (_inputSystem.Player.Slap.IsPressed())
+        if (thisPlayer._inputSystem.Player.Slap.IsPressed())
         {
             thisPlayer.SetState(new StateSlapState(thisPlayer));
         }
-        else if (_inputSystem.Player.Absorb.IsPressed())
+        else if (thisPlayer._inputSystem.Player.Absorb.IsPressed())
         {
             thisPlayer.SetState(new StateAbsorbState(thisPlayer));
         }
-        else if (_inputSystem.Player.Flick.IsPressed())
+        else if (thisPlayer._inputSystem.Player.Flick.IsPressed())
         {
             thisPlayer.SetState(new StateFlickState(thisPlayer));
         }
-        else if (_inputSystem.Player.Squish.IsPressed())
+        else if (thisPlayer._inputSystem.Player.Squish.IsPressed())
         {
             thisPlayer.SetState(new SquishState(thisPlayer));
         }
@@ -275,8 +271,6 @@ public class StateAbsorbState : PlayerState
     public static Action OnAbsorbPressed;
     public static Action OnAbsorbReleased;
     
-    private InputSystem_Actions _inputSystem;
-    
     public StateAbsorbState(Player player) : base(player)
     {
         state = PossibleStates.AbsorbState;
@@ -286,19 +280,16 @@ public class StateAbsorbState : PlayerState
     public override void Enter(PlayerState fromState)
     {
         OnAbsorbPressed?.Invoke();
-        _inputSystem = new InputSystem_Actions();
-        _inputSystem.Player.Enable();
     }
 
     public override void Exit(PlayerState toState)
     {
         OnAbsorbReleased?.Invoke();
-        _inputSystem.Player.Disable();
     }
 
     public override void Update(float deltaTime)
     {
-        if (_inputSystem.Player.Absorb.WasReleasedThisFrame())
+        if (thisPlayer._inputSystem.Player.Absorb.WasReleasedThisFrame())
         {
             thisPlayer.SetState(new StateDefault(thisPlayer));
         }

@@ -18,6 +18,8 @@ public class Player : MonoBehaviour, IHpAdjustmentListener
     [Header("Positioning Stuff")]
     [SerializeField] private Transform handShadowTransform;
     private Transform handPositioner;
+    
+    public InputSystem_Actions _inputSystem;
 
 
     private void Awake()
@@ -27,6 +29,9 @@ public class Player : MonoBehaviour, IHpAdjustmentListener
         flickAttack?.Initialize();
         squishAttack?.Initialize();
         wildCardAttack?.Initialize();
+        
+        _inputSystem = new InputSystem_Actions();
+        _inputSystem.Player.Enable();
     }
 
     private void Start()

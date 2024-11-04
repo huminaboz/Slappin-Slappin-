@@ -24,17 +24,16 @@ public class HandMovement : MonoBehaviour
         _rigidbody = GetComponent<Rigidbody>();
         _snapToTheGround = GetComponent<SnapToTheGround>();
         _inputSystem = new InputSystem_Actions();
+        _inputSystem.Player.Enable();
     }
 
     private void OnEnable()
     {
-        _inputSystem.Player.Enable();
     }
 
     private void OnDisable()
     {
         _rigidbody.velocity = Vector3.zero;
-        _inputSystem.Player.Disable();
     }
 
     private void FixedUpdate()
@@ -51,7 +50,7 @@ public class HandMovement : MonoBehaviour
         // if (moveX == 0f && moveZ == 0f) return;
 
         // bool isBoosting = Input.GetAxis("RTrigger") > 0f;
-        bool isBoosting = _inputSystem.Player.Boost.inProgress;
+        bool isBoosting = _inputSystem.Player.Boost.IsPressed();
         // Apply speed boost if holding right trigger
         float currentSpeed = isBoosting ? moveSpeed * StatLiason.I.Get(Stat.MoveBoostSpeed) : moveSpeed;
         // Debug.LogWarning($"Current Speed: {currentSpeed}");
