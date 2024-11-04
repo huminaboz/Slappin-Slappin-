@@ -19,11 +19,15 @@ public class UpgradeData : MonoBehaviour
     public static event OnBoughtSomething OnPurchaseMade;
 
     public int level = 1;
+    
+    private InputSystem_Actions _inputSystem;
 
 
     private void Awake()
     {
         _upgradeCardAppearance = GetComponentInChildren<UpgradeCard_Appearance>();
+        _inputSystem = new InputSystem_Actions();
+        _inputSystem.Player.Enable();
     }
 
     private void OnEnable()
@@ -35,7 +39,7 @@ public class UpgradeData : MonoBehaviour
     {
         int amount = 1;
 
-        if (Input.GetButton("Fire3") || Input.GetKey(KeyCode.LeftShift))
+        if (_inputSystem.Player.Fart.IsPressed())
         {
             amount = 10;
         }
