@@ -10,17 +10,17 @@ public class SlapAttack : AttackType
     [SerializeField] private GetHurtOnAttackCollider spikeGetHurtOnAttackCollider;
     [SerializeField] private GameObject handModel;
     [SerializeField] private Transform slapForecastShadow;
-    
+
     private Vector3 _hurtColliderDefaultLocalScale;
     private Vector3 _slapForecastShadowDefaultLocalScale;
     private float distanceDamageBoost;
 
 
     private Vector3 _attackColliderDefaultLocalPosition;
-    
+
     //Animation
-    [SerializeField] private Animator animator;
-    
+
+
     private void OnEnable()
     {
         UpgradeData.OnPurchaseMade += UpdateColliderAndForecastSize;
@@ -44,13 +44,12 @@ public class SlapAttack : AttackType
     {
         float damage = StatLiason.I.Get(Stat.SlapDamage);
         // Debug.LogWarning($"Slap damage was {damage} before distance damage boost");
-        damage +=  Mathf.Ceil(damage * distanceDamageBoost);
+        damage += Mathf.Ceil(damage * distanceDamageBoost);
         // Debug.LogWarning($"AND NOW Slap damage is {damage} after distance damage boost");
         return damage;
     }
 
 
-    
     public override void InitiateAttack()
     {
         base.InitiateAttack();
@@ -63,33 +62,20 @@ public class SlapAttack : AttackType
         DropSlap();
     }
 
-    private Coroutine _slapAnimationCoroutine;
-
-    private void PlayAnimationCoroutine(float delay, string animationName)
-    {
-        if(_slapAnimationCoroutine != null) StopCoroutine(_slapAnimationCoroutine);
-        _slapAnimationCoroutine = StartCoroutine(PlayAnimation(delay, animationName));
-    }
-    
-    private IEnumerator PlayAnimation(float delay, string animationName)
-    {
-        yield return new WaitForSeconds(delay);
-        animator.Play(animationName);
-    }
 
     private void UpdateColliderAndForecastSize()
     {
         //Set the collider size based on the slap size when you call a slap
-        hurtEnemiesColliderObject.transform.localScale = 
+        hurtEnemiesColliderObject.transform.localScale =
             new Vector3(_hurtColliderDefaultLocalScale.x * StatLiason.I.Get(Stat.SlapAreaMultiplier),
                 _hurtColliderDefaultLocalScale.y,
-                _hurtColliderDefaultLocalScale.z * StatLiason.I.Get(Stat.SlapAreaMultiplier)); 
-        
+                _hurtColliderDefaultLocalScale.z * StatLiason.I.Get(Stat.SlapAreaMultiplier));
+
         //And the forecast size
-        slapForecastShadow.localScale = 
+        slapForecastShadow.localScale =
             new Vector3(_slapForecastShadowDefaultLocalScale.x * StatLiason.I.Get(Stat.SlapAreaMultiplier),
                 _slapForecastShadowDefaultLocalScale.y,
-                _slapForecastShadowDefaultLocalScale.z * StatLiason.I.Get(Stat.SlapAreaMultiplier)); 
+                _slapForecastShadowDefaultLocalScale.z * StatLiason.I.Get(Stat.SlapAreaMultiplier));
     }
 
     private void DropSlap()
@@ -131,12 +117,13 @@ public class SlapAttack : AttackType
     }
 
     private Coroutine stunDelayCoroutine;
+
     public override void InitiateTravelBackUp()
     {
         //Stop for a bit to see the hand
-            PlayAnimationCoroutine(.1f, "Up");
+        PlayAnimationCoroutine(.1f, "Up");
         const float handRestDuration = .15f;
-        if(stunDelayCoroutine != null) StopCoroutine(stunDelayCoroutine);
+        if (stunDelayCoroutine != null) StopCoroutine(stunDelayCoroutine);
         stunDelayCoroutine = StartCoroutine(BozUtilities.DoAfterDelay(handRestDuration, () =>
         {
             player.EnableMovement();
@@ -157,7 +144,7 @@ public class SlapAttack : AttackType
         if (spike.GetComponent<Enemy_Spike>())
         {
             Enemy_Spike enemySpike = spike.GetComponent<Enemy_Spike>();
-            handDamage = (int) enemySpike.damage;
+            handDamage = (int)enemySpike.damage;
             handStabStunDuration = enemySpike.handStabStunDuration;
         }
 
@@ -166,7 +153,7 @@ public class SlapAttack : AttackType
             Enemy_Turtle enemyTurtle = spike.GetComponent<Enemy_Turtle>();
             handDamage = enemyTurtle.handStabDamage;
         }
-        
+
         playerHealth.AdjustHp(-handDamage, gameObject);
         player.SetState(new StateDamagedState(player));
 

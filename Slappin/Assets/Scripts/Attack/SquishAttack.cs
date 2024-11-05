@@ -39,6 +39,7 @@ public class SquishAttack : AttackType
 
     public override void InitiateAttack()
     {
+        animator.enabled = false;
         //Little extra cleanup in case some async stuff is happening
         StopAllCoroutines(); 
         _currentAction = null;
@@ -51,6 +52,8 @@ public class SquishAttack : AttackType
         distanceDamageBoost = GetRangedDamageBonus(StatLiason.I.Get(Stat.SquishDamagePerDistance));
 
         DropSquish();
+        animator.enabled = true;
+        PlayAnimationCoroutine(0f, "Down");
     }
 
     private void DropSquish()
@@ -76,9 +79,10 @@ public class SquishAttack : AttackType
         base.DoWhenReachingGround();
         //TODO:: Start playing some enemy hitting stuff
         SFXPlayer.I.Play(AudioEventsStorage.I.squishHitGround);
-        _shake.StartShake();
+        //_shake.StartShake();
         _currentAction = DoShitWhileTouchingGround;
         StartCoroutine(SwapDamageColliders());
+        PlayAnimationCoroutine(.1f, "Squishing");
     }
 
     private IEnumerator SwapDamageColliders()
@@ -93,23 +97,22 @@ public class SquishAttack : AttackType
     {
         _currentAction?.Invoke();
     }
-
-    //For calling on the playerstate
+    
     private void DoShitWhileTouchingGround()
     {
-        if (!Input.GetButton("Fire4"))
-        {
-            _currentAction = null;
-            InitiateTravelBackUp();
-        }
+        if (player._inputSystem.Player.Squish.IsInProgress()) return;
+        Debug.Log("squish button was released");
+        _currentAction = null;
+        InitiateTravelBackUp();
     }
 
     public override void InitiateTravelBackUp()
     {
-        //TODO:: Once you release the button
+        //Once you release the button
         _shake.StopShake();
         damageOverTimeCollider.SetActive(false);
-
+        
+        //PlayAnimationCoroutine(0f, "Up");
         base.InitiateTravelBackUp();
     }
 

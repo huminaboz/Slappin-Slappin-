@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using QFSW.QC.Actions;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -46,6 +47,8 @@ public class AttackType : MonoBehaviour
     private Material _handMaterial;
     private Vector3 relativeAttackPositioning;
     private Vector3 storedRelativeAttackPosition;
+    
+    [SerializeField] protected Animator animator;
 
     private void OnEnable()
     {
@@ -143,6 +146,7 @@ public class AttackType : MonoBehaviour
         relativeAttackPositioning = handPositioner.position - handShadowTransform.position;
         Debug.Log($"Relative positioning between shadow and hand is: {relativeAttackPositioning}");
         storedRelativeAttackPosition = relativeAttackPositioning;
+        
     }
 
     public void SetFacingDirection()
@@ -187,7 +191,6 @@ public class AttackType : MonoBehaviour
         //     Debug.LogWarning("Can't attack - player is dead");
         //     return;
         // }
-
         SetParentPosition(); //So the spike collision check is in the right place
         SetFacingDirection();
     }
@@ -245,6 +248,20 @@ public class AttackType : MonoBehaviour
     {
         handRenderer.material.SetColor("_ColorDimExtra", _defaultBottomOfHandColor);
         handRenderer.material.SetColor("_ColorDim", _defaultTopOfHandColor);
+    }
+    
+    private Coroutine _slapAnimationCoroutine;
+    protected void PlayAnimationCoroutine(float delay, string animationName)
+    {
+        Debug.Log($"Starting animation: " + animationName);
+        if(_slapAnimationCoroutine != null) StopCoroutine(_slapAnimationCoroutine);
+        _slapAnimationCoroutine = StartCoroutine(PlayAnimation(delay, animationName));
+    }
+    private IEnumerator PlayAnimation(float delay, string animationName)
+    {
+        yield return new WaitForSeconds(delay);
+            
+        animator.Play(animationName);
     }
 
     protected virtual float GetAttackTypeDamageNumber()
