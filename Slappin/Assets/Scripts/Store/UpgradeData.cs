@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Globalization;
+using DevToDev.Analytics;
 using Mono.CSharp;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -66,6 +67,12 @@ public class UpgradeData : MonoBehaviour
             level++;
             StatLiason.I.Stats[upgradeSO.stat]
                 = upgradeSO.newValueGrowthCurve.ComputeGrowth(upgradeSO.baseValue, level);
+           
+            DTDAnalytics.VirtualCurrencyPayment(purchaseId: upgradeSO.title,
+                purchaseType: upgradeSO.upgradeType.ToString(),
+                purchaseAmount: 1,
+                purchasePrice: GetPrice(1),
+                purchaseCurrency: "Currency1");
         }
 
         SFXPlayer.I.Play(AudioEventsStorage.I.BoughtUpgrade);

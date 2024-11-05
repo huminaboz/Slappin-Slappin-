@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+using DevToDev.Analytics;
 using QFSW.QC;
 using TMPro;
 using UnityEngine;
@@ -30,6 +32,13 @@ public class GameplayUIManager : Singleton<GameplayUIManager>
             2f, 1f);
         waveEndingAnnouncementMade = false;
         StartedNewWave?.Invoke();
+        
+        DTDStartProgressionEventParameters parameters = new DTDStartProgressionEventParameters();
+        parameters.Source = (DifficultyManager.I.currentWave-1).ToString();
+        parameters.Difficulty = DifficultyManager.I.currentWave;
+        DTDAnalytics.StartProgressionEvent(
+            eventName: $"Wave {DifficultyManager.I.currentWave}",
+            parameters: parameters);
     }
 
     private void Update()
@@ -84,8 +93,21 @@ public class GameplayUIManager : Singleton<GameplayUIManager>
         Debug.Log("Timer has ended!");
         PlayerStats.I.currency1 += 300 * DifficultyManager.I.currentWave;
         //TODO:: Some sort of buffer screen first announcing the wave number has ended
+        DTDFinishProgressionEventParameters parameters = new DTDFinishProgressionEventParameters
+        {
+            SuccessfulCompletion = true,
+            Earned = new Dictionary<string, long>
+            {
+                ["Currency1"] = (long) PlayerStats.I.currency1GainedThisWave
+            }
+        };
+        DTDAnalytics.FinishProgressionEvent(
+            eventName: $"Wave {DifficultyManager.I.currentWave}",
+            parameters: parameters);
+    
         DifficultyManager.I.SetupNextWave();
         UIStateSwapper.I.GoToStore();
+        PlayerStats.I.currency1GainedThisWave = 0;
     }
 
 }

@@ -1,5 +1,5 @@
-
-using System;
+using System.Collections.Generic;
+using DevToDev.Analytics;
 using UnityEngine;
 
 public class PlayerStats : Singleton<PlayerStats>
@@ -8,7 +8,7 @@ public class PlayerStats : Singleton<PlayerStats>
     [SerializeField] public float stunRecoveryMultiplier = 1f;
     
     public float currency1 = 0;
-    
+    public float currency1GainedThisWave = 0;
 
     private void Start()
     {
@@ -21,6 +21,11 @@ public class PlayerStats : Singleton<PlayerStats>
         currency1 += amount;
         UpdateHUD();
         //todo:: Animate the number to show it went up
+        var balance = new Dictionary<string, long>();
+        balance.Add("Currency1", amount);
+        //balance.Add("Currency2", 200);
+        currency1GainedThisWave += amount;
+        DTDAnalytics.CurrentBalance(balance);
     }
 
     public void UpdateHUD()
