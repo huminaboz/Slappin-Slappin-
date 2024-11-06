@@ -16,7 +16,7 @@ public class DifficultyManager : Singleton<DifficultyManager>
     public void SetupNextWave()
     {
         currentWave++;
-        Debug.LogWarning($"Current Wave is now: {currentWave}");
+        Debug.Log($"Current Wave is now: {currentWave}");
         StatLiason.I.UpgradeEnemyStats();
     }
 

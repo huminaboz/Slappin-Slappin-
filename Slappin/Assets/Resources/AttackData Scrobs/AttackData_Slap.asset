@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: AttackData_Slap
   m_EditorClassIdentifier: 
   Notes: 
+  title: Slap
   baseDamage: 1
   baseGoDownSpeed: 300
   goBackUpSpeed: 125

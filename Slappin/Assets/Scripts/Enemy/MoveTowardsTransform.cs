@@ -146,7 +146,7 @@ public class MoveTowardsTransform : MonoBehaviour, IHpAdjustmentListener
     }
 
     public float HandleDeath(int lastAttack, GameObject killer)
-    {
+    {   
         _rigidbody.velocity = Vector3.zero;
         return 0;
     }

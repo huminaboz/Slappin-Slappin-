@@ -149,10 +149,11 @@ public class SquishAttack : AttackType
             InitiateTravelBackUp));
     }
 
-    public override void Cleanup()
+    
+    public override void CleanupThatsOnlyCalledFromStateMachine()
     {
-        handModel?.SetActive(false);
-
-        base.Cleanup();
+        // handModel?.SetActive(false);
+        _currentAction = null;
+        base.CleanupThatsOnlyCalledFromStateMachine();
     }
 }

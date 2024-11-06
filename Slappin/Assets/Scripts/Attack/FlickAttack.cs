@@ -108,9 +108,9 @@ public class FlickAttack : AttackType
         AdjustForecastScale(_flickData.distanceBase);
         //forecastCube.gameObject.SetActive(true);
         handShadowRenderer.enabled = false;
-        Debug.LogWarning($"Goal position: {goalPosition}");
-        Debug.LogWarning($"Current position: {transform.position}");
-        Debug.LogWarning($"Hand positioner: {handPositioner.transform.position}");
+        Debug.LogWarning($"Flick - Goal position: {goalPosition}");
+        Debug.LogWarning($"Flick - Current position: {transform.position}");
+        Debug.LogWarning($"Flick - Hand positioner: {handPositioner.transform.position}");
     }
 
     private void AdjustForecastScale(float zDistance)
@@ -155,7 +155,7 @@ public class FlickAttack : AttackType
             Color.magenta, chargeCurve.Evaluate(ratio));
         handRenderer.material.SetColor("_ColorDim", chargeColor);
 
-        if (!Input.GetButton("Fire3"))
+        if (!player._inputSystem.Player.Flick.IsPressed())
         {
             ReleaseCharge(ratio);
             _currentAction = null;
@@ -240,13 +240,13 @@ public class FlickAttack : AttackType
         }));
     }
 
-    public override void Cleanup()
+    public override void CleanupThatsOnlyCalledFromStateMachine()
     {
         _currentAction = null;
         _totalChargeTime = 0f;
         _currentChargeTime = 0f;
         chargeFrame.SetActive(false);
         hitFrame.SetActive(false);
-        base.Cleanup();
+        base.CleanupThatsOnlyCalledFromStateMachine();
     }
 }

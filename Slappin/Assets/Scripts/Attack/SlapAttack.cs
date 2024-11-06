@@ -162,10 +162,10 @@ public class SlapAttack : AttackType
             InitiateTravelBackUp));
     }
 
-    public override void Cleanup()
+    public override void CleanupThatsOnlyCalledFromStateMachine()
     {
         handModel?.SetActive(false);
 
-        base.Cleanup();
+        base.CleanupThatsOnlyCalledFromStateMachine();
     }
 }

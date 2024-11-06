@@ -57,7 +57,7 @@ public class Health : MonoBehaviour
         {
             float hpMultiplier = StatLiason.I.GetEnemy(Stat.Enemy_MaxHp);
             maxHp = (int)(enemyBaseMaxHp * hpMultiplier);
-            Debug.LogWarning($"Set enemy maxHp to {maxHp}");
+            Debug.Log($"Set enemy maxHp to {maxHp}");
         }
 
         hp = maxHp;

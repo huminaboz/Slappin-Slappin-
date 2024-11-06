@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: AttackData_Squish
   m_EditorClassIdentifier: 
   Notes: 
+  title: Squish
   baseDamage: 10
   baseGoDownSpeed: 100
   goBackUpSpeed: 200

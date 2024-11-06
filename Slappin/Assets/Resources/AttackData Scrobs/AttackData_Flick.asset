@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: AttackData_Flick
   m_EditorClassIdentifier: 
   Notes: 
+  title: Flick
   baseDamage: 2
   baseGoDownSpeed: 600
   goBackUpSpeed: 100

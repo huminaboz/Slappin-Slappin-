@@ -5231,7 +5231,6 @@ MonoBehaviour:
   hurtLine: {fileID: 569232627}
   handShadowTransform: {fileID: 617602404}
   animator: {fileID: 1767934653}
-  cleanupCalledFromStateMachine: 0
   pickupColliderObject: {fileID: 778377380}
   spikeGetHurtOnAttackCollider: {fileID: 910431749}
   handModel: {fileID: 1767934652}
@@ -28136,7 +28135,6 @@ MonoBehaviour:
   hurtLine: {fileID: 569232627}
   handShadowTransform: {fileID: 617602404}
   animator: {fileID: 736982304}
-  cleanupCalledFromStateMachine: 0
   spikeGetHurtOnAttackCollider: {fileID: 62056917}
   damageOverTimeCollider: {fileID: 477183472}
   handModel: {fileID: 736982302}
@@ -33557,7 +33555,7 @@ MonoBehaviour:
   attackData: {fileID: 11400000, guid: b966ce4be6e1c884880894110514d247, type: 2}
   player: {fileID: 2113894223}
   offScreenHandYPosition: 0.27
-  groundYPosition: 0.03
+  groundYPosition: -0.37
   movementCurve:
     serializedVersion: 2
     m_Curve:
@@ -33613,7 +33611,6 @@ MonoBehaviour:
   hurtLine: {fileID: 569232627}
   handShadowTransform: {fileID: 617602404}
   animator: {fileID: 0}
-  cleanupCalledFromStateMachine: 0
   chargeFrame: {fileID: 891544665}
   hitFrame: {fileID: 1377502997}
   flickParticle: {fileID: 1210971084}

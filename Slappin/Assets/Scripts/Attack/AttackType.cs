@@ -27,7 +27,8 @@ public class AttackType : MonoBehaviour
     [SerializeField] protected AnimationCurve rangeDamageCurve;
     [SerializeField] protected Transform spawnerLine;
     [SerializeField] protected Transform hurtLine;
-
+    
+    
     protected Vector3 Direction
     {
         get => direction;
@@ -52,16 +53,22 @@ public class AttackType : MonoBehaviour
 
     private void OnEnable()
     {
-        UIStateSwapper.OnEnterStore += Cleanup;
+        UIStateSwapper.OnEnterStore += CleanupThatsOnlyCalledFromStateMachine;
     }
 
     private void OnDisable()
     {
-        UIStateSwapper.OnEnterStore -= Cleanup;
+        UIStateSwapper.OnEnterStore -= CleanupThatsOnlyCalledFromStateMachine;
     }
 
     private void Start()
     {
+        SetDefaultPosition();
+    }
+
+    private void SetDefaultPosition()
+    {
+        Debug.LogWarning($"{attackData.title} setting default position");
         handPositioner.position = new Vector3(handPositioner.position.x,
             offScreenHandYPosition, handPositioner.position.z);
     }
@@ -132,6 +139,8 @@ public class AttackType : MonoBehaviour
 
     private void DoWhenMadeItToGoalPosition()
     {
+        Debug.LogWarning($"{attackData.title} DoWhenMadeItToGoalPosition\n" +
+                         $"Goalposition: {goalPosition}");
         StopTraveling();
         handPositioner.transform.position = new Vector3(handPositioner.position.x,
             goalPosition.y, handPositioner.position.z);
@@ -141,12 +150,11 @@ public class AttackType : MonoBehaviour
     public virtual void Initialize()
     {
         GetHandMaterials();
-
+        Debug.LogWarning($"{attackData.title} Initializing\n");
         //Every attack type is going to have different relative positioning because of the pivots and visuals
         relativeAttackPositioning = handPositioner.position - handShadowTransform.position;
         Debug.Log($"Relative positioning between shadow and hand is: {relativeAttackPositioning}");
         storedRelativeAttackPosition = relativeAttackPositioning;
-        
     }
 
     public void SetFacingDirection()
@@ -186,6 +194,7 @@ public class AttackType : MonoBehaviour
 
     public virtual void InitiateAttack()
     {
+        Debug.LogWarning($"{attackData.title} Initiate Attack");
         // if (!playerHealth.isAlive)
         // {
         //     Debug.LogWarning("Can't attack - player is dead");
@@ -198,10 +207,13 @@ public class AttackType : MonoBehaviour
     protected virtual void InitiateTravelToGround()
     {
         goalPosition = new(transform.position.x, groundYPosition, transform.position.z);
+        Debug.LogWarning($"{attackData.title} InitiateTravelToGround\n" +
+                         $"Goal Position: {goalPosition}");
 
         OnCompletedTravel += DoWhenReachingGround;
 
         attackSpeed = attackData.baseGoDownSpeed * StatLiason.I.Get(Stat.AttackSpeed);
+        Debug.LogWarning($"{attackData.title} startingDistanceFromGoal {startingDistanceFromGoal}");
         startingDistanceFromGoal = Mathf.Abs(handPositioner.position.y - goalPosition.y);
 
         //Giving Direction a value starts up the Fixedupdate telling the hand which way to go
@@ -217,17 +229,19 @@ public class AttackType : MonoBehaviour
     public virtual void InitiateTravelBackUp()
     {
         StopTraveling();
-
         goalPosition = new(transform.position.x, offScreenHandYPosition, transform.position.z);
+        Debug.LogWarning($"{attackData.title} InitiateTravelBackUp: {goalPosition}");
         startingDistanceFromGoal = Mathf.Abs(handPositioner.position.y - goalPosition.y);
+        Debug.LogWarning($"{attackData.title} startingDistanceFromGoal: {startingDistanceFromGoal}");
         attackSpeed = attackData.goBackUpSpeed * StatLiason.I.Get(Stat.AttackSpeed);
         Direction = new(0, 1, 0);
 
-        OnCompletedTravel = Cleanup;
+        OnCompletedTravel = CleanupAndSetDefaultState;
     }
 
     protected virtual void DoWhenReachingGround()
     {
+        Debug.LogWarning($"{attackData.title} DoWhenReachingGround");
         StopTraveling();
     }
 
@@ -285,16 +299,21 @@ public class AttackType : MonoBehaviour
         }
     }
 
-    public bool cleanupCalledFromStateMachine = false;
-    public virtual void Cleanup()
+    public virtual void CleanupThatsOnlyCalledFromStateMachine()
     {
+        Debug.LogWarning($"{attackData.title} CleanupThatsOnlyCalledFromStateMachine");
         StopTraveling();
         OnCompletedTravel = null;
         RestoreDefaultAppearance();
-        goalPosition = new(transform.position.x, offScreenHandYPosition, transform.position.z);
-        transform.position = goalPosition;
+        SetDefaultPosition();
         gameObject.SetActive(false);
-        if(!cleanupCalledFromStateMachine) player.SetState(new StateDefault(player));
+    }
+    
+    private void CleanupAndSetDefaultState()
+    {
+        Debug.LogWarning($"{attackData.title} CleanupAndSetDefaultState");
+        CleanupThatsOnlyCalledFromStateMachine();
+        player.SetState(new StateDefault(player));
     }
 
     protected float GetLuckDamage(float baseDamage)
