@@ -29,7 +29,9 @@ public class EnemyProjectile : MonoBehaviour, IObjectPool<EnemyProjectile>, IHpA
             transform.position.y , transform.position.z);
         goalPosition = new Vector3(transform.position.x, transform.position.y,
             Camera.main.transform.position.z);
-        health.enabled = false;
+        health.enabled = true;
+        health.Initialize();
+        health.hp = 1;
         FartAttack.OnFart += GetFartedOn;
         GameplayUIManager.StartedNewWave += NewWavePushback;
     }
@@ -70,7 +72,7 @@ public class EnemyProjectile : MonoBehaviour, IObjectPool<EnemyProjectile>, IHpA
 
     public void ReturnObjectToPool()
     {
-        gameObject.SetActive(false);
+        ObjectPoolManager<EnemyProjectile>.ReturnObject(this);
     }
 
     public void TookDamage(int damageAmount, GameObject attacker)
