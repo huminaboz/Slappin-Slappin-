@@ -8,10 +8,10 @@ public class DTDObject : MonoBehaviour
         var config = new DTDAnalyticsConfiguration
         {
             ApplicationVersion = "1.2.3",
-            LogLevel = DTDLogLevel.No,
+            LogLevel = DTDLogLevel.Debug,
             TrackingAvailability = DTDTrackingStatus.Enable,
             CurrentLevel = 1,
-            UserId = "unique_userId"
+            UserId = "unique user id"
         };
 
 #if UNITY_ANDROID
@@ -19,9 +19,9 @@ public class DTDObject : MonoBehaviour
 #elif UNITY_IOS
         DTDAnalytics.Initialize("iOSAppID", config);
 #elif UNITY_WEBGL
-        DTDAnalytics.Initialize("WebAppID", config);
+        DTDAnalytics.Initialize("143a92b4-6445-07ec-9e5e-6ae4a5aae1a5", config);
 #elif UNITY_STANDALONE_WIN
-        DTDAnalytics.Initialize("winAppID", config);
+        DTDAnalytics.Initialize("143a92b4-6445-07ec-9e5e-6ae4a5aae1a5", config);
 #elif UNITY_STANDALONE_OSX
         DTDAnalytics.Initialize("OSXAppID", config);
 #elif UNITY_WSA
