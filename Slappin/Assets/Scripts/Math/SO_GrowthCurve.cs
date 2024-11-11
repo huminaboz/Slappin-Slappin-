@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -49,5 +50,28 @@ public class SO_GrowthCurve : ScriptableObject
             debugValues += BozUtilities.FormatLargeNumber(newPrice);
             debugValues += "\n";
         }
+    }
+
+    public List<Vector2> GetGraphPoints(int pointsCount)
+    {
+        List<Vector2> points = new List<Vector2>();
+        
+        for (int level = 0; level < pointsCount; level++)
+        {
+            float x = level;
+            float y = 0; 
+                y = ComputeGrowth(previewUpgrade.baseValue, level);
+                if (previewUpgrade.numberType == NumberType.Multiplier)
+                {
+                    y *= 2;
+                }
+                else
+                {
+                    y *= .5f;
+                }
+            points.Add(new Vector2(x, y));
+        }
+        
+        return points;
     }
 }
