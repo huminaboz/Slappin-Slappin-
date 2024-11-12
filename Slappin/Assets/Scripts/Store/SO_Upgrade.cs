@@ -107,6 +107,14 @@ public class SO_Upgrade : ScriptableObject
     /// </summary>
     [SerializeField] public SO_GrowthCurve newPriceGrowthCurve;
 
+    [Header("Graph Values")]
+    public float baseValueForMultiplier = 1f;
+    //NOTE:: Rate of increase for difficulty scrobs will always be 1 since they go up per wave
+    public float rateOfIncreasePerWave = 1f;
+    
+    [Header("Pricing Graph Values")]
+    public float OPnessScore = 1f;
+    
     [FormerlySerializedAs("maxLevels")] [SerializeField]
     public int maxLevel = 300;
 }

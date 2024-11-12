@@ -5,8 +5,8 @@ using UnityEngine.Serialization;
 
 public class SO_GrowthCurve : ScriptableObject
 {
-    [TextArea(3,100)][SerializeField] private string notes;
-    
+    [TextArea(3, 100)] [SerializeField] private string notes;
+
     [Header("Preview Values")] [SerializeField]
     private bool showPreview;
 
@@ -55,23 +55,22 @@ public class SO_GrowthCurve : ScriptableObject
     public List<Vector2> GetGraphPoints(int pointsCount)
     {
         List<Vector2> points = new List<Vector2>();
-        
+
         for (int level = 0; level < pointsCount; level++)
         {
             float x = level;
-            float y = 0; 
-                y = ComputeGrowth(previewUpgrade.baseValue, level);
-                if (previewUpgrade.numberType == NumberType.Multiplier)
-                {
-                    y *= 2;
-                }
-                else
-                {
-                    y *= .5f;
-                }
+            float y = 0;
+            y = ComputeGrowth(previewUpgrade.baseValue, level);
+            if (previewUpgrade.numberType == NumberType.Multiplier)
+            {
+                y *= previewUpgrade.baseValueForMultiplier;
+            }
+
+            y *= previewUpgrade.rateOfIncreasePerWave;
+
             points.Add(new Vector2(x, y));
         }
-        
+
         return points;
     }
 }
