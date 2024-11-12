@@ -24,4 +24,7 @@ MonoBehaviour:
   maxValue: 1e+12
   newValueGrowthCurve: {fileID: 11400000, guid: 596bd2c321d0210439cb98c6d51e20e1, type: 2}
   newPriceGrowthCurve: {fileID: 11400000, guid: 613a716bec6ded84ba8be677c3510a78, type: 2}
-  maxLevel: 500
+  baseValueForMultiplier: 1
+  rateOfIncreasePerWave: 0.15
+  OPnessScore: 2
+  maxLevel: 1000

@@ -13,11 +13,12 @@ MonoBehaviour:
   m_Name: Defense_MaxHp_AniMax
   m_EditorClassIdentifier: 
   notes: 
-  showPreview: 1
+  showPreview: 0
   previewUpgrade: {fileID: 11400000, guid: 25e514833abb3c94d9ee64bc37cec3ab, type: 2}
   maxDisplayedRows: 34
   startOffset: 0
   debugValues: "Level\t\tAmount\t\t\tPrice\n0\t\t289\t\t\t20\n1\t\t299\t\t\t20\n2\t\t308\t\t\t41\n3\t\t317\t\t\t61\n4\t\t327\t\t\t82\n5\t\t336\t\t\t102\n6\t\t346\t\t\t123\n7\t\t355\t\t\t144\n8\t\t365\t\t\t166\n9\t\t374\t\t\t187\n10\t\t383\t\t\t209\n11\t\t393\t\t\t231\n12\t\t402\t\t\t253\n13\t\t411\t\t\t275\n14\t\t421\t\t\t298\n15\t\t430\t\t\t320\n16\t\t439\t\t\t343\n17\t\t449\t\t\t366\n18\t\t458\t\t\t390\n19\t\t467\t\t\t413\n20\t\t477\t\t\t437\n21\t\t486\t\t\t461\n22\t\t495\t\t\t485\n23\t\t505\t\t\t509\n24\t\t514\t\t\t534\n25\t\t523\t\t\t559\n26\t\t532\t\t\t584\n27\t\t542\t\t\t609\n28\t\t551\t\t\t635\n29\t\t560\t\t\t660\n30\t\t569\t\t\t686\n31\t\t579\t\t\t712\n32\t\t588\t\t\t739\n33\t\t597\t\t\t766\n"
+  priceMaster: {fileID: 11400000, guid: d1c70a2ded9a6de4e919177ed31d1a83, type: 2}
   AnimationCurve:
     serializedVersion: 2
     m_Curve:

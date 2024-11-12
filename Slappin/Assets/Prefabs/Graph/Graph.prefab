@@ -70,7 +70,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   updatePeriod: 5
   graphSize: {x: 1600, y: 800}
-  graphScale: {x: 100, y: 100}
+  graphScale: {x: 10000000, y: 100}
   backgroundColor: {r: 0.10980393, g: 0.10980393, b: 0.10980393, a: 0}
   outlineWidth: 0.05
   outlineColor: {r: 0, g: 0.8, b: 1, a: 0}
@@ -96,12 +96,12 @@ MonoBehaviour:
   GridTextFont: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   gridSpacing: {x: 1, y: 1}
   xAxisWidth: 3
-  xAxisColor: {r: 0, g: 0.8, b: 1, a: 1}
+  xAxisColor: {r: 0, g: 0.1660377, b: 0.20754719, a: 1}
   xAxisTextColor: {r: 1, g: 0.8209481, b: 0, a: 1}
   xAxisTextSize: 10
   xAxisTextOffset: 10
   yAxisWidth: 3
-  yAxisColor: {r: 0, g: 0.8, b: 1, a: 1}
+  yAxisColor: {r: 0, g: 0.16862746, b: 0.20784314, a: 1}
   yAxisTextColor: {r: 1, g: 0.8196079, b: 0, a: 1}
   yAxisTextSize: 10
   yAxisTextOffset: 10

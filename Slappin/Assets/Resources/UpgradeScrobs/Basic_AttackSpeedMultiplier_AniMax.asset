@@ -13,11 +13,23 @@ MonoBehaviour:
   m_Name: Basic_AttackSpeedMultiplier_AniMax
   m_EditorClassIdentifier: 
   notes: 
-  showPreview: 1
+  showPreview: 0
   previewUpgrade: {fileID: 11400000, guid: 156072e63a9db3e49a1ca51f54a61fd4, type: 2}
   maxDisplayedRows: 34
   startOffset: 0
-  debugValues: "Level\t\tAmount\t\t\tPrice\n0\t\t1.00x\t\t\t10\n1\t\t1.03x\t\t\t10\n2\t\t1.06x\t\t\t21\n3\t\t1.09x\t\t\t31\n4\t\t1.11x\t\t\t42\n5\t\t1.14x\t\t\t54\n6\t\t1.17x\t\t\t65\n7\t\t1.20x\t\t\t77\n8\t\t1.23x\t\t\t89\n9\t\t1.26x\t\t\t102\n10\t\t1.29x\t\t\t115\n11\t\t1.31x\t\t\t128\n12\t\t1.34x\t\t\t142\n13\t\t1.37x\t\t\t157\n14\t\t1.40x\t\t\t171\n15\t\t1.43x\t\t\t186\n16\t\t1.45x\t\t\t202\n17\t\t1.48x\t\t\t218\n18\t\t1.51x\t\t\t234\n19\t\t1.54x\t\t\t251\n20\t\t1.57x\t\t\t269\n21\t\t1.59x\t\t\t287\n22\t\t1.62x\t\t\t305\n23\t\t1.65x\t\t\t325\n24\t\t1.68x\t\t\t344\n25\t\t1.71x\t\t\t365\n26\t\t1.73x\t\t\t385\n27\t\t1.76x\t\t\t407\n28\t\t1.79x\t\t\t429\n29\t\t1.82x\t\t\t452\n30\t\t1.84x\t\t\t475\n31\t\t1.87x\t\t\t499\n32\t\t1.90x\t\t\t524\n33\t\t1.93x\t\t\t550\n"
+  debugValues: "Level\t\tAmount\t\t\tPrice\n0\t\t1.00x (1)\t\t\t10\n1\t\t1.03x (1.028777)\t\t\t10\n2\t\t1.06x
+    (1.057508)\t\t\t21\n3\t\t1.09x (1.086193)\t\t\t31\n4\t\t1.11x (1.114831)\t\t\t42\n5\t\t1.14x
+    (1.143424)\t\t\t54\n6\t\t1.17x (1.171971)\t\t\t65\n7\t\t1.20x (1.200471)\t\t\t77\n8\t\t1.23x
+    (1.228925)\t\t\t89\n9\t\t1.26x (1.257334)\t\t\t102\n10\t\t1.29x (1.285696)\t\t\t115\n11\t\t1.31x
+    (1.314012)\t\t\t128\n12\t\t1.34x (1.342282)\t\t\t142\n13\t\t1.37x (1.370506)\t\t\t157\n14\t\t1.40x
+    (1.398684)\t\t\t171\n15\t\t1.43x (1.426816)\t\t\t186\n16\t\t1.45x (1.454902)\t\t\t202\n17\t\t1.48x
+    (1.482942)\t\t\t218\n18\t\t1.51x (1.510935)\t\t\t234\n19\t\t1.54x (1.538882)\t\t\t251\n20\t\t1.57x
+    (1.566784)\t\t\t269\n21\t\t1.59x (1.594639)\t\t\t287\n22\t\t1.62x (1.622449)\t\t\t305\n23\t\t1.65x
+    (1.650212)\t\t\t325\n24\t\t1.68x (1.677929)\t\t\t344\n25\t\t1.71x (1.7056)\t\t\t365\n26\t\t1.73x
+    (1.733225)\t\t\t385\n27\t\t1.76x (1.760804)\t\t\t407\n28\t\t1.79x (1.788337)\t\t\t429\n29\t\t1.82x
+    (1.815823)\t\t\t452\n30\t\t1.84x (1.843264)\t\t\t475\n31\t\t1.87x (1.870659)\t\t\t499\n32\t\t1.90x
+    (1.898007)\t\t\t524\n33\t\t1.93x (1.925309)\t\t\t550\n"
+  priceMaster: {fileID: 11400000, guid: d1c70a2ded9a6de4e919177ed31d1a83, type: 2}
   AnimationCurve:
     serializedVersion: 2
     m_Curve:

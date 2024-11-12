@@ -17,33 +17,36 @@ MonoBehaviour:
   previewUpgrade: {fileID: 11400000, guid: d1c70a2ded9a6de4e919177ed31d1a83, type: 2}
   maxDisplayedRows: 34
   startOffset: 0
-  debugValues: "Level\t\tAmount\t\t\tPrice\n0\t\t1.02x\t\t\t50\n1\t\t1.09x\t\t\t50\n2\t\t1.14x\t\t\t102\n3\t\t1.17x\t\t\t154\n4\t\t1.19x\t\t\t208\n5\t\t1.20x\t\t\t263\n6\t\t1.21x\t\t\t319\n7\t\t1.24x\t\t\t377\n8\t\t1.27x\t\t\t436\n9\t\t1.33x\t\t\t496\n10\t\t1.40x\t\t\t558\n11\t\t1.49x\t\t\t621\n12\t\t1.57x\t\t\t686\n13\t\t1.66x\t\t\t753\n14\t\t1.74x\t\t\t821\n15\t\t1.83x\t\t\t890\n16\t\t1.91x\t\t\t962\n17\t\t1.99x\t\t\t1.04k\n18\t\t2.08x\t\t\t1.11k\n19\t\t2.16x\t\t\t1.19k\n20\t\t2.25x\t\t\t1.26k\n21\t\t2.33x\t\t\t1.35k\n22\t\t2.41x\t\t\t1.43k\n23\t\t2.50x\t\t\t1.51k\n24\t\t2.58x\t\t\t1.6k\n25\t\t2.66x\t\t\t1.69k\n26\t\t2.75x\t\t\t1.78k\n27\t\t2.83x\t\t\t1.87k\n28\t\t2.91x\t\t\t1.96k\n29\t\t3.00x\t\t\t2.06k\n30\t\t3.08x\t\t\t2.16k\n31\t\t3.16x\t\t\t2.26k\n32\t\t3.25x\t\t\t2.37k\n33\t\t3.33x\t\t\t2.47k\n"
+  debugValues: "Level\t\tAmount\t\t\tPrice\n0\t\t1.02x (357)\t\t\t51\n1\t\t1.20x
+    (419.378)\t\t\t60\n2\t\t1.73x (606.512)\t\t\t87\n3\t\t2.62x (918.4019)\t\t\t132\n4\t\t3.87x
+    (1.36k)\t\t\t194\n5\t\t5.48x (1.92k)\t\t\t274\n6\t\t7.44x (2.6k)\t\t\t372\n7\t\t9.75x
+    (3.41k)\t\t\t488\n8\t\t12.43x (4.35k)\t\t\t622\n9\t\t15.46x (5.41k)\t\t\t773\n10\t\t18.84x
+    (6.59k)\t\t\t943\n11\t\t22.58x (7.9k)\t\t\t1.13k\n12\t\t26.68x (9.34k)\t\t\t1.34k\n13\t\t31.14x
+    (10.9k)\t\t\t1.56k\n14\t\t35.95x (12.58k)\t\t\t1.8k\n15\t\t41.12x (14.39k)\t\t\t2.06k\n16\t\t46.65x
+    (16.33k)\t\t\t2.33k\n17\t\t52.53x (18.38k)\t\t\t2.63k\n18\t\t58.76x (20.57k)\t\t\t2.94k\n19\t\t65.36x
+    (22.88k)\t\t\t3.27k\n20\t\t72.31x (25.31k)\t\t\t3.62k\n21\t\t79.62x (27.87k)\t\t\t3.98k\n22\t\t87.28x
+    (30.55k)\t\t\t4.36k\n23\t\t95.30x (33.35k)\t\t\t4.77k\n24\t\t103.68x (36.29k)\t\t\t5.18k\n25\t\t112.41x
+    (39.34k)\t\t\t5.62k\n26\t\t121.50x (42.52k)\t\t\t6.08k\n27\t\t130.94x (45.83k)\t\t\t6.55k\n28\t\t140.75x
+    (49.26k)\t\t\t7.04k\n29\t\t150.91x (52.82k)\t\t\t7.55k\n30\t\t161.42x (56.5k)\t\t\t8.07k\n31\t\t172.29x
+    (60.3k)\t\t\t8.62k\n32\t\t183.52x (64.23k)\t\t\t9.18k\n33\t\t195.10x (68.29k)\t\t\t9.76k\n"
+  priceMaster: {fileID: 11400000, guid: d1c70a2ded9a6de4e919177ed31d1a83, type: 2}
   AnimationCurve:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
       time: 0
       value: 0
-      inSlope: 2
-      outSlope: 2
+      inSlope: 0
+      outSlope: 0
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
       outWeight: 0
     - serializedVersion: 3
-      time: 0.008223043
-      value: 0.0071070124
-      inSlope: 1.9944686
-      outSlope: 1.9944686
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
       time: 1
       value: 1
-      inSlope: 0
-      outSlope: 0
+      inSlope: 2
+      outSlope: 2
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
@@ -52,5 +55,5 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   levelAtWhichGraphReaches1: 1173
-  maximumValue: 50.79
+  maximumValue: 245223
   multiplier: 1

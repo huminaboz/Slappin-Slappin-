@@ -15,6 +15,7 @@ public class SO_GrowthCurve : ScriptableObject
     [Range(0, 1000)] [SerializeField] private int startOffset = 1;
     [SerializeField] [TextArea(1, 200)] private string debugValues;
 
+    [SerializeField] private SO_Upgrade priceMaster;
 
     private void Awake()
     {
@@ -44,13 +45,35 @@ public class SO_GrowthCurve : ScriptableObject
             debugValues += "\t\t";
             string newValue = BozUtilities.GetUpgradeText(previewUpgrade, level);
             debugValues += newValue;
+            if (previewUpgrade.numberType == NumberType.Multiplier)
+            {
+                //Show a little preview of what a base value might grow to
+                debugValues += " (" + BozUtilities.FormatLargeNumber(ComputeGrowth(previewUpgrade.baseValue, level)
+                                                                     * previewUpgrade.baseValueForMultiplier) + ")";
+            }
+
             debugValues += "\t\t\t";
-            float newPrice = previewUpgrade.newPriceGrowthCurve.ComputeGrowth(previewUpgrade.basePrice, level);
+            //float newPrice = previewUpgrade.newPriceGrowthCurve.ComputeGrowth(previewUpgrade.basePrice, level);
+            float newPrice = CalculatePrice(level);
             newPrice = Mathf.Ceil(newPrice);
             debugValues += BozUtilities.FormatLargeNumber(newPrice);
             debugValues += "\n";
         }
     }
+
+    private float CalculatePrice(int level)
+    {
+        //price = expectedOrbGain/upgradesPerWave / frequency of increase * OPnessScore
+
+        float expectedWaveGains = ComputeGrowth(priceMaster.baseValue, level)
+                                  * priceMaster.baseValueForMultiplier;
+        float upgradesPerWave = 7;
+        float frequencyOfIncrease = previewUpgrade.rateOfIncreasePerWave;
+        float OPness = previewUpgrade.OPnessScore;
+
+        return expectedWaveGains / upgradesPerWave / frequencyOfIncrease * OPness;
+    }
+
 
     public List<Vector2> GetGraphPoints(int pointsCount)
     {

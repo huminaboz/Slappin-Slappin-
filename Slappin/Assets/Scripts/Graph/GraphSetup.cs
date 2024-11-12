@@ -27,11 +27,12 @@ public class GraphSetup : MonoBehaviour
 
     private void SetupNewGraph(SO_GrowthCurve growthCurve, Color graphColor)
     {
+        string title = growthCurve.previewUpgrade.upgradeType + " " + growthCurve.previewUpgrade.title;
         LegendItem legendItem = Instantiate(legendItemPrefab, legendParent);
-        legendItem.Setup(graphColor, growthCurve.previewUpgrade.upgradeType + " " + growthCurve.previewUpgrade.title);
-        legendItem.gameObject.name = growthCurve.previewUpgrade.title + " legend";
+        legendItem.Setup(graphColor, title);
+        legendItem.gameObject.name = title + " legend";
         GraphSettings newGraph = Instantiate(graphHandlerPrefab, transform).GetComponent<GraphSettings>();
-        newGraph.gameObject.name = growthCurve.previewUpgrade.title + " Graph";
+        newGraph.gameObject.name = title + " Graph";
         GraphHandler newGraphHandler = newGraph.GetComponent<GraphHandler>();
         newGraphHandler.Initialize(graphCanvas);
         newGraphHandler.DrawGraph(growthCurve, valuesAmount);

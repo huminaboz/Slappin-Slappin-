@@ -13,11 +13,12 @@ MonoBehaviour:
   m_Name: Fart_Damage_AniMax
   m_EditorClassIdentifier: 
   notes: 
-  showPreview: 1
+  showPreview: 0
   previewUpgrade: {fileID: 11400000, guid: dc90bdfbe989ec9438e7e9d87c9b8789, type: 2}
   maxDisplayedRows: 34
   startOffset: 0
   debugValues: "Level\t\tAmount\t\t\tPrice\n0\t\t1\t\t\t20\n1\t\t3\t\t\t20\n2\t\t6\t\t\t41\n3\t\t7\t\t\t63\n4\t\t8\t\t\t86\n5\t\t9\t\t\t109\n6\t\t10\t\t\t134\n7\t\t11\t\t\t160\n8\t\t12\t\t\t187\n9\t\t13\t\t\t215\n10\t\t14\t\t\t244\n11\t\t15\t\t\t274\n12\t\t16\t\t\t306\n13\t\t17\t\t\t339\n14\t\t18\t\t\t373\n15\t\t19\t\t\t409\n16\t\t20\t\t\t447\n17\t\t21\t\t\t486\n18\t\t22\t\t\t527\n19\t\t23\t\t\t569\n20\t\t24\t\t\t614\n21\t\t25\t\t\t660\n22\t\t26\t\t\t708\n23\t\t27\t\t\t759\n24\t\t28\t\t\t811\n25\t\t28\t\t\t866\n26\t\t29\t\t\t923\n27\t\t30\t\t\t982\n28\t\t31\t\t\t1.04k\n29\t\t32\t\t\t1.11k\n30\t\t33\t\t\t1.18k\n31\t\t34\t\t\t1.25k\n32\t\t35\t\t\t1.32k\n33\t\t36\t\t\t1.4k\n"
+  priceMaster: {fileID: 11400000, guid: d1c70a2ded9a6de4e919177ed31d1a83, type: 2}
   AnimationCurve:
     serializedVersion: 2
     m_Curve:

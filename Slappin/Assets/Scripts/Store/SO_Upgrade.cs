@@ -88,6 +88,7 @@ public class SO_Upgrade : ScriptableObject
     [SerializeField] public int basePrice = 5;
     [SerializeField] public UpgradeType upgradeType;
     [SerializeField] public NumberType numberType;
+    public int maxLevel = 1000;
     
     [Header("Min/Max - Can only use one")]
     [SerializeField] public bool useMinValue = false;
@@ -112,9 +113,7 @@ public class SO_Upgrade : ScriptableObject
     //NOTE:: Rate of increase for difficulty scrobs will always be 1 since they go up per wave
     public float rateOfIncreasePerWave = 1f;
     
-    [Header("Pricing Graph Values")]
+    [Header("Pricing Calculation")]
     public float OPnessScore = 1f;
     
-    [FormerlySerializedAs("maxLevels")] [SerializeField]
-    public int maxLevel = 300;
 }

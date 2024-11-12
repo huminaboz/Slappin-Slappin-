@@ -3,7 +3,9 @@ guid: 5b6d51cf6adf9f245a85ac23065a75ec
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - previewUpgrade: {instanceID: 0}
+  - priceMaster: {fileID: 11400000, guid: d1c70a2ded9a6de4e919177ed31d1a83, type: 2}
   executionOrder: 0
   icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
   userData: 

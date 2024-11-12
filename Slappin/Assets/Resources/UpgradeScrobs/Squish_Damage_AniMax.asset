@@ -13,11 +13,12 @@ MonoBehaviour:
   m_Name: Squish_Damage_AniMax
   m_EditorClassIdentifier: 
   notes: 
-  showPreview: 1
+  showPreview: 0
   previewUpgrade: {fileID: 11400000, guid: 6340beb51dc57b8408d6fb4323756be4, type: 2}
   maxDisplayedRows: 34
   startOffset: 0
-  debugValues: "Level\t\tAmount\t\t\tPrice\n0\t\t33\t\t\t30\n1\t\t39\t\t\t30\n2\t\t49\t\t\t61\n3\t\t63\t\t\t92\n4\t\t80\t\t\t123\n5\t\t99\t\t\t155\n6\t\t118\t\t\t187\n7\t\t138\t\t\t220\n8\t\t156\t\t\t253\n9\t\t173\t\t\t287\n10\t\t188\t\t\t322\n11\t\t199\t\t\t356\n12\t\t207\t\t\t392\n13\t\t216\t\t\t428\n14\t\t225\t\t\t464\n15\t\t234\t\t\t501\n16\t\t244\t\t\t538\n17\t\t253\t\t\t576\n18\t\t264\t\t\t615\n19\t\t274\t\t\t654\n20\t\t285\t\t\t694\n21\t\t296\t\t\t735\n22\t\t308\t\t\t776\n23\t\t320\t\t\t817\n24\t\t332\t\t\t859\n25\t\t344\t\t\t902\n26\t\t357\t\t\t946\n27\t\t370\t\t\t990\n28\t\t384\t\t\t1.04k\n29\t\t397\t\t\t1.08k\n30\t\t411\t\t\t1.13k\n31\t\t425\t\t\t1.17k\n32\t\t440\t\t\t1.22k\n33\t\t455\t\t\t1.27k\n"
+  debugValues: "Level\t\tAmount\t\t\tPrice\n0\t\t33\t\t\t50\n1\t\t39\t\t\t50\n2\t\t49\t\t\t102\n3\t\t63\t\t\t154\n4\t\t80\t\t\t209\n5\t\t99\t\t\t264\n6\t\t118\t\t\t321\n7\t\t138\t\t\t379\n8\t\t156\t\t\t439\n9\t\t173\t\t\t501\n10\t\t188\t\t\t564\n11\t\t199\t\t\t629\n12\t\t207\t\t\t696\n13\t\t216\t\t\t764\n14\t\t225\t\t\t834\n15\t\t234\t\t\t906\n16\t\t244\t\t\t980\n17\t\t253\t\t\t1.06k\n18\t\t264\t\t\t1.13k\n19\t\t274\t\t\t1.21k\n20\t\t285\t\t\t1.3k\n21\t\t296\t\t\t1.38k\n22\t\t308\t\t\t1.47k\n23\t\t320\t\t\t1.56k\n24\t\t332\t\t\t1.65k\n25\t\t344\t\t\t1.74k\n26\t\t357\t\t\t1.84k\n27\t\t370\t\t\t1.93k\n28\t\t384\t\t\t2.04k\n29\t\t397\t\t\t2.14k\n30\t\t411\t\t\t2.25k\n31\t\t425\t\t\t2.35k\n32\t\t440\t\t\t2.47k\n33\t\t455\t\t\t2.58k\n"
+  priceMaster: {fileID: 11400000, guid: d1c70a2ded9a6de4e919177ed31d1a83, type: 2}
   AnimationCurve:
     serializedVersion: 2
     m_Curve:

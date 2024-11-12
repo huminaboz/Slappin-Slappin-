@@ -19,9 +19,12 @@ MonoBehaviour:
   upgradeType: 0
   numberType: 2
   useMinValue: 0
-  useMaxValue: 1
+  useMaxValue: 0
   minValue: 0
   maxValue: 50
   newValueGrowthCurve: {fileID: 11400000, guid: ccab613d4978ffd40b0b398efbe63527, type: 2}
   newPriceGrowthCurve: {fileID: 11400000, guid: 9e7475841848d204ebac7b7d8af44459, type: 2}
+  baseValueForMultiplier: 350
+  rateOfIncreasePerWave: 1
+  OPnessScore: 1
   maxLevel: 1000

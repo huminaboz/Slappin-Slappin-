@@ -13,11 +13,12 @@ MonoBehaviour:
   m_Name: Squish_DoT_AniMax
   m_EditorClassIdentifier: 
   notes: 
-  showPreview: 1
+  showPreview: 0
   previewUpgrade: {fileID: 11400000, guid: 39994a825dc479942850add0e35aa5f5, type: 2}
   maxDisplayedRows: 34
   startOffset: 0
   debugValues: "Level\t\tAmount\t\t\tPrice\n0\t\t1\t\t\t21\n1\t\t3\t\t\t21\n2\t\t4\t\t\t43\n3\t\t6\t\t\t64\n4\t\t8\t\t\t85\n5\t\t10\t\t\t106\n6\t\t12\t\t\t127\n7\t\t14\t\t\t148\n8\t\t17\t\t\t169\n9\t\t19\t\t\t190\n10\t\t22\t\t\t211\n11\t\t25\t\t\t232\n12\t\t28\t\t\t253\n13\t\t31\t\t\t274\n14\t\t34\t\t\t295\n15\t\t37\t\t\t316\n16\t\t41\t\t\t337\n17\t\t44\t\t\t358\n18\t\t47\t\t\t379\n19\t\t51\t\t\t400\n20\t\t54\t\t\t421\n21\t\t58\t\t\t442\n22\t\t61\t\t\t463\n23\t\t65\t\t\t484\n24\t\t68\t\t\t505\n25\t\t71\t\t\t526\n26\t\t75\t\t\t547\n27\t\t78\t\t\t568\n28\t\t81\t\t\t589\n29\t\t84\t\t\t610\n30\t\t87\t\t\t631\n31\t\t90\t\t\t652\n32\t\t93\t\t\t673\n33\t\t96\t\t\t694\n"
+  priceMaster: {fileID: 11400000, guid: d1c70a2ded9a6de4e919177ed31d1a83, type: 2}
   AnimationCurve:
     serializedVersion: 2
     m_Curve:
