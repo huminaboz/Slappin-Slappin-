@@ -8,27 +8,30 @@ public class GraphSetup : MonoBehaviour
 {
     [SerializeField] private GraphHandler graphHandlerPrefab;
     
-    [FormerlySerializedAs("slapDamageGrwoth")] [FormerlySerializedAs("growthCurve")] [SerializeField] private SO_GrowthCurve slapDamageGrowth;
-    [FormerlySerializedAs("growthCurve2")] [SerializeField] private SO_GrowthCurve enemyMaxHPGrowth;
-
     [SerializeField] private int valuesAmount = 1000;
 
     [SerializeField] private Canvas graphCanvas;
-    
-    [SerializeField] private Color slapDamageColor = Color.white;
-    [SerializeField] private Color enemyMaxHpColor = Color.white;
+
+    [SerializeField] private Color[] colorPool;
+    [SerializeField] private SO_GrowthCurve[] growthCurvePool;
+    [SerializeField] private Transform legendParent;
+    [SerializeField] private LegendItem legendItemPrefab;
     
     private void Start()
     {
-        // StartCoroutine(DelayStart());
-        SetupNewGraph(slapDamageGrowth, "Slap Damage", slapDamageColor);
-        SetupNewGraph(enemyMaxHPGrowth, "Enemy Max Hp", enemyMaxHpColor);
+        for (int i = 0; i < growthCurvePool.Length; i++)
+        {
+            SetupNewGraph(growthCurvePool[i], colorPool[i]);
+        }
     }
 
-    private void SetupNewGraph(SO_GrowthCurve growthCurve, string title, Color graphColor)
+    private void SetupNewGraph(SO_GrowthCurve growthCurve, Color graphColor)
     {
+        LegendItem legendItem = Instantiate(legendItemPrefab, legendParent);
+        legendItem.Setup(graphColor, growthCurve.previewUpgrade.upgradeType + " " + growthCurve.previewUpgrade.title);
+        legendItem.gameObject.name = growthCurve.previewUpgrade.title + " legend";
         GraphSettings newGraph = Instantiate(graphHandlerPrefab, transform).GetComponent<GraphSettings>();
-        newGraph.gameObject.name = title + " Graph";
+        newGraph.gameObject.name = growthCurve.previewUpgrade.title + " Graph";
         GraphHandler newGraphHandler = newGraph.GetComponent<GraphHandler>();
         newGraphHandler.Initialize(graphCanvas);
         newGraphHandler.DrawGraph(growthCurve, valuesAmount);

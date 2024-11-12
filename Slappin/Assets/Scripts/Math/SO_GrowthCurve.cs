@@ -10,7 +10,7 @@ public class SO_GrowthCurve : ScriptableObject
     [Header("Preview Values")] [SerializeField]
     private bool showPreview;
 
-    [SerializeField] private SO_Upgrade previewUpgrade;
+    [SerializeField] public SO_Upgrade previewUpgrade;
     [SerializeField] private int maxDisplayedRows = 34;
     [Range(0, 1000)] [SerializeField] private int startOffset = 1;
     [SerializeField] [TextArea(1, 200)] private string debugValues;

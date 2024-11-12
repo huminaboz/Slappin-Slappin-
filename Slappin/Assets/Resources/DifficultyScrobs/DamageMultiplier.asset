@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: DamageMultiplier
   m_EditorClassIdentifier: 
   stat: 9003
-  title: 
+  title: Damage
   baseValue: 1
   basePrice: 0
   upgradeType: 8
@@ -24,4 +24,7 @@ MonoBehaviour:
   maxValue: 1e+12
   newValueGrowthCurve: {fileID: 11400000, guid: f3a2666082b4adf4f8aa9868e4e0cff7, type: 2}
   newPriceGrowthCurve: {fileID: 11400000, guid: f3a2666082b4adf4f8aa9868e4e0cff7, type: 2}
+  baseValueForMultiplier: 1
+  rateOfIncreasePerWave: 1
+  OPnessScore: 1
   maxLevel: 500

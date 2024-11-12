@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: WalkSpeedMultiplier
   m_EditorClassIdentifier: 
   stat: 9004
-  title: Currency1
+  title: Walk Speed
   baseValue: 1
   basePrice: 0
   upgradeType: 8
@@ -24,4 +24,7 @@ MonoBehaviour:
   maxValue: 1e+12
   newValueGrowthCurve: {fileID: 11400000, guid: 8919b3528d44bfe478d0dac0b7c1f245, type: 2}
   newPriceGrowthCurve: {fileID: 11400000, guid: 8919b3528d44bfe478d0dac0b7c1f245, type: 2}
+  baseValueForMultiplier: 1
+  rateOfIncreasePerWave: 1
+  OPnessScore: 1
   maxLevel: 500

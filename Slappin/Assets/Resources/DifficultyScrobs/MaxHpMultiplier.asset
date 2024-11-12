@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: MaxHpMultiplier
   m_EditorClassIdentifier: 
   stat: 9000
-  title: Currency1
+  title: Max Hp
   baseValue: 0.5
   basePrice: 0
   upgradeType: 8
@@ -24,4 +24,7 @@ MonoBehaviour:
   maxValue: 1e+12
   newValueGrowthCurve: {fileID: 11400000, guid: 6959fefcfd0a3b94b90ee5a7cdb4880b, type: 2}
   newPriceGrowthCurve: {fileID: 11400000, guid: 6959fefcfd0a3b94b90ee5a7cdb4880b, type: 2}
+  baseValueForMultiplier: 1
+  rateOfIncreasePerWave: 1
+  OPnessScore: 1
   maxLevel: 500

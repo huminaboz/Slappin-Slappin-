@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SpawnRateMultiplier
   m_EditorClassIdentifier: 
   stat: 9001
-  title: Currency1
+  title: Spawn Rate
   baseValue: 1
   basePrice: 0
   upgradeType: 8
@@ -24,4 +24,7 @@ MonoBehaviour:
   maxValue: 1e+12
   newValueGrowthCurve: {fileID: 11400000, guid: 4d66387c25ff6be4ead152484beeb3ba, type: 2}
   newPriceGrowthCurve: {fileID: 11400000, guid: 4d66387c25ff6be4ead152484beeb3ba, type: 2}
+  baseValueForMultiplier: 1
+  rateOfIncreasePerWave: 1
+  OPnessScore: 1
   maxLevel: 500
